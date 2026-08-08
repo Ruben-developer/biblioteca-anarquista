@@ -12,15 +12,9 @@ export interface Obra {
   contenido: string
 }
 
-import laConquista from '../data/catalogo/la-conquista-del-pan.json'
-import diosEstado from '../data/catalogo/dios-y-el-estado.json'
-import anarquismo from '../data/catalogo/anarquismo-y-otros-ensayos.json'
-
-const OBRAS: Obra[] = [
-  laConquista as Obra,
-  diosEstado as Obra,
-  anarquismo as Obra,
-]
+const OBRAS: Obra[] = Object.values(
+  import.meta.glob('../data/catalogo/*.json', { eager: true }),
+).map((mod) => (mod as { default: Obra }).default)
 
 function App() {
   const [query, setQuery] = useState('')
