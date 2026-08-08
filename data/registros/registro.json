@@ -30,6 +30,15 @@
       "prs": 0,
       "ci": "verde",
       "nota": "MIGRACIÓN IMPORTANTE: se reemplaza la web adaptada de GitHub por el proyecto REAL del usuario (Archivo Histórico Anarquista, React 18 + Vite 4 + Tailwind). App con timeline 1840-1968, mapa de regiones, biografías, favoritos, modo oscuro, filtros y estadísticas. Descargas integradas: PDFs desde contenedor nginx :8081 + TXT desde el repo. Documenta: biblioteca-anarquista."
+    },
+    {
+      "fecha": "2026-08-08",
+      "obras": 65,
+      "palabras": 1112,
+      "commits": 3,
+      "prs": 0,
+      "ci": "verde",
+      "nota": "Catálogo ampliado de 23 a 65 obras (59 con PDF verificado HTTP 200 en :8081) y de 8 a 11 regiones (Alemania, Inglaterra, Corea). Obras verificadas con pdftotext: Kropotkin (Origen de la moral, Campos-fábricas-talleres, Las prisiones, El Estado), Bakunin (El principio de autoridad/Estado, El patriotismo, Federalismo-socialismo-antiteologismo), Proudhon (El principio federativo, Amor y matrimonio), Reclus (Evolución-revolución-anarquismo, El ideal anarquista), Déjacque, Stirner, Herbert Read, Emma Goldman, Fabbri, Peirats, Avrich, Bookchin, Tolstói, Nettlau, Cappelletti, Vitale, entre otros. Build, lint y CI de Pages verdes; contenido confirmado en el bundle desplegado."
     }
   ]
 }
