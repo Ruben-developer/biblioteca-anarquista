@@ -70,6 +70,15 @@ Cada obra en `data/catalogo/<slug>.json`:
 - No romper: cada cambio debe dejar build y CI verdes.
 - No subir secretos ni dependencias de más (respetar package-lock).
 
+## 5.1 Ideas de mejora del usuario (backlog, se van priorizando)
+- [ ] **Estética**: iterar paleta de colores y tipografía (usar variables CSS ya separadas). Puesta a punto visual en general.
+- [ ] **Línea de tiempo** de autores y obras (ordenado por año).
+- [ ] **Agrupar por país** (campo `pais` en cada obra; lista primero, mapa después).
+- [ ] **Agente revisor UX/UI**: subagente que critique el diseño y pase notas al agente principal.
+- [ ] **Importar textos propios del servidor** a `data/catalogo/*.json` (ruta pendiente de confirmar con el usuario).
+- [ ] **Descargar textos de dominio público** de fuentes fiables (The Anarchist Library, Marxists.org, etc.) cuando el usuario indique las URLs.
+- [ ] **Descarga desde la página**: botón para descargar la obra en PDF/TXT/EPUB.
+
 ## 6. Próximo día
 - [ ] FASE 1/2: terminar página de autor, contador de palabras, búsqueda dentro del contenido, dashboard de métricas.
 - [ ] Ampliar catálogo con más obras (Rocker, Bookchin, Proudhon, etc.).
