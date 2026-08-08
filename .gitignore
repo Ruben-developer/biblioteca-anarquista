@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Rutinas diarias locales (los logs van en data/registros)
+.daily-runs/*.log

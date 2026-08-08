@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "descripcion": "Métricas de crecimiento de la Biblioteca Anarquista. El agente actualiza este archivo cada día (solo añade entradas nuevas, no borra).",
+    "unidades": "fecha | obras en catalogo | palabras totales | commits | PRs | estado CI"
+  },
+  "diario": [
+    {
+      "fecha": "2026-08-07",
+      "obras": 3,
+      "palabras": 320,
+      "commits": 1,
+      "prs": 0,
+      "ci": "verde",
+      "nota": "Arranque: repo + scaffolding Vite/React/TS + estructura data/ + 3 obras iniciales + PLAN.md."
+    }
+  ]
+}
