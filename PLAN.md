@@ -52,7 +52,7 @@ public/documents/        → documents.json (metadatos) + TXT de descarga
 - [x] Descargas: PDFs desde contenedor nginx local :8081 + TXT desde el repo.
 
 ### FASE 2 — Contenido y lógica
-- [ ] Ampliar `regionData.js` con más obras reales (enlazando PDFs disponibles en el contenedor).
+- [x] Ampliar `regionData.js` con más obras reales (enlazando PDFs disponibles en el contenedor). (2026-08-08)
 - [ ] Ampliar `timelineEvents.js` (más eventos, décadas posteriores a 1968).
 - [ ] Ampliar `authors.js` (más pensadores: Rocker, Bookchin, Proudhon...).
 - [ ] Enriquecer `documents.json` (más obras con metadatos completos).
@@ -113,7 +113,13 @@ contenedor nginx local en la máquina siempre-encendida, y la web enlaza
 - [ ] **Descarga desde la página**: botón para descargar la obra en PDF/TXT/EPUB (el botón ya existe, falta el export TXT/EPUB).
 
 ## 6. Próximo día
-- [ ] Ampliar `regionData.js` enlazando más PDFs reales del contenedor (hay ~300 disponibles).
+- [ ] Ampliar `timelineEvents.js` con más eventos y décadas posteriores a 1968 (cada evento nuevo alimenta también los filtros de la línea temporal).
 - [ ] Añadir lector PDF embebido (vista de lectura sin salir de la web).
-- [ ] Ampliar timeline con eventos hasta hoy.
+- [ ] Enriquecer `documents.json` (metadatos completos: excerpt, summary, tags) para las 65 obras del catálogo.
 - [ ] (Ideas de mejora en evaluación) Dashboard de métricas, obra del día, más agentes expertos.
+
+### Nota del día (2026-08-08)
+Catálogo ampliado de 23 → **65 obras** (59 con PDF descargable verificado HTTP 200) y de 8 → **11 regiones**
+(nuevas: Alemania, Inglaterra, Corea). Se añadieron obras de Kropotkin, Bakunin, Proudhon, Reclus,
+Stirner, Herbert Read, Emma Goldman, Fabbri, Peirats, entre otras, verificadas con `pdftotext`.
+Build, lint y CI de Pages en verde.
