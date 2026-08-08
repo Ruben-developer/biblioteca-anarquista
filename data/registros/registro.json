@@ -12,6 +12,15 @@
       "prs": 0,
       "ci": "verde",
       "nota": "Arranque: repo + scaffolding Vite/React/TS + estructura data/ + 3 obras iniciales + PLAN.md."
+    },
+    {
+      "fecha": "2026-08-08",
+      "obras": 4,
+      "palabras": 477,
+      "commits": 2,
+      "prs": 0,
+      "ci": "verde",
+      "nota": "Primera iteración autónoma: obra de Malatesta (La anarquía) + auto-carga del catálogo con import.meta.glob (añadir obra ya no exige tocar código)."
     }
   ]
 }

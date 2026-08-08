@@ -52,7 +52,7 @@ Cada obra en `data/catalogo/<slug>.json`:
 - [ ] Registrar métricas diarias en `registro.json`.
 
 ### FASE 2 — Contenido y lógica
-- [ ] Añadir primeras obras (clásicos: Kropotkin, Bakunin, Goldman, Malatesta).
+- [x] Añadir primeras obras (clásicos: Kropotkin, Bakunin, Goldman, Malatesta). ✅ (2026-08-08)
 - [ ] Página de autor (agrupar obras por autor).
 - [ ] Contador de palabras y tiempo de lectura por obra.
 - [ ] Búsqueda dentro del contenido.
@@ -71,4 +71,6 @@ Cada obra en `data/catalogo/<slug>.json`:
 - No subir secretos ni dependencias de más (respetar package-lock).
 
 ## 6. Próximo día
-- [ ] FASE 1: terminar catálogo + búsqueda + deploy Pages + primeras 3-5 obras.
+- [ ] FASE 1/2: terminar página de autor, contador de palabras, búsqueda dentro del contenido, dashboard de métricas.
+- [ ] Ampliar catálogo con más obras (Rocker, Bookchin, Proudhon, etc.).
+- [ ] (Ideas de mejora en evaluación) Línea de tiempo, mapa de obras por país, paleta de colores, más agentes expertos.
