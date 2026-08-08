@@ -1,11 +1,13 @@
-# Biblioteca Anarquista
+# Archivo Histórico Anarquista
 
-Biblioteca virtual de textos y obras del anarquismo. Catálogo navegable con
-búsqueda, filtros por tema, fichas de autor y modo lectura.
+Archivo histórico interactivo del movimiento anarquista mundial: línea temporal
+(1840-1968), mapa de regiones con textos, biografías de pensadores, favoritos,
+modo oscuro/claro, filtros avanzados y estadísticas.
 
-- **Stack**: React + Vite + TypeScript
+- **Stack**: React 18 + Vite 4 + Tailwind CSS
 - **Deploy**: GitHub Pages → https://ruben-developer.github.io/biblioteca-anarquista/
-- **Contenido**: `data/catalogo/*.json` (una obra por archivo)
+- **Contenido**: `src/data/` (eventos, autores, textos por región) + `public/documents/`
+- **Descargas PDF**: contenedor nginx local (`http://192.168.1.117:8081/pdfs/...`), TXT desde el repo
 - **Métricas**: `data/registros/registro.json`
 - **Plan y evolución**: `PLAN.md` + `.daily-runs/`
 
@@ -16,7 +18,21 @@ npm install
 npm run dev
 ```
 
-## Añadir una obra
+## Estructura
 
-Crea un archivo en `data/catalogo/<slug>.json` con el esquema de
-`la-conquista-del-pan.json` y haz commit. La app la carga automáticamente.
+```
+src/
+├── components/   # Header, Navigation, TimelineView, MapView, AuthorsView, FavoritesView, modales...
+├── data/         # timelineEvents.js, authors.js, regionData.js
+├── services/     # documentService.js (carga metadatos y resuelve descargas)
+├── constants/    # Categorías, décadas, regiones, vistas, temas de color
+├── hooks/        # useScrollTop, useDarkMode, useFavorites
+└── utils/        # filters.js (filtrado de eventos, estadísticas)
+```
+
+## Añadir contenido
+
+- **Evento histórico**: edita `src/data/timelineEvents.js`
+- **Autor**: edita `src/data/authors.js`
+- **Texto por región**: edita `src/data/regionData.js` (campo `filename` enlaza al PDF del contenedor)
+- **Metadatos completos**: `public/documents/documents.json`

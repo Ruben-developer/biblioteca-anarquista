@@ -21,6 +21,15 @@
       "prs": 0,
       "ci": "verde",
       "nota": "Primera iteración autónoma: obra de Malatesta (La anarquía) + auto-carga del catálogo con import.meta.glob (añadir obra ya no exige tocar código)."
+    },
+    {
+      "fecha": "2026-08-08",
+      "obras": 23,
+      "palabras": 0,
+      "commits": 3,
+      "prs": 0,
+      "ci": "verde",
+      "nota": "MIGRACIÓN IMPORTANTE: se reemplaza la web adaptada de GitHub por el proyecto REAL del usuario (Archivo Histórico Anarquista, React 18 + Vite 4 + Tailwind). App con timeline 1840-1968, mapa de regiones, biografías, favoritos, modo oscuro, filtros y estadísticas. Descargas integradas: PDFs desde contenedor nginx :8081 + TXT desde el repo. Documenta: biblioteca-anarquista."
     }
   ]
 }
