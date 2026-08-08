@@ -2,12 +2,41 @@
   box-sizing: border-box;
 }
 
+:root {
+  --papel: #f3e7c3;
+  --papel-claro: #faf3dc;
+  --papel-oscuro: #e8d9ae;
+  --negro: #16130e;
+  --rojo: #a1101a;
+  --rojo-oscuro: #7d0b13;
+  --texto-suave: #5a4f38;
+  --borde: #c9b887;
+}
+
 html {
   font-family: Georgia, 'Times New Roman', serif;
 }
 
 body {
   margin: 0;
-  background: #faf7f0;
-  color: #1a1a1a;
+  background: var(--papel);
+  color: var(--negro);
+  background-image: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.03) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.03) 75%
+    ),
+    linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.03) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(0, 0, 0, 0.03) 75%
+    );
+  background-size: 24px 24px;
+  background-position:
+    0 0,
+    12px 12px;
 }
