@@ -70,12 +70,43 @@ Cada obra en `data/catalogo/<slug>.json`:
 - No romper: cada cambio debe dejar build y CI verdes.
 - No subir secretos ni dependencias de más (respetar package-lock).
 
-## 5.1 Ideas de mejora del usuario (backlog, se van priorizando)
+## 5.1 Servidor de descargas (PDFs)
+
+Los PDFs (≈660 MB, 401 archivos) NO van al repo git. Se sirven desde un
+contenedor nginx local en la máquina siempre-encendida, y la web enlaza
+`Descargar PDF →` a esa URL.
+
+- Contenedor: `pdf-server` (nginx:alpine), puerto 8080, sirve una **copia**
+  de los PDFs en modo solo-lectura (`:ro`), `autoindex off`.
+- Copia en `/home/fdr/biblioteca-anarquista/pdfs-local/` (o `/srv/biblioteca-pdfs/`),
+  nunca la carpeta original de `Documentos`.
+- Origen de datos: `/home/fdr/Documentos/anarquismo_importado/PDFs/` (401 PDFs)
+  + `Editorial_Gato_Negro/` (125 docx).
+
+### Fase LOCAL (hecha/por hacer)
+- [ ] Crear copia de PDFs para servir.
+- [ ] Levantar contenedor `pdf-server` (nginx, puerto 8080, autoindex off, sin root).
+- [ ] Añadir campo `pdf_url` a las obras y botón de descarga en la web.
+- [ ] Script de sincronización (sincroniza la copia desde Documentos cuando cambie).
+
+### Plan FUTURO — Cloudflare Tunnel (guardado, cuando se quiera acceso público)
+1. Instalar `cloudflared` y autenticar con el dominio de Cloudflare.
+2. Crear túnel: `cloudflared tunnel create biblioteca` → enruta el puerto 8080
+   al dominio (ej. `biblioteca.<tudominio>.com` o DuckDNS).
+3. **No se abre ningún puerto en el router**: el túnel sale de la máquina.
+4. HTTPS automático por Cloudflare, sin exponer IP ni port-forward.
+5. Medidas de seguridad SIEMPRE: contenedor sin root, filesystem de solo
+   lectura, servir copia (nunca la original), `autoindex off`, actualizaciones
+   periódicas de la imagen nginx.
+6. Riesgo aceptado: si la máquina se apaga o el túnel cae, las descargas
+   fallan (la web sigue en GitHub Pages).
+
+## 5.2 Ideas de mejora del usuario (backlog, se van priorizando)
 - [ ] **Estética**: iterar paleta de colores y tipografía (usar variables CSS ya separadas). Puesta a punto visual en general.
 - [ ] **Línea de tiempo** de autores y obras (ordenado por año).
 - [ ] **Agrupar por país** (campo `pais` en cada obra; lista primero, mapa después).
 - [ ] **Agente revisor UX/UI**: subagente que critique el diseño y pase notas al agente principal.
-- [ ] **Importar textos propios del servidor** a `data/catalogo/*.json` (ruta pendiente de confirmar con el usuario).
+- [ ] **Importar textos propios del servidor** a `data/catalogo/*.json` (401 PDFs + 125 docx en `Documentos/anarquismo_importado/`; fichas con `pdftotext` para extracto + `pdf_url` al servidor local).
 - [ ] **Descargar textos de dominio público** de fuentes fiables (The Anarchist Library, Marxists.org, etc.) cuando el usuario indique las URLs.
 - [ ] **Descarga desde la página**: botón para descargar la obra en PDF/TXT/EPUB.
 
