@@ -10,6 +10,7 @@ export interface Obra {
   tags: string[]
   descripcion: string
   contenido: string
+  pdf_url?: string
 }
 
 const OBRAS: Obra[] = Object.values(
@@ -52,6 +53,13 @@ function App() {
             </span>
           ))}
         </p>
+        {seleccion.pdf_url && (
+          <p className="descarga">
+            <a href={seleccion.pdf_url} target="_blank" rel="noopener noreferrer">
+              Descargar PDF ⬇
+            </a>
+          </p>
+        )}
         <article
           className="contenido"
           dangerouslySetInnerHTML={{ __html: renderMarkdown(seleccion.contenido) }}

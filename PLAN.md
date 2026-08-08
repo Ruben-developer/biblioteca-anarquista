@@ -37,6 +37,7 @@ Cada obra en `data/catalogo/<slug>.json`:
   "temas": ["comunismo", "economia", "mutualismo"],
   "tags": ["clasico", "ensayo"],
   "descripcion": "Síntesis de la propuesta económica del comunismo anarquista.",
+  "pdf_url": "http://TU-IP:8081/pdfs/anarquismo/archivo.pdf",
   "contenido": "Texto completo o extracto en Markdown..."
 }
 ```

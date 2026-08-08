@@ -25,3 +25,6 @@ dist-ssr
 
 # Rutinas diarias locales (los logs van en data/registros)
 .daily-runs/*.log
+
+# PDFs locales servidos por el contenedor (nunca subir a git)
+/pdfs-local/

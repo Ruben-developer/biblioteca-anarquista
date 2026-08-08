@@ -147,6 +147,24 @@ select {
   line-height: 1.8;
 }
 
+.descarga {
+  margin-top: 1.25rem;
+}
+
+.descarga a {
+  display: inline-block;
+  background: #1a1a1a;
+  color: #faf7f0;
+  text-decoration: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.descarga a:hover {
+  background: #333;
+}
+
 .contenido blockquote {
   border-left: 3px solid #c9bda6;
   margin-left: 0;
