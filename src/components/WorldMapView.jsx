@@ -5,6 +5,22 @@ import { THEME } from '../constants';
 import { COUNTRY_ISO } from '../data/countryData';
 import { normalizeCountryName } from '../utils/countryNames';
 
+// Interpola un color hex entre c1 (claro, pocos textos) y c2 (oscuro, muchos).
+const lerpColor = (c1, c2, t) => {
+  const a = parseInt(c1.slice(1), 16);
+  const b = parseInt(c2.slice(1), 16);
+  const ar = (a >> 16) & 255;
+  const ag = (a >> 8) & 255;
+  const ab = a & 255;
+  const br = (b >> 16) & 255;
+  const bg = (b >> 8) & 255;
+  const bb = b & 255;
+  const r = Math.round(ar + (br - ar) * t);
+  const g = Math.round(ag + (bg - ag) * t);
+  const bl = Math.round(ab + (bb - ab) * t);
+  return `rgb(${r}, ${g}, ${bl})`;
+};
+
 const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
 
@@ -29,15 +45,28 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
 
   const styleFunction = (context) => {
     const hasTexts = Boolean(getRegionForContext(context));
+    if (!hasTexts) {
+      return {
+        fill: darkMode ? '#3f3f46' : '#e7e5e4',
+        stroke: darkMode ? '#52525b' : '#d6d3d1',
+        strokeWidth: 0.5,
+        cursor: 'default'
+      };
+    }
+    // Gradiente: 1 texto = color claro, N textos = más oscuro (hasta maxValue).
+    const max = Math.max(context.maxValue, 1);
+    const min = Math.min(context.minValue, max);
+    const t = max > min
+      ? Math.min(Math.max((context.countryValue - min) / (max - min), 0), 1)
+      : 1;
+    const [light, dark] = darkMode
+      ? ['#fca5a5', '#7f1d1d']
+      : ['#fde68a', '#92400e'];
     return {
-      fill: hasTexts
-        ? (darkMode ? '#b91c1c' : '#b45309')
-        : (darkMode ? '#3f3f46' : '#e7e5e4'),
-      stroke: hasTexts
-        ? (darkMode ? '#f87171' : '#f59e0b')
-        : (darkMode ? '#52525b' : '#d6d3d1'),
-      strokeWidth: hasTexts ? 1 : 0.5,
-      cursor: hasTexts ? 'pointer' : 'default'
+      fill: lerpColor(light, dark, t),
+      stroke: darkMode ? '#f87171' : '#f59e0b',
+      strokeWidth: 1,
+      cursor: 'pointer'
     };
   };
 
@@ -55,7 +84,7 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
         Mapa Mundial de Textos
       </h2>
       <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-        Haz clic en un país destacado para ver sus textos. Los países en color tienen obras en el archivo.
+        Haz clic en un país destacado para ver sus textos. Cuanto más oscuro el color, más obras tiene ese país en el archivo.
       </p>
 
       <WorldMap
@@ -69,6 +98,20 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
         tooltipTextFunction={tooltipTextFunction}
         containerClassName="w-full"
       />
+
+      <div className="mt-4 flex items-center gap-3 justify-center">
+        <span className={`text-xs ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>Pocos textos</span>
+        <div
+          className="h-3 w-40 rounded-full border"
+          style={{
+            background: darkMode
+              ? 'linear-gradient(to right, #fca5a5, #7f1d1d)'
+              : 'linear-gradient(to right, #fde68a, #92400e)',
+            borderColor: darkMode ? '#52525b' : '#d6d3d1'
+          }}
+        />
+        <span className={`text-xs ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>Muchos textos</span>
+      </div>
 
       <h3 className={`text-xl font-bold mt-8 mb-4 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         O navega por región
