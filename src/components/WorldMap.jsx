@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo, useRef, useState } from 'react';
 import { geoMercator, geoPath } from 'd3-geo';
 import worldData from '../data/worldmap.geo.json';
 import { translateCountryName } from '../utils/countryNames';
@@ -27,6 +27,9 @@ const WorldMap = ({
   onClickFunction,
   containerClassName = 'worldmap__wrapper'
 }) => {
+  const [tooltip, setTooltip] = useState(null);
+  const containerRef = useRef(null);
+
   const countryValueMap = Object.fromEntries(
     data.map(({ country, value }) => [String(country).toUpperCase(), value])
   );
@@ -52,39 +55,54 @@ const WorldMap = ({
   };
   const tooltipFn = tooltipTextFunction || defaultTooltip;
 
-  const paths = GEO_FEATURES.map((geoFeature) => {
-    const { N: countryName, I: isoCode } = geoFeature.properties;
-    const context = {
-      countryCode: isoCode,
-      countryValue: countryValueMap[isoCode],
-      countryName,
-      countryNameEs: translateCountryName(countryName),
-      minValue,
-      maxValue,
-      prefix: '',
-      suffix: ''
-    };
-    const style = styleFn(context);
-    const tooltipContent = typeof context.countryValue === 'undefined'
-      ? undefined
-      : tooltipFn(context);
-    const svgTitle = tooltipContent ?? context.countryNameEs;
+  const showTooltip = (event, context) => {
+    const rect = containerRef.current.getBoundingClientRect();
+    setTooltip({
+      x: event.clientX - rect.left,
+      y: event.clientY - rect.top,
+      content: tooltipFn(context)
+    });
+  };
 
-    return (
-      <path
-        key={isoCode}
-        d={PATH(geoFeature)}
-        style={style}
-        className="worldmap__country"
-        onClick={onClickFunction ? (event) => onClickFunction({ ...context, event }) : undefined}
-      >
-        <title>{svgTitle}</title>
-      </path>
-    );
-  });
+  const paths = useMemo(
+    () =>
+      GEO_FEATURES.map((geoFeature) => {
+        const { N: countryName, I: isoCode } = geoFeature.properties;
+        const context = {
+          countryCode: isoCode,
+          countryValue: countryValueMap[isoCode],
+          countryName,
+          countryNameEs: translateCountryName(countryName),
+          minValue,
+          maxValue,
+          prefix: '',
+          suffix: ''
+        };
+        const style = styleFn(context);
+
+        return (
+          <path
+            key={isoCode}
+            d={PATH(geoFeature)}
+            style={style}
+            className="worldmap__country"
+            aria-label={context.countryNameEs}
+            onMouseEnter={(event) => showTooltip(event, context)}
+            onMouseMove={(event) => showTooltip(event, context)}
+            onMouseLeave={() => setTooltip(null)}
+            onClick={onClickFunction ? (event) => onClickFunction({ ...context, event }) : undefined}
+          />
+        );
+      }),
+    [countryValueMap, minValue, maxValue, styleFn, onClickFunction]
+  );
 
   return (
-    <div className={containerClassName} style={{ width: '100%', minHeight: 0 }}>
+    <div
+      ref={containerRef}
+      className={containerClassName}
+      style={{ width: '100%', minHeight: 0, position: 'relative' }}
+    >
       <figure className="worldmap__figure-container" style={{ backgroundColor }}>
         <svg
           role="img"
@@ -105,6 +123,15 @@ const WorldMap = ({
           <g transform="translate(0, 240)">{paths}</g>
         </svg>
       </figure>
+      {tooltip && (
+        <div
+          className="worldmap__tooltip"
+          role="tooltip"
+          style={{ left: tooltip.x, top: tooltip.y }}
+        >
+          {tooltip.content}
+        </div>
+      )}
     </div>
   );
 };

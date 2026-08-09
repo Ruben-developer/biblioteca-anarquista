@@ -57,3 +57,29 @@ code {
 .worldmap__country:active {
   filter: brightness(0.9);
 }
+
+/* Mapa mundial: tooltip que sigue al puntero con el nombre del país */
+.worldmap__tooltip {
+  position: absolute;
+  pointer-events: none;
+  transform: translate(-50%, -120%);
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  z-index: 30;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.worldmap__tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.85);
+}
