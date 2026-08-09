@@ -14,7 +14,12 @@ export const regionData = {
       { title: "Anarquía profesional y desarme teórico", author: "Miguel Amorós", year: 2009, category: "teoria", rating: 4.5, summary: "Ensayo crítico sobre el insurreccionalismo y la deriva profesional del activismo libertario.", filename: "anarquismo/f40154192_Miguel_Amors.pdf" },
       { title: "Anarquismo y anarquistas", author: "Fidel Miró Solanes", year: 1996, category: "historia", rating: 4.6, summary: "Memoria y testimonio de un veterano militante libertario español, documento clave de la literatura ácrata.", filename: "anarquismo/f7854008_Anarquismo_y_anarquistas_Fidel_Mir_Solanes.pdf" },
       { title: "Los Amigos de Durruti", author: "Grupo Amigos de Durruti", year: 1937, category: "revolucion", rating: 4.5, summary: "Textos del grupo heterodoxo de la CNT que denunció la contrarrevolución durante la Guerra Civil.", filename: "anarquismo/f27599656_LosAmigosDeDurruti.pdf" },
-      { title: "Lola Iturbe: vida e ideal de una luchadora anarquista", author: "Sonya Torres y Antonia Fontanillas", year: 2006, category: "biografia", rating: 4.7, summary: "Biografía de Lola Iturbe, militante de CNT y Mujeres Libres, exiliada tras la Guerra Civil.", filename: "anarquismo/f2974104_Lola_Iturbe.pdf" }
+      { title: "Lola Iturbe: vida e ideal de una luchadora anarquista", author: "Sonya Torres y Antonia Fontanillas", year: 2006, category: "biografia", rating: 4.7, summary: "Biografía de Lola Iturbe, militante de CNT y Mujeres Libres, exiliada tras la Guerra Civil.", filename: "anarquismo/f2974104_Lola_Iturbe.pdf" },
+      { title: "El eco de los pasos", author: "Juan García Oliver", year: 1978, category: "biografia", rating: 4.8, summary: "Memorias del dirigente anarquista y cenetista Juan García Oliver, figura clave de la CNT en la Guerra Civil.", filename: "anarquismo/f102804128.pdf" },
+      { title: "Mujeres Libres (1936-1939). Una lectura feminista", author: "Colectivo", year: 2010, category: "historia", rating: 4.7, summary: "Análisis de la organización Mujeres Libres y su apuesta por la emancipación integral de la mujer.", filename: "anarquismo/f14218520.pdf" },
+      { title: "Lombroso y los anarquistas", author: "Ricardo Mella", year: 1896, category: "teoria", rating: 4.5, summary: "Respuesta del pensador gallego a las teorías positivistas que criminalizaban al anarquismo.", filename: "anarquismo/f13583448.pdf" },
+      { title: "Del amor", author: "Ricardo Mella", year: 1905, category: "teoria", rating: 4.5, summary: "Reflexión del anarquista gallego sobre el amor libre, la moral y las relaciones humanas.", filename: "anarquismo/f14893352.pdf" },
+      { title: "El terrorismo anarquista como propaganda por el hecho", author: "Juan Avilés", year: 2000, category: "historia", rating: 4.5, summary: "Estudio académico sobre la propaganda por el hecho y los atentados anarquistas de fines del XIX.", filename: "anarquismo/f13281808.pdf" }
     ]
   },
   "Francia": {
@@ -28,7 +33,11 @@ export const regionData = {
       { title: "Amor y matrimonio", author: "Pierre-Joseph Proudhon", year: 1858, category: "teoria", rating: 4.4, summary: "El filósofo del mutualismo reflexiona sobre las relaciones afectivas, el amor libre y la institución matrimonial.", filename: "anarquismo/f8718376_Microsoft_Word_Amor_y_matrimonio_Pierre_Joseph_Proudhon.pdf" },
       { title: "Surrealismo y anarquismo", author: "Surrealistas en Le Libertaire", year: 1952, category: "movimiento", rating: 4.5, summary: "Proclamas surrealistas publicadas en el periódico libertario Le Libertaire: arte y revolución.", filename: "anarquismo/f8639496_Surrealismo_y_anarquismofinal_ulima_pmd.pdf" },
       { title: "Antes del momento", author: "Carlos Malato", year: 1905, category: "teoria", rating: 4.5, summary: "Novela y análisis social del escritor anarquista Carlos Malato sobre el fin de siglo francés.", filename: "anarquismo/f21457808_Antes_del_momento_Carlos_Malato.pdf" },
-      { title: "Marx anarquista", author: "Maximilien Rubel y Louis Janover", year: 1994, category: "teoria", rating: 4.5, summary: "Lectura que considera a Marx teórico del anarquismo por su concepción de la extinción del Estado.", filename: "anarquismo/f6902816_Microsoft_Word_44_marx_anarquista.pdf" }
+      { title: "Marx anarquista", author: "Maximilien Rubel y Louis Janover", year: 1994, category: "teoria", rating: 4.5, summary: "Lectura que considera a Marx teórico del anarquismo por su concepción de la extinción del Estado.", filename: "anarquismo/f6902816_Microsoft_Word_44_marx_anarquista.pdf" },
+      { title: "La capacidad política de la clase obrera", author: "Pierre-Joseph Proudhon", year: 1865, category: "teoria", rating: 4.6, summary: "Última obra de Proudhon: la clase obrera como sujeto político capaz de federarse sin Estado.", filename: "anarquismo/f23646120.pdf" },
+      { title: "Política unitaria", author: "Pierre-Joseph Proudhon", year: 1863, category: "teoria", rating: 4.4, summary: "Textos de Proudhon contra la centralización jacobina y a favor del federalismo como organización libre.", filename: "anarquismo/f8604912_Pol_tica_unitaria_Pierre_Joseph_Proudhon.pdf" },
+      { title: "Anarquismo: de la teoría a la práctica", author: "Daniel Guérin", year: 1965, category: "teoria", rating: 4.6, summary: "Panorama del anarquismo de la mano del militante e historiador francés Daniel Guérin.", filename: "anarquismo/f7802064.pdf" },
+      { title: "A los jóvenes", author: "Piotr Kropotkin", year: 1880, category: "teoria", rating: 4.6, summary: "Llamamiento de Kropotkin a la juventud para poner la ciencia y el saber al servicio de la revolución.", filename: "anarquismo/f8228400.pdf" }
     ]
   },
   "Estados Unidos": {
@@ -38,7 +47,10 @@ export const regionData = {
       { title: "La pasión de Sacco y Vanzetti", author: "Howard Fast", year: 1953, category: "historia", rating: 4.7, summary: "Reconstrucción novelada del célebre caso judicial de los anarquistas italianos ejecutados en 1927.", filename: "anarquismo/f14043016_Microsoft_Word_Fast_Howard_La_Pasi_363n_de_Sacco_y_Vanzetti_doc.pdf" },
       { title: "Fraternalmente, Emma", author: "Emma Goldman", year: 1920, category: "biografia", rating: 4.6, summary: "Cartas y escritos de Emma Goldman que retratan su activismo, exilio y pensamiento libertario.", filename: "anarquismo/f76295256_Fraternalmente_Emma.pdf" },
       { title: "¿Anarquismo o barbarie? Historia, civilización y progreso", author: "Murray Bookchin", year: 1990, category: "teoria", rating: 4.6, summary: "El fundador del municipalismo libertario examina el desarrollo técnico y las ideologías en crisis.", filename: "anarquismo/f8608808_file_F_Ebooks_B_Bookchin_20Murray_Historia_20civilizacion_20y_20progreso_murray01_html.pdf" },
-      { title: "El origen del 1º de Mayo", author: "Colectivo", year: 1886, category: "historia", rating: 4.6, summary: "La revuelta de Haymarket en Chicago y el nacimiento de la jornada internacional de los trabajadores.", filename: "anarquismo/f4310256_Microsoft_Word_1_de_Mayo.pdf" }
+      { title: "El origen del 1º de Mayo", author: "Colectivo", year: 1886, category: "historia", rating: 4.6, summary: "La revuelta de Haymarket en Chicago y el nacimiento de la jornada internacional de los trabajadores.", filename: "anarquismo/f4310256_Microsoft_Word_1_de_Mayo.pdf" },
+      { title: "Fragmentos de antropología anarquista", author: "David Graeber", year: 2004, category: "teoria", rating: 4.7, summary: "El antropólogo anarquista propone leer la etnografía como inspiración para formas de organización libres.", filename: "anarquismo/f7894704.pdf" },
+      { title: "Una solución anarquista al calentamiento global", author: "Peter Gelderloos", year: 2010, category: "teoria", rating: 4.4, summary: "Crítica de la geoingeniería capitalista y propuesta ecológica desde la autogestión y la descentralización.", filename: "anarquismo/f2741896.pdf" },
+      { title: "Anarquismo social o anarquismo personal", author: "Murray Bookchin", year: 1995, category: "teoria", rating: 4.6, summary: "Polémica de Bookchin contra el anarquismo individualista y su defensa del anarquismo social y ecológico.", filename: "anarquismo/f8231816.pdf" }
     ]
   },
   "Italia": {
@@ -47,7 +59,9 @@ export const regionData = {
       { title: "En el café", author: "Errico Malatesta", year: 1922, category: "dialogo", rating: 4.8 },
       { title: "Crítica revolucionaria", author: "Luigi Fabbri", year: 1923, category: "teoria", rating: 4.6, summary: "El teórico anarquista italiano analiza la revolución rusa, el bolchevismo y el porvenir del anarquismo.", filename: "anarquismo/f3194656_Cr_tica_revolucionaria_Luigi_Fabbri.pdf" },
       { title: "La Revolución Rusa y el anarquismo", author: "Luigi Fabbri", year: 1922, category: "teoria", rating: 4.5, summary: "Respuesta de Fabbri al texto de Bujarín sobre la postura oficial del bolchevismo hacia el anarquismo.", filename: "anarquismo/f2904104_fabbri.pdf" },
-      { title: "La banda del Matese", author: "Colectivo", year: 1877, category: "historia", rating: 4.5, summary: "La insurrección fallida de la banda del Matese liderada por Carlo Cafiero y Errico Malatesta.", filename: "otros/f27973528_Microsoft_Word_Banda_del_Matese.pdf" }
+      { title: "La banda del Matese", author: "Colectivo", year: 1877, category: "historia", rating: 4.5, summary: "La insurrección fallida de la banda del Matese liderada por Carlo Cafiero y Errico Malatesta.", filename: "otros/f27973528_Microsoft_Word_Banda_del_Matese.pdf" },
+      { title: "Individualismo y Comunismo", author: "Errico Malatesta", year: 1926, category: "teoria", rating: 4.6, summary: "Malatesta reconcilia las corrientes individualista y comunista del anarquismo en este texto clásico.", filename: "anarquismo/f8435008.pdf" },
+      { title: "Influencias burguesas sobre el anarquismo", author: "Luigi Fabbri", year: 1921, category: "teoria", rating: 4.4, summary: "Análisis de Fabbri sobre los elementos burgueses que contaminan el ideal anarquista.", filename: "anarquismo/f4319216.pdf" }
     ]
   },
   "México": {
@@ -55,7 +69,10 @@ export const regionData = {
       { title: "Regeneración", author: "Flores Magón", year: 1906, category: "periodismo", rating: 4.7 },
       { title: "Tierra y Libertad", year: 1910, category: "manifiesto", rating: 4.8 },
       { title: "Artículos de combate", author: "Práxedis G. Guerrero", year: 1910, category: "periodismo", rating: 4.7, summary: "Escritos del periodista y organizador magonista Práxedis Guerrero, muerto en combate en 1910.", filename: "otros/f8896648_Microsoft_Word_Art_culos_de_combate_Pr_xedis_G_Guerrero.pdf" },
-      { title: "La anarquía a través de los tiempos", author: "Max Nettlau", year: 1970, category: "historia", rating: 4.6, summary: "Panorama histórico del anarquismo mundial por el gran historiador del movimiento, editado en México.", filename: "anarquismo/f6901576_LA_ANARQU_A_A_TRAVES_DE_LOS_TIEMPOS.pdf" }
+      { title: "La anarquía a través de los tiempos", author: "Max Nettlau", year: 1970, category: "historia", rating: 4.6, summary: "Panorama histórico del anarquismo mundial por el gran historiador del movimiento, editado en México.", filename: "anarquismo/f6901576_LA_ANARQU_A_A_TRAVES_DE_LOS_TIEMPOS.pdf" },
+      { title: "La bala y la escuela", author: "Los Discursos Peligrosos", year: 2009, category: "historia", rating: 4.5, summary: "Ensayo sobre cómo la educación oficial complementa la represión en los pueblos indígenas de México.", filename: "anarquismo/f4209352_bala_y_escuela.pdf" },
+      { title: "Rompamos las cadenas", author: "Erick Benítez Martínez", year: 2016, category: "teoria", rating: 4.4, summary: "Manifiesto antiautoritario del activista mexicano Erick Benítez contra Estado, religión y capitalismo.", filename: "anarquismo/f8672832_Rompamos_las_cadenas_Erick_Ben_tez_Mart_nez.pdf" },
+      { title: "La traición de la Hoz y el Martillo", author: "Erick Benítez Martínez", year: 2010, category: "historia", rating: 4.4, summary: "Crítica anarquista a los regímenes marxistas y al comunismo autoritario desde la óptica libertaria.", filename: "anarquismo/f7572424_La_traici_n_de_la_hoz_y_el_martillo_Erick_Ben_tez_Mart_nez.pdf" }
     ]
   },
   "Argentina": {
@@ -63,7 +80,8 @@ export const regionData = {
       { title: "La FORA", author: "Diego Abad de Santillán", year: 1933, category: "historia", rating: 4.6, filename: "anarquismo/f8908040_FORA_Final_pmd.pdf" },
       { title: "Severino Di Giovanni", author: "Osvaldo Bayer", year: 1970, category: "biografia", rating: 4.8 },
       { title: "Utopías antiguas y modernas", author: "Ángel J. Cappelletti", year: 1998, category: "teoria", rating: 4.6, summary: "El filósofo argentino recorre las utopías de occidente y su vínculo con el pensamiento libertario.", filename: "anarquismo/f2930408_Utop_as_antiguas_y_modernas_ngel_J_Cappelletti.pdf" },
-      { title: "La educación libertaria en la Argentina y en México (1861-1945)", author: "Martín Acri y María Cácerez", year: 2011, category: "historia", rating: 4.5, summary: "Estudio comparado de las experiencias de escuela moderna racionalista en Argentina y México.", filename: "anarquismo/f8373584_La_Educacion_Libertaria_en_Mexico_y_Argentina_notas_final_2_indd.pdf" }
+      { title: "La educación libertaria en la Argentina y en México (1861-1945)", author: "Martín Acri y María Cácerez", year: 2011, category: "historia", rating: 4.5, summary: "Estudio comparado de las experiencias de escuela moderna racionalista en Argentina y México.", filename: "anarquismo/f8373584_La_Educacion_Libertaria_en_Mexico_y_Argentina_notas_final_2_indd.pdf" },
+      { title: "Los anarquistas expropiadores", author: "Osvaldo Bayer", year: 2013, category: "historia", rating: 4.6, summary: "Simón Radowitzky y otros ensayos sobre la violencia expropiadora del anarquismo en la Argentina.", filename: "anarquismo/f13634080.pdf" }
     ]
   },
   "Chile": {
@@ -72,7 +90,8 @@ export const regionData = {
       { title: "La propaganda por los hechos en el movimiento anarquista chileno (1890-1910)", author: "Igor Goicovic Donoso", year: 2006, category: "historia", rating: 4.6, summary: "Sociedad y violencia en el discurso anarquista: la 'propaganda por el hecho' en el Chile de entresiglos.", filename: "anarquismo/f14021304_Microsoft_Word_La_Propaganda_por_los_Hechos.pdf" },
       { title: "Anarquismo y violencia popular en Chile (1898-1927)", author: "Equipo Sombraysén", year: 2012, category: "historia", rating: 4.5, summary: "Los anarquistas en la primera mitad del siglo XX chileno: huelgas, represión y cultura obrera.", filename: "anarquismo/f8425832_anarquismo_y_violencia_popular_en_chile.pdf" },
       { title: "Contribución a una historia del anarquismo en América Latina", author: "Luis Vitale", year: 1998, category: "historia", rating: 4.6, summary: "El historiador chileno traza los antecedentes y experiencias del anarquismo en Nuestra América.", filename: "anarquismo/f4692952_LA_INFLUENCIA_DEL_MOVIMIENTO_ANARQUISTA.pdf" },
-      { title: "Rebeldía y libertad: José Domingo Gómez Rojas", author: "Maximiliano Astroza-León", year: 2016, category: "biografia", rating: 4.5, summary: "Vida del poeta anarquista chileno José Domingo Gómez Rojas, perseguido y muerto en 1920.", filename: "anarquismo/f2729984_Biograf_355a_de_J_D_G_363mez_Rojas_parte_I.pdf" }
+      { title: "Rebeldía y libertad: José Domingo Gómez Rojas", author: "Maximiliano Astroza-León", year: 2016, category: "biografia", rating: 4.5, summary: "Vida del poeta anarquista chileno José Domingo Gómez Rojas, perseguido y muerto en 1920.", filename: "anarquismo/f2729984_Biograf_355a_de_J_D_G_363mez_Rojas_parte_I.pdf" },
+      { title: "Wobblie. Hombres, ideas y problemas del anarquismo en los años veinte", author: "Víctor M. Muñoz C. y Armando Triviño", year: 2009, category: "historia", rating: 4.5, summary: "El anarquismo chileno de los años veinte y su vínculo con la IWW en este ensayo histórico.", filename: "anarquismo/f44132216.pdf" }
     ]
   },
   "Rusia": {
@@ -89,18 +108,25 @@ export const regionData = {
       { title: "El patriotismo", author: "Mijaíl Bakunin", year: 1869, category: "teoria", rating: 4.5, summary: "Crítica al patriotismo como ideología de la dominación estatal frente al internacionalismo obrero.", filename: "anarquismo/f7852032_Microsoft_Word_Bakunin_Mijail_El_Patriotismo_rtf.pdf" },
       { title: "Federalismo, socialismo y antiteologismo", author: "Mijaíl Bakunin", year: 1867, category: "teoria", rating: 4.7, summary: "Texto fundacional del anarquismo: la libertad organizada federalmente y la crítica a Dios y al Estado.", filename: "anarquismo/f7852856_Federalismo_Socialismo_y_Antiteologismo.pdf" },
       { title: "Kronstadt 1921", author: "Paul Avrich", year: 1970, category: "revolucion", rating: 4.6, summary: "La rebelión de los marineros de Kronstadt contra el bolchevismo, aplastada por el Estado soviético.", filename: "anarquismo/f4327304_Kronstadt_Segunda_pmd.pdf" },
-      { title: "¿Qué es el arte?", author: "León Tolstói", year: 1897, category: "teoria", rating: 4.5, summary: "El escritor ruso, cercano al anarquismo cristiano, expone su estética de la autenticidad y la comunión.", filename: "anarquismo/f3928840_Qu_es_el_arte.pdf" }
+      { title: "¿Qué es el arte?", author: "León Tolstói", year: 1897, category: "teoria", rating: 4.5, summary: "El escritor ruso, cercano al anarquismo cristiano, expone su estética de la autenticidad y la comunión.", filename: "anarquismo/f3928840_Qu_es_el_arte.pdf" },
+      { title: "La comuna de Kronstadt", author: "Stepan Petritchenko, Alexander Berkman y Néstor Makhno", year: 1921, category: "revolucion", rating: 4.7, summary: "Testimonios y análisis de la rebelión de los marineros de Kronstadt contra el bolchevismo.", filename: "anarquismo/f101404144.pdf" },
+      { title: "La Makhnovschina. Un movimiento libertario bajo fuego en Ucrania (1918-1921)", author: "Lorena Paz Paredes", year: 2018, category: "historia", rating: 4.7, summary: "Estudio del movimiento campesino libertario ucraniano de Néstor Makhno durante la guerra civil rusa.", filename: "anarquismo/f38438312.pdf" },
+      { title: "Consideraciones filosóficas", author: "Mijaíl Bakunin", year: 1871, category: "teoria", rating: 4.6, summary: "Textos filosóficos de Bakunin (1870-71) sobre el sistema del mundo, la materia y la libertad.", filename: "anarquismo/f7775816.pdf" }
     ]
   },
   "Alemania": {
     books: [
-      { title: "El único y su propiedad", author: "Max Stirner", year: 1844, category: "teoria", rating: 4.6, summary: "El egoísmo radical de Stirner, precursor del anarquismo individualista: el Yo frente a toda idea sagrada.", filename: "anarquismo/f7520496_El_unico_y_su_propiedad_indd.pdf" }
+      { title: "El único y su propiedad", author: "Max Stirner", year: 1844, category: "teoria", rating: 4.6, summary: "El egoísmo radical de Stirner, precursor del anarquismo individualista: el Yo frente a toda idea sagrada.", filename: "anarquismo/f7520496_El_unico_y_su_propiedad_indd.pdf" },
+      { title: "Bajo la bandera negra", author: "Justus F. Wittkop", year: 1985, category: "historia", rating: 4.5, summary: "Hechos y figuras del anarquismo en esta historia del movimiento escrita por Wittkop.", filename: "anarquismo/f3257672_Bajo_la_bandera_negra_Justus_F_Wittkop.pdf" },
+      { title: "Comunismo autoritario y comunismo libertario", author: "Max Nettlau", year: 1928, category: "teoria", rating: 4.5, summary: "El gran historiador del anarquismo distingue las dos tradiciones comunistas y su relación con la libertad.", filename: "anarquismo/f7519848.pdf" },
+      { title: "La lucha contra el Estado", author: "Max Nettlau", year: 1920, category: "teoria", rating: 4.5, summary: "Ensayo de Nettlau sobre la resistencia de la sociedad frente al Estado y la posibilidad de su abolición.", filename: "anarquismo/f4181216.pdf" }
     ]
   },
   "Inglaterra": {
     books: [
       { title: "Anarquía y orden", author: "Herbert Read", year: 1945, category: "teoria", rating: 4.7, summary: "Ensayos sobre política del poeta y crítico británico: anarquismo como principio de orden natural.", filename: "anarquismo/f4355712_Anarqu_a_y_orden_Herbert_Read.pdf" },
-      { title: "Arte, poesía, anarquismo", author: "Herbert Read", year: 1949, category: "teoria", rating: 4.6, summary: "La creación artística como expresión de la libertad frente a toda forma de autoridad.", filename: "anarquismo/f4465376_Microsoft_Word_Arte_poes_a_anarquismo_Herbert_Read.pdf" }
+      { title: "Arte, poesía, anarquismo", author: "Herbert Read", year: 1949, category: "teoria", rating: 4.6, summary: "La creación artística como expresión de la libertad frente a toda forma de autoridad.", filename: "anarquismo/f4465376_Microsoft_Word_Arte_poes_a_anarquismo_Herbert_Read.pdf" },
+      { title: "Anarquismo: argumentos a favor y en contra", author: "Albert Meltzer", year: 2000, category: "teoria", rating: 4.5, summary: "El militante británico Albert Meltzer expone las razones históricas y morales del anarquismo.", filename: "anarquismo/f2730496.pdf" }
     ]
   },
   "Corea": {
