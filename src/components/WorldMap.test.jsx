@@ -12,7 +12,7 @@ describe('WorldMap (mapa mundial propio)', () => {
   it('renderiza el SVG con viewBox del mundo', () => {
     const html = renderToStaticMarkup(<WorldMap data={data} />);
     expect(html).toContain('<svg');
-    expect(html).toContain('viewBox="0 0 960 480"');
+    expect(html).toContain('viewBox="0 0 960 720"');
   });
 
   it('NO contiene el país Israel (fusionado en Palestine)', () => {

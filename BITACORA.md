@@ -55,6 +55,12 @@
 > Verificación geométrica: Palestine fusionado cubre lon 34.27–35.84 × lat 29.50–33.28
 > (todo Israel+Gaza+Cisjordania hasta Eilat). Build y CI verdes.
 
+## 2026-08-09 (noche) — Fix responsive: mapa completo + sin scroll horizontal
+
+| Hora | Tipo | Commit | Detalle |
+|------|------|--------|---------|
+| 13:05 | 🧑 Manual | (en este commit) | **Bugfix responsive**: 1) `WorldMap.jsx`: viewBox `960×720` (antes `480`) — el mundo se recortaba verticalmente (se perdía Latinoamérica/hemisferio sur). 2) `Header.jsx`: `flex-wrap` + título `text-2xl→4xl` responsive + `min-w-0` (antes `text-4xl` fijo desbordaba en mobile). 3) `index.css`: `overflow-x: hidden` + `max-width:100%` en `html,body` (elimina el scroll horizontal global y la franja blanca). Verificado con Chromium headless: `dw==cw` en 375px y 1280px, mapa 174 paths con Palestine y sin Israel. |
+
 ## 2026-08-09 — FASE 4: mapamundi interactivo (agente `daily-dev` 12:00)
 
 | Hora | Tipo | Commit | Detalle |

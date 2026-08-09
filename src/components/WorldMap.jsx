@@ -3,11 +3,13 @@ import { geoMercator, geoPath } from 'd3-geo';
 import worldData from '../data/worldmap.geo.json';
 
 // Proyección idéntica a react-svg-worldmap: geoMercator con scale por defecto,
-// mundo de 960px de ancho, trasladado para centrar el ecuador.
+// mundo de 960px de ancho, trasladado para centrar el ecuador. La altura se fija
+// en 720 (width * 3/4) para que el mundo completo (incluido el hemisferio sur)
+// quepa en el viewBox sin recortarse.
 const PROJECTION = geoMercator();
 const PATH = geoPath().projection(PROJECTION);
 const WORLD_WIDTH = 960;
-const WORLD_HEIGHT = 480;
+const WORLD_HEIGHT = 720;
 
 const GEO_FEATURES = worldData.features;
 
