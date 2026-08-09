@@ -67,6 +67,15 @@ data/registros/   # registro.json (métricas diarias del agente)
 - Mantén actualizados `PLAN.md`, `data/registros/registro.json` y `.daily-runs/`.
 - Commits convencionales en español (`feat:`, `fix:`, `docs:`, `chore:`).
 
+## Corrección autónoma de errores
+- `@daily-dev` inicia cada turno con una inspección (paso 1.5 de su rutina):
+  desincronizaciones entre archivos de regiones, descargas rotas (curl HTTP 200),
+  warnings de build que puedan volverse errores.
+- Errores críticos (rompen build/CI/descargas) se corrigen ANTES que la tarea del plan.
+- Errores menores se corrigen en el momento o se registran como primera tarea pendiente.
+- Además de la tarea del plan, el agente puede hacer 1-2 mejoras pequeñas y seguras
+  por turno, en commits separados.
+
 ## Subagentes disponibles
 - `@daily-dev` (primary): rutina diaria autónoma, 2 turnos (00:00 y 12:00).
 - `@ux-review`: revisa UX/UI y entrega `data/registros/ux-report.md`.
