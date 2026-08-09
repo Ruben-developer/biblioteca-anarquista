@@ -12,7 +12,7 @@ import Navigation from './Navigation';
 import TimelineFilters from './TimelineFilters';
 import StatsPanel from './StatsPanel';
 import TimelineView from './TimelineView';
-import MapView from './MapView';
+import WorldMapView from './WorldMapView';
 import AuthorsView from './AuthorsView';
 import FavoritesView from './FavoritesView';
 import TourModal from './TourModal';
@@ -105,7 +105,7 @@ const AnarchistArchive = () => {
         )}
 
         {activeView === VIEWS.MAP && (
-          <MapView
+          <WorldMapView
             darkMode={darkMode}
             regionData={regionData}
             onSelectRegion={setSelectedRegion}
