@@ -54,14 +54,16 @@ public/documents/        → documents.json (metadatos) + TXT de descarga
 
 ### FASE 2 — Contenido y lógica
 - [x] Ampliar `regionData.js` a 65 obras con 59 PDFs verificados y 11 regiones (agente autónomo 2026-08-08 12:03).
+- [x] **Biblioteca/catálogo** (`LibraryView.jsx`): navegación por obras con búsqueda y filtros combinados (categoría + región + década + orden), util `src/utils/library.js`.
+- [x] **Lector embebido** (`ReaderView.jsx`): PDF en iframe y TXT con controles de fuente/tema; se abre sin salir de la web.
+- [x] **Enmascarar servidor de PDFs**: `PDF_BASE = VITE_PDF_BASE || '/pdfs/'` + proxy de Vite en dev; la IP interna no se versiona ni queda en el bundle.
 - [ ] Ampliar `timelineEvents.js` (más eventos, décadas posteriores a 1968).
 - [ ] Ampliar `authors.js` (más pensadores: Rocker, Bookchin, Proudhon...).
 - [ ] Enriquecer `documents.json` (más obras con metadatos completos).
-- [ ] Añadir lector PDF en la web (no solo descarga).
 - [ ] Dashboard de métricas del archivo.
 
 ### FASE 3 — Lectura enriquecida
-- [ ] Obra destacada aleatoria del día.
+- [ ] Obra destacada aleatoria del día (ver `IDEAS.md`).
 - [ ] Referencias cruzadas entre textos y eventos.
 - [ ] Mapas visuales por región.
 - [ ] Más filtros y búsqueda avanzada.
@@ -129,8 +131,19 @@ contenedor nginx local en la máquina siempre-encendida, y la web enlaza
   `anarquismo/`, `otros/`, `ref/`), nunca la carpeta original de `Documentos`.
 - Origen: `/home/fdr/Documentos/anarquismo_importado/PDFs/` (401 PDFs)
   + `Editorial_Gato_Negro/` (125 docx).
-- `documentService.js` resuelve `filename` → `http://192.168.1.117:8081/pdfs/<filename>`.
+- `documentService.js` resuelve `filename` → `PDF_BASE` (ver §enmascaramiento abajo).
 - IP usada porque el hostname `server` solo resuelve a IPv6 (ver §5.1.1).
+
+### Enmascaramiento del servidor de PDFs (2026-08-09)
+- **La IP interna NO se versiona ni queda en el bundle.**
+- `documentService.js`: `PDF_BASE = import.meta.env.VITE_PDF_BASE || '/pdfs/'`.
+- **Dev**: proxy de Vite (`vite.config.js` → `/pdfs` a `http://192.168.1.117:8081`);
+  la app solo ve rutas relativas. Verificado: 0 requests con la IP en el bundle.
+- **Producción (GitHub Pages)**: el CI (`pages.yml`) inyecta `VITE_PDF_BASE` desde el
+  secret `VITE_PDF_BASE`. Si el secret apunta a una URL pública (túnel Cloudflare,
+  Tailscale Serve), los PDFs se sirven enmascarando la IP. Sin secret, el fallback
+  `/pdfs/` solo funciona con el proxy de dev.
+- Ver `.env.example`.
 
 ### 5.1.1 Pendiente servidor
 - [ ] Añadir `server` a `/etc/hosts` (`192.168.1.117 server`) → cambiar PDF_BASE a `http://server:8081/pdfs/`.

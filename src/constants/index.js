@@ -15,7 +15,8 @@ export const VIEWS = {
   TIMELINE: 'timeline',
   MAP: 'map',
   AUTHORS: 'authors',
-  FAVORITES: 'favorites'
+  FAVORITES: 'favorites',
+  LIBRARY: 'library'
 };
 
 // Color themes for dark and light modes

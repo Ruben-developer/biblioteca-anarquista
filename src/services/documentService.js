@@ -4,7 +4,11 @@
  */
 
 const BASE_URL = import.meta.env.BASE_URL;
-const PDF_BASE = 'http://192.168.1.117:8081/pdfs/';
+// URL base de los PDFs. En desarrollo se resuelve vía el proxy de Vite
+// (ruta relativa /pdfs → el servidor interno definido en vite.config.js),
+// de modo que la IP interna nunca queda expuesta en el bundle. En producción
+// se usa VITE_PDF_BASE (variable de entorno, no versionada) o el fallback.
+const PDF_BASE = import.meta.env.VITE_PDF_BASE || '/pdfs/';
 
 let documentsCache = null;
 

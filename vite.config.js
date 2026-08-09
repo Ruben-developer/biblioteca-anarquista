@@ -6,7 +6,15 @@ export default defineConfig({
   base: '/biblioteca-anarquista/',
   server: {
     port: 3000,
-    open: true
+    open: true,
+    proxy: {
+      // Enmascara el servidor de PDFs interno: la app solo ve /pdfs/...
+      // y Vite reenvía a la IP local (no expuesta en el código ni en el bundle).
+      '/pdfs': {
+        target: 'http://192.168.1.117:8081',
+        changeOrigin: true
+      }
+    }
   },
   build: {
     outDir: 'dist',

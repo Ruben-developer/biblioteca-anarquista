@@ -42,6 +42,11 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          # URL pública de los PDFs para producción (túnel Cloudflare, Tailscale
+          # Serve, etc.). Si no existe el secret, el fallback es /pdfs/ (solo útil
+          # con el proxy de Vite en desarrollo). La IP interna NUNCA va en el repo.
+          VITE_PDF_BASE: ${{ secrets.VITE_PDF_BASE }}
 
       - name: Configurar Pages
         uses: actions/configure-pages@v5

@@ -15,6 +15,8 @@ import TimelineView from './TimelineView';
 import WorldMapView from './WorldMapView';
 import AuthorsView from './AuthorsView';
 import FavoritesView from './FavoritesView';
+import LibraryView from './LibraryView';
+import ReaderView from './ReaderView';
 import TourModal from './TourModal';
 import RegionModal from './RegionModal';
 import EventModal from './EventModal';
@@ -28,6 +30,7 @@ const AnarchistArchive = () => {
   const [activeView, setActiveView] = useState(VIEWS.TIMELINE);
   const [selectedRegion, setSelectedRegion] = useState(null);
   const [selectedEvent, setSelectedEvent] = useState(null);
+  const [readingBook, setReadingBook] = useState(null);
   const [showFilters, setShowFilters] = useState(false);
   const [showTour, setShowTour] = useState(false);
   const [showStats, setShowStats] = useState(false);
@@ -119,6 +122,16 @@ const AnarchistArchive = () => {
           />
         )}
 
+        {activeView === VIEWS.LIBRARY && (
+          <LibraryView
+            darkMode={darkMode}
+            regionData={regionData}
+            favorites={favorites}
+            onToggleFavorite={toggleFavorite}
+            onRead={setReadingBook}
+          />
+        )}
+
         {activeView === VIEWS.FAVORITES && (
           <FavoritesView
             darkMode={darkMode}
@@ -127,6 +140,14 @@ const AnarchistArchive = () => {
           />
         )}
       </main>
+
+      {readingBook && (
+        <ReaderView
+          darkMode={darkMode}
+          book={readingBook}
+          onClose={() => setReadingBook(null)}
+        />
+      )}
 
       {showTour && (
         <TourModal

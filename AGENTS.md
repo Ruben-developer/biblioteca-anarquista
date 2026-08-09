@@ -41,6 +41,17 @@ data/registros/   # registro.json (métricas diarias del agente)
 - **Metadatos completos de obra** → `public/documents/documents.json` (id, title, author, summary, tags, filename, rating...).
 - **Nuevo PDF descargable** → añade `filename` al libro en `regionData.js` (el botón Descargar solo aparece si hay `filename`).
 - **Nuevo país en el mapa** → añade la región a `regionData.js`, el código ISO en `src/data/countryData.js`, y a `REGIONS` en `src/constants/index.js` (¡los 3 lugares o el mapa/filtros quedan desincronizados!).
+- **Biblioteca (catálogo)** → usa automáticamente todos los libros de `regionData.js` (`getAllBooks` en `src/utils/library.js`). No requiere registro aparte.
+- **Lector embebido** → `src/components/ReaderView.jsx`. PDFs se muestran en iframe; TXT se cargan por fetch. Al abrir un libro desde la Biblioteca o el mapa se lanza `ReaderView`.
+
+## Seguridad: servidor de PDFs (no exponer la IP)
+- La IP interna del servidor (`192.168.1.117:8081`) NO debe aparecer en el código
+  del repo ni en el bundle. `documentService.js` usa `PDF_BASE = VITE_PDF_BASE || '/pdfs/'`.
+- **Desarrollo**: el proxy de Vite (`vite.config.js`, `/pdfs → http://192.168.1.117:8081`)
+  resuelve la ruta relativa. Nunca pongas la IP en `documentService.js` ni en componentes.
+- **Producción**: el CI inyecta `VITE_PDF_BASE` desde el secret de GitHub Actions.
+  Si el secret no existe, el fallback `/pdfs/` NO funcionará en GitHub Pages
+  (solo con el proxy de dev). Ver `.env.example` y `IDEAS.md`.
 
 ## Mapa interactivo mundial (FASE 4)
 - **Componente propio** `src/components/WorldMap.jsx` renderizado con `d3-geo`
