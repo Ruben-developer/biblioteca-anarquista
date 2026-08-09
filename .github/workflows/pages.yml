@@ -28,6 +28,18 @@ jobs:
       - name: Instalar dependencias
         run: npm ci
 
+      - name: Lint
+        run: npm run lint
+
+      - name: Tests
+        run: npm test
+
+      - name: Auditoría de seguridad (informativa)
+        run: npm audit --audit-level=high || true
+        # Las vulnerabilidades restantes son de esbuild (dev-server de Vite,
+        # transitiva de vitest) y solo se resuelven con vite@8 (breaking).
+        # No aplican al deploy estático de GitHub Pages. Se informan sin bloquear.
+
       - name: Build
         run: npm run build
 

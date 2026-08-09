@@ -39,6 +39,15 @@
       "prs": 0,
       "ci": "verde",
       "nota": "Catálogo ampliado de 23 a 65 obras (59 con PDF verificado HTTP 200 en :8081) y de 8 a 11 regiones (Alemania, Inglaterra, Corea). Obras verificadas con pdftotext: Kropotkin (Origen de la moral, Campos-fábricas-talleres, Las prisiones, El Estado), Bakunin (El principio de autoridad/Estado, El patriotismo, Federalismo-socialismo-antiteologismo), Proudhon (El principio federativo, Amor y matrimonio), Reclus (Evolución-revolución-anarquismo, El ideal anarquista), Déjacque, Stirner, Herbert Read, Emma Goldman, Fabbri, Peirats, Avrich, Bookchin, Tolstói, Nettlau, Cappelletti, Vitale, entre otros. Build, lint y CI de Pages verdes; contenido confirmado en el bundle desplegado."
+    },
+    {
+      "fecha": "2026-08-09",
+      "obras": 65,
+      "palabras": 1112,
+      "commits": 1,
+      "prs": 0,
+      "ci": "verde",
+      "nota": "DEVOPS PARCIAL (manual): tests Vitest (12 tests de filters.js), npm run check (lint+test+build), check-downloads (59/59 PDFs HTTP 200), CI ampliado (lint->test->audit->build->deploy), npm audit fix (9->4 vulns, restantes esbuild/vite8 no aplican a Pages)."
     }
   ]
 }

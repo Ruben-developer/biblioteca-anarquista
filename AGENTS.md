@@ -9,22 +9,25 @@ modo oscuro/claro, filtros y estadísticas. Deploy en GitHub Pages.
 
 ## Stack (IMPORTANTE)
 - **React 18** + **Vite 4** + **Tailwind CSS 3** — JavaScript/JSX (NO TypeScript).
-- No hay tests configurados; verificación = build + lint.
 - Commands:
   - `npm run dev` — servidor de desarrollo (puerto 3000)
-  - `npm run build` — build de producción a `dist/` (DEBE pasar siempre)
+  - `npm run check` — verificación completa: **lint + tests + build** (DEBE pasar siempre)
+  - `npm run test` — tests unitarios (Vitest, `src/**/*.test.js`)
+  - `npm run build` — build de producción a `dist/`
   - `npm run lint` — `eslint src --ext .js,.jsx` (0 errores; warnings de prop-types tolerados)
+  - `npm run check-downloads` — verifica que todos los `filename` del catálogo respondan HTTP 200 en el contenedor
   - `npm run preview` — sirve el build local
+- CI de Pages: `npm ci` → lint → test → audit (informativo) → build → deploy.
 
 ## Estructura
 ```
 src/
-├── components/   # Header, Navigation, TimelineView, MapView, AuthorsView, FavoritesView, modales
-├── data/         # timelineEvents.js, authors.js, regionData.js
+├── components/   # Header, Navigation, TimelineView, WorldMapView (mapamundi interactivo), AuthorsView, FavoritesView, modales
+├── data/         # timelineEvents.js, authors.js, regionData.js, countryData.js (ISO por región)
 ├── services/     # documentService.js (descargas: PDFs del contenedor, TXT del repo)
 ├── constants/    # Categorías, décadas, regiones, vistas, temas de color
 ├── hooks/        # useScrollTop, useDarkMode, useFavorites
-└── utils/        # filters.js
+└── utils/        # filters.js, countryNames.js (normalización nombres de país del mapa)
 public/documents/ # documents.json (metadatos) + TXT de descarga
 data/registros/   # registro.json (métricas diarias del agente)
 .daily-runs/      # logs diarios del agente
@@ -63,7 +66,7 @@ data/registros/   # registro.json (métricas diarias del agente)
 - No toques `pdfs-local/` (los PDFs no se versionan) ni subas artefactos (`dist/`, `node_modules/`).
 - No cambies `PDF_BASE` a hostname ni rompas la ruta `base: /biblioteca-anarquista/` en `vite.config.js`.
 - Al añadir regiones al mapa, actualiza SIEMPRE los 3 sitios: `regionData.js`, `countryData.js`, `REGIONS` en `constants/index.js`.
-- Tras cada cambio: `npm run build` + `npm run lint` deben pasar, y el CI de Pages quedar verde.
+- Tras cada cambio: `npm run check` (lint + tests + build) debe pasar, y el CI de Pages quedar verde. Si tocaste el catálogo, corre también `npm run check-downloads`.
 - Mantén actualizados `PLAN.md`, `data/registros/registro.json` y `.daily-runs/`.
 - Commits convencionales en español (`feat:`, `fix:`, `docs:`, `chore:`).
 

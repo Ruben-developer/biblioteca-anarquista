@@ -36,14 +36,24 @@
 
 > Ejecución: iniciada a las **12:00:00**, finalizada a las **12:06:33** (exit=0), CI verde.
 
+## 2026-08-09 — DevOps parcial (sesión manual)
+
+| Hora | Tipo | Commit | Detalle |
+|------|------|--------|---------|
+| 12:00 | 🧑 Manual | (en este commit) | **Calidad y DevOps**: añade Vitest (12 tests de `filters.js`), comando `npm run check` (lint+test+build), `npm run check-downloads` (59/59 PDFs HTTP 200), CI ampliado (lint→test→audit→build→deploy), y `npm audit fix` (9→4 vulns). |
+| 12:00 | 🧑 Manual | (en este commit) | Agente `daily-dev`: paso 1.5 ampliado con `npm audit` + `check-downloads` automáticos, y verificación con `npm run check`. |
+
+> Nota: las 4 vulnerabilidades restantes son de esbuild (dev-server de Vite, transitiva de vitest),
+> solo resolubles con vite@8 (breaking) — no aplican al deploy estático de Pages. Documentadas, CI no bloqueante.
+
 ---
 
 ## Estado actual
 
-- **15 commits** en `main`, CI de Pages **verde**, web **HTTP 200**.
-- **Catálogo**: 65 obras · 59 con PDF descargable · 11 regiones.
-- **Infraestructura**: contenedor `pdf-server` (:8081) activo, cron 12:00 activo, persistencia con Linger + `podman-restart.service`.
-- **Estructura de datos**: `src/data/` (eventos, autores, textos por región) + `public/documents/documents.json`.
+- **15+ commits** en `main`, CI de Pages **verde** (lint+tests+audit+build), web **HTTP 200**.
+- **Calidad**: 12 tests unitarios · 59/59 descargas verificadas HTTP 200 · lint 0 errores.
+- **Infraestructura**: contenedor `pdf-server` (:8081) activo, cron 2×/día (00:00 y 12:00), persistencia con Linger + `podman-restart.service`.
+- **Agentes**: `@daily-dev` (primary), `@ux-review` y `@content-importer` (subagentes).
 
 ## Plan que sigue (de `PLAN.md`)
 

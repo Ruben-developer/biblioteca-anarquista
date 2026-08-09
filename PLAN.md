@@ -106,6 +106,16 @@ lista de textos de ese país (con su modal/descarga actuales).
 - [ ] Que `daily-dev` invoque a `@ux-review` periódicamente (p. ej. una vez por semana o cuando la tarea lo requiera).
 - [ ] Que `daily-dev` use `@content-importer` para seguir ampliando el catálogo hasta agotar los ~400 PDFs disponibles.
 
+### FASE 6 — Calidad y DevOps (DevSecOps parcial)
+- [x] Tests unitarios con Vitest (`src/**/*.test.js`, actualmente 12 tests de `filters.js`).
+- [x] Comando `npm run check` = lint + test + build (puerta única de calidad).
+- [x] `npm run check-downloads`: verifica HTTP 200 de todos los filename del catálogo (59/59 OK).
+- [x] CI de Pages ampliado: lint → test → audit → build → deploy.
+- [x] Inspección autónoma del agente: `npm audit` + `check-downloads` al inicio de cada turno (paso 1.5).
+- [ ] Más tests: añadir cobertura para `documentService.js`, hooks y componentes clave.
+- [ ] Conectar SonarQube (ya instalado en `:9000`) para análisis de calidad del frontend (opcional, requiere scanner + token).
+- [ ] Cobertura de código (umbral mínimo en CI).
+
 ## 5. Reglas del agente (resumen)
 - Trabaja SOLO en este repo, nunca en `devops-lab`.
 - Cada día: elegir tarea de PLAN.md (o inventar idea razonable si no hay), implementar, build/test, commit, push, esperar CI, actualizar PLAN.md, registrar métricas en `registro.json` y log en `.daily-runs/`.
