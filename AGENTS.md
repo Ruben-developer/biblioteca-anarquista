@@ -22,8 +22,8 @@ modo oscuro/claro, filtros y estadísticas. Deploy en GitHub Pages.
 ## Estructura
 ```
 src/
-├── components/   # Header, Navigation, TimelineView, WorldMapView (mapamundi interactivo), AuthorsView, FavoritesView, modales
-├── data/         # timelineEvents.js, authors.js, regionData.js, countryData.js (ISO por región)
+├── components/   # Header, Navigation, TimelineView, WorldMapView + WorldMap (mapamundi propio con d3-geo), AuthorsView, FavoritesView, modales
+├── data/         # timelineEvents.js, authors.js, regionData.js, countryData.js (ISO por región), worldmap.geo.json (geometrías del mapa)
 ├── services/     # documentService.js (descargas: PDFs del contenedor, TXT del repo)
 ├── constants/    # Categorías, décadas, regiones, vistas, temas de color
 ├── hooks/        # useScrollTop, useDarkMode, useFavorites
@@ -42,13 +42,21 @@ data/registros/   # registro.json (métricas diarias del agente)
 - **Nuevo país en el mapa** → añade la región a `regionData.js`, el código ISO en `src/data/countryData.js`, y a `REGIONS` en `src/constants/index.js` (¡los 3 lugares o el mapa/filtros quedan desincronizados!).
 
 ## Mapa interactivo mundial (FASE 4)
-- Librería: `react-svg-worldmap` (mapa bundled, sin API key, compatible GitHub Pages).
+- **Componente propio** `src/components/WorldMap.jsx` renderizado con `d3-geo`
+  (no usa librería externa de mapas). Datos en `src/data/worldmap.geo.json`
+  (FeatureCollection GeoJSON, generado por `npm run generate-worldmap`).
 - `src/data/countryData.js`: mapea región → código ISO 3166-1 alpha-2 (ej. `es`, `fr`, `ru`).
-- `src/components/WorldMapView.jsx`: `WorldMap` con `data`, `onCountryClick`, colores por tema.
+- `src/components/WorldMapView.jsx`: vista que alimenta `WorldMap` con `data`,
+  `styleFunction`, `onClickFunction`, `tooltipTextFunction` y colores por tema.
+- **Política del mapa**: el GeoJSON fusiona la geometría de Israel dentro de
+  Palestine (`npm run generate-worldmap` lo reconstruye desde el TopoJSON de
+  Natural Earth). Israel NO existe como país en el mapa. No revertir esto.
 - Los nombres que devuelve el mapa (inglés, ej. "United States of America") NO
   coinciden con las claves de `regionData.js` ("Estados Unidos") → usa
   `normalizeCountryName()` en `src/utils/` para traducir.
 - Al seleccionar un país se abre `RegionModal` con sus textos (reutilizar lógica actual).
+- Si algún día se quiere regenerar el GeoJSON (nuevos datos o geometrías),
+  editar `scripts/generate-worldmap.mjs` y ejecutar `npm run generate-worldmap`.
 
 ## Descargas (PDFs)
 - Los PDFs NO viven en el repo (gitignored `pdfs-local/`). Se sirven desde el

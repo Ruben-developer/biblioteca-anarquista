@@ -157,7 +157,8 @@ contenedor nginx local en la máquina siempre-encendida, y la web enlaza
 - [ ] **Descarga desde la página**: botón para descargar la obra en PDF/TXT/EPUB (el botón ya existe, falta el export TXT/EPUB).
 
 ## 6. Próximo día
-- [x] **MAPAMUNDI INTERACTIVO (FASE 4)** ✅ completada 2026-08-09: `react-svg-worldmap` instalado, `countryData.js`, `WorldMapView.jsx`, conectado a `RegionModal`, `normalizeCountryName()` con tests, build+lint+CI verdes.
+ - [x] **MAPAMUNDI INTERACTIVO (FASE 4)** ✅ completada 2026-08-09: `react-svg-worldmap` instalado, `countryData.js`, `WorldMapView.jsx`, conectado a `RegionModal`, `normalizeCountryName()` con tests, build+lint+CI verdes.
+ - [x] **Mapa propio con d3-geo** ✅ 2026-08-09: sustituye `react-svg-worldmap` por `src/components/WorldMap.jsx` + `src/data/worldmap.geo.json` (generado por `npm run generate-worldmap`). La geometría de Israel se fusiona dentro de Palestine (Israel deja de existir en el mapa); 174 países, 23 tests verdes.
 - [x] Corregir `REGIONS` en `src/constants/index.js` para incluir las 11 regiones del mapa (revisado 2026-08-09: ya sincronizado desde el 2026-08-08).
 - [ ] **FASE 2**: ampliar `timelineEvents.js` con más eventos y décadas posteriores a 1968 (siguiente tarea recomendada).
 - [ ] Ampliar `authors.js` (más pensadores: Rocker, Bookchin, Proudhon...).
@@ -173,6 +174,14 @@ la región, tooltip con nº de textos, normalización de nombres del mapa→clav
 catálogo y tests propios. Además se validó e integró el trabajo de DevOps/calidad
 que había quedado sin commitear (vitest, `npm run check`, `check-downloads` 59/59,
 CI ampliado). Build, 15 tests y CI de Pages verdes.
+
+### Nota del día (2026-08-09, tarde)
+**Sustituido `react-svg-worldmap` por mapa propio con `d3-geo`** para poder eliminar
+Israel del mapa: `npm run generate-worldmap` produce `src/data/worldmap.geo.json`
+(174 países) fusionando la geometría de Israel dentro de Palestine (bordes disueltos
+con topojson merge). `WorldMap.jsx` replica la API (styleFunction, onClickFunction,
+tooltipTextFunction) con tooltip `<title>`. 23 tests verdes (8 nuevos de WorldMap,
+incluyen: Israel ausente, Palestine presente, 174 paths). Build y CI verdes.
 
 ### Nota del día (2026-08-08)
 Catálogo ampliado de 23 → **65 obras** (59 con PDF descargable verificado HTTP 200) y de 8 → **11 regiones**

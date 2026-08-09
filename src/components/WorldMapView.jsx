@@ -1,5 +1,5 @@
 import React from 'react';
-import WorldMap from 'react-svg-worldmap';
+import WorldMap from './WorldMap';
 import { MapPin } from 'lucide-react';
 import { THEME } from '../constants';
 import { COUNTRY_ISO } from '../data/countryData';
@@ -60,13 +60,10 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
 
       <WorldMap
         data={mapData}
-        size="responsive"
         frame
         backgroundColor="transparent"
         borderColor={darkMode ? '#7f1d1d' : '#b45309'}
         frameColor={darkMode ? '#7f1d1d' : '#b45309'}
-        tooltipBgColor={darkMode ? '#111827' : '#ffffff'}
-        tooltipTextColor={darkMode ? '#f3f4f6' : '#1f2937'}
         onClickFunction={handleCountryClick}
         styleFunction={styleFunction}
         tooltipTextFunction={tooltipTextFunction}

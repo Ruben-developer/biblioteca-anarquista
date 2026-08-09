@@ -46,6 +46,15 @@
 > Nota: las 4 vulnerabilidades restantes son de esbuild (dev-server de Vite, transitiva de vitest),
 > solo resolubles con vite@8 (breaking) — no aplican al deploy estático de Pages. Documentadas, CI no bloqueante.
 
+## 2026-08-09 (tarde) — Mapa propio: Israel eliminado, fusionado en Palestine
+
+| Hora | Tipo | Commit | Detalle |
+|------|------|--------|---------|
+| 12:30 | 🧑 Manual | (en este commit) | **Sustituye `react-svg-worldmap` por mapa propio** renderizado con `d3-geo`: `src/components/WorldMap.jsx` + `src/data/worldmap.geo.json` (174 países). La geometría de Israel se **fusiona dentro de Palestine** (`topojson merge`, disuelve el borde común) y el país Israel desaparece del mapa. Generador reproducible: `scripts/generate-worldmap.mjs` (`npm run generate-worldmap`). 8 tests nuevos de `WorldMap` (Israel ausente, Palestine presente, 174 paths, tooltips y estilo). Total: **23 tests verdes**. |
+
+> Verificación geométrica: Palestine fusionado cubre lon 34.27–35.84 × lat 29.50–33.28
+> (todo Israel+Gaza+Cisjordania hasta Eilat). Build y CI verdes.
+
 ## 2026-08-09 — FASE 4: mapamundi interactivo (agente `daily-dev` 12:00)
 
 | Hora | Tipo | Commit | Detalle |
