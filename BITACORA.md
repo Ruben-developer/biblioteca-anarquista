@@ -90,10 +90,18 @@
 | 21:25 | 🧑 Manual | `605d155` | **Gradiente de color en el mapa**: los países con pocos textos salen en color claro y con más textos más oscuros (interpolación `lerpColor` escalada entre `minValue`/`maxValue`). Leyenda «Pocos textos → Muchos textos» bajo el mapa + texto descriptivo actualizado. Verificado en Chromium: luminancia España(14)=83 → Alemania(1)=226. 4 tests nuevos del gradiente (37 en total), CI verde, web HTTP 200. |
 | 22:26 | 🧑 Manual | `98517f3` | **Biblioteca + Lector embebido + enmascaramiento del servidor PDF**: 1) `LibraryView` — catálogo de las 65 obras de `regionData` con búsqueda y filtros combinados (categoría + región + década + orden), util `src/utils/library.js`. 2) `ReaderView` — lector sin salir de la web: PDF en iframe y TXT con fetch + controles de tamaño de letra y modo sepia. 3) **Enmascaramiento**: `PDF_BASE = VITE_PDF_BASE \|\| '/pdfs/'` + proxy de Vite en dev (la IP interna ya no se versiona ni queda en el bundle — verificado 0 ocurrencias en `dist/`); CI inyecta `VITE_PDF_BASE` desde secret; `.env.example` documenta. Guardadas las demás secciones en `IDEAS.md`. Verificado en navegador: 65 obras, filtros, lector PDF abierto, 0 requests con la IP. 22 tests nuevos (59 en total), CI verde, web HTTP 200. |
 
+## 2026-08-09 (noche) — Expansión de catálogo: +26 obras
+
+| Hora | Tipo | Commit | Detalle |
+|------|------|--------|---------|
+| 19:21 | 🧑 Manual | `pendiente` | **Catálogo ampliado 65 → 91 obras**. Se escanearon los 410 PDFs del `pdfs-local/` (324 anarquismo + 77 otros + 9 ref) con `pdftotext`, descartando afiches, panfletos, PowerPoints, documentos legales, duplicados y ficheros escaneados sin texto. Se añadieron **26 obras nuevas** a `regionData.js` (26/26 filenames HTTP 200): España — García Oliver (*El eco de los pasos*), Mujeres Libres, Mella (x2), Avilés; Francia — Proudhon (x2), Guérin, Kropotkin; Rusia — Kronstadt (Petritchenko/Berkman/Makhno), La Makhnovschina, Bakunin; Italia — Malatesta, Fabbri; EEUU — Graeber, Gelderloos, Bookchin; Alemania — Wittkop, Nettlau (x2); Inglaterra — Meltzer; México — La bala y la escuela, Benítez (x2); Argentina — Bayer; Chile — Wobblie. **85/85 obras con filename descargable**, `check-downloads` OK, `npm run check` verde (lint + 59 tests + build). |
+
 ## Estado actual
 
-- **15+ commits** en `main`, CI de Pages **verde** (lint+tests+audit+build), web **HTTP 200**.
-- **Calidad**: 28 tests unitarios (12 filters + 3 countryNames + 8 WorldMap + 5 modales) · 59/59 descargas verificadas HTTP 200 · lint 0 errores · **SonarQube gate OK** (0 bugs, 0 vulns, A/A/A, coverage global 32%).
+- **16+ commits** en `main`, CI de Pages **verde** (lint+tests+audit+build), web **HTTP 200**.
+- **Calidad**: 59 tests unitarios · **85/85 descargas verificadas HTTP 200** · lint 0 errores · **SonarQube gate OK** (0 bugs, 0 vulns, A/A/A, coverage global 35%).
+- **Catálogo**: **91 obras** en `regionData.js`, distribuidas en 11 regiones.
+- **Mapa**: FASE 4 completada — mapamundi interactivo por país (react-svg-worldmap) en la vista Mapa.
 - **Mapa**: FASE 4 completada — mapamundi interactivo por país (react-svg-worldmap) en la vista Mapa.
 - **Infraestructura**: contenedor `pdf-server` (:8081) activo, cron 2×/día (00:00 y 12:00), persistencia con Linger + `podman-restart.service`.
 - **Agentes**: `@daily-dev` (primary), `@ux-review` y `@content-importer` (subagentes).
