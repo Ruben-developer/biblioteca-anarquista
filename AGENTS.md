@@ -16,6 +16,7 @@ modo oscuro/claro, filtros y estadísticas. Deploy en GitHub Pages.
   - `npm run build` — build de producción a `dist/`
   - `npm run lint` — `eslint src --ext .js,.jsx` (0 errores; warnings de prop-types tolerados)
   - `npm run check-downloads` — verifica que todos los `filename` del catálogo respondan HTTP 200 en el contenedor
+  - `npm run test:coverage` — tests Vitest con cobertura v8 (genera `coverage/lcov.info`)
   - `npm run preview` — sirve el build local
 - CI de Pages: `npm ci` → lint → test → audit (informativo) → build → deploy.
 
@@ -68,6 +69,25 @@ data/registros/   # registro.json (métricas diarias del agente)
 - `filename` reales disponibles: carpeta `anarquismo/` (~324 PDFs), `otros/` (~77),
   `ref/` (~9). Verifica con `ls ~/biblioteca-anarquista/pdfs-local/` y prueba con
   `curl -s -o /dev/null -w "%{http_code}" http://192.168.1.117:8081/pdfs/<file>`.
+
+## SonarQube (calidad)
+- SonarQube 26.6.0 en `http://192.168.1.117:9000` (dashboard: `?id=biblioteca-anarquista`).
+  Contenedores podman: `sonarqube` (server) + `sonarqube-db` (postgres).
+- **Quality gate «Biblioteca Anarquista»** (asociado al proyecto): `new_coverage ≥ 50%`,
+  `new_duplicated_lines_density ≤ 3%`, `new_violations ≤ 20`. NO usar «Sonar way» (80%/0, inviable en este frontend).
+- Scanner local: `~/tools/sonar-scanner` (symlink `~/.local/bin/sonar-scanner`).
+  Token (secreto, NO commitear): `~/.config/biblioteca/sonar.token`.
+- Análisis manual:
+  ```
+  cd ~/biblioteca-anarquista && npm run test:coverage
+  sonar-scanner -Dsonar.host.url=http://192.168.1.117:9000 \
+    -Dsonar.login="$(cat ~/.config/biblioteca/sonar.token)" \
+    -Dsonar.projectBaseDir=/home/fdr/biblioteca-anarquista
+  ```
+  (el `sonar-project.properties` ya apunta a `sources=src` y `coverage/lcov.info`).
+- Estado objetivo: **0 bugs, 0 vulnerabilidades, ratings A/A/A, gate OK**. `caycStatus: non-compliant` es el estándar CAYC de SonarQube, no afecta al gate.
+- El hotspot `PDF_BASE` http (`documentService.js`) está marcado **SAFE** por diseño (PDFs locales). No revertir.
+- Regenerar `coverage/` es normal; `coverage/` y `.scannerwork/` están en `.gitignore`.
 
 ## Reglas de los agentes (resumen)
 - Trabaja SOLO en este repo, nunca en `devops-lab` ni otros proyectos.

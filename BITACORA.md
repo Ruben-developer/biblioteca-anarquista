@@ -73,10 +73,18 @@
 
 ---
 
+## 2026-08-09 (noche) — Integración SonarQube (calidad)
+
+| Hora | Tipo | Commit | Detalle |
+|------|------|--------|---------|
+| 15:10 | 🧑 Manual | `a53d66d` | **SonarQube conectado al proyecto**: scanner 8.1.0 en `~/tools/sonar-scanner`, `sonar-project.properties` (projectKey `biblioteca-anarquista`, lcov reportPaths), token en `~/.config/biblioteca/sonar.token` (fuera del repo). Coverage Vitest con v8 (`npm run test:coverage` → `coverage/lcov.info`), `coverage/` y `.scannerwork/` gitignoreados. Fixes a11y: `role=dialog`+`aria-modal`+`Escape`+backdrop (`e.target===e.currentTarget`) en EventModal/RegionModal/TourModal, `TimelineView` `div→button`, `S2871` `sort()→localeCompare` en `documentService.js:110`. Tests de modales (`Modals.test.jsx`, 5) → **28 tests verdes**, coverage global **12%→35%**. |
+
+> **Quality gate propio** «Biblioteca Anarquista» (`new_coverage≥50%`, duplicación≤3%, `new_violations≤20`) en vez del estricto «Sonar way» (80%/0). **Gate OK**: 0 bugs, 0 vulnerabilidades, ratings A/A/A, 0% duplicación, `new_coverage` **61.4%**. Hotspot `PDF_BASE` http marcado **SAFE** (decisión documentada en AGENTS.md). `caycStatus: non-compliant` solo refleja el estándar CAYC, no afecta al gate. SonarQube 26.6.0 en `http://192.168.1.117:9000` (dashboard `?id=biblioteca-anarquista`). CI de Pages verde, web HTTP 200.
+
 ## Estado actual
 
 - **15+ commits** en `main`, CI de Pages **verde** (lint+tests+audit+build), web **HTTP 200**.
-- **Calidad**: 15 tests unitarios (12 filters + 3 countryNames) · 59/59 descargas verificadas HTTP 200 · lint 0 errores.
+- **Calidad**: 28 tests unitarios (12 filters + 3 countryNames + 8 WorldMap + 5 modales) · 59/59 descargas verificadas HTTP 200 · lint 0 errores · **SonarQube gate OK** (0 bugs, 0 vulns, A/A/A, coverage global 32%).
 - **Mapa**: FASE 4 completada — mapamundi interactivo por país (react-svg-worldmap) en la vista Mapa.
 - **Infraestructura**: contenedor `pdf-server` (:8081) activo, cron 2×/día (00:00 y 12:00), persistencia con Linger + `podman-restart.service`.
 - **Agentes**: `@daily-dev` (primary), `@ux-review` y `@content-importer` (subagentes).

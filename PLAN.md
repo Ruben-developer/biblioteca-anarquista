@@ -100,14 +100,15 @@ abre `RegionModal` con los textos de ese país (con su modal/descarga actuales).
 - [ ] Que `daily-dev` use `@content-importer` para seguir ampliando el catálogo hasta agotar los ~400 PDFs disponibles.
 
 ### FASE 6 — Calidad y DevOps (DevSecOps parcial)
-- [x] Tests unitarios con Vitest (`src/**/*.test.js`, actualmente 15 tests: 12 de `filters.js` + 3 de `countryNames.js`).
+- [x] Tests unitarios con Vitest (`src/**/*.test.js`, actualmente 28 tests: 12 de `filters.js` + 3 de `countryNames.js` + 8 de `WorldMap` + 5 de modales).
 - [x] Comando `npm run check` = lint + test + build (puerta única de calidad).
 - [x] `npm run check-downloads`: verifica HTTP 200 de todos los filename del catálogo (59/59 OK).
 - [x] CI de Pages ampliado: lint → test → audit → build → deploy.
 - [x] Inspección autónoma del agente: `npm audit` + `check-downloads` al inicio de cada turno (paso 1.5).
-- [ ] Más tests: añadir cobertura para `documentService.js`, hooks y componentes clave.
-- [ ] Conectar SonarQube (ya instalado en `:9000`) para análisis de calidad del frontend (opcional, requiere scanner + token).
-- [ ] Cobertura de código (umbral mínimo en CI).
+- [x] **SonarQube conectado** (scanner 8.1.0, `sonar-project.properties`, token en `~/.config/biblioteca/sonar.token`). Quality gate «Biblioteca Anarquista»: **OK**, 0 bugs, 0 vulns, ratings A/A/A, `new_coverage` 61.4%. Hotspot PDF_BASE marcado SAFE.
+- [x] Cobertura de código con Vitest v8 (`npm run test:coverage`, coverage global 32%, gate con umbral en código nuevo).
+- [ ] Más tests: añadir cobertura para `documentService.js`, hooks y componentes clave (subir coverage global &gt;50%).
+- [ ] (Opcional) Añadir análisis SonarQube al CI de Pages (secrets: token).
 
 ## 5. Reglas del agente (resumen)
 - Trabaja SOLO en este repo, nunca en `devops-lab`.
