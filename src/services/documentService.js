@@ -107,7 +107,7 @@ export const getAuthors = async () => {
 export const getRegions = async () => {
   const docs = await loadDocuments();
   const regions = new Set(docs.map(doc => doc.region));
-  return Array.from(regions).sort();
+  return Array.from(regions).sort((a, b) => a.localeCompare(b));
 };
 
 /**

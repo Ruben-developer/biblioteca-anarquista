@@ -21,8 +21,8 @@ const TimelineView = ({
                 {event.image}
               </div>
             
-              <div 
-                className={`${cardClass} border-2 rounded-lg p-5 shadow-md hover:shadow-xl transition-all w-full cursor-pointer`} 
+              <button
+                className={`${cardClass} border-2 rounded-lg p-5 shadow-md hover:shadow-xl transition-all w-full cursor-pointer text-left`}
                 onClick={() => onSelectEvent(event)}
               >
                 <div className="flex justify-between mb-3">
@@ -39,7 +39,7 @@ const TimelineView = ({
                 <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-700'}`}>
                   {event.description}
                 </p>
-              </div>
+              </button>
             </div>
           ))}
         </div>

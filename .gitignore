@@ -1,5 +1,6 @@
 node_modules/
 dist/
+coverage/
 pdfs-local/
 .DS_Store
 *.local
@@ -16,3 +17,4 @@ yarn-error.log*
 *.swo
 *~
 .eslintcache
+.scannerwork/

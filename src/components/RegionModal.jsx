@@ -41,8 +41,19 @@ const RegionModal = ({
   };
 
   return (
-    <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4" onClick={onClose}>
-      <div className={`${cardClass} border-4 ${darkMode ? 'border-red-900/50' : 'border-amber-700'} rounded-lg max-w-2xl w-full p-6`} onClick={(e) => e.stopPropagation()}>
+    <div
+      className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4"
+      onClick={(e) => {
+        if (e.target === e.currentTarget) onClose();
+      }}
+      role="dialog"
+      aria-modal="true"
+      aria-label={region}
+      onKeyDown={(e) => {
+        if (e.key === 'Escape') onClose();
+      }}
+    >
+      <div className={`${cardClass} border-4 ${darkMode ? 'border-red-900/50' : 'border-amber-700'} rounded-lg max-w-2xl w-full p-6`}>
         <div className={`${darkMode ? 'bg-red-900/30' : 'bg-amber-700'} rounded-t-lg -m-6 mb-4 p-4`}>
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-3">

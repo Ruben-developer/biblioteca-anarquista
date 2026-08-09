@@ -12,5 +12,13 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: false,
     minify: 'esbuild'
+  },
+  test: {
+    coverage: {
+      provider: 'v8',
+      reporter: ['lcov', 'text-summary'],
+      include: ['src/**/*.{js,jsx}'],
+      exclude: ['src/**/*.test.{js,jsx}', 'src/data/**', 'src/main.jsx']
+    }
   }
 })
