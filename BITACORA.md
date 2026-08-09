@@ -87,6 +87,7 @@
 |------|------|--------|---------|
 | 21:00 | 🧑 Manual | `568cff9` | **Mapa mejorado**: efecto hover sobre el territorio (brillo/saturación CSS `.worldmap__country`) y tooltip con **nombre del país en español** (`España: 14 textos`, `Palestina`, `Francia: 10 textos`...). Diccionario EN→ES de los 174 países (`translateCountryName`) en `countryNames.js`. Verificado con Chromium: 174 paths, hover `brightness(1.35)`. 4 tests nuevos (32 en total), CI verde, web HTTP 200. |
 | 21:15 | 🧑 Manual | `2d9b675` | **Tooltip propio que sigue al puntero** (sustituye al `title` nativo del navegador): al pasar por un país aparece una burbuja junto al cursor con el nombre en español, se oculta al salir. Posicionado en contenedor relativo (`.worldmap__tooltip`), `role="tooltip"`. Verificado con Chromium: hover → `España: 14 textos`; mouseleave → se oculta. 33 tests, CI verde, web HTTP 200. |
+| 21:25 | 🧑 Manual | `605d155` | **Gradiente de color en el mapa**: los países con pocos textos salen en color claro y con más textos más oscuros (interpolación `lerpColor` escalada entre `minValue`/`maxValue`). Leyenda «Pocos textos → Muchos textos» bajo el mapa + texto descriptivo actualizado. Verificado en Chromium: luminancia España(14)=83 → Alemania(1)=226. 4 tests nuevos del gradiente (37 en total), CI verde, web HTTP 200. |
 
 ## Estado actual
 
