@@ -46,12 +46,23 @@
 > Nota: las 4 vulnerabilidades restantes son de esbuild (dev-server de Vite, transitiva de vitest),
 > solo resolubles con vite@8 (breaking) — no aplican al deploy estático de Pages. Documentadas, CI no bloqueante.
 
+## 2026-08-09 — FASE 4: mapamundi interactivo (agente `daily-dev` 12:00)
+
+| Hora | Tipo | Commit | Detalle |
+|------|------|--------|---------|
+| 12:05 | 🤖 **Automático** | `461aba6` | Integra y valida el trabajo DevOps que había quedado sin commitear (vitest 12 tests, `npm run check`, `check-downloads` 59/59, CI ampliado, audit fix) + dependencia `react-svg-worldmap`. |
+| 12:07 | 🤖 **Automático** | `eacd38a` | **FASE 4 completada**: mapamundi interactivo por país (`react-svg-worldmap`). `countryData.js` (región→ISO), `WorldMapView.jsx` (colores por tema, click→`RegionModal`, tooltip con nº de textos, listado de regiones), `normalizeCountryName()` con 3 tests. Sustituye a `MapView.jsx`. |
+| 12:10 | 🤖 **Automático** | (docs) | PLAN.md (FASE 4 ✅ + próximo día), BITACORA, métricas (15 tests) y log del día. |
+
+> Ejecución turno 12:00: iniciada 12:00, finalizada ~12:10 (exit=0), CI verde. 15 tests unitarios.
+
 ---
 
 ## Estado actual
 
 - **15+ commits** en `main`, CI de Pages **verde** (lint+tests+audit+build), web **HTTP 200**.
-- **Calidad**: 12 tests unitarios · 59/59 descargas verificadas HTTP 200 · lint 0 errores.
+- **Calidad**: 15 tests unitarios (12 filters + 3 countryNames) · 59/59 descargas verificadas HTTP 200 · lint 0 errores.
+- **Mapa**: FASE 4 completada — mapamundi interactivo por país (react-svg-worldmap) en la vista Mapa.
 - **Infraestructura**: contenedor `pdf-server` (:8081) activo, cron 2×/día (00:00 y 12:00), persistencia con Linger + `podman-restart.service`.
 - **Agentes**: `@daily-dev` (primary), `@ux-review` y `@content-importer` (subagentes).
 

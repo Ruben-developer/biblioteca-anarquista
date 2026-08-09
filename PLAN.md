@@ -66,37 +66,30 @@ public/documents/        → documents.json (metadatos) + TXT de descarga
 - [ ] Mapas visuales por región.
 - [ ] Más filtros y búsqueda avanzada.
 
-### FASE 4 — Mapa interactivo mundial por país (alta prioridad)
-Objetivo: sustituir el grid de regiones actual (`MapView`) por un **mapamundi
-político interactivo**: cada país clickeable, al seleccionarlo se muestra la
-lista de textos de ese país (con su modal/descarga actuales).
+### FASE 4 — Mapa interactivo mundial por país (alta prioridad) ✅ COMPLETADA 2026-08-09
+Objetivo cumplido: el grid de regiones (`MapView`) se sustituyó por un
+**mapamundi político interactivo**: cada país clickeable, al seleccionarlo se
+abre `RegionModal` con los textos de ese país (con su modal/descarga actuales).
 
-**Librería recomendada**: `react-svg-worldmap` (v2.x, MIT).
+**Librería usada**: `react-svg-worldmap` (v2.0.2, MIT).
 - Por qué: mapa bundled local (funciona en GitHub Pages sin red ni API key),
-  API simple (`data`, `onCountryClick`, `color`), usa códigos ISO 3166-1 alpha-2
-  (ej. `es`, `fr`, `it`, `ru`), accesible (WCAG 2.2).
+  API simple, usa códigos ISO 3166-1 alpha-2 (ej. `es`, `fr`, `it`, `ru`), accesible (WCAG 2.2).
 - Instalación: `npm i react-svg-worldmap` (React >=16.8 ✓ compatible con React 18).
 
-**Pasos de implementación**:
-1. `npm i react-svg-worldmap`.
-2. Crear `src/data/countryData.js`: mapear cada región existente → código(s) ISO
-   alpha-2. Ej.: España → `es`, Francia → `fr`, Rusia → `ru`, Corea → `kr`, etc.
-3. Crear componente `src/components/WorldMapView.jsx`:
-   - Usar `WorldMap` con `data` = lista de países con valor (nº de textos o 1).
-   - `onCountryClick={({ countryName }) => onSelectCountry(countryName)}`.
-   - Colorear países con textos en rojo/negro (paleta del tema) y el resto gris.
-   - Tooltip con el nombre del país (nativo del componente).
-4. Integrar en `AnarchistArchive.jsx`: nueva vista `VIEWS.WORLDMAP` (o
-   reemplazar `VIEWS.MAP`), conectada a `RegionModal` reutilizando la lógica
-   actual de selección de región → textos.
-5. Sincronizar nombres: `regionData.js` usa "Estados Unidos", "Inglaterra",
-   "Corea" pero el mapa devuelve "United States of America", "United Kingdom",
-   "South Korea" → crear función normalizadora `normalizeCountryName(name)` en
-   `src/utils/` que traduzca los nombres del mapa a las claves de `regionData`.
-6. Fallback: si el país no tiene textos, mostrar estado vacío ("Sin textos aún").
+**Pasos implementados** (2026-08-09, agente `daily-dev` 12:00):
+1. `npm i react-svg-worldmap` ✓
+2. `src/data/countryData.js`: mapeo región → ISO alpha-2 (11 regiones) ✓
+3. `src/components/WorldMapView.jsx`: `WorldMap` con `data` (países con valor = nº
+   de textos), `onClickFunction` → región, `styleFunction` (países con textos en
+   rojo/ámbar del tema, resto gris), tooltip nativo con nº de textos ✓
+4. Integrado en `AnarchistArchive.jsx` en `VIEWS.MAP` (reemplaza `MapView`),
+   conectado a `RegionModal`; el grid de regiones queda como listado bajo el mapa ✓
+5. `src/utils/countryNames.js`: `normalizeCountryName()` traduce nombres del mapa
+   ("United States", "United Kingdom", "Republic of Korea"... ) a claves de `regionData`
+   ("Estados Unidos", "Inglaterra", "Corea"), con 3 tests unitarios ✓
+6. Fallback: países sin textos no son clickeables (estado vacío controlado) ✓
 
-**Verificación**: `npm run build` + `npm run lint` (0 errores), probar en
-`npm run preview` y en producción tras deploy.
+**Verificación**: `npm run check` (lint 0 errores + 15 tests + build) verde, CI de Pages verde.
 
 ### FASE 5 — Autonomía y agentes
 - [x] Agente `daily-dev` (primary) con rutina de 9 pasos + delegación a subagentes.
@@ -107,7 +100,7 @@ lista de textos de ese país (con su modal/descarga actuales).
 - [ ] Que `daily-dev` use `@content-importer` para seguir ampliando el catálogo hasta agotar los ~400 PDFs disponibles.
 
 ### FASE 6 — Calidad y DevOps (DevSecOps parcial)
-- [x] Tests unitarios con Vitest (`src/**/*.test.js`, actualmente 12 tests de `filters.js`).
+- [x] Tests unitarios con Vitest (`src/**/*.test.js`, actualmente 15 tests: 12 de `filters.js` + 3 de `countryNames.js`).
 - [x] Comando `npm run check` = lint + test + build (puerta única de calidad).
 - [x] `npm run check-downloads`: verifica HTTP 200 de todos los filename del catálogo (59/59 OK).
 - [x] CI de Pages ampliado: lint → test → audit → build → deploy.
@@ -164,11 +157,22 @@ contenedor nginx local en la máquina siempre-encendida, y la web enlaza
 - [ ] **Descarga desde la página**: botón para descargar la obra en PDF/TXT/EPUB (el botón ya existe, falta el export TXT/EPUB).
 
 ## 6. Próximo día
-- [ ] **MAPAMUNDI INTERACTIVO (FASE 4, alta prioridad)**: instalar `react-svg-worldmap`, crear `src/data/countryData.js` (región → ISO), componente `WorldMapView.jsx`, conectar a `RegionModal`, normalizar nombres de país → clave de `regionData`, build+lint+deploy.
-- [ ] Corregir `REGIONS` en `src/constants/index.js` para incluir las 11 regiones del mapa (fallo detectado en revisión 2026-08-08).
-- [ ] Ampliar `regionData.js` enlazando más PDFs reales del contenedor (usar `@content-importer`).
+- [x] **MAPAMUNDI INTERACTIVO (FASE 4)** ✅ completada 2026-08-09: `react-svg-worldmap` instalado, `countryData.js`, `WorldMapView.jsx`, conectado a `RegionModal`, `normalizeCountryName()` con tests, build+lint+CI verdes.
+- [x] Corregir `REGIONS` en `src/constants/index.js` para incluir las 11 regiones del mapa (revisado 2026-08-09: ya sincronizado desde el 2026-08-08).
+- [ ] **FASE 2**: ampliar `timelineEvents.js` con más eventos y décadas posteriores a 1968 (siguiente tarea recomendada).
+- [ ] Ampliar `authors.js` (más pensadores: Rocker, Bookchin, Proudhon...).
+- [ ] FASE 6: añadir tests para `documentService.js`, hooks y componentes clave.
 - [ ] Añadir lector PDF embebido (vista de lectura sin salir de la web).
 - [ ] (Ideas de mejora en evaluación) Dashboard de métricas, obra del día, más agentes expertos.
+- [ ] Ampliar el catálogo con `@content-importer` hasta agotar los ~400 PDFs del contenedor.
+
+### Nota del día (2026-08-09)
+FASE 4 completada: **mapamundi interactivo por país** (react-svg-worldmap) sustituye
+al grid de regiones — países con textos coloreados por tema, click abre el modal de
+la región, tooltip con nº de textos, normalización de nombres del mapa→claves del
+catálogo y tests propios. Además se validó e integró el trabajo de DevOps/calidad
+que había quedado sin commitear (vitest, `npm run check`, `check-downloads` 59/59,
+CI ampliado). Build, 15 tests y CI de Pages verdes.
 
 ### Nota del día (2026-08-08)
 Catálogo ampliado de 23 → **65 obras** (59 con PDF descargable verificado HTTP 200) y de 8 → **11 regiones**
