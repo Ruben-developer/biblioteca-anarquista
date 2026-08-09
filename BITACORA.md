@@ -81,6 +81,12 @@
 
 > **Quality gate propio** «Biblioteca Anarquista» (`new_coverage≥50%`, duplicación≤3%, `new_violations≤20`) en vez del estricto «Sonar way» (80%/0). **Gate OK**: 0 bugs, 0 vulnerabilidades, ratings A/A/A, 0% duplicación, `new_coverage` **61.4%**. Hotspot `PDF_BASE` http marcado **SAFE** (decisión documentada en AGENTS.md). `caycStatus: non-compliant` solo refleja el estándar CAYC, no afecta al gate. SonarQube 26.6.0 en `http://192.168.1.117:9000` (dashboard `?id=biblioteca-anarquista`). CI de Pages verde, web HTTP 200.
 
+## 2026-08-09 (noche) — Mapa: efecto hover + nombres en español
+
+| Hora | Tipo | Commit | Detalle |
+|------|------|--------|---------|
+| 21:00 | 🧑 Manual | `568cff9` | **Mapa mejorado**: efecto hover sobre el territorio (brillo/saturación CSS `.worldmap__country`) y tooltip con **nombre del país en español** (`España: 14 textos`, `Palestina`, `Francia: 10 textos`...). Diccionario EN→ES de los 174 países (`translateCountryName`) en `countryNames.js`. Verificado con Chromium: 174 paths, hover `brightness(1.35)`. 4 tests nuevos (32 en total), CI verde, web HTTP 200. |
+
 ## Estado actual
 
 - **15+ commits** en `main`, CI de Pages **verde** (lint+tests+audit+build), web **HTTP 200**.
