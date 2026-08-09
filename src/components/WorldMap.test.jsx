@@ -23,23 +23,35 @@ describe('WorldMap (mapa mundial propio)', () => {
 
   it('sí contiene Palestine como país fusionado', () => {
     const html = renderToStaticMarkup(<WorldMap data={data} />);
-    expect(html).toContain('Palestine');
-    expect(html).toMatch(/<path[^>]*>\s*<title>Palestine<\/title>\s*<\/path>/);
+    expect(html).toContain('Palestina');
+    expect(html).toMatch(/<path[^>]*>\s*<title>Palestina<\/title>\s*<\/path>/);
   });
 
   it('el path de Palestine incluye el territorio de Israel (polígono más grande)', () => {
     const html = renderToStaticMarkup(<WorldMap data={data} />);
-    const palestinePath = html.match(/<path d="([^"]*)"[^>]*>\s*<title>Palestine<\/title>/);
+    const palestinePath = html.match(/<path d="([^"]*)"[^>]*>\s*<title>Palestina<\/title>/);
     expect(palestinePath).not.toBeNull();
     const d = palestinePath[1];
     expect(d.length).toBeGreaterThan(500);
     expect(d.length).toBeLessThan(2000);
   });
 
-  it('aplica tooltip solo a países con valor (title con nombre y número)', () => {
+  it('aplica tooltip solo a países con valor (title con nombre en español y número)', () => {
     const html = renderToStaticMarkup(<WorldMap data={data} />);
-    expect(html).toMatch(/<title>Spain: 10<\/title>/);
+    expect(html).toMatch(/<title>España: 10<\/title>/);
     expect(html).not.toMatch(/<title>France: <\/title>/);
+  });
+
+  it('muestra el nombre del país en español en el title (incluso sin valor)', () => {
+    const html = renderToStaticMarkup(<WorldMap data={[]} />);
+    expect(html).toContain('<title>España</title>');
+    expect(html).toContain('<title>Francia</title>');
+    expect(html).not.toContain('<title>Spain</title>');
+  });
+
+  it('aplica la clase worldmap__country para el efecto hover', () => {
+    const html = renderToStaticMarkup(<WorldMap data={data} />);
+    expect(html).toContain('class="worldmap__country"');
   });
 
   it('aplica styleFunction personalizado', () => {

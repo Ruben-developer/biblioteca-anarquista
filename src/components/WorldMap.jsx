@@ -1,6 +1,7 @@
 import React from 'react';
 import { geoMercator, geoPath } from 'd3-geo';
 import worldData from '../data/worldmap.geo.json';
+import { translateCountryName } from '../utils/countryNames';
 
 // Proyección idéntica a react-svg-worldmap: geoMercator con scale por defecto,
 // mundo de 960px de ancho, trasladado para centrar el ecuador. La altura se fija
@@ -44,10 +45,10 @@ const WorldMap = ({
   };
   const styleFn = styleFunction || defaultStyle;
   const defaultTooltip = (context) => {
-    const { countryName, countryValue } = context;
+    const { countryNameEs, countryValue } = context;
     return typeof countryValue === 'undefined'
-      ? countryName
-      : `${countryName}: ${countryValue}`;
+      ? countryNameEs
+      : `${countryNameEs}: ${countryValue}`;
   };
   const tooltipFn = tooltipTextFunction || defaultTooltip;
 
@@ -57,6 +58,7 @@ const WorldMap = ({
       countryCode: isoCode,
       countryValue: countryValueMap[isoCode],
       countryName,
+      countryNameEs: translateCountryName(countryName),
       minValue,
       maxValue,
       prefix: '',
@@ -66,13 +68,14 @@ const WorldMap = ({
     const tooltipContent = typeof context.countryValue === 'undefined'
       ? undefined
       : tooltipFn(context);
-    const svgTitle = tooltipContent ?? countryName;
+    const svgTitle = tooltipContent ?? context.countryNameEs;
 
     return (
       <path
         key={isoCode}
         d={PATH(geoFeature)}
         style={style}
+        className="worldmap__country"
         onClick={onClickFunction ? (event) => onClickFunction({ ...context, event }) : undefined}
       >
         <title>{svgTitle}</title>

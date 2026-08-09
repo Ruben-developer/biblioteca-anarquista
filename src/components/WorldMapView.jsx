@@ -46,7 +46,7 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
     if (region) {
       return `${region}: ${regionData[region].books.length} textos`;
     }
-    return context.countryName;
+    return context.countryNameEs || context.countryName;
   };
 
   return (
