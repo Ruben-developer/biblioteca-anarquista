@@ -9,7 +9,7 @@ export const CATEGORIES = [
 
 export const DECADES = ['all', '1840s', '1860s', '1870s', '1880s', '1900s', '1910s', '1920s', '1930s', '1960s'];
 
-export const REGIONS = ['all', 'España', 'Francia', 'Estados Unidos', 'Rusia', 'Italia', 'México', 'Argentina', 'Chile'];
+export const REGIONS = ['all', 'España', 'Francia', 'Estados Unidos', 'Rusia', 'Italia', 'México', 'Argentina', 'Chile', 'Alemania', 'Inglaterra', 'Corea'];
 
 export const VIEWS = {
   TIMELINE: 'timeline',

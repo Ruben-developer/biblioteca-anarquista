@@ -36,6 +36,16 @@ data/registros/   # registro.json (métricas diarias del agente)
 - **Texto por región** → `src/data/regionData.js`. Campos: `title`, `author`, `year`, `category`, `rating`, y opcional `filename`.
 - **Metadatos completos de obra** → `public/documents/documents.json` (id, title, author, summary, tags, filename, rating...).
 - **Nuevo PDF descargable** → añade `filename` al libro en `regionData.js` (el botón Descargar solo aparece si hay `filename`).
+- **Nuevo país en el mapa** → añade la región a `regionData.js`, el código ISO en `src/data/countryData.js`, y a `REGIONS` en `src/constants/index.js` (¡los 3 lugares o el mapa/filtros quedan desincronizados!).
+
+## Mapa interactivo mundial (FASE 4)
+- Librería: `react-svg-worldmap` (mapa bundled, sin API key, compatible GitHub Pages).
+- `src/data/countryData.js`: mapea región → código ISO 3166-1 alpha-2 (ej. `es`, `fr`, `ru`).
+- `src/components/WorldMapView.jsx`: `WorldMap` con `data`, `onCountryClick`, colores por tema.
+- Los nombres que devuelve el mapa (inglés, ej. "United States of America") NO
+  coinciden con las claves de `regionData.js` ("Estados Unidos") → usa
+  `normalizeCountryName()` en `src/utils/` para traducir.
+- Al seleccionar un país se abre `RegionModal` con sus textos (reutilizar lógica actual).
 
 ## Descargas (PDFs)
 - Los PDFs NO viven en el repo (gitignored `pdfs-local/`). Se sirven desde el
@@ -52,6 +62,12 @@ data/registros/   # registro.json (métricas diarias del agente)
 - Trabaja SOLO en este repo, nunca en `devops-lab` ni otros proyectos.
 - No toques `pdfs-local/` (los PDFs no se versionan) ni subas artefactos (`dist/`, `node_modules/`).
 - No cambies `PDF_BASE` a hostname ni rompas la ruta `base: /biblioteca-anarquista/` en `vite.config.js`.
+- Al añadir regiones al mapa, actualiza SIEMPRE los 3 sitios: `regionData.js`, `countryData.js`, `REGIONS` en `constants/index.js`.
 - Tras cada cambio: `npm run build` + `npm run lint` deben pasar, y el CI de Pages quedar verde.
 - Mantén actualizados `PLAN.md`, `data/registros/registro.json` y `.daily-runs/`.
 - Commits convencionales en español (`feat:`, `fix:`, `docs:`, `chore:`).
+
+## Subagentes disponibles
+- `@daily-dev` (primary): rutina diaria autónoma, 2 turnos (00:00 y 12:00).
+- `@ux-review`: revisa UX/UI y entrega `data/registros/ux-report.md`.
+- `@content-importer`: importa obras (PDFs/docx locales) con `pdftotext` y verifica HTTP 200 antes de publicar.

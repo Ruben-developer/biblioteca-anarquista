@@ -19,10 +19,11 @@ textos), mejora la lógica y registra métricas.
 ```
 PLAN.md                  → este plan (tareas, ideas, roadmap, próximo día)
 data/registros/registro.json → métricas estructuradas día a día
+data/registros/ux-report.md → reporte del revisor UX/UI (subagente @ux-review)
 .daily-runs/*.md         → logs narrativos diarios del agente
 src/                     → app React (componentes, datos, servicios)
   components/            → Header, Navigation, TimelineView, MapView, AuthorsView, FavoritesView, modales...
-  data/                  → timelineEvents.js, authors.js, regionData.js
+  data/                  → timelineEvents.js, authors.js, regionData.js, countryData.js (ISO por región)
   services/              → documentService.js (descargas de documentos)
   constants/  hooks/  utils/
 public/documents/        → documents.json (metadatos) + TXT de descarga
@@ -52,7 +53,7 @@ public/documents/        → documents.json (metadatos) + TXT de descarga
 - [x] Descargas: PDFs desde contenedor nginx local :8081 + TXT desde el repo.
 
 ### FASE 2 — Contenido y lógica
-- [x] Ampliar `regionData.js` con más obras reales (enlazando PDFs disponibles en el contenedor). (2026-08-08)
+- [x] Ampliar `regionData.js` a 65 obras con 59 PDFs verificados y 11 regiones (agente autónomo 2026-08-08 12:03).
 - [ ] Ampliar `timelineEvents.js` (más eventos, décadas posteriores a 1968).
 - [ ] Ampliar `authors.js` (más pensadores: Rocker, Bookchin, Proudhon...).
 - [ ] Enriquecer `documents.json` (más obras con metadatos completos).
@@ -64,6 +65,46 @@ public/documents/        → documents.json (metadatos) + TXT de descarga
 - [ ] Referencias cruzadas entre textos y eventos.
 - [ ] Mapas visuales por región.
 - [ ] Más filtros y búsqueda avanzada.
+
+### FASE 4 — Mapa interactivo mundial por país (alta prioridad)
+Objetivo: sustituir el grid de regiones actual (`MapView`) por un **mapamundi
+político interactivo**: cada país clickeable, al seleccionarlo se muestra la
+lista de textos de ese país (con su modal/descarga actuales).
+
+**Librería recomendada**: `react-svg-worldmap` (v2.x, MIT).
+- Por qué: mapa bundled local (funciona en GitHub Pages sin red ni API key),
+  API simple (`data`, `onCountryClick`, `color`), usa códigos ISO 3166-1 alpha-2
+  (ej. `es`, `fr`, `it`, `ru`), accesible (WCAG 2.2).
+- Instalación: `npm i react-svg-worldmap` (React >=16.8 ✓ compatible con React 18).
+
+**Pasos de implementación**:
+1. `npm i react-svg-worldmap`.
+2. Crear `src/data/countryData.js`: mapear cada región existente → código(s) ISO
+   alpha-2. Ej.: España → `es`, Francia → `fr`, Rusia → `ru`, Corea → `kr`, etc.
+3. Crear componente `src/components/WorldMapView.jsx`:
+   - Usar `WorldMap` con `data` = lista de países con valor (nº de textos o 1).
+   - `onCountryClick={({ countryName }) => onSelectCountry(countryName)}`.
+   - Colorear países con textos en rojo/negro (paleta del tema) y el resto gris.
+   - Tooltip con el nombre del país (nativo del componente).
+4. Integrar en `AnarchistArchive.jsx`: nueva vista `VIEWS.WORLDMAP` (o
+   reemplazar `VIEWS.MAP`), conectada a `RegionModal` reutilizando la lógica
+   actual de selección de región → textos.
+5. Sincronizar nombres: `regionData.js` usa "Estados Unidos", "Inglaterra",
+   "Corea" pero el mapa devuelve "United States of America", "United Kingdom",
+   "South Korea" → crear función normalizadora `normalizeCountryName(name)` en
+   `src/utils/` que traduzca los nombres del mapa a las claves de `regionData`.
+6. Fallback: si el país no tiene textos, mostrar estado vacío ("Sin textos aún").
+
+**Verificación**: `npm run build` + `npm run lint` (0 errores), probar en
+`npm run preview` y en producción tras deploy.
+
+### FASE 5 — Autonomía y agentes
+- [x] Agente `daily-dev` (primary) con rutina de 9 pasos + delegación a subagentes.
+- [x] Subagente `@ux-review`: revisa UX/UI y entrega `data/registros/ux-report.md`.
+- [x] Subagente `@content-importer`: importa obras (PDFs/docx locales) al catálogo con `pdftotext` y verifica HTTP 200.
+- [x] Cron 2 veces al día (00:00 y 12:00).
+- [ ] Que `daily-dev` invoque a `@ux-review` periódicamente (p. ej. una vez por semana o cuando la tarea lo requiera).
+- [ ] Que `daily-dev` use `@content-importer` para seguir ampliando el catálogo hasta agotar los ~400 PDFs disponibles.
 
 ## 5. Reglas del agente (resumen)
 - Trabaja SOLO en este repo, nunca en `devops-lab`.
@@ -106,16 +147,17 @@ contenedor nginx local en la máquina siempre-encendida, y la web enlaza
 ## 5.2 Ideas de mejora del usuario (backlog, se van priorizando)
 - [ ] **Estética**: iterar paleta de colores y tipografía (variables CSS ya separadas). Puesta a punto visual en general.
 - [ ] **Línea de tiempo** de autores y obras (ordenado por año). ← ya existe en el proyecto real, pulir.
-- [ ] **Agrupar por país** (campo `pais` en cada obra; lista primero, mapa después). ← el mapa ya agrupa por región.
-- [ ] **Agente revisor UX/UI**: subagente que critique el diseño y pase notas al agente principal.
-- [ ] **Importar textos propios del servidor** (401 PDFs + 125 docx en `Documentos/anarquismo_importado/`; fichas con `pdftotext` para extracto + `filename` al servidor local).
+- [ ] **Agrupar por país** (campo `pais` en cada obra; lista primero, mapa después). ← el mapa interactivo (FASE 4) lo cubre.
+- [ ] **Agente revisor UX/UI**: subagente que critique el diseño y pase notas al agente principal. ✅ creado como `@ux-review`.
+- [ ] **Importar textos propios del servidor** (401 PDFs + 125 docx en `Documentos/anarquismo_importado/`; fichas con `pdftotext` para extracto + `filename` al servidor local). ✅ subagente `@content-importer`.
 - [ ] **Descargar textos de dominio público** de fuentes fiables (The Anarchist Library, Marxists.org, etc.) cuando el usuario indique las URLs.
 - [ ] **Descarga desde la página**: botón para descargar la obra en PDF/TXT/EPUB (el botón ya existe, falta el export TXT/EPUB).
 
 ## 6. Próximo día
-- [ ] Ampliar `timelineEvents.js` con más eventos y décadas posteriores a 1968 (cada evento nuevo alimenta también los filtros de la línea temporal).
+- [ ] **MAPAMUNDI INTERACTIVO (FASE 4, alta prioridad)**: instalar `react-svg-worldmap`, crear `src/data/countryData.js` (región → ISO), componente `WorldMapView.jsx`, conectar a `RegionModal`, normalizar nombres de país → clave de `regionData`, build+lint+deploy.
+- [ ] Corregir `REGIONS` en `src/constants/index.js` para incluir las 11 regiones del mapa (fallo detectado en revisión 2026-08-08).
+- [ ] Ampliar `regionData.js` enlazando más PDFs reales del contenedor (usar `@content-importer`).
 - [ ] Añadir lector PDF embebido (vista de lectura sin salir de la web).
-- [ ] Enriquecer `documents.json` (metadatos completos: excerpt, summary, tags) para las 65 obras del catálogo.
 - [ ] (Ideas de mejora en evaluación) Dashboard de métricas, obra del día, más agentes expertos.
 
 ### Nota del día (2026-08-08)
