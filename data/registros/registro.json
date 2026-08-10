@@ -95,13 +95,24 @@
       "nota": "DEVOPS PDFs (manual): activado Tailscale Funnel (https://server.taile963c6.ts.net -> nginx :8081), creado secret VITE_PDF_BASE=https://server.taile963c6.ts.net/pdfs/ y redeploy manual. Los PDFs ya descargan en Pages (antes 404). Fix mapa países nuevos (cc32892) y reestructuración (205c138): Autores dinámicos derivados del catálogo (getAllAuthors), mapa solo histórico, timeline sin publicaciones de teoría, EventModal con textos históricos relacionados (ver/descargar/compartir). 64 tests verdes."
     },
     {
+      "fecha": "2026-08-09",
+      "obras": 97,
+      "palabras": 1112,
+      "commits": 6,
+      "prs": 0,
+      "ci": "verde",
+      "nota": "NUEVAS REGIONES (manual): catálogo 91->97 obras con 5 regiones nuevas (Colombia, Bolivia, Japón, Siria-Rojava, Nigeria-África). Sincronizados los 3 archivos de regiones (regionData.js, countryData.js ISO co/bo/jp/sy/ng, REGIONS). check-downloads 91/91 OK, npm run check verde (lint+59 tests+build). Pendiente: habilitar Tailscale Funnel para exponer los PDFs públicamente (secret VITE_PDF_BASE no existe en GitHub -> los PDFs dan 404 en Pages)."
+    },
+    {
       "fecha": "2026-08-10",
       "obras": 109,
       "palabras": 1112,
-      "commits": 9,
+      "commits": 4,
       "prs": 0,
       "ci": "verde",
-      "nota": "EXPANSIÓN DE CATÁLOGO (manual): 97->109 obras (+12). España: Mella y Ferrer (Mintz), Nueva Utopía, La coacción moral, La Escuela Moderna. Francia: Armand (x3). EEUU: Goldman (Durruti ha muerto), Tucker (Socialismo de Estado). Italia: Malatesta (Plan de organización, Elecciones). Alemania: Nettlau (Responsabilidad y solidaridad). 103/103 con filename, check-downloads OK, npm run check verde (lint+64 tests+build)."
+      "nota": "TURNO 00:00 agente daily-dev + trabajo humano concurrente. Agente: línea temporal ampliada 8->16 eventos históricos reales (1909-2012: Semana Trágica, Sacco y Vanzetti, Jornadas Libertarias, zapatismo, Seattle, Génova, 15M, Rojava) + DECADES sincronizada (commit 6ee6fa2). Humano (Ruben-developer): sección Autores dinámica derivada del catálogo con getAllAuthors, mapa/timeline solo con textos históricos, EventModal con textos relacionados (205c138) y catálogo 97->109 obras (53768ae, 1ac1394). Inspección: descargas 91/91 OK (luego 103/103 con filename), regiones 16/16/16, audit sin fix sin --force (devDeps build-time). 64 tests, build y CI de Pages verdes."
     }
+  ]
+}
   ]
 }

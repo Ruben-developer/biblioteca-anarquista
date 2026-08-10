@@ -57,8 +57,8 @@ public/documents/        → documents.json (metadatos) + TXT de descarga
 - [x] **Biblioteca/catálogo** (`LibraryView.jsx`): navegación por obras con búsqueda y filtros combinados (categoría + región + década + orden), util `src/utils/library.js`.
 - [x] **Lector embebido** (`ReaderView.jsx`): PDF en iframe y TXT con controles de fuente/tema; se abre sin salir de la web.
 - [x] **Enmascarar servidor de PDFs**: `PDF_BASE = VITE_PDF_BASE || '/pdfs/'` + proxy de Vite en dev; la IP interna no se versiona ni queda en el bundle.
-- [ ] Ampliar `timelineEvents.js` (más eventos, décadas posteriores a 1968).
-- [ ] Ampliar `authors.js` (más pensadores: Rocker, Bookchin, Proudhon...).
+- [x] Ampliar `timelineEvents.js` a 16 eventos históricos (1900s–2010s, décadas posteriores a 1968) (2026-08-10).
+- [ ] Ampliar `authors.js` (más pensadores: Rocker, Bookchin, Proudhon...). → **SUPERADO 2026-08-10**: la sección de Autores ahora se deriva del catálogo con `getAllAuthors()` (ver FASE 2 nota).
 - [ ] Enriquecer `documents.json` (más obras con metadatos completos).
 - [ ] Dashboard de métricas del archivo.
 
@@ -173,13 +173,28 @@ contenedor nginx local en la máquina siempre-encendida, y la web enlaza
 ## 6. Próximo día
  - [x] **MAPAMUNDI INTERACTIVO (FASE 4)** ✅ completada 2026-08-09: `react-svg-worldmap` instalado, `countryData.js`, `WorldMapView.jsx`, conectado a `RegionModal`, `normalizeCountryName()` con tests, build+lint+CI verdes.
  - [x] **Mapa propio con d3-geo** ✅ 2026-08-09: sustituye `react-svg-worldmap` por `src/components/WorldMap.jsx` + `src/data/worldmap.geo.json` (generado por `npm run generate-worldmap`). La geometría de Israel se fusiona dentro de Palestine (Israel deja de existir en el mapa); 174 países, 23 tests verdes.
-- [x] Corregir `REGIONS` en `src/constants/index.js` para incluir las 11 regiones del mapa (revisado 2026-08-09: ya sincronizado desde el 2026-08-08).
-- [ ] **FASE 2**: ampliar `timelineEvents.js` con más eventos y décadas posteriores a 1968 (siguiente tarea recomendada).
-- [ ] Ampliar `authors.js` (más pensadores: Rocker, Bookchin, Proudhon...).
-- [ ] FASE 6: añadir tests para `documentService.js`, hooks y componentes clave.
-- [ ] Añadir lector PDF embebido (vista de lectura sin salir de la web).
-- [ ] (Ideas de mejora en evaluación) Dashboard de métricas, obra del día, más agentes expertos.
-- [ ] Ampliar el catálogo con `@content-importer` hasta agotar los ~400 PDFs del contenedor.
+ - [x] Corregir `REGIONS` en `src/constants/index.js` para incluir las 11 regiones del mapa (revisado 2026-08-09: ya sincronizado desde el 2026-08-08).
+ - [x] **FASE 2**: ampliar `timelineEvents.js` con más eventos y décadas posteriores a 1968 ✅ 2026-08-10: 8 → 16 eventos históricos reales (1909-2012: Semana Trágica, Sacco y Vanzetti, Jornadas Libertarias, zapatismo, Seattle, Génova, 15M, Rojava). `DECADES` sincronizada (quita 1840s vacía, añade 1970s-2010s). Build+64 tests+CI verdes.
+ - [x] **Sección Autores dinámica** ✅ 2026-08-10 (humano): "Biografías" → "Autores del Archivo" derivados del catálogo (`getAllAuthors`), mapa y timeline solo con textos históricos, `EventModal` con textos relacionados (`getEventRelatedTexts`). Catálogo ampliado a 109 obras (commits 205c138, 53768ae, 1ac1394).
+ - [ ] FASE 6: añadir tests para `documentService.js`, hooks y componentes clave (subir cobertura global >50%).
+ - [ ] Enriquecer `documents.json` con metadatos completos de las obras nuevas del catálogo.
+ - [ ] Verificar/pulir el lector PDF embebido (`ReaderView`) tras la reestructuración de Autores.
+ - [ ] (Ideas de mejora en evaluación) Dashboard de métricas, obra del día, más agentes expertos.
+ - [ ] Ampliar el catálogo con `@content-importer` hasta agotar los ~400 PDFs del contenedor.
+
+### Nota del día (2026-08-10, 00:00)
+Turno 00:00 del agente `daily-dev`. Inspección (paso 1.5): descargas 91/91 OK,
+regiones sincronizadas 16/16/16, `npm audit` sin fix seguro sin `--force`
+(solo devDeps build-time: vite/vitest/esbuild, no aplica a Pages).
+**Actividad humana concurrente**: Ruben-developer trabajó en paralelo con VSCode
+(sesión abierta desde ago09) y pusheó la refactorización "Autores dinámicos +
+mapa solo histórico + timeline con textos relacionados" (205c138) y la expansión
+del catálogo 97→109 (53768ae, 1ac1394). El agente respetó ese trabajo (no lo
+commiteó ni revirtió a medias) e hizo su tarea del plan en archivos sin conflicto:
+**línea temporal ampliada de 8 → 16 eventos históricos reales** con décadas
+posteriores a 1968 y `DECADES` sincronizada (commit 6ee6fa2). CI de Pages verde
+para todos los commits del día. Pendiente sugerido: FASE 6 tests de
+`documentService.js`/hooks para subir cobertura, y verificar `ReaderView`.
 
 ### Nota del día (2026-08-09)
 FASE 4 completada: **mapamundi interactivo por país** (react-svg-worldmap) sustituye
