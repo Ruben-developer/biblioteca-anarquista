@@ -100,15 +100,20 @@
 
 | Hora | Tipo | Commit | Detalle |
 |------|------|--------|---------|
-| 19:52 | 🧑 Manual | `pendiente` | **Catálogo 91 → 97 obras y +5 regiones**: se añaden **6 obras nuevas** y se crean las regiones **Colombia** (2), **Bolivia** (1), **Japón** (1), **Siria** (1, Rojava) y **Nigeria** (1, anarquismo africano). Se sincronizaron los **3 archivos** (regionData.js, countryData.js con ISO co/bo/jp/sy/ng, REGIONS en constants/index.js). Filenames 6/6 HTTP 200, `check-downloads` **91/91 OK**, `npm run check` verde (lint + 59 tests + build). |
+| 19:52 | 🧑 Manual | `4145c23` | **Catálogo 91 → 97 obras y +5 regiones**: se añaden **6 obras nuevas** y se crean las regiones **Colombia** (2), **Bolivia** (1), **Japón** (1), **Siria** (1, Rojava) y **Nigeria** (1, anarquismo africano). Se sincronizaron los **3 archivos** (regionData.js, countryData.js con ISO co/bo/jp/sy/ng, REGIONS en constants/index.js). Filenames 6/6 HTTP 200, `check-downloads` **91/91 OK**, `npm run check` verde (lint + 59 tests + build). |
+| 20:05 | 🧑 Manual | `cc32892` | **fix: países nuevos en el mapa**: `normalizeCountryName()` no reconocía Colombia, Bolivia, Japón, Siria y Nigeria, así que el mapa las pintaba grises y no eran clicables. Añadidas al diccionario EN→ES + test. |
+| 00:05 | 🧑 Manual | `205c138` | **Reestructuración por autoría (decisión de UX)**: 1) **Autores dinámicos** — se elimina `authors.js` estático y se deriva de `regionData` (`getAllAuthors` en `library.js`): agrupa por autor, cuenta obras, ordena de más a menos, muestra la lista de obras con botón Leer. Vista renombrada «Autores». 2) **Mapa solo histórico** — se añade `HISTORICAL_CATEGORIES`/`IDEAS_CATEGORIES` (`isHistoricalCategory`) y el mapa + `RegionModal` solo muestran textos de historia (no filosofía/ideas). 3) **Timeline** — solo hechos históricos (se quitan las publicaciones de Proudhon 1840 y Kropotkin 1902, que viven en Autores); `EventModal` ahora muestra **textos históricos relacionados** con botones **Ver/Descargar/Compartir**. 64 tests verdes. |
+| 00:25 | 🧑 Manual | `pendiente` | **Catálogo 97 → 109 obras (+12)**: autores clásicos ampliados — España: *Mella y Ferrer* (Mintz), *Nueva Utopía*, *La coacción moral*, *La Escuela Moderna*; Francia: Émile Armand (×3); EEUU: Goldman (*Durruti ha muerto*), Tucker (*Socialismo de Estado y anarquismo*); Italia: Malatesta (*Plan de organización*, *Elecciones*); Alemania: Nettlau (*Responsabilidad y solidaridad*). **103/103 con filename**, `check-downloads` OK, `npm run check` verde (lint + 64 tests + build). |
 
 ## Estado actual
 
-- **18+ commits** en `main`, CI de Pages **verde** (lint+tests+audit+build), web **HTTP 200**.
-- **Calidad**: 59 tests unitarios · **91/91 descargas verificadas HTTP 200** · lint 0 errores · **SonarQube gate OK** (0 bugs, 0 vulns, A/A/A, coverage global 35%).
-- **Catálogo**: **97 obras** en `regionData.js`, distribuidas en **16 regiones** (incluye Colombia, Bolivia, Japón, Siria y Nigeria).
-- **Mapa**: FASE 4 completada — mapamundi interactivo por país (react-svg-worldmap) en la vista Mapa.
-- **Mapa**: FASE 4 completada — mapamundi interactivo por país (react-svg-worldmap) en la vista Mapa.
+- **20+ commits** en `main`, CI de Pages **verde** (lint+tests+audit+build), web **HTTP 200**.
+- **Calidad**: 64 tests unitarios · **103/103 descargas verificadas HTTP 200** · lint 0 errores · **SonarQube gate OK** (0 bugs, 0 vulns, A/A/A, coverage global 35%).
+- **Catálogo**: **109 obras** en `regionData.js`, distribuidas en **16 regiones**.
+- **PDFs públicos**: túnel **Tailscale Funnel** activo (`https://server.taile963c6.ts.net/pdfs/`) + secret `VITE_PDF_BASE` en GitHub → los PDFs ya descargan desde la web (antes 404).
+- **Autores**: sección dinámica derivada del catálogo, ordenada de más a menos obras.
+- **Mapa**: solo textos históricos; los de filosofía/ideas viven en Autores.
+- **Timeline**: hechos históricos con textos relacionados (ver/descargar/compartir).
 - **Infraestructura**: contenedor `pdf-server` (:8081) activo, cron 2×/día (00:00 y 12:00), persistencia con Linger + `podman-restart.service`.
 - **Agentes**: `@daily-dev` (primary), `@ux-review` y `@content-importer` (subagentes).
 
