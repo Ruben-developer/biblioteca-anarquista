@@ -120,6 +120,15 @@
       "prs": 0,
       "ci": "verde",
       "nota": "CATÁLOGO 109->114 (+5) + UX LECTOR (manual): lector más grande (max-w-7xl, 96vh) con botón 'Nueva pestaña' (abre el PDF a pantalla completa). Fix Nigeria: 'Anarquismo africano' pasó de teoria a historia (el mapa solo cuenta históricas y Nigeria salía en 0). Nuevas obras: España (Enzensberger, Guillén, Yanes Herreros), Francia (Montes de Oca), Rusia (Mellado). 108/108 descargas OK, npm run check verde (lint+64 tests+build)."
+    },
+    {
+      "fecha": "2026-08-10",
+      "obras": 114,
+      "palabras": 1112,
+      "commits": 6,
+      "prs": 0,
+      "ci": "verde",
+      "nota": "UX LECTURA SIMPLIFICADA (manual): eliminado el lector embebido (ReaderView), que era un rectángulo pequeño e incómodo en móvil. Ahora 'Leer'/'Ver' abre el PDF directamente en una pestaña nueva del navegador (se lee y se descarga en el visor nativo). Eliminados botones Descargar/Compartir (LibraryView, AuthorsView, RegionModal, EventModal) y props onRead. 59 tests verdes, build OK, CI Pages verde."
     }
   ]
 }
