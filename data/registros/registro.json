@@ -129,6 +129,15 @@
       "prs": 0,
       "ci": "verde",
       "nota": "UX LECTURA SIMPLIFICADA (manual): eliminado el lector embebido (ReaderView), que era un rectángulo pequeño e incómodo en móvil. Ahora 'Leer'/'Ver' abre el PDF directamente en una pestaña nueva del navegador (se lee y se descarga en el visor nativo). Eliminados botones Descargar/Compartir (LibraryView, AuthorsView, RegionModal, EventModal) y props onRead. 59 tests verdes, build OK, CI Pages verde."
+    },
+    {
+      "fecha": "2026-08-10",
+      "obras": 114,
+      "palabras": 1112,
+      "commits": 1,
+      "prs": 0,
+      "ci": "verde",
+      "nota": "TURNO 12:00 agente daily-dev. FASE 6 tests: cobertura de documentService.js (15 tests: getDocumentDownloadUrl PDF/TXT, fetch simulado con cache y fallo, consultas por id/región/categoría/búsqueda, getAuthors/getRegions/getDocumentStats) y hooks/index.js (6 tests: estado inicial y persistencia en localStorage, useState mockeado con updater inmediato por SSR). 59->80 tests, coverage statements 55.4%->62.9%, functions 41.1%->59.0%. npm run check verde, CI Pages verde (run 31407712659), SonarQube gate OK (0 bugs, 0 vulns, new_coverage 61.4%). Inspección: descargas 108/108 OK, regiones 16/16/16, audit solo devDeps build-time. Documentado: documents.json legacy con solo 2 entradas (el catálogo real vive en regionData.js + library.js)."
     }
   ]
 }
