@@ -17,7 +17,12 @@ const COUNTRY_NAME_TO_REGION = {
   'united kingdom': 'Inglaterra',
   england: 'Inglaterra',
   'republic of korea': 'Corea',
-  'south korea': 'Corea'
+  'south korea': 'Corea',
+  colombia: 'Colombia',
+  bolivia: 'Bolivia',
+  japan: 'Japón',
+  syria: 'Siria',
+  nigeria: 'Nigeria'
 };
 
 // Diccionario inglés → español de los 174 países del mapa (propiedades N del GeoJSON).

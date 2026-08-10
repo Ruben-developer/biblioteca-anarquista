@@ -16,6 +16,11 @@ describe('normalizeCountryName', () => {
     expect(normalizeCountryName('United Kingdom')).toBe('Inglaterra');
     expect(normalizeCountryName('Republic of Korea')).toBe('Corea');
     expect(normalizeCountryName('South Korea')).toBe('Corea');
+    expect(normalizeCountryName('Colombia')).toBe('Colombia');
+    expect(normalizeCountryName('Bolivia')).toBe('Bolivia');
+    expect(normalizeCountryName('Japan')).toBe('Japón');
+    expect(normalizeCountryName('Syria')).toBe('Siria');
+    expect(normalizeCountryName('Nigeria')).toBe('Nigeria');
   });
 
   it('es insensible a mayúsculas y espacios', () => {
@@ -25,7 +30,7 @@ describe('normalizeCountryName', () => {
 
   it('devuelve null para países sin textos en el archivo', () => {
     expect(normalizeCountryName('Brazil')).toBeNull();
-    expect(normalizeCountryName('Japan')).toBeNull();
+    expect(normalizeCountryName('Peru')).toBeNull();
     expect(normalizeCountryName('')).toBeNull();
     expect(normalizeCountryName(null)).toBeNull();
     expect(normalizeCountryName(undefined)).toBeNull();
