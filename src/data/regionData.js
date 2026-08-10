@@ -23,7 +23,10 @@ export const regionData = {
       { title: "Ricardo Mella y Francisco Ferrer i Guardia", author: "Frank Mintz", year: 1980, category: "teoria", rating: 4.5, summary: "Estudio de Frank Mintz sobre el pensamiento de Ricardo Mella y la pedagogía de Ferrer i Guardia.", filename: "anarquismo/f15194288.pdf" },
       { title: "Nueva Utopía", author: "Ricardo Mella", year: 1890, category: "teoria", rating: 4.6, summary: "La visión de la sociedad futura de Ricardo Mella: la utopía anarquista como horizonte realizable.", filename: "anarquismo/f8215120.pdf" },
       { title: "La coacción moral", author: "Ricardo Mella", year: 1898, category: "teoria", rating: 4.5, summary: "Análisis de Mella sobre la coacción moral como freno social frente a la libertad individual.", filename: "anarquismo/f8901568.pdf" },
-      { title: "La Escuela Moderna", author: "Francisco Ferrer Guardia", year: 1908, category: "teoria", rating: 4.7, summary: "El texto fundacional de la pedagogía racionalista de Ferrer i Guardia, base del movimiento de escuelas modernas.", filename: "otros/f13306400.pdf" }
+      { title: "La Escuela Moderna", author: "Francisco Ferrer Guardia", year: 1908, category: "teoria", rating: 4.7, summary: "El texto fundacional de la pedagogía racionalista de Ferrer i Guardia, base del movimiento de escuelas modernas.", filename: "otros/f13306400.pdf" },
+      { title: "El corto verano de la anarquía", author: "Hans Magnus Enzensberger", year: 1972, category: "historia", rating: 4.8, summary: "Crónica literaria del escritor alemán sobre Buenaventura Durruti y la revolución española.", filename: "anarquismo/f34085976.pdf" },
+      { title: "El error político-militar de la República", author: "Abraham Guillén", year: 1971, category: "revolucion", rating: 4.6, summary: "Análisis de Abraham Guillén sobre los errores estratégicos de la República y la revolución durante la Guerra Civil.", filename: "anarquismo/f27380672.pdf" },
+      { title: "El anarquismo como doctrina y movimiento", author: "Aureliano Yanes Herreros", year: 1996, category: "teoria", rating: 4.5, summary: "Panorama doctrinal del anarquismo por el historiador español Aureliano Yanes Herreros.", filename: "anarquismo/f43612328_El_anarquismo_como_doctrina_y_movimiento.pdf" }
     ]
   },
   "Francia": {
@@ -44,7 +47,8 @@ export const regionData = {
       { title: "A los jóvenes", author: "Piotr Kropotkin", year: 1880, category: "teoria", rating: 4.6, summary: "Llamamiento de Kropotkin a la juventud para poner la ciencia y el saber al servicio de la revolución.", filename: "anarquismo/f8228400.pdf" },
       { title: "El anarquismo individualista como vida y actividad", author: "Émile Armand", year: 1907, category: "teoria", rating: 4.5, summary: "Manifiesto del individualismo anarquista de Émile Armand: el anarquismo como forma de vida.", filename: "anarquismo/f13508304.pdf" },
       { title: "El anarquismo individualista. Lo que es, vale y puede", author: "Émile Armand", year: 1916, category: "teoria", rating: 4.5, summary: "Defensa y delimitación del individualismo anarquista por uno de sus principales teóricos franceses.", filename: "anarquismo/f13510000.pdf" },
-      { title: "El individualismo anarquista", author: "Émile Armand", year: 1920, category: "teoria", rating: 4.6, summary: "Síntesis del pensamiento de Émile Armand sobre la vida individual sin Estado ni autoridad.", filename: "anarquismo/f13512816.pdf" }
+      { title: "El individualismo anarquista", author: "Émile Armand", year: 1920, category: "teoria", rating: 4.6, summary: "Síntesis del pensamiento de Émile Armand sobre la vida individual sin Estado ni autoridad.", filename: "anarquismo/f13512816.pdf" },
+      { title: "La conjura de los indomables", author: "Rodolfo Montes de Oca", year: 2008, category: "historia", rating: 4.6, summary: "Motín y evasión anarquista en la colonia penitenciaria de la Guayana francesa.", filename: "anarquismo/f21279704.pdf" }
     ]
   },
   "Estados Unidos": {
@@ -128,7 +132,7 @@ export const regionData = {
   },
   "Nigeria": {
     books: [
-      { title: "Anarquismo africano", author: "Sam Mbah e I. E. Igariwey", year: 1997, category: "teoria", rating: 4.5, summary: "El anarquismo en África, desde las sociedades comunitarias hasta la Awareness League nigeriana.", filename: "anarquismo/f27953352.pdf" }
+      { title: "Anarquismo africano", author: "Sam Mbah e I. E. Igariwey", year: 1997, category: "historia", rating: 4.5, summary: "El anarquismo en África, desde las sociedades comunitarias hasta la Awareness League nigeriana.", filename: "anarquismo/f27953352.pdf" }
     ]
   },
   "Rusia": {
@@ -148,7 +152,8 @@ export const regionData = {
       { title: "¿Qué es el arte?", author: "León Tolstói", year: 1897, category: "teoria", rating: 4.5, summary: "El escritor ruso, cercano al anarquismo cristiano, expone su estética de la autenticidad y la comunión.", filename: "anarquismo/f3928840_Qu_es_el_arte.pdf" },
       { title: "La comuna de Kronstadt", author: "Stepan Petritchenko, Alexander Berkman y Néstor Makhno", year: 1921, category: "revolucion", rating: 4.7, summary: "Testimonios y análisis de la rebelión de los marineros de Kronstadt contra el bolchevismo.", filename: "anarquismo/f101404144.pdf" },
       { title: "La Makhnovschina. Un movimiento libertario bajo fuego en Ucrania (1918-1921)", author: "Lorena Paz Paredes", year: 2018, category: "historia", rating: 4.7, summary: "Estudio del movimiento campesino libertario ucraniano de Néstor Makhno durante la guerra civil rusa.", filename: "anarquismo/f38438312.pdf" },
-      { title: "Consideraciones filosóficas", author: "Mijaíl Bakunin", year: 1871, category: "teoria", rating: 4.6, summary: "Textos filosóficos de Bakunin (1870-71) sobre el sistema del mundo, la materia y la libertad.", filename: "anarquismo/f7775816.pdf" }
+      { title: "Consideraciones filosóficas", author: "Mijaíl Bakunin", year: 1871, category: "teoria", rating: 4.6, summary: "Textos filosóficos de Bakunin (1870-71) sobre el sistema del mundo, la materia y la libertad.", filename: "anarquismo/f7775816.pdf" },
+      { title: "El anarquismo en el espejo judío", author: "Yago Mellado López", year: 2013, category: "historia", rating: 4.4, summary: "Tesis doctoral sobre el anarquismo judío: la presencia de militantes y pensadores judíos en el movimiento libertario.", filename: "anarquismo/f14265872_El_Anarquismo_en_el_espejo_jud_o.pdf" }
     ]
   },
   "Alemania": {
