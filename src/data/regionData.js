@@ -19,7 +19,11 @@ export const regionData = {
       { title: "Mujeres Libres (1936-1939). Una lectura feminista", author: "Colectivo", year: 2010, category: "historia", rating: 4.7, summary: "Análisis de la organización Mujeres Libres y su apuesta por la emancipación integral de la mujer.", filename: "anarquismo/f14218520.pdf" },
       { title: "Lombroso y los anarquistas", author: "Ricardo Mella", year: 1896, category: "teoria", rating: 4.5, summary: "Respuesta del pensador gallego a las teorías positivistas que criminalizaban al anarquismo.", filename: "anarquismo/f13583448.pdf" },
       { title: "Del amor", author: "Ricardo Mella", year: 1905, category: "teoria", rating: 4.5, summary: "Reflexión del anarquista gallego sobre el amor libre, la moral y las relaciones humanas.", filename: "anarquismo/f14893352.pdf" },
-      { title: "El terrorismo anarquista como propaganda por el hecho", author: "Juan Avilés", year: 2000, category: "historia", rating: 4.5, summary: "Estudio académico sobre la propaganda por el hecho y los atentados anarquistas de fines del XIX.", filename: "anarquismo/f13281808.pdf" }
+      { title: "El terrorismo anarquista como propaganda por el hecho", author: "Juan Avilés", year: 2000, category: "historia", rating: 4.5, summary: "Estudio académico sobre la propaganda por el hecho y los atentados anarquistas de fines del XIX.", filename: "anarquismo/f13281808.pdf" },
+      { title: "Ricardo Mella y Francisco Ferrer i Guardia", author: "Frank Mintz", year: 1980, category: "teoria", rating: 4.5, summary: "Estudio de Frank Mintz sobre el pensamiento de Ricardo Mella y la pedagogía de Ferrer i Guardia.", filename: "anarquismo/f15194288.pdf" },
+      { title: "Nueva Utopía", author: "Ricardo Mella", year: 1890, category: "teoria", rating: 4.6, summary: "La visión de la sociedad futura de Ricardo Mella: la utopía anarquista como horizonte realizable.", filename: "anarquismo/f8215120.pdf" },
+      { title: "La coacción moral", author: "Ricardo Mella", year: 1898, category: "teoria", rating: 4.5, summary: "Análisis de Mella sobre la coacción moral como freno social frente a la libertad individual.", filename: "anarquismo/f8901568.pdf" },
+      { title: "La Escuela Moderna", author: "Francisco Ferrer Guardia", year: 1908, category: "teoria", rating: 4.7, summary: "El texto fundacional de la pedagogía racionalista de Ferrer i Guardia, base del movimiento de escuelas modernas.", filename: "otros/f13306400.pdf" }
     ]
   },
   "Francia": {
@@ -37,7 +41,10 @@ export const regionData = {
       { title: "La capacidad política de la clase obrera", author: "Pierre-Joseph Proudhon", year: 1865, category: "teoria", rating: 4.6, summary: "Última obra de Proudhon: la clase obrera como sujeto político capaz de federarse sin Estado.", filename: "anarquismo/f23646120.pdf" },
       { title: "Política unitaria", author: "Pierre-Joseph Proudhon", year: 1863, category: "teoria", rating: 4.4, summary: "Textos de Proudhon contra la centralización jacobina y a favor del federalismo como organización libre.", filename: "anarquismo/f8604912_Pol_tica_unitaria_Pierre_Joseph_Proudhon.pdf" },
       { title: "Anarquismo: de la teoría a la práctica", author: "Daniel Guérin", year: 1965, category: "teoria", rating: 4.6, summary: "Panorama del anarquismo de la mano del militante e historiador francés Daniel Guérin.", filename: "anarquismo/f7802064.pdf" },
-      { title: "A los jóvenes", author: "Piotr Kropotkin", year: 1880, category: "teoria", rating: 4.6, summary: "Llamamiento de Kropotkin a la juventud para poner la ciencia y el saber al servicio de la revolución.", filename: "anarquismo/f8228400.pdf" }
+      { title: "A los jóvenes", author: "Piotr Kropotkin", year: 1880, category: "teoria", rating: 4.6, summary: "Llamamiento de Kropotkin a la juventud para poner la ciencia y el saber al servicio de la revolución.", filename: "anarquismo/f8228400.pdf" },
+      { title: "El anarquismo individualista como vida y actividad", author: "Émile Armand", year: 1907, category: "teoria", rating: 4.5, summary: "Manifiesto del individualismo anarquista de Émile Armand: el anarquismo como forma de vida.", filename: "anarquismo/f13508304.pdf" },
+      { title: "El anarquismo individualista. Lo que es, vale y puede", author: "Émile Armand", year: 1916, category: "teoria", rating: 4.5, summary: "Defensa y delimitación del individualismo anarquista por uno de sus principales teóricos franceses.", filename: "anarquismo/f13510000.pdf" },
+      { title: "El individualismo anarquista", author: "Émile Armand", year: 1920, category: "teoria", rating: 4.6, summary: "Síntesis del pensamiento de Émile Armand sobre la vida individual sin Estado ni autoridad.", filename: "anarquismo/f13512816.pdf" }
     ]
   },
   "Estados Unidos": {
@@ -50,7 +57,9 @@ export const regionData = {
       { title: "El origen del 1º de Mayo", author: "Colectivo", year: 1886, category: "historia", rating: 4.6, summary: "La revuelta de Haymarket en Chicago y el nacimiento de la jornada internacional de los trabajadores.", filename: "anarquismo/f4310256_Microsoft_Word_1_de_Mayo.pdf" },
       { title: "Fragmentos de antropología anarquista", author: "David Graeber", year: 2004, category: "teoria", rating: 4.7, summary: "El antropólogo anarquista propone leer la etnografía como inspiración para formas de organización libres.", filename: "anarquismo/f7894704.pdf" },
       { title: "Una solución anarquista al calentamiento global", author: "Peter Gelderloos", year: 2010, category: "teoria", rating: 4.4, summary: "Crítica de la geoingeniería capitalista y propuesta ecológica desde la autogestión y la descentralización.", filename: "anarquismo/f2741896.pdf" },
-      { title: "Anarquismo social o anarquismo personal", author: "Murray Bookchin", year: 1995, category: "teoria", rating: 4.6, summary: "Polémica de Bookchin contra el anarquismo individualista y su defensa del anarquismo social y ecológico.", filename: "anarquismo/f8231816.pdf" }
+      { title: "Anarquismo social o anarquismo personal", author: "Murray Bookchin", year: 1995, category: "teoria", rating: 4.6, summary: "Polémica de Bookchin contra el anarquismo individualista y su defensa del anarquismo social y ecológico.", filename: "anarquismo/f8231816.pdf" },
+      { title: "Durruti ha muerto, pero está vivo todavía", author: "Emma Goldman", year: 1936, category: "biografia", rating: 4.7, summary: "Elogio fúnebre de Emma Goldman a Buenaventura Durruti, retrato del revolucionario español.", filename: "anarquismo/f13514432.pdf" },
+      { title: "Socialismo de Estado y anarquismo", author: "Benjamin Tucker", year: 1890, category: "teoria", rating: 4.6, summary: "El anarquismo individualista de Benjamin Tucker confrontado con el socialismo de Estado.", filename: "otros/f7924160.pdf" }
     ]
   },
   "Italia": {
@@ -61,7 +70,9 @@ export const regionData = {
       { title: "La Revolución Rusa y el anarquismo", author: "Luigi Fabbri", year: 1922, category: "teoria", rating: 4.5, summary: "Respuesta de Fabbri al texto de Bujarín sobre la postura oficial del bolchevismo hacia el anarquismo.", filename: "anarquismo/f2904104_fabbri.pdf" },
       { title: "La banda del Matese", author: "Colectivo", year: 1877, category: "historia", rating: 4.5, summary: "La insurrección fallida de la banda del Matese liderada por Carlo Cafiero y Errico Malatesta.", filename: "otros/f27973528_Microsoft_Word_Banda_del_Matese.pdf" },
       { title: "Individualismo y Comunismo", author: "Errico Malatesta", year: 1926, category: "teoria", rating: 4.6, summary: "Malatesta reconcilia las corrientes individualista y comunista del anarquismo en este texto clásico.", filename: "anarquismo/f8435008.pdf" },
-      { title: "Influencias burguesas sobre el anarquismo", author: "Luigi Fabbri", year: 1921, category: "teoria", rating: 4.4, summary: "Análisis de Fabbri sobre los elementos burgueses que contaminan el ideal anarquista.", filename: "anarquismo/f4319216.pdf" }
+      { title: "Influencias burguesas sobre el anarquismo", author: "Luigi Fabbri", year: 1921, category: "teoria", rating: 4.4, summary: "Análisis de Fabbri sobre los elementos burgueses que contaminan el ideal anarquista.", filename: "anarquismo/f4319216.pdf" },
+      { title: "Un plan de organización anarquista", author: "Errico Malatesta", year: 1927, category: "teoria", rating: 4.7, summary: "La respuesta de Malatesta a la Plataforma de Arshínov: organización, pero sin autoridad ni partido.", filename: "anarquismo/f7273608.pdf" },
+      { title: "Elecciones y anarquismo", author: "Errico Malatesta", year: 1897, category: "teoria", rating: 4.6, summary: "Escritos de Malatesta contra la participación electoral y en defensa de la acción directa.", filename: "anarquismo/f8673248.pdf" }
     ]
   },
   "México": {
@@ -145,7 +156,8 @@ export const regionData = {
       { title: "El único y su propiedad", author: "Max Stirner", year: 1844, category: "teoria", rating: 4.6, summary: "El egoísmo radical de Stirner, precursor del anarquismo individualista: el Yo frente a toda idea sagrada.", filename: "anarquismo/f7520496_El_unico_y_su_propiedad_indd.pdf" },
       { title: "Bajo la bandera negra", author: "Justus F. Wittkop", year: 1985, category: "historia", rating: 4.5, summary: "Hechos y figuras del anarquismo en esta historia del movimiento escrita por Wittkop.", filename: "anarquismo/f3257672_Bajo_la_bandera_negra_Justus_F_Wittkop.pdf" },
       { title: "Comunismo autoritario y comunismo libertario", author: "Max Nettlau", year: 1928, category: "teoria", rating: 4.5, summary: "El gran historiador del anarquismo distingue las dos tradiciones comunistas y su relación con la libertad.", filename: "anarquismo/f7519848.pdf" },
-      { title: "La lucha contra el Estado", author: "Max Nettlau", year: 1920, category: "teoria", rating: 4.5, summary: "Ensayo de Nettlau sobre la resistencia de la sociedad frente al Estado y la posibilidad de su abolición.", filename: "anarquismo/f4181216.pdf" }
+      { title: "La lucha contra el Estado", author: "Max Nettlau", year: 1920, category: "teoria", rating: 4.5, summary: "Ensayo de Nettlau sobre la resistencia de la sociedad frente al Estado y la posibilidad de su abolición.", filename: "anarquismo/f4181216.pdf" },
+      { title: "La responsabilidad y la solidaridad en la lucha obrera", author: "Max Nettlau", year: 1919, category: "teoria", rating: 4.5, summary: "Sobre los límites y las posibilidades de la solidaridad en el movimiento obrero libertario.", filename: "anarquismo/f3069592.pdf" }
     ]
   },
   "Inglaterra": {
