@@ -94,6 +94,32 @@ export const regionData = {
       { title: "Wobblie. Hombres, ideas y problemas del anarquismo en los años veinte", author: "Víctor M. Muñoz C. y Armando Triviño", year: 2009, category: "historia", rating: 4.5, summary: "El anarquismo chileno de los años veinte y su vínculo con la IWW en este ensayo histórico.", filename: "anarquismo/f44132216.pdf" }
     ]
   },
+  "Colombia": {
+    books: [
+      { title: "Los orígenes del anarquismo en Colombia y su relación con el liberalismo", author: "Diego Paredes Goicochea", year: 2017, category: "historia", rating: 4.6, summary: "Estudio académico sobre la llegada del anarquismo a Colombia y su vínculo con el liberalismo radical.", filename: "anarquismo/f33093480.pdf" },
+      { title: "Pasado y presente del anarquismo y del anarcosindicalismo en Colombia", author: "Centro de Investigación Libertaria y Educación Popular", year: 2011, category: "historia", rating: 4.7, summary: "Historia y actualidad del anarquismo y el anarcosindicalismo colombiano, editada por el CIL.", filename: "anarquismo/f18422752_Pasado_y_presente_del_anarquismo_en_Colombia_indd.pdf" }
+    ]
+  },
+  "Bolivia": {
+    books: [
+      { title: "La choledad antiestatal. El anarcosindicalismo en el movimiento obrero boliviano (1912-1965)", author: "Huáscar Rodríguez García", year: 2010, category: "historia", rating: 4.7, summary: "Historia del anarcosindicalismo boliviano y del papel de los cholos en el movimiento obrero andino.", filename: "anarquismo/f14045120_LA_CHOLEDAD_ANTIESTATAL_El_anarcosindicalismo_en_el_movimiento_obrero_boliviano_indd.pdf" }
+    ]
+  },
+  "Japón": {
+    books: [
+      { title: "Los Mártires de Tokio y la Sociedad de la Guillotina", author: "Li Pei-Kan (Ba Jin)", year: 2019, category: "historia", rating: 4.6, summary: "Crónica de los anarquistas japoneses ejecutados en 1911 y del movimiento de Kōtoku Shūsui.", filename: "anarquismo/f101423480.pdf" }
+    ]
+  },
+  "Siria": {
+    books: [
+      { title: "El experimento del Kurdistán oeste (Kurdistán sirio)", author: "Zaher Baher", year: 2015, category: "revolucion", rating: 4.5, summary: "La autoadministración democrática de Rojava y el papel de las mujeres en la revolución kurda.", filename: "otros/f38322176.pdf" }
+    ]
+  },
+  "Nigeria": {
+    books: [
+      { title: "Anarquismo africano", author: "Sam Mbah e I. E. Igariwey", year: 1997, category: "teoria", rating: 4.5, summary: "El anarquismo en África, desde las sociedades comunitarias hasta la Awareness League nigeriana.", filename: "anarquismo/f27953352.pdf" }
+    ]
+  },
   "Rusia": {
     books: [
       { title: "El Apoyo Mutuo", author: "Piotr Kropotkin", year: 1902, category: "teoria", rating: 5.0, filename: "anarquismo/f7067536_El_Apoyo_Mutuo_1902.pdf" },

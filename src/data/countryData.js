@@ -15,7 +15,12 @@ export const COUNTRY_ISO = {
   'Chile': 'cl',
   'Alemania': 'de',
   'Inglaterra': 'gb',
-  'Corea': 'kr'
+  'Corea': 'kr',
+  'Colombia': 'co',
+  'Bolivia': 'bo',
+  'Japón': 'jp',
+  'Siria': 'sy',
+  'Nigeria': 'ng'
 };
 
 // Devuelve el código ISO de una región (o null si no tiene mapeo).
