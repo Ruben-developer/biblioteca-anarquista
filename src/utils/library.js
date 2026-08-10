@@ -56,14 +56,14 @@ export const sortBooks = (books, sort = 'rating') => {
 };
 
 // Textos históricos de una región (los de filosofía/ideas no van al mapa ni timeline).
-const HISTORICAL_CATEGORIES = ['historia', 'revolucion', 'movimiento', 'organizacion', 'represion', 'periodismo', 'manifiesto'];
-export const isHistoricalBook = (book) => HISTORICAL_CATEGORIES.includes(book.category);
+const HISTORICAL_CATEGORIES = new Set(['historia', 'revolucion', 'movimiento', 'organizacion', 'represion', 'periodismo', 'manifiesto']);
+export const isHistoricalBook = (book) => HISTORICAL_CATEGORIES.has(book.category);
 
 // Textos históricos relacionados con un evento: misma región, ordenados por
 // cercanía al año del evento (mismo año primero, luego los más próximos).
 export const getEventRelatedTexts = (regionData, event) => {
   if (!event || !regionData) return [];
-  const regionBooks = (regionData[event.region] && regionData[event.region].books) || [];
+  const regionBooks = regionData?.[event.region]?.books || [];
   return regionBooks
     .filter((b) => isHistoricalBook(b) && b.year)
     .map((book) => ({ ...book, distance: Math.abs(book.year - event.year) }))

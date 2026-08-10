@@ -11,8 +11,8 @@ const getHistoricalBooks = (data) => (data.books || []).filter((b) => isHistoric
 
 // Interpola un color hex entre c1 (claro, pocos textos) y c2 (oscuro, muchos).
 const lerpColor = (c1, c2, t) => {
-  const a = parseInt(c1.slice(1), 16);
-  const b = parseInt(c2.slice(1), 16);
+  const a = Number.parseInt(c1.slice(1), 16);
+  const b = Number.parseInt(c2.slice(1), 16);
   const ar = (a >> 16) & 255;
   const ag = (a >> 8) & 255;
   const ab = a & 255;

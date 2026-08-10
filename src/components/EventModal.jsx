@@ -5,7 +5,6 @@ import { getDocumentDownloadUrl } from '../services/documentService';
 import { getEventRelatedTexts } from '../utils/library';
 
 const EventModal = ({ darkMode, event, regionData, onClose }) => {
-  const themeClass = darkMode ? THEME.dark : THEME.light;
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
 
   if (!event) return null;
