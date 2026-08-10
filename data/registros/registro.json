@@ -111,8 +111,15 @@
       "prs": 0,
       "ci": "verde",
       "nota": "TURNO 00:00 agente daily-dev + trabajo humano concurrente. Agente: línea temporal ampliada 8->16 eventos históricos reales (1909-2012: Semana Trágica, Sacco y Vanzetti, Jornadas Libertarias, zapatismo, Seattle, Génova, 15M, Rojava) + DECADES sincronizada (commit 6ee6fa2). Humano (Ruben-developer): sección Autores dinámica derivada del catálogo con getAllAuthors, mapa/timeline solo con textos históricos, EventModal con textos relacionados (205c138) y catálogo 97->109 obras (53768ae, 1ac1394). Inspección: descargas 91/91 OK (luego 103/103 con filename), regiones 16/16/16, audit sin fix sin --force (devDeps build-time). 64 tests, build y CI de Pages verdes."
+    },
+    {
+      "fecha": "2026-08-10",
+      "obras": 114,
+      "palabras": 1112,
+      "commits": 5,
+      "prs": 0,
+      "ci": "verde",
+      "nota": "CATÁLOGO 109->114 (+5) + UX LECTOR (manual): lector más grande (max-w-7xl, 96vh) con botón 'Nueva pestaña' (abre el PDF a pantalla completa). Fix Nigeria: 'Anarquismo africano' pasó de teoria a historia (el mapa solo cuenta históricas y Nigeria salía en 0). Nuevas obras: España (Enzensberger, Guillén, Yanes Herreros), Francia (Montes de Oca), Rusia (Mellado). 108/108 descargas OK, npm run check verde (lint+64 tests+build)."
     }
-  ]
-}
   ]
 }
