@@ -33,6 +33,17 @@ export const timelineEvents = [
     author: "August Spies"
   },
   {
+    year: 1909,
+    decade: '1900s',
+    title: "Semana Trágica de Barcelona",
+    description: "Huelga general y revuelta anticlerical en Barcelona, brutalmente reprimida; ejecución de Ferrer i Guardia.",
+    region: "España",
+    category: "represion",
+    image: "🔥",
+    quote: "La escuela moderna contra el dogma",
+    author: "Francesc Ferrer i Guardia"
+  },
+  {
     year: 1910,
     decade: '1910s',
     title: "Fundación de la CNT",
@@ -66,6 +77,17 @@ export const timelineEvents = [
     author: "Marineros"
   },
   {
+    year: 1927,
+    decade: '1920s',
+    title: "Ejecución de Sacco y Vanzetti",
+    description: "Fusilados pese a las protestas mundiales; su caso se vuelve símbolo de la persecución anarquista.",
+    region: "Estados Unidos",
+    category: "represion",
+    image: "⚖️",
+    quote: "Me niego a perdonar a mis verdugos",
+    author: "Bartolomeo Vanzetti"
+  },
+  {
     year: 1936,
     decade: '1930s',
     title: "Revolución Española",
@@ -86,5 +108,71 @@ export const timelineEvents = [
     image: "🎨",
     quote: "Seamos realistas, pidamos lo imposible",
     author: "Mayo 68"
+  },
+  {
+    year: 1977,
+    decade: '1970s',
+    title: "Jornadas Libertarias de Barcelona",
+    description: "Tras la muerte de Franco, la CNT vuelve a la luz y organiza unas Jornadas Libertarias multitudinarias.",
+    region: "España",
+    category: "movimiento",
+    image: "🏴",
+    quote: "La CNT vuelve a la calle",
+    author: "CNT"
+  },
+  {
+    year: 1994,
+    decade: '1990s',
+    title: "Levantamiento zapatista en Chiapas",
+    description: "El EZLN se alza en México: autonomía indígena, mandar obedeciendo y autogobierno comunitario.",
+    region: "México",
+    category: "revolucion",
+    image: "😷",
+    quote: "Mandando obedecemos",
+    author: "EZLN"
+  },
+  {
+    year: 1999,
+    decade: '1990s',
+    title: "Batalla de Seattle",
+    description: "El movimiento antiglobalización bloquea la cumbre de la OMC en EE.UU. con acción directa masiva.",
+    region: "Estados Unidos",
+    category: "movimiento",
+    image: "✊",
+    quote: "Otro mundo es posible",
+    author: "Movimiento antiglobalización"
+  },
+  {
+    year: 2001,
+    decade: '2000s',
+    title: "Contracumbre de Génova",
+    description: "Las protestas contra el G8 marcan el punto álgido del movimiento global; Carlo Giuliani es asesinado por la policía.",
+    region: "Italia",
+    category: "movimiento",
+    image: "🏴",
+    quote: "No a la guerra, no al G8",
+    author: "Movimiento antiglobalización"
+  },
+  {
+    year: 2011,
+    decade: '2010s',
+    title: "Movimiento 15M (Los Indignados)",
+    description: "Acampadas y asambleas en plazas de toda España: democracia real ya, horizontalidad y autoorganización.",
+    region: "España",
+    category: "movimiento",
+    image: "🏕️",
+    quote: "No somos mercancía en manos de banqueros",
+    author: "15M"
+  },
+  {
+    year: 2012,
+    decade: '2010s',
+    title: "Autonomía democrática de Rojava",
+    description: "Kurdistán sirio declara su autogobierno: comunas autónomas, confederalismo democrático y ecología social.",
+    region: "Siria",
+    category: "organizacion",
+    image: "🌱",
+    quote: "La vida libre de las mujeres y los pueblos",
+    author: "Confederalismo democrático"
   }
 ];

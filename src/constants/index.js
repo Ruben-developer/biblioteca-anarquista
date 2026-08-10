@@ -20,7 +20,7 @@ export const IDEAS_CATEGORIES = ['teoria', 'biografia', 'dialogo'];
 // True si una obra es de corte histórico (va al mapa / línea temporal).
 export const isHistoricalCategory = (category) => HISTORICAL_CATEGORIES.includes(category);
 
-export const DECADES = ['all', '1840s', '1860s', '1870s', '1880s', '1900s', '1910s', '1920s', '1930s', '1960s'];
+export const DECADES = ['all', '1860s', '1870s', '1880s', '1900s', '1910s', '1920s', '1930s', '1960s', '1970s', '1990s', '2000s', '2010s'];
 
 export const REGIONS = ['all', 'España', 'Francia', 'Estados Unidos', 'Rusia', 'Italia', 'México', 'Argentina', 'Chile', 'Colombia', 'Bolivia', 'Alemania', 'Inglaterra', 'Corea', 'Japón', 'Siria', 'Nigeria'];
 
