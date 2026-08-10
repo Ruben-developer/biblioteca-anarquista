@@ -1,40 +1,16 @@
 import React from 'react';
-import { X, Quote, BookOpen, Download, Share2 } from 'lucide-react';
+import { X, Quote, BookOpen } from 'lucide-react';
 import { THEME } from '../constants';
 import { getDocumentDownloadUrl } from '../services/documentService';
 import { getEventRelatedTexts } from '../utils/library';
 
-const EventModal = ({ darkMode, event, regionData, onClose, onRead }) => {
+const EventModal = ({ darkMode, event, regionData, onClose }) => {
   const themeClass = darkMode ? THEME.dark : THEME.light;
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
 
   if (!event) return null;
 
   const relatedTexts = getEventRelatedTexts(regionData, event);
-
-  const handleDownload = (filename) => {
-    const url = getDocumentDownloadUrl(filename);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = filename;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-  };
-
-  const handleShare = (title) => {
-    if (navigator.share) {
-      navigator.share({
-        title: 'Archivo Histórico Anarquista',
-        text: `Descubre: ${title}`,
-        url: window.location.href
-      });
-    } else {
-      const url = `${window.location.href}#${title}`;
-      navigator.clipboard.writeText(url);
-      alert('Enlace copiado al portapapeles');
-    }
-  };
 
   return (
     <div
@@ -102,31 +78,17 @@ const EventModal = ({ darkMode, event, regionData, onClose, onRead }) => {
                       <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>📅 {book.year}</span>
                     </div>
                     <div className="flex gap-3 mt-2 flex-wrap">
-                      {book.filename && onRead && (
-                        <button
-                          onClick={() => onRead(book)}
+                      {book.filename && (
+                        <a
+                          href={getDocumentDownloadUrl(book.filename)}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className={`text-xs ${darkMode ? 'text-red-400 hover:text-red-300' : 'text-amber-700 hover:text-amber-900'} flex items-center gap-1 hover:underline transition-colors`}
                         >
                           <BookOpen size={14} />
                           Ver
-                        </button>
+                        </a>
                       )}
-                      {book.filename && (
-                        <button
-                          onClick={() => handleDownload(book.filename)}
-                          className={`text-xs ${darkMode ? 'text-red-400 hover:text-red-300' : 'text-amber-700 hover:text-amber-900'} flex items-center gap-1 hover:underline transition-colors`}
-                        >
-                          <Download size={14} />
-                          Descargar
-                        </button>
-                      )}
-                      <button
-                        onClick={() => handleShare(book.title)}
-                        className={`text-xs ${darkMode ? 'text-red-400 hover:text-red-300' : 'text-amber-700 hover:text-amber-900'} flex items-center gap-1 hover:underline transition-colors`}
-                      >
-                        <Share2 size={14} />
-                        Compartir
-                      </button>
                     </div>
                   </div>
                 ))}

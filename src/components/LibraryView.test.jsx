@@ -22,7 +22,7 @@ describe('LibraryView', () => {
 
   it('renderiza el título y el contador de obras', () => {
     const html = renderToStaticMarkup(
-      <LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} onRead={noop} />
+      <LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />
     );
     expect(html).toContain('Biblioteca');
     expect(html).toContain('3 de 3 obras');
@@ -30,7 +30,7 @@ describe('LibraryView', () => {
 
   it('renderiza un botón Leer por cada obra con archivo', () => {
     const html = renderToStaticMarkup(
-      <LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} onRead={noop} />
+      <LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />
     );
     expect(html).toContain('La Conquista del Pan');
     expect(html).toContain('Columna Durruti');
@@ -40,7 +40,7 @@ describe('LibraryView', () => {
 
   it('muestra la región y categoría de cada obra', () => {
     const html = renderToStaticMarkup(
-      <LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} onRead={noop} />
+      <LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />
     );
     expect(html).toContain('España');
     expect(html).toContain('Francia');
@@ -50,7 +50,7 @@ describe('LibraryView', () => {
 
   it('incluye el control de búsqueda y filtros', () => {
     const html = renderToStaticMarkup(
-      <LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} onRead={noop} />
+      <LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />
     );
     expect(html).toContain('Buscar por título o autor');
     expect(html).toContain('Todas las categorías');

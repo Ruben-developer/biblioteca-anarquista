@@ -43,7 +43,7 @@ describe('EventModal', () => {
     );
     expect(html).toContain('Textos históricos relacionados');
     expect(html).toContain('Los Mártires de Chicago');
-    expect(html).toContain('Descargar');
+    expect(html).toContain('target="_blank"');
   });
 
   it('no muestra textos si no hay obras históricas en la región', () => {

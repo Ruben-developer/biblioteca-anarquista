@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { Search, BookOpen, Heart, X, Download } from 'lucide-react';
+import { Search, BookOpen, Heart, X } from 'lucide-react';
 import { THEME, CATEGORIES, REGIONS } from '../constants';
 import { getAllBooks, filterBooks, sortBooks, getDecadeFromYear } from '../utils/library';
 import { getDocumentDownloadUrl } from '../services/documentService';
@@ -10,8 +10,7 @@ const LibraryView = ({
   darkMode,
   regionData,
   favorites,
-  onToggleFavorite,
-  onRead
+  onToggleFavorite
 }) => {
   const themeClass = darkMode ? THEME.dark : THEME.light;
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
@@ -164,27 +163,17 @@ const LibraryView = ({
                 )}
 
                 <div className="flex items-center gap-3 mt-auto">
-                  {book.filename && (
-                    <button
-                      onClick={() => onRead(book)}
+                  {downloadUrl && (
+                    <a
+                      href={downloadUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                         darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
                       }`}
                     >
                       <BookOpen size={14} />
                       Leer
-                    </button>
-                  )}
-                  {downloadUrl && (
-                    <a
-                      href={downloadUrl}
-                      download={book.filename.split('/').pop()}
-                      className={`px-3 py-2 rounded-lg text-sm flex items-center gap-1 transition-colors ${
-                        darkMode ? 'bg-gray-700 text-gray-200 hover:bg-gray-600' : 'bg-amber-100 text-amber-900 hover:bg-amber-200'
-                      }`}
-                      title="Descargar"
-                    >
-                      <Download size={14} />
                     </a>
                   )}
                 </div>

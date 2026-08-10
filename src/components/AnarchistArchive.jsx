@@ -16,7 +16,6 @@ import WorldMapView from './WorldMapView';
 import AuthorsView from './AuthorsView';
 import FavoritesView from './FavoritesView';
 import LibraryView from './LibraryView';
-import ReaderView from './ReaderView';
 import TourModal from './TourModal';
 import RegionModal from './RegionModal';
 import EventModal from './EventModal';
@@ -30,7 +29,6 @@ const AnarchistArchive = () => {
   const [activeView, setActiveView] = useState(VIEWS.TIMELINE);
   const [selectedRegion, setSelectedRegion] = useState(null);
   const [selectedEvent, setSelectedEvent] = useState(null);
-  const [readingBook, setReadingBook] = useState(null);
   const [showFilters, setShowFilters] = useState(false);
   const [showTour, setShowTour] = useState(false);
   const [showStats, setShowStats] = useState(false);
@@ -123,7 +121,6 @@ const AnarchistArchive = () => {
             darkMode={darkMode}
             authors={dynamicAuthors}
             regionData={regionData}
-            onRead={setReadingBook}
           />
         )}
 
@@ -133,7 +130,6 @@ const AnarchistArchive = () => {
             regionData={regionData}
             favorites={favorites}
             onToggleFavorite={toggleFavorite}
-            onRead={setReadingBook}
           />
         )}
 
@@ -145,14 +141,6 @@ const AnarchistArchive = () => {
           />
         )}
       </main>
-
-      {readingBook && (
-        <ReaderView
-          darkMode={darkMode}
-          book={readingBook}
-          onClose={() => setReadingBook(null)}
-        />
-      )}
 
       {showTour && (
         <TourModal
@@ -169,7 +157,6 @@ const AnarchistArchive = () => {
           favorites={favorites}
           onClose={() => setSelectedRegion(null)}
           onToggleFavorite={toggleFavorite}
-          onRead={setReadingBook}
         />
       )}
 
@@ -179,7 +166,6 @@ const AnarchistArchive = () => {
           event={selectedEvent}
           regionData={regionData}
           onClose={() => setSelectedEvent(null)}
-          onRead={setReadingBook}
         />
       )}
 

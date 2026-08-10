@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Book, ChevronDown, ChevronUp, BookOpen, MapPin } from 'lucide-react';
 import { THEME } from '../constants';
+import { getDocumentDownloadUrl } from '../services/documentService';
 
 const AuthorsView = ({
   darkMode,
-  authors,
-  onRead
+  authors
 }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
   const [openAuthor, setOpenAuthor] = useState(null);
@@ -85,16 +85,18 @@ const AuthorsView = ({
                             )}
                           </div>
                         </div>
-                        {book.filename && onRead && (
-                          <button
-                            onClick={() => onRead(book)}
+                        {book.filename && (
+                          <a
+                            href={getDocumentDownloadUrl(book.filename)}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className={`flex-shrink-0 flex items-center gap-1 px-2 py-1 rounded text-xs font-medium transition-colors ${
                               darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
                             }`}
                           >
                             <BookOpen size={12} />
                             Leer
-                          </button>
+                          </a>
                         )}
                       </div>
                     </div>
@@ -119,8 +121,7 @@ AuthorsView.propTypes = {
       regions: PropTypes.array,
       yearsRange: PropTypes.string
     })
-  ).isRequired,
-  onRead: PropTypes.func
+  ).isRequired
 };
 
 export default AuthorsView;
