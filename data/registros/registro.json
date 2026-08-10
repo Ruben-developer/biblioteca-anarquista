@@ -75,6 +75,15 @@
       "prs": 0,
       "ci": "verde",
       "nota": "EXPANSIÓN DE CATÁLOGO (manual): se añaden 26 obras nuevas identificadas con pdftotext en pdfs-local/ (351 PDFs sin usar). Total catálogo 65->91 obras, 85 con filename descargable. Autores: García Oliver, Ricardo Mella (x2), Proudhon (x2), Guérin, Kropotkin, Graeber, Gelderloos, Bookchin, Malatesta, Fabbri, Nettlau (x2), Wittkop, Meltzer, Bayer, Bakunin, Berkman/Petritchenko/Makhno (Kronstadt), entre otros. 26/26 filenames verificados HTTP 200, check-downloads 85/85 OK, npm run check verde (lint+tests 59+build)."
+    },
+    {
+      "fecha": "2026-08-09",
+      "obras": 97,
+      "palabras": 1112,
+      "commits": 6,
+      "prs": 0,
+      "ci": "verde",
+      "nota": "NUEVAS REGIONES (manual): catálogo 91->97 obras con 5 regiones nuevas (Colombia, Bolivia, Japón, Siria-Rojava, Nigeria-África). Sincronizados los 3 archivos de regiones (regionData.js, countryData.js ISO co/bo/jp/sy/ng, REGIONS). check-downloads 91/91 OK, npm run check verde (lint+59 tests+build). Pendiente: habilitar Tailscale Funnel para exponer los PDFs públicamente (secret VITE_PDF_BASE no existe en GitHub -> los PDFs dan 404 en Pages)."
     }
   ]
 }

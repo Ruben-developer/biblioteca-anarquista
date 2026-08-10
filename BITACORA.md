@@ -94,13 +94,19 @@
 
 | Hora | Tipo | Commit | Detalle |
 |------|------|--------|---------|
-| 19:21 | 🧑 Manual | `pendiente` | **Catálogo ampliado 65 → 91 obras**. Se escanearon los 410 PDFs del `pdfs-local/` (324 anarquismo + 77 otros + 9 ref) con `pdftotext`, descartando afiches, panfletos, PowerPoints, documentos legales, duplicados y ficheros escaneados sin texto. Se añadieron **26 obras nuevas** a `regionData.js` (26/26 filenames HTTP 200): España — García Oliver (*El eco de los pasos*), Mujeres Libres, Mella (x2), Avilés; Francia — Proudhon (x2), Guérin, Kropotkin; Rusia — Kronstadt (Petritchenko/Berkman/Makhno), La Makhnovschina, Bakunin; Italia — Malatesta, Fabbri; EEUU — Graeber, Gelderloos, Bookchin; Alemania — Wittkop, Nettlau (x2); Inglaterra — Meltzer; México — La bala y la escuela, Benítez (x2); Argentina — Bayer; Chile — Wobblie. **85/85 obras con filename descargable**, `check-downloads` OK, `npm run check` verde (lint + 59 tests + build). |
+| 19:21 | 🧑 Manual | `dae3608` | **Catálogo ampliado 65 → 91 obras**. Se escanearon los 410 PDFs del `pdfs-local/` (324 anarquismo + 77 otros + 9 ref) con `pdftotext`, descartando afiches, panfletos, PowerPoints, documentos legales, duplicados y ficheros escaneados sin texto. Se añadieron **26 obras nuevas** a `regionData.js` (26/26 filenames HTTP 200): España — García Oliver (*El eco de los pasos*), Mujeres Libres, Mella (x2), Avilés; Francia — Proudhon (x2), Guérin, Kropotkin; Rusia — Kronstadt (Petritchenko/Berkman/Makhno), La Makhnovschina, Bakunin; Italia — Malatesta, Fabbri; EEUU — Graeber, Gelderloos, Bookchin; Alemania — Wittkop, Nettlau (x2); Inglaterra — Meltzer; México — La bala y la escuela, Benítez (x2); Argentina — Bayer; Chile — Wobblie. **85/85 obras con filename descargable**, `check-downloads` OK, `npm run check` verde (lint + 59 tests + build). |
+
+## 2026-08-09 (noche) — Nuevas regiones: Colombia, Bolivia, Japón, Siria, Nigeria
+
+| Hora | Tipo | Commit | Detalle |
+|------|------|--------|---------|
+| 19:52 | 🧑 Manual | `pendiente` | **Catálogo 91 → 97 obras y +5 regiones**: se añaden **6 obras nuevas** y se crean las regiones **Colombia** (2), **Bolivia** (1), **Japón** (1), **Siria** (1, Rojava) y **Nigeria** (1, anarquismo africano). Se sincronizaron los **3 archivos** (regionData.js, countryData.js con ISO co/bo/jp/sy/ng, REGIONS en constants/index.js). Filenames 6/6 HTTP 200, `check-downloads` **91/91 OK**, `npm run check` verde (lint + 59 tests + build). |
 
 ## Estado actual
 
-- **16+ commits** en `main`, CI de Pages **verde** (lint+tests+audit+build), web **HTTP 200**.
-- **Calidad**: 59 tests unitarios · **85/85 descargas verificadas HTTP 200** · lint 0 errores · **SonarQube gate OK** (0 bugs, 0 vulns, A/A/A, coverage global 35%).
-- **Catálogo**: **91 obras** en `regionData.js`, distribuidas en 11 regiones.
+- **18+ commits** en `main`, CI de Pages **verde** (lint+tests+audit+build), web **HTTP 200**.
+- **Calidad**: 59 tests unitarios · **91/91 descargas verificadas HTTP 200** · lint 0 errores · **SonarQube gate OK** (0 bugs, 0 vulns, A/A/A, coverage global 35%).
+- **Catálogo**: **97 obras** en `regionData.js`, distribuidas en **16 regiones** (incluye Colombia, Bolivia, Japón, Siria y Nigeria).
 - **Mapa**: FASE 4 completada — mapamundi interactivo por país (react-svg-worldmap) en la vista Mapa.
 - **Mapa**: FASE 4 completada — mapamundi interactivo por país (react-svg-worldmap) en la vista Mapa.
 - **Infraestructura**: contenedor `pdf-server` (:8081) activo, cron 2×/día (00:00 y 12:00), persistencia con Linger + `podman-restart.service`.
