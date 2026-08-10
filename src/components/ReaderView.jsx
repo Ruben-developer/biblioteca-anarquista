@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { X, Download, Minus, Plus } from 'lucide-react';
+import { X, Download, Minus, Plus, ExternalLink } from 'lucide-react';
 import { THEME } from '../constants';
 import { getDocumentDownloadUrl } from '../services/documentService';
 
@@ -45,7 +45,7 @@ const ReaderView = ({ darkMode, book, onClose }) => {
       aria-modal="true"
       aria-label={`Lectura de ${book.title}`}
     >
-      <div className={`${cardClass} border-2 rounded-lg w-full max-w-5xl max-h-[92vh] flex flex-col overflow-hidden`}>
+      <div className={`${cardClass} border-2 rounded-lg w-full max-w-7xl max-h-[96vh] flex flex-col overflow-hidden`}>
         <div className={`${darkMode ? 'bg-red-900/30' : 'bg-amber-700'} p-4 flex items-center justify-between gap-3`}>
           <div className="flex-1 min-w-0">
             <h2 className={`text-lg font-bold truncate ${darkMode ? 'text-gray-100' : 'text-amber-50'}`}>
@@ -82,6 +82,18 @@ const ReaderView = ({ darkMode, book, onClose }) => {
                   <Plus size={14} />
                 </button>
               </div>
+            )}
+            {url && (
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`text-xs px-3 py-1.5 rounded flex items-center gap-1 ${darkMode ? 'bg-gray-700 text-gray-200 hover:bg-gray-600' : 'bg-amber-100 text-amber-900 hover:bg-amber-200'}`}
+                title="Abrir en pestaña nueva (vista completa)"
+              >
+                <ExternalLink size={14} />
+                Nueva pestaña
+              </a>
             )}
             {url && (
               <a
