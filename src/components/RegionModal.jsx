@@ -1,7 +1,10 @@
 import React from 'react';
-import { X, MapPin, Download, Share2, Heart } from 'lucide-react';
-import { THEME } from '../constants';
+import { X, MapPin, Download, Share2, Heart, BookOpen } from 'lucide-react';
+import { THEME, isHistoricalCategory } from '../constants';
 import { getDocumentDownloadUrl } from '../services/documentService';
+
+// El mapa solo muestra textos históricos: filtrar las obras de la región.
+const getHistoricalBooks = (data) => (data.books || []).filter((b) => isHistoricalCategory(b.category));
 
 const RegionModal = ({ 
   darkMode, 
@@ -9,12 +12,15 @@ const RegionModal = ({
   regionData, 
   favorites,
   onClose, 
-  onToggleFavorite 
+  onToggleFavorite,
+  onRead
 }) => {
   const themeClass = darkMode ? THEME.dark : THEME.light;
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
 
   if (!region || !regionData[region]) return null;
+
+  const historicalBooks = getHistoricalBooks(regionData[region]);
 
   const handleDownload = (filename) => {
     const url = getDocumentDownloadUrl(filename);
@@ -69,11 +75,11 @@ const RegionModal = ({
         </div>
         
         <p className={`${darkMode ? 'text-gray-400' : 'text-amber-900'} mb-4`}>
-          Textos del anarquismo en {region}
+          {historicalBooks.length} textos históricos del anarquismo en {region}
         </p>
         
         <div className="space-y-3 max-h-96 overflow-y-auto">
-          {regionData[region].books.map((book, idx) => (
+          {historicalBooks.map((book, idx) => (
             <div key={idx} className={`${darkMode ? 'bg-gray-800/50 border-gray-700/50' : 'bg-white/80 border-amber-300'} border-2 rounded-lg p-4`}>
               <div className="flex justify-between items-start gap-3">
                 <div className="flex-1">
@@ -100,6 +106,15 @@ const RegionModal = ({
                     </p>
                   )}
                   <div className="flex gap-2 mt-3 flex-wrap">
+                    {book.filename && onRead && (
+                      <button 
+                        onClick={() => onRead(book)}
+                        className={`text-xs ${darkMode ? 'text-red-400 hover:text-red-300' : 'text-amber-700 hover:text-amber-900'} flex items-center gap-1 hover:underline transition-colors`}
+                      >
+                        <BookOpen size={14} />
+                        Leer
+                      </button>
+                    )}
                     {book.filename && (
                       <button 
                         onClick={() => handleDownload(book.filename)}

@@ -9,7 +9,7 @@ const TourModal = ({ darkMode, onClose }) => {
   const tourItems = [
     { icon: '📅', title: 'Línea Temporal', description: 'Navega por eventos históricos' },
     { icon: '🗺️', title: 'Mapa', description: 'Explora textos por región' },
-    { icon: '👤', title: 'Biografías', description: 'Conoce a los pensadores' },
+    { icon: '👤', title: 'Autores', description: 'Conoce a los pensadores y sus obras' },
     { icon: '⭐', title: 'Favoritos', description: 'Guarda textos' }
   ];
 

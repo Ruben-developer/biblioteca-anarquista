@@ -1,12 +1,40 @@
 import React from 'react';
-import { X, Quote } from 'lucide-react';
+import { X, Quote, BookOpen, Download, Share2 } from 'lucide-react';
 import { THEME } from '../constants';
+import { getDocumentDownloadUrl } from '../services/documentService';
+import { getEventRelatedTexts } from '../utils/library';
 
-const EventModal = ({ darkMode, event, onClose }) => {
+const EventModal = ({ darkMode, event, regionData, onClose, onRead }) => {
   const themeClass = darkMode ? THEME.dark : THEME.light;
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
 
   if (!event) return null;
+
+  const relatedTexts = getEventRelatedTexts(regionData, event);
+
+  const handleDownload = (filename) => {
+    const url = getDocumentDownloadUrl(filename);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  };
+
+  const handleShare = (title) => {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Archivo Histórico Anarquista',
+        text: `Descubre: ${title}`,
+        url: window.location.href
+      });
+    } else {
+      const url = `${window.location.href}#${title}`;
+      navigator.clipboard.writeText(url);
+      alert('Enlace copiado al portapapeles');
+    }
+  };
 
   return (
     <div
@@ -54,6 +82,57 @@ const EventModal = ({ darkMode, event, onClose }) => {
               — {event.author}
             </p>
           </div>
+
+          {relatedTexts.length > 0 && (
+            <div className="mt-6">
+              <h3 className={`font-bold mb-3 ${darkMode ? 'text-red-400' : 'text-amber-800'}`}>
+                Textos históricos relacionados
+              </h3>
+              <div className="space-y-3">
+                {relatedTexts.map((book, idx) => (
+                  <div
+                    key={`${book.region}-${book.title}-${idx}`}
+                    className={`rounded-lg border p-3 ${darkMode ? 'bg-gray-800/50 border-gray-700/50' : 'bg-white/80 border-amber-300'}`}
+                  >
+                    <p className={`font-medium ${darkMode ? 'text-gray-200' : 'text-gray-800'} mb-1`}>
+                      {book.title}
+                    </p>
+                    <div className="flex items-center gap-3 text-sm flex-wrap">
+                      <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>por {book.author}</span>
+                      <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>📅 {book.year}</span>
+                    </div>
+                    <div className="flex gap-3 mt-2 flex-wrap">
+                      {book.filename && onRead && (
+                        <button
+                          onClick={() => onRead(book)}
+                          className={`text-xs ${darkMode ? 'text-red-400 hover:text-red-300' : 'text-amber-700 hover:text-amber-900'} flex items-center gap-1 hover:underline transition-colors`}
+                        >
+                          <BookOpen size={14} />
+                          Ver
+                        </button>
+                      )}
+                      {book.filename && (
+                        <button
+                          onClick={() => handleDownload(book.filename)}
+                          className={`text-xs ${darkMode ? 'text-red-400 hover:text-red-300' : 'text-amber-700 hover:text-amber-900'} flex items-center gap-1 hover:underline transition-colors`}
+                        >
+                          <Download size={14} />
+                          Descargar
+                        </button>
+                      )}
+                      <button
+                        onClick={() => handleShare(book.title)}
+                        className={`text-xs ${darkMode ? 'text-red-400 hover:text-red-300' : 'text-amber-700 hover:text-amber-900'} flex items-center gap-1 hover:underline transition-colors`}
+                      >
+                        <Share2 size={14} />
+                        Compartir
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

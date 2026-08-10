@@ -32,7 +32,7 @@ describe('WorldMapView (gradiente por nº de textos)', () => {
     return (r * 299 + g * 587 + b * 114) / 1000;
   };
 
-  it('el país con más textos (España, 14) usa el color más oscuro', () => {
+  it('el país con más textos históricos (España, 9) usa el color más oscuro', () => {
     const html = renderToStaticMarkup(
       <WorldMapView darkMode={false} regionData={regionData} onSelectRegion={noop} />
     );
@@ -41,7 +41,7 @@ describe('WorldMapView (gradiente por nº de textos)', () => {
     expect(brightness(fill)).toBeLessThan(180);
   });
 
-  it('el país con menos textos (Alemania, 1) usa un color más claro', () => {
+  it('el país con menos textos históricos (Alemania, 1) usa un color más claro', () => {
     const html = renderToStaticMarkup(
       <WorldMapView darkMode={false} regionData={regionData} onSelectRegion={noop} />
     );
@@ -50,7 +50,7 @@ describe('WorldMapView (gradiente por nº de textos)', () => {
     expect(brightness(fill)).toBeGreaterThan(180);
   });
 
-  it('Alemania (1 texto) es más claro que España (14 textos)', () => {
+  it('Alemania (1 texto histórico) es más claro que España (9 textos históricos)', () => {
     const html = renderToStaticMarkup(
       <WorldMapView darkMode={false} regionData={regionData} onSelectRegion={noop} />
     );

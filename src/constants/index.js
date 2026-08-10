@@ -1,11 +1,24 @@
 export const CATEGORIES = [
   { id: 'all', name: 'Todas', icon: '📚' },
   { id: 'teoria', name: 'Teoría', icon: '📖' },
+  { id: 'historia', name: 'Historia', icon: '📜' },
   { id: 'revolucion', name: 'Revolución', icon: '🏴' },
   { id: 'movimiento', name: 'Movimiento', icon: '✊' },
   { id: 'organizacion', name: 'Organización', icon: '🤝' },
-  { id: 'represion', name: 'Represión', icon: '⚖️' }
+  { id: 'represion', name: 'Represión', icon: '⚖️' },
+  { id: 'biografia', name: 'Biografía', icon: '👤' },
+  { id: 'periodismo', name: 'Periodismo', icon: '📰' },
+  { id: 'manifiesto', name: 'Manifiesto', icon: '📯' },
+  { id: 'dialogo', name: 'Diálogo', icon: '💬' }
 ];
+
+// Textos "históricos": hechos del movimiento (mapa y línea temporal).
+// Los de filosofía/ideas (teoria, biografia, dialogo) viven en la sección de Autores.
+export const HISTORICAL_CATEGORIES = ['historia', 'revolucion', 'movimiento', 'organizacion', 'represion', 'periodismo', 'manifiesto'];
+export const IDEAS_CATEGORIES = ['teoria', 'biografia', 'dialogo'];
+
+// True si una obra es de corte histórico (va al mapa / línea temporal).
+export const isHistoricalCategory = (category) => HISTORICAL_CATEGORIES.includes(category);
 
 export const DECADES = ['all', '1840s', '1860s', '1870s', '1880s', '1900s', '1910s', '1920s', '1930s', '1960s'];
 

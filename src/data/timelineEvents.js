@@ -1,16 +1,5 @@
 export const timelineEvents = [
   {
-    year: 1840,
-    decade: '1840s',
-    title: "¿Qué es la Propiedad?",
-    description: "Pierre-Joseph Proudhon publica su obra fundamental cuestionando la propiedad privada.",
-    region: "Francia",
-    category: "teoria",
-    image: "📜",
-    quote: "La propiedad es un robo",
-    author: "Pierre-Joseph Proudhon"
-  },
-  {
     year: 1868,
     decade: '1860s',
     title: "Llegada del anarquismo a España",
@@ -42,17 +31,6 @@ export const timelineEvents = [
     image: "⚖️",
     quote: "Nuestro silencio será más poderoso",
     author: "August Spies"
-  },
-  {
-    year: 1902,
-    decade: '1900s',
-    title: "El Apoyo Mutuo",
-    description: "Kropotkin publica su obra sobre cooperación natural.",
-    region: "Rusia",
-    category: "teoria",
-    image: "🤝",
-    quote: "La ayuda mutua es evolución",
-    author: "Piotr Kropotkin"
   },
   {
     year: 1910,

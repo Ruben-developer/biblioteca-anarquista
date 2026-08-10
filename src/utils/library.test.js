@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { getDecadeFromYear, getAllBooks, filterBooks, sortBooks } from './library';
+import { getDecadeFromYear, getAllBooks, getAllAuthors, filterBooks, sortBooks } from './library';
 
 const regionData = {
   España: {
@@ -34,6 +34,29 @@ describe('getAllBooks', () => {
     expect(books.length).toBe(3);
     expect(books[0]).toMatchObject({ title: 'La Conquista del Pan', region: 'España' });
     expect(books[2]).toMatchObject({ title: '¿Qué es la Propiedad?', region: 'Francia' });
+  });
+});
+
+describe('getAllAuthors', () => {
+  it('agrupa libros por autor y omite los Colectivo', () => {
+    const authors = getAllAuthors(regionData);
+    expect(authors.some((a) => a.name === 'Kropotkin')).toBe(true);
+    expect(authors.some((a) => a.name === 'Proudhon')).toBe(true);
+    expect(authors.some((a) => a.name === 'Colectivo')).toBe(false);
+  });
+
+  it('cuenta las obras y ordena de más a menos', () => {
+    const authors = getAllAuthors(regionData);
+    expect(authors[0].bookCount).toBe(1);
+    expect(authors.every((a) => a.bookCount >= 1)).toBe(true);
+  });
+
+  it('incluye la región y el rango de años de las obras', () => {
+    const authors = getAllAuthors(regionData);
+    const kropotkin = authors.find((a) => a.name === 'Kropotkin');
+    expect(kropotkin.regions).toContain('España');
+    expect(kropotkin.yearsRange).toBe('1892-1892');
+    expect(kropotkin.books[0]).toMatchObject({ title: 'La Conquista del Pan', region: 'España' });
   });
 });
 

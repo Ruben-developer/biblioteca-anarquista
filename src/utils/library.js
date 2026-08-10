@@ -54,3 +54,56 @@ export const sortBooks = (books, sort = 'rating') => {
   }
   return sorted;
 };
+
+// Textos históricos de una región (los de filosofía/ideas no van al mapa ni timeline).
+const HISTORICAL_CATEGORIES = ['historia', 'revolucion', 'movimiento', 'organizacion', 'represion', 'periodismo', 'manifiesto'];
+export const isHistoricalBook = (book) => HISTORICAL_CATEGORIES.includes(book.category);
+
+// Textos históricos relacionados con un evento: misma región, ordenados por
+// cercanía al año del evento (mismo año primero, luego los más próximos).
+export const getEventRelatedTexts = (regionData, event) => {
+  if (!event || !regionData) return [];
+  const regionBooks = (regionData[event.region] && regionData[event.region].books) || [];
+  return regionBooks
+    .filter((b) => isHistoricalBook(b) && b.year)
+    .map((book) => ({ ...book, distance: Math.abs(book.year - event.year) }))
+    .sort((a, b) => a.distance - b.distance || b.rating - a.rating);
+};
+
+// Agrupa los libros por autor y los ordena de más a menos obras.
+// Cada autor incluye la lista de sus obras (con región) para poder navegarlas.
+// Los "Colectivo"/organizaciones sin autoría individual se omiten.
+export const getAllAuthors = (regionData) => {
+  const books = getAllBooks(regionData);
+  const byAuthor = new Map();
+
+  books.forEach((book) => {
+    if (!book.author) return;
+    const author = String(book.author).trim();
+    if (!author || /^colectivo$/i.test(author)) return;
+    if (!byAuthor.has(author)) {
+      byAuthor.set(author, { name: author, books: [] });
+    }
+    byAuthor.get(author).books.push(book);
+  });
+
+  return Array.from(byAuthor.values())
+    .map(({ name, books: authorBooks }) => ({
+      name,
+      books: authorBooks,
+      bookCount: authorBooks.length,
+      regions: Array.from(new Set(authorBooks.map((b) => b.region))).sort((a, b) => a.localeCompare(b, 'es')),
+      years: authorBooks.reduce((acc, b) => {
+        if (b.year) {
+          acc.min = Math.min(acc.min, b.year);
+          acc.max = Math.max(acc.max, b.year);
+        }
+        return acc;
+      }, { min: Infinity, max: 0 })
+    }))
+    .map((author) => ({
+      ...author,
+      yearsRange: author.years.max ? `${author.years.min}-${author.years.max}` : ''
+    }))
+    .sort((a, b) => b.bookCount - a.bookCount || a.name.localeCompare(b.name, 'es'));
+};

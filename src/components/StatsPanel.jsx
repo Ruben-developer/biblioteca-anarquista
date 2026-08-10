@@ -9,7 +9,7 @@ const StatsPanel = ({ darkMode, stats }) => {
     { label: 'Textos', value: stats.texts },
     { label: 'Eventos', value: stats.events },
     { label: 'Regiones', value: stats.regions },
-    { label: 'Pensadores', value: stats.authors }
+    { label: 'Autores', value: stats.authors }
   ];
 
   return (

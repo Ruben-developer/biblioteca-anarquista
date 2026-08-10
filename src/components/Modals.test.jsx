@@ -29,13 +29,40 @@ describe('EventModal', () => {
     expect(html).toContain(event.quote);
   });
 
+  it('muestra los textos históricos relacionados de la región del evento', () => {
+    const regionData = {
+      'Estados Unidos': {
+        books: [
+          { title: 'Los Mártires de Chicago', author: 'Colectivo', year: 1886, category: 'historia', filename: 'a.pdf' },
+          { title: 'El origen del 1º de Mayo', author: 'Colectivo', year: 1886, category: 'historia', filename: 'b.pdf' }
+        ]
+      }
+    };
+    const html = renderToStaticMarkup(
+      <EventModal darkMode event={event} regionData={regionData} onClose={() => {}} />
+    );
+    expect(html).toContain('Textos históricos relacionados');
+    expect(html).toContain('Los Mártires de Chicago');
+    expect(html).toContain('Descargar');
+  });
+
+  it('no muestra textos si no hay obras históricas en la región', () => {
+    const regionData = {
+      'Estados Unidos': { books: [] }
+    };
+    const html = renderToStaticMarkup(
+      <EventModal darkMode event={event} regionData={regionData} onClose={() => {}} />
+    );
+    expect(html).not.toContain('Textos históricos relacionados');
+  });
+
 });
 
 describe('RegionModal', () => {
   const region = 'España';
   const regionData = {
     España: {
-      books: [{ title: 'Obra A', author: 'Autor A', filename: 'a.pdf' }]
+      books: [{ title: 'Obra A', author: 'Autor A', filename: 'a.pdf', category: 'historia' }]
     }
   };
 

@@ -1,9 +1,13 @@
 import React from 'react';
 import WorldMap from './WorldMap';
 import { MapPin } from 'lucide-react';
-import { THEME } from '../constants';
+import { THEME, isHistoricalCategory } from '../constants';
 import { COUNTRY_ISO } from '../data/countryData';
 import { normalizeCountryName } from '../utils/countryNames';
+
+// Obras históricas de una región (el mapa solo muestra hechos del movimiento,
+// no los textos de filosofía/ideas, que viven en la sección de Autores).
+const getHistoricalBooks = (data) => (data.books || []).filter((b) => isHistoricalCategory(b.category));
 
 // Interpola un color hex entre c1 (claro, pocos textos) y c2 (oscuro, muchos).
 const lerpColor = (c1, c2, t) => {
@@ -24,11 +28,12 @@ const lerpColor = (c1, c2, t) => {
 const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
 
-  // Países con textos en el archivo (el mapa solo muestra tooltip/valor para estos).
+  // Países con textos históricos en el archivo (el mapa solo muestra hechos
+  // del movimiento; los de filosofía/ideas viven en la sección de Autores).
   const mapData = Object.entries(regionData)
     .map(([region, data]) => {
       const iso = COUNTRY_ISO[region];
-      return iso ? { country: iso, value: data.books.length } : null;
+      return iso ? { country: iso, value: getHistoricalBooks(data).length } : null;
     })
     .filter(Boolean);
 
@@ -73,7 +78,7 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
   const tooltipTextFunction = (context) => {
     const region = getRegionForContext(context);
     if (region) {
-      return `${region}: ${regionData[region].books.length} textos`;
+      return `${region}: ${getHistoricalBooks(regionData[region]).length} textos históricos`;
     }
     return context.countryNameEs || context.countryName;
   };
@@ -84,7 +89,7 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
         Mapa Mundial de Textos
       </h2>
       <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-        Haz clic en un país destacado para ver sus textos. Cuanto más oscuro el color, más obras tiene ese país en el archivo.
+        Haz clic en un país destacado para ver sus textos históricos. Cuanto más oscuro el color, más hechos del movimiento registra ese país. Los textos de filosofía e ideas viven en la sección de Autores.
       </p>
 
       <WorldMap
@@ -130,7 +135,7 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
               </h4>
             </div>
             <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-              {data.books.length} textos
+              {getHistoricalBooks(data).length} textos históricos
             </p>
           </button>
         ))}
