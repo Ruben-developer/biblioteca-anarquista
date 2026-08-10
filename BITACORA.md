@@ -108,11 +108,17 @@
 | 01:50 | 🧑 Manual | `aa408c3` | **UX lectura simplificada**: se elimina el lector embebido (`ReaderView.jsx` + su test), que era un rectángulo pequeño incómodo en móvil. Ahora **«Leer»/«Ver» abre el PDF directamente en una pestaña nueva del navegador** (`target="_blank"`, enlace simple: se lee y se descarga desde el visor nativo). Se eliminan los botones **Descargar** y **Compartir** (LibraryView, AuthorsView, RegionModal, EventModal) y las props `onRead`/estado `readingBook`. 59 tests verdes (se retiran los 5 del lector), build OK. |
 | 13:25 | 🧑 Manual | `1037729` | **Cobertura de tests 62.87% → 94.66% + gate OK**: se añaden **19 tests** (99 en total) — `Views.test.jsx` (14: Navigation, Header, StatsPanel, TimelineView, TimelineFilters, FavoritesView, ScrollTopButton, AuthorsView) y `AnarchistArchive.test.jsx` (5, con interacción jsdom: cambiar de vista, abrir estadísticas). Nuevas devDeps: `jsdom`, `@testing-library/react`, `@testing-library/dom`. **SonarQube: coverage global 90.4%, gate OK** (new_coverage 88.6%, duplicación 0%, violaciones 17≤20). Refactors menores que SonarQube marcaba como violaciones nuevas: `themeClass` sin usar (LibraryView, EventModal, RegionModal), `Number.parseInt`, `Set` para categorías históricas, optional chaining. |
 
+## 2026-08-10 (tarde) — Catálogo 108 → 112 obras con `@content-importer` (sesión manual)
+
+| Hora | Tipo | Commit | Detalle |
+|------|------|--------|---------|
+| 17:20 | 🧑 Manual | `a10da39` | **Catálogo ampliado de 108 → 112 obras (+4)** con el subagente `@content-importer`: **Chile ×2** — *Destruir para construir: violencia y acción directa en el anarquismo chileno (1890-1914)* (Darío Covarrubias Bañados, historia) y *Cuando la patria mata: la historia del anarquista Julio Rebosio* (Víctor Muñoz Cortés, biografia); **Argentina ×2** — *América, hoy* (Víctor García, teoria, 1956) e *Internet, hackers y software libre* (Carlos Gradin comp., teoria, 2004). Se descartaron 4 PDFs (corrupto, manual técnico de antenas, hoja escolar, tapa de revista). 4/4 filenames HTTP 200, `check-downloads` **112/112 OK**, `npm run check` verde (lint + 99 tests + build). |
+
 ## Estado actual
 
 - **25+ commits** en `main`, CI de Pages **verde** (lint+tests+audit+build), web **HTTP 200**.
-- **Calidad**: 99 tests unitarios · **108/108 descargas verificadas HTTP 200** · lint 0 errores · **SonarQube gate OK** (0 bugs, 0 vulns, A/A/A, **coverage global 90.4%**).
-- **Catálogo**: **114 obras** en `regionData.js`, distribuidas en **16 regiones**.
+- **Calidad**: 99 tests unitarios · **112/112 descargas verificadas HTTP 200** · lint 0 errores · **SonarQube gate OK** (0 bugs, 0 vulns, A/A/A, **coverage global 90.4%**).
+- **Catálogo**: **112 obras** en `regionData.js`, distribuidas en **16 regiones**.
 - **PDFs públicos**: túnel **Tailscale Funnel** activo (`https://server.taile963c6.ts.net/pdfs/`) + secret `VITE_PDF_BASE` en GitHub → los PDFs ya descargan desde la web (antes 404).
 - **Autores**: sección dinámica derivada del catálogo, ordenada de más a menos obras.
 - **Mapa**: solo textos históricos; los de filosofía/ideas viven en Autores.
