@@ -24,9 +24,9 @@ modo oscuro/claro, filtros y estadísticas. Deploy en GitHub Pages.
 ```
 src/
 ├── components/   # Header, Navigation, TimelineView, WorldMapView + WorldMap (mapamundi propio con d3-geo), AuthorsView, FavoritesView, modales
-├── data/         # timelineEvents.js, authors.js, regionData.js, countryData.js (ISO por región), worldmap.geo.json (geometrías del mapa)
-├── services/     # documentService.js (descargas: PDFs del contenedor, TXT del repo)
-├── constants/    # Categorías, décadas, regiones, vistas, temas de color
+├── data/         # regionData.js (FUENTE ÚNICA: regiones + libros + iso), timelineEvents.js, authors.js, countryData.js (deriva ISO), worldmap.geo.json (geometrías del mapa)
+├── services/     # documentService.js (solo getDocumentDownloadUrl: PDFs del contenedor, TXT del repo)
+├── constants/    # Categorías, décadas, regiones (derivadas), vistas, temas de color
 ├── hooks/        # useScrollTop, useDarkMode, useFavorites
 └── utils/        # filters.js, countryNames.js (normalización nombres de país del mapa)
 public/documents/ # documents.json (metadatos) + TXT de descarga
@@ -37,10 +37,11 @@ data/registros/   # registro.json (métricas diarias del agente)
 ## Cómo añadir contenido
 - **Evento histórico** → `src/data/timelineEvents.js` (año, década, title, description, region, category, image, quote, author).
 - **Autor** → `src/data/authors.js` (name, years, region, bio, books, image).
-- **Texto por región** → `src/data/regionData.js`. Campos: `title`, `author`, `year`, `category`, `rating`, y opcional `filename`.
-- **Metadatos completos de obra** → `public/documents/documents.json` (id, title, author, summary, tags, filename, rating...).
+- **Texto por región** → `src/data/regionData.js`. Campos: `title`, `author`, `year`, `category`, `rating`, y opcional `filename`. **FUENTE ÚNICA**: `REGIONS` (filtros) y el ISO del mapa se derivan automáticamente de aquí; no hay que tocar `countryData.js` ni `REGIONS` manualmente.
+- **Metadatos completos de obra** → legacy en `public/documents/documents.json`. Ya no se consume en la app (el catálogo real es `regionData.js`); no añadir obras nuevas aquí.
 - **Nuevo PDF descargable** → añade `filename` al libro en `regionData.js` (el botón Descargar solo aparece si hay `filename`).
-- **Nuevo país en el mapa** → añade la región a `regionData.js`, el código ISO en `src/data/countryData.js`, y a `REGIONS` en `src/constants/index.js` (¡los 3 lugares o el mapa/filtros quedan desincronizados!).
+- **Nuevo país en el mapa** → añade la región a `regionData.js` con su campo `iso` (ej. `"Francia": { iso: "fr", books: [...] }`). El mapa, los filtros y `countryData.js` se actualizan solos. Si un país no tiene `iso`, no se pinta en el mapa pero sí aparece en la lista por región.
+- **Mapa**: un país solo se destaca si tiene AL MENOS 1 texto de categoría histórica (historia/revolucion/movimiento/organizacion/represion/periodismo/manifiesto). Si solo tiene teoría (p. ej. Inglaterra), queda en gris. Los textos históricos se filtran con `getHistoricalBooks(regionData, region)` en `src/utils/library.js`.
 - **Biblioteca (catálogo)** → usa automáticamente todos los libros de `regionData.js` (`getAllBooks` en `src/utils/library.js`). No requiere registro aparte.
 - **Lector embebido** → `src/components/ReaderView.jsx`. PDFs se muestran en iframe; TXT se cargan por fetch. Al abrir un libro desde la Biblioteca o el mapa se lanza `ReaderView`.
 
@@ -57,7 +58,7 @@ data/registros/   # registro.json (métricas diarias del agente)
 - **Componente propio** `src/components/WorldMap.jsx` renderizado con `d3-geo`
   (no usa librería externa de mapas). Datos en `src/data/worldmap.geo.json`
   (FeatureCollection GeoJSON, generado por `npm run generate-worldmap`).
-- `src/data/countryData.js`: mapea región → código ISO 3166-1 alpha-2 (ej. `es`, `fr`, `ru`).
+- `src/data/countryData.js`: deriva `COUNTRY_ISO` desde el campo `iso` de cada región en `regionData.js` (fuente única, no hay que mantenerlo a mano).
 - `src/components/WorldMapView.jsx`: vista que alimenta `WorldMap` con `data`,
   `styleFunction`, `onClickFunction`, `tooltipTextFunction` y colores por tema.
 - **Política del mapa**: el GeoJSON fusiona la geometría de Israel dentro de
@@ -104,7 +105,7 @@ data/registros/   # registro.json (métricas diarias del agente)
 - Trabaja SOLO en este repo, nunca en `devops-lab` ni otros proyectos.
 - No toques `pdfs-local/` (los PDFs no se versionan) ni subas artefactos (`dist/`, `node_modules/`).
 - No cambies `PDF_BASE` a hostname ni rompas la ruta `base: /biblioteca-anarquista/` en `vite.config.js`.
-- Al añadir regiones al mapa, actualiza SIEMPRE los 3 sitios: `regionData.js`, `countryData.js`, `REGIONS` en `constants/index.js`.
+- Al añadir regiones al mapa, edita SOLO `regionData.js` (con su `iso`); `REGIONS` y `countryData.js` se derivan solos. No tocar esos dos manualmente.
 - Tras cada cambio: `npm run check` (lint + tests + build) debe pasar, y el CI de Pages quedar verde. Si tocaste el catálogo, corre también `npm run check-downloads`.
 - Mantén actualizados `PLAN.md`, `data/registros/registro.json` y `.daily-runs/`.
 - Commits convencionales en español (`feat:`, `fix:`, `docs:`, `chore:`).

@@ -101,3 +101,33 @@ describe('WorldMapView edge cases', () => {
     expect(html).toContain('0 textos históricos');
   });
 });
+
+describe('WorldMapView — países con 0 textos históricos no se marcan en el mapa', () => {
+  const noop = () => {};
+
+  it('Inglaterra (solo textos de teoría) queda en gris y no recibe color de gradiente', () => {
+    const html = renderToStaticMarkup(
+      <WorldMapView darkMode={false} regionData={regionData} onSelectRegion={noop} />
+    );
+    // Inglaterra existe en regionData e ISO='gb' pero sus 3 libros son de teoría
+    // (no históricos) → value 0. El mapa debe tratarla como país sin textos:
+    // su path usa el gris por defecto, NO un fill de gradiente (que va en rápido a color).
+    const engMatch = html.match(/style="([^"]*)"[^>]*aria-label="Reino Unido"/);
+    expect(engMatch).not.toBeNull();
+    expect(engMatch[1]).toContain('#e7e5e4'); // gris por defecto en modo claro
+    expect(engMatch[1]).not.toMatch(/rgb\(/);
+    // En la lista por región, Inglaterra muestra su conteo real (0 históricos).
+    expect(html).toContain('Inglaterra');
+    expect(html).toContain('0 textos históricos');
+  });
+
+  it('España (con textos históricos) sí recibe color de gradiente en el mapa', () => {
+    const html = renderToStaticMarkup(
+      <WorldMapView darkMode={false} regionData={regionData} onSelectRegion={noop} />
+    );
+    const esMatch = html.match(/style="([^"]*)"[^>]*aria-label="España"/);
+    expect(esMatch).not.toBeNull();
+    expect(esMatch[1]).toMatch(/rgb\(/);
+    expect(esMatch[1]).toBeTruthy();
+  });
+});

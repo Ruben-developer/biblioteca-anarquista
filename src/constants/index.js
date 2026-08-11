@@ -14,15 +14,19 @@ export const CATEGORIES = [
 
 // Textos "históricos": hechos del movimiento (mapa y línea temporal).
 // Los de filosofía/ideas (teoria, biografia, dialogo) viven en la sección de Autores.
-export const HISTORICAL_CATEGORIES = ['historia', 'revolucion', 'movimiento', 'organizacion', 'represion', 'periodismo', 'manifiesto'];
+// FUENTE ÚNICA definida en utils/library.js — aquí solo se re-exporta.
+import { HISTORICAL_CATEGORIES as HC, isHistoricalCategory as isHC } from '../utils/library';
+export const HISTORICAL_CATEGORIES = HC;
 export const IDEAS_CATEGORIES = ['teoria', 'biografia', 'dialogo'];
-
-// True si una obra es de corte histórico (va al mapa / línea temporal).
-export const isHistoricalCategory = (category) => HISTORICAL_CATEGORIES.includes(category);
+export const isHistoricalCategory = isHC;
 
 export const DECADES = ['all', '1860s', '1870s', '1880s', '1900s', '1910s', '1920s', '1930s', '1960s', '1970s', '1990s', '2000s', '2010s'];
 
-export const REGIONS = ['all', 'España', 'Francia', 'Estados Unidos', 'Rusia', 'Italia', 'México', 'Argentina', 'Chile', 'Colombia', 'Bolivia', 'Alemania', 'Inglaterra', 'Corea', 'Japón', 'Siria', 'Nigeria'];
+// Regiones disponibles en el archivo. FUENTE ÚNICA: se deriva de las claves de
+// regionData.js, de modo que añadir/editar una región en regionData actualiza
+// automáticamente los filtros. El 'all' se antepone para los selects.
+import { regionData } from '../data/regionData';
+export const REGIONS = ['all', ...Object.keys(regionData)];
 
 export const VIEWS = {
   TIMELINE: 'timeline',

@@ -1,13 +1,9 @@
 import React from 'react';
 import WorldMap from './WorldMap';
 import { MapPin } from 'lucide-react';
-import { THEME, isHistoricalCategory } from '../constants';
-import { COUNTRY_ISO } from '../data/countryData';
+import { THEME } from '../constants';
 import { normalizeCountryName } from '../utils/countryNames';
-
-// Obras históricas de una región (el mapa solo muestra hechos del movimiento,
-// no los textos de filosofía/ideas, que viven en la sección de Autores).
-const getHistoricalBooks = (data) => (data.books || []).filter((b) => isHistoricalCategory(b.category));
+import { getHistoricalBooks } from '../utils/library';
 
 // Interpola un color hex entre c1 (claro, pocos textos) y c2 (oscuro, muchos).
 const lerpColor = (c1, c2, t) => {
@@ -30,10 +26,15 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
 
   // Países con textos históricos en el archivo (el mapa solo muestra hechos
   // del movimiento; los de filosofía/ideas viven en la sección de Autores).
+  // El ISO se lee de la propia región (fuente única: regionData[region].iso) y
+  // solo se incluyen países con AL MENOS 1 texto histórico (value > 0); si no,
+  // el país no se marca en el mapa (p. ej. Inglaterra, que solo tiene teoría).
   const mapData = Object.entries(regionData)
     .map(([region, data]) => {
-      const iso = COUNTRY_ISO[region];
-      return iso ? { country: iso, value: getHistoricalBooks(data).length } : null;
+      const iso = data?.iso;
+      const value = getHistoricalBooks(regionData, region).length;
+      if (!iso || value === 0) return null;
+      return { country: iso, value };
     })
     .filter(Boolean);
 
@@ -44,13 +45,17 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
   };
 
   const handleCountryClick = (context) => {
+    if (!(context.countryValue > 0)) return;
     const region = getRegionForContext(context);
     if (region) onSelectRegion(region);
   };
 
   const styleFunction = (context) => {
-    const hasTexts = Boolean(getRegionForContext(context));
-    if (!hasTexts) {
+    // Un país solo se destaca si tiene al menos 1 texto histórico en el archivo.
+    // Los países sin textos históricos (p. ej. Inglaterra, que solo tiene teoría)
+    // quedan en gris y no responden al clic aunque existan en regionData.
+    const count = typeof context.countryValue === 'number' ? context.countryValue : 0;
+    if (!(count > 0)) {
       return {
         fill: darkMode ? '#3f3f46' : '#e7e5e4',
         stroke: darkMode ? '#52525b' : '#d6d3d1',
@@ -62,7 +67,7 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
     const max = Math.max(context.maxValue, 1);
     const min = Math.min(context.minValue, max);
     const t = max > min
-      ? Math.min(Math.max((context.countryValue - min) / (max - min), 0), 1)
+      ? Math.min(Math.max((count - min) / (max - min), 0), 1)
       : 1;
     const [light, dark] = darkMode
       ? ['#fca5a5', '#7f1d1d']
@@ -78,7 +83,7 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
   const tooltipTextFunction = (context) => {
     const region = getRegionForContext(context);
     if (region) {
-      return `${region}: ${getHistoricalBooks(regionData[region]).length} textos históricos`;
+      return `${region}: ${getHistoricalBooks(regionData, region).length} textos históricos`;
     }
     return context.countryNameEs || context.countryName;
   };
@@ -122,7 +127,7 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
         O navega por región
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {Object.entries(regionData).map(([region, data]) => (
+        {Object.entries(regionData).map(([region]) => (
           <button
             key={region}
             onClick={() => onSelectRegion(region)}
@@ -135,7 +140,7 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
               </h4>
             </div>
             <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-              {getHistoricalBooks(data).length} textos históricos
+              {getHistoricalBooks(regionData, region).length} textos históricos
             </p>
           </button>
         ))}

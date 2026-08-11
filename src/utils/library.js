@@ -55,9 +55,26 @@ export const sortBooks = (books, sort = 'rating') => {
   return sorted;
 };
 
+// Categorías históricas del movimiento (las que van al mapa y la línea temporal).
+// Los textos de filosofía/ideas (teoria, biografia, dialogo) viven en Autores.
+// FUENTE ÚNICA: también se re-exporta desde constants para que nadie la duplique.
+export const HISTORICAL_CATEGORIES = ['historia', 'revolucion', 'movimiento', 'organizacion', 'represion', 'periodismo', 'manifiesto'];
+const HISTORICAL_SET = new Set(HISTORICAL_CATEGORIES);
+export const isHistoricalBook = (book) => HISTORICAL_SET.has(book?.category);
+export const isHistoricalCategory = (category) => HISTORICAL_SET.has(category);
+
 // Textos históricos de una región (los de filosofía/ideas no van al mapa ni timeline).
-const HISTORICAL_CATEGORIES = new Set(['historia', 'revolucion', 'movimiento', 'organizacion', 'represion', 'periodismo', 'manifiesto']);
-export const isHistoricalBook = (book) => HISTORICAL_CATEGORIES.has(book.category);
+export const getHistoricalBooks = (regionData, region) =>
+  (regionData?.[region]?.books || [])
+    .filter((b) => isHistoricalBook(b))
+    .map((b) => ({ ...b, region }));
+
+// Contador REAL de textos: todos los libros del catálogo (fuente única regionData).
+export const countAllTexts = (regionData) =>
+  Object.values(regionData || {}).reduce((sum, region) => sum + (region.books?.length || 0), 0);
+
+// Conteo de textos por región (todos los del catálogo, no solo históricos).
+export const countRegionTexts = (regionData, region) => regionData?.[region]?.books?.length || 0;
 
 // Textos históricos relacionados con un evento: misma región, ordenados por
 // cercanía al año del evento (mismo año primero, luego los más próximos).

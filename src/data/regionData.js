@@ -1,5 +1,5 @@
-export const regionData = {
-  "España": {
+export const regionData = {  "España": {
+    iso: "es",
     books: [
       { title: "La Conquista del Pan", author: "Piotr Kropotkin", year: 1892, category: "teoria", rating: 4.8, filename: "anarquismo/f8087024_Conquista_Final_pmd.pdf" },
       { title: "Columna Durruti", author: "Colectivo", year: 1936, category: "biografia", rating: 4.9, filename: "anarquismo/f14747464_Microsoft_Word_COLUMNA_DURRUTI_EPB.pdf" },
@@ -28,8 +28,8 @@ export const regionData = {
       { title: "El error político-militar de la República", author: "Abraham Guillén", year: 1971, category: "revolucion", rating: 4.6, summary: "Análisis de Abraham Guillén sobre los errores estratégicos de la República y la revolución durante la Guerra Civil.", filename: "anarquismo/f27380672.pdf" },
       { title: "El anarquismo como doctrina y movimiento", author: "Aureliano Yanes Herreros", year: 1996, category: "teoria", rating: 4.5, summary: "Panorama doctrinal del anarquismo por el historiador español Aureliano Yanes Herreros.", filename: "anarquismo/f43612328_El_anarquismo_como_doctrina_y_movimiento.pdf" }
     ]
-  },
-  "Francia": {
+  },  "Francia": {
+    iso: "fr",
     books: [
       { title: "¿Qué es la Propiedad?", author: "Pierre-Joseph Proudhon", year: 1840, category: "teoria", rating: 4.9, filename: "anarquismo/f7849880_Propiedad_Final_pmd.pdf" },
       { title: "El Mundo Nuevo", author: "Louise Michel", year: 1886, category: "biografia", rating: 4.8, filename: "anarquismo/f4319816_El_mundo_nuevo_Luisa_Michel.pdf" },
@@ -50,8 +50,8 @@ export const regionData = {
       { title: "El individualismo anarquista", author: "Émile Armand", year: 1920, category: "teoria", rating: 4.6, summary: "Síntesis del pensamiento de Émile Armand sobre la vida individual sin Estado ni autoridad.", filename: "anarquismo/f13512816.pdf" },
       { title: "La conjura de los indomables", author: "Rodolfo Montes de Oca", year: 2008, category: "historia", rating: 4.6, summary: "Motín y evasión anarquista en la colonia penitenciaria de la Guayana francesa.", filename: "anarquismo/f21279704.pdf" }
     ]
-  },
-  "Estados Unidos": {
+  },  "Estados Unidos": {
+    iso: "us",
     books: [
       { title: "Anarquismo", author: "Emma Goldman", year: 1931, category: "biografia", rating: 4.9, filename: "anarquismo/f13514272_goldman_anarquismo.pdf" },
       { title: "Los Mártires de Chicago", year: 1886, category: "historia", rating: 4.8 },
@@ -65,8 +65,8 @@ export const regionData = {
       { title: "Durruti ha muerto, pero está vivo todavía", author: "Emma Goldman", year: 1936, category: "biografia", rating: 4.7, summary: "Elogio fúnebre de Emma Goldman a Buenaventura Durruti, retrato del revolucionario español.", filename: "anarquismo/f13514432.pdf" },
       { title: "Socialismo de Estado y anarquismo", author: "Benjamin Tucker", year: 1890, category: "teoria", rating: 4.6, summary: "El anarquismo individualista de Benjamin Tucker confrontado con el socialismo de Estado.", filename: "otros/f7924160.pdf" }
     ]
-  },
-  "Italia": {
+  },  "Italia": {
+    iso: "it",
     books: [
       { title: "La Anarquía y el Método del Anarquismo", author: "Errico Malatesta", year: 1891, category: "teoria", rating: 4.9, filename: "anarquismo/f39014120_La_anarqu_a_y_el_m_todo_del_anarquismo_Errico_Malatesta.pdf" },
       { title: "En el café", author: "Errico Malatesta", year: 1922, category: "dialogo", rating: 4.8 },
@@ -78,8 +78,8 @@ export const regionData = {
       { title: "Un plan de organización anarquista", author: "Errico Malatesta", year: 1927, category: "teoria", rating: 4.7, summary: "La respuesta de Malatesta a la Plataforma de Arshínov: organización, pero sin autoridad ni partido.", filename: "anarquismo/f7273608.pdf" },
       { title: "Elecciones y anarquismo", author: "Errico Malatesta", year: 1897, category: "teoria", rating: 4.6, summary: "Escritos de Malatesta contra la participación electoral y en defensa de la acción directa.", filename: "anarquismo/f8673248.pdf" }
     ]
-  },
-  "México": {
+  },  "México": {
+    iso: "mx",
     books: [
       { title: "Regeneración", author: "Flores Magón", year: 1906, category: "periodismo", rating: 4.7 },
       { title: "Tierra y Libertad", year: 1910, category: "manifiesto", rating: 4.8 },
@@ -89,8 +89,8 @@ export const regionData = {
       { title: "Rompamos las cadenas", author: "Erick Benítez Martínez", year: 2016, category: "teoria", rating: 4.4, summary: "Manifiesto antiautoritario del activista mexicano Erick Benítez contra Estado, religión y capitalismo.", filename: "anarquismo/f8672832_Rompamos_las_cadenas_Erick_Ben_tez_Mart_nez.pdf" },
       { title: "La traición de la Hoz y el Martillo", author: "Erick Benítez Martínez", year: 2010, category: "historia", rating: 4.4, summary: "Crítica anarquista a los regímenes marxistas y al comunismo autoritario desde la óptica libertaria.", filename: "anarquismo/f7572424_La_traici_n_de_la_hoz_y_el_martillo_Erick_Ben_tez_Mart_nez.pdf" }
     ]
-  },
-  "Argentina": {
+  },  "Argentina": {
+    iso: "ar",
     books: [
       { title: "La FORA", author: "Diego Abad de Santillán", year: 1933, category: "historia", rating: 4.6, filename: "anarquismo/f8908040_FORA_Final_pmd.pdf" },
       { title: "Severino Di Giovanni", author: "Osvaldo Bayer", year: 1970, category: "biografia", rating: 4.8 },
@@ -100,8 +100,8 @@ export const regionData = {
       { title: "América, hoy", author: "Víctor García", year: 1956, category: "teoria", rating: 4.6, summary: "Ensayos e interpretaciones del anarquista español exiliado Víctor García sobre la geografía, la historia y las luchas del continente americano, con prólogo de José Peirats.", filename: "anarquismo/f13595808_Am_rica_hoy_V_ctor_Garc_a.pdf" },
       { title: "Internet, hackers y software libre", author: "Carlos Gradin (comp.)", year: 2004, category: "teoria", rating: 4.5, summary: "Antología de la editorial anarquista Editora Fantasma sobre cultura hacker, software libre, criptografía y hacktivismo: de la historia de Internet a la autonomía tecnológica.", filename: "anarquismo/f120161072_Secci_n_1_Historia_qxd.pdf" }
     ]
-  },
-  "Chile": {
+  },  "Chile": {
+    iso: "cl",
     books: [
       { title: "Luis E. Recabarren", author: "Sergio Grez", year: 2011, category: "biografia", rating: 4.6 },
       { title: "La propaganda por los hechos en el movimiento anarquista chileno (1890-1910)", author: "Igor Goicovic Donoso", year: 2006, category: "historia", rating: 4.6, summary: "Sociedad y violencia en el discurso anarquista: la 'propaganda por el hecho' en el Chile de entresiglos.", filename: "anarquismo/f14021304_Microsoft_Word_La_Propaganda_por_los_Hechos.pdf" },
@@ -112,34 +112,34 @@ export const regionData = {
       { title: "Destruir para construir: violencia y acción directa en la corriente anarquista chilena (1890-1914)", author: "Darío Covarrubias Bañados", year: 2013, category: "historia", rating: 4.6, summary: "Estudio de la violencia y la acción directa en la corriente anarquista chilena de entresiglos, publicado por Ediciones Acéfalo.", filename: "anarquismo/f102167848_destruir_para_construir_indd.pdf" },
       { title: "Cuando la patria mata: la historia del anarquista Julio Rebosio (1914-1920)", author: "Víctor Muñoz Cortés", year: 2011, category: "biografia", rating: 4.7, summary: "Biografía social del anarquista chileno Julio Rebosio, activo propagandista revolucionario de la década de 1910, muerto en 1920.", filename: "anarquismo/f13601952_julio_rebosio_indd.pdf" }
     ]
-  },
-  "Colombia": {
+  },  "Colombia": {
+    iso: "co",
     books: [
       { title: "Los orígenes del anarquismo en Colombia y su relación con el liberalismo", author: "Diego Paredes Goicochea", year: 2017, category: "historia", rating: 4.6, summary: "Estudio académico sobre la llegada del anarquismo a Colombia y su vínculo con el liberalismo radical.", filename: "anarquismo/f33093480.pdf" },
       { title: "Pasado y presente del anarquismo y del anarcosindicalismo en Colombia", author: "Centro de Investigación Libertaria y Educación Popular", year: 2011, category: "historia", rating: 4.7, summary: "Historia y actualidad del anarquismo y el anarcosindicalismo colombiano, editada por el CIL.", filename: "anarquismo/f18422752_Pasado_y_presente_del_anarquismo_en_Colombia_indd.pdf" }
     ]
-  },
-  "Bolivia": {
+  },  "Bolivia": {
+    iso: "bo",
     books: [
       { title: "La choledad antiestatal. El anarcosindicalismo en el movimiento obrero boliviano (1912-1965)", author: "Huáscar Rodríguez García", year: 2010, category: "historia", rating: 4.7, summary: "Historia del anarcosindicalismo boliviano y del papel de los cholos en el movimiento obrero andino.", filename: "anarquismo/f14045120_LA_CHOLEDAD_ANTIESTATAL_El_anarcosindicalismo_en_el_movimiento_obrero_boliviano_indd.pdf" }
     ]
-  },
-  "Japón": {
+  },  "Japón": {
+    iso: "jp",
     books: [
       { title: "Los Mártires de Tokio y la Sociedad de la Guillotina", author: "Li Pei-Kan (Ba Jin)", year: 2019, category: "historia", rating: 4.6, summary: "Crónica de los anarquistas japoneses ejecutados en 1911 y del movimiento de Kōtoku Shūsui.", filename: "anarquismo/f101423480.pdf" }
     ]
-  },
-  "Siria": {
+  },  "Siria": {
+    iso: "sy",
     books: [
       { title: "El experimento del Kurdistán oeste (Kurdistán sirio)", author: "Zaher Baher", year: 2015, category: "revolucion", rating: 4.5, summary: "La autoadministración democrática de Rojava y el papel de las mujeres en la revolución kurda.", filename: "otros/f38322176.pdf" }
     ]
-  },
-  "Nigeria": {
+  },  "Nigeria": {
+    iso: "ng",
     books: [
       { title: "Anarquismo africano", author: "Sam Mbah e I. E. Igariwey", year: 1997, category: "historia", rating: 4.5, summary: "El anarquismo en África, desde las sociedades comunitarias hasta la Awareness League nigeriana.", filename: "anarquismo/f27953352.pdf" }
     ]
-  },
-  "Rusia": {
+  },  "Rusia": {
+    iso: "ru",
     books: [
       { title: "El Apoyo Mutuo", author: "Piotr Kropotkin", year: 1902, category: "teoria", rating: 5.0, filename: "anarquismo/f7067536_El_Apoyo_Mutuo_1902.pdf" },
       { title: "Historia del Movimiento Makhnovista", author: "Néstor Makhno", year: 1929, category: "biografia", rating: 4.7, filename: "anarquismo/f7980904_Historia_del_movimiento_Makhnovista_indd.pdf" },
@@ -159,8 +159,8 @@ export const regionData = {
       { title: "Consideraciones filosóficas", author: "Mijaíl Bakunin", year: 1871, category: "teoria", rating: 4.6, summary: "Textos filosóficos de Bakunin (1870-71) sobre el sistema del mundo, la materia y la libertad.", filename: "anarquismo/f7775816.pdf" },
       { title: "El anarquismo en el espejo judío", author: "Yago Mellado López", year: 2013, category: "historia", rating: 4.4, summary: "Tesis doctoral sobre el anarquismo judío: la presencia de militantes y pensadores judíos en el movimiento libertario.", filename: "anarquismo/f14265872_El_Anarquismo_en_el_espejo_jud_o.pdf" }
     ]
-  },
-  "Alemania": {
+  },  "Alemania": {
+    iso: "de",
     books: [
       { title: "El único y su propiedad", author: "Max Stirner", year: 1844, category: "teoria", rating: 4.6, summary: "El egoísmo radical de Stirner, precursor del anarquismo individualista: el Yo frente a toda idea sagrada.", filename: "anarquismo/f7520496_El_unico_y_su_propiedad_indd.pdf" },
       { title: "Bajo la bandera negra", author: "Justus F. Wittkop", year: 1985, category: "historia", rating: 4.5, summary: "Hechos y figuras del anarquismo en esta historia del movimiento escrita por Wittkop.", filename: "anarquismo/f3257672_Bajo_la_bandera_negra_Justus_F_Wittkop.pdf" },
@@ -168,15 +168,15 @@ export const regionData = {
       { title: "La lucha contra el Estado", author: "Max Nettlau", year: 1920, category: "teoria", rating: 4.5, summary: "Ensayo de Nettlau sobre la resistencia de la sociedad frente al Estado y la posibilidad de su abolición.", filename: "anarquismo/f4181216.pdf" },
       { title: "La responsabilidad y la solidaridad en la lucha obrera", author: "Max Nettlau", year: 1919, category: "teoria", rating: 4.5, summary: "Sobre los límites y las posibilidades de la solidaridad en el movimiento obrero libertario.", filename: "anarquismo/f3069592.pdf" }
     ]
-  },
-  "Inglaterra": {
+  },  "Inglaterra": {
+    iso: "gb",
     books: [
       { title: "Anarquía y orden", author: "Herbert Read", year: 1945, category: "teoria", rating: 4.7, summary: "Ensayos sobre política del poeta y crítico británico: anarquismo como principio de orden natural.", filename: "anarquismo/f4355712_Anarqu_a_y_orden_Herbert_Read.pdf" },
       { title: "Arte, poesía, anarquismo", author: "Herbert Read", year: 1949, category: "teoria", rating: 4.6, summary: "La creación artística como expresión de la libertad frente a toda forma de autoridad.", filename: "anarquismo/f4465376_Microsoft_Word_Arte_poes_a_anarquismo_Herbert_Read.pdf" },
       { title: "Anarquismo: argumentos a favor y en contra", author: "Albert Meltzer", year: 2000, category: "teoria", rating: 4.5, summary: "El militante británico Albert Meltzer expone las razones históricas y morales del anarquismo.", filename: "anarquismo/f2730496.pdf" }
     ]
-  },
-  "Corea": {
+  },  "Corea": {
+    iso: "kr",
     books: [
       { title: "Revolución anarquista en Corea: la Comuna de Shinmin (1929-1932)", author: "Emílio Crisi", year: 2018, category: "historia", rating: 4.5, summary: "La experiencia de autogestión de los anarquistas coreanos en Manchuria, con textos de Shin Chae-ho.", filename: "anarquismo/f17817312_Microsoft_Word_Revoluci_363n_Anarquista_en_Corea_y_otros_textos_sob_re_el_anarquismo_coreano.pdf" }
     ]

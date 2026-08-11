@@ -1,10 +1,8 @@
 import React from 'react';
 import { X, MapPin, Heart, BookOpen } from 'lucide-react';
-import { THEME, isHistoricalCategory } from '../constants';
+import { THEME } from '../constants';
 import { getDocumentDownloadUrl } from '../services/documentService';
-
-// El mapa solo muestra textos históricos: filtrar las obras de la región.
-const getHistoricalBooks = (data) => (data.books || []).filter((b) => isHistoricalCategory(b.category));
+import { getHistoricalBooks } from '../utils/library';
 
 const RegionModal = ({ 
   darkMode, 
@@ -18,7 +16,7 @@ const RegionModal = ({
 
   if (!region || !regionData[region]) return null;
 
-  const historicalBooks = getHistoricalBooks(regionData[region]);
+  const historicalBooks = getHistoricalBooks(regionData, region);
 
   return (
     <div

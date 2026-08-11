@@ -1,6 +1,8 @@
 /**
  * Filtra eventos según los criterios proporcionados
  */
+import { countAllTexts } from './library';
+
 export const filterEvents = (events, filters) => {
   const { searchTerm, decade, category, region } = filters;
 
@@ -16,11 +18,11 @@ export const filterEvents = (events, filters) => {
 };
 
 /**
- * Calcula el total de textos en todas las regiones
+ * Calcula el total de textos en todas las regiones.
+ * FUENTE ÚNICA: delega en utils/library.js (countAllTexts) para que todos los
+ * contadores de la app coincidan.
  */
-export const calculateTotalTexts = (regionData) => {
-  return Object.values(regionData).reduce((sum, region) => sum + region.books.length, 0);
-};
+export const calculateTotalTexts = (regionData) => countAllTexts(regionData);
 
 /**
  * Verifica si un libro está en favoritos
