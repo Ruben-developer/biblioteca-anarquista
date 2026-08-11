@@ -76,15 +76,22 @@ export const countAllTexts = (regionData) =>
 // Conteo de textos por región (todos los del catálogo, no solo históricos).
 export const countRegionTexts = (regionData, region) => regionData?.[region]?.books?.length || 0;
 
-// Textos históricos relacionados con un evento: misma región, ordenados por
-// cercanía al año del evento (mismo año primero, luego los más próximos).
+// Textos relacionados con un evento CON TEXTO (type 'con_texto').
+// FUENTE ÚNICA de la relación: el propio evento declara `relatedTexts` con los
+// TÍTULOS de los textos realmente vinculados. NO se usa la región/país para
+// inferir la relación: eso evitaba que el 15M (2011) mostrase textos de la
+// guerra civil española solo por compartir país. Los eventos 'hecho' (sin
+// textos) no declaran relatedTexts y devuelven [].
 export const getEventRelatedTexts = (regionData, event) => {
-  if (!event || !regionData) return [];
-  const regionBooks = regionData?.[event.region]?.books || [];
-  return regionBooks
-    .filter((b) => isHistoricalBook(b) && b.year)
-    .map((book) => ({ ...book, distance: Math.abs(book.year - event.year) }))
-    .sort((a, b) => a.distance - b.distance || b.rating - a.rating);
+  if (!event || !regionData || !Array.isArray(event.relatedTexts)) return [];
+  const wanted = event.relatedTexts.map((t) => String(t).trim().toLowerCase());
+  const allBooks = [];
+  Object.entries(regionData).forEach(([region, data]) =>
+    (data.books || []).forEach((b) => allBooks.push({ ...b, region }))
+  );
+  return allBooks
+    .filter((b) => wanted.includes(String(b.title).trim().toLowerCase()))
+    .sort((a, b) => (b.year || 0) - (a.year || 0));
 };
 
 // Agrupa los libros por autor y los ordena de más a menos obras.

@@ -33,9 +33,10 @@ public/documents/ # documents.json (metadatos) + TXT de descarga
 data/registros/   # registro.json (métricas diarias del agente)
 .daily-runs/      # logs diarios del agente
 ```
-
 ## Cómo añadir contenido
 - **Evento histórico** → `src/data/timelineEvents.js` (año, década, title, description, region, category, image, quote, author).
+  - Cada evento tiene un **`type`**: `'con_texto'` (tiene textos vinculados, declara `relatedTexts` con los TÍTULOS) o `'hecho'` (suceso sin texto propio).
+  - `relatedTexts` empareja por **título**, NO por región/país: así el 15M (2011) enlaza solo con textos del 15M y no con la guerra civil (ambos son de España).
 - **Autor** → `src/data/authors.js` (name, years, region, bio, books, image).
 - **Texto por región** → `src/data/regionData.js`. Campos: `title`, `author`, `year`, `category`, `rating`, y opcional `filename`. **FUENTE ÚNICA**: `REGIONS` (filtros) y el ISO del mapa se derivan automáticamente de aquí; no hay que tocar `countryData.js` ni `REGIONS` manualmente.
 - **Metadatos completos de obra** → legacy en `public/documents/documents.json`. Ya no se consume en la app (el catálogo real es `regionData.js`); no añadir obras nuevas aquí.
@@ -44,6 +45,14 @@ data/registros/   # registro.json (métricas diarias del agente)
 - **Mapa**: un país solo se destaca si tiene AL MENOS 1 texto de categoría histórica (historia/revolucion/movimiento/organizacion/represion/periodismo/manifiesto). Si solo tiene teoría (p. ej. Inglaterra), queda en gris. Los textos históricos se filtran con `getHistoricalBooks(regionData, region)` en `src/utils/library.js`.
 - **Biblioteca (catálogo)** → usa automáticamente todos los libros de `regionData.js` (`getAllBooks` en `src/utils/library.js`). No requiere registro aparte.
 - **Lector embebido** → `src/components/ReaderView.jsx`. PDFs se muestran en iframe; TXT se cargan por fetch. Al abrir un libro desde la Biblioteca o el mapa se lanza `ReaderView`.
+
+### Content importer — flujo de clasificación por TIPO
+- Las obras se clasifican en 2 grandes tipos (ver `@content-importer`):
+  - **historia** → mapa + línea temporal (categorías: historia, revolucion, movimiento, organizacion, represion, periodismo, manifiesto).
+  - **filosofia** → autores (categorías: teoria, biografia, dialogo).
+  - Ambos alimentan la **biblioteca** (`regionData.js`).
+- El material entrante se deja en `PDFs/sin_clasificar/` y al clasificarlo se
+  mueve a `PDFs/historia/` o `PDFs/filosofia/` en `/home/fdr/Documentos/anarquismo_importado/PDFs/`.
 
 ## Seguridad: servidor de PDFs (no exponer la IP)
 - La IP interna del servidor (`192.168.1.117:8081`) NO debe aparecer en el código

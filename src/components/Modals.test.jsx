@@ -29,7 +29,8 @@ describe('EventModal', () => {
     expect(html).toContain(event.quote);
   });
 
-  it('muestra los textos históricos relacionados de la región del evento', () => {
+  it('muestra los textos relacionados para un evento con_texto', () => {
+    const eventConTexto = { ...event, type: 'con_texto', relatedTexts: ['Los Mártires de Chicago'] };
     const regionData = {
       'Estados Unidos': {
         books: [
@@ -39,21 +40,29 @@ describe('EventModal', () => {
       }
     };
     const html = renderToStaticMarkup(
-      <EventModal darkMode event={event} regionData={regionData} onClose={() => {}} />
+      <EventModal darkMode event={eventConTexto} regionData={regionData} onClose={() => {}} />
     );
-    expect(html).toContain('Textos históricos relacionados');
+    // Solo el texto VINCULADO por título aparece, no todos los de la región.
+    expect(html).toContain('Textos relacionados con este evento');
     expect(html).toContain('Los Mártires de Chicago');
+    expect(html).not.toContain('El origen del 1º de Mayo');
     expect(html).toContain('target="_blank"');
   });
 
-  it('no muestra textos si no hay obras históricas en la región', () => {
+  it('no muestra textos para un evento tipo hecho (sin relatedTexts)', () => {
+    const eventHecho = { ...event, type: 'hecho' };
     const regionData = {
-      'Estados Unidos': { books: [] }
+      'Estados Unidos': {
+        books: [
+          { title: 'Los Mártires de Chicago', author: 'Colectivo', year: 1886, category: 'historia', filename: 'a.pdf' }
+        ]
+      }
     };
     const html = renderToStaticMarkup(
-      <EventModal darkMode event={event} regionData={regionData} onClose={() => {}} />
+      <EventModal darkMode event={eventHecho} regionData={regionData} onClose={() => {}} />
     );
-    expect(html).not.toContain('Textos históricos relacionados');
+    expect(html).not.toContain('Textos relacionados con este evento');
+    expect(html).not.toContain('Los Mártires de Chicago');
   });
 
 });

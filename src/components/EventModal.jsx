@@ -58,10 +58,10 @@ const EventModal = ({ darkMode, event, regionData, onClose }) => {
             </p>
           </div>
 
-          {relatedTexts.length > 0 && (
+          {event.type === 'con_texto' && relatedTexts.length > 0 && (
             <div className="mt-6">
               <h3 className={`font-bold mb-3 ${darkMode ? 'text-red-400' : 'text-amber-800'}`}>
-                Textos históricos relacionados
+                Textos relacionados con este evento
               </h3>
               <div className="space-y-3">
                 {relatedTexts.map((book, idx) => (

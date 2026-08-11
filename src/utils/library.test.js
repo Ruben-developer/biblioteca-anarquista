@@ -163,30 +163,41 @@ describe('getEventRelatedTexts', () => {
     España: {
       books: [
         { title: 'Historia 1936', author: 'A', year: 1936, category: 'historia', rating: 4.0 },
-        { title: 'Teoría 1890', author: 'B', year: 1890, category: 'teoria' },
-        { title: 'Revolución 1937', author: 'C', year: 1937, category: 'revolucion', rating: 5.0 }
+        { title: 'Guerra Civil 1977', author: 'C', year: 1977, category: 'historia', rating: 5.0 },
+        { title: 'Teoría 1890', author: 'B', year: 1890, category: 'teoria' }
       ]
+    },
+    Siria: {
+      books: [{ title: 'Rojava', author: 'D', year: 2015, category: 'revolucion' }]
     }
   };
 
-  it('devuelve solo textos históricos ordenados por cercanía al año del evento', () => {
-    const related = getEventRelatedTexts(rd, { region: 'España', year: 1936 });
-    expect(related.length).toBe(2);
-    expect(related[0].title).toBe('Historia 1936');
-    expect(related[1].title).toBe('Revolución 1937');
+  it('devuelve SOLO los textos listados en relatedTexts por título, sin importar la región/año', () => {
+    // El evento 15M (España, 2011) declara un texto sí mismo; NO debe arrastrar
+    // 'Guerra Civil 1977' solo por compartir país (regresión del bug de negocio).
+    const related = getEventRelatedTexts(rd, { region: 'España', year: 2011, relatedTexts: ['Teoría 1890'] });
+    expect(related.length).toBe(1);
+    expect(related[0].title).toBe('Teoría 1890');
+    expect(related.every((b) => b.title !== 'Guerra Civil 1977')).toBe(true);
   });
 
-  it('devuelve lista vacía sin evento o sin regionData', () => {
+  it('puede enlazar textos de OTRA región distinta a la del evento', () => {
+    // El vínculo es por título, no por país.
+    const related = getEventRelatedTexts(rd, { region: 'España', year: 2012, relatedTexts: ['Rojava'] });
+    expect(related.length).toBe(1);
+    expect(related[0].region).toBe('Siria');
+  });
+
+  it('devuelve lista vacía sin evento, sin regionData o sin relatedTexts', () => {
     expect(getEventRelatedTexts(rd, null)).toEqual([]);
     expect(getEventRelatedTexts(null, { region: 'España', year: 1936 })).toEqual([]);
+    // Un evento 'hecho' no lleva relatedTexts → sin textos.
+    expect(getEventRelatedTexts(rd, { region: 'España', year: 2011 })).toEqual([]);
   });
 
-  it('devuelve lista vacía si la región del evento no existe en los datos', () => {
-    expect(getEventRelatedTexts(rd, { region: 'Krypton', year: 1936 })).toEqual([]);
-  });
-
-  it('ignora los textos históricos sin año', () => {
-    const sinAno = { España: { books: [{ title: 'Sin año', author: 'A', category: 'historia' }] } };
-    expect(getEventRelatedTexts(sinAno, { region: 'España', year: 1936 })).toEqual([]);
+  it('ignora títulos de relatedTexts que no existen en el catálogo', () => {
+    const related = getEventRelatedTexts(rd, { region: 'España', year: 1936, relatedTexts: ['No existe', 'Historia 1936'] });
+    expect(related.length).toBe(1);
+    expect(related[0].title).toBe('Historia 1936');
   });
 });
