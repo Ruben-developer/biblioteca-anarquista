@@ -177,29 +177,33 @@ contenedor nginx local en la máquina siempre-encendida, y la web enlaza
  - [x] **FASE 2**: ampliar `timelineEvents.js` con más eventos y décadas posteriores a 1968 ✅ 2026-08-10: 8 → 16 eventos históricos reales (1909-2012: Semana Trágica, Sacco y Vanzetti, Jornadas Libertarias, zapatismo, Seattle, Génova, 15M, Rojava). `DECADES` sincronizada (quita 1840s vacía, añade 1970s-2010s). Build+64 tests+CI verdes.
  - [x] **Sección Autores dinámica** ✅ 2026-08-10 (humano): "Biografías" → "Autores del Archivo" derivados del catálogo (`getAllAuthors`), mapa y timeline solo con textos históricos, `EventModal` con textos relacionados (`getEventRelatedTexts`). Catálogo ampliado a 109 obras (commits 205c138, 53768ae, 1ac1394).
  - [x] **FASE 6: tests de `documentService.js` y hooks** ✅ 2026-08-10 (12:00): 15 tests del servicio de documentos (URLs PDF/TXT, fetch simulado, consultas, estadísticas) + 6 tests de hooks (estado inicial y persistencia en localStorage). 59→80 tests, statements 55.4%→62.9%, functions 41.1%→59.0%. SonarQube gate OK (new_coverage 61.4%). Commit 52d6c2d.
+ - [x] **FASE 6: tests interactivos de componentes clave** ✅ 2026-08-11 (00:00): nuevo `src/components/Interactions.test.jsx` con 18 tests jsdom que ejecutan los handlers de `TimelineFilters` (búsqueda/década/categoría/región/limpiar), `TourModal`/`EventModal`/`RegionModal` (cierre por backdrop y Escape, favoritos) y `LibraryView` (filtros combinados, vacío, favoritos) + navegación completa de `AnarchistArchive` (Biblioteca, evento→modal, tour). **Coverage: statements 94.65%→97%, branches 68.7%→79.35%, functions 61.22%→84.69%**. 99→117 tests, CI verde (run 31457459234). Commits 22e0ef0 + 7995d2c (caniuse-lite).
  - [ ] Enriquecer `documents.json` con metadatos completos de las obras nuevas del catálogo (hoy solo 2 entradas; el servicio usa `regionData` como fuente principal, ver decisión en la nota del día).
- - [ ] FASE 6 (siguiente): tests de componentes clave sin cubrir (`TimelineView`, `StatsPanel`, `TimelineFilters`, `Header`, `Navigation`, `TourModal`, `ScrollTopButton`) para subir coverage global hacia el 75%.
+ - [ ] FASE 6 (siguiente): subir ramas hacia el 85%+ y cubrir ramas pendientes de `WorldMap`, `RegionModal`, `LibraryView`, `EventModal` (branch coverage actual 79.35%).
  - [ ] (Ideas de mejora en evaluación) Dashboard de métricas, obra del día, más agentes expertos.
  - [ ] Ampliar el catálogo con `@content-importer` hasta agotar los ~400 PDFs del contenedor.
 
-### Nota del día (2026-08-10, 12:00)
-Turno 12:00 del agente `daily-dev`. Inspección (paso 1.5): descargas **108/108 OK**,
+### Nota del día (2026-08-11, 00:00)
+Turno 00:00 del agente `daily-dev`. Inspección (paso 1.5): descargas **112/112 OK**,
 regiones sincronizadas **16/16/16**, `npm audit` con 5 vulnerabilidades SOLO en
 devDeps build-time (vite/vitest/esbuild; fix exigiría `--force` y rompería el stack
-Vite 4 → no aplica a Pages), build OK. **Tarea del plan (FASE 6)**: tests para
-`documentService.js` y hooks, que estaban al 0% de cobertura. Se añadieron
-`src/services/documentService.test.js` (15 tests: getDocumentDownloadUrl con
-PDF→/pdfs/ y TXT→repo, loadDocuments con fetch simulado incluyendo cache y fallo,
-consultas por id/región/categoría/búsqueda, getAuthors/getRegions/getDocumentStats)
-y `src/hooks/index.test.js` (6 tests: estado inicial de useScrollTop/useDarkMode/
-useFavorites + persistencia en localStorage; useState mockeado con updater
-inmediato porque en SSR React no reprocesa los updates). **59 → 80 tests**, coverage
-global statements 55.4%→62.9% y functions 41.1%→59.0%. `npm run check` verde, CI de
-Pages verde (run 31407712659), SonarQube re-analizado: **gate OK** (0 bugs, 0 vulns,
-new_coverage 61.4%). Observación: `documents.json` solo tiene 2 entradas y el resto
-de funciones de `documentService` (getDocumentStats, getAuthors...) son legacy, pues
-el catálogo real vive en `regionData.js` + `library.js`; se documenta para decidir si
-enriquecerlo o retirarlo.
+Vite 4 → no aplica a Pages), build OK. **Tarea del plan (FASE 6, "Próximo día")**:
+tests interactivos de componentes clave que tenían handlers sin ejecutar
+(renderizado estático no cubría funciones/ramas). Se añadió
+`src/components/Interactions.test.jsx` con 18 tests jsdom: TimelineFilters
+(búsqueda, década, categoría, región, limpiar), TourModal/EventModal/RegionModal
+(cierre por backdrop, tecla Escape, alternar favoritos) y LibraryView (filtros
+combinados por región/década/categoría, estado vacío + limpiar, favoritos) más
+navegación completa de AnarchistArchive (ir a Biblioteca y filtrar, abrir evento
+de la línea temporal y cerrar con Escape, abrir/cerrar tour). **99 → 117 tests**,
+coverage global statements 94.65%→97%, branches 68.7%→79.35%, functions
+61.22%→84.69%. `npm run check` verde, CI de Pages verde (run 31457459234). Además,
+mejora menor segura de la inspección: `npx update-browserslist-db`
+(caniuse-lite 1.0.30001776→30001809) que elimina el warning de browserslist del
+build (commit 7995d2c, solo package-lock.json, sin cambios en el árbol de
+dependencias). Observación para SonarQube: se recomienda re-análisis con
+`npm run test:coverage` + `sonar-scanner` para actualizar el gate con la nueva
+cobertura (new_coverage ahora ≈85%+ en funciones).
 
 ### Nota del día (2026-08-10, 00:00)
 Turno 00:00 del agente `daily-dev`. Inspección (paso 1.5): descargas 91/91 OK,

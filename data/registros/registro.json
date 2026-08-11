@@ -147,6 +147,15 @@
       "prs": 0,
       "ci": "verde",
       "nota": "FASE 6 TESTS (manual, continuacion): cobertura de lineas 62.87%->94.66% y gate SonarQube OK. Nuevos tests (99 en total): Views.test.jsx (14) para Navigation, Header, StatsPanel, TimelineView, TimelineFilters, FavoritesView, ScrollTopButton, AuthorsView; AnarchistArchive.test.jsx (5) con interaccion jsdom (navegar Mapa/Autores/Favoritos, abrir estadisticas). DevDeps: jsdom + @testing-library/react/dom. SonarQube: coverage global 90.4%, new_coverage 88.6%, duplicacion 0%, violaciones 17<=20 (gate OK). Refactors menores marcados como violaciones nuevas: themeClass sin usar (LibraryView/EventModal/RegionModal), Number.parseInt, Set de categorias historicas, optional chaining en library.js."
+    },
+    {
+      "fecha": "2026-08-11",
+      "obras": 118,
+      "palabras": 1112,
+      "commits": 2,
+      "prs": 0,
+      "ci": "verde",
+      "nota": "TURNO 00:00 agente daily-dev. FASE 6 tests interactivos de componentes clave: nuevo src/components/Interactions.test.jsx con 18 tests jsdom que ejecutan los handlers de TimelineFilters (busqueda/decada/categoria/region/limpiar), TourModal/EventModal/RegionModal (cierre por backdrop, tecla Escape, alternar favoritos) y LibraryView (filtros combinados, estado vacio + limpiar, favoritos) mas navegacion completa de AnarchistArchive (Biblioteca, evento->modal, tour). 99->117 tests, coverage statements 94.65%->97%, branches 68.7%->79.35%, functions 61.22%->84.69%. npm run check verde, CI Pages verde (run 31457459234). Mejora menor de inspeccion: npx update-browserslist-db (caniuse-lite 1.0.30001776->30001809, solo package-lock.json) elimina warning de browserslist del build (commit 7995d2c). Inspeccion: descargas 112/112 OK, regiones 16/16/16, audit solo devDeps build-time (vite/vitest/esbuild, no aplica a Pages)."
     }
   ]
 }
