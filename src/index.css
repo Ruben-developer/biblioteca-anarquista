@@ -83,3 +83,147 @@ code {
   border: 5px solid transparent;
   border-top-color: rgba(0, 0, 0, 0.85);
 }
+
+/* ============================================================
+   TEMA CONSTRUCTIVISTA (test visual)
+   Paleta basada en estética de propaganda:
+   - Rojo bermellón #D02C26 · Negro intenso #1A1818 · Crema #E5DCD0 · Gris semitono #6F6C68
+   Se activa poniendo la clase .theme-constructivista en el contenedor raíz.
+   ============================================================ */
+.theme-constructivista .bg-gradient-to-br.from-red-950.via-black.to-gray-900 {
+  background-image: linear-gradient(135deg, #0A0909 0%, #1A1818 55%, #2A2420 100%);
+}
+.theme-constructivista .bg-gradient-to-br.from-amber-50.via-yellow-50.to-orange-50 {
+  background-image: linear-gradient(135deg, #E5DCD0 0%, #D8CCBD 60%, #C9BCA8 100%);
+}
+/* Cabecera y navegación: bloques negros + acentos rojos */
+.theme-constructivista .bg-black\/50 {
+  background-color: #1A1818;
+}
+.theme-constructivista .bg-black\/30 {
+  background-color: #141210;
+}
+.theme-constructivista .bg-amber-100\/80,
+.theme-constructivista .bg-amber-100\/60 {
+  background-color: #E5DCD0;
+}
+/* Tarjetas */
+.theme-constructivista .bg-gradient-to-br.from-gray-800\/80.to-gray-900\/80 {
+  background-image: linear-gradient(135deg, #2A2420 0%, #1A1818 100%);
+}
+.theme-constructivista .bg-gradient-to-br.from-amber-50.to-orange-50 {
+  background-image: linear-gradient(135deg, #EDE5D8 0%, #D8CCBD 100%);
+}
+.theme-constructivista .bg-white\/60,
+.theme-constructivista .bg-white\/80 {
+  background-color: rgba(229, 220, 208, 0.9);
+}
+.theme-constructivista .bg-gray-900\/60,
+.theme-constructivista .bg-gray-800\/60 {
+  background-color: rgba(10, 9, 9, 0.72);
+}
+.theme-constructivista .bg-gray-800\/50 {
+  background-color: rgba(26, 24, 24, 0.55);
+}
+.theme-constructivista .bg-gray-700 {
+  background-color: #6F6C68;
+}
+.theme-constructivista .bg-gray-800 {
+  background-color: #1A1818;
+}
+/* Acentos rojos */
+.theme-constructivista .bg-red-600 {
+  background-color: #D02C26;
+}
+.theme-constructivista .bg-red-700 {
+  background-color: #B0241E;
+}
+.theme-constructivista .bg-red-900\/30,
+.theme-constructivista .bg-red-900\/40 {
+  background-color: rgba(208, 44, 38, 0.30);
+}
+.theme-constructivista .bg-red-900\/60 {
+  background-color: rgba(208, 44, 38, 0.60);
+}
+.theme-constructivista .bg-red-100,
+.theme-constructivista .bg-red-200 {
+  background-color: #E9C9C4;
+}
+.theme-constructivista .bg-amber-700 {
+  background-color: #D02C26;
+}
+.theme-constructivista .bg-amber-800 {
+  background-color: #B0241E;
+}
+.theme-constructivista .bg-amber-200,
+.theme-constructivista .bg-amber-200\/50 {
+  background-color: #D8CCBD;
+}
+.theme-constructivista .bg-amber-100\/50 {
+  background-color: rgba(229, 220, 208, 0.6);
+}
+/* Bordes */
+.theme-constructivista .border-red-900\/30,
+.theme-constructivista .border-red-900\/50 {
+  border-color: rgba(208, 44, 38, 0.6);
+}
+.theme-constructivista .border-red-900\/20 {
+  border-color: rgba(208, 44, 38, 0.35);
+}
+.theme-constructivista .border-amber-700 {
+  border-color: #D02C26;
+}
+.theme-constructivista .border-amber-300 {
+  border-color: #C9BCA8;
+}
+.theme-constructivista .border-amber-400 {
+  border-color: #B0241E;
+}
+.theme-constructivista .border-amber-100 {
+  border-color: #E5DCD0;
+}
+.theme-constructivista .border-gray-700,
+.theme-constructivista .border-gray-700\/50 {
+  border-color: #6F6C68;
+}
+.theme-constructivista .border-gray-900 {
+  border-color: #0A0909;
+}
+/* Textos */
+.theme-constructivista .text-red-950 { color: #D02C26; }
+.theme-constructivista .text-red-900 { color: #D02C26; }
+.theme-constructivista .text-red-800 { color: #D02C26; }
+.theme-constructivista .text-red-700 { color: #B0241E; }
+.theme-constructivista .text-red-600 { color: #D02C26; }
+.theme-constructivista .text-red-500 { color: #D02C26; }
+.theme-constructivista .text-red-400 { color: #D02C26; }
+.theme-constructivista .text-red-300 { color: #E07A72; }
+.theme-constructivista .text-amber-50 { color: #E5DCD0; }
+.theme-constructivista .text-amber-100 { color: #E5DCD0; }
+.theme-constructivista .text-amber-200 { color: #D8CCBD; }
+.theme-constructivista .text-amber-300 { color: #C9BCA8; }
+.theme-constructivista .text-amber-400 { color: #B0241E; }
+.theme-constructivista .text-amber-500 { color: #D02C26; }
+.theme-constructivista .text-amber-600 { color: #B0241E; }
+.theme-constructivista .text-amber-700 { color: #A3201A; }
+.theme-constructivista .text-amber-800 { color: #1A1818; }
+.theme-constructivista .text-amber-900 { color: #1A1818; }
+.theme-constructivista .text-gray-100 { color: #E5DCD0; }
+.theme-constructivista .text-gray-200 { color: #D8CCBD; }
+.theme-constructivista .text-gray-300 { color: #C9BCA8; }
+.theme-constructivista .text-gray-400 { color: #8C8780; }
+.theme-constructivista .text-gray-500 { color: #6F6C68; }
+.theme-constructivista .text-gray-600 { color: #5A5652; }
+.theme-constructivista .text-gray-700 { color: #4A4642; }
+.theme-constructivista .text-gray-800 { color: #1A1818; }
+/* Fondos de tarjeta con opacidad redondeada en listas */
+.theme-constructivista .bg-gray-900\/60 {
+  background-color: rgba(10, 9, 9, 0.72);
+}
+/* Gradientes de la línea temporal */
+.theme-constructivista .bg-gradient-to-r.from-red-600.via-red-500.to-red-800 {
+  background-image: linear-gradient(90deg, #D02C26 0%, #E04A3C 50%, #B0241E 100%);
+}
+.theme-constructivista .bg-gradient-to-r.from-amber-600.via-amber-700.to-amber-800 {
+  background-image: linear-gradient(90deg, #D02C26 0%, #B0241E 60%, #8A1813 100%);
+}

@@ -1,10 +1,12 @@
 import React from 'react';
-import { BarChart3, Info } from 'lucide-react';
+import { BarChart3, Info, Palette } from 'lucide-react';
 import { THEME } from '../constants';
 
 const Header = ({ 
   darkMode, 
   onDarkModeToggle, 
+  onTestConstructivista,
+  testConstructivista,
   onShowTour, 
   onShowStats,
   stats 
@@ -41,6 +43,13 @@ const Header = ({
               title="Información y tour"
             >
               <Info size={20} />
+            </button>
+            <button 
+              onClick={onTestConstructivista}
+              className={`p-2 md:p-3 rounded-lg ${themeClass.button} transition-colors ${testConstructivista ? 'ring-2 ring-red-600' : ''}`}
+              title="Test visual: tema constructivista"
+            >
+              <Palette size={20} />
             </button>
             <button 
               onClick={onDarkModeToggle}
