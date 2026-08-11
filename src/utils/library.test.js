@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { getDecadeFromYear, getAllBooks, getAllAuthors, filterBooks, sortBooks } from './library';
+import { getDecadeFromYear, getAllBooks, getAllAuthors, getEventRelatedTexts, filterBooks, sortBooks } from './library';
 
 const regionData = {
   España: {
@@ -58,6 +58,22 @@ describe('getAllAuthors', () => {
     expect(kropotkin.yearsRange).toBe('1892-1892');
     expect(kropotkin.books[0]).toMatchObject({ title: 'La Conquista del Pan', region: 'España' });
   });
+
+  it('deja el rango de años vacío cuando las obras no tienen año', () => {
+    const sinAnos = {
+      España: { books: [{ title: 'Obra sin año', author: 'Misterioso', category: 'teoria' }] }
+    };
+    const authors = getAllAuthors(sinAnos);
+    const autor = authors.find((a) => a.name === 'Misterioso');
+    expect(autor.yearsRange).toBe('');
+  });
+
+  it('omite los libros sin autor', () => {
+    const sinAutor = {
+      España: { books: [{ title: 'Anónimo', category: 'teoria' }] }
+    };
+    expect(getAllAuthors(sinAutor).length).toBe(0);
+  });
 });
 
 describe('filterBooks', () => {
@@ -115,5 +131,62 @@ describe('sortBooks', () => {
     const original = [...books];
     sortBooks(books, 'year');
     expect(books[0].year).toBe(original[0].year);
+  });
+
+  it('devuelve la lista sin cambios con un criterio de orden no soportado', () => {
+    const original = [...books];
+    const sorted = sortBooks(books, 'desconocido');
+    expect(sorted.map((b) => b.title)).toEqual(original.map((b) => b.title));
+  });
+
+  it('no falla con libros sin rating, año o título', () => {
+    const incompletos = [
+      { title: 'Sin año', author: 'A', category: 'teoria' },
+      { title: undefined, author: 'B', year: 1900, rating: 3 },
+      { title: 'Sin rating', author: 'C', year: 1850 }
+    ];
+    expect(sortBooks(incompletos, 'rating').length).toBe(3);
+    expect(sortBooks(incompletos, 'year').length).toBe(3);
+    expect(sortBooks(incompletos, 'title').length).toBe(3);
+  });
+});
+
+describe('getAllBooks edge cases', () => {
+  it('tolera regiones sin lista de libros', () => {
+    const books = getAllBooks({ 'Tierra de Nadie': { otrosCampos: true } });
+    expect(books.length).toBe(0);
+  });
+});
+
+describe('getEventRelatedTexts', () => {
+  const rd = {
+    España: {
+      books: [
+        { title: 'Historia 1936', author: 'A', year: 1936, category: 'historia', rating: 4.0 },
+        { title: 'Teoría 1890', author: 'B', year: 1890, category: 'teoria' },
+        { title: 'Revolución 1937', author: 'C', year: 1937, category: 'revolucion', rating: 5.0 }
+      ]
+    }
+  };
+
+  it('devuelve solo textos históricos ordenados por cercanía al año del evento', () => {
+    const related = getEventRelatedTexts(rd, { region: 'España', year: 1936 });
+    expect(related.length).toBe(2);
+    expect(related[0].title).toBe('Historia 1936');
+    expect(related[1].title).toBe('Revolución 1937');
+  });
+
+  it('devuelve lista vacía sin evento o sin regionData', () => {
+    expect(getEventRelatedTexts(rd, null)).toEqual([]);
+    expect(getEventRelatedTexts(null, { region: 'España', year: 1936 })).toEqual([]);
+  });
+
+  it('devuelve lista vacía si la región del evento no existe en los datos', () => {
+    expect(getEventRelatedTexts(rd, { region: 'Krypton', year: 1936 })).toEqual([]);
+  });
+
+  it('ignora los textos históricos sin año', () => {
+    const sinAno = { España: { books: [{ title: 'Sin año', author: 'A', category: 'historia' }] } };
+    expect(getEventRelatedTexts(sinAno, { region: 'España', year: 1936 })).toEqual([]);
   });
 });

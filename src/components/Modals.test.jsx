@@ -86,6 +86,61 @@ describe('RegionModal', () => {
     expect(html).toContain('role="dialog"');
     expect(html).toContain('Obra A');
   });
+
+  it('no renderiza nada si la región no existe en regionData', () => {
+    expect(renderToStaticMarkup(
+      <RegionModal region="Krypton" regionData={regionData} onClose={() => {}} onToggleFavorite={() => {}} />
+    )).toBe('');
+  });
+
+  it('tolera regiones sin lista de libros', () => {
+    const html = renderToStaticMarkup(
+      <RegionModal
+        darkMode={false}
+        region="España"
+        regionData={{ España: { otrosCampos: true } }}
+        favorites={[]}
+        onClose={() => {}}
+        onToggleFavorite={() => {}}
+      />
+    );
+    expect(html).toContain('0 textos históricos');
+  });
+
+  it('muestra el resumen de la obra y marca el corazón cuando está en favoritos', () => {
+    const dataConResumen = {
+      España: {
+        books: [{ title: 'Obra A', author: 'Autor A', filename: 'a.pdf', category: 'historia', year: 1900, rating: 4.5, summary: 'Resumen de la obra A' }]
+      }
+    };
+    const html = renderToStaticMarkup(
+      <RegionModal
+        darkMode={false}
+        region={region}
+        regionData={dataConResumen}
+        favorites={['Obra A']}
+        onClose={() => {}}
+        onToggleFavorite={() => {}}
+      />
+    );
+    expect(html).toContain('Resumen de la obra A');
+    expect(html).toContain('Remover de favoritos');
+    expect(html).toContain('fill-red-500 text-red-500');
+  });
+
+  it('muestra "Agregar a favoritos" cuando la obra no está guardada', () => {
+    const html = renderToStaticMarkup(
+      <RegionModal
+        darkMode
+        region={region}
+        regionData={regionData}
+        favorites={[]}
+        onClose={() => {}}
+        onToggleFavorite={() => {}}
+      />
+    );
+    expect(html).toContain('Agregar a favoritos');
+  });
 });
 
 describe('TourModal', () => {

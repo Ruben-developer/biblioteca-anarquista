@@ -109,6 +109,17 @@ describe('carga de documentos (fetch simulado)', () => {
     expect(docs).toEqual([]);
   });
 
+  it('loadDocuments devuelve [] si el JSON no trae la clave documents', async () => {
+    vi.resetModules();
+    global.fetch = vi.fn().mockResolvedValue({
+      ok: true,
+      status: 200,
+      json: async () => ({ vacio: true })
+    });
+    const svc = await import('./documentService.js');
+    expect(await svc.loadDocuments()).toEqual([]);
+  });
+
   it('getDocuments devuelve todos los documentos', async () => {
     const docs = await service.getDocuments();
     expect(docs).toHaveLength(3);
@@ -170,6 +181,20 @@ describe('consultas sobre el catálogo', () => {
     expect(stats.totalRegions).toBe(3);
     expect(stats.totalAuthors).toBe(3);
     expect(stats.averageRating).toBe('4.8');
+    expect(stats.totalAccess).toBe(0);
+  });
+
+  it('getDocumentStats tolera documentos sin rating (media sobre 0)', async () => {
+    vi.resetModules();
+    const docsSinRating = [
+      { id: 'a', title: 'A', author: 'A', region: 'X', category: 'teoria' },
+      { id: 'b', title: 'B', author: 'B', region: 'X', category: 'teoria', rating: 5 }
+    ];
+    global.fetch = vi.fn().mockResolvedValue(okResponse(docsSinRating));
+    const svc = await import('./documentService.js');
+    const stats = await svc.getDocumentStats();
+    expect(stats.totalDocuments).toBe(2);
+    expect(stats.averageRating).toBe('2.5');
     expect(stats.totalAccess).toBe(0);
   });
 });

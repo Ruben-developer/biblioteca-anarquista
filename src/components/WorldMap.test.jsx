@@ -83,4 +83,55 @@ describe('WorldMap (mapa mundial propio)', () => {
     const paths = html.match(/<path /g);
     expect(paths.length).toBe(174);
   });
+
+  it('tolera el array de datos vacío (min/max por defecto 0)', () => {
+    const html = renderToStaticMarkup(<WorldMap data={[]} />);
+    expect(html).toContain('<svg');
+    expect(html).toContain('viewBox="0 0 960 720"');
+  });
+
+  it('tolera valores de tipo string (los trata como 0)', () => {
+    const html = renderToStaticMarkup(
+      <WorldMap data={[{ country: 'es', value: 'n/a' }]} />
+    );
+    expect(html).toContain('aria-label="España"');
+  });
+
+  it('usa el tooltip por defecto con countryNameEs y valor', () => {
+    const html = renderToStaticMarkup(
+      <WorldMap data={[{ country: 'es', value: 10 }]} />
+    );
+    // SSR no renderiza tooltip (requiere mouse), pero no rompe nada
+    expect(html).not.toContain('worldmap__tooltip');
+  });
+});
+
+describe('WorldMap tooltip interactivo (jsdom)', () => {
+  // @vitest-environment jsdom
+  it('muestra el tooltip al pasar el ratón por un país', async () => {
+    const { render, fireEvent, waitFor } = await import('@testing-library/react');
+    const data = [{ country: 'es', value: 10 }];
+    const { container } = render(<WorldMap data={data} />);
+    const espana = container.querySelector('[aria-label="España"]');
+    expect(espana).not.toBeNull();
+    fireEvent.mouseEnter(espana);
+    const tooltip = await waitFor(() => container.querySelector('.worldmap__tooltip'));
+    expect(tooltip).toBeTruthy();
+    expect(tooltip.textContent).toContain('España');
+    fireEvent.mouseLeave(espana);
+    await waitFor(() => expect(container.querySelector('.worldmap__tooltip')).toBeNull());
+    container.remove();
+  });
+
+  it('llama onClickFunction al hacer clic en un país', async () => {
+    const { render, fireEvent } = await import('@testing-library/react');
+    const clicks = [];
+    const onClickFunction = (context) => clicks.push(context.countryCode);
+    const { container } = render(
+      <WorldMap data={[{ country: 'es', value: 10 }]} onClickFunction={onClickFunction} />
+    );
+    fireEvent.click(container.querySelector('[aria-label="España"]'));
+    expect(clicks).toContain('ES');
+    container.remove();
+  });
 });

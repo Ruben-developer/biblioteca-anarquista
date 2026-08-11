@@ -59,3 +59,45 @@ describe('WorldMapView (gradiente por nº de textos)', () => {
     expect(deBright).toBeGreaterThan(esBright);
   });
 });
+
+describe('WorldMapView edge cases', () => {
+  const noop = () => {};
+
+  it('renderiza en modo oscuro con colores de tema oscuro', () => {
+    const html = renderToStaticMarkup(
+      <WorldMapView darkMode regionData={regionData} onSelectRegion={noop} />
+    );
+    expect(html).toContain('bg-gray-900/60');
+    expect(html).toContain('linear-gradient(to right, #fca5a5, #7f1d1d)');
+    expect(html).toContain('Pocos textos');
+    expect(html).toContain('Muchos textos');
+  });
+
+  it('ignora regiones sin código ISO en el mapamundi pero las lista como botón', () => {
+    const dataConRegionSinISO = {
+      ...regionData,
+      'Tierra de Nadie': {
+        books: [{ title: 'Obra X', author: 'Autor', year: 1900, category: 'historia' }]
+      }
+    };
+    const html = renderToStaticMarkup(
+      <WorldMapView darkMode={false} regionData={dataConRegionSinISO} onSelectRegion={noop} />
+    );
+    // La región sin ISO aparece como botón de navegación...
+    expect(html).toContain('Tierra de Nadie');
+    // ...y 1 texto histórico de la región
+    expect(html).toContain('1 textos históricos');
+  });
+
+  it('tolera regiones sin lista de libros', () => {
+    const dataSinBooks = {
+      ...regionData,
+      'Atlántida': { sinBooks: true }
+    };
+    const html = renderToStaticMarkup(
+      <WorldMapView darkMode={false} regionData={dataSinBooks} onSelectRegion={noop} />
+    );
+    expect(html).toContain('Atlántida');
+    expect(html).toContain('0 textos históricos');
+  });
+});

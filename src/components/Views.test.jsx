@@ -193,6 +193,80 @@ describe('AuthorsView', () => {
   });
 });
 
+describe('TimelineView en modo oscuro', () => {
+  const events = [
+    { year: 1886, title: 'Mártires de Chicago', region: 'Estados Unidos', image: '⚖️', description: 'Descripción del evento' }
+  ];
+
+  it('renderiza con las clases de tema oscuro', () => {
+    const html = renderToStaticMarkup(
+      <TimelineView darkMode filteredEvents={events} onSelectEvent={() => {}} />
+    );
+    expect(html).toContain('bg-gray-900/60');
+    expect(html).toContain('Mártires de Chicago');
+    expect(html).toContain('1886');
+  });
+});
+
+describe('StatsPanel en modo oscuro', () => {
+  it('aplica las clases de tema oscuro', () => {
+    const html = renderToStaticMarkup(
+      <StatsPanel darkMode stats={{ texts: 114, events: 16, regions: 16, authors: 40 }} />
+    );
+    expect(html).toContain('text-red-400');
+    expect(html).toContain('114');
+  });
+});
+
+describe('FavoritesView edge cases', () => {
+  it('usa singular "texto guardado" con un solo favorito', () => {
+    const html = renderToStaticMarkup(
+      <FavoritesView darkMode favorites={['Obra A']} onToggleFavorite={() => {}} />
+    );
+    expect(html).toContain('1 texto guardado');
+  });
+
+  it('aplica las clases de tema oscuro', () => {
+    const html = renderToStaticMarkup(
+      <FavoritesView darkMode favorites={['Obra A', 'Obra B']} onToggleFavorite={() => {}} />
+    );
+    expect(html).toContain('text-red-400');
+    expect(html).toContain('2 textos guardados');
+  });
+});
+
+describe('ScrollTopButton en modo oscuro', () => {
+  it('aplica las clases de tema oscuro', () => {
+    const html = renderToStaticMarkup(<ScrollTopButton darkMode onClick={() => {}} />);
+    expect(html).toContain('Ir al inicio');
+    expect(html).not.toContain('bg-amber-');
+  });
+});
+
+describe('AuthorsView edge cases (jsdom)', () => {
+  // @vitest-environment jsdom
+  it('no muestra rango de años ni región cuando faltan', async () => {
+    const { render, screen, fireEvent } = await import('@testing-library/react');
+    const authorsSinDatos = [
+      {
+        name: 'Autor Anónimo',
+        bookCount: 1,
+        regions: [],
+        books: [
+          { title: 'Obra sin año', region: 'España', category: 'teoria', year: undefined, filename: 'anarquismo/a.pdf' }
+        ]
+      }
+    ];
+    const { container } = render(<AuthorsView darkMode authors={authorsSinDatos} />);
+    expect(screen.getByText('Autor Anónimo')).toBeTruthy();
+    expect(screen.queryByText('(años de sus obras)')).toBeNull();
+    expect(container.innerHTML).not.toContain('📍');
+    fireEvent.click(screen.getByText('Autor Anónimo'));
+    expect(screen.getByText('Obra sin año')).toBeTruthy();
+    container.remove();
+  });
+});
+
 describe('AuthorsView interactivo (jsdom)', () => {
   // @vitest-environment jsdom
   it('despliega las obras del autor al hacer clic y las colapsa al volver a hacer clic', async () => {
@@ -216,6 +290,28 @@ describe('AuthorsView interactivo (jsdom)', () => {
     expect(screen.getByText('La coacción moral')).toBeTruthy();
     fireEvent.click(screen.getByText('Ricardo Mella'));
     expect(screen.queryByText('Nueva Utopía')).toBeNull();
+    container.remove();
+  });
+
+  it('muestra el enlace Leer solo en obras con filename', async () => {
+    const { render, screen, fireEvent } = await import('@testing-library/react');
+    const authors = [
+      {
+        name: 'Autor Mixto',
+        bookCount: 2,
+        regions: ['España'],
+        yearsRange: '1890-1898',
+        books: [
+          { title: 'Obra con PDF', region: 'España', category: 'teoria', year: 1890, filename: 'anarquismo/a.pdf' },
+          { title: 'Obra sin archivo', region: 'España', category: 'teoria', year: 1895 }
+        ]
+      }
+    ];
+    const { container } = render(<AuthorsView darkMode authors={authors} />);
+    fireEvent.click(screen.getByText('Autor Mixto'));
+    expect(screen.getByText('Obra con PDF')).toBeTruthy();
+    expect(screen.getByText('Obra sin archivo')).toBeTruthy();
+    expect(screen.getAllByText('Leer').length).toBe(1);
     container.remove();
   });
 });
