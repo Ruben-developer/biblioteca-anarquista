@@ -178,10 +178,44 @@ contenedor nginx local en la máquina siempre-encendida, y la web enlaza
  - [x] **Sección Autores dinámica** ✅ 2026-08-10 (humano): "Biografías" → "Autores del Archivo" derivados del catálogo (`getAllAuthors`), mapa y timeline solo con textos históricos, `EventModal` con textos relacionados (`getEventRelatedTexts`). Catálogo ampliado a 109 obras (commits 205c138, 53768ae, 1ac1394).
  - [x] **FASE 6: tests de `documentService.js` y hooks** ✅ 2026-08-10 (12:00): 15 tests del servicio de documentos (URLs PDF/TXT, fetch simulado, consultas, estadísticas) + 6 tests de hooks (estado inicial y persistencia en localStorage). 59→80 tests, statements 55.4%→62.9%, functions 41.1%→59.0%. SonarQube gate OK (new_coverage 61.4%). Commit 52d6c2d.
  - [x] **FASE 6: tests interactivos de componentes clave** ✅ 2026-08-11 (00:00): nuevo `src/components/Interactions.test.jsx` con 18 tests jsdom que ejecutan los handlers de `TimelineFilters` (búsqueda/década/categoría/región/limpiar), `TourModal`/`EventModal`/`RegionModal` (cierre por backdrop y Escape, favoritos) y `LibraryView` (filtros combinados, vacío, favoritos) + navegación completa de `AnarchistArchive` (Biblioteca, evento→modal, tour). **Coverage: statements 94.65%→97%, branches 68.7%→79.35%, functions 61.22%→84.69%**. 99→117 tests, CI verde (run 31457459234). Commits 22e0ef0 + 7995d2c (caniuse-lite).
- - [ ] Enriquecer `documents.json` con metadatos completos de las obras nuevas del catálogo (hoy solo 2 entradas; el servicio usa `regionData` como fuente principal, ver decisión en la nota del día).
- - [ ] FASE 6 (siguiente): subir ramas hacia el 85%+ y cubrir ramas pendientes de `WorldMap`, `RegionModal`, `LibraryView`, `EventModal` (branch coverage actual 79.35%).
+ - [x] **FASE 6: cubrir ramas pendientes (objetivo 85%+ SUPERADO)** ✅ 2026-08-11 (12:00): 37 tests nuevos en 8 archivos (Views, WorldMapView, LibraryView, Modals, AnarchistArchive, WorldMap, library, documentService) para ramas edge: modos de tema oscuro de vistas, regiones sin ISO/sin books en el mapa, libros sin año/rating/resumen, favoritos, región inexistente, autores sin años/regiones, obras sin archivo, scroll top, tooltip/click del mapa (jsdom), sort con campos incompletos, `getEventRelatedTexts` y JSON malformado. **Coverage: 117→154 tests, statements 97%→98.98%, branches 79.35%→97.96% (396/499→578/590), functions 84.69%→90.81%**. `npm run check` verde, CI de Pages verde (run 31511160387). Commit 49bea9f.
+ - [ ] Enriquecer `documents.json` con metadatos completos de las obras nuevas del catálogo (hoy solo 2 entradas; el servicio usa `regionData` como fuente principal, ver decisión en la nota del día). → **BAJA PRIORIDAD**: `documents.json` quedó legacy (solo lo usa `documentService.js` para consultas no usadas por la UI; el catálogo real vive en `regionData.js` + `library.js`). Se sugiere en su lugar **eliminar la deuda**: valorar deprecar `documentService` o documentar que es mantenimiento de compatibilidad.
+ - [x] ~~FASE 6 (siguiente): subir ramas hacia el 85%+ y cubrir ramas pendientes de `WorldMap`, `RegionModal`, `LibraryView`, `EventModal` (branch coverage actual 79.35%).~~ → **SUPERADO 2026-08-11 (12:00)**: branches 97.96%, functions 90.81%.
  - [ ] (Ideas de mejora en evaluación) Dashboard de métricas, obra del día, más agentes expertos.
  - [ ] Ampliar el catálogo con `@content-importer` hasta agotar los ~400 PDFs del contenedor.
+
+### Nota del día (2026-08-11, 12:00)
+Turno 12:00 del agente `daily-dev`. Inspección (paso 1.5): descargas **112/112 OK**,
+regiones sincronizadas **16/16/16**, `npm audit` con 5 vulnerabilidades SOLO en
+devDeps build-time (vite/vitest/esbuild; fix exigiría `--force` y rompería el stack
+Vite 4 → no aplica a Pages), build sin warnings. **Tarea del plan (FASE 6, "Próximo
+día")**: subir el branch coverage hacia el 85%+ cubriendo las ramas pendientes de
+los componentes. Se ampliaron 8 archivos de test con **37 tests nuevos**:
+- `Views.test.jsx`: TimelineView/StatsPanel/ScrollTopButton en modo oscuro,
+  FavoritesView con 1 favorito (singular), AuthorsView con autor sin años/regiones
+  y obras sin archivo (jsdom, `Leer` solo con filename).
+- `WorldMapView.test.jsx`: darkMode, región sin ISO (solo botón, no mapa) y región
+  sin lista de libros (`0 textos históricos`).
+- `LibraryView.test.jsx`: darkMode, obra sin año/rating/resumen (guion y sin ⭐),
+  obra sin archivo (sin botón Leer) y corazón en estado favorito.
+- `Modals.test.jsx`: RegionModal con región inexistente, sin books, resumen + favorito
+  (`Remover de favoritos` / corazón lleno) y `Agregar a favoritos`.
+- `AnarchistArchive.test.jsx`: apertura de `RegionModal` desde el mapa (clic en
+  botón de región), darkMode vía localStorage y `ScrollTopButton` (scroll simulado
+  con getter de `window.scrollY` + `act`).
+- `WorldMap.test.jsx`: data vacío (min/max 0), valores string, y tests jsdom de
+  tooltip (mouseEnter/Leave) y click (`onClickFunction` con `countryCode`).
+- `library.test.js`: regiones sin books, `sortBooks` con campos incompletos y
+  criterio no soportado, `getEventRelatedTexts` (sin evento, sin datos, región
+  inexistente, obras sin año), `getAllAuthors` sin años y sin autor.
+- `documentService.test.js`: JSON sin clave `documents` (→[]) y stats con docs sin
+  rating (media sobre 0).
+
+**Cobertura final: 117→154 tests, statements 97%→98.98%, branches 79.35%→97.96%
+(396/499→578/590), functions 84.69%→90.81%**. `npm run check` (lint 0 errores +
+154 tests + build) verde, CI de Pages verde (run 31511160387). Commit 49bea9f.
+Se recomienda re-análisis SonarQube (`npm run test:coverage` + `sonar-scanner`)
+para actualizar el gate con la nueva cobertura (new_coverage ≈98% statements).
 
 ### Nota del día (2026-08-11, 00:00)
 Turno 00:00 del agente `daily-dev`. Inspección (paso 1.5): descargas **112/112 OK**,
