@@ -5,6 +5,12 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        display: ['Anton', 'Oswald', 'Impact', 'sans-serif'],
+        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+        sans: ['"Source Sans 3"', 'system-ui', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace']
+      },
       colors: {
         anarchist: {
           50: '#fdf8f3',

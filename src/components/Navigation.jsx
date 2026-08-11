@@ -12,9 +12,9 @@ const Navigation = ({
   const themeClass = darkMode ? THEME.dark : THEME.light;
   
   const navItems = [
-    { view: VIEWS.TIMELINE, label: 'Línea Temporal', icon: Calendar },
-    { view: VIEWS.MAP, label: `Mapa (${regionCount})`, icon: MapPin },
     { view: VIEWS.LIBRARY, label: 'Biblioteca', icon: BookOpen },
+    { view: VIEWS.MAP, label: `Mapa (${regionCount})`, icon: MapPin },
+    { view: VIEWS.TIMELINE, label: 'Línea Temporal', icon: Calendar },
     { view: VIEWS.AUTHORS, label: 'Autores', icon: User },
     { view: VIEWS.FAVORITES, label: `Favoritos (${favoriteCount})`, icon: Heart }
   ];
@@ -27,7 +27,7 @@ const Navigation = ({
             <button
               key={view}
               onClick={() => onViewChange(view)}
-              className={`flex items-center gap-2 px-5 py-3 rounded-lg transition-all font-medium whitespace-nowrap ${
+              className={`flex items-center gap-2 px-5 py-3 rounded-lg transition-all font-display text-sm uppercase tracking-wider whitespace-nowrap ${
                 activeView === view
                   ? darkMode 
                     ? 'bg-red-600 text-white' 

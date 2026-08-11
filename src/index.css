@@ -14,9 +14,9 @@ html, body {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Source Sans 3', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -37,12 +37,18 @@ code {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(155, 89, 182, 0.5);
+  background: rgba(160, 36, 26, 0.45);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(155, 89, 182, 0.7);
+  background: rgba(160, 36, 26, 0.65);
+}
+
+/* Foco visible global: bermellón, visible en ambos temas */
+:focus-visible {
+  outline: 2px solid #A0241A;
+  outline-offset: 2px;
 }
 
 /* Mapa mundial: efecto hover sobre los países */
@@ -90,9 +96,14 @@ code {
    - Rojo bermellón #D02C26 · Negro intenso #1A1818 · Crema #E5DCD0 · Gris semitono #6F6C68
    Se activa poniendo la clase .theme-constructivista en el contenedor raíz.
    ============================================================ */
+/* Reglas de raíz: la clase del tema vive en el MISMO elemento que las clases
+   de fondo, así que hace falta selector compuesto (sin espacio) además del
+   descendiente para los hijos. */
+.theme-constructivista.bg-gradient-to-br.from-red-950.via-black.to-gray-900,
 .theme-constructivista .bg-gradient-to-br.from-red-950.via-black.to-gray-900 {
   background-image: linear-gradient(135deg, #0A0909 0%, #1A1818 55%, #2A2420 100%);
 }
+.theme-constructivista.bg-gradient-to-br.from-amber-50.via-yellow-50.to-orange-50,
 .theme-constructivista .bg-gradient-to-br.from-amber-50.via-yellow-50.to-orange-50 {
   background-image: linear-gradient(135deg, #E5DCD0 0%, #D8CCBD 60%, #C9BCA8 100%);
 }
@@ -170,6 +181,10 @@ code {
 .theme-constructivista .border-red-900\/20 {
   border-color: rgba(208, 44, 38, 0.35);
 }
+.theme-constructivista .border-amber-800\/30,
+.theme-constructivista .border-amber-800\/20 {
+  border-color: rgba(160, 36, 26, 0.30);
+}
 .theme-constructivista .border-amber-700 {
   border-color: #D02C26;
 }
@@ -215,7 +230,10 @@ code {
 .theme-constructivista .text-gray-500 { color: #6F6C68; }
 .theme-constructivista .text-gray-600 { color: #5A5652; }
 .theme-constructivista .text-gray-700 { color: #4A4642; }
+.theme-constructivista.text-gray-800,
 .theme-constructivista .text-gray-800 { color: #1A1818; }
+.theme-constructivista.text-gray-100,
+.theme-constructivista .text-gray-100 { color: #E5DCD0; }
 /* Fondos de tarjeta con opacidad redondeada en listas */
 .theme-constructivista .bg-gray-900\/60 {
   background-color: rgba(10, 9, 9, 0.72);
@@ -233,6 +251,7 @@ code {
    Fondo marfil→camello→tan, tinta marrón oscuro, acentos rojo
    bermellón. Cálido pero SIN amarillo. Mantiene el oscuro.
    ============================================================ */
+.theme-constructivista.theme-pergamino.bg-gradient-to-br.from-amber-50.via-yellow-50.to-orange-50,
 .theme-constructivista.theme-pergamino .bg-gradient-to-br.from-amber-50.via-yellow-50.to-orange-50 {
   background-image: linear-gradient(135deg, #F5EDD9 0%, #F0E3C9 45%, #E2D0A9 75%, #D6BF8F 100%);
 }
@@ -266,6 +285,9 @@ code {
 .theme-constructivista.theme-pergamino .border-amber-700 {
   border-color: #A0241A;
 }
+.theme-constructivista.theme-pergamino.text-amber-900,
+.theme-constructivista.theme-pergamino.text-amber-800,
+.theme-constructivista.theme-pergamino.text-gray-800,
 .theme-constructivista.theme-pergamino .text-amber-900,
 .theme-constructivista.theme-pergamino .text-amber-800,
 .theme-constructivista.theme-pergamino .text-gray-800 {
@@ -273,7 +295,7 @@ code {
 }
 .theme-constructivista.theme-pergamino .text-amber-700,
 .theme-constructivista.theme-pergamino .text-amber-600 {
-  color: #8A6336;
+  color: #7A5230;
 }
 .theme-constructivista.theme-pergamino .text-amber-50,
 .theme-constructivista.theme-pergamino .text-amber-100 {
@@ -281,11 +303,11 @@ code {
 }
 .theme-constructivista.theme-pergamino .text-gray-600,
 .theme-constructivista.theme-pergamino .text-gray-700 {
-  color: #77684C;
+  color: #5F5238;
 }
 .theme-constructivista.theme-pergamino .text-gray-400,
 .theme-constructivista.theme-pergamino .text-gray-500 {
-  color: #98896B;
+  color: #6F5F45;
 }
 .theme-constructivista.theme-pergamino .bg-red-100,
 .theme-constructivista.theme-pergamino .bg-red-200 {
@@ -309,82 +331,3 @@ code {
   color: #A3241E;
 }
 
-/* ============================================================
-   PROPUESTA CLARA 2 — AFICHE (papel de imprenta descolorido,
-   neutro, contraste fuerte de afiche soviético/anarquista)
-   ============================================================ */
-.theme-constructivista.theme-afiche .bg-gradient-to-br.from-amber-50.via-yellow-50.to-orange-50 {
-  background-image: linear-gradient(135deg, #EAE3D3 0%, #DDD3BE 55%, #CFC2A6 100%);
-}
-.theme-constructivista.theme-afiche .bg-amber-100\/80,
-.theme-constructivista.theme-afiche .bg-amber-100\/60 {
-  background-color: #EAE3D3;
-}
-.theme-constructivista.theme-afiche .bg-gradient-to-br.from-amber-50.to-orange-50 {
-  background-image: linear-gradient(135deg, #F0E9D9 0%, #DDD3BE 100%);
-}
-.theme-constructivista.theme-afiche .bg-white\/60,
-.theme-constructivista.theme-afiche .bg-white\/80 {
-  background-color: rgba(240, 233, 217, 0.92);
-}
-.theme-constructivista.theme-afiche .bg-amber-200,
-.theme-constructivista.theme-afiche .bg-amber-200\/50 {
-  background-color: #D0C3A4;
-}
-.theme-constructivista.theme-afiche .bg-amber-100\/50 {
-  background-color: rgba(234, 227, 211, 0.65);
-}
-.theme-constructivista.theme-afiche .border-amber-300 {
-  border-color: #BFB194;
-}
-.theme-constructivista.theme-afiche .border-amber-400 {
-  border-color: #A99A7B;
-}
-.theme-constructivista.theme-afiche .border-amber-100 {
-  border-color: #DDD3BE;
-}
-.theme-constructivista.theme-afiche .border-amber-700 {
-  border-color: #B0241E;
-}
-.theme-constructivista.theme-afiche .text-amber-900,
-.theme-constructivista.theme-afiche .text-amber-800,
-.theme-constructivista.theme-afiche .text-gray-800 {
-  color: #26221C;
-}
-.theme-constructivista.theme-afiche .text-amber-700,
-.theme-constructivista.theme-afiche .text-amber-600 {
-  color: #7A4630;
-}
-.theme-constructivista.theme-afiche .text-amber-50,
-.theme-constructivista.theme-afiche .text-amber-100 {
-  color: #EAE3D3;
-}
-.theme-constructivista.theme-afiche .text-gray-600,
-.theme-constructivista.theme-afiche .text-gray-700 {
-  color: #6E675A;
-}
-.theme-constructivista.theme-afiche .text-gray-400,
-.theme-constructivista.theme-afiche .text-gray-500 {
-  color: #8E8779;
-}
-.theme-constructivista.theme-afiche .bg-red-100,
-.theme-constructivista.theme-afiche .bg-red-200 {
-  background-color: #E0C0B8;
-}
-.theme-constructivista.theme-afiche .bg-amber-700 {
-  background-color: #B0241E;
-}
-.theme-constructivista.theme-afiche .bg-amber-800 {
-  background-color: #96201B;
-}
-.theme-constructivista.theme-afiche .bg-red-600 {
-  background-color: #B0241E;
-}
-.theme-constructivista.theme-afiche .bg-red-700 {
-  background-color: #96201B;
-}
-.theme-constructivista.theme-afiche .text-red-500,
-.theme-constructivista.theme-afiche .text-red-400,
-.theme-constructivista.theme-afiche .text-red-600 {
-  color: #B0241E;
-}

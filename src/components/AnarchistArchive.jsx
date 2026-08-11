@@ -26,8 +26,6 @@ const AnarchistArchive = () => {
   const { favorites, toggleFavorite } = useFavorites();
   const { showScrollTop, scrollToTop } = useScrollTop();
 
-  const [testConstructivista, setTestConstructivista] = useState(0);
-
   const [activeView, setActiveView] = useState(VIEWS.TIMELINE);
   const [selectedRegion, setSelectedRegion] = useState(null);
   const [selectedEvent, setSelectedEvent] = useState(null);
@@ -68,15 +66,10 @@ const AnarchistArchive = () => {
     : 'bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 text-gray-800';
 
   return (
-    <div className={`min-h-screen ${bgClass} transition-colors duration-500 ${
-      testConstructivista === 1 ? 'theme-constructivista theme-pergamino' :
-      testConstructivista === 2 ? 'theme-constructivista theme-afiche' : ''
-    }`}>
+    <div className={`min-h-screen ${bgClass} transition-colors duration-500 theme-constructivista theme-pergamino`}>
       <Header
         darkMode={darkMode}
         onDarkModeToggle={toggleDarkMode}
-        onTestConstructivista={() => setTestConstructivista(prev => (prev + 1) % 3)}
-        testConstructivista={testConstructivista}
         onShowTour={() => setShowTour(true)}
         onShowStats={() => setShowStats(!showStats)}
         stats={stats}
@@ -111,6 +104,7 @@ const AnarchistArchive = () => {
               darkMode={darkMode}
               filteredEvents={filteredEvents}
               onSelectEvent={setSelectedEvent}
+              onClearFilters={clearFilters}
             />
           </div>
         )}
@@ -148,6 +142,17 @@ const AnarchistArchive = () => {
           />
         )}
       </main>
+
+      <footer className={`border-t-4 ${darkMode ? 'border-red-900 bg-black/30' : 'border-amber-800 bg-amber-100/60'}`}>
+        <div className="container mx-auto px-4 py-8 text-center">
+          <p className={`font-display uppercase tracking-widest text-sm mb-2 ${darkMode ? 'text-gray-300' : 'text-amber-900'}`}>
+            Archivo Histórico Anarquista · 1840–1968
+          </p>
+          <p className={`text-xs ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
+            Textos de dominio público · {stats.texts} registros en el catálogo
+          </p>
+        </div>
+      </footer>
 
       {showTour && (
         <TourModal

@@ -48,14 +48,14 @@ const LibraryView = ({
   const inputClass = `w-full md:w-72 px-4 py-2 rounded-lg border text-sm ${
     darkMode
       ? 'bg-gray-800 border-gray-700 text-gray-200 placeholder-gray-500'
-      : 'bg-white border-amber-300 text-gray-800 placeholder-amber-400'
+      : 'bg-white border-amber-300 text-gray-800 placeholder-amber-700'
   }`;
 
   return (
     <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <div className="flex items-center gap-3 mb-2">
         <BookOpen className={darkMode ? 'text-red-400' : 'text-amber-800'} size={28} />
-        <h2 className={`text-3xl font-bold ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
+        <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
           Biblioteca
         </h2>
       </div>

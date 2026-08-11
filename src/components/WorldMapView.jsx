@@ -66,10 +66,10 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
       : 1;
     const [light, dark] = darkMode
       ? ['#fca5a5', '#7f1d1d']
-      : ['#fde68a', '#92400e'];
+      : ['#E4CCC0', '#8A1E19'];
     return {
       fill: lerpColor(light, dark, t),
-      stroke: darkMode ? '#f87171' : '#f59e0b',
+      stroke: darkMode ? '#f87171' : '#A0241A',
       strokeWidth: 1,
       cursor: 'pointer'
     };
@@ -85,7 +85,7 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
 
   return (
     <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
-      <h2 className={`text-3xl font-bold mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
+      <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         Mapa Mundial de Textos
       </h2>
       <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
@@ -96,8 +96,8 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
         data={mapData}
         frame
         backgroundColor="transparent"
-        borderColor={darkMode ? '#7f1d1d' : '#b45309'}
-        frameColor={darkMode ? '#7f1d1d' : '#b45309'}
+        borderColor={darkMode ? '#7f1d1d' : '#A0241A'}
+        frameColor={darkMode ? '#7f1d1d' : '#A0241A'}
         onClickFunction={handleCountryClick}
         styleFunction={styleFunction}
         tooltipTextFunction={tooltipTextFunction}
@@ -111,14 +111,14 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
           style={{
             background: darkMode
               ? 'linear-gradient(to right, #fca5a5, #7f1d1d)'
-              : 'linear-gradient(to right, #fde68a, #92400e)',
+              : 'linear-gradient(to right, #E4CCC0, #8A1E19)',
             borderColor: darkMode ? '#52525b' : '#d6d3d1'
           }}
         />
         <span className={`text-xs ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>Muchos textos</span>
       </div>
 
-      <h3 className={`text-xl font-bold mt-8 mb-4 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
+      <h3 className={`text-xl font-display uppercase tracking-wide mt-8 mb-4 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         O navega por región
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

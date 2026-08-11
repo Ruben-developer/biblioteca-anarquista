@@ -4,10 +4,34 @@ import { THEME } from '../constants';
 const TimelineView = ({ 
   darkMode, 
   filteredEvents, 
-  onSelectEvent
+  onSelectEvent,
+  onClearFilters
 }) => {
   const themeClass = darkMode ? THEME.dark : THEME.light;
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
+
+  if (filteredEvents.length === 0) {
+    return (
+      <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-12 text-center`}>
+        <p className={`text-xl font-semibold mb-3 ${darkMode ? 'text-gray-200' : 'text-amber-900'}`}>
+          No hay eventos que coincidan con los filtros
+        </p>
+        <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
+          Prueba con otra búsqueda o limita menos la década, categoría o región.
+        </p>
+        <button
+          onClick={onClearFilters}
+          className={`px-5 py-3 rounded-lg font-display uppercase tracking-wide text-sm transition-all ${
+            darkMode
+              ? 'bg-red-600 text-white hover:bg-red-700'
+              : 'bg-amber-800 text-amber-50 hover:bg-red-700'
+          }`}
+        >
+          Limpiar filtros
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 overflow-x-auto`}>
@@ -26,7 +50,7 @@ const TimelineView = ({
                 onClick={() => onSelectEvent(event)}
               >
                 <div className="flex justify-between mb-3">
-                  <span className={`text-3xl font-bold ${darkMode ? 'text-gray-300' : 'text-amber-800'}`}>
+                  <span className={`text-3xl font-display ${darkMode ? 'text-gray-300' : 'text-amber-800'}`}>
                     {event.year}
                   </span>
                   <span className={`text-xs px-3 py-1 rounded-full ${darkMode ? 'bg-gray-800' : 'bg-amber-200'}`}>

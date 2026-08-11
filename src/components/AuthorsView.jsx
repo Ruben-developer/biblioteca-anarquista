@@ -17,7 +17,7 @@ const AuthorsView = ({
 
   return (
     <div>
-      <h2 className={`text-3xl font-bold mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
+      <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         Autores del Archivo
       </h2>
       <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>

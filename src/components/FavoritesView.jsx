@@ -12,7 +12,7 @@ const FavoritesView = ({
 
   return (
     <div>
-      <h2 className={`text-3xl font-bold mb-6 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
+      <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-6 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         Mis Favoritos
       </h2>
       {favorites.length === 0 ? (
