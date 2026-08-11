@@ -1,0 +1,278 @@
+// @vitest-environment jsdom
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import React from 'react';
+import { render, screen, fireEvent, cleanup, within } from '@testing-library/react';
+import TimelineFilters from './TimelineFilters';
+import TourModal from './TourModal';
+import EventModal from './EventModal';
+import RegionModal from './RegionModal';
+import LibraryView from './LibraryView';
+import AnarchistArchive from './AnarchistArchive';
+
+afterEach(cleanup);
+
+describe('TimelineFilters interactivo', () => {
+  const baseFilters = { searchTerm: '', decade: 'all', category: 'all', region: 'all' };
+
+  it('llama onFilterChange con el término al escribir en el buscador', () => {
+    const onFilterChange = vi.fn();
+    render(
+      <TimelineFilters
+        darkMode={false}
+        filters={baseFilters}
+        onFilterChange={onFilterChange}
+        onShowFilters={() => {}}
+        showFilters
+        onClearFilters={() => {}}
+        eventCount={5}
+        totalEventCount={16}
+      />
+    );
+    fireEvent.change(screen.getByPlaceholderText('Buscar eventos...'), { target: { value: 'chicago' } });
+    expect(onFilterChange).toHaveBeenCalledWith({ ...baseFilters, searchTerm: 'chicago' });
+  });
+
+  it('llama onFilterChange con la década al pulsar un botón de década', () => {
+    const onFilterChange = vi.fn();
+    render(
+      <TimelineFilters
+        darkMode={false}
+        filters={baseFilters}
+        onFilterChange={onFilterChange}
+        onShowFilters={() => {}}
+        showFilters
+        onClearFilters={() => {}}
+        eventCount={5}
+        totalEventCount={16}
+      />
+    );
+    fireEvent.click(screen.getByText('1930s'));
+    expect(onFilterChange).toHaveBeenCalledWith({ ...baseFilters, decade: '1930s' });
+  });
+
+  it('llama onFilterChange con la categoría al pulsar un botón de categoría', () => {
+    const onFilterChange = vi.fn();
+    render(
+      <TimelineFilters
+        darkMode={false}
+        filters={baseFilters}
+        onFilterChange={onFilterChange}
+        onShowFilters={() => {}}
+        showFilters
+        onClearFilters={() => {}}
+        eventCount={5}
+        totalEventCount={16}
+      />
+    );
+    fireEvent.click(screen.getByRole('button', { name: /Historia/ }));
+    expect(onFilterChange).toHaveBeenCalledWith({ ...baseFilters, category: 'historia' });
+  });
+
+  it('llama onFilterChange con la región al pulsar un botón de región', () => {
+    const onFilterChange = vi.fn();
+    render(
+      <TimelineFilters
+        darkMode={false}
+        filters={baseFilters}
+        onFilterChange={onFilterChange}
+        onShowFilters={() => {}}
+        showFilters
+        onClearFilters={() => {}}
+        eventCount={5}
+        totalEventCount={16}
+      />
+    );
+    fireEvent.click(screen.getByText('Francia'));
+    expect(onFilterChange).toHaveBeenCalledWith({ ...baseFilters, region: 'Francia' });
+  });
+
+  it('llama onShowFilters y onClearFilters con sus botones', () => {
+    const onShowFilters = vi.fn();
+    const onClearFilters = vi.fn();
+    render(
+      <TimelineFilters
+        darkMode={false}
+        filters={{ ...baseFilters, searchTerm: 'x' }}
+        onFilterChange={() => {}}
+        onShowFilters={onShowFilters}
+        showFilters
+        onClearFilters={onClearFilters}
+        eventCount={5}
+        totalEventCount={16}
+      />
+    );
+    fireEvent.click(screen.getByText('Filtros'));
+    expect(onShowFilters).toHaveBeenCalled();
+    fireEvent.click(screen.getByText('Limpiar'));
+    expect(onClearFilters).toHaveBeenCalled();
+  });
+});
+
+describe('TourModal interactivo', () => {
+  it('cierra al hacer clic en el fondo (backdrop)', () => {
+    const onClose = vi.fn();
+    const { container } = render(<TourModal darkMode={false} onClose={onClose} />);
+    fireEvent.click(screen.getByRole('dialog'));
+    expect(onClose).toHaveBeenCalled();
+    container.remove();
+  });
+
+  it('cierra al pulsar Escape', () => {
+    const onClose = vi.fn();
+    const { container } = render(<TourModal darkMode={false} onClose={onClose} />);
+    fireEvent.keyDown(screen.getByRole('dialog'), { key: 'Escape' });
+    expect(onClose).toHaveBeenCalled();
+    container.remove();
+  });
+
+  it('cierra al pulsar el botón ¡Comenzar!', () => {
+    const onClose = vi.fn();
+    const { container } = render(<TourModal darkMode={false} onClose={onClose} />);
+    fireEvent.click(screen.getByText('¡Comenzar!'));
+    expect(onClose).toHaveBeenCalled();
+    container.remove();
+  });
+});
+
+describe('EventModal interactivo', () => {
+  const event = {
+    year: 1886,
+    title: 'Mártires de Chicago',
+    region: 'Estados Unidos',
+    image: '⚖️',
+    description: 'Descripción',
+    quote: 'Cita',
+    author: 'Autor'
+  };
+
+  it('cierra al hacer clic en el fondo y al pulsar Escape', () => {
+    const onClose = vi.fn();
+    const { container } = render(<EventModal darkMode={false} event={event} onClose={onClose} />);
+    fireEvent.click(screen.getByRole('dialog'));
+    expect(onClose).toHaveBeenCalledTimes(1);
+    fireEvent.keyDown(screen.getByRole('dialog'), { key: 'Escape' });
+    expect(onClose).toHaveBeenCalledTimes(2);
+    container.remove();
+  });
+});
+
+describe('RegionModal interactivo', () => {
+  const regionData = {
+    España: {
+      books: [
+        { title: 'La Columna', author: 'Autor', year: 1936, category: 'historia', filename: 'a.pdf', rating: 4 },
+        { title: 'Un ensayo', author: 'Otro', year: 1890, category: 'teoria', filename: 'b.pdf', rating: 3 }
+      ]
+    }
+  };
+
+  it('cierra al hacer clic en el fondo', () => {
+    const onClose = vi.fn();
+    const { container } = render(
+      <RegionModal darkMode={false} region="España" regionData={regionData} favorites={[]} onClose={onClose} onToggleFavorite={() => {}} />
+    );
+    fireEvent.click(screen.getByRole('dialog'));
+    expect(onClose).toHaveBeenCalled();
+    container.remove();
+  });
+
+  it('solo muestra textos históricos y alterna favorito al pulsar el corazón', () => {
+    const onToggleFavorite = vi.fn();
+    const { container } = render(
+      <RegionModal darkMode={false} region="España" regionData={regionData} favorites={[]} onClose={() => {}} onToggleFavorite={onToggleFavorite} />
+    );
+    expect(screen.getByText('La Columna')).toBeTruthy();
+    expect(screen.queryByText('Un ensayo')).toBeNull();
+    fireEvent.click(screen.getByTitle('Agregar a favoritos'));
+    expect(onToggleFavorite).toHaveBeenCalledWith('La Columna');
+    container.remove();
+  });
+});
+
+describe('LibraryView interactivo', () => {
+  const regionData = {
+    España: {
+      books: [
+        { title: 'La Conquista del Pan', author: 'Kropotkin', year: 1892, category: 'teoria', rating: 4.8, filename: 'anarquismo/a.pdf' },
+        { title: 'Columna Durruti', author: 'Colectivo', year: 1936, category: 'historia', rating: 4.9, filename: 'anarquismo/b.pdf' }
+      ]
+    },
+    Francia: {
+      books: [
+        { title: '¿Qué es la Propiedad?', author: 'Proudhon', year: 1840, category: 'teoria', rating: 4.9, filename: 'anarquismo/c.pdf' }
+      ]
+    }
+  };
+  const noop = () => {};
+
+  it('filtra por búsqueda y muestra el contador actualizado', () => {
+    const { container } = render(<LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />);
+    fireEvent.change(screen.getByLabelText('Buscar obra'), { target: { value: 'Pan' } });
+    expect(screen.getByText('1 de 3 obras del archivo. Busca y filtra por categoría, región o década.')).toBeTruthy();
+    expect(screen.getByText('La Conquista del Pan')).toBeTruthy();
+    expect(screen.queryByText('Columna Durruti')).toBeNull();
+    container.remove();
+  });
+
+  it('filtra por región, década y categoría con los selectores', () => {
+    const { container } = render(<LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />);
+    fireEvent.change(screen.getByLabelText('Filtrar por región'), { target: { value: 'España' } });
+    expect(screen.queryByText('¿Qué es la Propiedad?')).toBeNull();
+    expect(screen.getByText('La Conquista del Pan')).toBeTruthy();
+    fireEvent.change(screen.getByLabelText('Filtrar por década'), { target: { value: '1890s' } });
+    expect(screen.getByText('1 de 3 obras del archivo. Busca y filtra por categoría, región o década.')).toBeTruthy();
+    fireEvent.change(screen.getByLabelText('Filtrar por categoría'), { target: { value: 'teoria' } });
+    // Sigue quedando La Conquista del Pan (España, 1892, teoría); Columna Durruti (1936) queda fuera por década.
+    expect(screen.getByText('La Conquista del Pan')).toBeTruthy();
+    expect(screen.queryByText('Columna Durruti')).toBeNull();
+    container.remove();
+  });
+
+  it('muestra el estado vacío cuando no hay coincidencias y limpia con el botón', () => {
+    const { container } = render(<LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />);
+    fireEvent.change(screen.getByLabelText('Buscar obra'), { target: { value: 'noexiste' } });
+    expect(screen.getByText('No hay obras que coincidan con los filtros.')).toBeTruthy();
+    fireEvent.click(screen.getByText('Limpiar filtros'));
+    expect(screen.getByText('3 de 3 obras del archivo. Busca y filtra por categoría, región o década.')).toBeTruthy();
+    container.remove();
+  });
+
+  it('llama onToggleFavorite al pulsar el corazón de una obra', () => {
+    const onToggleFavorite = vi.fn();
+    const { container } = render(<LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={onToggleFavorite} />);
+    const bookCard = screen.getByText('La Conquista del Pan').closest('div.rounded-lg');
+    fireEvent.click(within(bookCard).getByTitle('Agregar a favoritos'));
+    expect(onToggleFavorite).toHaveBeenCalledWith('La Conquista del Pan');
+    container.remove();
+  });
+});
+
+describe('AnarchistArchive interactivo (navegación completa)', () => {
+  it('navega a Biblioteca y filtra una obra desde el buscador', () => {
+    const { container } = render(<AnarchistArchive />);
+    fireEvent.click(screen.getByRole('button', { name: /Biblioteca/ }));
+    expect(screen.getAllByText('Biblioteca').length).toBeGreaterThan(0);
+    fireEvent.change(screen.getByLabelText('Buscar obra'), { target: { value: 'Kropotkin' } });
+    expect(screen.getAllByText(/Kropotkin/).length).toBeGreaterThan(0);
+    container.remove();
+  });
+
+  it('abre un evento de la línea temporal y cierra el modal con Escape', () => {
+    const { container } = render(<AnarchistArchive />);
+    const eventButton = screen.getAllByText(/Semana Trágica|Mártires|Revolución|huelga|Jornadas|zapatista|Seattle|Génova|15M|Rojava|Kronstadt|Comuna|Española|Primero|Chicago|Barcelona/)[0];
+    fireEvent.click(eventButton);
+    expect(screen.getByRole('dialog')).toBeTruthy();
+    fireEvent.keyDown(screen.getByRole('dialog'), { key: 'Escape' });
+    expect(screen.queryByRole('dialog')).toBeNull();
+    container.remove();
+  });
+
+  it('abre y cierra el tour de bienvenida', () => {
+    const { container } = render(<AnarchistArchive />);
+    fireEvent.click(screen.getByTitle('Información y tour'));
+    expect(screen.getByText('Bienvenido')).toBeTruthy();
+    fireEvent.click(screen.getByText('¡Comenzar!'));
+    expect(screen.queryByText('Bienvenido')).toBeNull();
+    container.remove();
+  });
+});
