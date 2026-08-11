@@ -26,7 +26,7 @@ const AnarchistArchive = () => {
   const { favorites, toggleFavorite } = useFavorites();
   const { showScrollTop, scrollToTop } = useScrollTop();
 
-  const [testConstructivista, setTestConstructivista] = useState(false);
+  const [testConstructivista, setTestConstructivista] = useState(0);
 
   const [activeView, setActiveView] = useState(VIEWS.TIMELINE);
   const [selectedRegion, setSelectedRegion] = useState(null);
@@ -68,11 +68,14 @@ const AnarchistArchive = () => {
     : 'bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 text-gray-800';
 
   return (
-    <div className={`min-h-screen ${bgClass} transition-colors duration-500 ${testConstructivista ? 'theme-constructivista' : ''}`}>
+    <div className={`min-h-screen ${bgClass} transition-colors duration-500 ${
+      testConstructivista === 1 ? 'theme-constructivista theme-pergamino' :
+      testConstructivista === 2 ? 'theme-constructivista theme-afiche' : ''
+    }`}>
       <Header
         darkMode={darkMode}
         onDarkModeToggle={toggleDarkMode}
-        onTestConstructivista={() => setTestConstructivista(prev => !prev)}
+        onTestConstructivista={() => setTestConstructivista(prev => (prev + 1) % 3)}
         testConstructivista={testConstructivista}
         onShowTour={() => setShowTour(true)}
         onShowStats={() => setShowStats(!showStats)}

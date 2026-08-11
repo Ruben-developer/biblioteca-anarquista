@@ -46,10 +46,12 @@ const Header = ({
             </button>
             <button 
               onClick={onTestConstructivista}
-              className={`p-2 md:p-3 rounded-lg ${themeClass.button} transition-colors ${testConstructivista ? 'ring-2 ring-red-600' : ''}`}
-              title="Test visual: tema constructivista"
+              className={`p-2 md:p-3 rounded-lg ${themeClass.button} transition-colors ${testConstructivista > 0 ? 'ring-2 ring-red-600' : ''}`}
+              title={testConstructivista === 1 ? 'Test visual: pergamino (pulsa para afiche)' : testConstructivista === 2 ? 'Test visual: afiche (pulsa para clásico)' : 'Test visual: pergamino'}
             >
               <Palette size={20} />
+              {testConstructivista === 1 && <span className="ml-1 text-xs font-bold">1</span>}
+              {testConstructivista === 2 && <span className="ml-1 text-xs font-bold">2</span>}
             </button>
             <button 
               onClick={onDarkModeToggle}

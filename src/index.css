@@ -227,3 +227,164 @@ code {
 .theme-constructivista .bg-gradient-to-r.from-amber-600.via-amber-700.to-amber-800 {
   background-image: linear-gradient(90deg, #D02C26 0%, #B0241E 60%, #8A1813 100%);
 }
+
+/* ============================================================
+   PROPUESTA CLARA 1 — PERGAMINO (papel envejecido, cálido y suave)
+   Fondo crema no-amarillo, tarjetas marfil, texto marrón oscuro,
+   acentos rojo apagado. Mantiene el oscuro constructivista.
+   ============================================================ */
+.theme-constructivista.theme-pergamino .bg-gradient-to-br.from-amber-50.via-yellow-50.to-orange-50 {
+  background-image: linear-gradient(135deg, #F3E9D8 0%, #E8D9C0 55%, #DEC9A8 100%);
+}
+.theme-constructivista.theme-pergamino .bg-amber-100\/80,
+.theme-constructivista.theme-pergamino .bg-amber-100\/60 {
+  background-color: #F3E9D8;
+}
+.theme-constructivista.theme-pergamino .bg-gradient-to-br.from-amber-50.to-orange-50 {
+  background-image: linear-gradient(135deg, #F7EFE0 0%, #E8D9C0 100%);
+}
+.theme-constructivista.theme-pergamino .bg-white\/60,
+.theme-constructivista.theme-pergamino .bg-white\/80 {
+  background-color: rgba(247, 239, 224, 0.92);
+}
+.theme-constructivista.theme-pergamino .bg-amber-200,
+.theme-constructivista.theme-pergamino .bg-amber-200\/50 {
+  background-color: #D9C9A9;
+}
+.theme-constructivista.theme-pergamino .bg-amber-100\/50 {
+  background-color: rgba(243, 233, 216, 0.65);
+}
+.theme-constructivista.theme-pergamino .border-amber-300 {
+  border-color: #CDB993;
+}
+.theme-constructivista.theme-pergamino .border-amber-400 {
+  border-color: #B7A077;
+}
+.theme-constructivista.theme-pergamino .border-amber-100 {
+  border-color: #E8D9C0;
+}
+.theme-constructivista.theme-pergamino .border-amber-700 {
+  border-color: #A3241E;
+}
+.theme-constructivista.theme-pergamino .text-amber-900,
+.theme-constructivista.theme-pergamino .text-amber-800,
+.theme-constructivista.theme-pergamino .text-gray-800 {
+  color: #4A3A26;
+}
+.theme-constructivista.theme-pergamino .text-amber-700,
+.theme-constructivista.theme-pergamino .text-amber-600 {
+  color: #8A5A32;
+}
+.theme-constructivista.theme-pergamino .text-amber-50,
+.theme-constructivista.theme-pergamino .text-amber-100 {
+  color: #F3E9D8;
+}
+.theme-constructivista.theme-pergamino .text-gray-600,
+.theme-constructivista.theme-pergamino .text-gray-700 {
+  color: #7A6A52;
+}
+.theme-constructivista.theme-pergamino .text-gray-400,
+.theme-constructivista.theme-pergamino .text-gray-500 {
+  color: #9A8A72;
+}
+.theme-constructivista.theme-pergamino .bg-red-100,
+.theme-constructivista.theme-pergamino .bg-red-200 {
+  background-color: #E4CCC0;
+}
+.theme-constructivista.theme-pergamino .bg-amber-700 {
+  background-color: #A3241E;
+}
+.theme-constructivista.theme-pergamino .bg-amber-800 {
+  background-color: #8A1E19;
+}
+.theme-constructivista.theme-pergamino .bg-red-600 {
+  background-color: #A3241E;
+}
+.theme-constructivista.theme-pergamino .bg-red-700 {
+  background-color: #8A1E19;
+}
+.theme-constructivista.theme-pergamino .text-red-500,
+.theme-constructivista.theme-pergamino .text-red-400,
+.theme-constructivista.theme-pergamino .text-red-600 {
+  color: #A3241E;
+}
+
+/* ============================================================
+   PROPUESTA CLARA 2 — AFICHE (papel de imprenta descolorido,
+   neutro, contraste fuerte de afiche soviético/anarquista)
+   ============================================================ */
+.theme-constructivista.theme-afiche .bg-gradient-to-br.from-amber-50.via-yellow-50.to-orange-50 {
+  background-image: linear-gradient(135deg, #EAE3D3 0%, #DDD3BE 55%, #CFC2A6 100%);
+}
+.theme-constructivista.theme-afiche .bg-amber-100\/80,
+.theme-constructivista.theme-afiche .bg-amber-100\/60 {
+  background-color: #EAE3D3;
+}
+.theme-constructivista.theme-afiche .bg-gradient-to-br.from-amber-50.to-orange-50 {
+  background-image: linear-gradient(135deg, #F0E9D9 0%, #DDD3BE 100%);
+}
+.theme-constructivista.theme-afiche .bg-white\/60,
+.theme-constructivista.theme-afiche .bg-white\/80 {
+  background-color: rgba(240, 233, 217, 0.92);
+}
+.theme-constructivista.theme-afiche .bg-amber-200,
+.theme-constructivista.theme-afiche .bg-amber-200\/50 {
+  background-color: #D0C3A4;
+}
+.theme-constructivista.theme-afiche .bg-amber-100\/50 {
+  background-color: rgba(234, 227, 211, 0.65);
+}
+.theme-constructivista.theme-afiche .border-amber-300 {
+  border-color: #BFB194;
+}
+.theme-constructivista.theme-afiche .border-amber-400 {
+  border-color: #A99A7B;
+}
+.theme-constructivista.theme-afiche .border-amber-100 {
+  border-color: #DDD3BE;
+}
+.theme-constructivista.theme-afiche .border-amber-700 {
+  border-color: #B0241E;
+}
+.theme-constructivista.theme-afiche .text-amber-900,
+.theme-constructivista.theme-afiche .text-amber-800,
+.theme-constructivista.theme-afiche .text-gray-800 {
+  color: #26221C;
+}
+.theme-constructivista.theme-afiche .text-amber-700,
+.theme-constructivista.theme-afiche .text-amber-600 {
+  color: #7A4630;
+}
+.theme-constructivista.theme-afiche .text-amber-50,
+.theme-constructivista.theme-afiche .text-amber-100 {
+  color: #EAE3D3;
+}
+.theme-constructivista.theme-afiche .text-gray-600,
+.theme-constructivista.theme-afiche .text-gray-700 {
+  color: #6E675A;
+}
+.theme-constructivista.theme-afiche .text-gray-400,
+.theme-constructivista.theme-afiche .text-gray-500 {
+  color: #8E8779;
+}
+.theme-constructivista.theme-afiche .bg-red-100,
+.theme-constructivista.theme-afiche .bg-red-200 {
+  background-color: #E0C0B8;
+}
+.theme-constructivista.theme-afiche .bg-amber-700 {
+  background-color: #B0241E;
+}
+.theme-constructivista.theme-afiche .bg-amber-800 {
+  background-color: #96201B;
+}
+.theme-constructivista.theme-afiche .bg-red-600 {
+  background-color: #B0241E;
+}
+.theme-constructivista.theme-afiche .bg-red-700 {
+  background-color: #96201B;
+}
+.theme-constructivista.theme-afiche .text-red-500,
+.theme-constructivista.theme-afiche .text-red-400,
+.theme-constructivista.theme-afiche .text-red-600 {
+  color: #B0241E;
+}
