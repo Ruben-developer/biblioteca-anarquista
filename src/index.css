@@ -229,70 +229,70 @@ code {
 }
 
 /* ============================================================
-   PROPUESTA CLARA 1 — PERGAMINO (papel envejecido, cálido y suave)
-   Fondo crema no-amarillo, tarjetas marfil, texto marrón oscuro,
-   acentos rojo apagado. Mantiene el oscuro constructivista.
+   PROPUESTA CLARA 1 — PERGAMINO (vitela/papel envejecido real)
+   Fondo marfil→camello→tan, tinta marrón oscuro, acentos rojo
+   bermellón. Cálido pero SIN amarillo. Mantiene el oscuro.
    ============================================================ */
 .theme-constructivista.theme-pergamino .bg-gradient-to-br.from-amber-50.via-yellow-50.to-orange-50 {
-  background-image: linear-gradient(135deg, #F3E9D8 0%, #E8D9C0 55%, #DEC9A8 100%);
+  background-image: linear-gradient(135deg, #F5EDD9 0%, #F0E3C9 45%, #E2D0A9 75%, #D6BF8F 100%);
 }
 .theme-constructivista.theme-pergamino .bg-amber-100\/80,
 .theme-constructivista.theme-pergamino .bg-amber-100\/60 {
-  background-color: #F3E9D8;
+  background-color: #F3E9D2;
 }
 .theme-constructivista.theme-pergamino .bg-gradient-to-br.from-amber-50.to-orange-50 {
-  background-image: linear-gradient(135deg, #F7EFE0 0%, #E8D9C0 100%);
+  background-image: linear-gradient(135deg, #FAF3E3 0%, #EFE1C4 100%);
 }
 .theme-constructivista.theme-pergamino .bg-white\/60,
 .theme-constructivista.theme-pergamino .bg-white\/80 {
-  background-color: rgba(247, 239, 224, 0.92);
+  background-color: rgba(248, 240, 220, 0.92);
 }
 .theme-constructivista.theme-pergamino .bg-amber-200,
 .theme-constructivista.theme-pergamino .bg-amber-200\/50 {
-  background-color: #D9C9A9;
+  background-color: #D8C49A;
 }
 .theme-constructivista.theme-pergamino .bg-amber-100\/50 {
-  background-color: rgba(243, 233, 216, 0.65);
+  background-color: rgba(243, 233, 210, 0.68);
 }
 .theme-constructivista.theme-pergamino .border-amber-300 {
-  border-color: #CDB993;
+  border-color: #CBB788;
 }
 .theme-constructivista.theme-pergamino .border-amber-400 {
-  border-color: #B7A077;
+  border-color: #B79F6E;
 }
 .theme-constructivista.theme-pergamino .border-amber-100 {
-  border-color: #E8D9C0;
+  border-color: #E5D4B0;
 }
 .theme-constructivista.theme-pergamino .border-amber-700 {
-  border-color: #A3241E;
+  border-color: #A0241A;
 }
 .theme-constructivista.theme-pergamino .text-amber-900,
 .theme-constructivista.theme-pergamino .text-amber-800,
 .theme-constructivista.theme-pergamino .text-gray-800 {
-  color: #4A3A26;
+  color: #33291A;
 }
 .theme-constructivista.theme-pergamino .text-amber-700,
 .theme-constructivista.theme-pergamino .text-amber-600 {
-  color: #8A5A32;
+  color: #8A6336;
 }
 .theme-constructivista.theme-pergamino .text-amber-50,
 .theme-constructivista.theme-pergamino .text-amber-100 {
-  color: #F3E9D8;
+  color: #F5EDD9;
 }
 .theme-constructivista.theme-pergamino .text-gray-600,
 .theme-constructivista.theme-pergamino .text-gray-700 {
-  color: #7A6A52;
+  color: #77684C;
 }
 .theme-constructivista.theme-pergamino .text-gray-400,
 .theme-constructivista.theme-pergamino .text-gray-500 {
-  color: #9A8A72;
+  color: #98896B;
 }
 .theme-constructivista.theme-pergamino .bg-red-100,
 .theme-constructivista.theme-pergamino .bg-red-200 {
   background-color: #E4CCC0;
 }
 .theme-constructivista.theme-pergamino .bg-amber-700 {
-  background-color: #A3241E;
+  background-color: #A0241A;
 }
 .theme-constructivista.theme-pergamino .bg-amber-800 {
   background-color: #8A1E19;
