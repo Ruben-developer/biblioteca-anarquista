@@ -48,6 +48,19 @@ export const timelineEvents = [
     relatedTexts: ["Los Mártires de Chicago", "El origen del 1º de Mayo"]
   },
   {
+    year: 1903,
+    decade: '1900s',
+    type: 'con_texto',
+    title: "Levantamiento de Ilinden",
+    description: "Insurrección popular en Macedonia y Tracia contra el Imperio Otomano; la banda de Chernopeev y la Federación Anarquista Balcánica.",
+    region: "Macedonia",
+    category: "revolucion",
+    image: "🏴",
+    quote: "¡Abajo el Sultán, viva la Federación balcánica!",
+    author: "Banda de Chernopeev",
+    relatedTexts: ["La Banda de Chernopeev"]
+  },
+  {
     year: 1909,
     decade: '1900s',
     type: 'con_texto',
@@ -84,7 +97,7 @@ export const timelineEvents = [
     image: "💔",
     quote: "Historia de la lucha",
     author: "FORA",
-    relatedTexts: ["La FORA"]
+    relatedTexts: ["La FORA", "Los anarquistas expropiadores"]
   },
   {
     year: 1921,
@@ -128,7 +141,11 @@ export const timelineEvents = [
       "Colectividades Libertarias",
       "Los Amigos de Durruti",
       "El corto verano de la anarquía",
-      "Los anarquistas en la crisis política española (1869-1939)"
+      "Los anarquistas en la crisis política española (1869-1939)",
+      "Mujeres Libres",
+      "Mujeres Libres (1936-1939). Una lectura feminista",
+      "Las colectividades libertarias en España (1936-1938)",
+      "El error político-militar de la República"
     ]
   },
   {

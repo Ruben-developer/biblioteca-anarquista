@@ -180,5 +180,11 @@ export const regionData = {  "España": {
     books: [
       { title: "Revolución anarquista en Corea: la Comuna de Shinmin (1929-1932)", author: "Emílio Crisi", year: 2018, category: "historia", rating: 4.5, summary: "La experiencia de autogestión de los anarquistas coreanos en Manchuria, con textos de Shin Chae-ho.", filename: "anarquismo/f17817312_Microsoft_Word_Revoluci_363n_Anarquista_en_Corea_y_otros_textos_sob_re_el_anarquismo_coreano.pdf" }
     ]
+  },
+  "Macedonia": {
+    iso: "mk",
+    books: [
+      { title: "La Banda de Chernopeev", author: "Colectivo anarquista de Macedonia", year: 1903, category: "historia", rating: 4.5, summary: "Los levantamientos de 1903 en Macedonia y Tracia: la insurrección popular contra el Imperio Otomano y la federación balcánica.", filename: "anarquismo/f33455568_La_Banda_de_Chernopeev_1903.pdf" }
+    ]
   }
 };
