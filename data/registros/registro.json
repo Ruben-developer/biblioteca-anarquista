@@ -165,6 +165,15 @@
       "prs": 0,
       "ci": "verde",
       "nota": "TURNO 12:00 agente daily-dev. FASE 6 objetivo 85%+ SUPERADO: 37 tests nuevos en 8 archivos para ramas edge (temas oscuros de vistas, regiones sin ISO/sin books, libros sin ano/rating/resumen, favoritos, region inexistente, autores sin datos, obras sin archivo, ScrollTopButton con scroll simulado, tooltip/click del mapa en jsdom, sort con campos incompletos, getEventRelatedTexts, JSON sin clave documents). 117->154 tests, coverage statements 97%->98.98%, branches 79.35%->97.96% (396/499->578/590), functions 84.69%->90.81%. npm run check (lint 0 errores + 154 tests + build) verde, CI Pages verde (run 31511160387), commit 49bea9f. Inspeccion: descargas 112/112 OK, regiones 16/16/16, audit solo devDeps build-time (vite/vitest/esbuild, fix requeriria --force y rompe Vite 4, no aplica a Pages). Pendiente sugerido: re-analisis SonarQube para actualizar gate (new_coverage ~98% statements) y ampliar catalogo con @content-importer."
+    },
+    {
+      "fecha": "2026-08-12",
+      "obras": 119,
+      "palabras": 1112,
+      "commits": 2,
+      "prs": 0,
+      "ci": "verde",
+      "nota": "TURNO 12:00 agente daily-dev (completado manualmente desde el chat; el cron no pudo iniciar por cambios sin marcar). Invariante mapa<-timeline (regla de negocio con el usuario): tarjetas \"O navega por region\" SOLO con >=1 texto historico ordenadas por n DESC (Inglaterra solo teoria no se pinta). Invariante timeline==mapa: 27/44 -> 44/44. Los eventos NACEN de los textos: 16 tarjetas nuevas + Makhnovschina->Kronstadt (32 eventos). filterEvents ordena cronologicamente. Autores = obra completa (historia + ideas). Nuevo subagente @evento-builder que mantiene timeline==mapa. Catalogo: 119 textos (44 historicos / 75 ideas), 17 regiones, 113 descargables (nuevo: La Banda de Chernopeev 1903). npm run check (143 tests) verde, check-downloads 113/113 OK, CI Pages verde (run 31619838053). Commits 4d85cc7 (feat) + 6392eab (docs IDEAS.md)."
     }
   ]
 }

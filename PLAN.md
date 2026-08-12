@@ -183,6 +183,40 @@ contenedor nginx local en la máquina siempre-encendida, y la web enlaza
  - [x] ~~FASE 6 (siguiente): subir ramas hacia el 85%+ y cubrir ramas pendientes de `WorldMap`, `RegionModal`, `LibraryView`, `EventModal` (branch coverage actual 79.35%).~~ → **SUPERADO 2026-08-11 (12:00)**: branches 97.96%, functions 90.81%.
  - [ ] (Ideas de mejora en evaluación) Dashboard de métricas, obra del día, más agentes expertos.
  - [ ] Ampliar el catálogo con `@content-importer` hasta agotar los ~400 PDFs del contenedor.
+ - [x] **Invariante mapa ↔ timeline (regla de negocio con el usuario)** ✅ 2026-08-12 (12:00): tarjetas "O navega por región" SOLO con ≥1 texto histórico ordenadas por nº DESC (Inglaterra, solo teoría, ni se pinta ni crea tarjeta). **Invariante 27/44 → 44/44**: todos los textos históricos vinculados a eventos. Los eventos NACEN de los textos: 16 tarjetas nuevas + Makhnovschina→Kronstadt (32 eventos). `filterEvents` ordena cronológicamente. Autores = obra completa (historia + ideas). Nuevo subagente `@evento-builder` que mantiene `timeline == mapa`. **119 textos (44 hist / 75 ideas), 17 regiones, 32 eventos, 113 descargables**. 143 tests OK, `npm run check` verde, CI verde (run 31619838053). Commits 4d85cc7 + 6392eab.
+
+### Nota del día (2026-08-12, 12:00)
+Turno 12:00 del agente `daily-dev` (completado manualmente desde el chat: el cron
+no pudo iniciar por cambios sin marcar previos). Inspección (paso 1.5): descargas
+**113/113 OK**, regiones sincronizadas **17/17/17** (fuente única `regionData.js`),
+`npm audit` con 5 vulnerabilidades SOLO en devDeps build-time (vite/vitest/esbuild;
+fix exigiría `--force` y rompería Vite 4 → no aplica a Pages), build sin warnings.
+**Tarea del plan (regla de negocio definida con el usuario — invariante mapa ↔
+timeline)**:
+- **Tarjetas del mapa**: SOLO regiones con ≥1 texto de categoría histórica,
+  ordenadas por número DESC (`WorldMapView.jsx`). Inglaterra (solo teoría) ni se
+  pinta en el mapa ni crea tarjeta.
+- **Invariante `timeline == mapa`**: los textos de la línea temporal (vinculados a
+  eventos) igualan los textos históricos del mapa. Antes **27/44**; ahora **44/44**.
+- **Los eventos NACEN de los textos**: creadas 16 tarjetas nuevas (banda del Matese,
+  propaganda por el hecho, mártires de Tokio, anarquismo en Chile/Colombia/Bolivia,
+  comuna de Shinmin, educación libertaria, espejo judío, bajo la bandera negra,
+  Nettlau, surrealismo, conjura de los indomables, historia de América Latina,
+  África, Zapatista ampliado) + Makhnovschina → Kronstadt. Timeline: **32 eventos**.
+- **Autores = obra completa**: `AuthorsView` muestra TODOS los libros por autor
+  (historia + ideas); la suma "historia + autores = biblioteca" deja de ser una
+  invariante frágil, cada vista responde a su propósito.
+- **`filterEvents` ordena cronológicamente** (antes dependía del orden del archivo).
+- **Nuevo subagente `@evento-builder`**: los textos históricos importados quedan
+  siempre vinculados a una tarjeta de evento (creándola si no existe), manteniendo
+  la invariante.
+- Catálogo: **119 textos (44 históricos / 75 ideas), 17 regiones, 32 eventos,
+  113 descargables** (nuevo PDF verificado: La Banda de Chernopeev 1903).
+
+**Verificación**: `npm run check` (lint 0 errores + **143 tests** + build) verde.
+`npm run check-downloads` → **113/113 OK**. CI de Pages verde (run 31619838053).
+Commits 4d85cc7 (feat) + 6392eab (docs: IDEAS.md con backups PDFs, Vite, hooks,
+SonarQube CI y fixes de negocio pendientes: rating y libros sin filename).
 
 ### Nota del día (2026-08-11, 12:00)
 Turno 12:00 del agente `daily-dev`. Inspección (paso 1.5): descargas **112/112 OK**,
