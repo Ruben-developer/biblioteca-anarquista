@@ -21,7 +21,7 @@ const AuthorsView = ({
         Autores del Archivo
       </h2>
       <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-        {authors.length} autores, ordenados de más a menos textos de su autoría. Haz clic en un autor para ver sus obras (filosofía e ideas; los textos históricos están en el mapa).
+        {authors.length} autores, ordenados de más a menos textos de su autoría. Haz clic en un autor para ver su obra completa.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {authors.map((author) => {

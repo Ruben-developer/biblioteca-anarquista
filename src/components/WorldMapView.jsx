@@ -127,7 +127,11 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
         O navega por región
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {Object.entries(regionData).map(([region]) => (
+        {Object.entries(regionData)
+          .map(([region]) => ({ region, count: getHistoricalBooks(regionData, region).length }))
+          .filter(({ count }) => count > 0)
+          .sort((a, b) => b.count - a.count)
+          .map(({ region, count }) => (
           <button
             key={region}
             onClick={() => onSelectRegion(region)}
@@ -140,7 +144,7 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
               </h4>
             </div>
             <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-              {getHistoricalBooks(regionData, region).length} textos históricos
+              {count} {count === 1 ? 'texto histórico' : 'textos históricos'}
             </p>
           </button>
         ))}

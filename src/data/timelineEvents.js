@@ -35,6 +35,19 @@ export const timelineEvents = [
     author: "Louise Michel"
   },
   {
+    year: 1877,
+    decade: '1870s',
+    type: 'con_texto',
+    title: "La banda del Matese",
+    description: "Insurrección campesina en Italia encabezada por Malatesta y Cafiero: el intento revolucionario más célebre de la Internacional en el sur.",
+    region: "Italia",
+    category: "revolucion",
+    image: "🏴",
+    quote: "La revolución es un hecho social, no un decreto",
+    author: "Errico Malatesta y Carlo Cafiero",
+    relatedTexts: ["La banda del Matese"]
+  },
+  {
     year: 1886,
     decade: '1880s',
     type: 'con_texto',
@@ -46,6 +59,19 @@ export const timelineEvents = [
     quote: "Nuestro silencio será más poderoso",
     author: "August Spies",
     relatedTexts: ["Los Mártires de Chicago", "El origen del 1º de Mayo"]
+  },
+  {
+    year: 1880,
+    decade: '1880s',
+    type: 'con_texto',
+    title: "La propaganda por el hecho",
+    description: "El atentado como arma de propaganda: terrorismo, dinamita y acción directa como respuesta a la represión.",
+    region: "España",
+    category: "represion",
+    image: "💥",
+    quote: "La dinamita es la gran niveladora",
+    author: "Juan Avilés",
+    relatedTexts: ["El terrorismo anarquista como propaganda por el hecho"]
   },
   {
     year: 1903,
@@ -87,6 +113,19 @@ export const timelineEvents = [
     relatedTexts: ["Anarcosindicalismo y revolución en España (1930-1937)"]
   },
   {
+    year: 1911,
+    decade: '1910s',
+    type: 'con_texto',
+    title: "Los Mártires de Tokio",
+    description: "Ejecución de Kōtoku Shūsui y compañeros en el complot contra el emperador: la represión del anarquismo japonés.",
+    region: "Japón",
+    category: "represion",
+    image: "⚖️",
+    quote: "El gran complot contra el emperador",
+    author: "Kōtoku Shūsui",
+    relatedTexts: ["Los Mártires de Tokio y la Sociedad de la Guillotina"]
+  },
+  {
     year: 1919,
     decade: '1910s',
     type: 'con_texto',
@@ -110,7 +149,7 @@ export const timelineEvents = [
     image: "⚓",
     quote: "Poder a los soviets",
     author: "Marineros",
-    relatedTexts: ["Kronstadt 1921", "La comuna de Kronstadt", "La Revolución Rusa y el anarquismo", "Historia del Movimiento Makhnovista"]
+    relatedTexts: ["Kronstadt 1921", "La comuna de Kronstadt", "La Revolución Rusa y el anarquismo", "Historia del Movimiento Makhnovista", "La Makhnovschina. Un movimiento libertario bajo fuego en Ucrania (1918-1921)"]
   },
   {
     year: 1927,
@@ -124,6 +163,19 @@ export const timelineEvents = [
     quote: "Me niego a perdonar a mis verdugos",
     author: "Bartolomeo Vanzetti",
     relatedTexts: ["La pasión de Sacco y Vanzetti"]
+  },
+  {
+    year: 1929,
+    decade: '1920s',
+    type: 'con_texto',
+    title: "La Comuna de Shinmin",
+    description: "Autogestión de los anarquistas coreanos en Manchuria (1929-1932): la comuna de Shinmin.",
+    region: "Corea",
+    category: "organizacion",
+    image: "🏘️",
+    quote: "Autonomía sin Estado",
+    author: "Federación Anarquista Coreana",
+    relatedTexts: ["Revolución anarquista en Corea: la Comuna de Shinmin (1929-1932)"]
   },
   {
     year: 1936,
@@ -147,6 +199,157 @@ export const timelineEvents = [
       "Las colectividades libertarias en España (1936-1938)",
       "El error político-militar de la República"
     ]
+  },
+  {
+    year: 1910,
+    decade: '1910s',
+    type: 'con_texto',
+    title: "Anarquismo en Chile",
+    description: "Origen y desarrollo del anarquismo chileno (1890-1930): propaganda por los hechos, violencia popular y movimiento obrero.",
+    region: "Chile",
+    category: "movimiento",
+    image: "🏴",
+    quote: "Destruir para construir",
+    author: "Movimiento anarquista chileno",
+    relatedTexts: [
+      "La propaganda por los hechos en el movimiento anarquista chileno (1890-1910)",
+      "Anarquismo y violencia popular en Chile (1898-1927)",
+      "Destruir para construir: violencia y acción directa en la corriente anarquista chilena (1890-1914)",
+      "Wobblie. Hombres, ideas y problemas del anarquismo en los años veinte"
+    ]
+  },
+  {
+    year: 1905,
+    decade: '1900s',
+    type: 'con_texto',
+    title: "Anarquismo en Colombia",
+    description: "Los orígenes del anarquismo colombiano y su vínculo con el liberalismo; pasado y presente del anarcosindicalismo.",
+    region: "Colombia",
+    category: "movimiento",
+    image: "🤝",
+    quote: "Autonomía frente al Estado",
+    author: "Centro de Investigación Libertaria",
+    relatedTexts: [
+      "Los orígenes del anarquismo en Colombia y su relación con el liberalismo",
+      "Pasado y presente del anarquismo y del anarcosindicalismo en Colombia"
+    ]
+  },
+  {
+    year: 1930,
+    decade: '1930s',
+    type: 'con_texto',
+    title: "Anarcosindicalismo en Bolivia",
+    description: "La choledad antiestatal: el anarcosindicalismo en el movimiento obrero boliviano (1912-1965).",
+    region: "Bolivia",
+    category: "organizacion",
+    image: "⛏️",
+    quote: "Antiestatalismo obrero",
+    author: "Huáscar Rodríguez García",
+    relatedTexts: ["La choledad antiestatal. El anarcosindicalismo en el movimiento obrero boliviano (1912-1965)"]
+  },
+  {
+    year: 1990,
+    decade: '1990s',
+    type: 'con_texto',
+    title: "Anarquismo en África",
+    description: "El anarquismo africano: tradiciones comunitarias frente al Estado poscolonial en Nigeria y el continente.",
+    region: "Nigeria",
+    category: "movimiento",
+    image: "🌍",
+    quote: "Comunidad contra el Estado",
+    author: "Sam Mbah e I. E. Igariwey",
+    relatedTexts: ["Anarquismo africano"]
+  },
+  {
+    year: 1910,
+    decade: '1910s',
+    type: 'con_texto',
+    title: "Educación libertaria",
+    description: "La educación libertaria en la Argentina y en México (1861-1945): escuelas racionalistas y pedagogía obrera.",
+    region: "Argentina",
+    category: "movimiento",
+    image: "📚",
+    quote: "La escuela racionalista",
+    author: "Martín Acri y María Cácerez",
+    relatedTexts: ["La educación libertaria en la Argentina y en México (1861-1945)"]
+  },
+  {
+    year: 1920,
+    decade: '1920s',
+    type: 'con_texto',
+    title: "El anarquismo en el espejo judío",
+    description: "Tesis doctoral sobre el anarquismo judío: la presencia de militantes y pensadores judíos en el movimiento libertario.",
+    region: "Rusia",
+    category: "historia",
+    image: "🕎",
+    quote: "Raíces judías del anarquismo",
+    author: "Yago Mellado López",
+    relatedTexts: ["El anarquismo en el espejo judío"]
+  },
+  {
+    year: 1985,
+    decade: '1980s',
+    type: 'con_texto',
+    title: "Bajo la bandera negra",
+    description: "Historia del anarquismo en Alemania y Europa: hechos y figuras del movimiento libertario.",
+    region: "Alemania",
+    category: "historia",
+    image: "🏴",
+    quote: "La tradición libertaria alemana",
+    author: "Justus F. Wittkop",
+    relatedTexts: ["Bajo la bandera negra"]
+  },
+  {
+    year: 1970,
+    decade: '1970s',
+    type: 'con_texto',
+    title: "La anarquía a través de los tiempos",
+    description: "La gran historia panorámica del anarquismo mundial por Max Nettlau.",
+    region: "México",
+    category: "historia",
+    image: "📜",
+    quote: "Historia total del anarquismo",
+    author: "Max Nettlau",
+    relatedTexts: ["La anarquía a través de los tiempos"]
+  },
+  {
+    year: 1930,
+    decade: '1930s',
+    type: 'con_texto',
+    title: "Surrealismo y anarquismo",
+    description: "El encuentro entre el surrealismo francés y el anarquismo en la revista Le Libertaire.",
+    region: "Francia",
+    category: "movimiento",
+    image: "🎨",
+    quote: "La imaginación al poder",
+    author: "Surrealistas en Le Libertaire",
+    relatedTexts: ["Surrealismo y anarquismo"]
+  },
+  {
+    year: 1894,
+    decade: '1890s',
+    type: 'con_texto',
+    title: "La conjura de los indomables",
+    description: "Motín y evasión anarquista en la colonia penitenciaria de la Guayana francesa.",
+    region: "Francia",
+    category: "represion",
+    image: "⛓️",
+    quote: "Fuga de la Guayana",
+    author: "Rodolfo Montes de Oca",
+    relatedTexts: ["La conjura de los indomables"]
+  },
+  {
+    year: 1998,
+    decade: '1990s',
+    type: 'con_texto',
+    title: "Historia del anarquismo en América Latina",
+    description: "Contribución de Luis Vitale a una historia del anarquismo en el continente.",
+    region: "Chile",
+    category: "historia",
+    image: "🌎",
+    quote: "Un continente rebelde",
+    author: "Luis Vitale",
+    relatedTexts: ["Contribución a una historia del anarquismo en América Latina"]
   },
   {
     year: 1968,
@@ -184,7 +387,7 @@ export const timelineEvents = [
     image: "😷",
     quote: "Mandando obedecemos",
     author: "EZLN",
-    relatedTexts: ["Tierra y Libertad", "Regeneración", "La bala y la escuela"]
+    relatedTexts: ["Tierra y Libertad", "Regeneración", "La bala y la escuela", "Artículos de combate", "La traición de la Hoz y el Martillo"]
   },
   {
     year: 1999,

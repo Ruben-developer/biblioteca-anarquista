@@ -83,10 +83,10 @@ describe('WorldMapView edge cases', () => {
     const html = renderToStaticMarkup(
       <WorldMapView darkMode={false} regionData={dataConRegionSinISO} onSelectRegion={noop} />
     );
-    // La región sin ISO aparece como botón de navegación...
+    // La región sin ISO aparece como botón de navegación (tiene 1 histórico)...
     expect(html).toContain('Tierra de Nadie');
-    // ...y 1 texto histórico de la región
-    expect(html).toContain('1 textos históricos');
+    // ...con el singular correcto
+    expect(html).toContain('1 texto histórico');
   });
 
   it('tolera regiones sin lista de libros', () => {
@@ -97,8 +97,9 @@ describe('WorldMapView edge cases', () => {
     const html = renderToStaticMarkup(
       <WorldMapView darkMode={false} regionData={dataSinBooks} onSelectRegion={noop} />
     );
-    expect(html).toContain('Atlántida');
-    expect(html).toContain('0 textos históricos');
+    // Sin libros no hay textos históricos → la región NO genera tarjeta ni se pinta.
+    expect(html).not.toContain('Atlántida');
+    expect(html).not.toContain('0 textos históricos');
   });
 });
 
@@ -116,9 +117,10 @@ describe('WorldMapView — países con 0 textos históricos no se marcan en el m
     expect(engMatch).not.toBeNull();
     expect(engMatch[1]).toContain('#e7e5e4'); // gris por defecto en modo claro
     expect(engMatch[1]).not.toMatch(/rgb\(/);
-    // En la lista por región, Inglaterra muestra su conteo real (0 históricos).
-    expect(html).toContain('Inglaterra');
-    expect(html).toContain('0 textos históricos');
+    // Regla de negocio: con 0 textos históricos, Inglaterra NO genera tarjeta
+    // en "O navega por región" (solo aparecen regiones con ≥1 histórico).
+    expect(html).not.toContain('Inglaterra');
+    expect(html).not.toContain('0 textos históricos');
   });
 
   it('España (con textos históricos) sí recibe color de gradiente en el mapa', () => {

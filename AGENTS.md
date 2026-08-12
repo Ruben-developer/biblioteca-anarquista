@@ -37,13 +37,17 @@ data/registros/   # registro.json (métricas diarias del agente)
 - **Evento histórico** → `src/data/timelineEvents.js` (año, década, title, description, region, category, image, quote, author).
   - Cada evento tiene un **`type`**: `'con_texto'` (tiene textos vinculados, declara `relatedTexts` con los TÍTULOS) o `'hecho'` (suceso sin texto propio).
   - `relatedTexts` empareja por **título**, NO por región/país: así el 15M (2011) enlaza solo con textos del 15M y no con la guerra civil (ambos son de España).
-- **Autor** → `src/data/authors.js` (name, years, region, bio, books, image).
+  - **Los eventos NACEN de los textos**: al importar un texto histórico, si no existe una tarjeta que lo agrupe, se crea (ej. "Anarquismo en Colombia"). Todo texto histórico DEBE quedar vinculado a un evento (`@evento-builder`). El orden del timeline se deriva por año en `filterEvents`, el archivo no necesita estar ordenado.
+- **Autor** → derivado automáticamente de `regionData.js` con `getAllAuthors` (agrupa TODOS los libros: historia + ideas). No hay archivo de autores manual.
 - **Texto por región** → `src/data/regionData.js`. Campos: `title`, `author`, `year`, `category`, `rating`, y opcional `filename`. **FUENTE ÚNICA**: `REGIONS` (filtros) y el ISO del mapa se derivan automáticamente de aquí; no hay que tocar `countryData.js` ni `REGIONS` manualmente.
 - **Metadatos completos de obra** → legacy en `public/documents/documents.json`. Ya no se consume en la app (el catálogo real es `regionData.js`); no añadir obras nuevas aquí.
 - **Nuevo PDF descargable** → añade `filename` al libro en `regionData.js` (el botón Descargar solo aparece si hay `filename`).
 - **Nuevo país en el mapa** → añade la región a `regionData.js` con su campo `iso` (ej. `"Francia": { iso: "fr", books: [...] }`). El mapa, los filtros y `countryData.js` se actualizan solos. Si un país no tiene `iso`, no se pinta en el mapa pero sí aparece en la lista por región.
 - **Mapa**: un país solo se destaca si tiene AL MENOS 1 texto de categoría histórica (historia/revolucion/movimiento/organizacion/represion/periodismo/manifiesto). Si solo tiene teoría (p. ej. Inglaterra), queda en gris. Los textos históricos se filtran con `getHistoricalBooks(regionData, region)` en `src/utils/library.js`.
+  - **Tarjetas "O navega por región"**: se muestran SOLO las regiones con ≥1 texto histórico, ordenadas por número DESC. Una región con 0 históricos ni se pinta ni crea tarjeta.
+  - **Invariante**: `textos en línea temporal (vinculados a eventos) = textos del mapa (históricos)`. Todo texto histórico debe estar vinculado a un evento.
 - **Biblioteca (catálogo)** → usa automáticamente todos los libros de `regionData.js` (`getAllBooks` en `src/utils/library.js`). No requiere registro aparte.
+- **Autores** → muestra TODOS los libros (historia + ideas), agrupados por autor. Los históricos también aparecen aquí (la obra de un autor es completa); el mapa/línea temporal son quienes filtran por categoría.
 - **Lector embebido** → `src/components/ReaderView.jsx`. PDFs se muestran en iframe; TXT se cargan por fetch. Al abrir un libro desde la Biblioteca o el mapa se lanza `ReaderView`.
 
 ### Content importer — flujo de clasificación por TIPO
@@ -53,6 +57,9 @@ data/registros/   # registro.json (métricas diarias del agente)
   - Ambos alimentan la **biblioteca** (`regionData.js`).
 - El material entrante se deja en `PDFs/sin_clasificar/` y al clasificarlo se
   mueve a `PDFs/historia/` o `PDFs/filosofia/` en `/home/fdr/Documentos/anarquismo_importado/PDFs/`.
+- Tras importar un texto HISTÓRICO, invoca a `@evento-builder` para garantizar
+  que quede vinculado a una tarjeta de evento (creándola si no existe). Así se
+  mantiene la invariante `timeline == mapa`.
 
 ## Seguridad: servidor de PDFs (no exponer la IP)
 - La IP interna del servidor (`192.168.1.117:8081`) NO debe aparecer en el código
@@ -90,6 +97,16 @@ data/registros/   # registro.json (métricas diarias del agente)
 - `filename` reales disponibles: carpeta `anarquismo/` (~324 PDFs), `otros/` (~77),
   `ref/` (~9). Verifica con `ls ~/biblioteca-anarquista/pdfs-local/` y prueba con
   `curl -s -o /dev/null -w "%{http_code}" http://192.168.1.117:8081/pdfs/<file>`.
+
+## Notificaciones a Telegram
+- Canal único: `~/.config/biblioteca/notify.sh [--html] [--auto] <mensaje>`.
+- La plantilla añade fecha/hora y tipo en el título de forma automática:
+  `[Manual] 12-08-2026 14:30 — <título>` (manual: desde un turno de chat;
+  `--auto` para las generadas por scripts/cron: `[Automática] ...`).
+- Usar `--html` para mensajes con formato HTML; el `--auto` se combina:
+  `notify.sh --auto --html <mensaje>`.
+- Scripts automáticos: `notify_daily.sh` (rutina 00:00/12:00), `notify_bitacora.sh`
+  (BITACORA.md) y `notify_downloads.sh` (check-downloads). Ya pasan `--auto`.
 
 ## SonarQube (calidad)
 - SonarQube 26.6.0 en `http://192.168.1.117:9000` (dashboard: `?id=biblioteca-anarquista`).
