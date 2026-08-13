@@ -209,22 +209,26 @@ describe('LibraryView interactivo', () => {
     const { container } = render(<LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />);
     fireEvent.change(screen.getByLabelText('Buscar obra'), { target: { value: 'Pan' } });
     expect(screen.getByText('1 de 3 obras del archivo. Busca y filtra por categoría, región o década.')).toBeTruthy();
-    expect(screen.getByText('La Conquista del Pan')).toBeTruthy();
-    expect(screen.queryByText('Columna Durruti')).toBeNull();
+    // Se consulta el grid de tarjetas: el widget "Obra del día" es global y no
+    // depende de los filtros (puede mostrar cualquier título).
+    const grid = container.querySelector('div.grid');
+    expect(grid.textContent).toContain('La Conquista del Pan');
+    expect(grid.textContent).not.toContain('Columna Durruti');
     container.remove();
   });
 
   it('filtra por región, década y categoría con los selectores', () => {
     const { container } = render(<LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />);
+    const grid = container.querySelector('div.grid');
     fireEvent.change(screen.getByLabelText('Filtrar por región'), { target: { value: 'España' } });
-    expect(screen.queryByText('¿Qué es la Propiedad?')).toBeNull();
-    expect(screen.getByText('La Conquista del Pan')).toBeTruthy();
+    expect(grid.textContent).not.toContain('¿Qué es la Propiedad?');
+    expect(grid.textContent).toContain('La Conquista del Pan');
     fireEvent.change(screen.getByLabelText('Filtrar por década'), { target: { value: '1890s' } });
     expect(screen.getByText('1 de 3 obras del archivo. Busca y filtra por categoría, región o década.')).toBeTruthy();
     fireEvent.change(screen.getByLabelText('Filtrar por categoría'), { target: { value: 'teoria' } });
     // Sigue quedando La Conquista del Pan (España, 1892, teoría); Columna Durruti (1936) queda fuera por década.
-    expect(screen.getByText('La Conquista del Pan')).toBeTruthy();
-    expect(screen.queryByText('Columna Durruti')).toBeNull();
+    expect(grid.textContent).toContain('La Conquista del Pan');
+    expect(grid.textContent).not.toContain('Columna Durruti');
     container.remove();
   });
 
@@ -240,8 +244,9 @@ describe('LibraryView interactivo', () => {
   it('llama onToggleFavorite al pulsar el corazón de una obra', () => {
     const onToggleFavorite = vi.fn();
     const { container } = render(<LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={onToggleFavorite} />);
-    const bookCard = screen.getByText('La Conquista del Pan').closest('div.rounded-lg');
-    fireEvent.click(within(bookCard).getByTitle('Agregar a favoritos'));
+    const grid = container.querySelector('div.grid');
+    const card = Array.from(grid.querySelectorAll('div.rounded-lg')).find((el) => el.textContent.includes('La Conquista del Pan'));
+    fireEvent.click(within(card).getByTitle('Agregar a favoritos'));
     expect(onToggleFavorite).toHaveBeenCalledWith('La Conquista del Pan');
     container.remove();
   });

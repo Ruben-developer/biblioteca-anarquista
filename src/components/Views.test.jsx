@@ -9,6 +9,7 @@ import TimelineFilters from './TimelineFilters';
 import FavoritesView from './FavoritesView';
 import ScrollTopButton from './ScrollTopButton';
 import AuthorsView from './AuthorsView';
+import FeaturedBook from './FeaturedBook';
 import { VIEWS } from '../constants';
 
 describe('Navigation', () => {
@@ -313,5 +314,43 @@ describe('AuthorsView interactivo (jsdom)', () => {
     expect(screen.getByText('Obra sin archivo')).toBeTruthy();
     expect(screen.getAllByText('Leer').length).toBe(1);
     container.remove();
+  });
+});
+
+describe('FeaturedBook', () => {
+  const book = {
+    title: 'La Conquista del Pan',
+    author: 'Piotr Kropotkin',
+    year: 1892,
+    category: 'teoria',
+    region: 'España',
+    rating: 4.8,
+    summary: 'El clásico del comunismo anarquista.',
+    filename: 'anarquismo/conquista.pdf'
+  };
+
+  it('renderiza la obra destacada con reseña y botón de lectura', () => {
+    const html = renderToStaticMarkup(<FeaturedBook darkMode={false} book={book} />);
+    expect(html).toContain('Obra del día');
+    expect(html).toContain('La Conquista del Pan');
+    expect(html).toContain('Piotr Kropotkin');
+    expect(html).toContain('El clásico del comunismo anarquista.');
+    expect(html).toContain('Leer esta obra');
+    expect(html).toContain('/pdfs/anarquismo/conquista.pdf');
+  });
+
+  it('usa la variante oscura de colores', () => {
+    const html = renderToStaticMarkup(<FeaturedBook darkMode book={book} />);
+    expect(html).toContain('Obra del día');
+    expect(html).toContain('bg-red-600 text-white');
+  });
+
+  it('no muestra botón de lectura sin filename', () => {
+    const html = renderToStaticMarkup(<FeaturedBook darkMode={false} book={{ ...book, filename: undefined }} />);
+    expect(html).not.toContain('Leer esta obra');
+  });
+
+  it('no renderiza nada sin obra destacada', () => {
+    expect(renderToStaticMarkup(<FeaturedBook darkMode={false} book={null} />)).toBe('');
   });
 });

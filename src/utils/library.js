@@ -131,3 +131,32 @@ export const getAllAuthors = (regionData) => {
     }))
     .sort((a, b) => b.bookCount - a.bookCount || a.name.localeCompare(b.name, 'es'));
 };
+
+// Hash determinista de una fecha local (YYYY-MM-DD del reloj del usuario): la
+// misma obra toda la jornada, una nueva cada día. Usa la fecha local (no UTC)
+// para que el cambio de obra ocurra a medianoche local, no al borde UTC.
+const hashDate = (date) => {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, '0');
+  const d = String(date.getDate()).padStart(2, '0');
+  const seed = `${y}-${m}-${d}`;
+  let hash = 0;
+  for (let i = 0; i < seed.length; i += 1) {
+    hash = (hash * 31 + seed.charCodeAt(i)) >>> 0;
+  }
+  return hash;
+};
+
+// Obra destacada del día: selección diaria y determinista de una obra del
+// archivo para el widget "Obra del día" (IDEAS.md §2). Prioriza obras legibles
+// (con filename) y, entre ellas, las que tienen resumen (la "reseña" del
+// widget). Si el catálogo está vacío o la fecha es inválida devuelve undefined.
+export const getDailyFeaturedBook = (regionData, date = new Date()) => {
+  const all = regionData ? getAllBooks(regionData) : [];
+  if (!all.length) return undefined;
+  const validDate = date instanceof Date && !Number.isNaN(date.getTime()) ? date : new Date();
+  const readable = all.filter((b) => b.filename);
+  const withResena = readable.filter((b) => b.summary);
+  const pool = withResena.length ? withResena : readable.length ? readable : all;
+  return pool[hashDate(validDate) % pool.length] || undefined;
+};

@@ -1,8 +1,9 @@
 import React, { useMemo, useState } from 'react';
 import { Search, BookOpen, Heart, X } from 'lucide-react';
 import { THEME, CATEGORIES, REGIONS } from '../constants';
-import { getAllBooks, filterBooks, sortBooks, getDecadeFromYear } from '../utils/library';
+import { getAllBooks, filterBooks, sortBooks, getDecadeFromYear, getDailyFeaturedBook } from '../utils/library';
 import { getDocumentDownloadUrl } from '../services/documentService';
+import FeaturedBook from './FeaturedBook';
 
 const DECADE_OPTIONS = ['all', '1840s', '1850s', '1860s', '1870s', '1880s', '1890s', '1900s', '1910s', '1920s', '1930s', '1940s', '1950s', '1960s'];
 
@@ -21,6 +22,9 @@ const LibraryView = ({
   const [sort, setSort] = useState('rating');
 
   const allBooks = useMemo(() => getAllBooks(regionData), [regionData]);
+
+  // Obra destacada del día: determinista por fecha (la misma toda la jornada).
+  const featured = useMemo(() => getDailyFeaturedBook(regionData), [regionData]);
 
   const availableDecades = useMemo(() => {
     const set = new Set(allBooks.map((b) => getDecadeFromYear(b.year)).filter((d) => d !== 'all'));
@@ -62,6 +66,8 @@ const LibraryView = ({
       <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
         {filtered.length} de {allBooks.length} obras del archivo. Busca y filtra por categoría, región o década.
       </p>
+
+      <FeaturedBook darkMode={darkMode} book={featured} />
 
       <div className="flex flex-col gap-3 mb-6">
         <div className="relative">
@@ -162,7 +168,7 @@ const LibraryView = ({
                 )}
 
                 <div className="flex items-center gap-3 mt-auto">
-                  {downloadUrl && (
+                  {downloadUrl ? (
                     <a
                       href={downloadUrl}
                       target="_blank"
@@ -174,6 +180,15 @@ const LibraryView = ({
                       <BookOpen size={14} />
                       Leer
                     </a>
+                  ) : (
+                    <span
+                      className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm border ${
+                        darkMode ? 'border-gray-700 text-gray-500' : 'border-amber-300 text-amber-600'
+                      }`}
+                      title="Esta obra aún no tiene archivo digitalizado en el archivo"
+                    >
+                      Sin archivo disponible
+                    </span>
                   )}
                 </div>
               </div>

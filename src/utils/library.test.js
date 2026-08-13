@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { getDecadeFromYear, getAllBooks, getAllAuthors, getEventRelatedTexts, filterBooks, sortBooks } from './library';
+import { getDecadeFromYear, getAllBooks, getAllAuthors, getEventRelatedTexts, filterBooks, sortBooks, getDailyFeaturedBook } from './library';
 
 const regionData = {
   España: {
@@ -199,5 +199,61 @@ describe('getEventRelatedTexts', () => {
     const related = getEventRelatedTexts(rd, { region: 'España', year: 1936, relatedTexts: ['No existe', 'Historia 1936'] });
     expect(related.length).toBe(1);
     expect(related[0].title).toBe('Historia 1936');
+  });
+});
+
+describe('getDailyFeaturedBook', () => {
+  const rd = {
+    España: {
+      books: [
+        { title: 'Obra A con resumen', author: 'A', year: 1892, category: 'teoria', rating: 4.8, filename: 'x.pdf', summary: 'Reseña A.' },
+        { title: 'Obra B con resumen', author: 'B', year: 1936, category: 'biografia', rating: 4.9, filename: 'y.pdf', summary: 'Reseña B.' },
+        { title: 'Con archivo sin resumen', author: 'C', year: 1900, category: 'historia', filename: 'z.pdf' },
+        { title: 'Sin archivo', author: 'D', year: 1910, category: 'historia' }
+      ]
+    }
+  };
+
+  it('devuelve undefined con catálogo vacío o inexistente', () => {
+    expect(getDailyFeaturedBook({})).toBeUndefined();
+    expect(getDailyFeaturedBook(undefined)).toBeUndefined();
+    expect(getDailyFeaturedBook(null)).toBeUndefined();
+  });
+
+  it('es determinista: la misma fecha devuelve siempre la misma obra', () => {
+    const d = new Date('2026-08-12T10:00:00');
+    expect(getDailyFeaturedBook(rd, d)).toEqual(getDailyFeaturedBook(rd, new Date('2026-08-12T23:59:00')));
+  });
+
+  it('varía a lo largo de los días (no es fija)', () => {
+    const days = [];
+    for (let i = 0; i < 40; i += 1) days.push(new Date(2026, 7, 12 + i));
+    const titles = new Set(days.map((d) => getDailyFeaturedBook(rd, d).title));
+    expect(titles.size).toBeGreaterThan(1);
+  });
+
+  it('prioriza obras legibles (con filename) sobre las que no tienen archivo', () => {
+    for (let i = 0; i < 30; i += 1) {
+      const featured = getDailyFeaturedBook(rd, new Date(2026, 7, 12 + i));
+      expect(featured.filename).toBeTruthy();
+    }
+  });
+
+  it('prioriza las legibles con resumen para el widget', () => {
+    for (let i = 0; i < 30; i += 1) {
+      const featured = getDailyFeaturedBook(rd, new Date(2026, 7, 12 + i));
+      expect(featured.summary).toBeTruthy();
+    }
+  });
+
+  it('cae a libros sin archivo si no hay ninguno legible', () => {
+    const soloFicha = { España: { books: [{ title: 'Solo ficha', author: 'X', year: 1900, category: 'historia' }] } };
+    expect(getDailyFeaturedBook(soloFicha, new Date('2026-08-12'))).toMatchObject({ title: 'Solo ficha' });
+  });
+
+  it('tolera fechas inválidas (usa la fecha actual)', () => {
+    const featured = getDailyFeaturedBook(rd, new Date('no-valid'));
+    expect(featured).toBeDefined();
+    expect(featured.filename).toBeTruthy();
   });
 });

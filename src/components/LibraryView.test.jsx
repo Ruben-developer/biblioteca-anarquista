@@ -35,7 +35,16 @@ describe('LibraryView', () => {
     expect(html).toContain('La Conquista del Pan');
     expect(html).toContain('Columna Durruti');
     expect(html).toContain('¿Qué es la Propiedad?');
-    expect((html.match(/Leer/g) || []).length).toBe(3);
+    // 3 botones de tarjeta + 1 botón del widget "Obra del día"
+    expect((html.match(/Leer/g) || []).length).toBe(4);
+  });
+
+  it('muestra el widget Obra del día con la obra destacada', () => {
+    const html = renderToStaticMarkup(
+      <LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />
+    );
+    expect(html).toContain('Obra del día');
+    expect(html).toContain('Leer esta obra');
   });
 
   it('muestra la región y categoría de cada obra', () => {
@@ -96,12 +105,14 @@ describe('LibraryView edge cases', () => {
     expect(html).not.toContain('Resumen de la obra');
   });
 
-  it('no muestra botón Leer para obras sin archivo', () => {
+  it('no muestra botón Leer para obras sin archivo y lo indica', () => {
     const html = renderToStaticMarkup(
       <LibraryView darkMode={false} regionData={regionDataEdge} favorites={[]} onToggleFavorite={noop} />
     );
-    // Solo las 2 obras con filename tienen enlace Leer
-    expect((html.match(/Leer/g) || []).length).toBe(2);
+    // 2 tarjetas con archivo tienen enlace Leer + 1 del widget (obra destacada con resumen)
+    expect((html.match(/Leer/g) || []).length).toBe(3);
+    // La obra sin archivo ahora se marca explícitamente (fix de negocio IDEAS.md)
+    expect(html).toContain('Sin archivo disponible');
   });
 
   it('marca como favorito el corazón de las obras guardadas', () => {
