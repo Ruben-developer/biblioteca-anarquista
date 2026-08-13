@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { getDecadeFromYear, getAllBooks, getAllAuthors, getEventRelatedTexts, filterBooks, sortBooks, getDailyFeaturedBook } from './library';
+import { getDecadeFromYear, getAllBooks, getAllAuthors, getEventRelatedTexts, filterBooks, sortBooks, getDailyFeaturedBook, getArchiveStats } from './library';
 
 const regionData = {
   España: {
@@ -255,5 +255,79 @@ describe('getDailyFeaturedBook', () => {
     const featured = getDailyFeaturedBook(rd, new Date('no-valid'));
     expect(featured).toBeDefined();
     expect(featured.filename).toBeTruthy();
+  });
+});
+
+describe('getArchiveStats', () => {
+  const rd = {
+    España: {
+      books: [
+        { title: 'Teoría A', author: 'Autor 1', year: 1892, category: 'teoria', filename: 'a.pdf' },
+        { title: 'Historia B', author: 'Autor 2', year: 1937, category: 'historia', filename: 'b.pdf' },
+        { title: 'Teoría C', author: 'Autor 1', year: 1910, category: 'teoria', filename: 'c.pdf' },
+        { title: 'Sin año', author: 'Autor 3', category: 'manifiesto' }
+      ]
+    },
+    Francia: {
+      books: [
+        { title: 'Revolución D', author: 'Autor 1', year: 1871, category: 'revolucion', filename: 'd.pdf' },
+        { title: 'Biografía E', author: 'Autor 4', year: 1920, category: 'biografia' }
+      ]
+    }
+  };
+  const events = [{ title: 'E1' }, { title: 'E2' }, { title: 'E3' }];
+
+  it('devuelve ceros y listas vacías con catálogo vacío', () => {
+    const s = getArchiveStats({}, []);
+    expect(s).toMatchObject({ texts: 0, events: 0, regions: 0, authors: 0, downloadables: 0, withoutFile: 0, historical: 0, ideas: 0 });
+    expect(s.categories).toEqual([]);
+    expect(s.topAuthors).toEqual([]);
+    expect(s.topRegions).toEqual([]);
+    expect(s.byDecade).toEqual([]);
+  });
+
+  it('cuenta textos, eventos, regiones y autores', () => {
+    const s = getArchiveStats(rd, events);
+    expect(s.texts).toBe(6);
+    expect(s.events).toBe(3);
+    expect(s.regions).toBe(2);
+    expect(s.authors).toBe(4);
+  });
+
+  it('separa descargables vs sin archivo', () => {
+    const s = getArchiveStats(rd);
+    expect(s.downloadables).toBe(4); // a.pdf + b.pdf + c.pdf + d.pdf
+    expect(s.withoutFile).toBe(2); // Sin año + Biografía E
+  });
+
+  it('separa históricos (mapa/timeline) vs ideas (autores)', () => {
+    const s = getArchiveStats(rd);
+    expect(s.historical).toBe(3); // Historia B + Sin año (manifiesto) + Revolución D
+    expect(s.ideas).toBe(3); // Teoría A + Teoría C + Biografía E
+  });
+
+  it('agrupa por categoría de más a menos obras', () => {
+    const s = getArchiveStats(rd);
+    expect(s.categories[0]).toEqual({ category: 'teoria', count: 2 });
+    const counts = s.categories.map((c) => c.count);
+    expect(counts).toEqual([...counts].sort((a, b) => b - a));
+  });
+
+  it('topAutores: los más prolíficos primero (top 5)', () => {
+    const s = getArchiveStats(rd);
+    expect(s.topAuthors[0]).toEqual({ name: 'Autor 1', count: 3 });
+    expect(s.topAuthors).toHaveLength(4);
+  });
+
+  it('topRegiones: ordenadas por nº de obras DESC con conteo histórico', () => {
+    const s = getArchiveStats(rd);
+    expect(s.topRegions[0]).toEqual({ region: 'España', count: 4, historical: 2 });
+    expect(s.topRegions[1]).toEqual({ region: 'Francia', count: 2, historical: 1 });
+  });
+
+  it('byDecade: cronológico e ignora obras sin año', () => {
+    const s = getArchiveStats(rd);
+    expect(s.byDecade.map((d) => d.decade)).toEqual(['1870s', '1890s', '1910s', '1920s', '1930s']);
+    expect(s.byDecade[0]).toEqual({ decade: '1870s', count: 1 });
   });
 });

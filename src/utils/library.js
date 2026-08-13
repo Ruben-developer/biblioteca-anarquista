@@ -160,3 +160,67 @@ export const getDailyFeaturedBook = (regionData, date = new Date()) => {
   const pool = withResena.length ? withResena : readable.length ? readable : all;
   return pool[hashDate(validDate) % pool.length] || undefined;
 };
+
+// Métricas del dashboard del archivo (FASE 2): un único objeto computado desde
+// la fuente única (regionData + timelineEvents) para que el StatsPanel y el
+// Header/footer usen exactamente los mismos números.
+export const getArchiveStats = (regionData, timelineEvents = []) => {
+  const books = regionData ? getAllBooks(regionData) : [];
+  const texts = books.length;
+  const events = Array.isArray(timelineEvents) ? timelineEvents.length : 0;
+  const regions = Object.keys(regionData || {}).length;
+  const authors = getAllAuthors(regionData);
+
+  const downloadables = books.filter((b) => b.filename).length;
+  const historical = books.filter((b) => isHistoricalBook(b)).length;
+
+  // Distribución por categoría (todas las presentes, ordenadas de más a menos).
+  const catCounts = new Map();
+  books.forEach((b) => {
+    const cat = b.category || 'sin categoría';
+    catCounts.set(cat, (catCounts.get(cat) || 0) + 1);
+  });
+  const categories = Array.from(catCounts.entries())
+    .map(([category, count]) => ({ category, count }))
+    .sort((a, b) => b.count - a.count || a.category.localeCompare(b.category, 'es'));
+
+  // Autores más prolíficos (top 5 por número de obras).
+  const topAuthors = authors.slice(0, 5).map((a) => ({ name: a.name, count: a.bookCount }));
+
+  // Regiones con más obras (todas, no solo históricas) + nº de históricas,
+  // para poder señalar cuáles aparecen en el mapa.
+  const topRegions = Object.entries(regionData || {})
+    .map(([region, data]) => ({
+      region,
+      count: data.books?.length || 0,
+      historical: getHistoricalBooks(regionData, region).length
+    }))
+    .sort((a, b) => b.count - a.count || a.region.localeCompare(b.region, 'es'));
+
+  // Textos por década (solo años conocidos, orden cronológico).
+  const decadeCounts = new Map();
+  books.forEach((b) => {
+    const decade = getDecadeFromYear(b.year);
+    if (decade && decade !== 'all') {
+      decadeCounts.set(decade, (decadeCounts.get(decade) || 0) + 1);
+    }
+  });
+  const byDecade = Array.from(decadeCounts.entries())
+    .map(([decade, count]) => ({ decade, count }))
+    .sort((a, b) => a.decade.localeCompare(b.decade));
+
+  return {
+    texts,
+    events,
+    regions,
+    authors: authors.length,
+    downloadables,
+    withoutFile: texts - downloadables,
+    historical,
+    ideas: texts - historical,
+    categories,
+    topAuthors,
+    topRegions,
+    byDecade
+  };
+};

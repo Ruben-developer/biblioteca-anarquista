@@ -56,9 +56,18 @@ describe('Header', () => {
 });
 
 describe('StatsPanel', () => {
-  it('muestra las cuatro métricas', () => {
+  const stats = {
+    texts: 114, events: 32, regions: 17, authors: 40,
+    downloadables: 113, withoutFile: 1, historical: 44, ideas: 70,
+    categories: [{ category: 'teoria', count: 40 }, { category: 'historia', count: 20 }],
+    topAuthors: [{ name: 'Ricardo Mella', count: 7 }, { name: 'Piotr Kropotkin', count: 5 }],
+    topRegions: [{ region: 'España', count: 29, historical: 12 }, { region: 'Francia', count: 18, historical: 2 }],
+    byDecade: [{ decade: '1930s', count: 15 }, { decade: '1890s', count: 9 }]
+  };
+
+  it('muestra las métricas clave del archivo', () => {
     const html = renderToStaticMarkup(
-      <StatsPanel darkMode={false} stats={{ texts: 114, events: 16, regions: 16, authors: 40 }} />
+      <StatsPanel darkMode={false} stats={stats} />
     );
     expect(html).toContain('Textos');
     expect(html).toContain('Eventos');
@@ -66,6 +75,43 @@ describe('StatsPanel', () => {
     expect(html).toContain('Autores');
     expect(html).toContain('114');
     expect(html).toContain('40');
+  });
+
+  it('muestra el estado del archivo (descargables, históricos, ideas)', () => {
+    const html = renderToStaticMarkup(
+      <StatsPanel darkMode={false} stats={stats} />
+    );
+    expect(html).toContain('Descargables');
+    expect(html).toContain('Sin archivo');
+    expect(html).toContain('Históricos');
+    expect(html).toContain('Ideas');
+    expect(html).toContain('113');
+    expect(html).toContain('44');
+  });
+
+  it('renderiza las secciones del dashboard (categorías, autores, regiones, décadas)', () => {
+    const html = renderToStaticMarkup(
+      <StatsPanel darkMode={false} stats={stats} />
+    );
+    expect(html).toContain('Composición por categoría');
+    expect(html).toContain('Teoría');
+    expect(html).toContain('Autores más prolíficos');
+    expect(html).toContain('Ricardo Mella');
+    expect(html).toContain('7 obras');
+    expect(html).toContain('Regiones con más obras');
+    expect(html).toContain('España');
+    expect(html).toContain('Textos por década');
+    expect(html).toContain('1930s');
+  });
+
+  it('tolera stats sin secciones (cae a mensajes vacíos)', () => {
+    const html = renderToStaticMarkup(
+      <StatsPanel darkMode={false} stats={{ texts: 0, events: 0, regions: 0, authors: 0 }} />
+    );
+    expect(html).toContain('Sin datos de categorías.');
+    expect(html).toContain('Sin autores registrados.');
+    expect(html).toContain('Sin regiones registradas.');
+    expect(html).toContain('Sin obras con año registrado.');
   });
 });
 
@@ -212,9 +258,10 @@ describe('TimelineView en modo oscuro', () => {
 describe('StatsPanel en modo oscuro', () => {
   it('aplica las clases de tema oscuro', () => {
     const html = renderToStaticMarkup(
-      <StatsPanel darkMode stats={{ texts: 114, events: 16, regions: 16, authors: 40 }} />
+      <StatsPanel darkMode stats={{ texts: 114, events: 16, regions: 16, authors: 40, downloadables: 113, withoutFile: 1, historical: 44, ideas: 70, categories: [{ category: 'teoria', count: 40 }], topAuthors: [{ name: 'Ricardo Mella', count: 7 }], topRegions: [{ region: 'España', count: 29, historical: 12 }], byDecade: [{ decade: '1930s', count: 15 }] }} />
     );
     expect(html).toContain('text-red-400');
+    expect(html).toContain('bg-red-600');
     expect(html).toContain('114');
   });
 });

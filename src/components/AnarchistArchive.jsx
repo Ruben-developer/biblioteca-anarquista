@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { timelineEvents } from '../data/timelineEvents';
 import { regionData } from '../data/regionData';
 import { VIEWS } from '../constants';
-import { filterEvents, calculateTotalTexts } from '../utils/filters';
-import { getAllAuthors } from '../utils/library';
+import { filterEvents } from '../utils/filters';
+import { getAllAuthors, getArchiveStats } from '../utils/library';
 import { useScrollTop, useDarkMode, useFavorites } from '../hooks';
 
 // Components
@@ -45,12 +45,9 @@ const AnarchistArchive = () => {
   // Autores derivados del catálogo: agrupados por autoría, de más a menos obras.
   const dynamicAuthors = getAllAuthors(regionData);
 
-  const stats = {
-    texts: calculateTotalTexts(regionData),
-    events: timelineEvents.length,
-    regions: Object.keys(regionData).length,
-    authors: dynamicAuthors.length
-  };
+  // Métricas del archivo (dashboard + header/footer) — fuente única
+  // getArchiveStats(regionData, timelineEvents).
+  const stats = getArchiveStats(regionData, timelineEvents);
 
   const clearFilters = () => {
     setFilters({
