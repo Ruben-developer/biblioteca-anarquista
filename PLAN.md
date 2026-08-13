@@ -63,7 +63,7 @@ public/documents/        → documents.json (metadatos) + TXT de descarga
 - [ ] Dashboard de métricas del archivo.
 
 ### FASE 3 — Lectura enriquecida
-- [ ] Obra destacada aleatoria del día (ver `IDEAS.md`).
+- [x] **Obra destacada aleatoria del día** ✅ 2026-08-12: widget "Obra del día" en la Biblioteca — selección determinista por fecha local (`getDailyFeaturedBook` en `library.js`), prioriza obras legibles con resumen, botón de lectura directo. Commit 5a76b39.
 - [ ] Referencias cruzadas entre textos y eventos.
 - [ ] Mapas visuales por región.
 - [ ] Más filtros y búsqueda avanzada.
@@ -181,9 +181,11 @@ contenedor nginx local en la máquina siempre-encendida, y la web enlaza
  - [x] **FASE 6: cubrir ramas pendientes (objetivo 85%+ SUPERADO)** ✅ 2026-08-11 (12:00): 37 tests nuevos en 8 archivos (Views, WorldMapView, LibraryView, Modals, AnarchistArchive, WorldMap, library, documentService) para ramas edge: modos de tema oscuro de vistas, regiones sin ISO/sin books en el mapa, libros sin año/rating/resumen, favoritos, región inexistente, autores sin años/regiones, obras sin archivo, scroll top, tooltip/click del mapa (jsdom), sort con campos incompletos, `getEventRelatedTexts` y JSON malformado. **Coverage: 117→154 tests, statements 97%→98.98%, branches 79.35%→97.96% (396/499→578/590), functions 84.69%→90.81%**. `npm run check` verde, CI de Pages verde (run 31511160387). Commit 49bea9f.
  - [ ] Enriquecer `documents.json` con metadatos completos de las obras nuevas del catálogo (hoy solo 2 entradas; el servicio usa `regionData` como fuente principal, ver decisión en la nota del día). → **BAJA PRIORIDAD**: `documents.json` quedó legacy (solo lo usa `documentService.js` para consultas no usadas por la UI; el catálogo real vive en `regionData.js` + `library.js`). Se sugiere en su lugar **eliminar la deuda**: valorar deprecar `documentService` o documentar que es mantenimiento de compatibilidad.
  - [x] ~~FASE 6 (siguiente): subir ramas hacia el 85%+ y cubrir ramas pendientes de `WorldMap`, `RegionModal`, `LibraryView`, `EventModal` (branch coverage actual 79.35%).~~ → **SUPERADO 2026-08-11 (12:00)**: branches 97.96%, functions 90.81%.
- - [ ] (Ideas de mejora en evaluación) Dashboard de métricas, obra del día, más agentes expertos.
+ - [ ] (Ideas de mejora en evaluación) Dashboard de métricas, obra del día, más agentes expertos. → **OBRA DEL DÍA ✅ 2026-08-12**; siguen pendientes Dashboard de métricas y más agentes expertos.
+ - [ ] **6 libros sin filename** (En el café, Mártires de Chicago, Regeneración, Tierra y Libertad, Severino Di Giovanni, Luis E. Recabarren): → **parcialmente atendido 2026-08-12**: ya se marcan "Sin archivo disponible" en la Biblioteca (UX honesta). Falta conseguir los textos (no están en el contenedor ni en el origen local; Bayer/Grez con derechos de autor). Pendiente para `@content-importer` cuando haya fuentes.
  - [ ] Ampliar el catálogo con `@content-importer` hasta agotar los ~400 PDFs del contenedor.
  - [x] **Invariante mapa ↔ timeline (regla de negocio con el usuario)** ✅ 2026-08-12 (12:00): tarjetas "O navega por región" SOLO con ≥1 texto histórico ordenadas por nº DESC (Inglaterra, solo teoría, ni se pinta ni crea tarjeta). **Invariante 27/44 → 44/44**: todos los textos históricos vinculados a eventos. Los eventos NACEN de los textos: 16 tarjetas nuevas + Makhnovschina→Kronstadt (32 eventos). `filterEvents` ordena cronológicamente. Autores = obra completa (historia + ideas). Nuevo subagente `@evento-builder` que mantiene `timeline == mapa`. **119 textos (44 hist / 75 ideas), 17 regiones, 32 eventos, 113 descargables**. 143 tests OK, `npm run check` verde, CI verde (run 31619838053). Commits 4d85cc7 + 6392eab.
+ - [x] **FASE 3: Obra destacada del día** ✅ 2026-08-12 (ejecución extra 21:1x): widget "Obra del día" en la Biblioteca — `getDailyFeaturedBook` (determinista por fecha local; prioriza legibles con resumen; hoy: "La lucha contra el Estado", Nettlau 1920) + `FeaturedBook.jsx` con reseña y botón de lectura. Fix de negocio menor (IDEAS.md): las 6 obras sin `filename` muestran "Sin archivo disponible" en la Biblioteca. **143 → 155 tests**, `npm run check` verde (lint 0 + 155 tests + build), CI verde (run 31656981533). Commit 5a76b39.
 
 ### Nota del día (2026-08-12, 12:00)
 Turno 12:00 del agente `daily-dev` (completado manualmente desde el chat: el cron
@@ -218,7 +220,41 @@ timeline)**:
 Commits 4d85cc7 (feat) + 6392eab (docs: IDEAS.md con backups PDFs, Vite, hooks,
 SonarQube CI y fixes de negocio pendientes: rating y libros sin filename).
 
-### Nota del día (2026-08-11, 12:00)
+### Nota del día (2026-08-12, ejecución extra ~21:1x)
+Ejecución adicional del agente `daily-dev` (el turno 12:00 ya se había completado
+a las 13:26). Inspección (paso 1.5): descargas **113/113 OK**, regiones
+sincronizadas **17/17/17** (fuente única `regionData.js`, verificadas con
+`vite-node`), invariante `timeline == mapa` **44/44** (32 eventos, 0 títulos
+fantasma, 0 `con_texto` sin textos), `npm audit` con 5 vulnerabilidades SOLO en
+devDeps build-time (vite/vitest/vite-node; fix exigiría `--force` y rompería
+Vite 4 → no aplica a Pages), build sin warnings. Sin errores críticos, así que
+se continuó con la siguiente tarea del plan.
+**Tarea del plan (FASE 3, primer checkbox pendiente — "Obra destacada aleatoria
+del día", IDEAS.md §2)**:
+- **Widget "Obra del día"** (`src/components/FeaturedBook.jsx`): destaca una
+  obra del catálogo con su reseña y botón de lectura, integrado arriba de los
+  filtros de la Biblioteca.
+- **`getDailyFeaturedBook(regionData, date)`** (`src/utils/library.js`): selección
+  determinista por **fecha local** (hash YYYY-MM-DD, sin depender de UTC para
+  que el cambio ocurra a medianoche local). Prioriza obras legibles (con
+  `filename`) y, entre ellas, las que tienen resumen. Devuelve `undefined` con
+  catálogo vacío o fecha inválida. Hoy destaca: **"La lucha contra el Estado"
+  (Max Nettlau, 1920, Alemania)** — PDF verificado HTTP 200.
+- **Fix de negocio menor (IDEAS.md)**: las **6 obras sin `filename`** (En el
+  café, Mártires de Chicago, Regeneración, Tierra y Libertad, Severino Di
+  Giovanni, Luis E. Recabarren) muestran "Sin archivo disponible" en la tarjeta
+  de la Biblioteca en vez de un hueco sin botón. Verificado: esos textos no
+  están en el contenedor ni en el origen local (los de Bayer/Grez tienen
+  derechos de autor); queda registrado para `@content-importer` cuando haya
+  fuentes.
+- **Tests**: 143 → **155** (7 de `getDailyFeaturedBook` en `library.test.js`:
+  determinismo, variación diaria, prioridad legibles/resumen, fallback, fechas
+  inválidas; 4 del widget en `Views.test.jsx`; reajustes en
+  `LibraryView.test.jsx` e `Interactions.test.jsx` para consultar el grid de
+  tarjetas, ya que el widget es global e independiente de filtros).
+
+**Verificación**: `npm run check` (lint 0 errores + **155 tests** + build) verde.
+CI de Pages verde (run 31656981533). Commit 5a76b39.
 Turno 12:00 del agente `daily-dev`. Inspección (paso 1.5): descargas **112/112 OK**,
 regiones sincronizadas **16/16/16**, `npm audit` con 5 vulnerabilidades SOLO en
 devDeps build-time (vite/vitest/esbuild; fix exigiría `--force` y rompería el stack
