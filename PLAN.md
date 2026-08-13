@@ -64,7 +64,7 @@ public/documents/        → documents.json (metadatos) + TXT de descarga
 
 ### FASE 3 — Lectura enriquecida
 - [x] **Obra destacada aleatoria del día** ✅ 2026-08-12: widget "Obra del día" en la Biblioteca — selección determinista por fecha local (`getDailyFeaturedBook` en `library.js`), prioriza obras legibles con resumen, botón de lectura directo. Commit 5a76b39.
-- [ ] Referencias cruzadas entre textos y eventos.
+- [x] **Referencias cruzadas entre textos y eventos** ✅ 2026-08-13 (12:00): la dirección evento→texto ya existía (`getEventRelatedTexts` + `EventModal`); se añadió la inversa **texto→evento**: `getBookEvents(timelineEvents, book)` en `library.js` (eventos `con_texto` cuyo `relatedTexts` incluye el título, emparejado por título sin importar región) + enlace "Ver en la línea temporal" en cada tarjeta de la Biblioteca vinculada a un evento, que cambia a la vista Timeline y abre el modal del evento agrupador (`openEventFromLibrary` en `AnarchistArchive`). 166 → 175 tests, lint 0 errores, build OK, CI verde (run 31718764448). Commit 0746d69.
 - [ ] Mapas visuales por región.
 - [ ] Más filtros y búsqueda avanzada.
 
@@ -187,7 +187,8 @@ contenedor nginx local en la máquina siempre-encendida, y la web enlaza
  - [x] **Invariante mapa ↔ timeline (regla de negocio con el usuario)** ✅ 2026-08-12 (12:00): tarjetas "O navega por región" SOLO con ≥1 texto histórico ordenadas por nº DESC (Inglaterra, solo teoría, ni se pinta ni crea tarjeta). **Invariante 27/44 → 44/44**: todos los textos históricos vinculados a eventos. Los eventos NACEN de los textos: 16 tarjetas nuevas + Makhnovschina→Kronstadt (32 eventos). `filterEvents` ordena cronológicamente. Autores = obra completa (historia + ideas). Nuevo subagente `@evento-builder` que mantiene `timeline == mapa`. **119 textos (44 hist / 75 ideas), 17 regiones, 32 eventos, 113 descargables**. 143 tests OK, `npm run check` verde, CI verde (run 31619838053). Commits 4d85cc7 + 6392eab.
  - [x] **FASE 3: Obra destacada del día** ✅ 2026-08-12 (ejecución extra 21:1x): widget "Obra del día" en la Biblioteca — `getDailyFeaturedBook` (determinista por fecha local; prioriza legibles con resumen; hoy: "La lucha contra el Estado", Nettlau 1920) + `FeaturedBook.jsx` con reseña y botón de lectura. Fix de negocio menor (IDEAS.md): las 6 obras sin `filename` muestran "Sin archivo disponible" en la Biblioteca. **143 → 155 tests**, `npm run check` verde (lint 0 + 155 tests + build), CI verde (run 31656981533). Commit 5a76b39.
  - [x] **FASE 2: Dashboard de métricas del archivo** ✅ 2026-08-13 (00:00): `getArchiveStats(regionData, timelineEvents)` en `utils/library.js` — fuente única de métricas para header, footer y panel. `StatsPanel` pasa de 4 números a dashboard: números clave, estado del archivo (descargables/sin archivo/históricos/ideas), composición por categoría (barras), top-5 autores más prolíficos, regiones con más obras (marcador 🗺️ para las que aparecen en el mapa) y textos por década. `AnarchistArchive` usa `getArchiveStats` (sustituye el cálculo manual). Fix menor de inspección: variable sin usar en `FavoritesView`. **155 → 166 tests** (8 de `getArchiveStats` + 3 del panel), lint 0 errores, build OK, CI verde (run 31665880125). Commits 3a7dce1 (feat) + b5b7a62 (fix).
- - [ ] **FASE 3 (siguiente)**: Referencias cruzadas entre textos y eventos — aprovechar `getEventRelatedTexts` para enlazar desde un texto de la Biblioteca hacia el evento de la línea temporal que lo agrupa (y viceversa). O, si se prefiere contenido: ampliar el catálogo con `@content-importer` (~400 PDFs del contenedor aún disponibles).
+ - [x] **FASE 3: Referencias cruzadas texto→evento** ✅ 2026-08-13 (12:00): `getBookEvents(timelineEvents, book)` en `utils/library.js` (inversa de `getEventRelatedTexts`: eventos `con_texto` cuyo `relatedTexts` incluye el TÍTULO de la obra, sin importar región). Cada tarjeta de la Biblioteca vinculada a un evento muestra el enlace "Ver en la línea temporal" (icono CalendarClock) que cambia a la vista Timeline y abre el modal del evento agrupador (`openEventFromLibrary` en `AnarchistArchive`). **166 → 175 tests** (4 de `getBookEvents`, 3 de `LibraryView`, 2 interactivos de clic y navegación completa), lint 0 errores, build OK, CI verde (run 31718764448). Commit 0746d69.
+ - [ ] **FASE 3 (siguiente)**: Mapas visuales por región o Más filtros/búsqueda avanzada. Alternativa de contenido: ampliar el catálogo con `@content-importer` (~400 PDFs del contenedor aún disponibles).
 
 ### Nota del día (2026-08-12, 12:00)
 Turno 12:00 del agente `daily-dev` (completado manualmente desde el chat: el cron
@@ -378,3 +379,31 @@ críticos → se continuó con la siguiente tarea del plan.
 
 **Verificación**: `npm run check` (lint 0 errores + **166 tests** + build) verde.
 CI de Pages verde (run 31665880125). Commits 3a7dce1 (feat) + b5b7a62 (fix).
+
+### Nota del día (2026-08-13, 12:00)
+Turno 12:00 del agente `daily-dev`. Inspección (paso 1.5): descargas **113/113 OK**,
+regiones sincronizadas **17/17/17** (verificado con `vite-node`: `regionData.js` ↔
+`countryData.js` ↔ `REGIONS`; 0 regiones sin ISO), invariante `timeline == mapa`
+**44/44** (32 eventos, 0 títulos fantasma), `npm audit` con 5 vulnerabilidades SOLO
+en devDeps build-time (vite/vitest/vite-node/esbuild; fix exigiría `--force` y
+rompería Vite 4 → no aplica a Pages), build sin warnings. Sin errores críticos →
+se continuó con la siguiente tarea del plan.
+**Tarea del plan (FASE 3, checkbox pendiente — "Referencias cruzadas entre textos
+y eventos")**:
+- La dirección **evento → texto** ya existía (`getEventRelatedTexts` + `EventModal`);
+  se implementó la inversa **texto → evento** desde la Biblioteca.
+- **`getBookEvents(timelineEvents, book)`** (`src/utils/library.js`): inversa de
+  `getEventRelatedTexts` — devuelve los eventos `type: 'con_texto'` cuyo
+  `relatedTexts` incluye el **TÍTULO** de la obra (emparejado por título, sin
+  importar región; misma regla que la invariante). Orden cronológico; tolerante a
+  datos ausentes.
+- **Enlace en la Biblioteca** (`LibraryView.jsx`): cada tarjeta vinculada a un
+  evento muestra "Ver en la línea temporal: {evento} ({año})" con icono
+  `CalendarClock`; clic → cambia a la vista Timeline y abre el `EventModal` del
+  evento agrupador (`openEventFromLibrary` en `AnarchistArchive.jsx`).
+- **Tests**: 166 → **175** (4 de `getBookEvents`, 3 de `LibraryView`, 2
+  interactivos: clic → `onOpenEvent` con el evento y navegación completa
+  Biblioteca → timeline + modal).
+
+**Verificación**: `npm run check` (lint 0 errores + **175 tests** + build) verde.
+CI de Pages verde (run 31718764448). Commit 0746d69.

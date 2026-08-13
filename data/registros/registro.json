@@ -192,6 +192,15 @@
       "prs": 0,
       "ci": "verde",
       "nota": "TURNO 00:00 agente daily-dev. Inspeccion OK: descargas 113/113, regiones 17/17/17, invariante timeline==mapa 44/44 (32 eventos, sin titulos fantasma), audit solo devDeps build-time (vite/vitest/vite-node). FASE 2 (checkbox pendiente): dashboard de metricas del archivo — getArchiveStats(regionData, timelineEvents) en library.js (fuente unica: textos, eventos, regiones, autores, descargables/sin archivo, historicos/ideas, categorias, top-5 autores, regiones con mas obras, textos por decada) + StatsPanel ampliado con 8 tarjetas y 4 secciones con barras. AnarchistArchive usa getArchiveStats (header/footer del mismo objeto). Fix menor de inspeccion: variable sin usar en FavoritesView (no-unused-vars). 155->166 tests, npm run check verde (lint 0 errores + 166 tests + build), CI Pages verde (run 31665880125). Commits 3a7dce1 (feat) + b5b7a62 (fix)."
+    },
+    {
+      "fecha": "2026-08-13",
+      "obras": 119,
+      "palabras": 1112,
+      "commits": 1,
+      "prs": 0,
+      "ci": "verde",
+      "nota": "TURNO 12:00 agente daily-dev. Inspeccion OK: descargas 113/113, regiones 17/17/17 (fuente unica regionData.js), invariante timeline==mapa 44/44 (32 eventos, sin titulos fantasma), audit solo devDeps build-time (vite/vitest/vite-node/esbuild, fix exigiria --force y rompe Vite 4, no aplica a Pages). FASE 3 (checkbox pendiente): referencias cruzadas texto->evento en la Biblioteca — getBookEvents(timelineEvents, book) en library.js (inversa de getEventRelatedTexts: eventos 'con_texto' cuyo relatedTexts incluye el titulo de la obra, emparejado por titulo sin importar region). Cada tarjeta de Biblioteca vinculada a un evento muestra el enlace 'Ver en la linea temporal' (icono CalendarClock) que cambia a la vista Timeline y abre el modal del evento agrupador (openEventFromLibrary en AnarchistArchive). 166->175 tests (4 de getBookEvents, 3 de LibraryView, 1 interactivo de clic + 1 de navegacion completa), npm run check verde (lint 0 errores + 175 tests + build), CI Pages verde (run 31718764448). Commit 0746d69."
     }
   ]
 }
