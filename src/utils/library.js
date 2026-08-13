@@ -94,6 +94,24 @@ export const getEventRelatedTexts = (regionData, event) => {
     .sort((a, b) => (b.year || 0) - (a.year || 0));
 };
 
+// Eventos de la línea temporal que agrupan un libro (inversa de
+// getEventRelatedTexts): busca los eventos 'con_texto' cuyo relatedTexts
+// incluya el TÍTULO de la obra. Así un texto de la Biblioteca puede enlazar
+// hacia la tarjeta de la línea temporal que lo agrupa (referencia cruzada).
+// Devuelve [] si no hay datos o el libro no está vinculado a ningún evento.
+export const getBookEvents = (timelineEvents, book) => {
+  if (!Array.isArray(timelineEvents) || !book?.title) return [];
+  const title = String(book.title).trim().toLowerCase();
+  return timelineEvents
+    .filter(
+      (ev) =>
+        ev?.type === 'con_texto' &&
+        Array.isArray(ev.relatedTexts) &&
+        ev.relatedTexts.some((t) => String(t).trim().toLowerCase() === title)
+    )
+    .sort((a, b) => (a.year || 0) - (b.year || 0));
+};
+
 // Agrupa los libros por autor y los ordena de más a menos obras.
 // Cada autor incluye la lista de sus obras (con región) para poder navegarlas.
 // Los "Colectivo"/organizaciones sin autoría individual se omiten.

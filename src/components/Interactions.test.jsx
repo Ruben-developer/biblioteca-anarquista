@@ -250,6 +250,27 @@ describe('LibraryView interactivo', () => {
     expect(onToggleFavorite).toHaveBeenCalledWith('La Conquista del Pan');
     container.remove();
   });
+
+  it('abre el evento de la línea temporal al pulsar "Ver en la línea temporal"', () => {
+    const onOpenEvent = vi.fn();
+    const timelineEvents = [
+      { title: 'Columna Durruti', year: 1936, type: 'con_texto', relatedTexts: ['Columna Durruti'] }
+    ];
+    const { container } = render(
+      <LibraryView
+        darkMode={false}
+        regionData={regionData}
+        favorites={[]}
+        onToggleFavorite={noop}
+        timelineEvents={timelineEvents}
+        onOpenEvent={onOpenEvent}
+      />
+    );
+    fireEvent.click(screen.getByText('Ver en la línea temporal: Columna Durruti (1936)'));
+    expect(onOpenEvent).toHaveBeenCalledTimes(1);
+    expect(onOpenEvent).toHaveBeenCalledWith(timelineEvents[0]);
+    container.remove();
+  });
 });
 
 describe('AnarchistArchive interactivo (navegación completa)', () => {
@@ -262,13 +283,25 @@ describe('AnarchistArchive interactivo (navegación completa)', () => {
     container.remove();
   });
 
-  it('abre un evento de la línea temporal y cierra el modal con Escape', () => {
+it('abre un evento de la línea temporal y cierra el modal con Escape', () => {
     const { container } = render(<AnarchistArchive />);
     const eventButton = screen.getAllByText(/Semana Trágica|Mártires|Revolución|huelga|Jornadas|zapatista|Seattle|Génova|15M|Rojava|Kronstadt|Comuna|Española|Primero|Chicago|Barcelona/)[0];
     fireEvent.click(eventButton);
     expect(screen.getByRole('dialog')).toBeTruthy();
     fireEvent.keyDown(screen.getByRole('dialog'), { key: 'Escape' });
     expect(screen.queryByRole('dialog')).toBeNull();
+    container.remove();
+  });
+
+  it('referencia cruzada: desde la Biblioteca abre el evento en la línea temporal', () => {
+    const { container } = render(<AnarchistArchive />);
+    fireEvent.click(screen.getByRole('button', { name: /Biblioteca/ }));
+    const link = screen.getAllByText(/Ver en la línea temporal:/)[0];
+    const eventTitle = link.textContent.replace('Ver en la línea temporal: ', '').split(' (')[0];
+    fireEvent.click(link);
+    // Cambia a la vista Línea Temporal y abre el modal del evento agrupador.
+    expect(screen.getByRole('dialog')).toBeTruthy();
+    expect(screen.getAllByText(eventTitle).length).toBeGreaterThan(0);
     container.remove();
   });
 

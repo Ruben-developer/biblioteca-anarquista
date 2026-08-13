@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
-import { Search, BookOpen, Heart, X } from 'lucide-react';
+import { Search, BookOpen, Heart, X, CalendarClock } from 'lucide-react';
 import { THEME, CATEGORIES, REGIONS } from '../constants';
-import { getAllBooks, filterBooks, sortBooks, getDecadeFromYear, getDailyFeaturedBook } from '../utils/library';
+import { getAllBooks, filterBooks, sortBooks, getDecadeFromYear, getDailyFeaturedBook, getBookEvents } from '../utils/library';
 import { getDocumentDownloadUrl } from '../services/documentService';
 import FeaturedBook from './FeaturedBook';
 
@@ -11,7 +11,9 @@ const LibraryView = ({
   darkMode,
   regionData,
   favorites,
-  onToggleFavorite
+  onToggleFavorite,
+  timelineEvents = [],
+  onOpenEvent = () => {}
 }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
 
@@ -166,6 +168,23 @@ const LibraryView = ({
                     {book.summary}
                   </p>
                 )}
+
+                {(() => {
+                  const bookEvents = getBookEvents(timelineEvents, book);
+                  if (!bookEvents.length) return null;
+                  return (
+                    <button
+                      onClick={() => onOpenEvent(bookEvents[0])}
+                      className={`mb-3 flex items-center gap-1.5 text-xs font-medium transition-colors ${
+                        darkMode ? 'text-red-400 hover:text-red-300' : 'text-amber-700 hover:text-amber-900'
+                      } hover:underline`}
+                      title={`Ir al evento de la línea temporal: ${bookEvents[0].title} (${bookEvents[0].year})`}
+                    >
+                      <CalendarClock size={14} />
+                      Ver en la línea temporal: {bookEvents[0].title} ({bookEvents[0].year})
+                    </button>
+                  );
+                })()}
 
                 <div className="flex items-center gap-3 mt-auto">
                   {downloadUrl ? (

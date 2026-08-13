@@ -58,6 +58,13 @@ const AnarchistArchive = () => {
     });
   };
 
+  // Referencia cruzada Biblioteca → línea temporal: abre la vista de timeline
+  // con el evento que agrupa la obra y muestra su modal.
+  const openEventFromLibrary = (event) => {
+    setActiveView(VIEWS.TIMELINE);
+    setSelectedEvent(event);
+  };
+
   const bgClass = darkMode
     ? 'bg-gradient-to-br from-red-950 via-black to-gray-900 text-gray-100'
     : 'bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 text-gray-800';
@@ -128,6 +135,8 @@ const AnarchistArchive = () => {
             regionData={regionData}
             favorites={favorites}
             onToggleFavorite={toggleFavorite}
+            timelineEvents={timelineEvents}
+            onOpenEvent={openEventFromLibrary}
           />
         )}
 

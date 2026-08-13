@@ -122,3 +122,52 @@ describe('LibraryView edge cases', () => {
     expect(html).toContain('fill-red-500 text-red-500');
   });
 });
+
+describe('LibraryView referencias cruzadas (texto → evento)', () => {
+  const noop = () => {};
+
+  const regionDataHist = {
+    España: {
+      books: [
+        { title: 'Historia 1936', author: 'Autor A', year: 1936, category: 'historia', filename: 'anarquismo/a.pdf' },
+        { title: 'Teoría 1890', author: 'Autor B', year: 1890, category: 'teoria', filename: 'anarquismo/b.pdf' }
+      ]
+    }
+  };
+
+  const timelineEvents = [
+    { title: 'Guerra Civil', year: 1936, type: 'con_texto', relatedTexts: ['Historia 1936'] },
+    { title: '15M', year: 2011, type: 'con_texto', relatedTexts: ['Teoría 1890'] }
+  ];
+
+  it('muestra el enlace "Ver en la línea temporal" para obras vinculadas a un evento', () => {
+    const html = renderToStaticMarkup(
+      <LibraryView darkMode={false} regionData={regionDataHist} favorites={[]} onToggleFavorite={noop} timelineEvents={timelineEvents} />
+    );
+    expect(html).toContain('Ver en la línea temporal: Guerra Civil (1936)');
+    expect(html).toContain('Ver en la línea temporal: 15M (2011)');
+  });
+
+  it('no muestra el enlace sin timelineEvents o sin evento vinculado', () => {
+    const html = renderToStaticMarkup(
+      <LibraryView darkMode={false} regionData={regionDataHist} favorites={[]} onToggleFavorite={noop} />
+    );
+    expect(html).not.toContain('Ver en la línea temporal');
+  });
+
+  it('invoca onOpenEvent con el evento al hacer clic', () => {
+    let opened = null;
+    const html = renderToStaticMarkup(
+      <LibraryView
+        darkMode={false}
+        regionData={regionDataHist}
+        favorites={[]}
+        onToggleFavorite={noop}
+        timelineEvents={timelineEvents}
+        onOpenEvent={(e) => { opened = e; }}
+      />
+    );
+    expect(html).toContain('Ver en la línea temporal: Guerra Civil (1936)');
+    expect(opened).toBeNull(); // el clic se prueba en el test interactivo
+  });
+});

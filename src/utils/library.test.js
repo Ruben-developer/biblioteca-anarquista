@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { getDecadeFromYear, getAllBooks, getAllAuthors, getEventRelatedTexts, filterBooks, sortBooks, getDailyFeaturedBook, getArchiveStats } from './library';
+import { getDecadeFromYear, getAllBooks, getAllAuthors, getEventRelatedTexts, getBookEvents, filterBooks, sortBooks, getDailyFeaturedBook, getArchiveStats } from './library';
 
 const regionData = {
   España: {
@@ -199,6 +199,38 @@ describe('getEventRelatedTexts', () => {
     const related = getEventRelatedTexts(rd, { region: 'España', year: 1936, relatedTexts: ['No existe', 'Historia 1936'] });
     expect(related.length).toBe(1);
     expect(related[0].title).toBe('Historia 1936');
+  });
+});
+
+describe('getBookEvents', () => {
+  const events = [
+    { title: 'Guerra Civil', year: 1936, type: 'con_texto', relatedTexts: ['Historia 1936', 'Teoría 1890'] },
+    { title: '15M', year: 2011, type: 'con_texto', relatedTexts: ['Rojava'] },
+    { title: 'Makhnovschina', year: 1918, type: 'hecho' },
+    { title: 'Revolución Mexicana', year: 1910, type: 'con_texto', relatedTexts: ['Historia 1936'] }
+  ];
+
+  it('devuelve los eventos con_texto cuyo relatedTexts incluye el título del libro', () => {
+    const found = getBookEvents(events, { title: 'Historia 1936' });
+    expect(found.length).toBe(2);
+    // Ordenados cronológicamente
+    expect(found.map((e) => e.year)).toEqual([1910, 1936]);
+  });
+
+  it('ignora eventos tipo hecho (sin relatedTexts) y títulos no listados', () => {
+    expect(getBookEvents(events, { title: 'Makhnovschina' })).toEqual([]);
+    expect(getBookEvents(events, { title: 'No existe' })).toEqual([]);
+  });
+
+  it('tolera datos ausentes', () => {
+    expect(getBookEvents(null, { title: 'Historia 1936' })).toEqual([]);
+    expect(getBookEvents(events, null)).toEqual([]);
+    expect(getBookEvents(events, {})).toEqual([]);
+  });
+
+  it('empareja por título sin importar mayúsculas ni espacios', () => {
+    const found = getBookEvents(events, { title: '  historia 1936 ' });
+    expect(found.length).toBe(2);
   });
 });
 
