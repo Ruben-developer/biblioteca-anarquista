@@ -7,7 +7,6 @@ const FavoritesView = ({
   favorites,
   onToggleFavorite
 }) => {
-  const themeClass = darkMode ? THEME.dark : THEME.light;
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
 
   return (
