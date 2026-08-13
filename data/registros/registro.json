@@ -183,6 +183,15 @@
       "prs": 0,
       "ci": "verde",
       "nota": "TURNO extra diario-dev (ejecucion 21:1x, tras completar el 12:00). Inspeccion OK: descargas 113/113, regiones sincronizadas 17/17/17 (fuente unica regionData.js), invariante timeline==mapa 44/44 (32 eventos, sin titulos fantasma), audit solo devDeps build-time (vite/vitest, fix exigiria --force y rompe Vite 4). FASE 3 (checkbox pendiente): widget \"Obra del dia\" en la Biblioteca — obra destacada determinista por fecha local (getDailyFeaturedBook en library.js, prioriza legibles con resumen; hoy: La lucha contra el Estado, Nettlau 1920) con reseña y boton de lectura. Fix de negocio menor (IDEAS.md): obras sin filename (6) ahora muestran \"Sin archivo disponible\" en vez de un hueco sin boton. 143->155 tests, npm run check verde (lint 0 errores + 155 tests + build), CI Pages verde (run 31656981533). Commit 5a76b39."
+    },
+    {
+      "fecha": "2026-08-13",
+      "obras": 119,
+      "palabras": 1112,
+      "commits": 2,
+      "prs": 0,
+      "ci": "verde",
+      "nota": "TURNO 00:00 agente daily-dev. Inspeccion OK: descargas 113/113, regiones 17/17/17, invariante timeline==mapa 44/44 (32 eventos, sin titulos fantasma), audit solo devDeps build-time (vite/vitest/vite-node). FASE 2 (checkbox pendiente): dashboard de metricas del archivo — getArchiveStats(regionData, timelineEvents) en library.js (fuente unica: textos, eventos, regiones, autores, descargables/sin archivo, historicos/ideas, categorias, top-5 autores, regiones con mas obras, textos por decada) + StatsPanel ampliado con 8 tarjetas y 4 secciones con barras. AnarchistArchive usa getArchiveStats (header/footer del mismo objeto). Fix menor de inspeccion: variable sin usar en FavoritesView (no-unused-vars). 155->166 tests, npm run check verde (lint 0 errores + 166 tests + build), CI Pages verde (run 31665880125). Commits 3a7dce1 (feat) + b5b7a62 (fix)."
     }
   ]
 }
