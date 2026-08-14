@@ -21,6 +21,9 @@ const LibraryView = ({
   const [category, setCategory] = useState('all');
   const [region, setRegion] = useState('all');
   const [decade, setDecade] = useState('all');
+  const [availability, setAvailability] = useState('all');
+  const [type, setType] = useState('all');
+  const [favoritesOnly, setFavoritesOnly] = useState(false);
   const [sort, setSort] = useState('rating');
 
   const allBooks = useMemo(() => getAllBooks(regionData), [regionData]);
@@ -34,8 +37,19 @@ const LibraryView = ({
   }, [allBooks]);
 
   const filtered = useMemo(
-    () => sortBooks(filterBooks(allBooks, { searchTerm, category, region, decade }), sort),
-    [allBooks, searchTerm, category, region, decade, sort]
+    () => sortBooks(
+      filterBooks(allBooks, {
+        searchTerm,
+        category,
+        region,
+        decade,
+        availability,
+        type,
+        favorites: favoritesOnly ? favorites : null
+      }),
+      sort
+    ),
+    [allBooks, searchTerm, category, region, decade, availability, type, favoritesOnly, favorites, sort]
   );
 
   const clearFilters = () => {
@@ -43,6 +57,9 @@ const LibraryView = ({
     setCategory('all');
     setRegion('all');
     setDecade('all');
+    setAvailability('all');
+    setType('all');
+    setFavoritesOnly(false);
   };
 
   const selectClass = `px-3 py-2 rounded-lg border text-sm ${
@@ -66,7 +83,7 @@ const LibraryView = ({
         </h2>
       </div>
       <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-        {filtered.length} de {allBooks.length} obras del archivo. Busca y filtra por categoría, región o década.
+        {filtered.length} de {allBooks.length} obras del archivo. Busca y filtra por categoría, región, década, disponibilidad, tipo o favoritos.
       </p>
 
       <FeaturedBook darkMode={darkMode} book={featured} />
@@ -106,13 +123,30 @@ const LibraryView = ({
             ))}
           </select>
 
+          <select value={availability} onChange={(e) => setAvailability(e.target.value)} className={selectClass} aria-label="Filtrar por disponibilidad">
+            <option value="all">Con y sin archivo</option>
+            <option value="withFile">Solo con archivo</option>
+            <option value="withoutFile">Solo sin archivo</option>
+          </select>
+
+          <select value={type} onChange={(e) => setType(e.target.value)} className={selectClass} aria-label="Filtrar por tipo de obra">
+            <option value="all">Todos los tipos</option>
+            <option value="historical">Solo históricos</option>
+            <option value="ideas">Solo ideas</option>
+          </select>
+
+          <select value={favoritesOnly ? 'favorites' : 'all'} onChange={(e) => setFavoritesOnly(e.target.value === 'favorites')} className={selectClass} aria-label="Filtrar por favoritos">
+            <option value="all">Todas las obras</option>
+            <option value="favorites">Solo favoritas</option>
+          </select>
+
           <select value={sort} onChange={(e) => setSort(e.target.value)} className={selectClass} aria-label="Ordenar por">
             <option value="rating">Mejor valoradas</option>
             <option value="year">Por año (antiguo → reciente)</option>
             <option value="title">Por título</option>
           </select>
 
-          {(searchTerm || category !== 'all' || region !== 'all' || decade !== 'all') && (
+          {(searchTerm || category !== 'all' || region !== 'all' || decade !== 'all' || availability !== 'all' || type !== 'all' || favoritesOnly) && (
             <button
               onClick={clearFilters}
               className={`px-3 py-2 rounded-lg text-sm flex items-center gap-1 ${darkMode ? 'bg-red-900/40 text-red-300 hover:bg-red-900/60' : 'bg-red-100 text-red-700 hover:bg-red-200'}`}

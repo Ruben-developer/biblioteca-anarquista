@@ -19,8 +19,15 @@ export const getAllBooks = (regionData) => {
   );
 };
 
-// Filtra los libros combinando: búsqueda (título/autor), categoría, región y década.
-export const filterBooks = (books, { searchTerm = '', category = 'all', region = 'all', decade = 'all' } = {}) => {
+// Filtra los libros combinando: búsqueda (título/autor), categoría, región,
+// década y búsqueda avanzada:
+//  - `availability`: 'all' | 'withFile' (solo con archivo) | 'withoutFile' (solo sin archivo).
+//  - `type`: 'all' | 'historical' (categorías del mapa/timeline) | 'ideas' (teoría/biografía/diálogo).
+//  - `favorites`: array de títulos guardados como favoritos (null/undefined desactiva el filtro).
+export const filterBooks = (
+  books,
+  { searchTerm = '', category = 'all', region = 'all', decade = 'all', availability = 'all', type = 'all', favorites = null } = {}
+) => {
   const term = searchTerm.trim().toLowerCase();
 
   return books.filter((book) => {
@@ -34,6 +41,21 @@ export const filterBooks = (books, { searchTerm = '', category = 'all', region =
       return false;
     }
     if (decade !== 'all' && getDecadeFromYear(book.year) !== decade) {
+      return false;
+    }
+    if (availability === 'withFile' && !book.filename) {
+      return false;
+    }
+    if (availability === 'withoutFile' && book.filename) {
+      return false;
+    }
+    if (type === 'historical' && !isHistoricalBook(book)) {
+      return false;
+    }
+    if (type === 'ideas' && isHistoricalBook(book)) {
+      return false;
+    }
+    if (Array.isArray(favorites) && !favorites.includes(book.title)) {
       return false;
     }
     return true;

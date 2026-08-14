@@ -208,7 +208,7 @@ describe('LibraryView interactivo', () => {
   it('filtra por búsqueda y muestra el contador actualizado', () => {
     const { container } = render(<LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />);
     fireEvent.change(screen.getByLabelText('Buscar obra'), { target: { value: 'Pan' } });
-    expect(screen.getByText('1 de 3 obras del archivo. Busca y filtra por categoría, región o década.')).toBeTruthy();
+    expect(screen.getByText('1 de 3 obras del archivo. Busca y filtra por categoría, región, década, disponibilidad, tipo o favoritos.')).toBeTruthy();
     // Se consulta el grid de tarjetas: el widget "Obra del día" es global y no
     // depende de los filtros (puede mostrar cualquier título).
     const grid = container.querySelector('div.grid');
@@ -224,7 +224,7 @@ describe('LibraryView interactivo', () => {
     expect(grid.textContent).not.toContain('¿Qué es la Propiedad?');
     expect(grid.textContent).toContain('La Conquista del Pan');
     fireEvent.change(screen.getByLabelText('Filtrar por década'), { target: { value: '1890s' } });
-    expect(screen.getByText('1 de 3 obras del archivo. Busca y filtra por categoría, región o década.')).toBeTruthy();
+    expect(screen.getByText('1 de 3 obras del archivo. Busca y filtra por categoría, región, década, disponibilidad, tipo o favoritos.')).toBeTruthy();
     fireEvent.change(screen.getByLabelText('Filtrar por categoría'), { target: { value: 'teoria' } });
     // Sigue quedando La Conquista del Pan (España, 1892, teoría); Columna Durruti (1936) queda fuera por década.
     expect(grid.textContent).toContain('La Conquista del Pan');
@@ -237,7 +237,39 @@ describe('LibraryView interactivo', () => {
     fireEvent.change(screen.getByLabelText('Buscar obra'), { target: { value: 'noexiste' } });
     expect(screen.getByText('No hay obras que coincidan con los filtros.')).toBeTruthy();
     fireEvent.click(screen.getByText('Limpiar filtros'));
-    expect(screen.getByText('3 de 3 obras del archivo. Busca y filtra por categoría, región o década.')).toBeTruthy();
+    expect(screen.getByText('3 de 3 obras del archivo. Busca y filtra por categoría, región, década, disponibilidad, tipo o favoritos.')).toBeTruthy();
+    container.remove();
+  });
+
+  it('filtra por disponibilidad y tipo de obra con los selectores', () => {
+    const { container } = render(<LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />);
+    const grid = container.querySelector('div.grid');
+    // Todas las obras del fixture tienen archivo → "Solo con archivo" mantiene las 3.
+    fireEvent.change(screen.getByLabelText('Filtrar por disponibilidad'), { target: { value: 'withFile' } });
+    expect(screen.getByText('3 de 3 obras del archivo. Busca y filtra por categoría, región, década, disponibilidad, tipo o favoritos.')).toBeTruthy();
+    // "Solo históricos" deja únicamente Columna Durruti (categoría historia).
+    fireEvent.change(screen.getByLabelText('Filtrar por tipo de obra'), { target: { value: 'historical' } });
+    expect(grid.textContent).toContain('Columna Durruti');
+    expect(grid.textContent).not.toContain('La Conquista del Pan');
+    expect(grid.textContent).not.toContain('¿Qué es la Propiedad?');
+    // "Solo sin archivo" deja el grid vacío (todas tienen archivo).
+    fireEvent.change(screen.getByLabelText('Filtrar por disponibilidad'), { target: { value: 'withoutFile' } });
+    expect(screen.getByText('No hay obras que coincidan con los filtros.')).toBeTruthy();
+    container.remove();
+  });
+
+  it('filtra solo favoritas y lo combina con la búsqueda', () => {
+    const favorites = ['La Conquista del Pan', '¿Qué es la Propiedad?'];
+    const { container } = render(<LibraryView darkMode={false} regionData={regionData} favorites={favorites} onToggleFavorite={noop} />);
+    const grid = container.querySelector('div.grid');
+    fireEvent.change(screen.getByLabelText('Filtrar por favoritos'), { target: { value: 'favorites' } });
+    expect(grid.textContent).toContain('La Conquista del Pan');
+    expect(grid.textContent).toContain('¿Qué es la Propiedad?');
+    expect(grid.textContent).not.toContain('Columna Durruti');
+    // Combinado con la búsqueda: queda una sola favorita.
+    fireEvent.change(screen.getByLabelText('Buscar obra'), { target: { value: 'Pan' } });
+    expect(grid.textContent).toContain('La Conquista del Pan');
+    expect(grid.textContent).not.toContain('¿Qué es la Propiedad?');
     container.remove();
   });
 

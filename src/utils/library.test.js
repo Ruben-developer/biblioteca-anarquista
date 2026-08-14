@@ -105,6 +105,49 @@ describe('filterBooks', () => {
     expect(result.length).toBe(1);
     expect(result[0].title).toBe('La Conquista del Pan');
   });
+
+  it('filtra por disponibilidad (con/sin archivo)', () => {
+    const conArchivo = getAllBooks({
+      España: { books: [
+        { title: 'Con archivo', author: 'A', category: 'teoria', filename: 'anarquismo/x.pdf' },
+        { title: 'Sin archivo', author: 'B', category: 'teoria' }
+      ] }
+    });
+    expect(filterBooks(conArchivo, { availability: 'withFile' }).map((b) => b.title)).toEqual(['Con archivo']);
+    expect(filterBooks(conArchivo, { availability: 'withoutFile' }).map((b) => b.title)).toEqual(['Sin archivo']);
+    expect(filterBooks(conArchivo, { availability: 'all' }).length).toBe(2);
+  });
+
+  it('filtra por tipo (históricos vs ideas)', () => {
+    const mixto = getAllBooks({
+      España: { books: [
+        { title: 'Histórico', author: 'A', category: 'historia' },
+        { title: 'Teoría', author: 'B', category: 'teoria' }
+      ] }
+    });
+    expect(filterBooks(mixto, { type: 'historical' }).map((b) => b.title)).toEqual(['Histórico']);
+    expect(filterBooks(mixto, { type: 'ideas' }).map((b) => b.title)).toEqual(['Teoría']);
+    expect(filterBooks(mixto, { type: 'all' }).length).toBe(2);
+  });
+
+  it('filtra por favoritos solo cuando se pasa la lista', () => {
+    expect(filterBooks(books, { favorites: ['La Conquista del Pan'] }).length).toBe(1);
+    expect(filterBooks(books, { favorites: [] }).length).toBe(0);
+    // Sin la lista (default null) el filtro queda desactivado: no rompe el uso antiguo.
+    expect(filterBooks(books).length).toBe(3);
+  });
+
+  it('combina los filtros avanzados con los básicos', () => {
+    const mixto = getAllBooks({
+      España: { books: [
+        { title: 'Hist 1936', author: 'A', category: 'historia', filename: 'anarquismo/a.pdf' },
+        { title: 'Teoría 1892', author: 'B', category: 'teoria', filename: 'anarquismo/b.pdf' },
+        { title: 'Hist sin archivo', author: 'C', category: 'historia' }
+      ] }
+    });
+    const result = filterBooks(mixto, { category: 'historia', availability: 'withFile' });
+    expect(result.map((b) => b.title)).toEqual(['Hist 1936']);
+  });
 });
 
 describe('sortBooks', () => {

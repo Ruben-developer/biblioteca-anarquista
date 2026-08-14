@@ -66,6 +66,21 @@ describe('LibraryView', () => {
     expect(html).toContain('Todas las regiones');
     expect(html).toContain('Todas las décadas');
   });
+
+  it('incluye los controles de búsqueda avanzada (disponibilidad, tipo y favoritos)', () => {
+    const html = renderToStaticMarkup(
+      <LibraryView darkMode={false} regionData={regionData} favorites={['La Conquista del Pan']} onToggleFavorite={noop} />
+    );
+    expect(html).toContain('Con y sin archivo');
+    expect(html).toContain('Solo con archivo');
+    expect(html).toContain('Solo sin archivo');
+    expect(html).toContain('Todos los tipos');
+    expect(html).toContain('Solo históricos');
+    expect(html).toContain('Solo ideas');
+    expect(html).toContain('Todas las obras');
+    expect(html).toContain('Solo favoritas');
+    expect(html).toContain('Busca y filtra por categoría, región, década, disponibilidad, tipo o favoritos.');
+  });
 });
 
 describe('LibraryView edge cases', () => {
