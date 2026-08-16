@@ -188,7 +188,8 @@ contenedor nginx local en la máquina siempre-encendida, y la web enlaza
  - [x] **FASE 3: Obra destacada del día** ✅ 2026-08-12 (ejecución extra 21:1x): widget "Obra del día" en la Biblioteca — `getDailyFeaturedBook` (determinista por fecha local; prioriza legibles con resumen; hoy: "La lucha contra el Estado", Nettlau 1920) + `FeaturedBook.jsx` con reseña y botón de lectura. Fix de negocio menor (IDEAS.md): las 6 obras sin `filename` muestran "Sin archivo disponible" en la Biblioteca. **143 → 155 tests**, `npm run check` verde (lint 0 + 155 tests + build), CI verde (run 31656981533). Commit 5a76b39.
  - [x] **FASE 2: Dashboard de métricas del archivo** ✅ 2026-08-13 (00:00): `getArchiveStats(regionData, timelineEvents)` en `utils/library.js` — fuente única de métricas para header, footer y panel. `StatsPanel` pasa de 4 números a dashboard: números clave, estado del archivo (descargables/sin archivo/históricos/ideas), composición por categoría (barras), top-5 autores más prolíficos, regiones con más obras (marcador 🗺️ para las que aparecen en el mapa) y textos por década. `AnarchistArchive` usa `getArchiveStats` (sustituye el cálculo manual). Fix menor de inspección: variable sin usar en `FavoritesView`. **155 → 166 tests** (8 de `getArchiveStats` + 3 del panel), lint 0 errores, build OK, CI verde (run 31665880125). Commits 3a7dce1 (feat) + b5b7a62 (fix).
  - [x] **FASE 3: Referencias cruzadas texto→evento** ✅ 2026-08-13 (12:00): `getBookEvents(timelineEvents, book)` en `utils/library.js` (inversa de `getEventRelatedTexts`: eventos `con_texto` cuyo `relatedTexts` incluye el TÍTULO de la obra, sin importar región). Cada tarjeta de la Biblioteca vinculada a un evento muestra el enlace "Ver en la línea temporal" (icono CalendarClock) que cambia a la vista Timeline y abre el modal del evento agrupador (`openEventFromLibrary` en `AnarchistArchive`). **166 → 175 tests** (4 de `getBookEvents`, 3 de `LibraryView`, 2 interactivos de clic y navegación completa), lint 0 errores, build OK, CI verde (run 31718764448). Commit 0746d69.
- - [ ] **FASE 3 (siguiente)**: "Mapas visuales por región" (pendiente) o, como alternativa de contenido, ampliar el catálogo con `@content-importer` (~400 PDFs del contenedor aún disponibles). Otra opción ligada a lo de hoy: filtro por autor como selector dedicado (hoy la búsqueda ya cubre autor, pero un selector facilitaría explorar el catálogo por autor).
+ - [x] **FASE 3: filtro por autor como selector dedicado** ✅ 2026-08-16 (12:00): `filterBooks` gana la opción `author` (nombre exacto, insensible a mayúsculas; `'all'` la desactiva sin romper usos anteriores) y `LibraryView` añade el desplegable "Filtrar por autor" con los autores derivados de `getAllAuthors` (fuente única), incluido en el reset de "Limpiar filtros" y en su condición de visibilidad. **182 → 185 tests**, lint 0 errores, CI verde (run 31957559736). Commit a793a32.
+ - [ ] **FASE 3 (siguiente)**: "Mapas visuales por región" (pendiente) o, como alternativa de contenido, ampliar el catálogo con `@content-importer` (~400 PDFs del contenedor aún disponibles). Otra opción: agrupar las obras de un autor en la tarjeta de la Biblioteca (hoy cada obra es una tarjeta; el selector de autor ya facilita verlas juntas, pero una vista agrupada lo haría más directo).
 
 ### Nota del día (2026-08-12, 12:00)
 Turno 12:00 del agente `daily-dev` (completado manualmente desde el chat: el cron
@@ -436,3 +437,30 @@ continuó con la siguiente tarea del plan.
 
 **Verificación**: `npm run check` (lint 0 errores + **182 tests** + build) verde.
 CI de Pages verde (run 31768723164). Commit e5ec0e6.
+
+### Nota del día (2026-08-16, 12:00)
+Turno 12:00 del agente `daily-dev`. Inspección (paso 1.5): descargas **113/113 OK**,
+regiones sincronizadas **17/17/17** (fuente única `regionData.js`, verificadas con
+`vite-node`: 0 regiones sin ISO, 0 ISO sin región; `REGIONS` = 17 + `all` de filtro),
+invariante `timeline == mapa` **44/44** (32 eventos, 0 títulos fantasma — los
+`relatedTexts` apuntan siempre a libros reales del catálogo, incluidos biografía/
+teoría vinculados a eventos históricos — y 0 `con_texto` sin textos), `npm audit`
+con 5 vulnerabilidades SOLO en devDeps build-time (vite/vitest/vite-node/esbuild;
+fix exigiría `--force` y rompería Vite 4 → no aplica a Pages), build sin warnings.
+Sin errores críticos → se continuó con la siguiente tarea del plan.
+**Tarea del plan ("Próximo día" de 2026-08-14 — FASE 3, filtro por autor)**:
+- **`filterBooks`** (`src/utils/library.js`) gana la opción `author`: filtra por
+  nombre de autor exacto, insensible a mayúsculas (`String(book.author).trim()
+  .toLowerCase()`); `'all'` (default) la desactiva sin romper los usos anteriores.
+- **`LibraryView.jsx`**: nuevo desplegable "Filtrar por autor" (después del de
+  década) con los autores del catálogo derivados de `getAllAuthors` (fuente única,
+  orden alfabético). Se incluye en el reset de "Limpiar filtros", en la condición
+  de visibilidad del botón y en el texto descriptivo bajo el título.
+- **Tests**: 182 → **185** (2 de `filterBooks` en `library.test.js`: autor exacto
+  insensible a mayúsculas, inexistente y `'all'`; libros sin autor no rompen el
+  filtro; 1 interactivo en `Interactions.test.jsx`: selector → grid filtrado y
+  "Limpiar filtros" resetea; reajustes del texto descriptivo en
+  `LibraryView.test.jsx` e `Interactions.test.jsx`).
+
+**Verificación**: `npm run check` (lint 0 errores + **185 tests** + build) verde.
+CI de Pages verde (run 31957559736). Commit a793a32.

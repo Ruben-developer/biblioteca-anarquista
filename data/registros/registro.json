@@ -210,6 +210,15 @@
       "prs": 0,
       "ci": "verde",
       "nota": "TURNO 00:00 agente daily-dev. Inspeccion OK: descargas 113/113, regiones 17/17/17 (fuente unica regionData.js), invariante timeline==mapa 44/44 (32 eventos, sin titulos fantasma), audit solo devDeps build-time (vite/vitest/vite-node/esbuild, fix exigiria --force y rompe Vite 4, no aplica a Pages). FASE 3 (checkbox pendiente): mas filtros y busqueda avanzada en la Biblioteca — filterBooks gana 3 opciones (availability: 'withFile'/'withoutFile' para las obras sin archivo; type: 'historical'/'ideas' alineado con mapa/timeline; favorites: array de titulos, null desactiva sin romper usos antiguos) + 3 selectores nuevos en LibraryView (disponibilidad, tipo de obra, favoritos) y Limpiar filtros los resetea. 175->182 tests (4 de filterBooks, 1 de controles renderizados, 2 interactivos jsdom), npm run check verde (lint 0 errores + 182 tests + build), CI Pages verde (run 31768723164). Commit e5ec0e6."
+    },
+    {
+      "fecha": "2026-08-16",
+      "obras": 119,
+      "palabras": 4042,
+      "commits": 2,
+      "prs": 0,
+      "ci": "verde",
+      "nota": "TURNO 12:00 agente daily-dev. Inspeccion OK: descargas 113/113, regiones 17/17/17 (fuente unica regionData.js), invariante timeline==mapa 44/44 (32 eventos, 0 titulos fantasma, 0 con_texto sin textos), audit solo devDeps build-time (vite/vitest/vite-node/esbuild, fix exigiria --force y rompe Vite 4, no aplica a Pages), build sin warnings. FASE 3 (checkbox pendiente del 'Proximo dia' 2026-08-14): filtro por autor como selector dedicado en la Biblioteca — filterBooks gana la opcion author (nombre exacto, insensible a mayusculas; 'all' la desactiva sin romper usos anteriores) y LibraryView anade el desplegable 'Filtrar por autor' con los autores derivados de getAllAuthors (fuente unica), incluido en el reset de 'Limpiar filtros' y en la condicion de visibilidad del boton. 182->185 tests (2 de filterBooks + 1 interactivo jsdom del selector y reset), npm run check verde (lint 0 errores + 185 tests + build), CI Pages verde (run 31957559736). Commit a793a32."
     }
   ]
 }
