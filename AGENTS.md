@@ -107,6 +107,22 @@ data/registros/   # registro.json (métricas diarias del agente)
   `notify.sh --auto --html <mensaje>`.
 - Scripts automáticos: `notify_daily.sh` (rutina 00:00/12:00), `notify_bitacora.sh`
   (BITACORA.md) y `notify_downloads.sh` (check-downloads). Ya pasan `--auto`.
+- El agente `daily-dev` redacta él mismo el mensaje en su log (sección
+  `## Notificación Telegram` en `.daily-runs/*.md`) y `notify_daily.sh` lo extrae y
+  lo envía tal cual. Mismo estilo que un mensaje manual: emojis, viñetas `•`,
+  números reales, sin HTML y sin diffs de archivos. Sin esa sección, el script
+  compone un resumen genérico de respaldo.
+
+## Notificaciones a correo (opcional)
+- Canal opcional, espejo de Telegram: `~/.config/biblioteca/notify_email.sh "Asunto" "cuerpo"`
+  (si no pasas el cuerpo, lee de stdin).
+- Solo envía si existe `~/.config/biblioteca/email.conf` (plantilla en `email.conf.example`:
+  SMTP de Riseup/Autistici — 465 SMTPS o 587 STARTTLS). Sin el archivo no envía nada y
+  no bloquea el cron ni la rutina.
+- `notify_daily.sh` reenvía por correo el mismo mensaje de la rutina, en texto plano
+  (sin las etiquetas HTML de Telegram).
+- Las credenciales del correo (p. ej. la cuenta «gato negro») van SOLO en
+  `~/.config/biblioteca/email.conf` (fuera del repo): nunca commitearlas.
 
 ## SonarQube (calidad)
 - SonarQube 26.6.0 en `http://192.168.1.117:9000` (dashboard: `?id=biblioteca-anarquista`).
