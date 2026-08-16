@@ -79,7 +79,7 @@ describe('LibraryView', () => {
     expect(html).toContain('Solo ideas');
     expect(html).toContain('Todas las obras');
     expect(html).toContain('Solo favoritas');
-    expect(html).toContain('Busca y filtra por categoría, región, década, disponibilidad, tipo o favoritos.');
+    expect(html).toContain('Busca y filtra por categoría, región, década, autor, disponibilidad, tipo o favoritos.');
   });
 });
 

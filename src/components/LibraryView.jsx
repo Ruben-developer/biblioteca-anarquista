@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { Search, BookOpen, Heart, X, CalendarClock } from 'lucide-react';
 import { THEME, CATEGORIES, REGIONS } from '../constants';
-import { getAllBooks, filterBooks, sortBooks, getDecadeFromYear, getDailyFeaturedBook, getBookEvents } from '../utils/library';
+import { getAllBooks, getAllAuthors, filterBooks, sortBooks, getDecadeFromYear, getDailyFeaturedBook, getBookEvents } from '../utils/library';
 import { getDocumentDownloadUrl } from '../services/documentService';
 import FeaturedBook from './FeaturedBook';
 
@@ -21,12 +21,19 @@ const LibraryView = ({
   const [category, setCategory] = useState('all');
   const [region, setRegion] = useState('all');
   const [decade, setDecade] = useState('all');
+  const [author, setAuthor] = useState('all');
   const [availability, setAvailability] = useState('all');
   const [type, setType] = useState('all');
   const [favoritesOnly, setFavoritesOnly] = useState(false);
   const [sort, setSort] = useState('rating');
 
   const allBooks = useMemo(() => getAllBooks(regionData), [regionData]);
+
+  // Autores disponibles para el selector dedicado (orden alfabético).
+  const availableAuthors = useMemo(
+    () => getAllAuthors(regionData).map((a) => a.name).sort((a, b) => a.localeCompare(b, 'es')),
+    [regionData]
+  );
 
   // Obra destacada del día: determinista por fecha (la misma toda la jornada).
   const featured = useMemo(() => getDailyFeaturedBook(regionData), [regionData]);
@@ -43,13 +50,14 @@ const LibraryView = ({
         category,
         region,
         decade,
+        author,
         availability,
         type,
         favorites: favoritesOnly ? favorites : null
       }),
       sort
     ),
-    [allBooks, searchTerm, category, region, decade, availability, type, favoritesOnly, favorites, sort]
+    [allBooks, searchTerm, category, region, decade, author, availability, type, favoritesOnly, favorites, sort]
   );
 
   const clearFilters = () => {
@@ -57,6 +65,7 @@ const LibraryView = ({
     setCategory('all');
     setRegion('all');
     setDecade('all');
+    setAuthor('all');
     setAvailability('all');
     setType('all');
     setFavoritesOnly(false);
@@ -83,7 +92,7 @@ const LibraryView = ({
         </h2>
       </div>
       <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-        {filtered.length} de {allBooks.length} obras del archivo. Busca y filtra por categoría, región, década, disponibilidad, tipo o favoritos.
+        {filtered.length} de {allBooks.length} obras del archivo. Busca y filtra por categoría, región, década, autor, disponibilidad, tipo o favoritos.
       </p>
 
       <FeaturedBook darkMode={darkMode} book={featured} />
@@ -123,6 +132,13 @@ const LibraryView = ({
             ))}
           </select>
 
+          <select value={author} onChange={(e) => setAuthor(e.target.value)} className={selectClass} aria-label="Filtrar por autor">
+            <option value="all">Todos los autores</option>
+            {availableAuthors.map((a) => (
+              <option key={a} value={a}>{a}</option>
+            ))}
+          </select>
+
           <select value={availability} onChange={(e) => setAvailability(e.target.value)} className={selectClass} aria-label="Filtrar por disponibilidad">
             <option value="all">Con y sin archivo</option>
             <option value="withFile">Solo con archivo</option>
@@ -146,7 +162,7 @@ const LibraryView = ({
             <option value="title">Por título</option>
           </select>
 
-          {(searchTerm || category !== 'all' || region !== 'all' || decade !== 'all' || availability !== 'all' || type !== 'all' || favoritesOnly) && (
+          {(searchTerm || category !== 'all' || region !== 'all' || decade !== 'all' || author !== 'all' || availability !== 'all' || type !== 'all' || favoritesOnly) && (
             <button
               onClick={clearFilters}
               className={`px-3 py-2 rounded-lg text-sm flex items-center gap-1 ${darkMode ? 'bg-red-900/40 text-red-300 hover:bg-red-900/60' : 'bg-red-100 text-red-700 hover:bg-red-200'}`}

@@ -100,6 +100,24 @@ describe('filterBooks', () => {
     expect(filterBooks(books, { decade: '1930s' }).length).toBe(1);
   });
 
+  it('filtra por autor (insensible a mayúsculas)', () => {
+    expect(filterBooks(books, { author: 'Kropotkin' }).map((b) => b.title)).toEqual(['La Conquista del Pan']);
+    expect(filterBooks(books, { author: 'kropotkin' }).length).toBe(1);
+    expect(filterBooks(books, { author: 'Autor Inexistente' }).length).toBe(0);
+    expect(filterBooks(books, { author: 'all' }).length).toBe(3);
+  });
+
+  it('filtra por autor y no rompe libros sin autor', () => {
+    const conAnonimo = getAllBooks({
+      España: { books: [
+        { title: 'Anónimo', category: 'teoria' },
+        { title: 'Firmado', author: 'Ricardo Mella', category: 'teoria' }
+      ] }
+    });
+    expect(filterBooks(conAnonimo, { author: 'Ricardo Mella' }).map((b) => b.title)).toEqual(['Firmado']);
+    expect(filterBooks(conAnonimo, { author: 'all' }).length).toBe(2);
+  });
+
   it('combina varios filtros', () => {
     const result = filterBooks(books, { category: 'teoria', region: 'España' });
     expect(result.length).toBe(1);

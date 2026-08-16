@@ -20,13 +20,14 @@ export const getAllBooks = (regionData) => {
 };
 
 // Filtra los libros combinando: búsqueda (título/autor), categoría, región,
-// década y búsqueda avanzada:
+// década, autor y búsqueda avanzada:
+//  - `author`: 'all' o un nombre de autor exacto (insensible a mayúsculas).
 //  - `availability`: 'all' | 'withFile' (solo con archivo) | 'withoutFile' (solo sin archivo).
 //  - `type`: 'all' | 'historical' (categorías del mapa/timeline) | 'ideas' (teoría/biografía/diálogo).
 //  - `favorites`: array de títulos guardados como favoritos (null/undefined desactiva el filtro).
 export const filterBooks = (
   books,
-  { searchTerm = '', category = 'all', region = 'all', decade = 'all', availability = 'all', type = 'all', favorites = null } = {}
+  { searchTerm = '', category = 'all', region = 'all', decade = 'all', author = 'all', availability = 'all', type = 'all', favorites = null } = {}
 ) => {
   const term = searchTerm.trim().toLowerCase();
 
@@ -41,6 +42,9 @@ export const filterBooks = (
       return false;
     }
     if (decade !== 'all' && getDecadeFromYear(book.year) !== decade) {
+      return false;
+    }
+    if (author !== 'all' && String(book.author || '').trim().toLowerCase() !== String(author).trim().toLowerCase()) {
       return false;
     }
     if (availability === 'withFile' && !book.filename) {
