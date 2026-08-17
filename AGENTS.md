@@ -113,16 +113,13 @@ data/registros/   # registro.json (métricas diarias del agente)
   números reales, sin HTML y sin diffs de archivos. Sin esa sección, el script
   compone un resumen genérico de respaldo.
 
-## Notificaciones a correo (opcional)
-- Canal opcional, espejo de Telegram: `~/.config/biblioteca/notify_email.sh "Asunto" "cuerpo"`
-  (si no pasas el cuerpo, lee de stdin).
-- Solo envía si existe `~/.config/biblioteca/email.conf` (plantilla en `email.conf.example`:
-  SMTP de Riseup/Autistici — 465 SMTPS o 587 STARTTLS). Sin el archivo no envía nada y
-  no bloquea el cron ni la rutina.
-- `notify_daily.sh` reenvía por correo el mismo mensaje de la rutina, en texto plano
-  (sin las etiquetas HTML de Telegram).
-- Las credenciales del correo (cuenta del proyecto: `antarquia@riseup.net`) van SOLO en
-  `~/.config/biblioteca/email.conf` (fuera del repo): nunca commitearlas.
+## Notificaciones a correo (opcional — DECISIÓN 2026-08-17: NO se usa)
+- **Decisión del usuario: el correo NO se vincula a Telegram.** El canal de
+  notificaciones del cron es SOLO Telegram. No configurar `email.conf`.
+- `antarquia@riseup.net` es el correo público del proyecto (formulario de
+  Contacto en la web, vía FormSubmit) y queda fuera de las notificaciones.
+- La plantilla `email.conf.example` y `notify_email.sh` se conservan solo como
+  referencia histórica; sin `email.conf` no envían nada y no bloquean el cron.
 
 ## SonarQube (calidad)
 - SonarQube 26.6.0 en `http://192.168.1.117:9000` (dashboard: `?id=biblioteca-anarquista`).
