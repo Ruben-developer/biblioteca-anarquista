@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { getDecadeFromYear, getAllBooks, getAllAuthors, getEventRelatedTexts, getBookEvents, filterBooks, sortBooks, getDailyFeaturedBook, getArchiveStats } from './library';
+import { getDecadeFromYear, getAllBooks, getAllAuthors, getEventRelatedTexts, getBookEvents, filterBooks, sortBooks, getDailyFeaturedBook, getArchiveStats, groupBooksByAuthor } from './library';
 
 const regionData = {
   España: {
@@ -73,6 +73,50 @@ describe('getAllAuthors', () => {
       España: { books: [{ title: 'Anónimo', category: 'teoria' }] }
     };
     expect(getAllAuthors(sinAutor).length).toBe(0);
+  });
+});
+
+describe('groupBooksByAuthor', () => {
+  it('agrupa los libros por autor y los ordena de más a menos obras', () => {
+    const books = [
+      { title: 'Obra A1', author: 'Kropotkin' },
+      { title: 'Obra A2', author: 'Kropotkin' },
+      { title: 'Obra B', author: 'Proudhon' }
+    ];
+    const groups = groupBooksByAuthor(books);
+    expect(groups.length).toBe(2);
+    expect(groups[0]).toMatchObject({ name: 'Kropotkin', bookCount: 2 });
+    expect(groups[0].books.map((b) => b.title)).toEqual(['Obra A1', 'Obra A2']);
+    expect(groups[1]).toMatchObject({ name: 'Proudhon', bookCount: 1 });
+  });
+
+  it('normaliza el nombre del autor (trim y mayúsculas) y agrupa los "sin autor" como Anónimo', () => {
+    const books = [
+      { title: 'Con espacios', author: '  Kropotkin  ' },
+      { title: 'Mayúsculas', author: 'KROPOTKIN' },
+      { title: 'Sin autor', category: 'teoria' }
+    ];
+    const groups = groupBooksByAuthor(books);
+    expect(groups.length).toBe(2);
+    expect(groups[0].name).toBe('Kropotkin'); // primer nombre encontrado normalizado
+    expect(groups[0].bookCount).toBe(2);
+    const anonimo = groups.find((g) => g.name === 'Anónimo');
+    expect(anonimo.bookCount).toBe(1);
+  });
+
+  it('empata por orden alfabético cuando hay el mismo número de obras', () => {
+    const books = [
+      { title: 'A', author: 'Zubía' },
+      { title: 'B', author: 'Aguirre' }
+    ];
+    const groups = groupBooksByAuthor(books);
+    expect(groups.map((g) => g.name)).toEqual(['Aguirre', 'Zubía']);
+  });
+
+  it('devuelve [] con lista vacía o sin datos', () => {
+    expect(groupBooksByAuthor([])).toEqual([]);
+    expect(groupBooksByAuthor(undefined)).toEqual([]);
+    expect(groupBooksByAuthor(null)).toEqual([]);
   });
 });
 

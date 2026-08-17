@@ -81,6 +81,14 @@ describe('LibraryView', () => {
     expect(html).toContain('Solo favoritas');
     expect(html).toContain('Busca y filtra por categoría, región, década, autor, disponibilidad, tipo o favoritos.');
   });
+
+  it('incluye el botón para agrupar por autor', () => {
+    const html = renderToStaticMarkup(
+      <LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />
+    );
+    expect(html).toContain('Agrupar por autor');
+    expect(html).toContain('aria-pressed="false"');
+  });
 });
 
 describe('LibraryView edge cases', () => {
