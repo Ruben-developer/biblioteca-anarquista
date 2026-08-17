@@ -228,6 +228,15 @@
       "prs": 0,
       "ci": "verde",
       "nota": "TURNO 00:00 agente daily-dev. Inspeccion OK: descargas 113/113, regiones 17/17/17 (fuente unica regionData.js), invariante timeline==mapa 44/44 (32 eventos, 0 titulos fantasma, 0 con_texto sin textos), audit solo devDeps build-time (vite/vitest/vite-node/esbuild, fix exigiria --force y rompe Vite 4, no aplica a Pages), build sin warnings. FASE 3 (checkbox del \"Proximo dia\" 2026-08-16): vista agrupada por autor en la Biblioteca — boton \"Agrupar por autor\" que alterna el grid de tarjetas individuales a una tarjeta por autor con numero de obras y filas compactas (region, anio, categoria, rating, favorito, evento timeline, boton Leer); nueva util groupBooksByAuthor (normaliza nombre, ordena por numero de obras, obras sin autor como Anonimo, [] sin datos); respeta filtros activos. 185 -> 192 tests, lint 0 errores, build OK, CI verde (run 31993262865). Commit b57d41f."
+    },
+    {
+      "fecha": "2026-08-17",
+      "obras": 119,
+      "palabras": 4042,
+      "commits": 1,
+      "prs": 0,
+      "ci": "pendiente (commit local, sin push)",
+      "nota": "TURNO CHAT 04:58. Implementacion de 4 secciones nuevas + modo lectura + microanimaciones: menu Teorias (anarchistTheories.js, 10 corrientes con ideas/autores/obras), Red de Autores (influences.js, grafo SVG de 18 pensadores y 26 influencias con panel de conexiones y obras), Rutas de lectura (readingPaths.js, 10 itinerarios tematicos), Glosario (glossary.js, 20 terminos con busqueda), modo lectura (ReaderOverlay.jsx: iframe a pantalla completa con fondo claro/oscuro, cierre/descarga/abrir en pestana; todos los botones Leer lo abren), microanimaciones CSS (view-transition, card-appear, active:scale-95), linea de tiempo por autor en AuthorsView, findBookByTitle en library.js. 182 -> 214 tests, lint 0 errores, build OK. Commit 75db48a."
     }
   ]
 }
