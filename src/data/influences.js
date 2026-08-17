@@ -1,0 +1,54 @@
+// Red de influencias entre pensadores (menú "Red de Autores").
+// Nodos con posiciones relativas (0-100) en un lienzo SVG y aristas de
+// influencia. Los libros de cada autor se resuelven contra regionData.js
+// por nombre de autor (getAllAuthors).
+export const influenceNodes = [
+  { id: 'proudhon', name: 'Proudhon', years: '1809–1865', region: 'Francia', authorKey: 'Pierre-Joseph Proudhon', x: 7, y: 22, bio: 'Padre del mutualismo y primer autoproclamado anarquista. Su pregunta "¿qué es la propiedad?" abre la tradición.' },
+  { id: 'stirner', name: 'Stirner', years: '1806–1856', region: 'Alemania', authorKey: 'Max Stirner', x: 7, y: 72, bio: 'Autor de "El único y su propiedad": el egoísmo como base del individualismo radical.' },
+  { id: 'dejacque', name: 'Déjacque', years: '1821–1864', region: 'Francia', authorKey: 'Joseph Déjacque', x: 7, y: 50, bio: 'Primero en usar el término "libertario". Anarquista comunista frente al mutualismo de Proudhon.' },
+  { id: 'bakunin', name: 'Bakunin', years: '1814–1876', region: 'Rusia', authorKey: 'Mijaíl Bakunin', x: 24, y: 36, bio: 'Fundador del anarco-colectivismo y del anarquismo organizado en la Internacional.' },
+  { id: 'reclus', name: 'Reclus', years: '1830–1905', region: 'Francia', authorKey: 'Élisée Reclus', x: 24, y: 66, bio: 'Geógrafo anarquista: la naturaleza y la sociedad se transforman juntas.' },
+  { id: 'kropotkin', name: 'Kropotkin', years: '1842–1921', region: 'Rusia', authorKey: 'Piotr Kropotkin', x: 42, y: 28, bio: 'Teórico del anarco-comunismo: apoyo mutuo, comunas libres y federación.' },
+  { id: 'malatesta', name: 'Malatesta', years: '1853–1932', region: 'Italia', authorKey: 'Errico Malatesta', x: 42, y: 50, bio: 'Revolucionario y organizador: el anarquismo como praxis insurreccional permanente.' },
+  { id: 'tucker', name: 'Tucker', years: '1854–1939', region: 'EE. UU.', authorKey: 'Benjamin Tucker', x: 42, y: 72, bio: 'Principal anarquista individualista norteamericano: socialismo de Estado frente a anarquismo.' },
+  { id: 'michel', name: 'Louise Michel', years: '1830–1905', region: 'Francia', authorKey: 'Louise Michel', x: 42, y: 88, bio: 'La "virgen roja" de la Comuna de París, poeta y militante incansable.' },
+  { id: 'goldman', name: 'Goldman', years: '1869–1940', region: 'EE. UU.', authorKey: 'Emma Goldman', x: 60, y: 40, bio: 'Pionera del anarcofeminismo: "si no puedo bailar, no es mi revolución".' },
+  { id: 'mella', name: 'Mella', years: '1861–1925', region: 'España', authorKey: 'Ricardo Mella', x: 60, y: 20, bio: 'El teórico más lúcido del anarquismo español; del colectivismo al comunismo.' },
+  { id: 'ferrer', name: 'Ferrer i Guardia', years: '1859–1909', region: 'España', authorKey: 'Francisco Ferrer Guardia', x: 60, y: 58, bio: 'Fundador de la Escuela Moderna; fusilado por su pedagogía racionalista.' },
+  { id: 'rocker', name: 'Rocker', years: '1873–1958', region: 'Alemania', x: 60, y: 76, bio: 'Teórico del anarcosindicalismo: "anarcosindicalismo: teoría y práctica".' },
+  { id: 'armand', name: 'Armand', years: '1872–1962', region: 'Francia', authorKey: 'Émile Armand', x: 60, y: 90, bio: 'Anarquista individualista: camaradería amorosa y vida no convencional.' },
+  { id: 'makhno', name: 'Makhno', years: '1888–1934', region: 'Ucrania', authorKey: 'Néstor Makhno', x: 78, y: 64, bio: 'El ejército insurrecto de Ucrania; origen del plataformismo.' },
+  { id: 'bookchin', name: 'Bookchin', years: '1921–2006', region: 'EE. UU.', authorKey: 'Murray Bookchin', x: 78, y: 26, bio: 'Ecología social y municipalismo libertario: la crisis ecológica como crisis social.' },
+  { id: 'graeber', name: 'Graeber', years: '1961–2020', region: 'EE. UU.', authorKey: 'David Graeber', x: 92, y: 38, bio: 'Antropólogo anarquista: la etnografía como inspiración de organización libre.' },
+  { id: 'gelderloos', name: 'Gelderloos', years: '1982–', region: 'EE. UU.', authorKey: 'Peter Gelderloos', x: 92, y: 64, bio: 'Autor contemporáneo sobre anarquismo, ecología y acción directa.' }
+];
+
+// Aristas: [desde, hacia]. El grafo es dirigido (influencia →).
+export const influenceEdges = [
+  ['proudhon', 'bakunin'],
+  ['proudhon', 'dejacque'],
+  ['proudhon', 'tucker'],
+  ['proudhon', 'mella'],
+  ['stirner', 'tucker'],
+  ['stirner', 'armand'],
+  ['dejacque', 'kropotkin'],
+  ['bakunin', 'kropotkin'],
+  ['bakunin', 'malatesta'],
+  ['bakunin', 'mella'],
+  ['bakunin', 'rocker'],
+  ['bakunin', 'makhno'],
+  ['reclus', 'kropotkin'],
+  ['reclus', 'bookchin'],
+  ['kropotkin', 'goldman'],
+  ['kropotkin', 'mella'],
+  ['kropotkin', 'rocker'],
+  ['kropotkin', 'graeber'],
+  ['malatesta', 'goldman'],
+  ['tucker', 'armand'],
+  ['michel', 'goldman'],
+  ['goldman', 'graeber'],
+  ['goldman', 'gelderloos'],
+  ['ferrer', 'makhno'],
+  ['bookchin', 'graeber'],
+  ['bookchin', 'gelderloos']
+];

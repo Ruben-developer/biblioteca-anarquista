@@ -176,6 +176,22 @@ export const getAllAuthors = (regionData) => {
     .sort((a, b) => b.bookCount - a.bookCount || a.name.localeCompare(b.name, 'es'));
 };
 
+// Busca un libro del catálogo por su TÍTULO (insensible a mayúsculas y
+// espacios). Devuelve el libro con su región o undefined si no existe.
+// Se usa para resolver los títulos referenciados por glosario, rutas de
+// lectura y corrientes del anarquismo contra la fuente única regionData.
+export const findBookByTitle = (regionData, title) => {
+  if (!regionData || !title) return undefined;
+  const wanted = String(title).trim().toLowerCase();
+  for (const [region, data] of Object.entries(regionData)) {
+    const found = (data.books || []).find(
+      (b) => String(b.title || '').trim().toLowerCase() === wanted
+    );
+    if (found) return { ...found, region };
+  }
+  return undefined;
+};
+
 // Agrupa una lista plana de libros por autor (nombre normalizado: trim y sin
 // distinción de mayúsculas). Devuelve los grupos ordenados de más a menos obras
 // (y alfabéticamente en caso de empate). Los libros sin autor se agrupan bajo

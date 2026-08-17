@@ -1,7 +1,6 @@
 import React from 'react';
 import { X, MapPin, Heart, BookOpen } from 'lucide-react';
 import { THEME } from '../constants';
-import { getDocumentDownloadUrl } from '../services/documentService';
 import { getHistoricalBooks } from '../utils/library';
 
 const RegionModal = ({ 
@@ -10,7 +9,8 @@ const RegionModal = ({
   regionData, 
   favorites,
   onClose, 
-  onToggleFavorite
+  onToggleFavorite,
+  onRead = () => {}
 }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
 
@@ -79,15 +79,13 @@ const RegionModal = ({
                   )}
                   <div className="flex gap-2 mt-3 flex-wrap">
                     {book.filename && (
-                      <a 
-                        href={getDocumentDownloadUrl(book.filename)}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <button
+                        onClick={() => onRead(book)}
                         className={`text-xs ${darkMode ? 'text-red-400 hover:text-red-300' : 'text-amber-700 hover:text-amber-900'} flex items-center gap-1 hover:underline transition-colors`}
                       >
                         <BookOpen size={14} />
                         Leer
-                      </a>
+                      </button>
                     )}
                   </div>
                 </div>

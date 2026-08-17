@@ -1,8 +1,10 @@
 # Ideas de secciones para el Archivo Histórico Anarquista
 
 > Backlog de posibles secciones para la web, sin priorizar ni implementar aún.
-> Guardado el 2026-08-09. Implementadas: **Biblioteca** (catálogo con filtros) y
-> **Lector embebido** (PDF/TXT sin salir de la web).
+> Guardado el 2026-08-09. Implementadas: **Biblioteca** (catálogo con filtros),
+> **Lector embebido** (PDF/TXT sin salir de la web), **Teorías** (ramas del
+> anarquismo), **Red de Autores** (grafo de influencias), **Rutas de lectura**,
+> **Glosario libertario**, **modo lectura** y **microanimaciones** (2026-08-17).
 
 ## 2. Obra destacada del día
 - Selección aleatoria diaria de una obra del archivo (portada, reseña y botón de lectura).

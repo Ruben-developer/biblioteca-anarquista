@@ -13,7 +13,7 @@ import FeaturedBook from './FeaturedBook';
 import { VIEWS } from '../constants';
 
 describe('Navigation', () => {
-  it('renderiza las cinco vistas con sus contadores', () => {
+  it('renderiza las vistas con sus contadores', () => {
     const html = renderToStaticMarkup(
       <Navigation activeView={VIEWS.TIMELINE} onViewChange={() => {}} darkMode={false} favoriteCount={3} regionCount={16} />
     );
@@ -22,6 +22,10 @@ describe('Navigation', () => {
     expect(html).toContain('Biblioteca');
     expect(html).toContain('Autores');
     expect(html).toContain('Favoritos (3)');
+    expect(html).toContain('Teorías');
+    expect(html).toContain('Red de Autores');
+    expect(html).toContain('Rutas');
+    expect(html).toContain('Glosario');
   });
 
   it('marca la vista activa y llama onViewChange al hacer clic', () => {
@@ -334,8 +338,9 @@ describe('AuthorsView interactivo (jsdom)', () => {
     const { container } = render(<AuthorsView darkMode={false} authors={authors} />);
     expect(screen.queryByText('Nueva Utopía')).toBeNull();
     fireEvent.click(screen.getByText('Ricardo Mella'));
-    expect(screen.getByText('Nueva Utopía')).toBeTruthy();
-    expect(screen.getByText('La coacción moral')).toBeTruthy();
+    // La obra aparece dos veces: en la línea de tiempo del autor y en la lista.
+    expect(screen.getAllByText('Nueva Utopía').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('La coacción moral').length).toBeGreaterThanOrEqual(1);
     fireEvent.click(screen.getByText('Ricardo Mella'));
     expect(screen.queryByText('Nueva Utopía')).toBeNull();
     container.remove();
@@ -357,8 +362,8 @@ describe('AuthorsView interactivo (jsdom)', () => {
     ];
     const { container } = render(<AuthorsView darkMode authors={authors} />);
     fireEvent.click(screen.getByText('Autor Mixto'));
-    expect(screen.getByText('Obra con PDF')).toBeTruthy();
-    expect(screen.getByText('Obra sin archivo')).toBeTruthy();
+    expect(screen.getAllByText('Obra con PDF').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('Obra sin archivo').length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText('Leer').length).toBe(1);
     container.remove();
   });
@@ -383,7 +388,7 @@ describe('FeaturedBook', () => {
     expect(html).toContain('Piotr Kropotkin');
     expect(html).toContain('El clásico del comunismo anarquista.');
     expect(html).toContain('Leer esta obra');
-    expect(html).toContain('/pdfs/anarquismo/conquista.pdf');
+    expect(html).not.toContain('href=');
   });
 
   it('usa la variante oscura de colores', () => {
@@ -399,5 +404,14 @@ describe('FeaturedBook', () => {
 
   it('no renderiza nada sin obra destacada', () => {
     expect(renderToStaticMarkup(<FeaturedBook darkMode={false} book={null} />)).toBe('');
+  });
+
+  it('invoca onRead con la obra al hacer clic en "Leer esta obra"', async () => {
+    // @vitest-environment jsdom
+    const { render, screen, fireEvent } = await import('@testing-library/react');
+    const onRead = vi.fn();
+    render(<FeaturedBook darkMode={false} book={book} onRead={onRead} />);
+    fireEvent.click(screen.getByText('Leer esta obra'));
+    expect(onRead).toHaveBeenCalledWith(expect.objectContaining({ title: 'La Conquista del Pan' }));
   });
 });

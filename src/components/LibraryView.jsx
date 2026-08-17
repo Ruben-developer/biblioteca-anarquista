@@ -2,7 +2,6 @@ import React, { useMemo, useState } from 'react';
 import { Search, BookOpen, Heart, X, CalendarClock, Users } from 'lucide-react';
 import { THEME, CATEGORIES, REGIONS } from '../constants';
 import { getAllBooks, getAllAuthors, filterBooks, sortBooks, getDecadeFromYear, getDailyFeaturedBook, getBookEvents, groupBooksByAuthor } from '../utils/library';
-import { getDocumentDownloadUrl } from '../services/documentService';
 import FeaturedBook from './FeaturedBook';
 
 const DECADE_OPTIONS = ['all', '1840s', '1850s', '1860s', '1870s', '1880s', '1890s', '1900s', '1910s', '1920s', '1930s', '1940s', '1950s', '1960s'];
@@ -13,7 +12,8 @@ const LibraryView = ({
   favorites,
   onToggleFavorite,
   timelineEvents = [],
-  onOpenEvent = () => {}
+  onOpenEvent = () => {},
+  onRead = () => {}
 }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
 
@@ -99,7 +99,7 @@ const LibraryView = ({
         {filtered.length} de {allBooks.length} obras del archivo. Busca y filtra por categoría, región, década, autor, disponibilidad, tipo o favoritos.
       </p>
 
-      <FeaturedBook darkMode={darkMode} book={featured} />
+      <FeaturedBook darkMode={darkMode} book={featured} onRead={onRead} />
 
       <div className="flex flex-col gap-3 mb-6">
         <div className="relative">
@@ -212,7 +212,6 @@ const LibraryView = ({
               <div className="flex flex-col gap-3">
                 {group.books.map((book, idx) => {
                   const isFavorite = favorites.includes(book.title);
-                  const downloadUrl = getDocumentDownloadUrl(book.filename);
                   const bookEvents = getBookEvents(timelineEvents, book);
                   return (
                     <div key={`${book.region}-${book.title}-${idx}`} className={`rounded-lg p-4 ${darkMode ? 'bg-gray-900/50 border border-gray-700' : 'bg-white/50 border border-amber-200'}`}>
@@ -257,18 +256,16 @@ const LibraryView = ({
                       )}
 
                       <div className="flex items-center gap-3 mt-3">
-                        {downloadUrl ? (
-                          <a
-                            href={downloadUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                        {book.filename ? (
+                          <button
+                            onClick={() => onRead(book)}
                             className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                               darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
                             }`}
                           >
                             <BookOpen size={14} />
                             Leer
-                          </a>
+                          </button>
                         ) : (
                           <span
                             className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm border ${
@@ -291,9 +288,8 @@ const LibraryView = ({
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {filtered.map((book, idx) => {
             const isFavorite = favorites.includes(book.title);
-            const downloadUrl = getDocumentDownloadUrl(book.filename);
             return (
-              <div key={`${book.region}-${book.title}-${idx}`} className={`${cardClass} border-2 rounded-lg p-5 hover:shadow-xl transition-all flex flex-col`}>
+              <div key={`${book.region}-${book.title}-${idx}`} className={`${cardClass} border-2 rounded-lg p-5 hover:shadow-xl transition-all flex flex-col card-appear`} style={{ animationDelay: `${Math.min(idx, 8) * 40}ms` }}>
                 <div className="flex items-start justify-between gap-2 mb-2">
                   <span className={`text-xs px-2 py-1 rounded-full ${darkMode ? 'bg-gray-700 text-gray-300' : 'bg-amber-200 text-amber-900'}`}>
                     {book.region}
@@ -347,18 +343,16 @@ const LibraryView = ({
                 })()}
 
                 <div className="flex items-center gap-3 mt-auto">
-                  {downloadUrl ? (
-                    <a
-                      href={downloadUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                  {book.filename ? (
+                    <button
+                      onClick={() => onRead(book)}
                       className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                         darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
                       }`}
                     >
                       <BookOpen size={14} />
                       Leer
-                    </a>
+                    </button>
                   ) : (
                     <span
                       className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm border ${

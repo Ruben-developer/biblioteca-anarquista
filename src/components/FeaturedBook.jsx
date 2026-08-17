@@ -1,16 +1,14 @@
 import React from 'react';
 import { BookOpen, Sparkles } from 'lucide-react';
 import { THEME } from '../constants';
-import { getDocumentDownloadUrl } from '../services/documentService';
 
 // Widget "Obra del día": destaca una obra del archivo (seleccionada de forma
 // determinista por fecha, ver getDailyFeaturedBook) con su reseña y botón de
 // lectura, sin salir de la web.
-const FeaturedBook = ({ darkMode, book }) => {
+const FeaturedBook = ({ darkMode, book, onRead = () => {} }) => {
   if (!book) return null;
 
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
-  const downloadUrl = getDocumentDownloadUrl(book.filename);
 
   return (
     <section
@@ -52,18 +50,16 @@ const FeaturedBook = ({ darkMode, book }) => {
               {book.summary}
             </p>
           )}
-          {downloadUrl && (
-            <a
-              href={downloadUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+          {book.filename && (
+            <button
+              onClick={() => onRead(book)}
               className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                 darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
               }`}
             >
               <BookOpen size={14} />
               Leer esta obra
-            </a>
+            </button>
           )}
         </div>
       </div>

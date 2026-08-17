@@ -46,7 +46,7 @@ describe('EventModal', () => {
     expect(html).toContain('Textos relacionados con este evento');
     expect(html).toContain('Los Mártires de Chicago');
     expect(html).not.toContain('El origen del 1º de Mayo');
-    expect(html).toContain('target="_blank"');
+    expect(html).toContain('Ver');
   });
 
   it('no muestra textos para un evento tipo hecho (sin relatedTexts)', () => {

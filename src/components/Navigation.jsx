@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, MapPin, User, Heart, BookOpen } from 'lucide-react';
+import { Calendar, MapPin, User, Heart, BookOpen, Compass, Share2, Milestone, BookMarked } from 'lucide-react';
 import { THEME, VIEWS } from '../constants';
 
 const Navigation = ({ 
@@ -15,7 +15,11 @@ const Navigation = ({
     { view: VIEWS.LIBRARY, label: 'Biblioteca', icon: BookOpen },
     { view: VIEWS.MAP, label: `Mapa (${regionCount})`, icon: MapPin },
     { view: VIEWS.TIMELINE, label: 'Línea Temporal', icon: Calendar },
+    { view: VIEWS.THEORIES, label: 'Teorías', icon: Compass },
     { view: VIEWS.AUTHORS, label: 'Autores', icon: User },
+    { view: VIEWS.INFLUENCES, label: 'Red de Autores', icon: Share2 },
+    { view: VIEWS.PATHS, label: 'Rutas', icon: Milestone },
+    { view: VIEWS.GLOSSARY, label: 'Glosario', icon: BookMarked },
     { view: VIEWS.FAVORITES, label: `Favoritos (${favoriteCount})`, icon: Heart }
   ];
 
@@ -27,7 +31,7 @@ const Navigation = ({
             <button
               key={view}
               onClick={() => onViewChange(view)}
-              className={`flex items-center gap-2 px-5 py-3 rounded-lg transition-all font-display text-sm uppercase tracking-wider whitespace-nowrap ${
+              className={`flex items-center gap-2 px-5 py-3 rounded-lg transition-all font-display text-sm uppercase tracking-wider whitespace-nowrap active:scale-95 ${
                 activeView === view
                   ? darkMode 
                     ? 'bg-red-600 text-white' 

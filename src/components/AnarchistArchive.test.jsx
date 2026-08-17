@@ -1,7 +1,10 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, afterEach } from 'vitest';
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
+import { cleanup } from '@testing-library/react';
 import AnarchistArchive from './AnarchistArchive';
+
+afterEach(cleanup);
 
 describe('AnarchistArchive', () => {
   it('renderiza la app completa con cabecera, navegación y vista por defecto (línea temporal)', () => {
@@ -33,7 +36,7 @@ describe('AnarchistArchive interactivo (jsdom)', () => {
   it('navega a la vista Autores y a Favoritos vacío', async () => {
     const { render, screen, fireEvent } = await import('@testing-library/react');
     const { container } = render(<AnarchistArchive />);
-    fireEvent.click(screen.getByRole('button', { name: /Autores/ }));
+    fireEvent.click(screen.getByRole('button', { name: 'Autores' }));
     expect(screen.getByText('Autores del Archivo')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', { name: /Favoritos/ }));
     expect(screen.getByText('Mis Favoritos')).toBeTruthy();

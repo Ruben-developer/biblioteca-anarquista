@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { getDecadeFromYear, getAllBooks, getAllAuthors, getEventRelatedTexts, getBookEvents, filterBooks, sortBooks, getDailyFeaturedBook, getArchiveStats, groupBooksByAuthor } from './library';
+import { getDecadeFromYear, getAllBooks, getAllAuthors, getEventRelatedTexts, getBookEvents, filterBooks, sortBooks, getDailyFeaturedBook, getArchiveStats, groupBooksByAuthor, findBookByTitle } from './library';
 
 const regionData = {
   España: {
@@ -466,5 +466,31 @@ describe('getArchiveStats', () => {
     const s = getArchiveStats(rd);
     expect(s.byDecade.map((d) => d.decade)).toEqual(['1870s', '1890s', '1910s', '1920s', '1930s']);
     expect(s.byDecade[0]).toEqual({ decade: '1870s', count: 1 });
+  });
+});
+
+describe('findBookByTitle', () => {
+  const rd = {
+    España: {
+      books: [{ title: 'La Conquista del Pan', author: 'Kropotkin', year: 1892, filename: 'a.pdf' }]
+    },
+    Francia: {
+      books: [{ title: '¿Qué es la Propiedad?', author: 'Proudhon', filename: 'b.pdf' }]
+    }
+  };
+
+  it('encuentra un libro por su título exacto (insensible a mayúsculas y espacios)', () => {
+    const book = findBookByTitle(rd, '  la conquista del pan  ');
+    expect(book).toMatchObject({ title: 'La Conquista del Pan', region: 'España' });
+  });
+
+  it('devuelve undefined si el título no existe', () => {
+    expect(findBookByTitle(rd, 'Obra inexistente')).toBeUndefined();
+  });
+
+  it('devuelve undefined sin datos o sin título', () => {
+    expect(findBookByTitle(null, 'x')).toBeUndefined();
+    expect(findBookByTitle(rd, '')).toBeUndefined();
+    expect(findBookByTitle(rd, undefined)).toBeUndefined();
   });
 });

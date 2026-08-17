@@ -33,7 +33,11 @@ export const VIEWS = {
   MAP: 'map',
   AUTHORS: 'authors',
   FAVORITES: 'favorites',
-  LIBRARY: 'library'
+  LIBRARY: 'library',
+  THEORIES: 'theories',
+  INFLUENCES: 'influences',
+  PATHS: 'paths',
+  GLOSSARY: 'glossary'
 };
 
 // Color themes for dark and light modes

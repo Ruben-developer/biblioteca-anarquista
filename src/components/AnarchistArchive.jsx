@@ -16,6 +16,11 @@ import WorldMapView from './WorldMapView';
 import AuthorsView from './AuthorsView';
 import FavoritesView from './FavoritesView';
 import LibraryView from './LibraryView';
+import TheoriesView from './TheoriesView';
+import InfluencesView from './InfluencesView';
+import ReadingPathsView from './ReadingPathsView';
+import GlossaryView from './GlossaryView';
+import ReaderOverlay from './ReaderOverlay';
 import TourModal from './TourModal';
 import RegionModal from './RegionModal';
 import EventModal from './EventModal';
@@ -32,6 +37,7 @@ const AnarchistArchive = () => {
   const [showFilters, setShowFilters] = useState(false);
   const [showTour, setShowTour] = useState(false);
   const [showStats, setShowStats] = useState(false);
+  const [readingBook, setReadingBook] = useState(null);
 
   const [filters, setFilters] = useState({
     searchTerm: '',
@@ -92,61 +98,97 @@ const AnarchistArchive = () => {
       )}
 
       <main className="container mx-auto px-4 py-8">
-        {activeView === VIEWS.TIMELINE && (
-          <div className="space-y-6">
-            <TimelineFilters
+        <div key={activeView} className="view-transition space-y-6">
+          {activeView === VIEWS.TIMELINE && (
+            <div className="space-y-6">
+              <TimelineFilters
+                darkMode={darkMode}
+                filters={filters}
+                onFilterChange={setFilters}
+                onShowFilters={() => setShowFilters(!showFilters)}
+                showFilters={showFilters}
+                onClearFilters={clearFilters}
+                eventCount={filteredEvents.length}
+                totalEventCount={timelineEvents.length}
+              />
+              <TimelineView
+                darkMode={darkMode}
+                filteredEvents={filteredEvents}
+                onSelectEvent={setSelectedEvent}
+                onClearFilters={clearFilters}
+              />
+            </div>
+          )}
+
+          {activeView === VIEWS.MAP && (
+            <WorldMapView
               darkMode={darkMode}
-              filters={filters}
-              onFilterChange={setFilters}
-              onShowFilters={() => setShowFilters(!showFilters)}
-              showFilters={showFilters}
-              onClearFilters={clearFilters}
-              eventCount={filteredEvents.length}
-              totalEventCount={timelineEvents.length}
+              regionData={regionData}
+              onSelectRegion={setSelectedRegion}
             />
-            <TimelineView
+          )}
+
+          {activeView === VIEWS.AUTHORS && (
+            <AuthorsView
               darkMode={darkMode}
-              filteredEvents={filteredEvents}
-              onSelectEvent={setSelectedEvent}
-              onClearFilters={clearFilters}
+              authors={dynamicAuthors}
+              regionData={regionData}
+              onRead={setReadingBook}
             />
-          </div>
-        )}
+          )}
 
-        {activeView === VIEWS.MAP && (
-          <WorldMapView
-            darkMode={darkMode}
-            regionData={regionData}
-            onSelectRegion={setSelectedRegion}
-          />
-        )}
+          {activeView === VIEWS.LIBRARY && (
+            <LibraryView
+              darkMode={darkMode}
+              regionData={regionData}
+              favorites={favorites}
+              onToggleFavorite={toggleFavorite}
+              timelineEvents={timelineEvents}
+              onOpenEvent={openEventFromLibrary}
+              onRead={setReadingBook}
+            />
+          )}
 
-        {activeView === VIEWS.AUTHORS && (
-          <AuthorsView
-            darkMode={darkMode}
-            authors={dynamicAuthors}
-            regionData={regionData}
-          />
-        )}
+          {activeView === VIEWS.FAVORITES && (
+            <FavoritesView
+              darkMode={darkMode}
+              favorites={favorites}
+              onToggleFavorite={toggleFavorite}
+            />
+          )}
 
-        {activeView === VIEWS.LIBRARY && (
-          <LibraryView
-            darkMode={darkMode}
-            regionData={regionData}
-            favorites={favorites}
-            onToggleFavorite={toggleFavorite}
-            timelineEvents={timelineEvents}
-            onOpenEvent={openEventFromLibrary}
-          />
-        )}
+          {activeView === VIEWS.THEORIES && (
+            <TheoriesView
+              darkMode={darkMode}
+              regionData={regionData}
+              onRead={setReadingBook}
+            />
+          )}
 
-        {activeView === VIEWS.FAVORITES && (
-          <FavoritesView
-            darkMode={darkMode}
-            favorites={favorites}
-            onToggleFavorite={toggleFavorite}
-          />
-        )}
+          {activeView === VIEWS.INFLUENCES && (
+            <InfluencesView
+              darkMode={darkMode}
+              regionData={regionData}
+              onRead={setReadingBook}
+            />
+          )}
+
+          {activeView === VIEWS.PATHS && (
+            <ReadingPathsView
+              darkMode={darkMode}
+              regionData={regionData}
+              onRead={setReadingBook}
+            />
+          )}
+
+          {activeView === VIEWS.GLOSSARY && (
+            <GlossaryView
+              darkMode={darkMode}
+              regionData={regionData}
+              onRead={setReadingBook}
+            />
+          )}
+        </div>
       </main>
 
       <footer className={`border-t-4 ${darkMode ? 'border-red-900 bg-black/30' : 'border-amber-800 bg-amber-100/60'}`}>
@@ -175,6 +217,7 @@ const AnarchistArchive = () => {
           favorites={favorites}
           onClose={() => setSelectedRegion(null)}
           onToggleFavorite={toggleFavorite}
+          onRead={setReadingBook}
         />
       )}
 
@@ -184,6 +227,15 @@ const AnarchistArchive = () => {
           event={selectedEvent}
           regionData={regionData}
           onClose={() => setSelectedEvent(null)}
+          onRead={setReadingBook}
+        />
+      )}
+
+      {readingBook && (
+        <ReaderOverlay
+          book={readingBook}
+          darkMode={darkMode}
+          onClose={() => setReadingBook(null)}
         />
       )}
 

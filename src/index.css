@@ -331,3 +331,51 @@ code {
   color: #A3241E;
 }
 
+/* ============================================================
+   MICROANIMACIONES
+   - .view-transition: fundido + deslizamiento al cambiar de vista
+     (se re-dispara al cambiar la clave `key={activeView}`).
+   - .card-appear: entrada escalonada de las tarjetas.
+   - Hover de tarjetas: elevación sutil.
+   ============================================================ */
+@keyframes view-fade-slide {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.view-transition {
+  animation: view-fade-slide 0.35s ease-out both;
+}
+
+@keyframes card-pop {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.card-appear {
+  animation: card-pop 0.3s ease-out both;
+}
+
+/* Elevación sutil al pasar el cursor sobre las tarjetas clicables */
+button.animate-lift,
+a.animate-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button.animate-lift:hover,
+a.animate-lift:hover {
+  transform: translateY(-2px);
+}
+

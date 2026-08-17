@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Book, ChevronDown, ChevronUp, BookOpen, MapPin } from 'lucide-react';
 import { THEME } from '../constants';
-import { getDocumentDownloadUrl } from '../services/documentService';
 
 const AuthorsView = ({
   darkMode,
-  authors
+  authors,
+  onRead = () => {}
 }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
   const [openAuthor, setOpenAuthor] = useState(null);
@@ -61,6 +61,32 @@ const AuthorsView = ({
 
               {isOpen && (
                 <div className="mt-4 space-y-2">
+                  {author.books.filter((b) => b.year).length > 1 && (
+                    <div className={`rounded-lg border p-3 ${darkMode ? 'bg-gray-800/60 border-gray-700/50' : 'bg-white/80 border-amber-300'}`}>
+                      <p className={`text-xs uppercase tracking-wide mb-2 ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
+                        Línea de tiempo de su obra
+                      </p>
+                      <div className="flex items-center gap-0 overflow-x-auto pb-1">
+                        {author.books
+                          .filter((b) => b.year)
+                          .sort((a, b) => a.year - b.year)
+                          .map((b, i, arr) => (
+                            <div key={`${b.title}-${i}`} className="flex items-center">
+                              <div className="flex flex-col items-center min-w-[64px]">
+                                <span className={`text-[10px] ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>{b.year}</span>
+                                <span className={`w-3 h-3 rounded-full mt-1 ${darkMode ? 'bg-red-600' : 'bg-amber-700'}`} />
+                                <span className={`text-[10px] text-center leading-tight mt-1 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                                  {b.title.length > 22 ? `${b.title.slice(0, 22)}…` : b.title}
+                                </span>
+                              </div>
+                              {i < arr.length - 1 && (
+                                <span className={`h-0.5 w-4 ${darkMode ? 'bg-gray-600' : 'bg-amber-400'}`} />
+                              )}
+                            </div>
+                          ))}
+                      </div>
+                    </div>
+                  )}
                   {author.books.map((book, idx) => (
                     <div
                       key={`${book.region}-${book.title}-${idx}`}
@@ -86,17 +112,15 @@ const AuthorsView = ({
                           </div>
                         </div>
                         {book.filename && (
-                          <a
-                            href={getDocumentDownloadUrl(book.filename)}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                          <button
+                            onClick={() => onRead(book)}
                             className={`flex-shrink-0 flex items-center gap-1 px-2 py-1 rounded text-xs font-medium transition-colors ${
                               darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
                             }`}
                           >
                             <BookOpen size={12} />
                             Leer
-                          </a>
+                          </button>
                         )}
                       </div>
                     </div>
