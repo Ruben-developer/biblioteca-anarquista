@@ -121,7 +121,7 @@ data/registros/   # registro.json (métricas diarias del agente)
   no bloquea el cron ni la rutina.
 - `notify_daily.sh` reenvía por correo el mismo mensaje de la rutina, en texto plano
   (sin las etiquetas HTML de Telegram).
-- Las credenciales del correo (p. ej. la cuenta «gato negro») van SOLO en
+- Las credenciales del correo (cuenta del proyecto: `antarquia@riseup.net`) van SOLO en
   `~/.config/biblioteca/email.conf` (fuera del repo): nunca commitearlas.
 
 ## SonarQube (calidad)

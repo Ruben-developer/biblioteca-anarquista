@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, MapPin, User, Heart, BookOpen, Compass, Share2, Milestone, BookMarked } from 'lucide-react';
+import { Calendar, MapPin, User, Heart, BookOpen, Compass, Share2, Milestone, BookMarked, Mail } from 'lucide-react';
 import { THEME, VIEWS } from '../constants';
 
 const Navigation = ({ 
@@ -20,6 +20,7 @@ const Navigation = ({
     { view: VIEWS.INFLUENCES, label: 'Red de Autores', icon: Share2 },
     { view: VIEWS.PATHS, label: 'Rutas', icon: Milestone },
     { view: VIEWS.GLOSSARY, label: 'Glosario', icon: BookMarked },
+    { view: VIEWS.CONTACT, label: 'Contacto', icon: Mail },
     { view: VIEWS.FAVORITES, label: `Favoritos (${favoriteCount})`, icon: Heart }
   ];
 

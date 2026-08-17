@@ -9,12 +9,14 @@ afterEach(cleanup);
 describe('AnarchistArchive', () => {
   it('renderiza la app completa con cabecera, navegación y vista por defecto (línea temporal)', () => {
     const html = renderToStaticMarkup(<AnarchistArchive />);
+    expect(html).toContain('Antarquia');
     expect(html).toContain('Archivo Histórico Anarquista');
     expect(html).toContain('Línea Temporal');
     expect(html).toContain('Mapa');
     expect(html).toContain('Biblioteca');
     expect(html).toContain('Autores');
     expect(html).toContain('Favoritos');
+    expect(html).toContain('Contacto');
   });
 
   it('muestra eventos de la línea temporal en la vista inicial', () => {

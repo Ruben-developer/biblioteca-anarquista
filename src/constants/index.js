@@ -37,7 +37,8 @@ export const VIEWS = {
   THEORIES: 'theories',
   INFLUENCES: 'influences',
   PATHS: 'paths',
-  GLOSSARY: 'glossary'
+  GLOSSARY: 'glossary',
+  CONTACT: 'contact'
 };
 
 // Color themes for dark and light modes

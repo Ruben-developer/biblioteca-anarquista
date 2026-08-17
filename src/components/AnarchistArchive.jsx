@@ -20,6 +20,7 @@ import TheoriesView from './TheoriesView';
 import InfluencesView from './InfluencesView';
 import ReadingPathsView from './ReadingPathsView';
 import GlossaryView from './GlossaryView';
+import ContactView from './ContactView';
 import ReaderOverlay from './ReaderOverlay';
 import TourModal from './TourModal';
 import RegionModal from './RegionModal';
@@ -188,13 +189,17 @@ const AnarchistArchive = () => {
               onRead={setReadingBook}
             />
           )}
+
+          {activeView === VIEWS.CONTACT && (
+            <ContactView darkMode={darkMode} />
+          )}
         </div>
       </main>
 
       <footer className={`border-t-4 ${darkMode ? 'border-red-900 bg-black/30' : 'border-amber-800 bg-amber-100/60'}`}>
         <div className="container mx-auto px-4 py-8 text-center">
           <p className={`font-display uppercase tracking-widest text-sm mb-2 ${darkMode ? 'text-gray-300' : 'text-amber-900'}`}>
-            Archivo Histórico Anarquista · 1840–1968
+            Antarquia · Archivo Histórico Anarquista · 1840–1968
           </p>
           <p className={`text-xs ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
             Textos de dominio público · {stats.texts} registros en el catálogo

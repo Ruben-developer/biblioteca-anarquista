@@ -26,6 +26,7 @@ describe('Navigation', () => {
     expect(html).toContain('Red de Autores');
     expect(html).toContain('Rutas');
     expect(html).toContain('Glosario');
+    expect(html).toContain('Contacto');
   });
 
   it('marca la vista activa y llama onViewChange al hacer clic', () => {
@@ -45,6 +46,7 @@ describe('Header', () => {
     const html = renderToStaticMarkup(
       <Header darkMode={false} onDarkModeToggle={() => {}} onShowTour={() => {}} onShowStats={() => {}} stats={stats} />
     );
+    expect(html).toContain('Antarquia');
     expect(html).toContain('Archivo Histórico Anarquista');
     expect(html).toContain('114 textos');
     expect(html).toContain('16 eventos');

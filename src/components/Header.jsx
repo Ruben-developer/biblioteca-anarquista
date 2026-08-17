@@ -20,10 +20,10 @@ const Header = ({
               className={`text-2xl sm:text-3xl md:text-4xl font-display tracking-tight uppercase flex items-center gap-2 md:gap-3 ${darkMode ? 'text-red-500' : ''}`}
             >
               <span className="text-3xl sm:text-4xl md:text-5xl">🏴</span>
-              <span className="break-words">Archivo Histórico Anarquista</span>
+              <span className="break-words">Antarquia</span>
             </h1>
             <p className={`text-xs sm:text-sm ${darkMode ? 'text-gray-400' : 'text-amber-900'}`}>
-              {stats.texts} textos • {stats.events} eventos • {stats.regions} regiones
+              Archivo Histórico Anarquista · {stats.texts} textos · {stats.events} eventos · {stats.regions} regiones
             </p>
           </div>
           <div className="flex gap-2 md:gap-3">

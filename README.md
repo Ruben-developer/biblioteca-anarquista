@@ -1,9 +1,10 @@
-# Archivo Histórico Anarquista
+# Antarquia — Archivo Histórico Anarquista
 
 Archivo histórico interactivo del movimiento anarquista mundial: línea temporal
 (1840-1968), mapa de regiones con textos, biografías de pensadores, favoritos,
 modo oscuro/claro, filtros avanzados y estadísticas.
 
+- **Contacto**: antarquia@riseup.net (formulario en la propia web)
 - **Stack**: React 18 + Vite 4 + Tailwind CSS
 - **Deploy**: GitHub Pages → https://ruben-developer.github.io/biblioteca-anarquista/
 - **Contenido**: `src/data/` (eventos, autores, textos por región) + `public/documents/`
