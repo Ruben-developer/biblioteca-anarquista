@@ -351,6 +351,42 @@ describe('LibraryView interactivo', () => {
     expect(grouped.textContent).not.toContain('¿Qué es la Propiedad?');
     container.remove();
   });
+
+  it('agrupa las obras por región al pulsar el botón y desagrupa al pulsarlo de nuevo', () => {
+    const { container } = render(<LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />);
+    // Vista normal: grid de tarjetas individuales.
+    const grid = container.querySelector('div.grid');
+    expect(grid.textContent).toContain('La Conquista del Pan');
+    expect(grid.textContent).toContain('¿Qué es la Propiedad?');
+
+    // Vista agrupada: una tarjeta por región (España agrupa su obra, Francia la suya).
+    fireEvent.click(screen.getByRole('button', { name: /Agrupar por región/ }));
+    const grouped = container.querySelector('div.flex.flex-col.gap-4');
+    expect(grouped).toBeTruthy();
+    expect(grouped.textContent).toContain('España');
+    expect(grouped.textContent).toContain('La Conquista del Pan');
+    expect(grouped.textContent).toContain('Francia');
+    expect(grouped.textContent).toContain('¿Qué es la Propiedad?');
+    expect(grouped.textContent).toContain('2 obras');
+    expect(grouped.textContent).toContain('1 obra');
+
+    // Desagrupar: vuelve al grid.
+    fireEvent.click(screen.getByRole('button', { name: /Desagrupar/ }));
+    expect(container.querySelector('div.flex.flex-col.gap-4')).toBeNull();
+    expect(container.querySelector('div.grid')).toBeTruthy();
+    container.remove();
+  });
+
+  it('la vista agrupada por región respeta el filtro de región activo', () => {
+    const { container } = render(<LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />);
+    fireEvent.change(screen.getByLabelText('Filtrar por región'), { target: { value: 'España' } });
+    fireEvent.click(screen.getByRole('button', { name: /Agrupar por región/ }));
+    const grouped = container.querySelector('div.flex.flex-col.gap-4');
+    expect(grouped.textContent).toContain('España');
+    expect(grouped.textContent).toContain('La Conquista del Pan');
+    expect(grouped.textContent).not.toContain('¿Qué es la Propiedad?');
+    container.remove();
+  });
 });
 
 describe('AnarchistArchive interactivo (navegación completa)', () => {

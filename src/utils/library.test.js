@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { getDecadeFromYear, getAllBooks, getAllAuthors, getEventRelatedTexts, getBookEvents, filterBooks, sortBooks, getDailyFeaturedBook, getArchiveStats, groupBooksByAuthor, findBookByTitle } from './library';
+import { getDecadeFromYear, getAllBooks, getAllAuthors, getEventRelatedTexts, getBookEvents, filterBooks, sortBooks, getDailyFeaturedBook, getArchiveStats, groupBooksByAuthor, groupBooksByRegion, findBookByTitle } from './library';
 
 const regionData = {
   España: {
@@ -117,6 +117,50 @@ describe('groupBooksByAuthor', () => {
     expect(groupBooksByAuthor([])).toEqual([]);
     expect(groupBooksByAuthor(undefined)).toEqual([]);
     expect(groupBooksByAuthor(null)).toEqual([]);
+  });
+});
+
+describe('groupBooksByRegion', () => {
+  it('agrupa los libros por región y los ordena de más a menos obras', () => {
+    const books = [
+      { title: 'Obra E1', region: 'España' },
+      { title: 'Obra E2', region: 'España' },
+      { title: 'Obra F', region: 'Francia' }
+    ];
+    const groups = groupBooksByRegion(books);
+    expect(groups.length).toBe(2);
+    expect(groups[0]).toMatchObject({ name: 'España', bookCount: 2 });
+    expect(groups[0].books.map((b) => b.title)).toEqual(['Obra E1', 'Obra E2']);
+    expect(groups[1]).toMatchObject({ name: 'Francia', bookCount: 1 });
+  });
+
+  it('normaliza el nombre de la región (trim y mayúsculas) y agrupa las "sin región" como Sin región', () => {
+    const books = [
+      { title: 'Con espacios', region: '  España  ' },
+      { title: 'Mayúsculas', region: 'ESPAÑA' },
+      { title: 'Sin región', category: 'teoria' }
+    ];
+    const groups = groupBooksByRegion(books);
+    expect(groups.length).toBe(2);
+    expect(groups[0].name).toBe('España'); // primer nombre encontrado normalizado
+    expect(groups[0].bookCount).toBe(2);
+    const sinRegion = groups.find((g) => g.name === 'Sin región');
+    expect(sinRegion.bookCount).toBe(1);
+  });
+
+  it('empata por orden alfabético cuando hay el mismo número de obras', () => {
+    const books = [
+      { title: 'A', region: 'Zimbabue' },
+      { title: 'B', region: 'Alemania' }
+    ];
+    const groups = groupBooksByRegion(books);
+    expect(groups.map((g) => g.name)).toEqual(['Alemania', 'Zimbabue']);
+  });
+
+  it('devuelve [] con lista vacía o sin datos', () => {
+    expect(groupBooksByRegion([])).toEqual([]);
+    expect(groupBooksByRegion(undefined)).toEqual([]);
+    expect(groupBooksByRegion(null)).toEqual([]);
   });
 });
 

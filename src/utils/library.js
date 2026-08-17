@@ -210,6 +210,24 @@ export const groupBooksByAuthor = (books) => {
     .sort((a, b) => b.bookCount - a.bookCount || a.name.localeCompare(b.name, 'es'));
 };
 
+// Agrupa una lista plana de libros por región (campo `region` de cada libro).
+// Devuelve los grupos ordenados de más a menos obras (y alfabéticamente en caso
+// de empate). Los libros sin región se agrupan bajo "Sin región" para no
+// perderlos en la vista agrupada. Devuelve [] sin datos.
+export const groupBooksByRegion = (books) => {
+  if (!Array.isArray(books)) return [];
+  const groups = new Map();
+  books.forEach((book) => {
+    const region = String(book.region || '').trim() || 'Sin región';
+    const key = region.toLowerCase();
+    if (!groups.has(key)) groups.set(key, { name: region, books: [] });
+    groups.get(key).books.push(book);
+  });
+  return Array.from(groups.values())
+    .map(({ name, books: groupBooks }) => ({ name, books: groupBooks, bookCount: groupBooks.length }))
+    .sort((a, b) => b.bookCount - a.bookCount || a.name.localeCompare(b.name, 'es'));
+};
+
 // Hash determinista de una fecha local (YYYY-MM-DD del reloj del usuario): la
 // misma obra toda la jornada, una nueva cada día. Usa la fecha local (no UTC)
 // para que el cambio de obra ocurra a medianoche local, no al borde UTC.

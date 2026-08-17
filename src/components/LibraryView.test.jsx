@@ -89,6 +89,15 @@ describe('LibraryView', () => {
     expect(html).toContain('Agrupar por autor');
     expect(html).toContain('aria-pressed="false"');
   });
+
+  it('incluye el botón para agrupar por región', () => {
+    const html = renderToStaticMarkup(
+      <LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />
+    );
+    expect(html).toContain('Agrupar por región');
+    // El botón de agrupación por región también nace desactivado.
+    expect((html.match(/aria-pressed="false"/g) || []).length).toBeGreaterThanOrEqual(2);
+  });
 });
 
 describe('LibraryView edge cases', () => {
