@@ -246,6 +246,15 @@
       "prs": 0,
       "ci": "verde",
       "nota": "TURNO 12:00 agente daily-dev. Inspeccion OK: descargas 113/113, regiones 17/17/17 (fuente unica regionData.js), invariante timeline==mapa 44/44 (32 eventos, 0 titulos fantasma, 0 con_texto sin textos), audit solo devDeps build-time (vite/vitest/vite-node/esbuild, fix exigiria --force y rompe Vite 4, no aplica a Pages), build sin warnings. FASE 3 (checkbox del 'Proximo dia' 2026-08-17 00:00): vista agrupada por region en la Biblioteca — boton \"Agrupar por region\" (icono MapPin, aria-pressed) que agrupa las obras ya filtradas en una tarjeta por region con numero de obras y filas compactas (autor, anio, categoria, rating, favorito, evento timeline, boton Leer); nueva util groupBooksByRegion (mismo patron que groupBooksByAuthor: normaliza nombre, ordena por numero de obras, obras sin region como 'Sin region', [] sin datos); botones de agrupar por autor/region mutuamente excluyentes. 214 -> 221 tests (4 de groupBooksByRegion + 1 estatico + 2 interactivos), lint 0 errores, build OK, CI Pages verde (run 32044274149; 1er intento fallo por 429/503 temporal de GitHub descargando configure-pages, reintentado). Commit 39faec2."
+    },
+    {
+      "fecha": "2026-08-17",
+      "obras": 119,
+      "palabras": 4042,
+      "commits": 1,
+      "prs": 0,
+      "ci": "verde (run 32048091981)",
+      "nota": "TURNO CHAT 13:10. Decision del usuario: identidad propia + contacto. La web pasa a llamarse Antarquia - Archivo Historico Anarquista (title, header, footer, README; nombre corto y memorable, desliga del proyecto la marca gato negro). Nuevo menu Contacto (ContactView.jsx, VIEWS.CONTACT): formulario con nombre/apodo, correo y mensaje que prepara un mailto hacia antarquia@riseup.net (via de contacto de web estatica sin backend; buildMailtoUrl exportada y testeada). email.conf.example y AGENTS.md desligados de gato negro -> antarquia@riseup.net (cuenta Riseup por crear: auto-invitacion pendiente). 221 -> 226 tests, lint 0 errores, build OK, CI verde (run 32048091981). Commit 3824b49."
     }
   ]
 }
