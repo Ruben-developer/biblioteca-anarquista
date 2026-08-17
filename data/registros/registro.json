@@ -253,8 +253,8 @@
       "palabras": 4042,
       "commits": 1,
       "prs": 0,
-      "ci": "verde (run 32048091981)",
-      "nota": "TURNO CHAT 13:10. Decision del usuario: identidad propia + contacto. La web pasa a llamarse Antarquia - Archivo Historico Anarquista (title, header, footer, README; nombre corto y memorable, desliga del proyecto la marca gato negro). Nuevo menu Contacto (ContactView.jsx, VIEWS.CONTACT): formulario con nombre/apodo, correo y mensaje que prepara un mailto hacia antarquia@riseup.net (via de contacto de web estatica sin backend; buildMailtoUrl exportada y testeada). email.conf.example y AGENTS.md desligados de gato negro -> antarquia@riseup.net (cuenta Riseup por crear: auto-invitacion pendiente). 221 -> 226 tests, lint 0 errores, build OK, CI verde (run 32048091981). Commit 3824b49."
+      "ci": "verde (run 32049151164)",
+      "nota": "TURNO CHAT 13:10. Decision del usuario: identidad propia + contacto. La web pasa a llamarse Antarquia - Archivo Historico Anarquista (title, header, footer, README; nombre corto y memorable, desliga del proyecto la marca gato negro). Nuevo menu Contacto (ContactView.jsx, VIEWS.CONTACT): formulario con nombre/apodo, correo y mensaje que prepara un mailto hacia antarquia@riseup.net (via de contacto de web estatica sin backend; buildMailtoUrl exportada y testeada). email.conf.example y AGENTS.md desligados de gato negro -> antarquia@riseup.net (cuenta Riseup por crear: auto-invitacion pendiente). 221 -> 226 tests, lint 0 errores, build OK, CI verde (run 32049151164). Commit 3824b49."
     }
   ]
 }
