@@ -1,26 +1,16 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Mail, Send, RotateCcw } from 'lucide-react';
+import { Send, RotateCcw, Loader2 } from 'lucide-react';
 import { THEME } from '../constants';
 
 // Correo de contacto del proyecto.
 export const CONTACT_EMAIL = 'antarquia@riseup.net';
 
-// Construye un enlace mailto con asunto y cuerpo a partir del formulario.
-// Es la vía de contacto de una web estática (sin backend): el mensaje se
-// prepara y se abre en la aplicación de correo del visitante.
-export const buildMailtoUrl = ({ name, email, message }) => {
-  const subject = `Contacto desde Antarquia${name ? ` — ${name}` : ''}`;
-  const body = [
-    'Mensaje desde el formulario de Antarquia',
-    '',
-    `Nombre/apodo: ${name}`,
-    `Correo de contacto: ${email}`,
-    '',
-    message
-  ].join('\n');
-  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-};
+// Endpoint del servicio de formularios (web estática sin backend).
+// FormSubmit entrega el mensaje a CONTACT_EMAIL. En el primer envío, la
+// persona responsable debe confirmar la dirección en el correo de activación.
+// Alternativas equivalentes (Web3Forms/Formspree): basta cambiar esta constante.
+export const FORM_ENDPOINT = 'https://formsubmit.co/ajax/antarquia@riseup.net';
 
 const ContactView = ({ darkMode }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
@@ -34,18 +24,45 @@ const ContactView = ({ darkMode }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [mailtoUrl, setMailtoUrl] = useState(null);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setMailtoUrl(buildMailtoUrl({ name, email, message }));
-  };
+  const [status, setStatus] = useState('idle'); // idle | sending | success | error
 
   const resetForm = () => {
     setName('');
     setEmail('');
     setMessage('');
-    setMailtoUrl(null);
+    setStatus('idle');
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!message.trim()) return; // el mensaje es obligatorio
+    setStatus('sending');
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify({
+          nombre_o_apodo: name.trim() || 'Anónimo',
+          correo: email.trim() || 'no proporcionado',
+          mensaje: message.trim(),
+          _subject: 'Contacto desde Antarquia',
+          _template: 'table',
+          _captcha: 'false'
+        })
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      if (data && data.success === 'true') {
+        setStatus('success');
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
   };
 
   return (
@@ -58,28 +75,34 @@ const ContactView = ({ darkMode }) => {
         Tu mensaje llega a <span className="font-semibold">{CONTACT_EMAIL}</span>.
       </p>
 
-      {mailtoUrl ? (
+      {status === 'success' ? (
         <div className={`${cardClass} border-2 rounded-lg p-6 shadow-md max-w-2xl card-appear`}>
           <p className={`text-sm mb-4 ${darkMode ? 'text-gray-300' : 'text-amber-900'}`}>
-            Listo. Pulsa el enlace para abrir tu aplicación de correo con el
-            mensaje ya escrito hacia {CONTACT_EMAIL}:
+            ✓ Mensaje enviado. Gracias por escribir al archivo
+            {email.trim() ? ` — te responderemos a ${email.trim()}` : ''}.
           </p>
-          <a
-            href={mailtoUrl}
-            className={`inline-flex items-center gap-2 px-5 py-3 rounded-lg font-display uppercase tracking-wider text-sm transition-all ${
-              darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-800 text-amber-50 hover:bg-amber-900'
-            }`}
-          >
-            <Mail size={18} />
-            Enviar mensaje a {CONTACT_EMAIL}
-          </a>
           <button
             type="button"
             onClick={resetForm}
-            className={`ml-3 inline-flex items-center gap-2 px-4 py-3 rounded-lg font-display uppercase tracking-wider text-sm transition-all ${darkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-amber-200 text-amber-900 hover:bg-amber-300'}`}
+            className={`inline-flex items-center gap-2 px-4 py-3 rounded-lg font-display uppercase tracking-wider text-sm transition-all ${darkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-amber-200 text-amber-900 hover:bg-amber-300'}`}
           >
             <RotateCcw size={16} />
-            Escribir otro mensaje
+            Enviar otro mensaje
+          </button>
+        </div>
+      ) : status === 'error' ? (
+        <div className={`${cardClass} border-2 border-red-600 rounded-lg p-6 shadow-md max-w-2xl card-appear`}>
+          <p className={`text-sm mb-4 ${darkMode ? 'text-gray-300' : 'text-amber-900'}`}>
+            ✗ No se pudo enviar el mensaje desde la página. Escríbenos directamente
+            a <a className="underline" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+          </p>
+          <button
+            type="button"
+            onClick={resetForm}
+            className={`inline-flex items-center gap-2 px-4 py-3 rounded-lg font-display uppercase tracking-wider text-sm transition-all ${darkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-amber-200 text-amber-900 hover:bg-amber-300'}`}
+          >
+            <RotateCcw size={16} />
+            Reintentar
           </button>
         </div>
       ) : (
@@ -88,11 +111,12 @@ const ContactView = ({ darkMode }) => {
           className={`${cardClass} border-2 rounded-lg p-6 shadow-md max-w-2xl space-y-4`}
         >
           <div>
-            <label htmlFor="contact-name" className={labelClass}>Nombre o apodo</label>
+            <label htmlFor="contact-name" className={labelClass}>
+              Nombre o apodo <span className={darkMode ? 'text-gray-500' : 'text-amber-600'}>(opcional)</span>
+            </label>
             <input
               id="contact-name"
               type="text"
-              required
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="¿Cómo te llamas?"
@@ -101,11 +125,12 @@ const ContactView = ({ darkMode }) => {
           </div>
 
           <div>
-            <label htmlFor="contact-email" className={labelClass}>Correo</label>
+            <label htmlFor="contact-email" className={labelClass}>
+              Correo <span className={darkMode ? 'text-gray-500' : 'text-amber-600'}>(opcional, para responderte)</span>
+            </label>
             <input
               id="contact-email"
               type="email"
-              required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="tucorreo@example.org"
@@ -114,7 +139,9 @@ const ContactView = ({ darkMode }) => {
           </div>
 
           <div>
-            <label htmlFor="contact-message" className={labelClass}>Mensaje</label>
+            <label htmlFor="contact-message" className={labelClass}>
+              Mensaje <span className={darkMode ? 'text-red-400' : 'text-red-700'}>(obligatorio)</span>
+            </label>
             <textarea
               id="contact-message"
               required
@@ -128,18 +155,19 @@ const ContactView = ({ darkMode }) => {
 
           <button
             type="submit"
-            className={`inline-flex items-center gap-2 px-5 py-3 rounded-lg font-display uppercase tracking-wider text-sm transition-all active:scale-95 ${
+            disabled={status === 'sending' || !message.trim()}
+            className={`inline-flex items-center gap-2 px-5 py-3 rounded-lg font-display uppercase tracking-wider text-sm transition-all active:scale-95 disabled:opacity-50 ${
               darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-800 text-amber-50 hover:bg-amber-900'
             }`}
           >
-            <Send size={18} />
-            Enviar mensaje
+            {status === 'sending' ? <Loader2 size={18} className="animate-spin" /> : <Send size={18} />}
+            {status === 'sending' ? 'Enviando…' : 'Enviar mensaje'}
           </button>
 
           <p className={`text-xs ${darkMode ? 'text-gray-500' : 'text-amber-700'}`}>
-            Al enviar se abrirá tu programa de correo con el mensaje dirigido a
-            {CONTACT_EMAIL}. Es la vía de contacto de una web estática: sin
-            servidores intermedios, tu mensaje viaja solo entre tu correo y el del archivo.
+            El mensaje se envía directamente desde la página a {CONTACT_EMAIL}.
+            Solo el mensaje es obligatorio; el nombre y el correo son opcionales
+            (deja tu correo si quieres una respuesta directa).
           </p>
         </form>
       )}
