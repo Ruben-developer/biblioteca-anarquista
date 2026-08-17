@@ -191,7 +191,8 @@ contenedor nginx local en la máquina siempre-encendida, y la web enlaza
  - [x] **FASE 3: Referencias cruzadas texto→evento** ✅ 2026-08-13 (12:00): `getBookEvents(timelineEvents, book)` en `utils/library.js` (inversa de `getEventRelatedTexts`: eventos `con_texto` cuyo `relatedTexts` incluye el TÍTULO de la obra, sin importar región). Cada tarjeta de la Biblioteca vinculada a un evento muestra el enlace "Ver en la línea temporal" (icono CalendarClock) que cambia a la vista Timeline y abre el modal del evento agrupador (`openEventFromLibrary` en `AnarchistArchive`). **166 → 175 tests** (4 de `getBookEvents`, 3 de `LibraryView`, 2 interactivos de clic y navegación completa), lint 0 errores, build OK, CI verde (run 31718764448). Commit 0746d69.
  - [x] **FASE 3: filtro por autor como selector dedicado** ✅ 2026-08-16 (12:00): `filterBooks` gana la opción `author` (nombre exacto, insensible a mayúsculas; `'all'` la desactiva sin romper usos anteriores) y `LibraryView` añade el desplegable "Filtrar por autor" con los autores derivados de `getAllAuthors` (fuente única), incluido en el reset de "Limpiar filtros" y en su condición de visibilidad. **182 → 185 tests**, lint 0 errores, CI verde (run 31957559736). Commit a793a32.
  - [x] **FASE 3: vista agrupada por autor en la Biblioteca** ✅ 2026-08-17 (00:00): botón "Agrupar por autor" en `LibraryView` que cambia el grid de tarjetas individuales a una **tarjeta por autor** con su número de obras y las obras del autor en filas compactas (región, año, categoría, rating, favorito, evento de la línea temporal y botón Leer). Nueva util `groupBooksByAuthor(books)` en `utils/library.js` (agrupa por nombre normalizado, ordena de más a menos obras y alfabético en empate; obras sin autor → "Anónimo"; [] sin datos). La vista agrupada respeta los filtros activos (búsqueda, autor, década, disponibilidad…). **185 → 192 tests**, lint 0 errores, build OK, CI verde (run 31993262865). Commit b57d41f.
- - [ ] **FASE 3 (siguiente)**: "Mapas visuales por región" (pendiente) o, como alternativa de contenido, ampliar el catálogo con `@content-importer` (~400 PDFs del contenedor aún disponibles). Otra opción ya cubierta: la vista agrupada por autor (2026-08-17); queda pendiente una vista agrupada por **región** si se quiere más navegación por zonas.
+ - [x] **FASE 3: vista agrupada por región en la Biblioteca** ✅ 2026-08-17 (12:00): botón "Agrupar por región" (icono `MapPin`, `aria-pressed`) en `LibraryView` que agrupa las obras ya filtradas en una **tarjeta por región** con su número de obras y las obras en filas compactas (autor, año, categoría, rating, favorito, evento de la línea temporal y botón Leer). Nueva util `groupBooksByRegion(books)` en `utils/library.js` (mismo patrón que `groupBooksByAuthor`: nombre normalizado, orden de más a menos obras y alfabético en empate; obras sin región → "Sin región"; [] sin datos). Los botones de agrupar por autor/región son mutuamente excluyentes. **214 → 221 tests**, lint 0 errores, build OK, CI verde (run 32044274149). Commit 39faec2.
+ - [ ] **FASE 3 (siguiente)**: "Mapas visuales por región" (pendiente) o, como alternativa de contenido, ampliar el catálogo con `@content-importer` (~400 PDFs del contenedor aún disponibles). Con la vista agrupada por región (2026-08-17) la navegación por zonas queda cubierta; quedan pendientes de FASE 5: invocar a `@ux-review` periódicamente y agotar el catálogo importable.
 
 ### Nota del día (2026-08-12, 12:00)
 Turno 12:00 del agente `daily-dev` (completado manualmente desde el chat: el cron
@@ -497,3 +498,37 @@ siguiente tarea del plan.
 
 **Verificación**: `npm run check` (lint 0 errores + **192 tests** + build) verde.
 CI de Pages verde (run 31993262865). Commit b57d41f.
+
+### Nota del día (2026-08-17, 12:00)
+Turno 12:00 del agente `daily-dev`. Inspección (paso 1.5): descargas **113/113 OK**,
+regiones sincronizadas **17/17/17** (fuente única `regionData.js`, verificadas con
+`vite-node`: 0 regiones sin ISO, 0 ISO sin región; `REGIONS` = 17 + `all` de filtro),
+invariante `timeline == mapa` **44/44** (32 eventos, 0 títulos fantasma — los
+`relatedTexts` apuntan siempre a libros reales del catálogo — y 0 `con_texto` sin
+textos), `npm audit` con 5 vulnerabilidades SOLO en devDeps build-time
+(vite/vitest/vite-node/esbuild; fix exigiría `--force` y rompería Vite 4 → no
+aplica a Pages), build sin warnings. Sin errores críticos → se continuó con la
+siguiente tarea del plan.
+**Tarea del plan ("Próximo día" de 2026-08-17 00:00 — FASE 3, vista agrupada por región)**:
+- **`groupBooksByRegion(books)`** (`src/utils/library.js`): agrupa una lista plana
+  de libros por región (nombre normalizado: trim + sin distinción de mayúsculas),
+  ordena los grupos de más a menos obras (alfabético en empate) y coloca las obras
+  sin región bajo "Sin región" para no perderlas. Devuelve `[]` sin datos. Mismo
+  patrón que `groupBooksByAuthor`.
+- **`LibraryView.jsx`**: botón "Agrupar por región" (`aria-pressed`, icono `MapPin`)
+  que alterna entre el grid de tarjetas individuales y una **tarjeta por región**
+  con su número de obras ("N obras") y las obras en filas compactas (autor, año,
+  categoría, rating, corazón de favorito, enlace "Ver en la línea temporal" y
+  botón Leer / "Sin archivo disponible"). La vista agrupada opera sobre los libros
+  YA filtrados y ordenados, así que respeta búsqueda, autor, región, década,
+  disponibilidad, tipo y favoritos. Los botones de agrupar por autor y por región
+  son **mutuamente excluyentes** (activar uno desactiva el otro).
+- **Tests**: 214 → **221** (4 de `groupBooksByRegion` en `library.test.js`:
+  agrupación y orden, normalización + Sin región, empate alfabético, lista vacía/null;
+  1 estático en `LibraryView.test.jsx` con el botón renderizado; 2 interactivos en
+  `Interactions.test.jsx`: alternar agrupar/desagrupar por región sobre el grid y
+  vista agrupada que respeta el filtro de región).
+
+**Verificación**: `npm run check` (lint 0 errores + **221 tests** + build) verde.
+CI de Pages verde (run 32044274149; el primer intento falló por 429/503 temporal
+de GitHub al descargar `configure-pages`, se reintentó y pasó). Commit 39faec2.

@@ -237,6 +237,15 @@
       "prs": 0,
       "ci": "pendiente (commit local, sin push)",
       "nota": "TURNO CHAT 04:58. Implementacion de 4 secciones nuevas + modo lectura + microanimaciones: menu Teorias (anarchistTheories.js, 10 corrientes con ideas/autores/obras), Red de Autores (influences.js, grafo SVG de 18 pensadores y 26 influencias con panel de conexiones y obras), Rutas de lectura (readingPaths.js, 10 itinerarios tematicos), Glosario (glossary.js, 20 terminos con busqueda), modo lectura (ReaderOverlay.jsx: iframe a pantalla completa con fondo claro/oscuro, cierre/descarga/abrir en pestana; todos los botones Leer lo abren), microanimaciones CSS (view-transition, card-appear, active:scale-95), linea de tiempo por autor en AuthorsView, findBookByTitle en library.js. 182 -> 214 tests, lint 0 errores, build OK. Commit 75db48a."
+    },
+    {
+      "fecha": "2026-08-17",
+      "obras": 119,
+      "palabras": 4042,
+      "commits": 2,
+      "prs": 0,
+      "ci": "verde",
+      "nota": "TURNO 12:00 agente daily-dev. Inspeccion OK: descargas 113/113, regiones 17/17/17 (fuente unica regionData.js), invariante timeline==mapa 44/44 (32 eventos, 0 titulos fantasma, 0 con_texto sin textos), audit solo devDeps build-time (vite/vitest/vite-node/esbuild, fix exigiria --force y rompe Vite 4, no aplica a Pages), build sin warnings. FASE 3 (checkbox del 'Proximo dia' 2026-08-17 00:00): vista agrupada por region en la Biblioteca — boton \"Agrupar por region\" (icono MapPin, aria-pressed) que agrupa las obras ya filtradas en una tarjeta por region con numero de obras y filas compactas (autor, anio, categoria, rating, favorito, evento timeline, boton Leer); nueva util groupBooksByRegion (mismo patron que groupBooksByAuthor: normaliza nombre, ordena por numero de obras, obras sin region como 'Sin region', [] sin datos); botones de agrupar por autor/region mutuamente excluyentes. 214 -> 221 tests (4 de groupBooksByRegion + 1 estatico + 2 interactivos), lint 0 errores, build OK, CI Pages verde (run 32044274149; 1er intento fallo por 429/503 temporal de GitHub descargando configure-pages, reintentado). Commit 39faec2."
     }
   ]
 }
