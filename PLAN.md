@@ -189,7 +189,8 @@ contenedor nginx local en la máquina siempre-encendida, y la web enlaza
  - [x] **FASE 2: Dashboard de métricas del archivo** ✅ 2026-08-13 (00:00): `getArchiveStats(regionData, timelineEvents)` en `utils/library.js` — fuente única de métricas para header, footer y panel. `StatsPanel` pasa de 4 números a dashboard: números clave, estado del archivo (descargables/sin archivo/históricos/ideas), composición por categoría (barras), top-5 autores más prolíficos, regiones con más obras (marcador 🗺️ para las que aparecen en el mapa) y textos por década. `AnarchistArchive` usa `getArchiveStats` (sustituye el cálculo manual). Fix menor de inspección: variable sin usar en `FavoritesView`. **155 → 166 tests** (8 de `getArchiveStats` + 3 del panel), lint 0 errores, build OK, CI verde (run 31665880125). Commits 3a7dce1 (feat) + b5b7a62 (fix).
  - [x] **FASE 3: Referencias cruzadas texto→evento** ✅ 2026-08-13 (12:00): `getBookEvents(timelineEvents, book)` en `utils/library.js` (inversa de `getEventRelatedTexts`: eventos `con_texto` cuyo `relatedTexts` incluye el TÍTULO de la obra, sin importar región). Cada tarjeta de la Biblioteca vinculada a un evento muestra el enlace "Ver en la línea temporal" (icono CalendarClock) que cambia a la vista Timeline y abre el modal del evento agrupador (`openEventFromLibrary` en `AnarchistArchive`). **166 → 175 tests** (4 de `getBookEvents`, 3 de `LibraryView`, 2 interactivos de clic y navegación completa), lint 0 errores, build OK, CI verde (run 31718764448). Commit 0746d69.
  - [x] **FASE 3: filtro por autor como selector dedicado** ✅ 2026-08-16 (12:00): `filterBooks` gana la opción `author` (nombre exacto, insensible a mayúsculas; `'all'` la desactiva sin romper usos anteriores) y `LibraryView` añade el desplegable "Filtrar por autor" con los autores derivados de `getAllAuthors` (fuente única), incluido en el reset de "Limpiar filtros" y en su condición de visibilidad. **182 → 185 tests**, lint 0 errores, CI verde (run 31957559736). Commit a793a32.
- - [ ] **FASE 3 (siguiente)**: "Mapas visuales por región" (pendiente) o, como alternativa de contenido, ampliar el catálogo con `@content-importer` (~400 PDFs del contenedor aún disponibles). Otra opción: agrupar las obras de un autor en la tarjeta de la Biblioteca (hoy cada obra es una tarjeta; el selector de autor ya facilita verlas juntas, pero una vista agrupada lo haría más directo).
+ - [x] **FASE 3: vista agrupada por autor en la Biblioteca** ✅ 2026-08-17 (00:00): botón "Agrupar por autor" en `LibraryView` que cambia el grid de tarjetas individuales a una **tarjeta por autor** con su número de obras y las obras del autor en filas compactas (región, año, categoría, rating, favorito, evento de la línea temporal y botón Leer). Nueva util `groupBooksByAuthor(books)` en `utils/library.js` (agrupa por nombre normalizado, ordena de más a menos obras y alfabético en empate; obras sin autor → "Anónimo"; [] sin datos). La vista agrupada respeta los filtros activos (búsqueda, autor, década, disponibilidad…). **185 → 192 tests**, lint 0 errores, build OK, CI verde (run 31993262865). Commit b57d41f.
+ - [ ] **FASE 3 (siguiente)**: "Mapas visuales por región" (pendiente) o, como alternativa de contenido, ampliar el catálogo con `@content-importer` (~400 PDFs del contenedor aún disponibles). Otra opción ya cubierta: la vista agrupada por autor (2026-08-17); queda pendiente una vista agrupada por **región** si se quiere más navegación por zonas.
 
 ### Nota del día (2026-08-12, 12:00)
 Turno 12:00 del agente `daily-dev` (completado manualmente desde el chat: el cron
@@ -464,3 +465,34 @@ Sin errores críticos → se continuó con la siguiente tarea del plan.
 
 **Verificación**: `npm run check` (lint 0 errores + **185 tests** + build) verde.
 CI de Pages verde (run 31957559736). Commit a793a32.
+
+### Nota del día (2026-08-17, 00:00)
+Turno 00:00 del agente `daily-dev`. Inspección (paso 1.5): descargas **113/113 OK**,
+regiones sincronizadas **17/17/17** (fuente única `regionData.js`, verificadas con
+`vite-node`: 0 regiones sin ISO, 0 ISO sin región; `REGIONS` = 17 + `all` de filtro),
+invariante `timeline == mapa` **44/44** (32 eventos, 0 títulos fantasma — los
+`relatedTexts` apuntan siempre a libros reales del catálogo — y 0 `con_texto` sin
+textos), `npm audit` con 5 vulnerabilidades SOLO en devDeps build-time
+(vite/vitest/vite-node/esbuild; fix exigiría `--force` y rompería Vite 4 → no
+aplica a Pages), build sin warnings. Sin errores críticos → se continuó con la
+siguiente tarea del plan.
+**Tarea del plan ("Próximo día" de 2026-08-16 — FASE 3, vista agrupada por autor)**:
+- **`groupBooksByAuthor(books)`** (`src/utils/library.js`): agrupa una lista plana
+  de libros por autor (nombre normalizado: trim + sin distinción de mayúsculas),
+  ordena los grupos de más a menos obras (alfabético en empate) y coloca las obras
+  sin autor bajo "Anónimo" para no perderlas. Devuelve `[]` sin datos.
+- **`LibraryView.jsx`**: botón "Agrupar por autor" (`aria-pressed`, icono `Users`)
+  que alterna entre el grid de tarjetas individuales y una **tarjeta por autor**
+  con su número de obras ("N obras") y las obras en filas compactas (región, año,
+  categoría, rating, corazón de favorito, enlace "Ver en la línea temporal" y
+  botón Leer / "Sin archivo disponible"). La vista agrupada opera sobre los libros
+  YA filtrados y ordenados, así que respeta búsqueda, autor, década, disponibilidad,
+  tipo y favoritos.
+- **Tests**: 185 → **192** (4 de `groupBooksByAuthor` en `library.test.js`:
+  agrupación y orden, normalización + Anónimo, empate alfabético, lista vacía/null;
+  1 estático en `LibraryView.test.jsx` con el botón renderizado; 2 interactivos en
+  `Interactions.test.jsx`: alternar agrupar/desagrupar sobre el grid y vista
+  agrupada que respeta el filtro de autor).
+
+**Verificación**: `npm run check` (lint 0 errores + **192 tests** + build) verde.
+CI de Pages verde (run 31993262865). Commit b57d41f.
