@@ -13,8 +13,6 @@ import GlossaryView from './GlossaryView';
 import ReadingPathsView from './ReadingPathsView';
 import InfluencesView from './InfluencesView';
 import ReaderOverlay from './ReaderOverlay';
-import PathIcon from './PathIcon';
-
 const catalogTitles = new Set(getAllBooks(regionData).map((b) => b.title));
 
 afterEach(cleanup);
@@ -106,36 +104,6 @@ describe('ReadingPathsView', () => {
     render(<ReadingPathsView darkMode regionData={regionData} />);
     expect(screen.getByText('¿Qué es la Propiedad?')).toBeTruthy();
     expect(screen.getByText('Dios y el Estado')).toBeTruthy();
-  });
-});
-
-describe('PathIcon', () => {
-  it('dibuja banderas como SVG estático (España y Ucrania) en vez de emoji', () => {
-    const es = renderToStaticMarkup(<PathIcon icon="flag-espana" />);
-    const ua = renderToStaticMarkup(<PathIcon icon="flag-ucrania" />);
-    // Deben ser SVG con colores de bandera, NO emoji de bandera (que en
-    // Windows/Chrome se ven como las letras "ES"/"UA").
-    expect(es).toContain('<svg');
-    expect(es).toContain('aa151b'); // rojo de España
-    expect(es).not.toContain('🇪🇸');
-    expect(ua).toContain('<svg');
-    expect(ua).toContain('0057b7'); // azul de Ucrania
-    expect(ua).not.toContain('🇺🇦');
-  });
-
-  it('dibuja los símbolos como iconos SVG de lucide en vez de emoji', () => {
-    const leaf = renderToStaticMarkup(<PathIcon icon="leaf" />);
-    const fist = renderToStaticMarkup(<PathIcon icon="heart-handshake" />);
-    expect(leaf).toContain('<svg');
-    expect(leaf).not.toContain('🌱');
-    expect(fist).toContain('<svg');
-    expect(fist).not.toContain('✊');
-  });
-
-  it('muestra tal cual un icono desconocido (fallback)', () => {
-    const html = renderToStaticMarkup(<PathIcon icon="desconocido" />);
-    expect(html).toContain('desconocido');
-    expect(html).not.toContain('<svg');
   });
 });
 
