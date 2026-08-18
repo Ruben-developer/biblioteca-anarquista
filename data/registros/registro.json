@@ -264,14 +264,23 @@
       "prs": 0,
       "ci": "verde (run 32050201979)",
       "nota": "TURNO CHAT 13:30. Feedback del usuario sobre Contacto: apodo y correo pasan a ser OPCIONALES (correo solo para respuesta directa), mensaje OBLIGATORIO, y el envio ya NO abre el cliente de correo: se hace desde la propia pagina con fetch POST a FormSubmit (FORM_ENDPOINT=https://formsubmit.co/ajax/antarquia@riseup.net, entregado a antarquia@riseup.net; primer envio requiere correo de activacion). ContactView reescrito: estados idle/sending/success/error con spinner, confirmacion con el correo si se dejo, y en error el mailto directo como fallback + Reintentar. Endpoint exportado como constante (migrar a Web3Forms/Formspree = 1 linea). Tests reescritos (6): validacion, fetch simulado con payload (Anonimo/no proporcionado), exito/error. 226 -> 227 tests, lint 0 errores, build OK, CI verde (run 32050201979). Commit 0e8ac7e."
-    {
-      "fecha": "2026-08-17",
+    },
+    {      "fecha": "2026-08-17",
       "obras": 119,
       "palabras": 4042,
       "commits": 1,
       "prs": 0,
       "ci": "verde (run 32089477286)",
       "nota": "TURNO CHAT 21:4x. Rebrand de identidad: la web pasa a llamarse La Idea - Archivo Historico Anarquista (title, header, footer, subject del formulario de Contacto, README, AGENTS, PLAN). El nombre viene del apelativo historico del movimiento anarquista chileno (la Idea, cf. Grez Toso). Antarquia queda como paraguas del proyecto: dominio antarquia.cl con la web en laidea.antarquia.cl (subdominio) y correo antarquia@riseup.net sin cambios. Tests actualizados (AnarchistArchive + Views: Antarquia -> La Idea). 227 tests, lint 0 errores, build OK, CI verde (run 32089477286), deploy verificado (<title>La Idea</title> en produccion). Commit 9e26aaf. PENDIENTE (decision del usuario): comprar antarquia.cl y apuntar laidea.antarquia.cl a GitHub Pages (4x A 185.199.108-111.153 + CNAME laidea) + Custom domain + base '/'."
+    },
+    {
+      "fecha": "2026-08-17",
+      "obras": 119,
+      "palabras": 4042,
+      "commits": 1,
+      "prs": 0,
+      "ci": "verde (run 32093156629)",
+      "nota": "TURNO CHAT 22:4x. UX/IA (evaluacion @ux-review en ux-report-navegacion.md). (1) Vista inicial: Linea Temporal -> Biblioteca (la pildora activa coincide con el primer item del nav; cierra la percepcion de 'mal hecho'). (2) Nav de 10 a 8 items: Red de Autores absorbida en Autores como sub-modo con toggle segmentado 'Autores / Red de influencias' (role=tablist, aria-selected; InfluencesView intacto), Contacto pasa al header como boton sobre (Mail, aria-label), Glosario se queda en el nav pero reducido de 20 a 12 terminos esenciales. (3) Boton de Tour (Info) eliminado del header (solo enumeraba las pestanas); TourModal queda en el repo sin uso. (4) ARIA: aria-label en nav + aria-current en pildora activa. Tests: default->Biblioteca, tour->contacto. 227 tests, lint 0 errores, build OK, CI verde (run 32093156629). Commit 610daa7. PENDIENTE UX: hamburguesa/drawer movil y cross-links Teorias/Rutas/Glosario->Biblioteca."
     }
   ]
 }
