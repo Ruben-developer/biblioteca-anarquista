@@ -309,6 +309,15 @@
       "prs": 0,
       "ci": "verde (run 32163965774)",
       "nota": "TURNO CHAT 13:1x. Tres peticiones del usuario: (1) MENU LATERAL EN LA WEB: el drawer que era solo movil (md:hidden) ahora se abre desde la hamburguesa en TODOS los tamanos (md+ se combina con las pilulas del nav); Navigation.jsx sin md:hidden en el overlay, aria-expanded/aria-controls conservados, tests de Interacciones intactos. (2) ICONOS QUE SE VEAN IGUAL: respuesta a la pregunta del usuario: lucide-react (ya instalado) es el paquete de iconos SVG identico en todas las plataformas; los emojis de simbolos de Rutas (brjula, puno, globo, balanza, hoja, estrella, llama, libro) se migran a lucide (compass, heart-handshake, globe, scale, leaf, star, flame, book-open); readingPaths.js pasa de emojis a nombres de icono y PathIcon.jsx resuelve banderas + lucide por nombre con fallback. (3) FAVICON: el icono de pestana pasa del libro antiguo a la A encerrada en un circulo (simbolo anarquista clasico), SVG fill-rule evenodd. Tests PathIcon reescritos (+1), 235 -> 236 tests, lint 0 errores, build OK, CI Pages verde (run 32163965774), produccion verificado (favicon.svg 200). Commit cabe6bc."
+    },
+    {
+      "fecha": "2026-08-18",
+      "obras": 119,
+      "palabras": 3865,
+      "commits": 1,
+      "prs": 0,
+      "ci": "verde (run 32165481050)",
+      "nota": "TURNO CHAT 13:2x. El usuario pidio eliminar los emojis e iconos de las tarjetas de Rutas de lectura (los retomaremos luego). Se elimina PathIcon.jsx (componente de banderas SVG estaticas Espana/Ucrania + iconos lucide) y su uso en ReadingPathsView (las tarjetas quedan con titulo, descripcion, contador de obras y chevron); se quita el bloque de tests de PathIcon (3 tests) y su import en NewViews.test.jsx. readingPaths.js CONSERVA el campo 'icon' (nombres de icono) para reintroducirlos luego sin tocar los datos. Tests 236 -> 233, lint 0 errores, build OK, CI Pages verde (run 32165481050). Commit 488c093."
     }
   ]
 }
