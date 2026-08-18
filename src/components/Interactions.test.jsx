@@ -393,8 +393,14 @@ describe('LibraryView interactivo', () => {
 });
 
 describe('AnarchistArchive interactivo (navegación completa)', () => {
+  // La navegación vive en el drawer (se abre con la hamburguesa del header).
+  const openDrawer = () => {
+    fireEvent.click(screen.getByRole('button', { name: 'Abrir menú de navegación' }));
+  };
+
   it('navega a Biblioteca y filtra una obra desde el buscador', () => {
     const { container } = render(<AnarchistArchive />);
+    openDrawer();
     fireEvent.click(screen.getByRole('button', { name: /Biblioteca/ }));
     expect(screen.getAllByText('Biblioteca').length).toBeGreaterThan(0);
     fireEvent.change(screen.getByLabelText('Buscar obra'), { target: { value: 'Kropotkin' } });
@@ -405,6 +411,7 @@ describe('AnarchistArchive interactivo (navegación completa)', () => {
 it('abre un evento de la línea temporal y cierra el modal con Escape', () => {
     const { container } = render(<AnarchistArchive />);
     // La vista inicial es la Biblioteca (2026-08-17) → navegar primero a la línea temporal.
+    openDrawer();
     fireEvent.click(screen.getByRole('button', { name: /Línea Temporal/ }));
     const eventButton = screen.getAllByText(/Semana Trágica|Mártires|Revolución|huelga|Jornadas|zapatista|Seattle|Génova|15M|Rojava|Kronstadt|Comuna|Española|Primero|Chicago|Barcelona/)[0];
     fireEvent.click(eventButton);
@@ -416,6 +423,7 @@ it('abre un evento de la línea temporal y cierra el modal con Escape', () => {
 
   it('referencia cruzada: desde la Biblioteca abre el evento en la línea temporal', () => {
     const { container } = render(<AnarchistArchive />);
+    openDrawer();
     fireEvent.click(screen.getByRole('button', { name: /Biblioteca/ }));
     const link = screen.getAllByText(/Ver en la línea temporal:/)[0];
     const eventTitle = link.textContent.replace('Ver en la línea temporal: ', '').split(' (')[0];
@@ -435,8 +443,8 @@ it('abre un evento de la línea temporal y cierra el modal con Escape', () => {
 
   it('abre las estadísticas como vista completa desde el botón de la cabecera', () => {
     const { container } = render(<AnarchistArchive />);
-    // La vista inicial es la Biblioteca.
-    expect(screen.getByRole('button', { name: /Biblioteca/ })).toBeTruthy();
+    // La vista inicial es la Biblioteca (el buscador está presente).
+    expect(screen.getByLabelText('Buscar obra')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', { name: 'Mostrar estadísticas' }));
     // El panel de estadísticas sustituye a la vista: se ve el título de la
     // sección de métricas y el contenido de la Biblioteca desaparece.
@@ -484,8 +492,8 @@ describe('Navigation móvil (drawer/hamburguesa)', () => {
     expect(hamburger.getAttribute('aria-expanded')).toBe('false');
     // El drawer (dialog) no existe hasta que se abre.
     expect(screen.queryByRole('dialog', { name: 'Menú de navegación' })).toBeNull();
-    // Las píldoras de escritorio siguen presentes en el DOM (colapso por CSS).
-    expect(screen.getByRole('button', { name: /Biblioteca/ })).toBeTruthy();
+    // No hay píldoras horizontales: la navegación vive solo en el drawer.
+    expect(screen.queryByRole('button', { name: /Línea Temporal/ })).toBeNull();
     container.remove();
   });
 

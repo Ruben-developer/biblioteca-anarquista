@@ -13,9 +13,9 @@ import FeaturedBook from './FeaturedBook';
 import { VIEWS } from '../constants';
 
 describe('Navigation', () => {
-  it('renderiza las vistas con sus contadores', () => {
+  it('renderiza las vistas con sus contadores en el drawer', () => {
     const html = renderToStaticMarkup(
-      <Navigation activeView={VIEWS.TIMELINE} onViewChange={() => {}} darkMode={false} favoriteCount={3} regionCount={16} />
+      <Navigation activeView={VIEWS.TIMELINE} onViewChange={() => {}} darkMode={false} favoriteCount={3} regionCount={16} menuOpen onMenuClose={() => {}} />
     );
     expect(html).toContain('Línea Temporal');
     expect(html).toContain('Mapa (16)');
@@ -25,15 +25,25 @@ describe('Navigation', () => {
     expect(html).toContain('Teorías');
     expect(html).toContain('Rutas');
     expect(html).toContain('Glosario');
+    // El drawer tiene rol dialog y aria-modal.
+    expect(html).toContain('role="dialog"');
   });
 
-  it('marca la vista activa y llama onViewChange al hacer clic', () => {
+  it('marca la vista activa en el drawer', () => {
     const onViewChange = vi.fn();
     const html = renderToStaticMarkup(
-      <Navigation activeView={VIEWS.LIBRARY} onViewChange={onViewChange} darkMode favoriteCount={0} regionCount={5} />
+      <Navigation activeView={VIEWS.LIBRARY} onViewChange={onViewChange} darkMode favoriteCount={0} regionCount={5} menuOpen onMenuClose={() => {}} />
     );
     expect(html).toContain('Línea Temporal');
     expect(html).toContain('Mapa (5)');
+    expect(html).toContain('aria-current="page"');
+  });
+
+  it('no renderiza el drawer cuando está cerrado', () => {
+    const html = renderToStaticMarkup(
+      <Navigation activeView={VIEWS.LIBRARY} onViewChange={() => {}} darkMode={false} favoriteCount={0} regionCount={5} menuOpen={false} onMenuClose={() => {}} />
+    );
+    expect(html).not.toContain('role="dialog"');
   });
 });
 

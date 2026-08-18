@@ -19,40 +19,29 @@ const Header = ({
     <header className={`${themeClass.header} backdrop-blur-sm border-b-2 sticky top-0 z-10 shadow-md`}>
       <div className="container mx-auto px-4 py-4 md:py-6">
         <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-3">
-          {/* Izquierda: hamburguesa (logo en web, con texto del menú en móvil) + título */}
-          <div className="flex items-center gap-2 md:gap-3 min-w-0">
-            <button
-              onClick={onMenuToggle}
-              aria-label="Abrir menú de navegación"
-              aria-expanded={menuOpen}
-              aria-controls="menu-lateral"
-              className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-all active:scale-95 ${
-                darkMode
-                  ? 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
-                  : 'bg-amber-200/50 text-amber-900 hover:bg-amber-200'
-              }`}
-            >
-              <Menu size={20} />
-              {/* En smartphone: la hamburguesa lleva el texto del menú activo y va
-                  al inicio de la línea con correo/tema/estadísticas. En web queda
-                  como icono-logo antes del título. */}
-              <span className="md:hidden font-display text-sm uppercase tracking-wider">
-                {activeLabel || 'Menú'}
-              </span>
-            </button>
-            <div className="hidden md:block min-w-0">
-              <h1
-                className={`text-2xl sm:text-3xl md:text-4xl font-display tracking-tight uppercase flex items-center gap-2 md:gap-3 ${darkMode ? 'text-red-500' : ''}`}
-              >
-                <span className="text-3xl sm:text-4xl md:text-5xl">🏴</span>
-                <span className="break-words">La Idea</span>
-              </h1>
-              <p className={`text-xs sm:text-sm ${darkMode ? 'text-gray-400' : 'text-amber-900'}`}>
-                Archivo Histórico Anarquista · {stats.texts} textos · {stats.events} eventos · {stats.regions} regiones
-              </p>
-            </div>
-          </div>
-          <div className="flex items-center gap-2 md:gap-3">
+          {/* Hamburguesa: al inicio de la línea con correo/tema/estadísticas en
+              móvil; como icono-logo antes del título en web. */}
+          <button
+            onClick={onMenuToggle}
+            aria-label="Abrir menú de navegación"
+            aria-expanded={menuOpen}
+            aria-controls="menu-lateral"
+            className={`order-1 flex items-center gap-2 px-3 py-2 rounded-lg transition-all active:scale-95 ${
+              darkMode
+                ? 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
+                : 'bg-amber-200/50 text-amber-900 hover:bg-amber-200'
+            }`}
+          >
+            <Menu size={20} />
+            {/* En smartphone: la hamburguesa lleva el texto del menú activo. */}
+            <span className="md:hidden font-display text-sm uppercase tracking-wider">
+              {activeLabel || 'Menú'}
+            </span>
+          </button>
+
+          {/* Botones de acción: a la derecha en la misma línea que la
+              hamburguesa (móvil); a la derecha del título en web. */}
+          <div className="order-2 md:order-3 flex items-center gap-2 md:gap-3">
             {activeLabel && (
               <span
                 className={`hidden sm:inline-block px-3 py-1.5 rounded-lg text-xs md:text-sm font-display uppercase tracking-wider ${darkMode ? 'bg-gray-800/60 text-red-400' : 'bg-amber-100/70 text-amber-900'}`}
@@ -83,6 +72,20 @@ const Header = ({
             >
               {darkMode ? '☀️' : '🌙'}
             </button>
+          </div>
+
+          {/* Título: en móvil va en su propia línea (w-full) debajo de la fila
+              de acciones; en web queda a la derecha de la hamburguesa. */}
+          <div className="order-3 md:order-2 w-full md:w-auto min-w-0">
+            <h1
+              className={`text-2xl sm:text-3xl md:text-4xl font-display tracking-tight uppercase flex items-center gap-2 md:gap-3 ${darkMode ? 'text-red-500' : ''}`}
+            >
+              <span className="text-3xl sm:text-4xl md:text-5xl">🏴</span>
+              <span className="break-words">La Idea</span>
+            </h1>
+            <p className={`hidden sm:block text-xs sm:text-sm ${darkMode ? 'text-gray-400' : 'text-amber-900'}`}>
+              Archivo Histórico Anarquista · {stats.texts} textos · {stats.events} eventos · {stats.regions} regiones
+            </p>
           </div>
         </div>
       </div>

@@ -7,16 +7,14 @@ import AnarchistArchive from './AnarchistArchive';
 afterEach(cleanup);
 
 describe('AnarchistArchive', () => {
-  it('renderiza la app completa con cabecera, navegación y vista por defecto (línea temporal)', () => {
+  it('renderiza la app completa con cabecera, hamburguesa y vista por defecto (biblioteca)', () => {
     const html = renderToStaticMarkup(<AnarchistArchive />);
     expect(html).toContain('La Idea');
     expect(html).toContain('Archivo Histórico Anarquista');
-    expect(html).toContain('Línea Temporal');
-    expect(html).toContain('Mapa');
-    expect(html).toContain('Biblioteca');
-    expect(html).toContain('Autores');
-    expect(html).toContain('Favoritos');
+    expect(html).toContain('Abrir menú de navegación');
     expect(html).toContain('Contacto');
+    // El drawer está cerrado por defecto: no hay botones de navegación visibles.
+    expect(html).not.toContain('Línea Temporal');
   });
 
   it('muestra la biblioteca con su buscador en la vista inicial', () => {
@@ -27,9 +25,15 @@ describe('AnarchistArchive', () => {
 
 describe('AnarchistArchive interactivo (jsdom)', () => {
   // @vitest-environment jsdom
+  // La navegación vive en el drawer (se abre con la hamburguesa del header).
+  const openDrawer = (screen, fireEvent) => {
+    fireEvent.click(screen.getByRole('button', { name: 'Abrir menú de navegación' }));
+  };
+
   it('navega a la vista Mapa al hacer clic en la navegación', async () => {
     const { render, screen, fireEvent } = await import('@testing-library/react');
     const { container } = render(<AnarchistArchive />);
+    openDrawer(screen, fireEvent);
     fireEvent.click(screen.getByRole('button', { name: /Mapa/ }));
     expect(screen.getByText('Mapa Mundial de Textos')).toBeTruthy();
     container.remove();
@@ -38,8 +42,10 @@ describe('AnarchistArchive interactivo (jsdom)', () => {
   it('navega a la vista Autores y a Favoritos vacío', async () => {
     const { render, screen, fireEvent } = await import('@testing-library/react');
     const { container } = render(<AnarchistArchive />);
+    openDrawer(screen, fireEvent);
     fireEvent.click(screen.getByRole('button', { name: 'Autores' }));
     expect(screen.getByText('Autores del Archivo')).toBeTruthy();
+    openDrawer(screen, fireEvent);
     fireEvent.click(screen.getByRole('button', { name: /Favoritos/ }));
     expect(screen.getByText('Mis Favoritos')).toBeTruthy();
     expect(screen.getByText('Aún no has guardado ningún texto favorito')).toBeTruthy();
@@ -57,6 +63,7 @@ describe('AnarchistArchive interactivo (jsdom)', () => {
   it('abre el modal de región al hacer clic en una región del mapa', async () => {
     const { render, screen, fireEvent } = await import('@testing-library/react');
     const { container } = render(<AnarchistArchive />);
+    openDrawer(screen, fireEvent);
     fireEvent.click(screen.getByRole('button', { name: /Mapa/ }));
     // Botón de navegación por región debajo del mapamundi
     const espana = screen.getAllByText('España').find((el) => el.closest('button'));

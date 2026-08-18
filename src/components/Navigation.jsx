@@ -44,38 +44,8 @@ const Navigation = ({
     { view: VIEWS.FAVORITES, label: `Favoritos (${favoriteCount})`, icon: Heart }
   ];
 
-  const pillClass = (view) =>
-    `flex items-center gap-2 px-5 py-3 rounded-lg transition-all font-display text-sm uppercase tracking-wider whitespace-nowrap active:scale-95 ${
-      activeView === view
-        ? darkMode
-          ? 'bg-red-600 text-white'
-          : 'bg-amber-800 text-amber-50'
-        : darkMode
-          ? 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
-          : 'bg-amber-200/50 text-amber-900 hover:bg-amber-200'
-    }`;
-
   return (
     <>
-      <nav aria-label="Navegación principal" className={`${themeClass.nav} backdrop-blur-sm border-b`}>
-        <div className="container mx-auto px-4">
-          {/* Escritorio/tablet (md+): píldoras en fila */}
-          <div className="hidden md:flex gap-2 overflow-x-auto py-3">
-            {navItems.map(({ view, label, icon: Icon }) => (
-              <button
-                key={view}
-                onClick={() => go(view)}
-                aria-current={activeView === view ? 'page' : undefined}
-                className={pillClass(view)}
-              >
-                <Icon size={18} />
-                {label}
-              </button>
-            ))}
-          </div>
-        </div>
-      </nav>
-
       {/* Drawer lateral: overlay + panel. Se abre con la hamburguesa del header
           (aria-controls="menu-lateral") en todos los tamaños. */}
       {menuOpen && (
