@@ -265,7 +265,8 @@
       "ci": "verde (run 32050201979)",
       "nota": "TURNO CHAT 13:30. Feedback del usuario sobre Contacto: apodo y correo pasan a ser OPCIONALES (correo solo para respuesta directa), mensaje OBLIGATORIO, y el envio ya NO abre el cliente de correo: se hace desde la propia pagina con fetch POST a FormSubmit (FORM_ENDPOINT=https://formsubmit.co/ajax/antarquia@riseup.net, entregado a antarquia@riseup.net; primer envio requiere correo de activacion). ContactView reescrito: estados idle/sending/success/error con spinner, confirmacion con el correo si se dejo, y en error el mailto directo como fallback + Reintentar. Endpoint exportado como constante (migrar a Web3Forms/Formspree = 1 linea). Tests reescritos (6): validacion, fetch simulado con payload (Anonimo/no proporcionado), exito/error. 226 -> 227 tests, lint 0 errores, build OK, CI verde (run 32050201979). Commit 0e8ac7e."
     },
-    {      "fecha": "2026-08-17",
+    {
+      "fecha": "2026-08-17",
       "obras": 119,
       "palabras": 4042,
       "commits": 1,
@@ -281,6 +282,15 @@
       "prs": 0,
       "ci": "verde (run 32093156629)",
       "nota": "TURNO CHAT 22:4x. UX/IA (evaluacion @ux-review en ux-report-navegacion.md). (1) Vista inicial: Linea Temporal -> Biblioteca (la pildora activa coincide con el primer item del nav; cierra la percepcion de 'mal hecho'). (2) Nav de 10 a 8 items: Red de Autores absorbida en Autores como sub-modo con toggle segmentado 'Autores / Red de influencias' (role=tablist, aria-selected; InfluencesView intacto), Contacto pasa al header como boton sobre (Mail, aria-label), Glosario se queda en el nav pero reducido de 20 a 12 terminos esenciales. (3) Boton de Tour (Info) eliminado del header (solo enumeraba las pestanas); TourModal queda en el repo sin uso. (4) ARIA: aria-label en nav + aria-current en pildora activa. Tests: default->Biblioteca, tour->contacto. 227 tests, lint 0 errores, build OK, CI verde (run 32093156629). Commit 610daa7. PENDIENTE UX: hamburguesa/drawer movil y cross-links Teorias/Rutas/Glosario->Biblioteca."
+    },
+    {
+      "fecha": "2026-08-18",
+      "obras": 119,
+      "palabras": 3865,
+      "commits": 1,
+      "prs": 0,
+      "ci": "verde (run 32158305470)",
+      "nota": "TURNO 12:00 agente daily-dev. Inspeccion OK: descargas 113/113, regiones 17/17/17 (fuente unica regionData.js), invariante timeline==mapa 44/44 (32 eventos, 0 titulos fantasma, 0 con_texto sin textos), audit solo devDeps build-time (vite/vitest/vite-node/esbuild, fix exigiria --force y rompe Vite 4, no aplica a Pages), build sin warnings. Tarea del plan (recomendacion 3 del reporte @ux-review de navegacion 2026-08-17, ux-report-navegacion.md 2.4 - 'Movil: hamburguesa/drawer agrupado'): Navigation.jsx reescrito con dos modos responsive - < md: boton hamburguesa (Menu, aria-expanded/aria-controls) que abre drawer lateral fijo (role=dialog, aria-modal, aria-label 'Menu de navegacion') con los 8 destinos en columna (mismo estilo de pildora, aria-current en la vista activa); cierra con Escape, boton X o clic en backdrop; bloquea scroll del fondo (body.overflow hidden con cleanup). md+: pildoras en fila conservadas (colapso CSS hidden md:flex, botones en DOM para tests/aria) con overflow-x-auto como red de seguridad. 227 -> 232 tests (5 interactivos nuevos del drawer con within(drawer): cerrado por defecto, apertura con todos los destinos + aria-current, navegacion + cierre, Escape/X, backdrop), lint 0 errores, build OK, CI Pages verde (run 32158305470). Commit cfb04e8."
     }
   ]
 }

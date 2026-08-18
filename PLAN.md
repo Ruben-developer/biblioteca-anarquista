@@ -200,6 +200,8 @@ contenedor nginx local en la máquina siempre-encendida, y la web enlaza
  - [x] **DOMINIO `.cl` ACTIVADO** ✅ 2026-08-17 (turno de chat): comprado `antarquia.cl` en NIC Chile (expira 2027-08-17); nameservers delegados a **Cloudflare** (`blair`/`doug.ns.cloudflare.com`); registros creados en Cloudflare: CNAME `laidea` → `ruben-developer.github.io` + 4×A `@` → 185.199.108-111.153 (DNS only). Propagación verificada (TLD `.cl` + resolvers públicos OK). **`base: '/'`** en `vite.config.js` + favicon raíz en `index.html` (commit pendiente de confirmar). Falta: (a) guardar `laidea.antarquia.cl` como Custom domain en GitHub → Settings → Pages y activar **Enforce HTTPS**; (b) verificar `https://laidea.antarquia.cl`; (c) decidir si redirigir `antarquia.cl` y `www` a la web o dejarlos para otro uso.
  - [x] **Obra del día en el cron de las 00:00** ✅ 2026-08-17 (turno de chat): la obra destacada **ya rota sola cada día** (determinista por fecha local, `getDailyFeaturedBook` — verificado: 14 días → 14 obras distintas); el cron de medianoche ahora **registra la obra del día en el log del turno** (`~/.config/biblioteca/obra_del_dia.sh`, invocado desde `~/.local/bin/opencode-daily.sh` solo en el turno 00:xx) para documentarla y que quede en el resumen diario.
  - [ ] **FASE 3 (siguiente)**: "Mapas visuales por región" (pendiente) o, como alternativa de contenido, ampliar el catálogo con `@content-importer` (~400 PDFs del contenedor aún disponibles). Con la vista agrupada por región (2026-08-17) la navegación por zonas queda cubierta; quedan pendientes de FASE 5: invocar a `@ux-review` periódicamente y agotar el catálogo importable. ~~Configurar el espejo de notificaciones por correo~~ → **DESCARTADO 2026-08-17 (decisión del usuario): el correo NO se vincula a Telegram**; las notificaciones del cron son solo Telegram y `antarquia@riseup.net` queda únicamente como correo público del formulario de Contacto (FormSubmit). **DOMINIO PENDIENTE (decisión del usuario 2026-08-17)**: comprar `antarquia.cl` (NIC Chile/registrador, sin requisito de residencia) y apuntar `laidea.antarquia.cl` a GitHub Pages (4×A `185.199.108-111.153` + CNAME `laidea` → `ruben-developer.github.io`); luego Custom domain + `base: '/'`.
+ - [x] **UX: hamburguesa/drawer móvil en la navegación** ✅ 2026-08-18 (12:00): recomendación 3 del reporte `@ux-review` de navegación (2026-08-17, §2.4). < `md`: botón hamburguesa (`Menu`, `aria-expanded`/`aria-controls`) que abre un drawer lateral fijo (`role=dialog`, `aria-modal`) con los 8 destinos en columna, mismo estilo de píldora y `aria-current` en la vista activa; cierra con Escape, botón X o clic en el backdrop, y bloquea el scroll del fondo mientras está abierto. `md+`: las píldoras en fila se conservan (colapso por CSS `hidden md:flex`, los botones permanecen en el DOM para tests/accesibilidad) con `overflow-x-auto` como red de seguridad en anchos intermedios. **227 → 232 tests** (5 interactivos nuevos del drawer: cerrado por defecto, apertura con todos los destinos, navegación + cierre, Escape/X, backdrop), lint 0 errores, build OK, CI verde (run 32158305470). Commit cfb04e8.
+ - [ ] **UX pendiente (del reporte navegación §2.4, cambios 5-6)**: cross-links Teorías/Rutas/Glosario → Biblioteca con filtros precargados (`initialFilters` en `LibraryView`); consolidar labels del nav (quitar `(N)` de Mapa).
 
 ### Nota del día (2026-08-12, 12:00)
 Turno 12:00 del agente `daily-dev` (completado manualmente desde el chat: el cron
@@ -539,3 +541,36 @@ siguiente tarea del plan.
 **Verificación**: `npm run check` (lint 0 errores + **221 tests** + build) verde.
 CI de Pages verde (run 32044274149; el primer intento falló por 429/503 temporal
 de GitHub al descargar `configure-pages`, se reintentó y pasó). Commit 39faec2.
+
+### Nota del día (2026-08-18, 12:00)
+Turno 12:00 del agente `daily-dev`. Inspección (paso 1.5): descargas **113/113 OK**,
+regiones sincronizadas **17/17/17** (fuente única `regionData.js`, verificadas con
+`vite-node`: 0 regiones sin ISO, 0 ISO sin región; `REGIONS` = 17 + `all` de filtro),
+invariante `timeline == mapa` **44/44** (32 eventos, 0 títulos fantasma — los
+`relatedTexts` apuntan siempre a libros reales del catálogo — y 0 `con_texto` sin
+textos), `npm audit` con 5 vulnerabilidades SOLO en devDeps build-time
+(vite/vitest/vite-node/esbuild; fix exigiría `--force` y rompería Vite 4 → no
+aplica a Pages), build sin warnings. Sin errores críticos → se continuó con la
+siguiente tarea del plan.
+**Tarea del plan (recomendación 3 del reporte `@ux-review` de navegación
+2026-08-17 §2.4 — "Móvil: hamburguesa/drawer agrupado")**:
+- **`Navigation.jsx`** reescrito con dos modos responsive:
+  - **< `md` (móvil)**: botón **hamburguesa** (icono `Menu`, `aria-expanded` +
+    `aria-controls="menu-movil"`) que abre un **drawer lateral fijo**
+    (`role="dialog"`, `aria-modal="true"`, `aria-label="Menú de navegación"`)
+    con los **8 destinos en columna** (mismo estilo de píldora y `aria-current`
+    en la vista activa). Se cierra con **Escape**, con el botón **X** del panel o
+    con un clic en el **backdrop** oscuro; mientras está abierto **bloquea el
+    scroll del fondo** (`body.overflow = hidden`, restaurado en cleanup).
+  - **`md+` (tablet/desktop)**: las píldoras en fila se conservan intactas
+    (colapso por CSS `hidden md:flex`: los botones permanecen en el DOM para
+    tests y accesibilidad) con `overflow-x-auto` como red de seguridad en
+    anchos intermedios.
+- **Tests**: 227 → **232** (5 interactivos nuevos en `Interactions.test.jsx` con
+  `within(drawer)`: cerrado por defecto con `aria-expanded=false` y píldoras de
+  escritorio presentes; apertura con los 8 destinos y `aria-current` en la vista
+  activa; navegación a Línea Temporal que llama `onViewChange` y cierra el drawer;
+  cierre con Escape y con la X; cierre por clic en el backdrop).
+
+**Verificación**: `npm run check` (lint 0 errores + **232 tests** + build) verde.
+CI de Pages verde (run 32158305470). Commit cfb04e8.
