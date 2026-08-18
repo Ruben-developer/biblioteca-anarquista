@@ -615,10 +615,18 @@ tiene 113 PDFs y 0 TXT) — son 6 obras a las que nunca se les asignó `filename
 - [ ] **Pendiente de UX (reporte navegación)**: hamburguesa/drawer móvil ✅ hecho
   2026-08-18; quedan aria-pressed en toggle de tema y corazones de favoritos.
 
-### Nota del día (2026-08-18, turno de chat ~16:40)
-El usuario pidió **separar el menú de la web de escritorio del de smartphone**
-("en smartphone los menús ya se ven bien"). Se revierte el drawer "todos los
-tamaños" del commit cabe6bc: la **hamburguesa y el drawer lateral vuelven a ser
-solo móviles (`md:hidden`)** y en escritorio (`md+`) la navegación es de nuevo
-solo las píldoras en fila (`hidden md:flex`, sin drawer). Commit 95eaf7c, 234
-tests, lint 0 errores, build OK, CI verde (run 32183621797).
+### Nota del día (2026-08-18, turno de chat ~17:10)
+El usuario aclaró que no se trataba de quitar la hamburguesa de la web: la
+**hamburguesa vive en el header** y abre el drawer en todos los tamaños.
+- **Smartphone**: la hamburguesa lleva el **texto del menú activo** (ej.
+  "Biblioteca") y va al **inicio de la misma línea** que correo/tema/
+  estadísticas; el título "La Idea" se oculta en móvil (`hidden md:block`)
+  para no estorbar.
+- **Escritorio**: la hamburguesa queda como **icono-logo a la izquierda**,
+  antes del título "La Idea", y funciona igual que en smartphone (abre el
+  drawer lateral). Las píldoras del nav siguen en `md+`.
+- El estado del drawer (`menuOpen`) sube a `AnarchistArchive` y se comparte
+  entre `Header` (botón ☰) y `Navigation` (panel lateral, ya sin `md:hidden`).
+- Tests del drawer reescritos para renderizar Header+Navigation juntos (como
+  en producción). **234 tests**, lint 0 errores, build OK, CI verde
+  (run 32186240586). Commit 468a305.

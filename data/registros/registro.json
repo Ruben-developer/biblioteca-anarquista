@@ -345,6 +345,15 @@
       "prs": 0,
       "ci": "verde (run 32183621797)",
       "nota": "TURNO CHAT ~16:4x. El usuario pidio separar la navegacion de escritorio de la de smartphone: en movil el menu ya se veia bien. Se revierte el drawer \"todos los tamanos\" del commit cabe6bc: la hamburguesa y el drawer lateral vuelven a ser solo moviles (md:hidden) y en escritorio (md+) la navegacion es solo las pilulas en fila. Navigation.jsx, commit 95eaf7c. 234 tests, lint 0, build OK, CI verde."
+    },
+    {
+      "fecha": "2026-08-18",
+      "obras": 119,
+      "palabras": 3876,
+      "commits": 1,
+      "prs": 0,
+      "ci": "verde (run 32186240586)",
+      "nota": "TURNO CHAT ~17:1x. Correccion de la interpretacion previa: la hamburguesa debe vivir en el HEADER, no en el nav ni ausente de la web. En smartphone: hamburguesa + texto del menu activo al inicio de la misma linea que correo/tema/estadisticas (titulo La Idea oculto en movil con hidden md:block). En escritorio: hamburguesa como icono-logo a la izquierda antes de La Idea, abriendo el drawer igual que en movil (el drawer ya no tiene md:hidden). El estado menuOpen sube a AnarchistArchive y se comparte entre Header (boton) y Navigation (panel). Tests del drawer reescritos con Harness Header+Navigation. 234 tests, lint 0, build OK, CI verde. Commit 468a305."
     }
   ]
 }
