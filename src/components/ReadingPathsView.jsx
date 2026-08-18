@@ -4,6 +4,7 @@ import { BookOpen, ChevronDown, ChevronUp, Milestone } from 'lucide-react';
 import { THEME } from '../constants';
 import { readingPaths } from '../data/readingPaths';
 import { findBookByTitle } from '../utils/library';
+import PathIcon from './PathIcon';
 
 const ReadingPathsView = ({ darkMode, regionData, onRead = () => {} }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
@@ -33,9 +34,11 @@ const ReadingPathsView = ({ darkMode, regionData, onRead = () => {} }) => {
                 aria-expanded={isOpen}
               >
                 <div className="flex items-center gap-3">
-                  <span className="text-3xl">{path.icon}</span>
-                  <div className="flex-1">
-                    <h3 className={`font-bold text-lg ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
+                  <span className="flex-shrink-0 text-3xl leading-none">
+                    <PathIcon id={path.id} icon={path.icon} />
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <h3 className={`font-bold text-lg break-words ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
                       {path.title}
                     </h3>
                     <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-amber-700'} line-clamp-2`}>

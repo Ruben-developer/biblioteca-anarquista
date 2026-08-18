@@ -34,7 +34,6 @@ const AnarchistArchive = () => {
   const [selectedRegion, setSelectedRegion] = useState(null);
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [showFilters, setShowFilters] = useState(false);
-  const [showStats, setShowStats] = useState(false);
   const [readingBook, setReadingBook] = useState(null);
 
   const [filters, setFilters] = useState({
@@ -78,7 +77,7 @@ const AnarchistArchive = () => {
       <Header
         darkMode={darkMode}
         onDarkModeToggle={toggleDarkMode}
-        onShowStats={() => setShowStats(!showStats)}
+        onShowStats={() => setActiveView(VIEWS.STATS)}
         onShowContact={() => setActiveView(VIEWS.CONTACT)}
         stats={stats}
       />
@@ -91,12 +90,12 @@ const AnarchistArchive = () => {
         regionCount={Object.keys(regionData).length}
       />
 
-      {showStats && (
-        <StatsPanel darkMode={darkMode} stats={stats} />
-      )}
-
       <main className="container mx-auto px-4 py-8">
         <div key={activeView} className="view-transition space-y-6">
+          {activeView === VIEWS.STATS && (
+            <StatsPanel darkMode={darkMode} stats={stats} />
+          )}
+
           {activeView === VIEWS.TIMELINE && (
             <div className="space-y-6">
               <TimelineFilters

@@ -13,6 +13,7 @@ import GlossaryView from './GlossaryView';
 import ReadingPathsView from './ReadingPathsView';
 import InfluencesView from './InfluencesView';
 import ReaderOverlay from './ReaderOverlay';
+import PathIcon from './PathIcon';
 
 const catalogTitles = new Set(getAllBooks(regionData).map((b) => b.title));
 
@@ -105,6 +106,27 @@ describe('ReadingPathsView', () => {
     render(<ReadingPathsView darkMode regionData={regionData} />);
     expect(screen.getByText('¿Qué es la Propiedad?')).toBeTruthy();
     expect(screen.getByText('Dios y el Estado')).toBeTruthy();
+  });
+});
+
+describe('PathIcon', () => {
+  it('dibuja banderas como SVG estático (España y Ucrania) en vez de emoji', () => {
+    const es = renderToStaticMarkup(<PathIcon id="espana" icon="🇪🇸" />);
+    const ua = renderToStaticMarkup(<PathIcon id="rusia-ucrania" icon="🇺🇦" />);
+    // Deben ser SVG con colores de bandera, NO emoji de bandera (que en
+    // Windows/Chrome se ven como las letras "ES"/"UA").
+    expect(es).toContain('<svg');
+    expect(es).toContain('aa151b'); // rojo de España
+    expect(es).not.toContain('🇪🇸');
+    expect(ua).toContain('<svg');
+    expect(ua).toContain('0057b7'); // azul de Ucrania
+    expect(ua).not.toContain('🇺🇦');
+  });
+
+  it('deja los emoji de símbolos como están (no son banderas)', () => {
+    const html = renderToStaticMarkup(<PathIcon id="ecologia" icon="🌱" />);
+    expect(html).toContain('🌱');
+    expect(html).not.toContain('<svg');
   });
 });
 

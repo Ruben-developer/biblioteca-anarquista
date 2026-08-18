@@ -431,6 +431,18 @@ it('abre un evento de la línea temporal y cierra el modal con Escape', () => {
     expect(screen.getAllByText(/EscrÍbenos para aportar textos|Escríbenos para aportar textos/).length).toBeGreaterThan(0);
     container.remove();
   });
+
+  it('abre las estadísticas como vista completa desde el botón de la cabecera', () => {
+    const { container } = render(<AnarchistArchive />);
+    // La vista inicial es la Biblioteca.
+    expect(screen.getByRole('button', { name: /Biblioteca/ })).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', { name: 'Mostrar estadísticas' }));
+    // El panel de estadísticas sustituye a la vista: se ve el título de la
+    // sección de métricas y el contenido de la Biblioteca desaparece.
+    expect(screen.getAllByText(/Textos|Autores/).length).toBeGreaterThan(0);
+    expect(screen.queryByRole('button', { name: 'Buscar obra' })).toBeNull();
+    container.remove();
+  });
 });
 
 describe('Navigation móvil (drawer/hamburguesa)', () => {
