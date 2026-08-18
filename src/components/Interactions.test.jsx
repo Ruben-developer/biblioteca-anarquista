@@ -8,6 +8,8 @@ import EventModal from './EventModal';
 import RegionModal from './RegionModal';
 import LibraryView from './LibraryView';
 import AnarchistArchive from './AnarchistArchive';
+import Navigation from './Navigation';
+import { VIEWS } from '../constants';
 
 afterEach(cleanup);
 
@@ -427,6 +429,84 @@ it('abre un evento de la línea temporal y cierra el modal con Escape', () => {
     const { container } = render(<AnarchistArchive />);
     fireEvent.click(screen.getByRole('button', { name: 'Contacto' }));
     expect(screen.getAllByText(/EscrÍbenos para aportar textos|Escríbenos para aportar textos/).length).toBeGreaterThan(0);
+    container.remove();
+  });
+});
+
+describe('Navigation móvil (drawer/hamburguesa)', () => {
+  const renderNav = (props = {}) =>
+    render(
+      <Navigation
+        activeView={VIEWS.LIBRARY}
+        onViewChange={() => {}}
+        darkMode={false}
+        favoriteCount={3}
+        regionCount={17}
+        {...props}
+      />
+    );
+
+  it('muestra el botón hamburguesa y el drawer cerrado por defecto', () => {
+    const { container } = renderNav();
+    const hamburger = screen.getByRole('button', { name: 'Abrir menú de navegación' });
+    expect(hamburger).toBeTruthy();
+    expect(hamburger.getAttribute('aria-expanded')).toBe('false');
+    // El drawer (dialog) no existe hasta que se abre.
+    expect(screen.queryByRole('dialog', { name: 'Menú de navegación' })).toBeNull();
+    // Las píldoras de escritorio siguen presentes en el DOM (colapso por CSS).
+    expect(screen.getByRole('button', { name: /Biblioteca/ })).toBeTruthy();
+    container.remove();
+  });
+
+  it('abre el drawer al pulsar la hamburguesa y muestra todos los destinos', () => {
+    const { container } = renderNav();
+    fireEvent.click(screen.getByRole('button', { name: 'Abrir menú de navegación' }));
+    const drawer = screen.getByRole('dialog', { name: 'Menú de navegación' });
+    expect(drawer).toBeTruthy();
+    expect(screen.getByRole('button', { name: 'Abrir menú de navegación' }).getAttribute('aria-expanded')).toBe('true');
+    expect(within(drawer).getByRole('button', { name: /Biblioteca/ })).toBeTruthy();
+    expect(within(drawer).getByRole('button', { name: /Mapa \(17\)/ })).toBeTruthy();
+    expect(within(drawer).getByRole('button', { name: /Línea Temporal/ })).toBeTruthy();
+    expect(within(drawer).getByRole('button', { name: /Autores/ })).toBeTruthy();
+    expect(within(drawer).getByRole('button', { name: /Teorías/ })).toBeTruthy();
+    expect(within(drawer).getByRole('button', { name: /Rutas/ })).toBeTruthy();
+    expect(within(drawer).getByRole('button', { name: /Glosario/ })).toBeTruthy();
+    expect(within(drawer).getByRole('button', { name: /Favoritos \(3\)/ })).toBeTruthy();
+    // La vista activa se marca con aria-current en el drawer.
+    expect(within(drawer).getByRole('button', { name: /Biblioteca/ }).getAttribute('aria-current')).toBe('page');
+    container.remove();
+  });
+
+  it('navega al pulsar un destino del drawer y lo cierra', () => {
+    const onViewChange = vi.fn();
+    const { container } = renderNav({ onViewChange });
+    fireEvent.click(screen.getByRole('button', { name: 'Abrir menú de navegación' }));
+    const drawer = screen.getByRole('dialog', { name: 'Menú de navegación' });
+    fireEvent.click(within(drawer).getByRole('button', { name: /Línea Temporal/ }));
+    expect(onViewChange).toHaveBeenCalledWith(VIEWS.TIMELINE);
+    expect(screen.queryByRole('dialog', { name: 'Menú de navegación' })).toBeNull();
+    container.remove();
+  });
+
+  it('cierra el drawer con la tecla Escape y con el botón de cierre', () => {
+    const { container } = renderNav();
+    fireEvent.click(screen.getByRole('button', { name: 'Abrir menú de navegación' }));
+    fireEvent.keyDown(document, { key: 'Escape' });
+    expect(screen.queryByRole('dialog', { name: 'Menú de navegación' })).toBeNull();
+    // Reabre y cierra con la X.
+    fireEvent.click(screen.getByRole('button', { name: 'Abrir menú de navegación' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Cerrar menú de navegación' }));
+    expect(screen.queryByRole('dialog', { name: 'Menú de navegación' })).toBeNull();
+    container.remove();
+  });
+
+  it('cierra el drawer al pulsar el fondo oscuro (backdrop)', () => {
+    const { container } = renderNav();
+    fireEvent.click(screen.getByRole('button', { name: 'Abrir menú de navegación' }));
+    const drawer = screen.getByRole('dialog', { name: 'Menú de navegación' });
+    const backdrop = drawer.firstChild;
+    fireEvent.click(backdrop);
+    expect(screen.queryByRole('dialog', { name: 'Menú de navegación' })).toBeNull();
     container.remove();
   });
 });
