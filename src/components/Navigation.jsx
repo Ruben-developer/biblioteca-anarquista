@@ -1,22 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import { Calendar, MapPin, User, Heart, BookOpen, Compass, Milestone, BookMarked, Menu, X } from 'lucide-react';
+import React, { useEffect } from 'react';
+import { Calendar, MapPin, User, Heart, BookOpen, Compass, Milestone, BookMarked, X } from 'lucide-react';
 import { THEME, VIEWS } from '../constants';
 
-const Navigation = ({ 
-  activeView, 
-  onViewChange, 
+const Navigation = ({
+  activeView,
+  onViewChange,
   darkMode,
   favoriteCount,
-  regionCount
+  regionCount,
+  menuOpen,
+  onMenuClose
 }) => {
   const themeClass = darkMode ? THEME.dark : THEME.light;
-  const [menuOpen, setMenuOpen] = useState(false);
 
   // Cerrar el drawer con Escape y bloquear el scroll de fondo mientras está abierto.
   useEffect(() => {
     if (!menuOpen) return undefined;
     const onKey = (e) => {
-      if (e.key === 'Escape') setMenuOpen(false);
+      if (e.key === 'Escape') onMenuClose();
     };
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
@@ -25,10 +26,10 @@ const Navigation = ({
       document.body.style.overflow = prevOverflow;
       window.removeEventListener('keydown', onKey);
     };
-  }, [menuOpen]);
+  }, [menuOpen, onMenuClose]);
 
   const go = (view) => {
-    setMenuOpen(false);
+    onMenuClose();
     onViewChange(view);
   };
 
@@ -46,11 +47,11 @@ const Navigation = ({
   const pillClass = (view) =>
     `flex items-center gap-2 px-5 py-3 rounded-lg transition-all font-display text-sm uppercase tracking-wider whitespace-nowrap active:scale-95 ${
       activeView === view
-        ? darkMode 
-          ? 'bg-red-600 text-white' 
+        ? darkMode
+          ? 'bg-red-600 text-white'
           : 'bg-amber-800 text-amber-50'
-        : darkMode 
-          ? 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50' 
+        : darkMode
+          ? 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
           : 'bg-amber-200/50 text-amber-900 hover:bg-amber-200'
     }`;
 
@@ -58,50 +59,30 @@ const Navigation = ({
     <>
       <nav aria-label="Navegación principal" className={`${themeClass.nav} backdrop-blur-sm border-b`}>
         <div className="container mx-auto px-4">
-          {/* Móvil (< md): hamburguesa que abre el drawer lateral.
-              Escritorio (md+): píldoras en fila, sin drawer. */}
-          <div className="flex items-center justify-between gap-3 py-3">
-            <button
-              onClick={() => setMenuOpen(true)}
-              aria-label="Abrir menú de navegación"
-              aria-expanded={menuOpen}
-              aria-controls="menu-lateral"
-              className={`md:hidden flex items-center gap-2 px-4 py-2 rounded-lg transition-all active:scale-95 ${
-                darkMode
-                  ? 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
-                  : 'bg-amber-200/50 text-amber-900 hover:bg-amber-200'
-              }`}
-            >
-              <Menu size={20} />
-              <span className="font-display text-sm uppercase tracking-wider md:hidden">
-                {navItems.find((i) => i.view === activeView)?.label || 'Menú'}
-              </span>
-            </button>
-
-            {/* Desktop/tablet (md+): píldoras en fila */}
-            <div className="hidden md:flex gap-2 overflow-x-auto">
-              {navItems.map(({ view, label, icon: Icon }) => (
-                <button
-                  key={view}
-                  onClick={() => go(view)}
-                  aria-current={activeView === view ? 'page' : undefined}
-                  className={pillClass(view)}
-                >
-                  <Icon size={18} />
-                  {label}
-                </button>
-              ))}
-            </div>
+          {/* Escritorio/tablet (md+): píldoras en fila */}
+          <div className="hidden md:flex gap-2 overflow-x-auto py-3">
+            {navItems.map(({ view, label, icon: Icon }) => (
+              <button
+                key={view}
+                onClick={() => go(view)}
+                aria-current={activeView === view ? 'page' : undefined}
+                className={pillClass(view)}
+              >
+                <Icon size={18} />
+                {label}
+              </button>
+            ))}
           </div>
         </div>
       </nav>
 
-      {/* Drawer lateral: overlay + panel (solo móvil, < md) */}
+      {/* Drawer lateral: overlay + panel. Se abre con la hamburguesa del header
+          (aria-controls="menu-lateral") en todos los tamaños. */}
       {menuOpen && (
-        <div id="menu-lateral" className="fixed inset-0 z-50 md:hidden" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+        <div id="menu-lateral" className="fixed inset-0 z-50" role="dialog" aria-modal="true" aria-label="Menú de navegación">
           <div
             className="absolute inset-0 bg-black/60"
-            onClick={() => setMenuOpen(false)}
+            onClick={onMenuClose}
             aria-hidden="true"
           />
           <nav
@@ -113,7 +94,7 @@ const Navigation = ({
                 La Idea
               </span>
               <button
-                onClick={() => setMenuOpen(false)}
+                onClick={onMenuClose}
                 aria-label="Cerrar menú de navegación"
                 className={`p-2 rounded-lg transition-colors ${
                   darkMode
@@ -132,11 +113,11 @@ const Navigation = ({
                   aria-current={activeView === view ? 'page' : undefined}
                   className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all font-display text-sm uppercase tracking-wider text-left active:scale-[0.98] ${
                     activeView === view
-                      ? darkMode 
-                        ? 'bg-red-600 text-white' 
+                      ? darkMode
+                        ? 'bg-red-600 text-white'
                         : 'bg-amber-800 text-amber-50'
-                      : darkMode 
-                        ? 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50' 
+                      : darkMode
+                        ? 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
                         : 'bg-amber-200/50 text-amber-900 hover:bg-amber-200'
                   }`}
                 >

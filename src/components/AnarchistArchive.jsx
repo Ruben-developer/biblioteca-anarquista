@@ -35,6 +35,7 @@ const AnarchistArchive = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [showFilters, setShowFilters] = useState(false);
   const [readingBook, setReadingBook] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const [filters, setFilters] = useState({
     searchTerm: '',
@@ -81,6 +82,8 @@ const AnarchistArchive = () => {
         onShowContact={() => setActiveView(VIEWS.CONTACT)}
         stats={stats}
         activeView={activeView}
+        menuOpen={menuOpen}
+        onMenuToggle={() => setMenuOpen(!menuOpen)}
       />
 
       <Navigation
@@ -89,6 +92,8 @@ const AnarchistArchive = () => {
         darkMode={darkMode}
         favoriteCount={favorites.length}
         regionCount={Object.keys(regionData).length}
+        menuOpen={menuOpen}
+        onMenuClose={() => setMenuOpen(false)}
       />
 
       <main className="container mx-auto px-4 py-8">

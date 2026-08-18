@@ -9,6 +9,7 @@ import RegionModal from './RegionModal';
 import LibraryView from './LibraryView';
 import AnarchistArchive from './AnarchistArchive';
 import Navigation from './Navigation';
+import Header from './Header';
 import { VIEWS } from '../constants';
 
 afterEach(cleanup);
@@ -446,20 +447,38 @@ it('abre un evento de la línea temporal y cierra el modal con Escape', () => {
 });
 
 describe('Navigation móvil (drawer/hamburguesa)', () => {
-  const renderNav = (props = {}) =>
-    render(
-      <Navigation
-        activeView={VIEWS.LIBRARY}
-        onViewChange={() => {}}
-        darkMode={false}
-        favoriteCount={3}
-        regionCount={17}
-        {...props}
-      />
+  // La hamburguesa vive en el Header; el drawer en Navigation. Ambos comparten
+  // el estado en el padre (AnarchistArchive), como en producción.
+  const Harness = ({ onViewChange, initialOpen = false, ...rest }) => {
+    const [open, setOpen] = React.useState(initialOpen);
+    return (
+      <>
+        <Header
+          darkMode={false}
+          onDarkModeToggle={() => {}}
+          onShowStats={() => {}}
+          onShowContact={() => {}}
+          stats={{ texts: 114, events: 16, regions: 16 }}
+          activeView={VIEWS.LIBRARY}
+          menuOpen={open}
+          onMenuToggle={() => setOpen(!open)}
+        />
+        <Navigation
+          activeView={VIEWS.LIBRARY}
+          onViewChange={onViewChange}
+          darkMode={false}
+          favoriteCount={3}
+          regionCount={17}
+          menuOpen={open}
+          onMenuClose={() => setOpen(false)}
+          {...rest}
+        />
+      </>
     );
+  };
 
   it('muestra el botón hamburguesa y el drawer cerrado por defecto', () => {
-    const { container } = renderNav();
+    const { container } = render(<Harness onViewChange={() => {}} />);
     const hamburger = screen.getByRole('button', { name: 'Abrir menú de navegación' });
     expect(hamburger).toBeTruthy();
     expect(hamburger.getAttribute('aria-expanded')).toBe('false');
@@ -471,7 +490,7 @@ describe('Navigation móvil (drawer/hamburguesa)', () => {
   });
 
   it('abre el drawer al pulsar la hamburguesa y muestra todos los destinos', () => {
-    const { container } = renderNav();
+    const { container } = render(<Harness onViewChange={() => {}} />);
     fireEvent.click(screen.getByRole('button', { name: 'Abrir menú de navegación' }));
     const drawer = screen.getByRole('dialog', { name: 'Menú de navegación' });
     expect(drawer).toBeTruthy();
@@ -491,7 +510,7 @@ describe('Navigation móvil (drawer/hamburguesa)', () => {
 
   it('navega al pulsar un destino del drawer y lo cierra', () => {
     const onViewChange = vi.fn();
-    const { container } = renderNav({ onViewChange });
+    const { container } = render(<Harness onViewChange={onViewChange} />);
     fireEvent.click(screen.getByRole('button', { name: 'Abrir menú de navegación' }));
     const drawer = screen.getByRole('dialog', { name: 'Menú de navegación' });
     fireEvent.click(within(drawer).getByRole('button', { name: /Línea Temporal/ }));
@@ -501,7 +520,7 @@ describe('Navigation móvil (drawer/hamburguesa)', () => {
   });
 
   it('cierra el drawer con la tecla Escape y con el botón de cierre', () => {
-    const { container } = renderNav();
+    const { container } = render(<Harness onViewChange={() => {}} />);
     fireEvent.click(screen.getByRole('button', { name: 'Abrir menú de navegación' }));
     fireEvent.keyDown(document, { key: 'Escape' });
     expect(screen.queryByRole('dialog', { name: 'Menú de navegación' })).toBeNull();
@@ -513,7 +532,7 @@ describe('Navigation móvil (drawer/hamburguesa)', () => {
   });
 
   it('cierra el drawer al pulsar el fondo oscuro (backdrop)', () => {
-    const { container } = renderNav();
+    const { container } = render(<Harness onViewChange={() => {}} />);
     fireEvent.click(screen.getByRole('button', { name: 'Abrir menú de navegación' }));
     const drawer = screen.getByRole('dialog', { name: 'Menú de navegación' });
     const backdrop = drawer.firstChild;
