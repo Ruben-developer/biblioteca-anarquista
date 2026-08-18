@@ -372,6 +372,15 @@
       "prs": 0,
       "ci": "verde (run 32188611599)",
       "nota": "TURNO CHAT ~17:37. Refinamiento del header tras feedback: el titulo La Idea estaba DEBAJO de los botones en movil y casi centrado en web. Fix: (1) movil — titulo a la primera fila (order-1 + w-full) y debajo la linea [hamburguesa+texto] [correo/tema/stats]; (2) web — hamburguesa y titulo comparten order-1 (agrupados a la izquierda por orden DOM, hamburguesa como icono-logo a la izquierda del titulo) y botones a la derecha (order-2). Solo Header.jsx. 235 tests, lint 0, build OK, CI verde. Commit 349553f."
+    },
+    {
+      "fecha": "2026-08-18",
+      "obras": 119,
+      "palabras": 3876,
+      "commits": 1,
+      "prs": 0,
+      "ci": "verde (run 32189461307)",
+      "nota": "TURNO CHAT ~17:47. El titulo seguia viendose centrado en web: el flexbox con justify-between de 3 items centra el del medio. Solucion: CSS Grid con areas en el Header — movil: fila 1 = titu (titulo), fila 2 = menu bots (hamburguesa + botones); web md+: una fila menu titu bots con titulo en columna central 1fr anclado a la izquierda (md:justify-self-start). Solo Header.jsx. 235 tests, lint 0, build OK, CI verde. Commit ceed26b."
     }
   ]
 }
