@@ -327,6 +327,15 @@
       "prs": 0,
       "ci": "verde (run 32166833182)",
       "nota": "TURNO CHAT 13:4x. FIX de UX reportado por el usuario: en las rutas desplegadas de Rutas, los titulos de las obras desbordaban su tarjeta (no se cortaban ni bajaban de linea). Causa: titulo con 'truncate' (ellipsis) pero la tarjeta flex sin min-w-0 no podia encogerse bajo el ancho del contenido. Fix en ReadingPathsView.jsx (seccion de obras): tarjeta flex-1 min-w-0 + titulo truncate -> break-words (el texto continua en la siguiente linea dentro de la tarjeta). Tests 233, lint 0 errores, build OK, CI Pages verde (run 32166833182). Commit e41314a."
+    },
+    {
+      "fecha": "2026-08-18",
+      "obras": 119,
+      "palabras": 3876,
+      "commits": 2,
+      "prs": 0,
+      "ci": "verde (run 32171877798)",
+      "nota": "TURNO CHAT ~14:0x. El usuario pregunto por que hay textos con \"sin archivo disponible\": no son TXT (el catalogo tiene 113 PDFs y 0 TXT), eran 6 obras sin filename asignado. Se consiguieron PDFs libres para 4: Los Martires de Chicago (archivochile), En el cafe/Malatesta (archive.org), Tierra y Libertad (la obra de teatro de Flores Magon 1916 de omegalfa; se actualizaron autor y anio al contenido real) y Severino Di Giovanni/Bayer (bibliotecasocial). Copiados a pdfs-local/anarquismo/, filename en regionData.js, descargas 117/117 OK y 200 en prod (tunel Tailscale). Quedan sin archivo Regeneracion (periodico sin PDF unico) y Luis E. Recabarren (copyright LOM). Ademas: label del menu elegido en el header (VIEW_LABELS) y select de autores con elipsis. 234 tests, lint 0, build OK. Commits 1f3a0e8 + df72995."
     }
   ]
 }

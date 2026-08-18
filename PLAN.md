@@ -185,7 +185,7 @@ contenedor nginx local en la máquina siempre-encendida, y la web enlaza
  - [ ] Enriquecer `documents.json` con metadatos completos de las obras nuevas del catálogo (hoy solo 2 entradas; el servicio usa `regionData` como fuente principal, ver decisión en la nota del día). → **BAJA PRIORIDAD**: `documents.json` quedó legacy (solo lo usa `documentService.js` para consultas no usadas por la UI; el catálogo real vive en `regionData.js` + `library.js`). Se sugiere en su lugar **eliminar la deuda**: valorar deprecar `documentService` o documentar que es mantenimiento de compatibilidad.
  - [x] ~~FASE 6 (siguiente): subir ramas hacia el 85%+ y cubrir ramas pendientes de `WorldMap`, `RegionModal`, `LibraryView`, `EventModal` (branch coverage actual 79.35%).~~ → **SUPERADO 2026-08-11 (12:00)**: branches 97.96%, functions 90.81%.
  - [ ] (Ideas de mejora en evaluación) Dashboard de métricas, obra del día, más agentes expertos. → **OBRA DEL DÍA ✅ 2026-08-12**; siguen pendientes Dashboard de métricas y más agentes expertos.
- - [ ] **6 libros sin filename** (En el café, Mártires de Chicago, Regeneración, Tierra y Libertad, Severino Di Giovanni, Luis E. Recabarren): → **parcialmente atendido 2026-08-12**: ya se marcan "Sin archivo disponible" en la Biblioteca (UX honesta). Falta conseguir los textos (no están en el contenedor ni en el origen local; Bayer/Grez con derechos de autor). Pendiente para `@content-importer` cuando haya fuentes.
+ - [x] **6 libros sin filename** ✅ 2026-08-18 (turno de chat): se añadió `filename` a **4 de 6** obras con PDFs de fuentes abiertas — **Los Mártires de Chicago** (archivochile.com), **En el café** (Malatesta, archive.org), **Tierra y Libertad** (la obra de teatro de Flores Magón 1916, omegalfa.es; se actualizaron autor y año para reflejar el contenido real) y **Severino Di Giovanni** (Bayer, bibliotecasocial.org). PDFs copiados a `pdfs-local/anarquismo/` y verificados HTTP 200 en dev y producción (túnel Tailscale). Descargas **117/117 OK**. Quedan **2 sin archivo**: **Regeneración** (periódico digitalizado, sin PDF único accesible) y **Luis E. Recabarren** (biografía de Sergio Grez 2011, copyright de LOM). Commits 1f3a0e8 + df72995.
  - [ ] Ampliar el catálogo con `@content-importer` hasta agotar los ~400 PDFs del contenedor.
  - [x] **Invariante mapa ↔ timeline (regla de negocio con el usuario)** ✅ 2026-08-12 (12:00): tarjetas "O navega por región" SOLO con ≥1 texto histórico ordenadas por nº DESC (Inglaterra, solo teoría, ni se pinta ni crea tarjeta). **Invariante 27/44 → 44/44**: todos los textos históricos vinculados a eventos. Los eventos NACEN de los textos: 16 tarjetas nuevas + Makhnovschina→Kronstadt (32 eventos). `filterEvents` ordena cronológicamente. Autores = obra completa (historia + ideas). Nuevo subagente `@evento-builder` que mantiene `timeline == mapa`. **119 textos (44 hist / 75 ideas), 17 regiones, 32 eventos, 113 descargables**. 143 tests OK, `npm run check` verde, CI verde (run 31619838053). Commits 4d85cc7 + 6392eab.
  - [x] **FASE 3: Obra destacada del día** ✅ 2026-08-12 (ejecución extra 21:1x): widget "Obra del día" en la Biblioteca — `getDailyFeaturedBook` (determinista por fecha local; prioriza legibles con resumen; hoy: "La lucha contra el Estado", Nettlau 1920) + `FeaturedBook.jsx` con reseña y botón de lectura. Fix de negocio menor (IDEAS.md): las 6 obras sin `filename` muestran "Sin archivo disponible" en la Biblioteca. **143 → 155 tests**, `npm run check` verde (lint 0 + 155 tests + build), CI verde (run 31656981533). Commit 5a76b39.
@@ -577,3 +577,40 @@ siguiente tarea del plan.
 
 **Verificación**: `npm run check` (lint 0 errores + **232 tests** + build) verde.
 CI de Pages verde (run 32158305470). Commit cfb04e8.
+
+### Nota del día (2026-08-18, turno de chat ~14:00)
+El usuario reportó que los textos "sin archivo disponible" parecían ser TXT y
+preguntó si se podían convertir a PDF. Diagnóstico: **no son TXT** (el catálogo
+tiene 113 PDFs y 0 TXT) — son 6 obras a las que nunca se les asignó `filename`.
+**Tarea del plan (6 libros sin filename)**:
+- **4 obras con PDF ahora disponible** (fuentes abiertas, verificadas HTTP 200):
+  - **Los Mártires de Chicago** → `anarquismo/f_martires_de_chicago.pdf` (archivochile.com)
+  - **En el café** (Malatesta) → `anarquismo/f_malatesta_en_el_cafe.pdf` (archive.org)
+  - **Tierra y Libertad** → `anarquismo/f_flores_magon_tierra_y_libertad.pdf`
+    (omegalfa.es): el PDF real es la **obra de teatro de Ricardo Flores Magón
+    (1916)**; se actualizaron `author` y `year` para reflejar el contenido real.
+  - **Severino Di Giovanni** (Bayer) → `anarquismo/f_bayer_severino_di_giovanni.pdf`
+    (bibliotecasocial.org)
+- PDFs copiados a `pdfs-local/anarquismo/` (no versionados) y verificados con
+  `check-downloads`: **117/117 OK**. En producción se sirven por el túnel
+  Tailscale (`VITE_PDF_BASE`), verificado HTTP 200.
+- **Quedan 2 sin archivo**: **Regeneración** (es un periódico digitalizado de
+  Flores Magón sin PDF único accesible) y **Luis E. Recabarren** (biografía de
+  Sergio Grez 2011, con copyright de LOM — no hay fuente libre). Se documentan
+  para cuando haya fuentes.
+- **Fix UX del mismo turno**: la etiqueta del menú elegido se muestra ahora en el
+  header junto al botón de tema y el correo (`VIEW_LABELS`), y el selector
+  "Todos los autores" ya no se corta (elipsis). 234 tests.
+- **Verificación**: `npm run check` (lint 0 errores + **234 tests** + build) verde,
+  `check-downloads` **117/117 OK**, CI verde (run 32171877798). Commits 1f3a0e8
+  (UX) + df72995 (catálogo) + bbb9257/43da344/c849ab5/43da344 (docs).
+
+## 6. Próximo día
+- [ ] **UX pendiente (del reporte navegación §2.4, cambios 5-6)**: cross-links
+  Teorías/Rutas/Glosario → Biblioteca con filtros precargados (`initialFilters` en
+  `LibraryView`); consolidar labels del nav (quitar `(N)` de Mapa).
+- [ ] **Recabarren / Regeneración**: buscar fuentes libres (Regeneración podría
+  importarse como antología de la biblioteca magonista; Recabarren quizá en
+  Dialnet o la biblioteca de la FECH si hay PDF). Si no hay, dejar documentado.
+- [ ] **Pendiente de UX (reporte navegación)**: hamburguesa/drawer móvil ✅ hecho
+  2026-08-18; quedan aria-pressed en toggle de tema y corazones de favoritos.
