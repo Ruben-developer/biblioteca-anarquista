@@ -18,15 +18,18 @@ const Header = ({
   return (
     <header className={`${themeClass.header} backdrop-blur-sm border-b-2 sticky top-0 z-10 shadow-md`}>
       <div className="container mx-auto px-4 py-4 md:py-6">
-        <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-3">
-          {/* Hamburguesa: en móvil va al inicio de la línea de botones; en web
-              actúa como icono-logo a la izquierda, junto al título. */}
+        {/* Grid con áreas: en móvil el título va en su propia fila arriba
+            y la hamburguesa + botones en la fila de abajo; en web todo en
+            una fila: hamburguesa · título (anclado a la izquierda) · botones. */}
+        <div className="grid items-center gap-x-4 gap-y-3 grid-cols-[auto_1fr] [grid-template-areas:'titu_titu'_'menu_bots'] md:grid-cols-[auto_1fr_auto] md:[grid-template-areas:'menu_titu_bots']">
+          {/* Hamburguesa: en móvil al inicio de la línea de botones; en web
+              como icono-logo a la izquierda, junto al título. */}
           <button
             onClick={onMenuToggle}
             aria-label="Abrir menú de navegación"
             aria-expanded={menuOpen}
             aria-controls="menu-lateral"
-            className={`order-2 md:order-1 flex items-center gap-2 px-3 py-2 rounded-lg transition-all active:scale-95 ${
+            className={`[grid-area:menu] justify-self-start flex items-center gap-2 px-3 py-2 rounded-lg transition-all active:scale-95 ${
               darkMode
                 ? 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
                 : 'bg-amber-200/50 text-amber-900 hover:bg-amber-200'
@@ -39,9 +42,9 @@ const Header = ({
             </span>
           </button>
 
-          {/* Botones de acción: en móvil cierran la línea de la hamburguesa;
-              en web quedan a la derecha del grupo hamburguesa + título. */}
-          <div className="order-3 md:order-2 flex items-center gap-2 md:gap-3">
+          {/* Botones de acción: en móvil cierran la línea de la hamburguesa
+              (a la derecha); en web van a la derecha del grupo. */}
+          <div className="[grid-area:bots] justify-self-end flex items-center gap-2 md:gap-3">
             {activeLabel && (
               <span
                 className={`hidden sm:inline-block px-3 py-1.5 rounded-lg text-xs md:text-sm font-display uppercase tracking-wider ${darkMode ? 'bg-gray-800/60 text-red-400' : 'bg-amber-100/70 text-amber-900'}`}
@@ -74,10 +77,10 @@ const Header = ({
             </button>
           </div>
 
-          {/* Título: en móvil va en su propia línea SOBRE la hamburguesa y los
-              botones (order-1 + w-full); en web comparte order-1 con la
-              hamburguesa para quedar agrupado a la izquierda. */}
-          <div className="order-1 w-full md:w-auto min-w-0">
+          {/* Título: en móvil ocupa su propia fila arriba (área titu); en web va
+              en la columna central pero anclado a la izquierda, justo al
+              lado de la hamburguesa. */}
+          <div className="[grid-area:titu] md:justify-self-start min-w-0">
             <h1
               className={`text-2xl sm:text-3xl md:text-4xl font-display tracking-tight uppercase flex items-center gap-2 md:gap-3 ${darkMode ? 'text-red-500' : ''}`}
             >
