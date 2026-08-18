@@ -354,6 +354,15 @@
       "prs": 0,
       "ci": "verde (run 32186240586)",
       "nota": "TURNO CHAT ~17:1x. Correccion de la interpretacion previa: la hamburguesa debe vivir en el HEADER, no en el nav ni ausente de la web. En smartphone: hamburguesa + texto del menu activo al inicio de la misma linea que correo/tema/estadisticas (titulo La Idea oculto en movil con hidden md:block). En escritorio: hamburguesa como icono-logo a la izquierda antes de La Idea, abriendo el drawer igual que en movil (el drawer ya no tiene md:hidden). El estado menuOpen sube a AnarchistArchive y se comparte entre Header (boton) y Navigation (panel). Tests del drawer reescritos con Harness Header+Navigation. 234 tests, lint 0, build OK, CI verde. Commit 468a305."
+    },
+    {
+      "fecha": "2026-08-18",
+      "obras": 119,
+      "palabras": 3876,
+      "commits": 1,
+      "prs": 0,
+      "ci": "verde (run 32187666117)",
+      "nota": "TURNO CHAT ~17:25. Refinamiento del menu lateral: (1) el titulo La Idea vuelve a verse en smartphone (antes hidden md:block) — el Header se apila con order+w-full en dos filas: [hamburguesa+texto] [correo/tema/stats] arriba y el titulo debajo; (2) se eliminan las pildoras horizontales del nav en web — toda la navegacion pasa por el drawer de la hamburguesa (icono-logo a la izquierda del titulo), que ya existia para todos los tamanos. Navigation.jsx queda solo con el drawer. Tests: Navigation verifica drawer abierto/cerrado; los interactivos abren el menu antes de navegar. 235 tests, lint 0, build OK, CI verde. Commit 32f35cf."
     }
   ]
 }
