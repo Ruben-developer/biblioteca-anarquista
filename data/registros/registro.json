@@ -336,6 +336,15 @@
       "prs": 0,
       "ci": "verde (run 32171877798)",
       "nota": "TURNO CHAT ~14:0x. El usuario pregunto por que hay textos con \"sin archivo disponible\": no son TXT (el catalogo tiene 113 PDFs y 0 TXT), eran 6 obras sin filename asignado. Se consiguieron PDFs libres para 4: Los Martires de Chicago (archivochile), En el cafe/Malatesta (archive.org), Tierra y Libertad (la obra de teatro de Flores Magon 1916 de omegalfa; se actualizaron autor y anio al contenido real) y Severino Di Giovanni/Bayer (bibliotecasocial). Copiados a pdfs-local/anarquismo/, filename en regionData.js, descargas 117/117 OK y 200 en prod (tunel Tailscale). Quedan sin archivo Regeneracion (periodico sin PDF unico) y Luis E. Recabarren (copyright LOM). Ademas: label del menu elegido en el header (VIEW_LABELS) y select de autores con elipsis. 234 tests, lint 0, build OK. Commits 1f3a0e8 + df72995."
+    },
+    {
+      "fecha": "2026-08-18",
+      "obras": 119,
+      "palabras": 3876,
+      "commits": 1,
+      "prs": 0,
+      "ci": "verde (run 32183621797)",
+      "nota": "TURNO CHAT ~16:4x. El usuario pidio separar la navegacion de escritorio de la de smartphone: en movil el menu ya se veia bien. Se revierte el drawer \"todos los tamanos\" del commit cabe6bc: la hamburguesa y el drawer lateral vuelven a ser solo moviles (md:hidden) y en escritorio (md+) la navegacion es solo las pilulas en fila. Navigation.jsx, commit 95eaf7c. 234 tests, lint 0, build OK, CI verde."
     }
   ]
 }

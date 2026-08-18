@@ -614,3 +614,11 @@ tiene 113 PDFs y 0 TXT) — son 6 obras a las que nunca se les asignó `filename
   Dialnet o la biblioteca de la FECH si hay PDF). Si no hay, dejar documentado.
 - [ ] **Pendiente de UX (reporte navegación)**: hamburguesa/drawer móvil ✅ hecho
   2026-08-18; quedan aria-pressed en toggle de tema y corazones de favoritos.
+
+### Nota del día (2026-08-18, turno de chat ~16:40)
+El usuario pidió **separar el menú de la web de escritorio del de smartphone**
+("en smartphone los menús ya se ven bien"). Se revierte el drawer "todos los
+tamaños" del commit cabe6bc: la **hamburguesa y el drawer lateral vuelven a ser
+solo móviles (`md:hidden`)** y en escritorio (`md+`) la navegación es de nuevo
+solo las píldoras en fila (`hidden md:flex`, sin drawer). Commit 95eaf7c, 234
+tests, lint 0 errores, build OK, CI verde (run 32183621797).
