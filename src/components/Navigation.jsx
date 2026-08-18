@@ -58,13 +58,14 @@ const Navigation = ({
     <>
       <nav aria-label="Navegación principal" className={`${themeClass.nav} backdrop-blur-sm border-b`}>
         <div className="container mx-auto px-4">
-          {/* Móvil (< md): hamburguesa que abre el drawer */}
-          <div className="flex items-center justify-between py-3 md:hidden">
+          {/* Todos los tamaños: hamburguesa que abre el drawer lateral.
+              En md+ se complementa con las píldoras de escritorio. */}
+          <div className="flex items-center justify-between gap-3 py-3">
             <button
               onClick={() => setMenuOpen(true)}
               aria-label="Abrir menú de navegación"
               aria-expanded={menuOpen}
-              aria-controls="menu-movil"
+              aria-controls="menu-lateral"
               className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all active:scale-95 ${
                 darkMode
                   ? 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
@@ -72,39 +73,39 @@ const Navigation = ({
               }`}
             >
               <Menu size={20} />
-              <span className="font-display text-sm uppercase tracking-wider">
+              <span className="font-display text-sm uppercase tracking-wider md:hidden">
                 {navItems.find((i) => i.view === activeView)?.label || 'Menú'}
               </span>
             </button>
-          </div>
 
-          {/* Desktop/tablet (md+): píldoras en fila */}
-          <div className="hidden md:flex gap-2 py-4 overflow-x-auto">
-            {navItems.map(({ view, label, icon: Icon }) => (
-              <button
-                key={view}
-                onClick={() => go(view)}
-                aria-current={activeView === view ? 'page' : undefined}
-                className={pillClass(view)}
-              >
-                <Icon size={18} />
-                {label}
-              </button>
-            ))}
+            {/* Desktop/tablet (md+): píldoras en fila */}
+            <div className="hidden md:flex gap-2 overflow-x-auto">
+              {navItems.map(({ view, label, icon: Icon }) => (
+                <button
+                  key={view}
+                  onClick={() => go(view)}
+                  aria-current={activeView === view ? 'page' : undefined}
+                  className={pillClass(view)}
+                >
+                  <Icon size={18} />
+                  {label}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </nav>
 
-      {/* Drawer móvil: overlay + panel lateral (solo cuando está abierto) */}
+      {/* Drawer lateral: overlay + panel (todos los tamaños) */}
       {menuOpen && (
-        <div id="menu-movil" className="fixed inset-0 z-50 md:hidden" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+        <div id="menu-lateral" className="fixed inset-0 z-50" role="dialog" aria-modal="true" aria-label="Menú de navegación">
           <div
             className="absolute inset-0 bg-black/60"
             onClick={() => setMenuOpen(false)}
             aria-hidden="true"
           />
           <nav
-            aria-label="Navegación móvil"
+            aria-label="Navegación lateral"
             className={`absolute left-0 top-0 bottom-0 w-72 max-w-[85vw] overflow-y-auto p-4 shadow-2xl ${themeClass.nav} backdrop-blur-md`}
           >
             <div className="flex items-center justify-between mb-4">

@@ -34,8 +34,8 @@ const ReadingPathsView = ({ darkMode, regionData, onRead = () => {} }) => {
                 aria-expanded={isOpen}
               >
                 <div className="flex items-center gap-3">
-                  <span className="flex-shrink-0 text-3xl leading-none">
-                    <PathIcon id={path.id} icon={path.icon} />
+                  <span className="flex-shrink-0 w-9 text-center leading-none">
+                    <PathIcon icon={path.icon} />
                   </span>
                   <div className="flex-1 min-w-0">
                     <h3 className={`font-bold text-lg break-words ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>

@@ -111,8 +111,8 @@ describe('ReadingPathsView', () => {
 
 describe('PathIcon', () => {
   it('dibuja banderas como SVG estático (España y Ucrania) en vez de emoji', () => {
-    const es = renderToStaticMarkup(<PathIcon id="espana" icon="🇪🇸" />);
-    const ua = renderToStaticMarkup(<PathIcon id="rusia-ucrania" icon="🇺🇦" />);
+    const es = renderToStaticMarkup(<PathIcon icon="flag-espana" />);
+    const ua = renderToStaticMarkup(<PathIcon icon="flag-ucrania" />);
     // Deben ser SVG con colores de bandera, NO emoji de bandera (que en
     // Windows/Chrome se ven como las letras "ES"/"UA").
     expect(es).toContain('<svg');
@@ -123,9 +123,18 @@ describe('PathIcon', () => {
     expect(ua).not.toContain('🇺🇦');
   });
 
-  it('deja los emoji de símbolos como están (no son banderas)', () => {
-    const html = renderToStaticMarkup(<PathIcon id="ecologia" icon="🌱" />);
-    expect(html).toContain('🌱');
+  it('dibuja los símbolos como iconos SVG de lucide en vez de emoji', () => {
+    const leaf = renderToStaticMarkup(<PathIcon icon="leaf" />);
+    const fist = renderToStaticMarkup(<PathIcon icon="heart-handshake" />);
+    expect(leaf).toContain('<svg');
+    expect(leaf).not.toContain('🌱');
+    expect(fist).toContain('<svg');
+    expect(fist).not.toContain('✊');
+  });
+
+  it('muestra tal cual un icono desconocido (fallback)', () => {
+    const html = renderToStaticMarkup(<PathIcon icon="desconocido" />);
+    expect(html).toContain('desconocido');
     expect(html).not.toContain('<svg');
   });
 });
