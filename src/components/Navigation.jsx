@@ -58,15 +58,15 @@ const Navigation = ({
     <>
       <nav aria-label="Navegación principal" className={`${themeClass.nav} backdrop-blur-sm border-b`}>
         <div className="container mx-auto px-4">
-          {/* Todos los tamaños: hamburguesa que abre el drawer lateral.
-              En md+ se complementa con las píldoras de escritorio. */}
+          {/* Móvil (< md): hamburguesa que abre el drawer lateral.
+              Escritorio (md+): píldoras en fila, sin drawer. */}
           <div className="flex items-center justify-between gap-3 py-3">
             <button
               onClick={() => setMenuOpen(true)}
               aria-label="Abrir menú de navegación"
               aria-expanded={menuOpen}
               aria-controls="menu-lateral"
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all active:scale-95 ${
+              className={`md:hidden flex items-center gap-2 px-4 py-2 rounded-lg transition-all active:scale-95 ${
                 darkMode
                   ? 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
                   : 'bg-amber-200/50 text-amber-900 hover:bg-amber-200'
@@ -96,9 +96,9 @@ const Navigation = ({
         </div>
       </nav>
 
-      {/* Drawer lateral: overlay + panel (todos los tamaños) */}
+      {/* Drawer lateral: overlay + panel (solo móvil, < md) */}
       {menuOpen && (
-        <div id="menu-lateral" className="fixed inset-0 z-50" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+        <div id="menu-lateral" className="fixed inset-0 z-50 md:hidden" role="dialog" aria-modal="true" aria-label="Menú de navegación">
           <div
             className="absolute inset-0 bg-black/60"
             onClick={() => setMenuOpen(false)}
