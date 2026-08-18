@@ -1,22 +1,85 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Book, ChevronDown, ChevronUp, BookOpen, MapPin } from 'lucide-react';
+import { Book, ChevronDown, ChevronUp, BookOpen, MapPin, Users, Share2 } from 'lucide-react';
 import { THEME } from '../constants';
+import InfluencesView from './InfluencesView';
 
 const AuthorsView = ({
   darkMode,
   authors,
+  regionData,
   onRead = () => {}
 }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
   const [openAuthor, setOpenAuthor] = useState(null);
+  const [mode, setMode] = useState('list'); // 'list' | 'network'
 
   const toggleAuthor = (name) => {
     setOpenAuthor((prev) => (prev === name ? null : name));
   };
 
+  const toggleClass = (active) =>
+    `flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-display text-sm uppercase tracking-wider transition-colors ${
+      active
+        ? darkMode
+          ? 'bg-red-600 text-white'
+          : 'bg-amber-800 text-amber-50'
+        : darkMode
+          ? 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
+          : 'bg-amber-200/50 text-amber-900 hover:bg-amber-200'
+    }`;
+
+  if (mode === 'network') {
+    return (
+      <div>
+        <div className="flex gap-2 mb-6" role="tablist" aria-label="Modo de vista de autores">
+          <button
+            role="tab"
+            aria-selected={false}
+            onClick={() => setMode('list')}
+            className={toggleClass(false)}
+          >
+            <Users size={16} />
+            Autores
+          </button>
+          <button
+            role="tab"
+            aria-selected={true}
+            onClick={() => setMode('network')}
+            className={toggleClass(true)}
+          >
+            <Share2 size={16} />
+            Red de influencias
+          </button>
+        </div>
+        <InfluencesView darkMode={darkMode} regionData={regionData} onRead={onRead} />
+      </div>
+    );
+  }
+
   return (
     <div>
+      <div className="flex gap-2 mb-6" role="tablist" aria-label="Modo de vista de autores">
+        <button
+          role="tab"
+          aria-selected={true}
+          onClick={() => setMode('list')}
+          className={toggleClass(true)}
+        >
+          <Users size={16} />
+          Autores
+        </button>
+        <button
+          role="tab"
+          aria-selected={false}
+          onClick={() => setMode('network')}
+          className={toggleClass(false)}
+        >
+          <Share2 size={16} />
+          Red de influencias
+        </button>
+      </div>
+
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         Autores del Archivo
       </h2>
@@ -145,7 +208,9 @@ AuthorsView.propTypes = {
       regions: PropTypes.array,
       yearsRange: PropTypes.string
     })
-  ).isRequired
+  ).isRequired,
+  regionData: PropTypes.object.isRequired,
+  onRead: PropTypes.func
 };
 
 export default AuthorsView;

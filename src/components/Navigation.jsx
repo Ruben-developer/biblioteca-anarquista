@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, MapPin, User, Heart, BookOpen, Compass, Share2, Milestone, BookMarked, Mail } from 'lucide-react';
+import { Calendar, MapPin, User, Heart, BookOpen, Compass, Milestone, BookMarked } from 'lucide-react';
 import { THEME, VIEWS } from '../constants';
 
 const Navigation = ({ 
@@ -15,23 +15,22 @@ const Navigation = ({
     { view: VIEWS.LIBRARY, label: 'Biblioteca', icon: BookOpen },
     { view: VIEWS.MAP, label: `Mapa (${regionCount})`, icon: MapPin },
     { view: VIEWS.TIMELINE, label: 'Línea Temporal', icon: Calendar },
-    { view: VIEWS.THEORIES, label: 'Teorías', icon: Compass },
     { view: VIEWS.AUTHORS, label: 'Autores', icon: User },
-    { view: VIEWS.INFLUENCES, label: 'Red de Autores', icon: Share2 },
+    { view: VIEWS.THEORIES, label: 'Teorías', icon: Compass },
     { view: VIEWS.PATHS, label: 'Rutas', icon: Milestone },
     { view: VIEWS.GLOSSARY, label: 'Glosario', icon: BookMarked },
-    { view: VIEWS.CONTACT, label: 'Contacto', icon: Mail },
     { view: VIEWS.FAVORITES, label: `Favoritos (${favoriteCount})`, icon: Heart }
   ];
 
   return (
-    <nav className={`${themeClass.nav} backdrop-blur-sm border-b`}>
+    <nav aria-label="Navegación principal" className={`${themeClass.nav} backdrop-blur-sm border-b`}>
       <div className="container mx-auto px-4">
         <div className="flex gap-2 py-4 overflow-x-auto">
           {navItems.map(({ view, label, icon: Icon }) => (
             <button
               key={view}
               onClick={() => onViewChange(view)}
+              aria-current={activeView === view ? 'page' : undefined}
               className={`flex items-center gap-2 px-5 py-3 rounded-lg transition-all font-display text-sm uppercase tracking-wider whitespace-nowrap active:scale-95 ${
                 activeView === view
                   ? darkMode 

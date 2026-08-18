@@ -1,12 +1,12 @@
 import React from 'react';
-import { BarChart3, Info } from 'lucide-react';
+import { BarChart3, Mail } from 'lucide-react';
 import { THEME } from '../constants';
 
 const Header = ({ 
   darkMode, 
   onDarkModeToggle, 
-  onShowTour, 
   onShowStats,
+  onShowContact,
   stats 
 }) => {
   const themeClass = darkMode ? THEME.dark : THEME.light;
@@ -35,11 +35,12 @@ const Header = ({
               <BarChart3 size={20} />
             </button>
             <button 
-              onClick={onShowTour}
+              onClick={onShowContact}
               className={`p-2 md:p-3 rounded-lg ${themeClass.button} transition-colors`}
-              title="Información y tour"
+              title="Contacto"
+              aria-label="Contacto"
             >
-              <Info size={20} />
+              <Mail size={20} />
             </button>
             <button 
               onClick={onDarkModeToggle}

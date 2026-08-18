@@ -17,12 +17,10 @@ import AuthorsView from './AuthorsView';
 import FavoritesView from './FavoritesView';
 import LibraryView from './LibraryView';
 import TheoriesView from './TheoriesView';
-import InfluencesView from './InfluencesView';
 import ReadingPathsView from './ReadingPathsView';
 import GlossaryView from './GlossaryView';
 import ContactView from './ContactView';
 import ReaderOverlay from './ReaderOverlay';
-import TourModal from './TourModal';
 import RegionModal from './RegionModal';
 import EventModal from './EventModal';
 import ScrollTopButton from './ScrollTopButton';
@@ -32,11 +30,10 @@ const AnarchistArchive = () => {
   const { favorites, toggleFavorite } = useFavorites();
   const { showScrollTop, scrollToTop } = useScrollTop();
 
-  const [activeView, setActiveView] = useState(VIEWS.TIMELINE);
+  const [activeView, setActiveView] = useState(VIEWS.LIBRARY);
   const [selectedRegion, setSelectedRegion] = useState(null);
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [showFilters, setShowFilters] = useState(false);
-  const [showTour, setShowTour] = useState(false);
   const [showStats, setShowStats] = useState(false);
   const [readingBook, setReadingBook] = useState(null);
 
@@ -81,8 +78,8 @@ const AnarchistArchive = () => {
       <Header
         darkMode={darkMode}
         onDarkModeToggle={toggleDarkMode}
-        onShowTour={() => setShowTour(true)}
         onShowStats={() => setShowStats(!showStats)}
+        onShowContact={() => setActiveView(VIEWS.CONTACT)}
         stats={stats}
       />
 
@@ -166,14 +163,6 @@ const AnarchistArchive = () => {
             />
           )}
 
-          {activeView === VIEWS.INFLUENCES && (
-            <InfluencesView
-              darkMode={darkMode}
-              regionData={regionData}
-              onRead={setReadingBook}
-            />
-          )}
-
           {activeView === VIEWS.PATHS && (
             <ReadingPathsView
               darkMode={darkMode}
@@ -206,13 +195,6 @@ const AnarchistArchive = () => {
           </p>
         </div>
       </footer>
-
-      {showTour && (
-        <TourModal
-          darkMode={darkMode}
-          onClose={() => setShowTour(false)}
-        />
-      )}
 
       {selectedRegion && (
         <RegionModal

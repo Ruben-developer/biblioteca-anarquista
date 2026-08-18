@@ -23,10 +23,8 @@ describe('Navigation', () => {
     expect(html).toContain('Autores');
     expect(html).toContain('Favoritos (3)');
     expect(html).toContain('Teorías');
-    expect(html).toContain('Red de Autores');
     expect(html).toContain('Rutas');
     expect(html).toContain('Glosario');
-    expect(html).toContain('Contacto');
   });
 
   it('marca la vista activa y llama onViewChange al hacer clic', () => {
@@ -44,7 +42,7 @@ describe('Header', () => {
 
   it('renderiza el título y el resumen de estadísticas', () => {
     const html = renderToStaticMarkup(
-      <Header darkMode={false} onDarkModeToggle={() => {}} onShowTour={() => {}} onShowStats={() => {}} stats={stats} />
+      <Header darkMode={false} onDarkModeToggle={() => {}} onShowStats={() => {}} onShowContact={() => {}} stats={stats} />
     );
     expect(html).toContain('La Idea');
     expect(html).toContain('Archivo Histórico Anarquista');
@@ -55,7 +53,7 @@ describe('Header', () => {
 
   it('muestra el botón de tema claro cuando está en modo oscuro', () => {
     const html = renderToStaticMarkup(
-      <Header darkMode onDarkModeToggle={() => {}} onShowTour={() => {}} onShowStats={() => {}} stats={stats} />
+      <Header darkMode onDarkModeToggle={() => {}} onShowStats={() => {}} onShowContact={() => {}} stats={stats} />
     );
     expect(html).toContain('☀️');
   });

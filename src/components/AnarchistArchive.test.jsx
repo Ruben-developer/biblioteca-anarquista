@@ -19,9 +19,9 @@ describe('AnarchistArchive', () => {
     expect(html).toContain('Contacto');
   });
 
-  it('muestra eventos de la línea temporal en la vista inicial', () => {
+  it('muestra la biblioteca con su buscador en la vista inicial', () => {
     const html = renderToStaticMarkup(<AnarchistArchive />);
-    expect(html).toContain('Buscar eventos');
+    expect(html).toContain('Buscar obra');
   });
 });
 

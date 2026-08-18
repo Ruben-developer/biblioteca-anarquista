@@ -401,6 +401,8 @@ describe('AnarchistArchive interactivo (navegación completa)', () => {
 
 it('abre un evento de la línea temporal y cierra el modal con Escape', () => {
     const { container } = render(<AnarchistArchive />);
+    // La vista inicial es la Biblioteca (2026-08-17) → navegar primero a la línea temporal.
+    fireEvent.click(screen.getByRole('button', { name: /Línea Temporal/ }));
     const eventButton = screen.getAllByText(/Semana Trágica|Mártires|Revolución|huelga|Jornadas|zapatista|Seattle|Génova|15M|Rojava|Kronstadt|Comuna|Española|Primero|Chicago|Barcelona/)[0];
     fireEvent.click(eventButton);
     expect(screen.getByRole('dialog')).toBeTruthy();
@@ -421,12 +423,10 @@ it('abre un evento de la línea temporal y cierra el modal con Escape', () => {
     container.remove();
   });
 
-  it('abre y cierra el tour de bienvenida', () => {
+  it('abre el Contacto desde el sobre de la cabecera', () => {
     const { container } = render(<AnarchistArchive />);
-    fireEvent.click(screen.getByTitle('Información y tour'));
-    expect(screen.getByText('Bienvenido')).toBeTruthy();
-    fireEvent.click(screen.getByText('¡Comenzar!'));
-    expect(screen.queryByText('Bienvenido')).toBeNull();
+    fireEvent.click(screen.getByRole('button', { name: 'Contacto' }));
+    expect(screen.getAllByText(/EscrÍbenos para aportar textos|Escríbenos para aportar textos/).length).toBeGreaterThan(0);
     container.remove();
   });
 });
