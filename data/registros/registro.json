@@ -363,6 +363,15 @@
       "prs": 0,
       "ci": "verde (run 32187666117)",
       "nota": "TURNO CHAT ~17:25. Refinamiento del menu lateral: (1) el titulo La Idea vuelve a verse en smartphone (antes hidden md:block) — el Header se apila con order+w-full en dos filas: [hamburguesa+texto] [correo/tema/stats] arriba y el titulo debajo; (2) se eliminan las pildoras horizontales del nav en web — toda la navegacion pasa por el drawer de la hamburguesa (icono-logo a la izquierda del titulo), que ya existia para todos los tamanos. Navigation.jsx queda solo con el drawer. Tests: Navigation verifica drawer abierto/cerrado; los interactivos abren el menu antes de navegar. 235 tests, lint 0, build OK, CI verde. Commit 32f35cf."
+    },
+    {
+      "fecha": "2026-08-18",
+      "obras": 119,
+      "palabras": 3876,
+      "commits": 1,
+      "prs": 0,
+      "ci": "verde (run 32188611599)",
+      "nota": "TURNO CHAT ~17:37. Refinamiento del header tras feedback: el titulo La Idea estaba DEBAJO de los botones en movil y casi centrado en web. Fix: (1) movil — titulo a la primera fila (order-1 + w-full) y debajo la linea [hamburguesa+texto] [correo/tema/stats]; (2) web — hamburguesa y titulo comparten order-1 (agrupados a la izquierda por orden DOM, hamburguesa como icono-logo a la izquierda del titulo) y botones a la derecha (order-2). Solo Header.jsx. 235 tests, lint 0, build OK, CI verde. Commit 349553f."
     }
   ]
 }
