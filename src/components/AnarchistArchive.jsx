@@ -80,6 +80,7 @@ const AnarchistArchive = () => {
         onShowStats={() => setActiveView(VIEWS.STATS)}
         onShowContact={() => setActiveView(VIEWS.CONTACT)}
         stats={stats}
+        activeView={activeView}
       />
 
       <Navigation

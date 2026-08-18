@@ -42,6 +42,21 @@ export const VIEWS = {
   STATS: 'stats'
 };
 
+// Nombres legibles de cada vista (para el header y la navegación).
+export const VIEW_LABELS = {
+  [VIEWS.TIMELINE]: 'Línea Temporal',
+  [VIEWS.MAP]: 'Mapa',
+  [VIEWS.AUTHORS]: 'Autores',
+  [VIEWS.FAVORITES]: 'Favoritos',
+  [VIEWS.LIBRARY]: 'Biblioteca',
+  [VIEWS.THEORIES]: 'Teorías',
+  [VIEWS.INFLUENCES]: 'Red de Autores',
+  [VIEWS.PATHS]: 'Rutas',
+  [VIEWS.GLOSSARY]: 'Glosario',
+  [VIEWS.CONTACT]: 'Contacto',
+  [VIEWS.STATS]: 'Estadísticas'
+};
+
 // Color themes for dark and light modes
 export const THEME = {
   dark: {

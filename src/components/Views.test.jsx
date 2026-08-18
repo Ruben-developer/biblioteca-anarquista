@@ -57,6 +57,15 @@ describe('Header', () => {
     );
     expect(html).toContain('☀️');
   });
+
+  it('muestra el texto del menú elegido junto a los botones de tema y correo', () => {
+    const html = renderToStaticMarkup(
+      <Header darkMode={false} onDarkModeToggle={() => {}} onShowStats={() => {}} onShowContact={() => {}} stats={stats} activeView={VIEWS.PATHS} />
+    );
+    expect(html).toContain('Rutas');
+    expect(html).toContain('Contacto');
+    expect(html).toContain('Mostrar estadísticas');
+  });
 });
 
 describe('StatsPanel', () => {

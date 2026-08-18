@@ -1,15 +1,17 @@
 import React from 'react';
 import { BarChart3, Mail } from 'lucide-react';
-import { THEME } from '../constants';
+import { THEME, VIEW_LABELS } from '../constants';
 
 const Header = ({ 
   darkMode, 
   onDarkModeToggle, 
   onShowStats,
   onShowContact,
-  stats 
+  stats,
+  activeView
 }) => {
   const themeClass = darkMode ? THEME.dark : THEME.light;
+  const activeLabel = VIEW_LABELS[activeView];
 
   return (
     <header className={`${themeClass.header} backdrop-blur-sm border-b-2 sticky top-0 z-10 shadow-md`}>
@@ -26,7 +28,15 @@ const Header = ({
               Archivo Histórico Anarquista · {stats.texts} textos · {stats.events} eventos · {stats.regions} regiones
             </p>
           </div>
-          <div className="flex gap-2 md:gap-3">
+          <div className="flex items-center gap-2 md:gap-3">
+            {activeLabel && (
+              <span
+                className={`hidden sm:inline-block px-3 py-1.5 rounded-lg text-xs md:text-sm font-display uppercase tracking-wider ${darkMode ? 'bg-gray-800/60 text-red-400' : 'bg-amber-100/70 text-amber-900'}`}
+                aria-hidden="true"
+              >
+                {activeLabel}
+              </span>
+            )}
             <button 
               onClick={onShowStats}
               className={`p-2 md:p-3 rounded-lg ${themeClass.button} transition-colors`}

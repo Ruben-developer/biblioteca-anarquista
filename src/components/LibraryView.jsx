@@ -87,7 +87,7 @@ const LibraryView = ({
     if (!groupByRegion) setGroupByAuthor(false);
   };
 
-  const selectClass = `px-3 py-2 rounded-lg border text-sm ${
+  const selectClass = `px-3 py-2 rounded-lg border text-sm max-w-full overflow-hidden text-ellipsis whitespace-nowrap ${
     darkMode
       ? 'bg-gray-800 border-gray-700 text-gray-200'
       : 'bg-white border-amber-300 text-gray-800'
@@ -148,7 +148,7 @@ const LibraryView = ({
             ))}
           </select>
 
-          <select value={author} onChange={(e) => setAuthor(e.target.value)} className={selectClass} aria-label="Filtrar por autor">
+          <select value={author} onChange={(e) => setAuthor(e.target.value)} className={`${selectClass} max-w-[220px]`} aria-label="Filtrar por autor">
             <option value="all">Todos los autores</option>
             {availableAuthors.map((a) => (
               <option key={a} value={a}>{a}</option>
