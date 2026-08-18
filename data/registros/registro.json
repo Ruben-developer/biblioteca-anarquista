@@ -291,6 +291,15 @@
       "prs": 0,
       "ci": "verde (run 32158305470)",
       "nota": "TURNO 12:00 agente daily-dev. Inspeccion OK: descargas 113/113, regiones 17/17/17 (fuente unica regionData.js), invariante timeline==mapa 44/44 (32 eventos, 0 titulos fantasma, 0 con_texto sin textos), audit solo devDeps build-time (vite/vitest/vite-node/esbuild, fix exigiria --force y rompe Vite 4, no aplica a Pages), build sin warnings. Tarea del plan (recomendacion 3 del reporte @ux-review de navegacion 2026-08-17, ux-report-navegacion.md 2.4 - 'Movil: hamburguesa/drawer agrupado'): Navigation.jsx reescrito con dos modos responsive - < md: boton hamburguesa (Menu, aria-expanded/aria-controls) que abre drawer lateral fijo (role=dialog, aria-modal, aria-label 'Menu de navegacion') con los 8 destinos en columna (mismo estilo de pildora, aria-current en la vista activa); cierra con Escape, boton X o clic en backdrop; bloquea scroll del fondo (body.overflow hidden con cleanup). md+: pildoras en fila conservadas (colapso CSS hidden md:flex, botones en DOM para tests/aria) con overflow-x-auto como red de seguridad. 227 -> 232 tests (5 interactivos nuevos del drawer con within(drawer): cerrado por defecto, apertura con todos los destinos + aria-current, navegacion + cierre, Escape/X, backdrop), lint 0 errores, build OK, CI Pages verde (run 32158305470). Commit cfb04e8."
+    },
+    {
+      "fecha": "2026-08-18",
+      "obras": 119,
+      "palabras": 3865,
+      "commits": 1,
+      "prs": 0,
+      "ci": "verde (run 32160171135)",
+      "nota": "TURNO CHAT 12:2x. Tres modificaciones pedidas por el usuario: (1) ESTADISTICAS COMO VISTA COMPLETA: el boton del header (Mostrar estadisticas) antes superponia StatsPanel encima de la vista actual (showStats boolean); ahora navega a VIEWS.STATS (nuevo en constants) y el panel sustituye todo el contenido, igual que menus y Contacto. (2) RUTAS EN MOVIL: titulos largos desbordaban su tarjeta; ReadingPathsView: div.flex-1 min-w-0 + h3 break-words + icono flex-shrink-0. (3) BANDERAS ESTATICAS SVG: las rutas espana/rusia-ucrania usaban emoji de bandera (Espanol/ucraniano) que en Windows/Chrome se ven como las letras ES/UA; nuevo PathIcon.jsx dibuja ambas banderas como SVG inline con colores exactos (Espana #aa151b/#f1bf00 1:2:1, Ucrania #0057b7/#ffd700 1:1), identicas en todos los dispositivos; el resto de rutas conserva emojis de simbolos (si se ven igual en todas las plataformas). Tests +3 (PathIcon SVG/fallback + vista stats completa en Interactions). 232 -> 235 tests, lint 0 errores, build OK, CI Pages verde (run 32160171135), produccion verificado (laidea.antarquia.cl 200). Commit 6a77bbe."
     }
   ]
 }
