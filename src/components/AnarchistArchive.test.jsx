@@ -9,7 +9,7 @@ afterEach(cleanup);
 describe('AnarchistArchive', () => {
   it('renderiza la app completa con cabecera, navegación y vista por defecto (línea temporal)', () => {
     const html = renderToStaticMarkup(<AnarchistArchive />);
-    expect(html).toContain('Antarquia');
+    expect(html).toContain('La Idea');
     expect(html).toContain('Archivo Histórico Anarquista');
     expect(html).toContain('Línea Temporal');
     expect(html).toContain('Mapa');

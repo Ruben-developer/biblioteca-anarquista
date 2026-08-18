@@ -48,7 +48,7 @@ const ContactView = ({ darkMode }) => {
           nombre_o_apodo: name.trim() || 'Anónimo',
           correo: email.trim() || 'no proporcionado',
           mensaje: message.trim(),
-          _subject: 'Contacto desde Antarquia',
+          _subject: 'Contacto desde La Idea',
           _template: 'table',
           _captcha: 'false'
         })

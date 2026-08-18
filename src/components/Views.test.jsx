@@ -46,7 +46,7 @@ describe('Header', () => {
     const html = renderToStaticMarkup(
       <Header darkMode={false} onDarkModeToggle={() => {}} onShowTour={() => {}} onShowStats={() => {}} stats={stats} />
     );
-    expect(html).toContain('Antarquia');
+    expect(html).toContain('La Idea');
     expect(html).toContain('Archivo Histórico Anarquista');
     expect(html).toContain('114 textos');
     expect(html).toContain('16 eventos');

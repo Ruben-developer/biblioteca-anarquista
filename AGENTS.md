@@ -3,7 +3,7 @@
 Guía para agentes autónomos (y humanos) que iteran sobre este repo.
 
 ## Qué es esto
-**Archivo Histórico Anarquista** — app interactiva del movimiento anarquista:
+**La Idea — Archivo Histórico Anarquista** — app interactiva del movimiento anarquista:
 línea temporal (1840-1968), mapa de regiones con textos, biografías, favoritos,
 modo oscuro/claro, filtros y estadísticas. Deploy en GitHub Pages.
 
