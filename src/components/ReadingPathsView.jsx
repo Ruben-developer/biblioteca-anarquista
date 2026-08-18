@@ -65,10 +65,10 @@ const ReadingPathsView = ({ darkMode, regionData, onRead = () => {} }) => {
                           }`}>
                             {idx + 1}
                           </span>
-                          <div className={`flex-1 rounded-lg border p-3 ${darkMode ? 'bg-gray-800/60 border-gray-700/50' : 'bg-white/80 border-amber-300'}`}>
+                          <div className={`flex-1 min-w-0 rounded-lg border p-3 ${darkMode ? 'bg-gray-800/60 border-gray-700/50' : 'bg-white/80 border-amber-300'}`}>
                             <div className="flex items-center justify-between gap-2">
                               <div className="min-w-0">
-                                <p className={`text-sm font-medium truncate ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
+                                <p className={`text-sm font-medium break-words ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
                                   {book.title}
                                 </p>
                                 <p className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
