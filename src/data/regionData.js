@@ -54,7 +54,7 @@ export const regionData = {  "España": {
     iso: "us",
     books: [
       { title: "Anarquismo", author: "Emma Goldman", year: 1931, category: "biografia", rating: 4.9, filename: "anarquismo/f13514272_goldman_anarquismo.pdf" },
-      { title: "Los Mártires de Chicago", year: 1886, category: "historia", rating: 4.8 },
+      { title: "Los Mártires de Chicago", year: 1886, category: "historia", rating: 4.8, filename: "anarquismo/f_martires_de_chicago.pdf" },
       { title: "La pasión de Sacco y Vanzetti", author: "Howard Fast", year: 1953, category: "historia", rating: 4.7, summary: "Reconstrucción novelada del célebre caso judicial de los anarquistas italianos ejecutados en 1927.", filename: "anarquismo/f14043016_Microsoft_Word_Fast_Howard_La_Pasi_363n_de_Sacco_y_Vanzetti_doc.pdf" },
       { title: "Fraternalmente, Emma", author: "Emma Goldman", year: 1920, category: "biografia", rating: 4.6, summary: "Cartas y escritos de Emma Goldman que retratan su activismo, exilio y pensamiento libertario.", filename: "anarquismo/f76295256_Fraternalmente_Emma.pdf" },
       { title: "¿Anarquismo o barbarie? Historia, civilización y progreso", author: "Murray Bookchin", year: 1990, category: "teoria", rating: 4.6, summary: "El fundador del municipalismo libertario examina el desarrollo técnico y las ideologías en crisis.", filename: "anarquismo/f8608808_file_F_Ebooks_B_Bookchin_20Murray_Historia_20civilizacion_20y_20progreso_murray01_html.pdf" },
@@ -69,7 +69,7 @@ export const regionData = {  "España": {
     iso: "it",
     books: [
       { title: "La Anarquía y el Método del Anarquismo", author: "Errico Malatesta", year: 1891, category: "teoria", rating: 4.9, filename: "anarquismo/f39014120_La_anarqu_a_y_el_m_todo_del_anarquismo_Errico_Malatesta.pdf" },
-      { title: "En el café", author: "Errico Malatesta", year: 1922, category: "dialogo", rating: 4.8 },
+      { title: "En el café", author: "Errico Malatesta", year: 1922, category: "dialogo", rating: 4.8, filename: "anarquismo/f_malatesta_en_el_cafe.pdf" },
       { title: "Crítica revolucionaria", author: "Luigi Fabbri", year: 1923, category: "teoria", rating: 4.6, summary: "El teórico anarquista italiano analiza la revolución rusa, el bolchevismo y el porvenir del anarquismo.", filename: "anarquismo/f3194656_Cr_tica_revolucionaria_Luigi_Fabbri.pdf" },
       { title: "La Revolución Rusa y el anarquismo", author: "Luigi Fabbri", year: 1922, category: "teoria", rating: 4.5, summary: "Respuesta de Fabbri al texto de Bujarín sobre la postura oficial del bolchevismo hacia el anarquismo.", filename: "anarquismo/f2904104_fabbri.pdf" },
       { title: "La banda del Matese", author: "Colectivo", year: 1877, category: "historia", rating: 4.5, summary: "La insurrección fallida de la banda del Matese liderada por Carlo Cafiero y Errico Malatesta.", filename: "otros/f27973528_Microsoft_Word_Banda_del_Matese.pdf" },
@@ -82,7 +82,7 @@ export const regionData = {  "España": {
     iso: "mx",
     books: [
       { title: "Regeneración", author: "Flores Magón", year: 1906, category: "periodismo", rating: 4.7 },
-      { title: "Tierra y Libertad", year: 1910, category: "manifiesto", rating: 4.8 },
+      { title: "Tierra y Libertad", author: "Ricardo Flores Magón", year: 1916, category: "manifiesto", rating: 4.8, filename: "anarquismo/f_flores_magon_tierra_y_libertad.pdf" },
       { title: "Artículos de combate", author: "Práxedis G. Guerrero", year: 1910, category: "periodismo", rating: 4.7, summary: "Escritos del periodista y organizador magonista Práxedis Guerrero, muerto en combate en 1910.", filename: "otros/f8896648_Microsoft_Word_Art_culos_de_combate_Pr_xedis_G_Guerrero.pdf" },
       { title: "La anarquía a través de los tiempos", author: "Max Nettlau", year: 1970, category: "historia", rating: 4.6, summary: "Panorama histórico del anarquismo mundial por el gran historiador del movimiento, editado en México.", filename: "anarquismo/f6901576_LA_ANARQU_A_A_TRAVES_DE_LOS_TIEMPOS.pdf" },
       { title: "La bala y la escuela", author: "Los Discursos Peligrosos", year: 2009, category: "historia", rating: 4.5, summary: "Ensayo sobre cómo la educación oficial complementa la represión en los pueblos indígenas de México.", filename: "anarquismo/f4209352_bala_y_escuela.pdf" },
@@ -93,7 +93,7 @@ export const regionData = {  "España": {
     iso: "ar",
     books: [
       { title: "La FORA", author: "Diego Abad de Santillán", year: 1933, category: "historia", rating: 4.6, filename: "anarquismo/f8908040_FORA_Final_pmd.pdf" },
-      { title: "Severino Di Giovanni", author: "Osvaldo Bayer", year: 1970, category: "biografia", rating: 4.8 },
+      { title: "Severino Di Giovanni", author: "Osvaldo Bayer", year: 1970, category: "biografia", rating: 4.8, filename: "anarquismo/f_bayer_severino_di_giovanni.pdf" },
       { title: "Utopías antiguas y modernas", author: "Ángel J. Cappelletti", year: 1998, category: "teoria", rating: 4.6, summary: "El filósofo argentino recorre las utopías de occidente y su vínculo con el pensamiento libertario.", filename: "anarquismo/f2930408_Utop_as_antiguas_y_modernas_ngel_J_Cappelletti.pdf" },
       { title: "La educación libertaria en la Argentina y en México (1861-1945)", author: "Martín Acri y María Cácerez", year: 2011, category: "historia", rating: 4.5, summary: "Estudio comparado de las experiencias de escuela moderna racionalista en Argentina y México.", filename: "anarquismo/f8373584_La_Educacion_Libertaria_en_Mexico_y_Argentina_notas_final_2_indd.pdf" },
       { title: "Los anarquistas expropiadores", author: "Osvaldo Bayer", year: 2013, category: "historia", rating: 4.6, summary: "Simón Radowitzky y otros ensayos sobre la violencia expropiadora del anarquismo en la Argentina.", filename: "anarquismo/f13634080.pdf" },
