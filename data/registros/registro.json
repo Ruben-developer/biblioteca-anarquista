@@ -435,6 +435,15 @@
       "prs": 0,
       "ci": "verde (run 32281220285)",
       "nota": "Importacion masiva: 142 obras restantes de listos_para_subir importadas (131->273) por 4 content-importer en paralelo (1 saltada: f4218248 Mujeres Libres dup). Invariante timeline==mapa 111/111 (0 huerfanos): timelineEvents 35->58 (23 eventos nuevos + 12 ampliados, Comuna de Paris pasa a con_texto). Descargas 271/271 OK. 246 tests, lint 0, build OK, prod index-0cbe419d.js. Commit 51e9480."
+    },
+    {
+      "fecha": "2026-08-19",
+      "obras": 293,
+      "palabras": 3876,
+      "commits": 1,
+      "prs": 0,
+      "ci": "verde (run 32286106277)",
+      "nota": "Nuevo material del usuario (sin_clasificar/historia-anarquista, 28 PDFs por pais): 20 obras historicas importadas + 13 regiones nuevas (Brasil, Cuba, Paraguay, Peru, Puerto Rico, Uruguay, Grecia, Polonia, Portugal, Ucrania, Armenia, China, Egipto). 273->293 obras, 30 regiones. Reubicacion de 9 obras antes aproximadas + fix categoria Egipto-Tunez (teoria->historia). Invariante timeline==mapa 132/132: 58->70 eventos (11 nuevos + 4 ampliados). 246 tests, lint 0, check-downloads 291/291 OK, prod index-a7a53ec2.js. Commit f75723a. Pendiente: 48 PDFs Crimental (~44 nuevos, teoria)."
     }
   ]
 }
