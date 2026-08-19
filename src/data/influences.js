@@ -20,7 +20,15 @@ export const influenceNodes = [
   { id: 'makhno', name: 'Makhno', years: '1888–1934', region: 'Ucrania', authorKey: 'Néstor Makhno', x: 78, y: 64, bio: 'El ejército insurrecto de Ucrania; origen del plataformismo.' },
   { id: 'bookchin', name: 'Bookchin', years: '1921–2006', region: 'EE. UU.', authorKey: 'Murray Bookchin', x: 78, y: 26, bio: 'Ecología social y municipalismo libertario: la crisis ecológica como crisis social.' },
   { id: 'graeber', name: 'Graeber', years: '1961–2020', region: 'EE. UU.', authorKey: 'David Graeber', x: 92, y: 38, bio: 'Antropólogo anarquista: la etnografía como inspiración de organización libre.' },
-  { id: 'gelderloos', name: 'Gelderloos', years: '1982–', region: 'EE. UU.', authorKey: 'Peter Gelderloos', x: 92, y: 64, bio: 'Autor contemporáneo sobre anarquismo, ecología y acción directa.' }
+  { id: 'gelderloos', name: 'Gelderloos', years: '1982–', region: 'EE. UU.', authorKey: 'Peter Gelderloos', x: 92, y: 64, bio: 'Autor contemporáneo sobre anarquismo, ecología y acción directa.' },
+  { id: 'tolstoi', name: 'Tolstói', years: '1828–1910', region: 'Rusia', authorKey: 'León Tolstói', x: 7, y: 10, bio: 'Anarquista cristiano: la no resistencia al mal y el pacifismo como revolución.' },
+  { id: 'nett', name: 'Nettlau', years: '1865–1944', region: 'Austria', authorKey: 'Max Nettlau', x: 24, y: 50, bio: 'El cronista del anarquismo: documentó desde dentro toda la historia del movimiento.' },
+  { id: 'abad', name: 'Abad de Santillán', years: '1897–1983', region: 'Argentina', authorKey: 'Diego Abad de Santillán', x: 24, y: 88, bio: 'Militante y editor: la FORA, Bakunin en español y el anarquismo organizado latinoamericano.' },
+  { id: 'fabbri', name: 'Fabbri', years: '1877–1935', region: 'Italia', authorKey: 'Luigi Fabbri', x: 42, y: 10, bio: 'Discípulo de Malatesta y crítico del bolchevismo desde el anarquismo.' },
+  { id: 'guerin', name: 'Guérin', years: '1904–1988', region: 'Francia', authorKey: 'Daniel Guérin', x: 42, y: 62, bio: 'Anarquista y escritor que unió anarquismo, autogestión y liberación sexual.' },
+  { id: 'read', name: 'Herbert Read', years: '1893–1968', region: 'Inglaterra', authorKey: 'Herbert Read', x: 78, y: 44, bio: 'Crítico de arte anarquista: la estética como política de la libertad.' },
+  { id: 'floresmagon', name: 'Flores Magón', years: '1874–1922', region: 'México', authorKey: 'Ricardo Flores Magón', x: 78, y: 82, bio: 'El alma del anarquismo mexicano: Tierra y Libertad y la revolución magonista.' },
+  { id: 'guerrero', name: 'Práxedis Guerrero', years: '1882–1910', region: 'México', authorKey: 'Práxedis G. Guerrero', x: 92, y: 84, bio: 'Periodista y guerrillero magonista: propaganda por el hecho en la frontera.' }
 ];
 
 // Aristas: [desde, hacia]. El grafo es dirigido (influencia →).
@@ -50,5 +58,14 @@ export const influenceEdges = [
   ['goldman', 'gelderloos'],
   ['ferrer', 'makhno'],
   ['bookchin', 'graeber'],
-  ['bookchin', 'gelderloos']
+  ['bookchin', 'gelderloos'],
+  ['proudhon', 'tolstoi'],
+  ['kropotkin', 'nett'],
+  ['reclus', 'nett'],
+  ['malatesta', 'fabbri'],
+  ['malatesta', 'abad'],
+  ['kropotkin', 'read'],
+  ['kropotkin', 'floresmagon'],
+  ['floresmagon', 'guerrero'],
+  ['proudhon', 'guerin']
 ];
