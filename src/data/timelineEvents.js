@@ -149,7 +149,7 @@ export const timelineEvents = [
     image: "⚓",
     quote: "Poder a los soviets",
     author: "Marineros",
-    relatedTexts: ["Kronstadt 1921", "La comuna de Kronstadt", "La Revolución Rusa y el anarquismo", "Historia del Movimiento Makhnovista", "La Makhnovschina. Un movimiento libertario bajo fuego en Ucrania (1918-1921)"]
+    relatedTexts: ["Kronstadt 1921", "La comuna de Kronstadt", "La Revolución Rusa y el anarquismo", "Historia del Movimiento Makhnovista", "La Makhnovschina. Un movimiento libertario bajo fuego en Ucrania (1918-1921)", "Los anarquistas y los soviets", "La revolución desconocida"]
   },
   {
     year: 1927,
@@ -215,7 +215,8 @@ export const timelineEvents = [
       "La propaganda por los hechos en el movimiento anarquista chileno (1890-1910)",
       "Anarquismo y violencia popular en Chile (1898-1927)",
       "Destruir para construir: violencia y acción directa en la corriente anarquista chilena (1890-1914)",
-      "Wobblie. Hombres, ideas y problemas del anarquismo en los años veinte"
+      "Wobblie. Hombres, ideas y problemas del anarquismo en los años veinte",
+      "Sin Dios ni patrones. Historia del anarquismo en la región chilena (1890-1990)"
     ]
   },
   {
@@ -437,5 +438,44 @@ export const timelineEvents = [
     quote: "La vida libre de las mujeres y los pueblos",
     author: "Confederalismo democrático",
     relatedTexts: ["El experimento del Kurdistán oeste (Kurdistán sirio)"]
+  },
+  {
+    year: 1907,
+    decade: '1900s',
+    type: 'con_texto',
+    title: "La masacre de la Escuela Santa María de Iquique",
+    description: "Más de dos mil obreros del salitre son asesinados por el ejército en plena huelga (21 de diciembre de 1907).",
+    region: "Chile",
+    category: "represion",
+    image: "🩸",
+    quote: "¡Viva la huelga general!",
+    author: "Obreros del salitre",
+    relatedTexts: ["La masacre de la Escuela Santa María de Iquique"]
+  },
+  {
+    year: 1921,
+    decade: '1920s',
+    type: 'con_texto',
+    title: "Las huelgas de la Patagonia Rebelde",
+    description: "La huelga rural más extensa de Sudamérica (1920-22) y las masacres de peones por el ejército argentino.",
+    region: "Argentina",
+    category: "represion",
+    image: "🏜️",
+    quote: "Patria o tumba… ¡Viva la anarquía!",
+    author: "Peones patagónicos",
+    relatedTexts: ["La Patagonia Rebelde"]
+  },
+  {
+    year: 1936,
+    decade: '1930s',
+    type: 'con_texto',
+    title: "Las milicianas de la Guerra Civil",
+    description: "Las milicianas de la Guerra Civil española (CNT/POUM): su papel en las milicias populares, su perfil social y su imagen.",
+    region: "España",
+    category: "movimiento",
+    image: "✊",
+    quote: "Ni madres, ni esposas: compañeras de lucha",
+    author: "Milicianas",
+    relatedTexts: ["La miliciana en la Guerra Civil: realidad e imagen"]
   }
 ];
