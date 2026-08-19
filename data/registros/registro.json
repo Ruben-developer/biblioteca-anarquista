@@ -426,6 +426,15 @@
       "prs": 0,
       "ci": "verde (run 32278013164)",
       "nota": "Lote 1 de importacion desde listos_para_subir: 12 obras nuevas (119->131) - 6 historia (miliciana Guerra Civil, anarquistas y los soviets, revolucion desconocida, Sin Dios ni patrones, Patagonia Rebelde, masacre Santa Maria de Iquique) y 6 teoria (Kropotkin, Most, Bakunin, Hakim Bey, Gelderloos, Kornegger). 3 eventos de timeline nuevos + relacionados ampliados. Invariante timeline==mapa 50/50. Descargas 129/129 OK. 35 eventos. 246 tests, lint 0, build OK. Commit 5c229cf."
+    },
+    {
+      "fecha": "2026-08-19",
+      "obras": 273,
+      "palabras": 3876,
+      "commits": 1,
+      "prs": 0,
+      "ci": "verde (run 32281220285)",
+      "nota": "Importacion masiva: 142 obras restantes de listos_para_subir importadas (131->273) por 4 content-importer en paralelo (1 saltada: f4218248 Mujeres Libres dup). Invariante timeline==mapa 111/111 (0 huerfanos): timelineEvents 35->58 (23 eventos nuevos + 12 ampliados, Comuna de Paris pasa a con_texto). Descargas 271/271 OK. 246 tests, lint 0, build OK, prod index-0cbe419d.js. Commit 51e9480."
     }
   ]
 }
