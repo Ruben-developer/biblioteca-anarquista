@@ -408,6 +408,15 @@
       "prs": 0,
       "ci": "verde (run 32267542143)",
       "nota": "Favicon: el usuario dejo su logo anarquista (simbolo A clasico, negro sobre transparente, 512x512) en /home/fdr/Imagenes/logo-a.png. Se copio a public/favicon.png y index.html enlaza favicon.png en vez del SVG dibujado a mano (favicon.svg eliminado). Verificado en produccion: favicon.png HTTP 200. 246 tests, lint 0, build OK, CI verde. Commit f554f88."
+    },
+    {
+      "fecha": "2026-08-19",
+      "obras": 119,
+      "palabras": 3876,
+      "commits": 0,
+      "prs": 0,
+      "ci": "verde (sin cambios en repo)",
+      "nota": "Auditoria y organizacion de los 288 PDFs del servidor (turno de chat): 208 analizados con agente (68 historia + 87 teoria listos, 15 revisar, 38 descartados) + 80 pre-clasificados (36 duplicados + 44 no anarquistas). Todo consolidado en PDFs/listos_para_subir/{Historia,Teoria,Revisar,Descartados} con INVENTARIO.md (668 lineas). 0 duplicados MD5. Sin commits (solo material fuera del repo)."
     }
   ]
 }
