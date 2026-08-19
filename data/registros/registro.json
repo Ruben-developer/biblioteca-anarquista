@@ -399,6 +399,15 @@
       "prs": 0,
       "ci": "verde (run 32265659828)",
       "nota": "Red de Autores ampliada: el catalogo tiene 77 autores y la red solo 18. Se investigo con un agente (getAllAuthors + influencias historicas reales) y se anadieron 8 pensadores nuevos con obra en el archivo: Tolstoi, Nettlau, Abad de Santillan, Fabbri, Guerin, Herbert Read, Flores Magon y Praxedis Guerrero (authorKey exacto verificado con node). 9 aristas nuevas documentadas (Proudhon->Tolstoi/Guerin, Kropotkin->Nettlau/Read/FloresMagon, Reclus->Nettlau, Malatesta->Fabbri/Abad, FloresMagon->Guerrero). Grafo: 26 nodos, 35 aristas, posiciones sin colision. 235->246 tests, lint 0, build OK, CI verde. Commit b60397f. Pendiente: favicon con logo del usuario (imagen /home/nbk no accesible)."
+    },
+    {
+      "fecha": "2026-08-19",
+      "obras": 119,
+      "palabras": 3876,
+      "commits": 1,
+      "prs": 0,
+      "ci": "verde (run 32267542143)",
+      "nota": "Favicon: el usuario dejo su logo anarquista (simbolo A clasico, negro sobre transparente, 512x512) en /home/fdr/Imagenes/logo-a.png. Se copio a public/favicon.png y index.html enlaza favicon.png en vez del SVG dibujado a mano (favicon.svg eliminado). Verificado en produccion: favicon.png HTTP 200. 246 tests, lint 0, build OK, CI verde. Commit f554f88."
     }
   ]
 }
