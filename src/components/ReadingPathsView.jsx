@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { BookOpen, ChevronDown, ChevronUp, Milestone } from 'lucide-react';
+import { BookOpen, ChevronDown, ChevronUp, Milestone, Library } from 'lucide-react';
 import { THEME } from '../constants';
 import { readingPaths } from '../data/readingPaths';
 import { findBookByTitle } from '../utils/library';
 
-const ReadingPathsView = ({ darkMode, regionData, onRead = () => {} }) => {
+const ReadingPathsView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary = () => {} }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
   const [openId, setOpenId] = useState(readingPaths[0]?.id || null);
 
@@ -75,17 +75,29 @@ const ReadingPathsView = ({ darkMode, regionData, onRead = () => {} }) => {
                                   {book.author} · {book.year || '—'}
                                 </p>
                               </div>
-                              {book.filename && (
+                              <span className="flex items-center gap-1.5 flex-shrink-0">
+                                {book.filename && (
+                                  <button
+                                    onClick={() => onRead(book)}
+                                    className={`flex-shrink-0 flex items-center gap-1 px-2 py-1 rounded text-xs font-medium transition-colors ${
+                                      darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
+                                    }`}
+                                  >
+                                    <BookOpen size={12} />
+                                    Leer
+                                  </button>
+                                )}
                                 <button
-                                  onClick={() => onRead(book)}
+                                  onClick={() => onOpenLibrary({ searchTerm: book.title })}
                                   className={`flex-shrink-0 flex items-center gap-1 px-2 py-1 rounded text-xs font-medium transition-colors ${
-                                    darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
+                                    darkMode ? 'bg-gray-700 text-gray-200 hover:bg-gray-600' : 'bg-white border border-amber-300 text-amber-800 hover:bg-amber-100'
                                   }`}
+                                  title={`Ver "${book.title}" en el catálogo`}
                                 >
-                                  <BookOpen size={12} />
-                                  Leer
+                                  <Library size={12} />
+                                  En el catálogo
                                 </button>
-                              )}
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -98,6 +110,17 @@ const ReadingPathsView = ({ darkMode, regionData, onRead = () => {} }) => {
           );
         })}
       </div>
+
+      <button
+        type="button"
+        onClick={() => onOpenLibrary({})}
+        className={`mt-4 flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+          darkMode ? 'bg-gray-800 border border-gray-700 text-gray-200 hover:bg-gray-700' : 'bg-white border border-amber-300 text-amber-800 hover:bg-amber-100'
+        }`}
+      >
+        <Library size={16} />
+        Ver todas las obras del catálogo
+      </button>
     </div>
   );
 };
@@ -105,7 +128,8 @@ const ReadingPathsView = ({ darkMode, regionData, onRead = () => {} }) => {
 ReadingPathsView.propTypes = {
   darkMode: PropTypes.bool.isRequired,
   regionData: PropTypes.object.isRequired,
-  onRead: PropTypes.func
+  onRead: PropTypes.func,
+  onOpenLibrary: PropTypes.func
 };
 
 export default ReadingPathsView;

@@ -7,7 +7,6 @@ const Navigation = ({
   onViewChange,
   darkMode,
   favoriteCount,
-  regionCount,
   menuOpen,
   onMenuClose
 }) => {
@@ -35,7 +34,7 @@ const Navigation = ({
 
   const navItems = [
     { view: VIEWS.LIBRARY, label: 'Biblioteca', icon: BookOpen },
-    { view: VIEWS.MAP, label: `Mapa (${regionCount})`, icon: MapPin },
+    { view: VIEWS.MAP, label: 'Mapa', icon: MapPin },
     { view: VIEWS.TIMELINE, label: 'Línea Temporal', icon: Calendar },
     { view: VIEWS.AUTHORS, label: 'Autores', icon: User },
     { view: VIEWS.THEORIES, label: 'Teorías', icon: Compass },

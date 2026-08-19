@@ -1,8 +1,20 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Search, BookOpen, Heart, X, CalendarClock, Users, MapPin } from 'lucide-react';
 import { THEME, CATEGORIES, REGIONS } from '../constants';
 import { getAllBooks, getAllAuthors, filterBooks, sortBooks, getDecadeFromYear, getDailyFeaturedBook, getBookEvents, groupBooksByAuthor, groupBooksByRegion } from '../utils/library';
 import FeaturedBook from './FeaturedBook';
+
+// Valores por defecto de los filtros (también usados por "Limpiar filtros").
+const DEFAULT_FILTERS = {
+  searchTerm: '',
+  category: 'all',
+  region: 'all',
+  decade: 'all',
+  author: 'all',
+  availability: 'all',
+  type: 'all',
+  favoritesOnly: false
+};
 
 const DECADE_OPTIONS = ['all', '1840s', '1850s', '1860s', '1870s', '1880s', '1890s', '1900s', '1910s', '1920s', '1930s', '1940s', '1950s', '1960s'];
 
@@ -13,21 +25,40 @@ const LibraryView = ({
   onToggleFavorite,
   timelineEvents = [],
   onOpenEvent = () => {},
-  onRead = () => {}
+  onRead = () => {},
+  initialFilters = null
 }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
 
-  const [searchTerm, setSearchTerm] = useState('');
-  const [category, setCategory] = useState('all');
-  const [region, setRegion] = useState('all');
-  const [decade, setDecade] = useState('all');
-  const [author, setAuthor] = useState('all');
-  const [availability, setAvailability] = useState('all');
-  const [type, setType] = useState('all');
-  const [favoritesOnly, setFavoritesOnly] = useState(false);
+  // Filtros iniciales (para cross-links desde Teorías/Rutas/Glosario): si llega
+  // el objeto `initialFilters`, la biblioteca nace con esos filtros aplicados.
+  const seed = { ...DEFAULT_FILTERS, ...(initialFilters || {}) };
+
+  const [searchTerm, setSearchTerm] = useState(seed.searchTerm);
+  const [category, setCategory] = useState(seed.category);
+  const [region, setRegion] = useState(seed.region);
+  const [decade, setDecade] = useState(seed.decade);
+  const [author, setAuthor] = useState(seed.author);
+  const [availability, setAvailability] = useState(seed.availability);
+  const [type, setType] = useState(seed.type);
+  const [favoritesOnly, setFavoritesOnly] = useState(seed.favoritesOnly);
   const [sort, setSort] = useState('rating');
   const [groupByAuthor, setGroupByAuthor] = useState(false);
   const [groupByRegion, setGroupByRegion] = useState(false);
+
+  // Cuando un cross-link cambia `initialFilters` sin desmontar la vista (p. ej.
+  // se navega otra vez a Biblioteca desde el nav), se resincronizan los filtros.
+  // Un valor `null` restaura los valores por defecto (catálogo completo).
+  useEffect(() => {
+    setSearchTerm(initialFilters?.searchTerm ?? DEFAULT_FILTERS.searchTerm);
+    setCategory(initialFilters?.category ?? DEFAULT_FILTERS.category);
+    setRegion(initialFilters?.region ?? DEFAULT_FILTERS.region);
+    setDecade(initialFilters?.decade ?? DEFAULT_FILTERS.decade);
+    setAuthor(initialFilters?.author ?? DEFAULT_FILTERS.author);
+    setAvailability(initialFilters?.availability ?? DEFAULT_FILTERS.availability);
+    setType(initialFilters?.type ?? DEFAULT_FILTERS.type);
+    setFavoritesOnly(initialFilters?.favoritesOnly ?? DEFAULT_FILTERS.favoritesOnly);
+  }, [initialFilters]);
 
   const allBooks = useMemo(() => getAllBooks(regionData), [regionData]);
 
@@ -63,14 +94,14 @@ const LibraryView = ({
   );
 
   const clearFilters = () => {
-    setSearchTerm('');
-    setCategory('all');
-    setRegion('all');
-    setDecade('all');
-    setAuthor('all');
-    setAvailability('all');
-    setType('all');
-    setFavoritesOnly(false);
+    setSearchTerm(DEFAULT_FILTERS.searchTerm);
+    setCategory(DEFAULT_FILTERS.category);
+    setRegion(DEFAULT_FILTERS.region);
+    setDecade(DEFAULT_FILTERS.decade);
+    setAuthor(DEFAULT_FILTERS.author);
+    setAvailability(DEFAULT_FILTERS.availability);
+    setType(DEFAULT_FILTERS.type);
+    setFavoritesOnly(DEFAULT_FILTERS.favoritesOnly);
   };
 
   // Vista agrupada por autor: agrupa los libros YA filtrados y ordenados.

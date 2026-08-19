@@ -36,6 +36,7 @@ const AnarchistArchive = () => {
   const [showFilters, setShowFilters] = useState(false);
   const [readingBook, setReadingBook] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [libraryInitialFilters, setLibraryInitialFilters] = useState(null);
 
   const [filters, setFilters] = useState({
     searchTerm: '',
@@ -69,6 +70,20 @@ const AnarchistArchive = () => {
     setSelectedEvent(event);
   };
 
+  // Cross-links desde Teorías/Rutas/Glosario → Biblioteca con filtros
+  // precargados (cambio 5 del reporte @ux-review de navegación, 2026-08-17).
+  const openLibraryWithFilters = (filters) => {
+    setLibraryInitialFilters(filters || null);
+    setActiveView(VIEWS.LIBRARY);
+  };
+
+  // Navegación general (nav/header): al ir a Biblioteca se limpian los filtros
+  // precargados por cross-links, para que el menú siempre abra el catálogo completo.
+  const handleViewChange = (view) => {
+    if (view === VIEWS.LIBRARY) setLibraryInitialFilters(null);
+    setActiveView(view);
+  };
+
   const bgClass = darkMode
     ? 'bg-gradient-to-br from-red-950 via-black to-gray-900 text-gray-100'
     : 'bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 text-gray-800';
@@ -88,10 +103,9 @@ const AnarchistArchive = () => {
 
       <Navigation
         activeView={activeView}
-        onViewChange={setActiveView}
+        onViewChange={handleViewChange}
         darkMode={darkMode}
         favoriteCount={favorites.length}
-        regionCount={Object.keys(regionData).length}
         menuOpen={menuOpen}
         onMenuClose={() => setMenuOpen(false)}
       />
@@ -149,6 +163,7 @@ const AnarchistArchive = () => {
               timelineEvents={timelineEvents}
               onOpenEvent={openEventFromLibrary}
               onRead={setReadingBook}
+              initialFilters={libraryInitialFilters}
             />
           )}
 
@@ -165,6 +180,7 @@ const AnarchistArchive = () => {
               darkMode={darkMode}
               regionData={regionData}
               onRead={setReadingBook}
+              onOpenLibrary={openLibraryWithFilters}
             />
           )}
 
@@ -173,6 +189,7 @@ const AnarchistArchive = () => {
               darkMode={darkMode}
               regionData={regionData}
               onRead={setReadingBook}
+              onOpenLibrary={openLibraryWithFilters}
             />
           )}
 
@@ -181,6 +198,7 @@ const AnarchistArchive = () => {
               darkMode={darkMode}
               regionData={regionData}
               onRead={setReadingBook}
+              onOpenLibrary={openLibraryWithFilters}
             />
           )}
 

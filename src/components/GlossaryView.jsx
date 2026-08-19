@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { BookOpen, Search, BookMarked } from 'lucide-react';
+import { BookOpen, Search, BookMarked, Library } from 'lucide-react';
 import { THEME } from '../constants';
 import { glossaryTerms } from '../data/glossary';
 import { findBookByTitle } from '../utils/library';
 
-const GlossaryView = ({ darkMode, regionData, onRead = () => {} }) => {
+const GlossaryView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary = () => {} }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
   const [query, setQuery] = useState('');
 
@@ -77,18 +77,30 @@ const GlossaryView = ({ darkMode, regionData, onRead = () => {} }) => {
                           <span className={`text-xs ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                             {book.title}
                           </span>
-                          {book.filename && (
+                          <span className="flex items-center gap-1.5 flex-shrink-0">
+                            {book.filename && (
+                              <button
+                                onClick={() => onRead(book)}
+                                className={`flex-shrink-0 flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium transition-colors ${
+                                  darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
+                                }`}
+                                title={`Leer ${book.title}`}
+                              >
+                                <BookOpen size={11} />
+                                Leer
+                              </button>
+                            )}
                             <button
-                              onClick={() => onRead(book)}
+                              onClick={() => onOpenLibrary({ searchTerm: book.title })}
                               className={`flex-shrink-0 flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium transition-colors ${
-                                darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
+                                darkMode ? 'bg-gray-700 text-gray-200 hover:bg-gray-600' : 'bg-white border border-amber-300 text-amber-800 hover:bg-amber-100'
                               }`}
-                              title={`Leer ${book.title}`}
+                              title={`Ver "${book.title}" en el catálogo`}
                             >
-                              <BookOpen size={11} />
-                              Leer
+                              <Library size={11} />
+                              En el catálogo
                             </button>
-                          )}
+                          </span>
                         </div>
                       ))}
                     </div>
@@ -99,6 +111,17 @@ const GlossaryView = ({ darkMode, regionData, onRead = () => {} }) => {
           })}
         </div>
       )}
+
+      <button
+        type="button"
+        onClick={() => onOpenLibrary({})}
+        className={`mt-4 flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+          darkMode ? 'bg-gray-800 border border-gray-700 text-gray-200 hover:bg-gray-700' : 'bg-white border border-amber-300 text-amber-800 hover:bg-amber-100'
+        }`}
+      >
+        <Library size={16} />
+        Ver todas las obras del catálogo
+      </button>
     </div>
   );
 };
@@ -106,7 +129,8 @@ const GlossaryView = ({ darkMode, regionData, onRead = () => {} }) => {
 GlossaryView.propTypes = {
   darkMode: PropTypes.bool.isRequired,
   regionData: PropTypes.object.isRequired,
-  onRead: PropTypes.func
+  onRead: PropTypes.func,
+  onOpenLibrary: PropTypes.func
 };
 
 export default GlossaryView;
