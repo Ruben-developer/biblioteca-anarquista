@@ -106,20 +106,29 @@ describe('WorldMapView edge cases', () => {
 describe('WorldMapView — países con 0 textos históricos no se marcan en el mapa', () => {
   const noop = () => {};
 
-  it('Inglaterra (solo textos de teoría) queda en gris y no recibe color de gradiente', () => {
+  it('una región con solo textos de teoría queda en gris y no recibe color de gradiente', () => {
+    // Datos sintéticos: Finlandia solo tiene teoría (como pasaba con Inglaterra
+    // antes de importar obras históricas suyas). value 0 → el mapa la trata como
+    // país sin textos: gris por defecto, NO fill de gradiente.
+    const dataSoloTeoria = {
+      ...regionData,
+      Finlandia: {
+        iso: 'fi',
+        books: [
+          { title: 'Idea A', author: 'Autor', year: 1900, category: 'teoria' },
+          { title: 'Idea B', author: 'Autor', year: 1910, category: 'dialogo' }
+        ]
+      }
+    };
     const html = renderToStaticMarkup(
-      <WorldMapView darkMode={false} regionData={regionData} onSelectRegion={noop} />
+      <WorldMapView darkMode={false} regionData={dataSoloTeoria} onSelectRegion={noop} />
     );
-    // Inglaterra existe en regionData e ISO='gb' pero sus 3 libros son de teoría
-    // (no históricos) → value 0. El mapa debe tratarla como país sin textos:
-    // su path usa el gris por defecto, NO un fill de gradiente (que va en rápido a color).
-    const engMatch = html.match(/style="([^"]*)"[^>]*aria-label="Reino Unido"/);
-    expect(engMatch).not.toBeNull();
-    expect(engMatch[1]).toContain('#e7e5e4'); // gris por defecto en modo claro
-    expect(engMatch[1]).not.toMatch(/rgb\(/);
-    // Regla de negocio: con 0 textos históricos, Inglaterra NO genera tarjeta
+    const fiMatch = html.match(/style="([^"]*)"[^>]*aria-label="Finlandia"/);
+    expect(fiMatch).not.toBeNull();
+    expect(fiMatch[1]).toContain('#e7e5e4'); // gris por defecto en modo claro
+    expect(fiMatch[1]).not.toMatch(/rgb\(/);
+    // Regla de negocio: con 0 textos históricos, la región NO genera tarjeta
     // en "O navega por región" (solo aparecen regiones con ≥1 histórico).
-    expect(html).not.toContain('Inglaterra');
     expect(html).not.toContain('0 textos históricos');
   });
 

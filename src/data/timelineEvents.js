@@ -168,7 +168,9 @@ export const timelineEvents = [
       'Historia del Movimiento Makhnovista',
       'La Makhnovschina. Un movimiento libertario bajo fuego en Ucrania (1918-1921)',
       'Los anarquistas y los soviets',
-      'La revolución desconocida'
+      'La revolución desconocida',
+      'Los anarquistas en la Revolución Rusa: la Makhnovtchina (Ucrania 1919)',
+      'La Revolución Rusa en Ucrania (1918-1921)'
     ]
   },
   {
@@ -383,7 +385,25 @@ export const timelineEvents = [
     image: '🌎',
     quote: 'Un continente rebelde',
     author: 'Luis Vitale',
-    relatedTexts: ['Contribución a una historia del anarquismo en América Latina', 'El anarquismo en Cuba', 'Libertarias en América del Sur. De la A a la Z']
+    relatedTexts: [
+      'Contribución a una historia del anarquismo en América Latina',
+      'El anarquismo en Cuba',
+      'Libertarias en América del Sur. De la A a la Z',
+      'Repensar el anarquismo en América Latina: historias, epistemes, luchas y otras formas de organización'
+    ]
+  },
+  {
+    year: 2003,
+    decade: '2000s',
+    type: 'con_texto',
+    title: 'Anarquismos no occidentales',
+    description: 'La historia global del anarquismo fuera de Occidente: Asia (China, Corea, Japón), África (Egipto, Nigeria), América Latina y Oriente Medio (Armenia, Turquía, Palestina).',
+    region: 'Armenia',
+    category: 'historia',
+    image: '🌍',
+    quote: 'La anarquía también es del sur y del este',
+    author: 'Jason Adams',
+    relatedTexts: ['Anarquismos no occidentales']
   },
   {
     year: 1968,
@@ -619,7 +639,7 @@ export const timelineEvents = [
     image: '✍️',
     quote: 'El dolor paraguayo',
     author: 'Rafael Barrett',
-    relatedTexts: ['Barrett']
+    relatedTexts: ['Barrett', 'Mi anarquismo y otros escritos']
   },
   {
     year: 1911,
@@ -815,5 +835,148 @@ export const timelineEvents = [
     quote: 'Sin ley, sin Estado, sin amo',
     author: 'Hermanos de la Costa',
     relatedTexts: ['Los hermanos de la Costa. Piratería libertaria en el Caribe']
+  },
+  {
+    year: 1900,
+    decade: '1900s',
+    type: 'con_texto',
+    title: 'Anarquismo en el Perú',
+    description: 'El anarcosindicalismo peruano en el sur andino y en Lima: la influencia libertaria en la clase obrera y campesina, la polémica con el socialismo y las luchas de inicios del siglo XX.',
+    region: 'Perú',
+    category: 'historia',
+    image: '⛰️',
+    quote: 'La tierra es de quien la trabaja',
+    author: 'Piedad Pareja, Steven J. Hirsch',
+    relatedTexts: ['El anarcosindicalismo en el sur andino peruano: Arequipa, Mollendo, Cusco, Puno', 'Anarquismo y sindicalismo en el Perú (1904-1929)', 'El anarcosindicalismo en el Perú']
+  },
+  {
+    year: 1900,
+    decade: '1900s',
+    type: 'con_texto',
+    title: 'Anarquismo en Portugal',
+    description: 'Historia completa del anarquismo portugués desde las primeras ideas libertarias de 1796 hasta la actualidad, con el movimiento obrero y la prensa de A Batalha.',
+    region: 'Portugal',
+    category: 'historia',
+    image: '⚓',
+    quote: 'A batalha continua',
+    author: 'Carlos Fontes',
+    relatedTexts: ['Anarquismo em Portugal (1796-2024)']
+  },
+  {
+    year: 1910,
+    decade: '1910s',
+    type: 'con_texto',
+    title: 'Anarquismo puertorriqueño',
+    description: 'El discurso económico, político y social del anarquismo puertorriqueño (1900-1917): la construcción de la identidad libertaria y sus vínculos transnacionales con el Caribe y América.',
+    region: 'Puerto Rico',
+    category: 'historia',
+    image: '🇵🇷',
+    quote: 'Tierra y libertad boricua',
+    author: 'Jorell A. Meléndez Badillo',
+    relatedTexts: ['Voces libertarias: el discurso económico, político y social del anarquismo puertorriqueño (1900-1917)']
+  },
+  {
+    year: 1911,
+    decade: '1910s',
+    type: 'con_texto',
+    title: 'Anarquismo en China',
+    description: 'El movimiento anarquista del Imperio Celeste y de la república: la lucha del pueblo chino contra el despotismo, desde los orígenes hasta la revolución de 1911 y más allá.',
+    region: 'China',
+    category: 'historia',
+    image: '🐉',
+    quote: 'Contra el despotismo, sin dios ni amo',
+    author: 'Ba Jin, Albert Meltzer',
+    relatedTexts: ['El anarquismo en China', 'Problemas del anarquismo y la revolución en China']
+  },
+  {
+    year: 1930,
+    decade: '1930s',
+    type: 'con_texto',
+    title: 'Anarquismo en Brasil',
+    description: 'El movimiento obrero brasileño y la prensa libertaria: del anarcosindicalismo de los inmigrantes europeos al periódico O Inimigo do Rei, que desafió a la dictadura militar.',
+    region: 'Brasil',
+    category: 'historia',
+    image: '🏝️',
+    quote: 'O inimigo do rei: contra todo poder',
+    author: 'Ruy Mauro Marini',
+    relatedTexts: ['El movimiento obrero brasileño', 'O Inimigo do Rei, el grito irreverente y osado de la anarquía']
+  },
+  {
+    year: 1950,
+    decade: '1950s',
+    type: 'con_texto',
+    title: 'Anarquismo en Polonia',
+    description: 'La historia del anarquismo polaco: el makhaevismo de Machajski, los movimientos bálticos y la participación de los sindicalistas en el alzamiento de Varsovia.',
+    region: 'Polonia',
+    category: 'historia',
+    image: '🌾',
+    quote: 'Ni Dios, ni zar, ni patrón',
+    author: 'Fanzine Wojna',
+    relatedTexts: ['Anarquismo en Polonia (Wojna 1)']
+  },
+  {
+    year: 1950,
+    decade: '1950s',
+    type: 'con_texto',
+    title: 'Anarquismo en el Uruguay',
+    description: 'Del movimiento obrero rioplatense a la Federación Anarquista Uruguaya: la historia del anarquismo uruguayo, la FAU, la escisión de 1964 y la resistencia contra la dictadura.',
+    region: 'Uruguay',
+    category: 'historia',
+    image: '🌊',
+    quote: 'Ni arriba ni abajo: la federación de iguales',
+    author: 'Guillermo Reigosa Pérez',
+    relatedTexts: ['La Federación Anarquista Uruguaya', 'Los anarquistas en el Río de la Plata (1880-1910)']
+  },
+  {
+    year: 1950,
+    decade: '1950s',
+    type: 'con_texto',
+    title: 'Anarquismo en la antigua Grecia',
+    description: 'Los destellos del pensamiento libertario en la Grecia antigua y clásica: la raíz etimológica de la anarquía (an-arché) y las menciones de la libertad sin poder.',
+    region: 'Grecia',
+    category: 'historia',
+    image: '🏛️',
+    quote: 'An-arché: sin arconte, sin poder',
+    author: 'Simón Royo Hernández',
+    relatedTexts: ['El anarquismo en la antigua Grecia']
+  },
+  {
+    year: 1962,
+    decade: '1960s',
+    type: 'con_texto',
+    title: 'El anarquismo: historia de las ideas y movimientos',
+    description: 'El clásico de George Woodcock sobre el anarquismo como doctrina y movimiento: sus raíces intelectuales y su desarrollo en Francia, Italia, Rusia y España.',
+    region: 'Inglaterra',
+    category: 'historia',
+    image: '📚',
+    quote: 'Anarquismo: la gran historia de las ideas',
+    author: 'George Woodcock',
+    relatedTexts: ['El anarquismo: historia de las ideas y movimientos libertarios']
+  },
+  {
+    year: 2012,
+    decade: '2010s',
+    type: 'con_texto',
+    title: 'Anarquismo en Cuba',
+    description: 'La historia del anarquismo cubano y la postura de los anarquistas latinoamericanos ante la Revolución Cubana: del júbilo inicial al desencanto y los debates del movimiento continental.',
+    region: 'Cuba',
+    category: 'historia',
+    image: '🏝️',
+    quote: 'Del júbilo al desencanto',
+    author: 'Frank Fernández, Eduardo D. Rodríguez Trejo',
+    relatedTexts: ['El anarquismo en Cuba', 'Los anarquistas y la Revolución Cubana: entre el júbilo y el desencanto']
+  },
+  {
+    year: 2017,
+    decade: '2010s',
+    type: 'con_texto',
+    title: 'El anarquismo descolonizado en Egipto',
+    description: 'La historia de las experiencias antiautoritarias en Egipto (1860-2016): las olas del anarquismo egipcio, de la resistencia al Imperio otomano a los movimientos contemporáneos, leída desde una perspectiva decolonial.',
+    region: 'Egipto',
+    category: 'historia',
+    image: '🏺',
+    quote: 'Descolonizar el canon anarquista',
+    author: 'Laura Galián',
+    relatedTexts: ['El Anarquismo Descolonizado: una historia de las experiencias antiautoritarias en Egipto (1860-2016)', 'Hacia un estudio decolonial del anarquismo. Egipto y Túnez']
   }
 ];
