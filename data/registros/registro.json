@@ -417,6 +417,15 @@
       "prs": 0,
       "ci": "verde (sin cambios en repo)",
       "nota": "Auditoria y organizacion de los 288 PDFs del servidor (turno de chat): 208 analizados con agente (68 historia + 87 teoria listos, 15 revisar, 38 descartados) + 80 pre-clasificados (36 duplicados + 44 no anarquistas). Todo consolidado en PDFs/listos_para_subir/{Historia,Teoria,Revisar,Descartados} con INVENTARIO.md (668 lineas). 0 duplicados MD5. Sin commits (solo material fuera del repo)."
+    },
+    {
+      "fecha": "2026-08-19",
+      "obras": 131,
+      "palabras": 3876,
+      "commits": 1,
+      "prs": 0,
+      "ci": "verde (run 32278013164)",
+      "nota": "Lote 1 de importacion desde listos_para_subir: 12 obras nuevas (119->131) - 6 historia (miliciana Guerra Civil, anarquistas y los soviets, revolucion desconocida, Sin Dios ni patrones, Patagonia Rebelde, masacre Santa Maria de Iquique) y 6 teoria (Kropotkin, Most, Bakunin, Hakim Bey, Gelderloos, Kornegger). 3 eventos de timeline nuevos + relacionados ampliados. Invariante timeline==mapa 50/50. Descargas 129/129 OK. 35 eventos. 246 tests, lint 0, build OK. Commit 5c229cf."
     }
   ]
 }
