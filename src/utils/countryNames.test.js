@@ -21,6 +21,18 @@ describe('normalizeCountryName', () => {
     expect(normalizeCountryName('Japan')).toBe('Japón');
     expect(normalizeCountryName('Syria')).toBe('Siria');
     expect(normalizeCountryName('Nigeria')).toBe('Nigeria');
+    // Países añadidos en la importación de 2026-08-19 (historia-anarquista)
+    expect(normalizeCountryName('Brazil')).toBe('Brasil');
+    expect(normalizeCountryName('China')).toBe('China');
+    expect(normalizeCountryName('Egypt')).toBe('Egipto');
+    expect(normalizeCountryName('Cuba')).toBe('Cuba');
+    expect(normalizeCountryName('Paraguay')).toBe('Paraguay');
+    expect(normalizeCountryName('Peru')).toBe('Perú');
+    expect(normalizeCountryName('Uruguay')).toBe('Uruguay');
+    expect(normalizeCountryName('Greece')).toBe('Grecia');
+    expect(normalizeCountryName('Poland')).toBe('Polonia');
+    expect(normalizeCountryName('Ukraine')).toBe('Ucrania');
+    expect(normalizeCountryName('Armenia')).toBe('Armenia');
   });
 
   it('es insensible a mayúsculas y espacios', () => {
@@ -29,8 +41,7 @@ describe('normalizeCountryName', () => {
   });
 
   it('devuelve null para países sin textos en el archivo', () => {
-    expect(normalizeCountryName('Brazil')).toBeNull();
-    expect(normalizeCountryName('Peru')).toBeNull();
+    expect(normalizeCountryName('Thailand')).toBeNull();
     expect(normalizeCountryName('')).toBeNull();
     expect(normalizeCountryName(null)).toBeNull();
     expect(normalizeCountryName(undefined)).toBeNull();

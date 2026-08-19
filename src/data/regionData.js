@@ -291,7 +291,6 @@ export const regionData = {
       { title: "En el café", author: "Errico Malatesta", year: 1922, category: "dialogo", rating: 4.8, filename: "anarquismo/f_malatesta_en_el_cafe.pdf" },
       { title: "Crítica revolucionaria", author: "Luigi Fabbri", year: 1923, category: "teoria", rating: 4.6, summary: "El teórico anarquista italiano analiza la revolución rusa, el bolchevismo y el porvenir del anarquismo.", filename: "anarquismo/f3194656_Cr_tica_revolucionaria_Luigi_Fabbri.pdf" },
       { title: "La Revolución Rusa y el anarquismo", author: "Luigi Fabbri", year: 1922, category: "teoria", rating: 4.5, summary: "Respuesta de Fabbri al texto de Bujarín sobre la postura oficial del bolchevismo hacia el anarquismo.", filename: "anarquismo/f2904104_fabbri.pdf" },
-      { title: "La banda del Matese", author: "Colectivo", year: 1877, category: "historia", rating: 4.5, summary: "La insurrección fallida de la banda del Matese liderada por Carlo Cafiero y Errico Malatesta.", filename: "otros/f27973528_Microsoft_Word_Banda_del_Matese.pdf" },
       { title: "Individualismo y Comunismo", author: "Errico Malatesta", year: 1926, category: "teoria", rating: 4.6, summary: "Malatesta reconcilia las corrientes individualista y comunista del anarquismo en este texto clásico.", filename: "anarquismo/f8435008.pdf" },
       { title: "Influencias burguesas sobre el anarquismo", author: "Luigi Fabbri", year: 1921, category: "teoria", rating: 4.4, summary: "Análisis de Fabbri sobre los elementos burgueses que contaminan el ideal anarquista.", filename: "anarquismo/f4319216.pdf" },
       { title: "Un plan de organización anarquista", author: "Errico Malatesta", year: 1927, category: "teoria", rating: 4.7, summary: "La respuesta de Malatesta a la Plataforma de Arshínov: organización, pero sin autoridad ni partido.", filename: "anarquismo/f7273608.pdf" },
@@ -369,15 +368,11 @@ export const regionData = {
   },
   "Portugal": {
     iso: "pt",
-    books: [
-      { title: "Anarquismo em Portugal (1796-2024)", author: "Carlos Fontes", year: 2024, category: "historia", rating: 4.6, summary: "Historia completa del anarquismo portugués desde las primeras ideas libertarias de 1796 hasta 2024, escrita por el histórico militante de A Batalha Carlos Fontes a partir de un proyecto iniciado en 1975 y enriquecido con décadas de investigación y testimonios de antiguos camaradas.", filename: "anarquismo/Fontes-Anarquismo-em-Portugal.pdf" }
-    ]
+    books: []
   },
   "Puerto Rico": {
     iso: "pr",
-    books: [
-      { title: "Voces libertarias: el discurso económico, político y social del anarquismo puertorriqueño (1900-1917)", author: "Jorell A. Meléndez Badillo", year: 2012, category: "historia", rating: 4.4, summary: "Ensayo académico sobre el discurso económico, político y social del anarquismo puertorriqueño entre 1900 y 1917: la construcción de la identidad libertaria y los vínculos transnacionales con el Caribe, América y Europa.", filename: "anarquismo/voces-libertarias-essay.pdf" }
-    ]
+    books: []
   },
   "Rusia": {
     iso: "ru",

@@ -22,7 +22,20 @@ const COUNTRY_NAME_TO_REGION = {
   bolivia: 'Bolivia',
   japan: 'Japón',
   syria: 'Siria',
-  nigeria: 'Nigeria'
+  nigeria: 'Nigeria',
+  // Países añadidos en la importación de 2026-08-19 (historia-anarquista)
+  armenia: 'Armenia',
+  brazil: 'Brasil',
+  china: 'China',
+  cuba: 'Cuba',
+  egypt: 'Egipto',
+  greece: 'Grecia',
+  macedonia: 'Macedonia',
+  paraguay: 'Paraguay',
+  peru: 'Perú',
+  poland: 'Polonia',
+  ukraine: 'Ucrania',
+  uruguay: 'Uruguay'
 };
 
 // Diccionario inglés → español de los 174 países del mapa (propiedades N del GeoJSON).

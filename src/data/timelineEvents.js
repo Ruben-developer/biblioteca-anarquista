@@ -46,7 +46,7 @@ export const timelineEvents = [
     image: '🏴',
     quote: 'La revolución es un hecho social, no un decreto',
     author: 'Errico Malatesta y Carlo Cafiero',
-    relatedTexts: ['La banda del Matese', 'Páginas de lucha cotidiana']
+    relatedTexts: ['Páginas de lucha cotidiana']
   },
   {
     year: 1886,
@@ -852,28 +852,26 @@ export const timelineEvents = [
   {
     year: 1900,
     decade: '1900s',
-    type: 'con_texto',
+    type: 'hecho',
     title: 'Anarquismo en Portugal',
     description: 'Historia completa del anarquismo portugués desde las primeras ideas libertarias de 1796 hasta la actualidad, con el movimiento obrero y la prensa de A Batalha.',
     region: 'Portugal',
     category: 'historia',
     image: '⚓',
     quote: 'A batalha continua',
-    author: 'Carlos Fontes',
-    relatedTexts: ['Anarquismo em Portugal (1796-2024)']
+    author: 'Carlos Fontes'
   },
   {
     year: 1910,
     decade: '1910s',
-    type: 'con_texto',
+    type: 'hecho',
     title: 'Anarquismo puertorriqueño',
     description: 'El discurso económico, político y social del anarquismo puertorriqueño (1900-1917): la construcción de la identidad libertaria y sus vínculos transnacionales con el Caribe y América.',
     region: 'Puerto Rico',
     category: 'historia',
     image: '🇵🇷',
     quote: 'Tierra y libertad boricua',
-    author: 'Jorell A. Meléndez Badillo',
-    relatedTexts: ['Voces libertarias: el discurso económico, político y social del anarquismo puertorriqueño (1900-1917)']
+    author: 'Jorell A. Meléndez Badillo'
   },
   {
     year: 1911,
