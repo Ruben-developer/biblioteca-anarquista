@@ -69,6 +69,25 @@ describe('TheoriesView', () => {
     expect(screen.getByText('Piotr Kropotkin')).toBeTruthy();
     expect(screen.getByText('La Conquista del Pan')).toBeTruthy();
   });
+
+  it('llama onOpenLibrary con el título al pulsar "En el catálogo" de una obra', async () => {
+    // @vitest-environment jsdom
+    const { render, screen, fireEvent } = await import('@testing-library/react');
+    const onOpenLibrary = vi.fn();
+    render(<TheoriesView darkMode={false} regionData={regionData} onOpenLibrary={onOpenLibrary} />);
+    fireEvent.click(screen.getByText('Anarco-comunismo'));
+    fireEvent.click(screen.getAllByTitle(/Ver "La Conquista del Pan" en el catálogo/)[0]);
+    expect(onOpenLibrary).toHaveBeenCalledWith({ searchTerm: 'La Conquista del Pan' });
+  });
+
+  it('llama onOpenLibrary sin filtros al pulsar "Ver todas las obras del catálogo"', async () => {
+    // @vitest-environment jsdom
+    const { render, screen, fireEvent } = await import('@testing-library/react');
+    const onOpenLibrary = vi.fn();
+    render(<TheoriesView darkMode={false} regionData={regionData} onOpenLibrary={onOpenLibrary} />);
+    fireEvent.click(screen.getByText('Ver todas las obras del catálogo'));
+    expect(onOpenLibrary).toHaveBeenCalledWith({});
+  });
 });
 
 describe('GlossaryView', () => {
@@ -88,6 +107,24 @@ describe('GlossaryView', () => {
     expect(screen.getByText('Mutualismo')).toBeTruthy();
     expect(screen.queryByText('Anarquismo')).toBeNull();
   });
+
+  it('llama onOpenLibrary con el título al pulsar "En el catálogo" de una obra', async () => {
+    // @vitest-environment jsdom
+    const { render, screen, fireEvent } = await import('@testing-library/react');
+    const onOpenLibrary = vi.fn();
+    render(<GlossaryView darkMode regionData={regionData} onOpenLibrary={onOpenLibrary} />);
+    fireEvent.click(screen.getAllByTitle(/Ver "La Conquista del Pan" en el catálogo/)[0]);
+    expect(onOpenLibrary).toHaveBeenCalledWith({ searchTerm: 'La Conquista del Pan' });
+  });
+
+  it('llama onOpenLibrary sin filtros al pulsar "Ver todas las obras del catálogo"', async () => {
+    // @vitest-environment jsdom
+    const { render, screen, fireEvent } = await import('@testing-library/react');
+    const onOpenLibrary = vi.fn();
+    render(<GlossaryView darkMode regionData={regionData} onOpenLibrary={onOpenLibrary} />);
+    fireEvent.click(screen.getByText('Ver todas las obras del catálogo'));
+    expect(onOpenLibrary).toHaveBeenCalledWith({});
+  });
 });
 
 describe('ReadingPathsView', () => {
@@ -104,6 +141,24 @@ describe('ReadingPathsView', () => {
     render(<ReadingPathsView darkMode regionData={regionData} />);
     expect(screen.getByText('¿Qué es la Propiedad?')).toBeTruthy();
     expect(screen.getByText('Dios y el Estado')).toBeTruthy();
+  });
+
+  it('llama onOpenLibrary con el título al pulsar "En el catálogo" de una obra', async () => {
+    // @vitest-environment jsdom
+    const { render, screen, fireEvent } = await import('@testing-library/react');
+    const onOpenLibrary = vi.fn();
+    render(<ReadingPathsView darkMode regionData={regionData} onOpenLibrary={onOpenLibrary} />);
+    fireEvent.click(screen.getAllByTitle(/Ver "¿Qué es la Propiedad\?" en el catálogo/)[0]);
+    expect(onOpenLibrary).toHaveBeenCalledWith({ searchTerm: '¿Qué es la Propiedad?' });
+  });
+
+  it('llama onOpenLibrary sin filtros al pulsar "Ver todas las obras del catálogo"', async () => {
+    // @vitest-environment jsdom
+    const { render, screen, fireEvent } = await import('@testing-library/react');
+    const onOpenLibrary = vi.fn();
+    render(<ReadingPathsView darkMode regionData={regionData} onOpenLibrary={onOpenLibrary} />);
+    fireEvent.click(screen.getByText('Ver todas las obras del catálogo'));
+    expect(onOpenLibrary).toHaveBeenCalledWith({});
   });
 });
 

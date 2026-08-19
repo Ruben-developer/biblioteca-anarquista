@@ -15,10 +15,10 @@ import { VIEWS } from '../constants';
 describe('Navigation', () => {
   it('renderiza las vistas con sus contadores en el drawer', () => {
     const html = renderToStaticMarkup(
-      <Navigation activeView={VIEWS.TIMELINE} onViewChange={() => {}} darkMode={false} favoriteCount={3} regionCount={16} menuOpen onMenuClose={() => {}} />
+      <Navigation activeView={VIEWS.TIMELINE} onViewChange={() => {}} darkMode={false} favoriteCount={3} menuOpen onMenuClose={() => {}} />
     );
     expect(html).toContain('Línea Temporal');
-    expect(html).toContain('Mapa (16)');
+    expect(html).toContain('Mapa');
     expect(html).toContain('Biblioteca');
     expect(html).toContain('Autores');
     expect(html).toContain('Favoritos (3)');
@@ -32,16 +32,16 @@ describe('Navigation', () => {
   it('marca la vista activa en el drawer', () => {
     const onViewChange = vi.fn();
     const html = renderToStaticMarkup(
-      <Navigation activeView={VIEWS.LIBRARY} onViewChange={onViewChange} darkMode favoriteCount={0} regionCount={5} menuOpen onMenuClose={() => {}} />
+      <Navigation activeView={VIEWS.LIBRARY} onViewChange={onViewChange} darkMode favoriteCount={0} menuOpen onMenuClose={() => {}} />
     );
     expect(html).toContain('Línea Temporal');
-    expect(html).toContain('Mapa (5)');
+    expect(html).toContain('Mapa');
     expect(html).toContain('aria-current="page"');
   });
 
   it('no renderiza el drawer cuando está cerrado', () => {
     const html = renderToStaticMarkup(
-      <Navigation activeView={VIEWS.LIBRARY} onViewChange={() => {}} darkMode={false} favoriteCount={0} regionCount={5} menuOpen={false} onMenuClose={() => {}} />
+      <Navigation activeView={VIEWS.LIBRARY} onViewChange={() => {}} darkMode={false} favoriteCount={0} menuOpen={false} onMenuClose={() => {}} />
     );
     expect(html).not.toContain('role="dialog"');
   });

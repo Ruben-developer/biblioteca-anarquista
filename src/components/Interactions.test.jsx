@@ -452,6 +452,39 @@ it('abre un evento de la línea temporal y cierra el modal con Escape', () => {
     expect(screen.queryByRole('button', { name: 'Buscar obra' })).toBeNull();
     container.remove();
   });
+
+  it('cross-link: desde Teorías "En el catálogo" abre la Biblioteca con la obra precargada', () => {
+    const { container } = render(<AnarchistArchive />);
+    openDrawer();
+    fireEvent.click(screen.getByRole('button', { name: /Teorías/ }));
+    // Abre la primera corriente para ver sus obras.
+    const theory = screen.getAllByText(/Anarco-comunismo|Anarcosindicalismo|Mutualismo|Anarco-colectivismo|Plataformismo/)[0];
+    fireEvent.click(theory);
+    // Pulsa "En el catálogo" de la primera obra listada.
+    const catalogButton = screen.getAllByTitle(/Ver ".*" en el catálogo/)[0];
+    const expectedTitle = catalogButton.title.replace('Ver "', '').replace('" en el catálogo', '');
+    fireEvent.click(catalogButton);
+    // La Biblioteca nace con esa obra precargada en el buscador.
+    expect(screen.getByLabelText('Buscar obra')).toBeTruthy();
+    expect(screen.getByLabelText('Buscar obra').value).toBe(expectedTitle);
+    container.remove();
+  });
+
+  it('cross-link: desde el nav a Biblioteca se limpian los filtros precargados', () => {
+    const { container } = render(<AnarchistArchive />);
+    openDrawer();
+    fireEvent.click(screen.getByRole('button', { name: /Teorías/ }));
+    const theory = screen.getAllByText(/Anarco-comunismo|Anarcosindicalismo|Mutualismo|Anarco-colectivismo|Plataformismo/)[0];
+    fireEvent.click(theory);
+    const catalogButton = screen.getAllByTitle(/Ver ".*" en el catálogo/)[0];
+    fireEvent.click(catalogButton);
+    expect(screen.getByLabelText('Buscar obra').value).not.toBe('');
+    // Navegar a Biblioteca desde el menú vuelve a abrir el catálogo completo.
+    openDrawer();
+    fireEvent.click(screen.getByRole('button', { name: /Biblioteca/ }));
+    expect(screen.getByLabelText('Buscar obra').value).toBe('');
+    container.remove();
+  });
 });
 
 describe('Navigation móvil (drawer/hamburguesa)', () => {
@@ -476,7 +509,6 @@ describe('Navigation móvil (drawer/hamburguesa)', () => {
           onViewChange={onViewChange}
           darkMode={false}
           favoriteCount={3}
-          regionCount={17}
           menuOpen={open}
           onMenuClose={() => setOpen(false)}
           {...rest}
@@ -504,7 +536,7 @@ describe('Navigation móvil (drawer/hamburguesa)', () => {
     expect(drawer).toBeTruthy();
     expect(screen.getByRole('button', { name: 'Abrir menú de navegación' }).getAttribute('aria-expanded')).toBe('true');
     expect(within(drawer).getByRole('button', { name: /Biblioteca/ })).toBeTruthy();
-    expect(within(drawer).getByRole('button', { name: /Mapa \(17\)/ })).toBeTruthy();
+    expect(within(drawer).getByRole('button', { name: /Mapa/ })).toBeTruthy();
     expect(within(drawer).getByRole('button', { name: /Línea Temporal/ })).toBeTruthy();
     expect(within(drawer).getByRole('button', { name: /Autores/ })).toBeTruthy();
     expect(within(drawer).getByRole('button', { name: /Teorías/ })).toBeTruthy();

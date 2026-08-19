@@ -153,6 +153,49 @@ describe('LibraryView edge cases', () => {
     );
     expect(html).toContain('fill-red-500 text-red-500');
   });
+
+  it('precarga filtros desde initialFilters (cross-links de Teorías/Rutas/Glosario)', () => {
+    const html = renderToStaticMarkup(
+      <LibraryView
+        darkMode={false}
+        regionData={regionData}
+        favorites={[]}
+        onToggleFavorite={noop}
+        initialFilters={{ searchTerm: 'Propiedad' }}
+      />
+    );
+    // El buscador nace con el término precargado y el grid filtrado.
+    expect(html).toContain('value="Propiedad"');
+    expect(html).toContain('1 de 3 obras');
+    expect(html).toContain('¿Qué es la Propiedad?');
+    expect(html).not.toContain('La Conquista del Pan');
+  });
+
+  it('precarga el tipo de obra (histórico/ideas) desde initialFilters', () => {
+    const html = renderToStaticMarkup(
+      <LibraryView
+        darkMode={false}
+        regionData={regionDataEdge}
+        favorites={[]}
+        onToggleFavorite={noop}
+        initialFilters={{ type: 'historical' }}
+      />
+    );
+    // regionDataEdge: 1 obra de historia (Obra sin archivo), 2 de ideas.
+    expect(html).toContain('1 de 3 obras');
+    // El widget "Obra del día" es global e independiente de filtros: se aserta
+    // solo sobre el grid de tarjetas (a partir del marcador de grid).
+    const gridHtml = html.slice(html.indexOf('grid grid-cols-1'));
+    expect(gridHtml).toContain('Obra sin archivo');
+    expect(gridHtml).not.toContain('Obra completa');
+  });
+
+  it('sin initialFilters muestra el catálogo completo', () => {
+    const html = renderToStaticMarkup(
+      <LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />
+    );
+    expect(html).toContain('3 de 3 obras');
+  });
 });
 
 describe('LibraryView referencias cruzadas (texto → evento)', () => {
