@@ -609,14 +609,15 @@ tiene 113 PDFs y 0 TXT) — son 6 obras a las que nunca se les asignó `filename
   (UX) + df72995 (catálogo) + bbb9257/43da344/c849ab5/43da344 (docs).
 
 ## 6. Próximo día
-- [ ] **UX pendiente (del reporte navegación §2.4, cambios 5-6)**: cross-links
-  Teorías/Rutas/Glosario → Biblioteca con filtros precargados (`initialFilters` en
-  `LibraryView`); consolidar labels del nav (quitar `(N)` de Mapa).
+- [x] **UX: cross-links Teorías/Rutas/Glosario → Biblioteca con filtros precargados + nav sin `(N)` en Mapa** ✅ 2026-08-19 (00:00, cambios 5-6 del reporte `@ux-review` de navegación §2.4): (1) `LibraryView` acepta `initialFilters` (searchTerm, categoría, región, década, autor, disponibilidad, tipo, favoritos) y nace con esos filtros aplicados; un `useEffect` resincroniza cuando el cross-link cambia sin desmontar la vista; (2) `AnarchistArchive` gestiona `libraryInitialFilters` con `openLibraryWithFilters`, y `handleViewChange` limpia los filtros al navegar a Biblioteca desde el nav (nada de filtros "pegajosos"); (3) `TheoriesView`/`ReadingPathsView`/`GlossaryView` ganan botón **"En el catálogo"** por obra (icono `Library`, abre la Biblioteca buscando ese título) y botón global **"Ver todas las obras del catálogo"** al pie; (4) el label de Mapa pasa de `Mapa (N)` a `Mapa` (el contador ya se ve en la vista) y se elimina la prop `regionCount` del nav. **235 → 246 tests**, lint 0 errores, build OK, CI verde (run 32214940355). Commits 63c7e2e (feat) + 6622ba4 (test).
 - [ ] **Recabarren / Regeneración**: buscar fuentes libres (Regeneración podría
   importarse como antología de la biblioteca magonista; Recabarren quizá en
   Dialnet o la biblioteca de la FECH si hay PDF). Si no hay, dejar documentado.
 - [ ] **Pendiente de UX (reporte navegación)**: hamburguesa/drawer móvil ✅ hecho
   2026-08-18; quedan aria-pressed en toggle de tema y corazones de favoritos.
+- [ ] **UX/UI semanal**: invocar a `@ux-review` periódicamente (última revisión
+  2026-08-17 navegación; toca una nueva pasada de diseño/estética — backlog §5.2
+  "Estética: iterar paleta y tipografía").
 
 ### Nota del día (2026-08-18, turno de chat ~17:10)
 El usuario aclaró que no se trataba de quitar la hamburguesa de la web: la
@@ -633,3 +634,47 @@ El usuario aclaró que no se trataba de quitar la hamburguesa de la web: la
 - Tests del drawer reescritos para renderizar Header+Navigation juntos (como
   en producción). **234 tests**, lint 0 errores, build OK, CI verde
   (run 32186240586). Commit 468a305.
+
+### Nota del día (2026-08-19, 00:00)
+Turno 00:00 del agente `daily-dev`. Inspección (paso 1.5): descargas **117/117 OK**,
+regiones sincronizadas **17/17/17** (fuente única `regionData.js`, verificadas con
+`vite-node`: 0 regiones sin ISO, 0 ISO sin región; `REGIONS` = 17 + `all` de filtro),
+invariante `timeline == mapa` **44/44** (32 eventos, 0 títulos fantasma — los
+`relatedTexts` apuntan siempre a libros reales del catálogo — y 0 `con_texto` sin
+textos), `npm audit` con 5 vulnerabilidades SOLO en devDeps build-time
+(vite/vitest/vite-node/esbuild; fix exigiría `--force` y rompería Vite 4 → no
+aplica a Pages), build sin warnings. Sin errores críticos → se continuó con la
+siguiente tarea del plan.
+**Tarea del plan ("Próximo día" de 2026-08-18 — cambios 5-6 del reporte
+`@ux-review` de navegación 2026-08-17 §2.4: cross-links + labels)**:
+- **`LibraryView` gana `initialFilters`** (objeto opcional con `searchTerm`,
+  `category`, `region`, `decade`, `author`, `availability`, `type`,
+  `favoritesOnly`): la Biblioteca nace con esos filtros aplicados (estado
+  inicial `seed` + `useEffect` que resincroniza cuando el cross-link cambia sin
+  desmontar la vista). `DEFAULT_FILTERS` centraliza también "Limpiar filtros".
+- **`AnarchistArchive`** gestiona `libraryInitialFilters` con el nuevo handler
+  `openLibraryWithFilters(filters)`; el nav general usa `handleViewChange`, que
+  **limpia los filtros al navegar a Biblioteca** (el menú siempre abre el
+  catálogo completo, sin filtros "pegajosos" de un cross-link previo).
+- **`TheoriesView` / `ReadingPathsView` / `GlossaryView`**: cada obra listada
+  gana un botón **"En el catálogo"** (icono `Library`) que llama
+  `onOpenLibrary({ searchTerm: book.title })` → la Biblioteca se abre buscando
+  ese título exacto; además, un botón global **"Ver todas las obras del
+  catálogo"** al pie de cada vista → `onOpenLibrary({})`. La vista Autores
+  queda como está (el reporte proponía el enlace Glosario↔Autores como
+  "o viceversa"; se deja para una iteración posterior).
+- **`Navigation`**: el label de Mapa pasa de `Mapa (N)` a **`Mapa`** (el número
+  ya se ve en la vista y el contador ganaba poco en el nav); se elimina la prop
+  `regionCount` del componente y de sus usos (AnarchistArchive + tests).
+- **Tests**: 235 → **246** (4 de `initialFilters` en `LibraryView.test.jsx`:
+  precarga de búsqueda y de tipo histórico con grid aislado del widget "Obra del
+  día", y catálogo completo sin filtros; 6 de cross-links en `NewViews.test.jsx`:
+  las 3 vistas llaman `onOpenLibrary` con el título al pulsar "En el catálogo" y
+  sin filtros en el botón global; 2 end-to-end en `Interactions.test.jsx`:
+  Teorías → "En el catálogo" abre la Biblioteca con la obra en el buscador, y el
+  nav a Biblioteca limpia los filtros; aserciones de `Views.test.jsx` sin
+  `Mapa (N)`).
+
+**Verificación**: `npm run check` (lint 0 errores + **246 tests** + build) verde.
+`npm run check-downloads` → **117/117 OK**. CI de Pages verde (run 32214940355).
+Commits 63c7e2e (feat) + 6622ba4 (test).
