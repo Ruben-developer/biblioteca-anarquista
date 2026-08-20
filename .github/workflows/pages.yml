@@ -24,7 +24,7 @@ jobs:
           cache: npm
 
       - name: Instalar dependencias
-        run: npm ci
+        run: npm ci --ignore-scripts
 
       - name: Lint
         run: npm run lint
@@ -41,7 +41,7 @@ jobs:
           VITE_PDF_BASE: ${{ secrets.VITE_PDF_BASE }}
 
       - name: Publicar en rama gh-pages (producción)
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: dist
