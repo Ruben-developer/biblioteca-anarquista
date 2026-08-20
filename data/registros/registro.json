@@ -444,6 +444,15 @@
       "prs": 0,
       "ci": "verde (run 32286106277)",
       "nota": "Nuevo material del usuario (sin_clasificar/historia-anarquista, 28 PDFs por pais): 20 obras historicas importadas + 13 regiones nuevas (Brasil, Cuba, Paraguay, Peru, Puerto Rico, Uruguay, Grecia, Polonia, Portugal, Ucrania, Armenia, China, Egipto). 273->293 obras, 30 regiones. Reubicacion de 9 obras antes aproximadas + fix categoria Egipto-Tunez (teoria->historia). Invariante timeline==mapa 132/132: 58->70 eventos (11 nuevos + 4 ampliados). 246 tests, lint 0, check-downloads 291/291 OK, prod index-a7a53ec2.js. Commit f75723a. Pendiente: 48 PDFs Crimental (~44 nuevos, teoria)."
+    },
+    {
+      "fecha": "2026-08-19",
+      "obras": 290,
+      "palabras": 0,
+      "commits": 1,
+      "prs": 0,
+      "ci": "verde (run 32288002719)",
+      "nota": "Fix (reporte del usuario): auditoria de idiomas de los 291 PDFs -> 3 obras en otros idiomas retiradas (Anarquismo em Portugal en portugues, Voces libertarias en ingles, La banda del Matese en italiano); eventos afectados pasan a hecho. Fix mapa: 13 paises nuevos + Macedonia no eran clicables (faltaban en COUNTRY_NAME_TO_REGION) -> anadidos los 12 faltantes, 28 paises con historicos resuelven su clic. 293->290 obras, 129 historicos, 0 huerfanos, 288/288 descargas, 246 tests. Commit 39f2972."
     }
   ]
 }
