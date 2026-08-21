@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['"High Voltage Rough"', 'Anton', 'Oswald', 'Impact', 'sans-serif'],
+        display: ['Anton', 'Oswald', 'Impact', 'sans-serif'],
         serif: ['"Playfair Display"', 'Georgia', 'serif'],
         sans: ['"Source Sans 3"', 'system-ui', 'sans-serif'],
         mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace']
