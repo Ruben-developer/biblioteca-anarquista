@@ -5,8 +5,8 @@ import { THEME } from '../constants';
 import { influenceNodes, influenceEdges } from '../data/influences';
 import { getAllAuthors } from '../utils/library';
 
-const NODE_R = 1.7;
-const NODE_R_ACTIVE = 2.4;
+const NODE_R = 1.1;
+const NODE_R_ACTIVE = 1.7;
 
 const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
@@ -52,7 +52,7 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
 
   return (
     <div>
-      <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
+      <h2 className={`text-4xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         Red de autores
       </h2>
       <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
@@ -74,7 +74,7 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
                 d={edgePath(from, to)}
                 fill="none"
                 stroke={active ? edgeColor : dimEdgeColor}
-                strokeWidth={active ? 0.6 : 0.25}
+                strokeWidth={active ? 0.4 : 0.18}
                 opacity={active ? 1 : 0.6}
               />
             );
@@ -100,10 +100,9 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
                 />
                 <text
                   textAnchor="middle"
-                  y={NODE_R_ACTIVE + 2.2}
-                  fontSize={node.name.length > 10 ? 2.3 : 2.7}
+                  y={NODE_R_ACTIVE + 2}
+                  fontSize={node.name.length > 10 ? 1.9 : 2.2}
                   fill={labelColor}
-                  fontWeight="600"
                 >
                   {node.name}
                 </text>

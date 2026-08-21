@@ -21,21 +21,21 @@ export const influenceNodes = [
   // ── 1840s: comunismo + insurrección ──
   { id: 'kropotkin', name: 'Kropotkin', years: '1842–1921', region: 'Rusia', authorKey: 'Piotr Kropotkin', x: 38, y: 62, bio: 'Teórico del anarco-comunismo: apoyo mutuo, comunas libres y federación.' },
   // ── 1850s: colectivismo + individualismo + pedagogía ──
-  { id: 'malatesta', name: 'Malatesta', years: '1853–1932', region: 'Italia', authorKey: 'Errico Malatesta', x: 38, y: 54, bio: 'Revolucionario y organizador: el anarquismo como praxis insurreccional permanente.' },
+  { id: 'malatesta', name: 'Malatesta', years: '1853–1932', region: 'Italia', authorKey: 'Errico Malatesta', x: 42, y: 54, bio: 'Revolucionario y organizador: el anarquismo como praxis insurreccional permanente.' },
   { id: 'tucker', name: 'Tucker', years: '1854–1939', region: 'EE. UU.', authorKey: 'Benjamin Tucker', x: 8, y: 52, bio: 'Principal anarquista individualista norteamericano: socialismo de Estado frente a anarquismo.' },
-  { id: 'ferrer', name: 'Ferrer i Guardia', years: '1859–1909', region: 'España', authorKey: 'Francisco Ferrer Guardia', x: 65, y: 50, bio: 'Fundador de la Escuela Moderna; fusilado por su pedagogía racionalista.' },
+  { id: 'ferrer', name: 'Ferrer i Guardia', years: '1859–1909', region: 'España', authorKey: 'Francisco Ferrer Guardia', x: 60, y: 50, bio: 'Fundador de la Escuela Moderna; fusilado por su pedagogía racionalista.' },
   // ── 1860s: anarquismo español + EE.UU. + Europa ──
   { id: 'mella', name: 'Mella', years: '1861–1925', region: 'España', authorKey: 'Ricardo Mella', x: 65, y: 44, bio: 'El teórico más lúcido del anarquismo español; del colectivismo al comunismo.' },
-  { id: 'nett', name: 'Nettlau', years: '1865–1944', region: 'Austria', authorKey: 'Max Nettlau', x: 52, y: 42, bio: 'El cronista del anarquismo: documentó desde dentro toda la historia del movimiento.' },
-  { id: 'goldman', name: 'Goldman', years: '1869–1940', region: 'EE. UU.', authorKey: 'Emma Goldman', x: 52, y: 38, bio: 'Pionera del anarcofeminismo: "si no puedo bailar, no es mi revolución".' },
+  { id: 'nett', name: 'Nettlau', years: '1865–1944', region: 'Austria', authorKey: 'Max Nettlau', x: 45, y: 45, bio: 'El cronista del anarquismo: documentó desde dentro toda la historia del movimiento.' },
+  { id: 'goldman', name: 'Goldman', years: '1869–1940', region: 'EE. UU.', authorKey: 'Emma Goldman', x: 58, y: 38, bio: 'Pionera del anarcofeminismo: "si no puedo bailar, no es mi revolución".' },
   // ── 1870s: individualismo + sindicalismo + Latam ──
   { id: 'armand', name: 'Armand', years: '1872–1962', region: 'Francia', authorKey: 'Émile Armand', x: 8, y: 34, bio: 'Anarquista individualista: camaradería amorosa y vida no convencional.' },
-  { id: 'rocker', name: 'Rocker', years: '1873–1958', region: 'Alemania', x: 52, y: 32, bio: 'Teórico del anarcosindicalismo: "anarcosindicalismo: teoría y práctica".' },
-  { id: 'floresmagon', name: 'Flores Magón', years: '1874–1922', region: 'México', authorKey: 'Ricardo Flores Magón', x: 78, y: 30, bio: 'El alma del anarquismo mexicano: Tierra y Libertad y la revolución magonista.' },
+  { id: 'rocker', name: 'Rocker', years: '1873–1958', region: 'Alemania', x: 64, y: 32, bio: 'Teórico del anarcosindicalismo: "anarcosindicalismo: teoría y práctica".' },
+  { id: 'floresmagon', name: 'Flores Magón', years: '1874–1922', region: 'México', authorKey: 'Ricardo Flores Magón', x: 82, y: 30, bio: 'El alma del anarquismo mexicano: Tierra y Libertad y la revolución magonista.' },
   { id: 'fabbri', name: 'Fabbri', years: '1877–1935', region: 'Italia', authorKey: 'Luigi Fabbri', x: 38, y: 28, bio: 'Discípulo de Malatesta y crítico del bolchevismo desde el anarquismo.' },
   // ── 1880s: insurrección + Latam ──
-  { id: 'guerrero', name: 'Práxedis Guerrero', years: '1882–1910', region: 'México', authorKey: 'Práxedis G. Guerrero', x: 78, y: 24, bio: 'Periodista y guerrillero magonista: propaganda por el hecho en la frontera.' },
-  { id: 'makhno', name: 'Makhno', years: '1888–1934', region: 'Ucrania', authorKey: 'Néstor Makhno', x: 52, y: 20, bio: 'El ejército insurrecto de Ucrania; origen del plataformismo.' },
+  { id: 'guerrero', name: 'Práxedis Guerrero', years: '1882–1910', region: 'México', authorKey: 'Práxedis G. Guerrero', x: 74, y: 24, bio: 'Periodista y guerrillero magonista: propaganda por el hecho en la frontera.' },
+  { id: 'makhno', name: 'Makhno', years: '1888–1934', region: 'Ucrania', authorKey: 'Néstor Makhno', x: 58, y: 20, bio: 'El ejército insurrecto de Ucrania; origen del plataformismo.' },
   // ── 1890s: estética + Latam ──
   { id: 'read', name: 'Herbert Read', years: '1893–1968', region: 'Inglaterra', authorKey: 'Herbert Read', x: 65, y: 16, bio: 'Crítico de arte anarquista: la estética como política de la libertad.' },
   { id: 'abad', name: 'Abad de Santillán', years: '1897–1983', region: 'Argentina', authorKey: 'Diego Abad de Santillán', x: 78, y: 14, bio: 'Militante y editor: la FORA, Bakunin en español y el anarquismo organizado latinoamericano.' },
@@ -44,9 +44,9 @@ export const influenceNodes = [
   { id: 'weil', name: 'Weil', years: '1909–1943', region: 'Francia', authorKey: 'Simone Weil', x: 8, y: 8, bio: 'Filósofa y mística: lo impersonal frente a la idolatría del Estado, la opresión como mecanismo de toda organización social.' },
   { id: 'ellul', name: 'Ellul', years: '1912–1994', region: 'Francia', authorKey: 'Jacques Ellul', x: 22, y: 6, bio: 'Teólogo y anarquista cristiano: el Estado como poder satánico y el cristianismo como subversión de toda autoridad.' },
   // ── 1920s: ecología social ──
-  { id: 'bookchin', name: 'Bookchin', years: '1921–2006', region: 'EE. UU.', authorKey: 'Murray Bookchin', x: 65, y: 2, bio: 'Ecología social y municipalismo libertario: la crisis ecológica como crisis social.' },
+  { id: 'bookchin', name: 'Bookchin', years: '1921–2006', region: 'EE. UU.', authorKey: 'Murray Bookchin', x: 72, y: 4, bio: 'Ecología social y municipalismo libertario: la crisis ecológica como crisis social.' },
   // ── 1960s-80s: hoy ──
-  { id: 'graeber', name: 'Graeber', years: '1961–2020', region: 'EE. UU.', authorKey: 'David Graeber', x: 65, y: -2, bio: 'Antropólogo anarquista: la etnografía como inspiración de organización libre.' },
+  { id: 'graeber', name: 'Graeber', years: '1961–2020', region: 'EE. UU.', authorKey: 'David Graeber', x: 58, y: -4, bio: 'Antropólogo anarquista: la etnografía como inspiración de organización libre.' },
   { id: 'gelderloos', name: 'Gelderloos', years: '1982–', region: 'EE. UU.', authorKey: 'Peter Gelderloos', x: 78, y: -4, bio: 'Autor contemporáneo sobre anarquismo, ecología y acción directa.' },
 ];
 
