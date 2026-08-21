@@ -230,7 +230,7 @@ const LibraryView = ({
               </div>
               <div className="flex flex-col gap-3">
                 {group.books.map((book, idx) => {
-                  const isFavorite = favorites.includes(book.title);
+                  const isFavorite = favorites.some(f => f.title === book.title);
                   const bookEvents = getBookEvents(timelineEvents, book);
                   return (
                     <div key={`${book.region}-${book.title}-${idx}`} className={`rounded-lg p-4 ${darkMode ? 'bg-gray-900/50 border border-gray-700' : 'bg-white/50 border border-amber-200'}`}>
@@ -249,7 +249,7 @@ const LibraryView = ({
                           </div>
                         </div>
                         <button
-                          onClick={() => onToggleFavorite(book.title)}
+                          onClick={() => onToggleFavorite(book.title, { author: book.author, year: book.year, filename: book.filename, category: book.category })}
                           className="transition-transform hover:scale-110 shrink-0"
                           title={isFavorite ? 'Remover de favoritos' : 'Agregar a favoritos'}
                           aria-label={isFavorite ? 'Remover de favoritos' : 'Agregar a favoritos'}
@@ -317,7 +317,7 @@ const LibraryView = ({
               </div>
               <div className="flex flex-col gap-3">
                 {group.books.map((book, idx) => {
-                  const isFavorite = favorites.includes(book.title);
+                  const isFavorite = favorites.some(f => f.title === book.title);
                   const bookEvents = getBookEvents(timelineEvents, book);
                   return (
                     <div key={`${book.region}-${book.title}-${idx}`} className={`rounded-lg p-4 ${darkMode ? 'bg-gray-900/50 border border-gray-700' : 'bg-white/50 border border-amber-200'}`}>
@@ -336,7 +336,7 @@ const LibraryView = ({
                           </div>
                         </div>
                         <button
-                          onClick={() => onToggleFavorite(book.title)}
+                          onClick={() => onToggleFavorite(book.title, { author: book.author, year: book.year, filename: book.filename, category: book.category })}
                           className="transition-transform hover:scale-110 shrink-0"
                           title={isFavorite ? 'Remover de favoritos' : 'Agregar a favoritos'}
                           aria-label={isFavorite ? 'Remover de favoritos' : 'Agregar a favoritos'}
@@ -393,7 +393,7 @@ const LibraryView = ({
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {filtered.map((book, idx) => {
-            const isFavorite = favorites.includes(book.title);
+            const isFavorite = favorites.some(f => f.title === book.title);
             return (
               <div key={`${book.region}-${book.title}-${idx}`} className={`${cardClass} border-2 rounded-lg p-5 hover:shadow-xl transition-all flex flex-col card-appear`} style={{ animationDelay: `${Math.min(idx, 8) * 40}ms` }}>
                 <div className="flex items-start justify-between gap-2 mb-2">
@@ -401,7 +401,7 @@ const LibraryView = ({
                     {book.region}
                   </span>
                   <button
-                    onClick={() => onToggleFavorite(book.title)}
+                    onClick={() => onToggleFavorite(book.title, { author: book.author, year: book.year, filename: book.filename, category: book.category })}
                     className="transition-transform hover:scale-110"
                     title={isFavorite ? 'Remover de favoritos' : 'Agregar a favoritos'}
                     aria-label={isFavorite ? 'Remover de favoritos' : 'Agregar a favoritos'}

@@ -103,6 +103,8 @@ describe('useFavorites', () => {
   it('toggleFavorite añade una obra a favoritos en localStorage', () => {
     const { toggleFavorite } = renderHook(useFavorites);
     toggleFavorite('La Conquista del Pan');
-    expect(localStorage.getItem('favorites')).toBe(JSON.stringify(['La Conquista del Pan']));
+    const stored = JSON.parse(localStorage.getItem('favorites'));
+    expect(stored).toHaveLength(1);
+    expect(stored[0].title).toBe('La Conquista del Pan');
   });
 });

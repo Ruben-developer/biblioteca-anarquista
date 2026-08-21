@@ -127,7 +127,7 @@ describe('RegionModal', () => {
         darkMode={false}
         region={region}
         regionData={dataConResumen}
-        favorites={['Obra A']}
+        favorites={[{ title: 'Obra A', author: 'Autor A', year: 1900, filename: 'a.pdf', category: 'historia', note: '', addedAt: 1 }]}
         onClose={() => {}}
         onToggleFavorite={() => {}}
       />

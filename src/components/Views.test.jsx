@@ -215,19 +215,26 @@ describe('TimelineFilters', () => {
 });
 
 describe('FavoritesView', () => {
+  const noop = () => {};
+  const favProps = { onToggleFavorite: noop, onUpdateNote: noop, onExport: () => '', onRead: noop };
+
   it('muestra el mensaje vacío cuando no hay favoritos', () => {
     const html = renderToStaticMarkup(
-      <FavoritesView darkMode={false} favorites={[]} onToggleFavorite={() => {}} />
+      <FavoritesView darkMode={false} favorites={[]} {...favProps} />
     );
-    expect(html).toContain('Mis Favoritos');
-    expect(html).toContain('Aún no has guardado ningún texto favorito');
+    expect(html).toContain('Mi Biblioteca');
+    expect(html).toContain('Tu biblioteca personal está vacía');
   });
 
   it('lista los favoritos guardados en orden inverso', () => {
+    const favs = [
+      { title: 'Obra A', author: 'Autor A', year: 1900, filename: '', category: 'teoria', note: '', addedAt: 1 },
+      { title: 'Obra B', author: 'Autor B', year: 1910, filename: '', category: 'historia', note: '', addedAt: 2 }
+    ];
     const html = renderToStaticMarkup(
-      <FavoritesView darkMode favorites={['Obra A', 'Obra B']} onToggleFavorite={() => {}} />
+      <FavoritesView darkMode favorites={favs} {...favProps} />
     );
-    expect(html).toContain('2 textos guardados');
+    expect(html).toContain('2 textos en tu colección personal');
     expect(html).toContain('Obra A');
     expect(html).toContain('Obra B');
   });
@@ -290,19 +297,27 @@ describe('StatsPanel en modo oscuro', () => {
 });
 
 describe('FavoritesView edge cases', () => {
-  it('usa singular "texto guardado" con un solo favorito', () => {
+  const noop = () => {};
+  const favProps = { onToggleFavorite: noop, onUpdateNote: noop, onExport: () => '', onRead: noop };
+
+  it('usa singular "texto" con un solo favorito', () => {
+    const favs = [{ title: 'Obra A', author: '', year: null, filename: '', category: '', note: '', addedAt: 1 }];
     const html = renderToStaticMarkup(
-      <FavoritesView darkMode favorites={['Obra A']} onToggleFavorite={() => {}} />
+      <FavoritesView darkMode favorites={favs} {...favProps} />
     );
-    expect(html).toContain('1 texto guardado');
+    expect(html).toContain('1 texto en tu colección personal');
   });
 
   it('aplica las clases de tema oscuro', () => {
+    const favs = [
+      { title: 'Obra A', author: '', year: null, filename: '', category: '', note: '', addedAt: 1 },
+      { title: 'Obra B', author: '', year: null, filename: '', category: '', note: '', addedAt: 2 }
+    ];
     const html = renderToStaticMarkup(
-      <FavoritesView darkMode favorites={['Obra A', 'Obra B']} onToggleFavorite={() => {}} />
+      <FavoritesView darkMode favorites={favs} {...favProps} />
     );
     expect(html).toContain('text-red-400');
-    expect(html).toContain('2 textos guardados');
+    expect(html).toContain('2 textos en tu colección personal');
   });
 });
 

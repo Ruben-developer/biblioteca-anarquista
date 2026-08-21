@@ -187,7 +187,7 @@ describe('RegionModal interactivo', () => {
     expect(screen.getByText('La Columna')).toBeTruthy();
     expect(screen.queryByText('Un ensayo')).toBeNull();
     fireEvent.click(screen.getByTitle('Agregar a favoritos'));
-    expect(onToggleFavorite).toHaveBeenCalledWith('La Columna');
+    expect(onToggleFavorite).toHaveBeenCalledWith('La Columna', expect.objectContaining({ author: 'Autor' }));
     container.remove();
   });
 });
@@ -253,7 +253,10 @@ describe('LibraryView interactivo', () => {
   });
 
   it('filtra solo favoritas y lo combina con la búsqueda', () => {
-    const favorites = ['La Conquista del Pan', '¿Qué es la Propiedad?'];
+    const favorites = [
+      { title: 'La Conquista del Pan', author: 'Kropotkin', year: 1892, filename: 'a.pdf', category: 'teoria', note: '', addedAt: 1 },
+      { title: '¿Qué es la Propiedad?', author: 'Proudhon', year: 1840, filename: 'b.pdf', category: 'teoria', note: '', addedAt: 2 }
+    ];
     const { container } = render(<LibraryView darkMode={false} regionData={regionData} favorites={favorites} onToggleFavorite={noop} />);
     const grid = container.querySelector('div.grid');
     fireEvent.change(screen.getByLabelText('Filtrar por favoritos'), { target: { value: 'favorites' } });
@@ -273,7 +276,7 @@ describe('LibraryView interactivo', () => {
     const grid = container.querySelector('div.grid');
     const card = Array.from(grid.querySelectorAll('div.rounded-lg')).find((el) => el.textContent.includes('La Conquista del Pan'));
     fireEvent.click(within(card).getByTitle('Agregar a favoritos'));
-    expect(onToggleFavorite).toHaveBeenCalledWith('La Conquista del Pan');
+    expect(onToggleFavorite).toHaveBeenCalledWith('La Conquista del Pan', expect.objectContaining({ author: 'Kropotkin' }));
     container.remove();
   });
 

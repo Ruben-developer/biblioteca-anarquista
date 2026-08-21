@@ -47,8 +47,8 @@ describe('AnarchistArchive interactivo (jsdom)', () => {
     expect(screen.getByText('Autores del Archivo')).toBeTruthy();
     openDrawer(screen, fireEvent);
     fireEvent.click(screen.getByRole('button', { name: /Favoritos/ }));
-    expect(screen.getByText('Mis Favoritos')).toBeTruthy();
-    expect(screen.getByText('Aún no has guardado ningún texto favorito')).toBeTruthy();
+    expect(screen.getByText('Mi Biblioteca')).toBeTruthy();
+    expect(screen.getByText('Tu biblioteca personal está vacía')).toBeTruthy();
     container.remove();
   });
 

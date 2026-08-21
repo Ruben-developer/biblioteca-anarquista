@@ -146,7 +146,7 @@ describe('LibraryView edge cases', () => {
 
   it('marca como favorito el corazón de las obras guardadas', () => {
     const html = renderToStaticMarkup(
-      <LibraryView darkMode={false} regionData={regionData} favorites={['¿Qué es la Propiedad?']} onToggleFavorite={noop} />
+      <LibraryView darkMode={false} regionData={regionData} favorites={[{ title: '¿Qué es la Propiedad?', author: 'Proudhon', year: 1840, filename: '', category: 'teoria', note: '', addedAt: 1 }]} onToggleFavorite={noop} />
     );
     expect(html).toContain('fill-red-500 text-red-500');
   });

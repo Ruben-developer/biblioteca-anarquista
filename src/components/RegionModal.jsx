@@ -90,13 +90,13 @@ const RegionModal = ({
                   </div>
                 </div>
                 <button 
-                  onClick={() => onToggleFavorite(book.title)}
+                  onClick={() => onToggleFavorite(book.title, { author: book.author, year: book.year, filename: book.filename, category: book.category })}
                   className="flex-shrink-0 transition-transform hover:scale-110"
-                  title={favorites.includes(book.title) ? 'Remover de favoritos' : 'Agregar a favoritos'}
+                  title={favorites.some(f => f.title === book.title) ? 'Remover de favoritos' : 'Agregar a favoritos'}
                 >
                   <Heart 
                     size={20} 
-                    className={favorites.includes(book.title) ? 'fill-red-500 text-red-500' : darkMode ? 'text-gray-500 hover:text-gray-400' : 'text-amber-600 hover:text-amber-700'}
+                    className={favorites.some(f => f.title === book.title) ? 'fill-red-500 text-red-500' : darkMode ? 'text-gray-500 hover:text-gray-400' : 'text-amber-600 hover:text-amber-700'}
                   />
                 </button>
               </div>

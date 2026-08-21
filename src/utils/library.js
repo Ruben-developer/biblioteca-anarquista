@@ -59,7 +59,7 @@ export const filterBooks = (
     if (type === 'ideas' && isHistoricalBook(book)) {
       return false;
     }
-    if (Array.isArray(favorites) && !favorites.includes(book.title)) {
+    if (Array.isArray(favorites) && !favorites.some(f => (f.title || f) === book.title)) {
       return false;
     }
     return true;
