@@ -8,10 +8,7 @@ import FeaturedBook from './FeaturedBook';
 const DEFAULT_FILTERS = {
   searchTerm: '',
   category: 'all',
-  region: 'all',
   decade: 'all',
-  author: 'all',
-  availability: 'all',
   type: 'all',
   favoritesOnly: false
 };
@@ -36,10 +33,7 @@ const LibraryView = ({
 
   const [searchTerm, setSearchTerm] = useState(seed.searchTerm);
   const [category, setCategory] = useState(seed.category);
-  const [region, setRegion] = useState(seed.region);
   const [decade, setDecade] = useState(seed.decade);
-  const [author, setAuthor] = useState(seed.author);
-  const [availability, setAvailability] = useState(seed.availability);
   const [type, setType] = useState(seed.type);
   const [favoritesOnly, setFavoritesOnly] = useState(seed.favoritesOnly);
   const [sort, setSort] = useState('rating');
@@ -52,21 +46,12 @@ const LibraryView = ({
   useEffect(() => {
     setSearchTerm(initialFilters?.searchTerm ?? DEFAULT_FILTERS.searchTerm);
     setCategory(initialFilters?.category ?? DEFAULT_FILTERS.category);
-    setRegion(initialFilters?.region ?? DEFAULT_FILTERS.region);
     setDecade(initialFilters?.decade ?? DEFAULT_FILTERS.decade);
-    setAuthor(initialFilters?.author ?? DEFAULT_FILTERS.author);
-    setAvailability(initialFilters?.availability ?? DEFAULT_FILTERS.availability);
     setType(initialFilters?.type ?? DEFAULT_FILTERS.type);
     setFavoritesOnly(initialFilters?.favoritesOnly ?? DEFAULT_FILTERS.favoritesOnly);
   }, [initialFilters]);
 
   const allBooks = useMemo(() => getAllBooks(regionData), [regionData]);
-
-  // Autores disponibles para el selector dedicado (orden alfabético).
-  const availableAuthors = useMemo(
-    () => getAllAuthors(regionData).map((a) => a.name).sort((a, b) => a.localeCompare(b, 'es')),
-    [regionData]
-  );
 
   // Obra destacada del día: determinista por fecha (la misma toda la jornada).
   const featured = useMemo(() => getDailyFeaturedBook(regionData), [regionData]);
@@ -81,25 +66,19 @@ const LibraryView = ({
       filterBooks(allBooks, {
         searchTerm,
         category,
-        region,
         decade,
-        author,
-        availability,
         type,
         favorites: favoritesOnly ? favorites : null
       }),
       sort
     ),
-    [allBooks, searchTerm, category, region, decade, author, availability, type, favoritesOnly, favorites, sort]
+    [allBooks, searchTerm, category, decade, type, favoritesOnly, favorites, sort]
   );
 
   const clearFilters = () => {
     setSearchTerm(DEFAULT_FILTERS.searchTerm);
     setCategory(DEFAULT_FILTERS.category);
-    setRegion(DEFAULT_FILTERS.region);
     setDecade(DEFAULT_FILTERS.decade);
-    setAuthor(DEFAULT_FILTERS.author);
-    setAvailability(DEFAULT_FILTERS.availability);
     setType(DEFAULT_FILTERS.type);
     setFavoritesOnly(DEFAULT_FILTERS.favoritesOnly);
   };
@@ -139,7 +118,7 @@ const LibraryView = ({
         </h2>
       </div>
       <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-        {filtered.length} de {allBooks.length} obras del archivo. Busca y filtra por categoría, región, década, autor, disponibilidad, tipo o favoritos.
+        {filtered.length} de {allBooks.length} obras del archivo. Busca y filtra por categoría, década, tipo o favoritos.
       </p>
 
       <FeaturedBook darkMode={darkMode} book={featured} onRead={onRead} />
@@ -165,31 +144,11 @@ const LibraryView = ({
             ))}
           </select>
 
-          <select value={region} onChange={(e) => setRegion(e.target.value)} className={selectClass} aria-label="Filtrar por región">
-            <option value="all">Todas las regiones</option>
-            {REGIONS.filter((r) => r !== 'all').map((r) => (
-              <option key={r} value={r}>{r}</option>
-            ))}
-          </select>
-
           <select value={decade} onChange={(e) => setDecade(e.target.value)} className={selectClass} aria-label="Filtrar por década">
             <option value="all">Todas las décadas</option>
             {availableDecades.filter((d) => d !== 'all').map((d) => (
               <option key={d} value={d}>{d.replace('s', '')}s</option>
             ))}
-          </select>
-
-          <select value={author} onChange={(e) => setAuthor(e.target.value)} className={`${selectClass} max-w-[220px]`} aria-label="Filtrar por autor">
-            <option value="all">Todos los autores</option>
-            {availableAuthors.map((a) => (
-              <option key={a} value={a}>{a}</option>
-            ))}
-          </select>
-
-          <select value={availability} onChange={(e) => setAvailability(e.target.value)} className={selectClass} aria-label="Filtrar por disponibilidad">
-            <option value="all">Con y sin archivo</option>
-            <option value="withFile">Solo con archivo</option>
-            <option value="withoutFile">Solo sin archivo</option>
           </select>
 
           <select value={type} onChange={(e) => setType(e.target.value)} className={selectClass} aria-label="Filtrar por tipo de obra">
@@ -241,7 +200,7 @@ const LibraryView = ({
             {groupByRegion ? 'Desagrupar' : 'Agrupar por región'}
           </button>
 
-          {(searchTerm || category !== 'all' || region !== 'all' || decade !== 'all' || author !== 'all' || availability !== 'all' || type !== 'all' || favoritesOnly) && (
+          {(searchTerm || category !== 'all' || decade !== 'all' || type !== 'all' || favoritesOnly) && (
             <button
               onClick={clearFilters}
               className={`px-3 py-2 rounded-lg text-sm flex items-center gap-1 ${darkMode ? 'bg-red-900/40 text-red-300 hover:bg-red-900/60' : 'bg-red-100 text-red-700 hover:bg-red-200'}`}

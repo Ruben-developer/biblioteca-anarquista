@@ -82,9 +82,9 @@ const Header = ({
               lado de la hamburguesa. */}
           <div className="[grid-area:titu] md:justify-self-start min-w-0">
             <h1
-              className={`text-2xl sm:text-3xl md:text-4xl font-display tracking-tight uppercase flex items-center gap-2 md:gap-3 ${darkMode ? 'text-red-500' : ''}`}
+              className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight uppercase flex items-center gap-2 md:gap-3 ${darkMode ? 'text-red-500' : ''}`}
             >
-              <span className="text-3xl sm:text-4xl md:text-5xl">🏴</span>
+              <span className="text-4xl sm:text-5xl md:text-6xl">🏴</span>
               <span className="break-words">La Idea</span>
             </h1>
             <p className={`hidden sm:block text-xs sm:text-sm ${darkMode ? 'text-gray-400' : 'text-amber-900'}`}>
