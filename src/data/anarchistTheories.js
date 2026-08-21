@@ -91,14 +91,5 @@ export const anarchistTheories = [
     keyIdeas: ['Educación integral (física, intelectual, moral)', 'Laicismo y racionalismo', 'Autogestión pedagógica', 'La Escuela Moderna como proyecto global'],
     keyAuthors: ['Francisco Ferrer i Guardia', 'Ricardo Mella'],
     books: ['La Escuela Moderna', 'Francisco Ferrer i Guardia y la Escuela Moderna', 'La educación libertaria en la Argentina y en México (1861-1945)', 'La bala y la escuela']
-  },
-  {
-    id: 'anarcocristianismo',
-    name: 'Anarcocristianismo',
-    icon: '✝️',
-    description: 'La corriente que funde la radicalidad del Evangelio con la crítica del Estado: la no resistencia al mal, lo impersonal como sagrado y la incompatibilidad del cristianismo con toda autoridad.',
-    keyIdeas: ['No resistencia al mal por la fuerza', 'El Reino de Dios frente al Reino del César', 'Lo impersonal como lo sagrado', 'El Estado como poder contra Dios'],
-    keyAuthors: ['León Tolstói', 'Simone Weil', 'Jacques Ellul'],
-    books: ['El Reino de Dios está dentro de vosotros', '¿Qué es el arte?', 'Reflexiones sobre las causas de la libertad y de la opresión social', 'La persona y lo sagrado', 'Anarquía y cristianismo']
   }
 ];

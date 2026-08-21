@@ -71,12 +71,5 @@ export const readingPaths = [
     icon: 'book-open',
     description: 'La escuela moderna y la educación integral: enseñar a pensar, no a obedecer.',
     books: ['La Escuela Moderna', 'Francisco Ferrer i Guardia y la Escuela Moderna', 'La bala y la escuela', 'La educación libertaria en la Argentina y en México (1861-1945)']
-  },
-  {
-    id: 'anarcocristianismo',
-    title: 'Anarquismo cristiano',
-    icon: 'church',
-    description: 'De la no resistencia de Tolstói a lo impersonal de Weil y el Estado como poder de Ellul: el Evangelio como subversión radical.',
-    books: ['El Reino de Dios está dentro de vosotros', '¿Qué es el arte?', 'Reflexiones sobre las causas de la libertad y de la opresión social', 'La persona y lo sagrado', 'Anarquía y cristianismo']
   }
 ];
