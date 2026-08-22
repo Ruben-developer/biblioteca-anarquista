@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { BookOpen, ChevronDown, ChevronUp, Milestone, Library } from 'lucide-react';
+import { BookOpen, ChevronDown, ChevronUp, Library } from 'lucide-react';
 import { THEME } from '../constants';
 import { readingPaths } from '../data/readingPaths';
 import { findBookByTitle } from '../utils/library';
@@ -12,7 +11,7 @@ const ReadingPathsView = ({ darkMode, regionData, onRead = () => {}, onOpenLibra
   const toggle = (id) => setOpenId((prev) => (prev === id ? null : id));
 
   return (
-    <div>
+    <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         Rutas de lectura
       </h2>
@@ -59,7 +58,7 @@ const ReadingPathsView = ({ darkMode, regionData, onRead = () => {}, onOpenLibra
                     <div className={`absolute top-0 bottom-0 left-[11px] w-0.5 ${darkMode ? 'bg-red-600/60' : 'bg-amber-600/60'}`} />
                     <div className="flex flex-col gap-3">
                       {books.map((book, idx) => (
-                        <div key={idx} className="relative flex items-center gap-3 pl-7">
+                        <div key={book.title} className="relative flex items-center gap-3 pl-7">
                           <span className={`absolute left-0 top-1/2 -translate-y-1/2 w-5 h-5 rounded-full border-2 flex items-center justify-center text-[10px] ${
                             darkMode ? 'bg-gray-900 border-red-600 text-red-400' : 'bg-amber-50 border-amber-700 text-amber-800'
                           }`}>
@@ -79,7 +78,7 @@ const ReadingPathsView = ({ darkMode, regionData, onRead = () => {}, onOpenLibra
                                 {book.filename && (
                                   <button
                                     onClick={() => onRead(book)}
-                                    className={`flex-shrink-0 flex items-center gap-1 px-2 py-1 rounded text-xs font-medium transition-colors ${
+                                    className={`flex-shrink-0 flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-colors ${
                                       darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
                                     }`}
                                   >
@@ -125,11 +124,5 @@ const ReadingPathsView = ({ darkMode, regionData, onRead = () => {}, onOpenLibra
   );
 };
 
-ReadingPathsView.propTypes = {
-  darkMode: PropTypes.bool.isRequired,
-  regionData: PropTypes.object.isRequired,
-  onRead: PropTypes.func,
-  onOpenLibrary: PropTypes.func
-};
 
 export default ReadingPathsView;

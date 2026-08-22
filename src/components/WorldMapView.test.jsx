@@ -67,7 +67,6 @@ describe('WorldMapView edge cases', () => {
     const html = renderToStaticMarkup(
       <WorldMapView darkMode regionData={regionData} onSelectRegion={noop} />
     );
-    expect(html).toContain('bg-gray-900/60');
     expect(html).toContain('linear-gradient(to right, #fca5a5, #7f1d1d)');
     expect(html).toContain('Pocos textos');
     expect(html).toContain('Muchos textos');

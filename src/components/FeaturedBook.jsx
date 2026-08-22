@@ -2,9 +2,6 @@ import React from 'react';
 import { BookOpen, Sparkles } from 'lucide-react';
 import { THEME } from '../constants';
 
-// Widget "Obra del día": destaca una obra del archivo (seleccionada de forma
-// determinista por fecha, ver getDailyFeaturedBook) con su reseña y botón de
-// lectura, sin salir de la web.
 const FeaturedBook = ({ darkMode, book, onRead = () => {} }) => {
   if (!book) return null;
 
@@ -53,11 +50,11 @@ const FeaturedBook = ({ darkMode, book, onRead = () => {} }) => {
           {book.filename && (
             <button
               onClick={() => onRead(book)}
-              className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+              className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-colors ${
                 darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
               }`}
             >
-              <BookOpen size={14} />
+              <BookOpen size={12} />
               Leer esta obra
             </button>
           )}

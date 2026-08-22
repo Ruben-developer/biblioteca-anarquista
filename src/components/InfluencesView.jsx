@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { BookOpen, Share2 } from 'lucide-react';
 import { THEME } from '../constants';
 import { influenceNodes, influenceEdges } from '../data/influences';
 import { getAllAuthors } from '../utils/library';
 
-const NODE_R = 1.7;
-const NODE_R_ACTIVE = 2.4;
+const NODE_R = 1.1;
+const NODE_R_ACTIVE = 1.7;
 
 const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
@@ -51,9 +50,9 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
   const labelColor = darkMode ? '#E5DCD0' : '#33291A';
 
   return (
-    <div>
+    <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
-        Red de autores
+        Red de Autores
       </h2>
       <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
         {influenceNodes.length} pensadores y {influenceEdges.length} relaciones de influencia. Pasa el cursor para seguir las conexiones; haz clic para ver quién influyó en quién y sus obras.
@@ -61,7 +60,7 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
 
       <div className={`${cardClass} border-2 rounded-lg p-4 shadow-md overflow-x-auto`}>
         <svg
-          viewBox="0 0 100 62"
+          viewBox="0 -14 100 56"
           className="w-full min-w-[640px]"
           role="img"
           aria-label="Grafo de influencias entre autores anarquistas"
@@ -74,7 +73,7 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
                 d={edgePath(from, to)}
                 fill="none"
                 stroke={active ? edgeColor : dimEdgeColor}
-                strokeWidth={active ? 0.6 : 0.25}
+                strokeWidth={active ? 0.4 : 0.18}
                 opacity={active ? 1 : 0.6}
               />
             );
@@ -100,10 +99,9 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
                 />
                 <text
                   textAnchor="middle"
-                  y={NODE_R_ACTIVE + 2.2}
-                  fontSize={node.name.length > 10 ? 2.3 : 2.7}
+                  y={NODE_R_ACTIVE + 2}
+                  fontSize={node.name.length > 10 ? 1.9 : 2.2}
                   fill={labelColor}
-                  fontWeight="600"
                 >
                   {node.name}
                 </text>
@@ -184,7 +182,7 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
               <div className="flex flex-wrap gap-2">
                 {selectedAuthor.books.map((book, idx) => (
                   <div
-                    key={idx}
+                    key={book.title}
                     className={`rounded-lg border px-3 py-2 flex items-center gap-2 ${darkMode ? 'bg-gray-900/50 border-gray-700' : 'bg-white/50 border-amber-200'}`}
                   >
                     <span className={`text-xs ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
@@ -193,12 +191,12 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
                     {book.filename && (
                       <button
                         onClick={() => onRead(book)}
-                        className={`flex-shrink-0 flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium transition-colors ${
+                        className={`flex-shrink-0 flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-colors ${
                           darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
                         }`}
                         title={`Leer ${book.title}`}
                       >
-                        <BookOpen size={11} />
+                        <BookOpen size={12} />
                         Leer
                       </button>
                     )}
@@ -217,10 +215,5 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
   );
 };
 
-InfluencesView.propTypes = {
-  darkMode: PropTypes.bool.isRequired,
-  regionData: PropTypes.object.isRequired,
-  onRead: PropTypes.func
-};
 
 export default InfluencesView;

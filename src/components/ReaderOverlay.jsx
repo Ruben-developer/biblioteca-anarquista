@@ -1,12 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
-import { X, BookOpen, Download, Sun, Moon, ExternalLink } from 'lucide-react';
-import { getDocumentDownloadUrl } from '../services/documentService';
+import React, { useEffect, useState } from 'react'
+import { X, BookOpen, Download, Sun, Moon, ExternalLink, Heart } from 'lucide-react'
+import { getDocumentDownloadUrl } from '../services/documentService'
 
-// Lector embebido "modo lectura": muestra el documento en un iframe a pantalla
-// completa, sobre un fondo neutro tipo epub (claro/pergamino u oscuro),
-// con controles de cierre, descarga, abrir en pestaña y cambio de fondo.
-const ReaderOverlay = ({ book, darkMode, onClose }) => {
+const ReaderOverlay = ({ book, darkMode, onClose, favorites = [], onToggleFavorite }) => {
   const [readingDark, setReadingDark] = useState(Boolean(darkMode));
 
   useEffect(() => {
@@ -15,10 +11,10 @@ const ReaderOverlay = ({ book, darkMode, onClose }) => {
     const onKey = (e) => {
       if (e.key === 'Escape') onClose();
     };
-    window.addEventListener('keydown', onKey);
+    globalThis.addEventListener('keydown', onKey)
     return () => {
-      document.body.style.overflow = previousOverflow;
-      window.removeEventListener('keydown', onKey);
+      document.body.style.overflow = previousOverflow
+      globalThis.removeEventListener('keydown', onKey)
     };
   }, [onClose]);
 
@@ -27,10 +23,9 @@ const ReaderOverlay = ({ book, darkMode, onClose }) => {
   const url = getDocumentDownloadUrl(book.filename);
 
   return (
-    <div
+    <dialog
+      open
       className={`fixed inset-0 z-50 flex flex-col ${readingDark ? 'bg-gray-950' : 'bg-[#F5EDD9]'}`}
-      role="dialog"
-      aria-modal="true"
       aria-label={`Lector: ${book.title}`}
     >
       <div className={`flex items-center gap-3 px-4 py-3 border-b ${readingDark ? 'bg-gray-900 border-gray-800' : 'bg-[#EDE1C8] border-[#CBB788]'}`}>
@@ -90,6 +85,20 @@ const ReaderOverlay = ({ book, darkMode, onClose }) => {
               <ExternalLink size={16} />
             </a>
           )}
+          {onToggleFavorite && (
+            <button
+              onClick={() => onToggleFavorite(book.title, { author: book.author, year: book.year, filename: book.filename, category: book.category })}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+                readingDark ? 'bg-gray-800 text-gray-200 hover:bg-gray-700' : 'bg-white/70 text-gray-800 hover:bg-white'
+              }`}
+              title={favorites.some((f) => (f.title || f) === book.title) ? 'Quitar de favoritos' : 'Agregar a favoritos'}
+            >
+              <Heart
+                size={16}
+                className={favorites.some((f) => (f.title || f) === book.title) ? 'fill-red-500 text-red-500' : ''}
+              />
+            </button>
+          )}
         </div>
       </div>
 
@@ -110,14 +119,8 @@ const ReaderOverlay = ({ book, darkMode, onClose }) => {
           </div>
         )}
       </div>
-    </div>
-  );
-};
+    </dialog>
+  )
+}
 
-ReaderOverlay.propTypes = {
-  book: PropTypes.object,
-  darkMode: PropTypes.bool,
-  onClose: PropTypes.func.isRequired
-};
-
-export default ReaderOverlay;
+export default ReaderOverlay

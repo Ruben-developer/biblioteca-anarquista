@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { BookOpen, Search, BookMarked, Library } from 'lucide-react';
 import { THEME } from '../constants';
 import { glossaryTerms } from '../data/glossary';
@@ -25,7 +24,7 @@ const GlossaryView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
   }`;
 
   return (
-    <div>
+    <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         Glosario libertario
       </h2>
@@ -73,7 +72,7 @@ const GlossaryView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
                     </p>
                     <div className="space-y-1.5">
                       {books.map((book, idx) => (
-                        <div key={idx} className="flex items-center justify-between gap-2">
+                        <div key={book.title} className="flex items-center justify-between gap-2">
                           <span className={`text-xs ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                             {book.title}
                           </span>
@@ -81,12 +80,12 @@ const GlossaryView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
                             {book.filename && (
                               <button
                                 onClick={() => onRead(book)}
-                                className={`flex-shrink-0 flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium transition-colors ${
+                                className={`flex-shrink-0 flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-colors ${
                                   darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
                                 }`}
                                 title={`Leer ${book.title}`}
                               >
-                                <BookOpen size={11} />
+                                <BookOpen size={12} />
                                 Leer
                               </button>
                             )}
@@ -126,11 +125,5 @@ const GlossaryView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
   );
 };
 
-GlossaryView.propTypes = {
-  darkMode: PropTypes.bool.isRequired,
-  regionData: PropTypes.object.isRequired,
-  onRead: PropTypes.func,
-  onOpenLibrary: PropTypes.func
-};
 
 export default GlossaryView;

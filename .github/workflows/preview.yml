@@ -1,15 +1,15 @@
-name: Deploy a GitHub Pages
+name: Deploy preview (develop)
 
 on:
   push:
-    branches: [main]
+    branches: [develop]
   workflow_dispatch:
 
 permissions:
   contents: write
 
 concurrency:
-  group: pages
+  group: preview
   cancel-in-progress: true
 
 jobs:
@@ -32,18 +32,15 @@ jobs:
       - name: Tests
         run: npm test
 
-      - name: Auditoría de seguridad (informativa)
-        run: npm audit --audit-level=high || true
-
-      - name: Build
-        run: npm run build
+      - name: Build (preview)
+        run: npm run build -- --base=/preview/
         env:
           VITE_PDF_BASE: ${{ secrets.VITE_PDF_BASE }}
 
-      - name: Publicar en rama gh-pages (producción)
+      - name: Publicar en rama gh-pages (preview/develop)
         uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: dist
-          destination_dir: .
+          destination_dir: preview
           keep_files: true

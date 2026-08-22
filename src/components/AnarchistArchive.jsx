@@ -9,11 +9,11 @@ import { useScrollTop, useDarkMode, useFavorites } from '../hooks';
 // Components
 import Header from './Header';
 import Navigation from './Navigation';
-import TimelineFilters from './TimelineFilters';
 import StatsPanel from './StatsPanel';
 import TimelineView from './TimelineView';
 import WorldMapView from './WorldMapView';
 import AuthorsView from './AuthorsView';
+import InfluencesView from './InfluencesView';
 import FavoritesView from './FavoritesView';
 import LibraryView from './LibraryView';
 import TheoriesView from './TheoriesView';
@@ -27,7 +27,7 @@ import ScrollTopButton from './ScrollTopButton';
 
 const AnarchistArchive = () => {
   const { darkMode, toggleDarkMode } = useDarkMode();
-  const { favorites, toggleFavorite } = useFavorites();
+  const { favorites, toggleFavorite, updateFavoriteNote, exportFavorites } = useFavorites();
   const { showScrollTop, scrollToTop } = useScrollTop();
 
   const [activeView, setActiveView] = useState(VIEWS.LIBRARY);
@@ -117,24 +117,17 @@ const AnarchistArchive = () => {
           )}
 
           {activeView === VIEWS.TIMELINE && (
-            <div className="space-y-6">
-              <TimelineFilters
-                darkMode={darkMode}
-                filters={filters}
-                onFilterChange={setFilters}
-                onShowFilters={() => setShowFilters(!showFilters)}
-                showFilters={showFilters}
-                onClearFilters={clearFilters}
-                eventCount={filteredEvents.length}
-                totalEventCount={timelineEvents.length}
-              />
-              <TimelineView
-                darkMode={darkMode}
-                filteredEvents={filteredEvents}
-                onSelectEvent={setSelectedEvent}
-                onClearFilters={clearFilters}
-              />
-            </div>
+            <TimelineView
+              darkMode={darkMode}
+              filteredEvents={filteredEvents}
+              onSelectEvent={setSelectedEvent}
+              onClearFilters={clearFilters}
+              filters={filters}
+              onFilterChange={setFilters}
+              onShowFilters={() => setShowFilters(!showFilters)}
+              showFilters={showFilters}
+              totalEventCount={timelineEvents.length}
+            />
           )}
 
           {activeView === VIEWS.MAP && (
@@ -149,6 +142,13 @@ const AnarchistArchive = () => {
             <AuthorsView
               darkMode={darkMode}
               authors={dynamicAuthors}
+              onRead={setReadingBook}
+            />
+          )}
+
+          {activeView === VIEWS.INFLUENCES && (
+            <InfluencesView
+              darkMode={darkMode}
               regionData={regionData}
               onRead={setReadingBook}
             />
@@ -172,6 +172,9 @@ const AnarchistArchive = () => {
               darkMode={darkMode}
               favorites={favorites}
               onToggleFavorite={toggleFavorite}
+              onUpdateNote={updateFavoriteNote}
+              onExport={exportFavorites}
+              onRead={setReadingBook}
             />
           )}
 
@@ -210,11 +213,8 @@ const AnarchistArchive = () => {
 
       <footer className={`border-t-4 ${darkMode ? 'border-red-900 bg-black/30' : 'border-amber-800 bg-amber-100/60'}`}>
         <div className="container mx-auto px-4 py-8 text-center">
-          <p className={`font-display uppercase tracking-widest text-sm mb-2 ${darkMode ? 'text-gray-300' : 'text-amber-900'}`}>
+          <p className={`font-display uppercase tracking-widest text-sm ${darkMode ? 'text-gray-300' : 'text-amber-900'}`}>
             La Idea · Archivo Histórico Anarquista · 1840–1968
-          </p>
-          <p className={`text-xs ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-            Textos de dominio público · {stats.texts} registros en el catálogo
           </p>
         </div>
       </footer>
@@ -246,6 +246,8 @@ const AnarchistArchive = () => {
           book={readingBook}
           darkMode={darkMode}
           onClose={() => setReadingBook(null)}
+          favorites={favorites}
+          onToggleFavorite={toggleFavorite}
         />
       )}
 

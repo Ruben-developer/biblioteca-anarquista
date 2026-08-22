@@ -23,7 +23,7 @@ describe('EventModal', () => {
     const html = renderToStaticMarkup(
       <EventModal darkMode event={event} onClose={() => {}} />
     );
-    expect(html).toContain('role="dialog"');
+    expect(html).toContain('<dialog');
     expect(html).toContain('aria-modal="true"');
     expect(html).toContain(event.title);
     expect(html).toContain(event.quote);
@@ -46,7 +46,7 @@ describe('EventModal', () => {
     expect(html).toContain('Textos relacionados con este evento');
     expect(html).toContain('Los Mártires de Chicago');
     expect(html).not.toContain('El origen del 1º de Mayo');
-    expect(html).toContain('Ver');
+    expect(html).toContain('Leer');
   });
 
   it('no muestra textos para un evento tipo hecho (sin relatedTexts)', () => {
@@ -92,7 +92,7 @@ describe('RegionModal', () => {
         onToggleFavorite={() => {}}
       />
     );
-    expect(html).toContain('role="dialog"');
+    expect(html).toContain('<dialog');
     expect(html).toContain('Obra A');
   });
 
@@ -127,7 +127,7 @@ describe('RegionModal', () => {
         darkMode={false}
         region={region}
         regionData={dataConResumen}
-        favorites={['Obra A']}
+        favorites={[{ title: 'Obra A', author: 'Autor A', year: 1900, filename: 'a.pdf', category: 'historia', note: '', addedAt: 1 }]}
         onClose={() => {}}
         onToggleFavorite={() => {}}
       />
@@ -157,7 +157,7 @@ describe('TourModal', () => {
     const html = renderToStaticMarkup(
       <TourModal darkMode onClose={() => {}} />
     );
-    expect(html).toContain('role="dialog"');
+    expect(html).toContain('<dialog');
     expect(html).toContain('Bienvenido');
     expect(html).toContain('Comenzar');
   });

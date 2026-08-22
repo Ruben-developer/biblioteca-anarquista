@@ -187,7 +187,7 @@ describe('RegionModal interactivo', () => {
     expect(screen.getByText('La Columna')).toBeTruthy();
     expect(screen.queryByText('Un ensayo')).toBeNull();
     fireEvent.click(screen.getByTitle('Agregar a favoritos'));
-    expect(onToggleFavorite).toHaveBeenCalledWith('La Columna');
+    expect(onToggleFavorite).toHaveBeenCalledWith('La Columna', expect.objectContaining({ author: 'Autor' }));
     container.remove();
   });
 });
@@ -211,7 +211,7 @@ describe('LibraryView interactivo', () => {
   it('filtra por búsqueda y muestra el contador actualizado', () => {
     const { container } = render(<LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />);
     fireEvent.change(screen.getByLabelText('Buscar obra'), { target: { value: 'Pan' } });
-    expect(screen.getByText('1 de 3 obras del archivo. Busca y filtra por categoría, región, década, autor, disponibilidad, tipo o favoritos.')).toBeTruthy();
+    expect(screen.getByText('1 de 3 obras del archivo. Busca y filtra por categoría, década, tipo o favoritos.')).toBeTruthy();
     // Se consulta el grid de tarjetas: el widget "Obra del día" es global y no
     // depende de los filtros (puede mostrar cualquier título).
     const grid = container.querySelector('div.grid');
@@ -220,16 +220,13 @@ describe('LibraryView interactivo', () => {
     container.remove();
   });
 
-  it('filtra por región, década y categoría con los selectores', () => {
+  it('filtra por década y categoría con los selectores', () => {
     const { container } = render(<LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />);
     const grid = container.querySelector('div.grid');
-    fireEvent.change(screen.getByLabelText('Filtrar por región'), { target: { value: 'España' } });
-    expect(grid.textContent).not.toContain('¿Qué es la Propiedad?');
-    expect(grid.textContent).toContain('La Conquista del Pan');
     fireEvent.change(screen.getByLabelText('Filtrar por década'), { target: { value: '1890s' } });
-    expect(screen.getByText('1 de 3 obras del archivo. Busca y filtra por categoría, región, década, autor, disponibilidad, tipo o favoritos.')).toBeTruthy();
+    expect(screen.getByText('1 de 3 obras del archivo. Busca y filtra por categoría, década, tipo o favoritos.')).toBeTruthy();
     fireEvent.change(screen.getByLabelText('Filtrar por categoría'), { target: { value: 'teoria' } });
-    // Sigue quedando La Conquista del Pan (España, 1892, teoría); Columna Durruti (1936) queda fuera por década.
+    // Sigue quedando La Conquista del Pan (1892, teoría); Columna Durruti (1936) queda fuera por década.
     expect(grid.textContent).toContain('La Conquista del Pan');
     expect(grid.textContent).not.toContain('Columna Durruti');
     container.remove();
@@ -240,42 +237,26 @@ describe('LibraryView interactivo', () => {
     fireEvent.change(screen.getByLabelText('Buscar obra'), { target: { value: 'noexiste' } });
     expect(screen.getByText('No hay obras que coincidan con los filtros.')).toBeTruthy();
     fireEvent.click(screen.getByText('Limpiar filtros'));
-    expect(screen.getByText('3 de 3 obras del archivo. Busca y filtra por categoría, región, década, autor, disponibilidad, tipo o favoritos.')).toBeTruthy();
+    expect(screen.getByText('3 de 3 obras del archivo. Busca y filtra por categoría, década, tipo o favoritos.')).toBeTruthy();
     container.remove();
   });
 
-  it('filtra por disponibilidad y tipo de obra con los selectores', () => {
+  it('filtra por tipo de obra con el selector', () => {
     const { container } = render(<LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />);
     const grid = container.querySelector('div.grid');
-    // Todas las obras del fixture tienen archivo → "Solo con archivo" mantiene las 3.
-    fireEvent.change(screen.getByLabelText('Filtrar por disponibilidad'), { target: { value: 'withFile' } });
-    expect(screen.getByText('3 de 3 obras del archivo. Busca y filtra por categoría, región, década, autor, disponibilidad, tipo o favoritos.')).toBeTruthy();
     // "Solo históricos" deja únicamente Columna Durruti (categoría historia).
     fireEvent.change(screen.getByLabelText('Filtrar por tipo de obra'), { target: { value: 'historical' } });
     expect(grid.textContent).toContain('Columna Durruti');
     expect(grid.textContent).not.toContain('La Conquista del Pan');
     expect(grid.textContent).not.toContain('¿Qué es la Propiedad?');
-    // "Solo sin archivo" deja el grid vacío (todas tienen archivo).
-    fireEvent.change(screen.getByLabelText('Filtrar por disponibilidad'), { target: { value: 'withoutFile' } });
-    expect(screen.getByText('No hay obras que coincidan con los filtros.')).toBeTruthy();
-    container.remove();
-  });
-
-  it('filtra por autor con el selector dedicado', () => {
-    const { container } = render(<LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />);
-    const grid = container.querySelector('div.grid');
-    fireEvent.change(screen.getByLabelText('Filtrar por autor'), { target: { value: 'Kropotkin' } });
-    expect(grid.textContent).toContain('La Conquista del Pan');
-    expect(grid.textContent).not.toContain('Columna Durruti');
-    expect(grid.textContent).not.toContain('¿Qué es la Propiedad?');
-    // El botón "Limpiar filtros" aparece con el filtro de autor activo y lo resetea.
-    fireEvent.click(screen.getByText('Limpiar filtros'));
-    expect(screen.getByText('3 de 3 obras del archivo. Busca y filtra por categoría, región, década, autor, disponibilidad, tipo o favoritos.')).toBeTruthy();
     container.remove();
   });
 
   it('filtra solo favoritas y lo combina con la búsqueda', () => {
-    const favorites = ['La Conquista del Pan', '¿Qué es la Propiedad?'];
+    const favorites = [
+      { title: 'La Conquista del Pan', author: 'Kropotkin', year: 1892, filename: 'a.pdf', category: 'teoria', note: '', addedAt: 1 },
+      { title: '¿Qué es la Propiedad?', author: 'Proudhon', year: 1840, filename: 'b.pdf', category: 'teoria', note: '', addedAt: 2 }
+    ];
     const { container } = render(<LibraryView darkMode={false} regionData={regionData} favorites={favorites} onToggleFavorite={noop} />);
     const grid = container.querySelector('div.grid');
     fireEvent.change(screen.getByLabelText('Filtrar por favoritos'), { target: { value: 'favorites' } });
@@ -295,7 +276,7 @@ describe('LibraryView interactivo', () => {
     const grid = container.querySelector('div.grid');
     const card = Array.from(grid.querySelectorAll('div.rounded-lg')).find((el) => el.textContent.includes('La Conquista del Pan'));
     fireEvent.click(within(card).getByTitle('Agregar a favoritos'));
-    expect(onToggleFavorite).toHaveBeenCalledWith('La Conquista del Pan');
+    expect(onToggleFavorite).toHaveBeenCalledWith('La Conquista del Pan', expect.objectContaining({ author: 'Kropotkin' }));
     container.remove();
   });
 
@@ -346,11 +327,12 @@ describe('LibraryView interactivo', () => {
 
   it('la vista agrupada respeta los filtros activos', () => {
     const { container } = render(<LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />);
-    fireEvent.change(screen.getByLabelText('Filtrar por autor'), { target: { value: 'Kropotkin' } });
+    fireEvent.change(screen.getByLabelText('Filtrar por tipo de obra'), { target: { value: 'historical' } });
     fireEvent.click(screen.getByRole('button', { name: /Agrupar por autor/ }));
     const grouped = container.querySelector('div.flex.flex-col.gap-4');
-    expect(grouped.textContent).toContain('Kropotkin');
-    expect(grouped.textContent).toContain('La Conquista del Pan');
+    // Solo Columna Durruti es histórica
+    expect(grouped.textContent).toContain('Columna Durruti');
+    expect(grouped.textContent).not.toContain('La Conquista del Pan');
     expect(grouped.textContent).not.toContain('¿Qué es la Propiedad?');
     container.remove();
   });
@@ -379,17 +361,6 @@ describe('LibraryView interactivo', () => {
     expect(container.querySelector('div.grid')).toBeTruthy();
     container.remove();
   });
-
-  it('la vista agrupada por región respeta el filtro de región activo', () => {
-    const { container } = render(<LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />);
-    fireEvent.change(screen.getByLabelText('Filtrar por región'), { target: { value: 'España' } });
-    fireEvent.click(screen.getByRole('button', { name: /Agrupar por región/ }));
-    const grouped = container.querySelector('div.flex.flex-col.gap-4');
-    expect(grouped.textContent).toContain('España');
-    expect(grouped.textContent).toContain('La Conquista del Pan');
-    expect(grouped.textContent).not.toContain('¿Qué es la Propiedad?');
-    container.remove();
-  });
 });
 
 describe('AnarchistArchive interactivo (navegación completa)', () => {
@@ -401,7 +372,8 @@ describe('AnarchistArchive interactivo (navegación completa)', () => {
   it('navega a Biblioteca y filtra una obra desde el buscador', () => {
     const { container } = render(<AnarchistArchive />);
     openDrawer();
-    fireEvent.click(screen.getByRole('button', { name: /Biblioteca/ }));
+    const navButtons = screen.getAllByRole('button', { name: /Biblioteca/ });
+    fireEvent.click(navButtons[0]);
     expect(screen.getAllByText('Biblioteca').length).toBeGreaterThan(0);
     fireEvent.change(screen.getByLabelText('Buscar obra'), { target: { value: 'Kropotkin' } });
     expect(screen.getAllByText(/Kropotkin/).length).toBeGreaterThan(0);
@@ -424,7 +396,8 @@ it('abre un evento de la línea temporal y cierra el modal con Escape', () => {
   it('referencia cruzada: desde la Biblioteca abre el evento en la línea temporal', () => {
     const { container } = render(<AnarchistArchive />);
     openDrawer();
-    fireEvent.click(screen.getByRole('button', { name: /Biblioteca/ }));
+    const navButtons = screen.getAllByRole('button', { name: /Biblioteca/ });
+    fireEvent.click(navButtons[0]);
     const link = screen.getAllByText(/Ver en la línea temporal:/)[0];
     const eventTitle = link.textContent.replace('Ver en la línea temporal: ', '').split(' (')[0];
     fireEvent.click(link);
@@ -481,7 +454,8 @@ it('abre un evento de la línea temporal y cierra el modal con Escape', () => {
     expect(screen.getByLabelText('Buscar obra').value).not.toBe('');
     // Navegar a Biblioteca desde el menú vuelve a abrir el catálogo completo.
     openDrawer();
-    fireEvent.click(screen.getByRole('button', { name: /Biblioteca/ }));
+    const navButtons = screen.getAllByRole('button', { name: /Biblioteca/ });
+    fireEvent.click(navButtons[0]);
     expect(screen.getByLabelText('Buscar obra').value).toBe('');
     container.remove();
   });
@@ -535,16 +509,17 @@ describe('Navigation móvil (drawer/hamburguesa)', () => {
     const drawer = screen.getByRole('dialog', { name: 'Menú de navegación' });
     expect(drawer).toBeTruthy();
     expect(screen.getByRole('button', { name: 'Abrir menú de navegación' }).getAttribute('aria-expanded')).toBe('true');
-    expect(within(drawer).getByRole('button', { name: /Biblioteca/ })).toBeTruthy();
+    expect(within(drawer).getAllByRole('button', { name: /Biblioteca/ }).length).toBeGreaterThanOrEqual(1);
     expect(within(drawer).getByRole('button', { name: /Mapa/ })).toBeTruthy();
     expect(within(drawer).getByRole('button', { name: /Línea Temporal/ })).toBeTruthy();
-    expect(within(drawer).getByRole('button', { name: /Autores/ })).toBeTruthy();
+    expect(within(drawer).getAllByRole('button', { name: /Autores/ }).length).toBeGreaterThanOrEqual(1);
     expect(within(drawer).getByRole('button', { name: /Teorías/ })).toBeTruthy();
     expect(within(drawer).getByRole('button', { name: /Rutas/ })).toBeTruthy();
     expect(within(drawer).getByRole('button', { name: /Glosario/ })).toBeTruthy();
-    expect(within(drawer).getByRole('button', { name: /Favoritos \(3\)/ })).toBeTruthy();
+    expect(within(drawer).getByRole('button', { name: /Mi Biblioteca \(3\)/ })).toBeTruthy();
     // La vista activa se marca con aria-current en el drawer.
-    expect(within(drawer).getByRole('button', { name: /Biblioteca/ }).getAttribute('aria-current')).toBe('page');
+    const bibliotecaBtn = within(drawer).getAllByRole('button', { name: /Biblioteca/ })[0];
+    expect(bibliotecaBtn.getAttribute('aria-current')).toBe('page');
     container.remove();
   });
 

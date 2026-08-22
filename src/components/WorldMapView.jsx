@@ -45,7 +45,7 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
   };
 
   const handleCountryClick = (context) => {
-    if (!(context.countryValue > 0)) return;
+    if (context.countryValue <= 0) return;
     const region = getRegionForContext(context);
     if (region) onSelectRegion(region);
   };
@@ -55,7 +55,7 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
     // Los países sin textos históricos (p. ej. Inglaterra, que solo tiene teoría)
     // quedan en gris y no responden al clic aunque existan en regionData.
     const count = typeof context.countryValue === 'number' ? context.countryValue : 0;
-    if (!(count > 0)) {
+    if (count <= 0) {
       return {
         fill: darkMode ? '#3f3f46' : '#e7e5e4',
         stroke: darkMode ? '#52525b' : '#d6d3d1',

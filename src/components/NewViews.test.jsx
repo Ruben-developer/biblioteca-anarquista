@@ -165,7 +165,7 @@ describe('ReadingPathsView', () => {
 describe('InfluencesView', () => {
   it('renderiza el grafo con nodos y leyenda', () => {
     const html = renderToStaticMarkup(<InfluencesView darkMode={false} regionData={regionData} />);
-    expect(html).toContain('Red de autores');
+    expect(html).toContain('Red de Autores');
     expect(html).toContain('Grafo de influencias');
     expect(html).toContain('Haz clic en cualquier autor');
   });
@@ -189,8 +189,8 @@ describe('ReaderOverlay', () => {
     const html = renderToStaticMarkup(
       <ReaderOverlay book={book} darkMode={false} onClose={() => {}} />
     );
-    expect(html).toContain('role="dialog"');
-    expect(html).toContain('aria-modal="true"');
+    expect(html).toContain('<dialog');
+    expect(html).toContain('Lector: La Conquista del Pan');
     expect(html).toContain('La Conquista del Pan');
     expect(html).toContain('/pdfs/anarquismo/conquista.pdf');
     expect(html).toContain('Cerrar');

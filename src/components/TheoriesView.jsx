@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { BookOpen, ChevronDown, ChevronUp, Compass, Library } from 'lucide-react';
 import { THEME } from '../constants';
 import { anarchistTheories } from '../data/anarchistTheories';
@@ -12,7 +11,7 @@ const TheoriesView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
   const toggle = (id) => setOpenId((prev) => (prev === id ? null : id));
 
   return (
-    <div>
+    <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         Teorías y corrientes del anarquismo
       </h2>
@@ -89,7 +88,7 @@ const TheoriesView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
                               {book.filename && (
                                 <button
                                   onClick={() => onRead(book)}
-                                  className={`flex items-center gap-1 px-2 py-1 rounded text-xs font-medium transition-colors ${
+                                  className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-colors ${
                                     darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
                                   }`}
                                 >
@@ -141,11 +140,5 @@ const TheoriesView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
   );
 };
 
-TheoriesView.propTypes = {
-  darkMode: PropTypes.bool.isRequired,
-  regionData: PropTypes.object.isRequired,
-  onRead: PropTypes.func,
-  onOpenLibrary: PropTypes.func
-};
 
 export default TheoriesView;

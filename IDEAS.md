@@ -40,6 +40,12 @@
 ## Otros pendientes (de PLAN.md, relacionados)
 - Export a TXT/EPUB además de PDF (el botón Descargar ya existe).
 - Importar textos propios del servidor (401 PDFs + 125 docx) con `@content-importer`.
+- Importar 43 PDFs de la colección Crimental (`libros-crimental-coleccion/`) pendientes de clasificar.
+
+## Funcionalidades grandes (backlog 2026-08-21)
+- **F1 — Lector mejorado**: EPUB export + barra de progreso de lectura (localStorage) + "continuar leyendo" en portada + notas del lector (resaltar pasajes y guardar anotaciones por libro).
+- **F2 — Comparador de pensadores**: seleccionar 2 autores del grafo y ver biografía comparada, obras, conexiones de influencia compartidas, cita representativa sobre un mismo tema.
+- **F3 — Búsqueda semántica + filtros cruzados**: buscar "apoyo mutuo" y que devuelva a Kropotkin, filtros persistentes entre vistas, tags emergentes de resúmenes, "obras relacionadas" al ver un libro.
 
 ## Mejoras de herramientas y procesos (anotadas 2026-08-12)
 - **PDFs sin backup**: `pdfs-local/` (665 MB, gitignored) es el único activo

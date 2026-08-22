@@ -1,22 +1,190 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import { Search, BookOpen, Heart, X, CalendarClock, Users, MapPin } from 'lucide-react';
-import { THEME, CATEGORIES, REGIONS } from '../constants';
-import { getAllBooks, getAllAuthors, filterBooks, sortBooks, getDecadeFromYear, getDailyFeaturedBook, getBookEvents, groupBooksByAuthor, groupBooksByRegion } from '../utils/library';
-import FeaturedBook from './FeaturedBook';
+import React, { useEffect, useMemo, useState } from 'react'
+import { Search, BookOpen, Heart, X, CalendarClock, Users, MapPin } from 'lucide-react'
+import { THEME, CATEGORIES } from '../constants'
+import { getAllBooks, filterBooks, sortBooks, getDecadeFromYear, getDailyFeaturedBook, getBookEvents, groupBooksByAuthor, groupBooksByRegion } from '../utils/library'
+import FeaturedBook from './FeaturedBook'
 
-// Valores por defecto de los filtros (también usados por "Limpiar filtros").
 const DEFAULT_FILTERS = {
   searchTerm: '',
   category: 'all',
-  region: 'all',
   decade: 'all',
-  author: 'all',
-  availability: 'all',
   type: 'all',
   favoritesOnly: false
-};
+}
 
-const DECADE_OPTIONS = ['all', '1840s', '1850s', '1860s', '1870s', '1880s', '1890s', '1900s', '1910s', '1920s', '1930s', '1940s', '1950s', '1960s'];
+const DECADE_OPTIONS = ['all', '1840s', '1850s', '1860s', '1870s', '1880s', '1890s', '1900s', '1910s', '1920s', '1930s', '1940s', '1950s', '1960s']
+
+const getHeartClass = (isFav, darkMode) => {
+  if (isFav) return 'fill-red-500 text-red-500'
+  return darkMode ? 'text-gray-500' : 'text-amber-600'
+}
+
+const getGroupBtnClass = (active, darkMode) => {
+  if (active) return darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
+  return darkMode ? 'bg-gray-800 border border-gray-700 text-gray-300 hover:bg-gray-700' : 'bg-white border border-amber-300 text-gray-700 hover:bg-amber-100'
+}
+
+const getLeerBtnClass = (darkMode) =>
+  darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
+
+const getSinArchivoClass = (darkMode) =>
+  darkMode ? 'border-gray-700 text-gray-500' : 'border-amber-300 text-amber-600'
+
+const BookEventLink = ({ book, timelineEvents, onOpenEvent, darkMode }) => {
+  const bookEvents = getBookEvents(timelineEvents, book)
+  if (!bookEvents.length) return null
+  return (
+    <button
+      onClick={() => onOpenEvent(bookEvents[0])}
+      className={`mt-2 flex items-center gap-1.5 text-xs font-medium transition-colors ${
+        darkMode ? 'text-red-400 hover:text-red-300' : 'text-amber-700 hover:text-amber-900'
+      } hover:underline`}
+      title={`Ir al evento de la línea temporal: ${bookEvents[0].title} (${bookEvents[0].year})`}
+    >
+      <CalendarClock size={14} />
+      Ver en la línea temporal: {bookEvents[0].title} ({bookEvents[0].year})
+    </button>
+  )
+}
+
+const LeerButton = ({ book, onRead, darkMode }) => {
+  if (!book.filename) {
+    return (
+      <span
+        className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm border ${getSinArchivoClass(darkMode)}`}
+        title="Esta obra aún no tiene archivo digitalizado en el archivo"
+      >
+        Sin archivo disponible
+      </span>
+    )
+  }
+  return (
+    <button
+      onClick={() => onRead(book)}
+      className={`flex items-center justify-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-colors ${getLeerBtnClass(darkMode)}`}
+    >
+      <BookOpen size={12} />
+      Leer
+    </button>
+  )
+}
+
+const FavoriteButton = ({ book, isFavorite, onToggleFavorite, darkMode, size = 18 }) => (
+  <button
+    onClick={() => onToggleFavorite(book.title, { author: book.author, year: book.year, filename: book.filename, category: book.category })}
+    className="transition-transform hover:scale-110 shrink-0"
+    title={isFavorite ? 'Remover de favoritos' : 'Agregar a favoritos'}
+    aria-label={isFavorite ? 'Remover de favoritos' : 'Agregar a favoritos'}
+  >
+    <Heart size={size} className={getHeartClass(isFavorite, darkMode)} />
+  </button>
+)
+
+const BookMeta = ({ book, darkMode }) => (
+  <div className="flex items-center gap-3 text-xs flex-wrap mt-1">
+    <span className={`px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800 text-gray-300' : 'bg-amber-200 text-amber-900'}`}>
+      {book.region || book.author}
+    </span>
+    <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>📅 {book.year || '—'}</span>
+    <span className={`px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800' : 'bg-amber-200'}`}>{book.category}</span>
+    {book.rating && <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>⭐ {book.rating}</span>}
+  </div>
+)
+
+const BookCardInGroup = ({ book, favorites, onToggleFavorite, onRead, onOpenEvent, timelineEvents, darkMode }) => {
+  const isFav = favorites.some((f) => f.title === book.title)
+  return (
+    <div className={`rounded-lg p-4 ${darkMode ? 'bg-gray-900/50 border border-gray-700' : 'bg-white/50 border border-amber-200'}`}>
+      <div className="flex items-start justify-between gap-2 mb-1">
+        <div>
+          <h4 className={`font-semibold ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
+            {book.title}
+          </h4>
+          <BookMeta book={book} darkMode={darkMode} />
+        </div>
+        <FavoriteButton book={book} isFavorite={isFav} onToggleFavorite={onToggleFavorite} darkMode={darkMode} size={18} />
+      </div>
+      <BookEventLink book={book} timelineEvents={timelineEvents} onOpenEvent={onOpenEvent} darkMode={darkMode} />
+      <div className="flex items-center gap-3 mt-3">
+        <LeerButton book={book} onRead={onRead} darkMode={darkMode} />
+      </div>
+    </div>
+  )
+}
+
+const GroupSection = ({ group, cardClass, darkMode, favorites, onToggleFavorite, onRead, onOpenEvent, timelineEvents, icon: Icon }) => (
+  <div key={group.name} className={`${cardClass} border-2 rounded-lg p-5`}>
+    <div className="flex items-center justify-between gap-2 mb-4">
+      <h3 className={`font-bold text-lg flex items-center gap-2 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
+        <Icon size={16} className={darkMode ? 'text-red-400' : 'text-amber-700'} />
+        {group.name}
+      </h3>
+      <span className={`text-xs px-2 py-1 rounded-full ${darkMode ? 'bg-gray-700 text-gray-300' : 'bg-amber-200 text-amber-900'}`}>
+        {group.bookCount} {group.bookCount === 1 ? 'obra' : 'obras'}
+      </span>
+    </div>
+    <div className="flex flex-col gap-3">
+      {group.books.map((book) => (
+        <BookCardInGroup
+          key={`${book.region}-${book.title}`}
+          book={book}
+          favorites={favorites}
+          onToggleFavorite={onToggleFavorite}
+          onRead={onRead}
+          onOpenEvent={onOpenEvent}
+          timelineEvents={timelineEvents}
+          darkMode={darkMode}
+        />
+      ))}
+    </div>
+  </div>
+)
+
+const GridCard = ({ book, idx, favorites, onToggleFavorite, onRead, onOpenEvent, timelineEvents, darkMode, cardClass }) => {
+  const isFav = favorites.some((f) => f.title === book.title)
+  const bookEvents = getBookEvents(timelineEvents, book)
+  return (
+    <div key={`${book.region}-${book.title}`} className={`${cardClass} border-2 rounded-lg p-5 hover:shadow-xl transition-all flex flex-col card-appear`} style={{ animationDelay: `${Math.min(idx, 8) * 40}ms` }}>
+      <div className="flex items-start justify-between gap-2 mb-2">
+        <span className={`text-xs px-2 py-1 rounded-full ${darkMode ? 'bg-gray-700 text-gray-300' : 'bg-amber-200 text-amber-900'}`}>
+          {book.region}
+        </span>
+        <FavoriteButton book={book} isFavorite={isFav} onToggleFavorite={onToggleFavorite} darkMode={darkMode} />
+      </div>
+      <h3 className={`font-bold ${darkMode ? 'text-gray-100' : 'text-gray-800'} mb-1`}>
+        {book.title}
+      </h3>
+      <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'} mb-3`}>
+        por {book.author}
+      </p>
+      <div className="flex items-center gap-3 text-xs flex-wrap mb-3">
+        <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>📅 {book.year || '—'}</span>
+        <span className={`px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800' : 'bg-amber-200'}`}>{book.category}</span>
+        {book.rating && <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>⭐ {book.rating}</span>}
+      </div>
+      {book.summary && (
+        <p className={`text-xs ${darkMode ? 'text-gray-500' : 'text-gray-600'} mb-4 line-clamp-2 flex-1`}>
+          {book.summary}
+        </p>
+      )}
+      {bookEvents.length > 0 && (
+        <button
+          onClick={() => onOpenEvent(bookEvents[0])}
+          className={`mb-3 flex items-center gap-1.5 text-xs font-medium transition-colors ${
+            darkMode ? 'text-red-400 hover:text-red-300' : 'text-amber-700 hover:text-amber-900'
+          } hover:underline`}
+          title={`Ir al evento de la línea temporal: ${bookEvents[0].title} (${bookEvents[0].year})`}
+        >
+          <CalendarClock size={14} />
+          Ver en la línea temporal: {bookEvents[0].title} ({bookEvents[0].year})
+        </button>
+      )}
+      <div className="flex items-center gap-3 mt-auto">
+        <LeerButton book={book} onRead={onRead} darkMode={darkMode} />
+      </div>
+    </div>
+  )
+}
 
 const LibraryView = ({
   darkMode,
@@ -28,118 +196,114 @@ const LibraryView = ({
   onRead = () => {},
   initialFilters = null
 }) => {
-  const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
+  const cardClass = darkMode ? THEME.dark.card : THEME.light.card
+  const seed = { ...DEFAULT_FILTERS, ...initialFilters }
 
-  // Filtros iniciales (para cross-links desde Teorías/Rutas/Glosario): si llega
-  // el objeto `initialFilters`, la biblioteca nace con esos filtros aplicados.
-  const seed = { ...DEFAULT_FILTERS, ...(initialFilters || {}) };
+  const [searchTerm, setSearchTerm] = useState(seed.searchTerm)
+  const [category, setCategory] = useState(seed.category)
+  const [decade, setDecade] = useState(seed.decade)
+  const [type, setType] = useState(seed.type)
+  const [favoritesOnly, setFavoritesOnly] = useState(seed.favoritesOnly)
+  const [sort, setSort] = useState('rating')
+  const [groupByAuthor, setGroupByAuthor] = useState(false)
+  const [groupByRegion, setGroupByRegion] = useState(false)
 
-  const [searchTerm, setSearchTerm] = useState(seed.searchTerm);
-  const [category, setCategory] = useState(seed.category);
-  const [region, setRegion] = useState(seed.region);
-  const [decade, setDecade] = useState(seed.decade);
-  const [author, setAuthor] = useState(seed.author);
-  const [availability, setAvailability] = useState(seed.availability);
-  const [type, setType] = useState(seed.type);
-  const [favoritesOnly, setFavoritesOnly] = useState(seed.favoritesOnly);
-  const [sort, setSort] = useState('rating');
-  const [groupByAuthor, setGroupByAuthor] = useState(false);
-  const [groupByRegion, setGroupByRegion] = useState(false);
-
-  // Cuando un cross-link cambia `initialFilters` sin desmontar la vista (p. ej.
-  // se navega otra vez a Biblioteca desde el nav), se resincronizan los filtros.
-  // Un valor `null` restaura los valores por defecto (catálogo completo).
   useEffect(() => {
-    setSearchTerm(initialFilters?.searchTerm ?? DEFAULT_FILTERS.searchTerm);
-    setCategory(initialFilters?.category ?? DEFAULT_FILTERS.category);
-    setRegion(initialFilters?.region ?? DEFAULT_FILTERS.region);
-    setDecade(initialFilters?.decade ?? DEFAULT_FILTERS.decade);
-    setAuthor(initialFilters?.author ?? DEFAULT_FILTERS.author);
-    setAvailability(initialFilters?.availability ?? DEFAULT_FILTERS.availability);
-    setType(initialFilters?.type ?? DEFAULT_FILTERS.type);
-    setFavoritesOnly(initialFilters?.favoritesOnly ?? DEFAULT_FILTERS.favoritesOnly);
-  }, [initialFilters]);
+    setSearchTerm(initialFilters?.searchTerm ?? DEFAULT_FILTERS.searchTerm)
+    setCategory(initialFilters?.category ?? DEFAULT_FILTERS.category)
+    setDecade(initialFilters?.decade ?? DEFAULT_FILTERS.decade)
+    setType(initialFilters?.type ?? DEFAULT_FILTERS.type)
+    setFavoritesOnly(initialFilters?.favoritesOnly ?? DEFAULT_FILTERS.favoritesOnly)
+  }, [initialFilters])
 
-  const allBooks = useMemo(() => getAllBooks(regionData), [regionData]);
-
-  // Autores disponibles para el selector dedicado (orden alfabético).
-  const availableAuthors = useMemo(
-    () => getAllAuthors(regionData).map((a) => a.name).sort((a, b) => a.localeCompare(b, 'es')),
-    [regionData]
-  );
-
-  // Obra destacada del día: determinista por fecha (la misma toda la jornada).
-  const featured = useMemo(() => getDailyFeaturedBook(regionData), [regionData]);
+  const allBooks = useMemo(() => getAllBooks(regionData), [regionData])
+  const featured = useMemo(() => getDailyFeaturedBook(regionData), [regionData])
 
   const availableDecades = useMemo(() => {
-    const set = new Set(allBooks.map((b) => getDecadeFromYear(b.year)).filter((d) => d !== 'all'));
-    return DECADE_OPTIONS.filter((d) => d === 'all' || set.has(d));
-  }, [allBooks]);
+    const set = new Set(allBooks.map((b) => getDecadeFromYear(b.year)).filter((d) => d !== 'all'))
+    return DECADE_OPTIONS.filter((d) => d === 'all' || set.has(d))
+  }, [allBooks])
 
   const filtered = useMemo(
     () => sortBooks(
-      filterBooks(allBooks, {
-        searchTerm,
-        category,
-        region,
-        decade,
-        author,
-        availability,
-        type,
-        favorites: favoritesOnly ? favorites : null
-      }),
+      filterBooks(allBooks, { searchTerm, category, decade, type, favorites: favoritesOnly ? favorites : null }),
       sort
     ),
-    [allBooks, searchTerm, category, region, decade, author, availability, type, favoritesOnly, favorites, sort]
-  );
+    [allBooks, searchTerm, category, decade, type, favoritesOnly, favorites, sort]
+  )
 
   const clearFilters = () => {
-    setSearchTerm(DEFAULT_FILTERS.searchTerm);
-    setCategory(DEFAULT_FILTERS.category);
-    setRegion(DEFAULT_FILTERS.region);
-    setDecade(DEFAULT_FILTERS.decade);
-    setAuthor(DEFAULT_FILTERS.author);
-    setAvailability(DEFAULT_FILTERS.availability);
-    setType(DEFAULT_FILTERS.type);
-    setFavoritesOnly(DEFAULT_FILTERS.favoritesOnly);
-  };
+    setSearchTerm(DEFAULT_FILTERS.searchTerm)
+    setCategory(DEFAULT_FILTERS.category)
+    setDecade(DEFAULT_FILTERS.decade)
+    setType(DEFAULT_FILTERS.type)
+    setFavoritesOnly(DEFAULT_FILTERS.favoritesOnly)
+  }
 
-  // Vista agrupada por autor: agrupa los libros YA filtrados y ordenados.
-  const groupedBooks = useMemo(() => groupBooksByAuthor(filtered), [filtered]);
-  // Vista agrupada por región: misma premisa, agrupa por región.
-  const groupedByRegion = useMemo(() => groupBooksByRegion(filtered), [filtered]);
+  const groupedBooks = useMemo(() => groupBooksByAuthor(filtered), [filtered])
+  const groupedByRegion = useMemo(() => groupBooksByRegion(filtered), [filtered])
 
   const toggleGroupByAuthor = () => {
-    setGroupByAuthor((v) => !v);
-    if (!groupByAuthor) setGroupByRegion(false);
-  };
+    setGroupByAuthor((v) => !v)
+    if (!groupByAuthor) setGroupByRegion(false)
+  }
   const toggleGroupByRegion = () => {
-    setGroupByRegion((v) => !v);
-    if (!groupByRegion) setGroupByAuthor(false);
-  };
+    setGroupByRegion((v) => !v)
+    if (!groupByRegion) setGroupByAuthor(false)
+  }
+
+  const hasActiveFilters = searchTerm || category !== 'all' || decade !== 'all' || type !== 'all' || favoritesOnly
 
   const selectClass = `px-3 py-2 rounded-lg border text-sm max-w-full overflow-hidden text-ellipsis whitespace-nowrap ${
-    darkMode
-      ? 'bg-gray-800 border-gray-700 text-gray-200'
-      : 'bg-white border-amber-300 text-gray-800'
-  }`;
+    darkMode ? 'bg-gray-800 border-gray-700 text-gray-200' : 'bg-white border-amber-300 text-gray-800'
+  }`
 
   const inputClass = `w-full md:w-72 px-4 py-2 rounded-lg border text-sm ${
-    darkMode
-      ? 'bg-gray-800 border-gray-700 text-gray-200 placeholder-gray-500'
-      : 'bg-white border-amber-300 text-gray-800 placeholder-amber-700'
-  }`;
+    darkMode ? 'bg-gray-800 border-gray-700 text-gray-200 placeholder-gray-500' : 'bg-white border-amber-300 text-gray-800 placeholder-amber-700'
+  }`
+
+  const renderContent = () => {
+    if (filtered.length === 0) {
+      return (
+        <p className={`text-center py-12 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
+          No hay obras que coincidan con los filtros.
+        </p>
+      )
+    }
+    if (groupByRegion) {
+      return (
+        <div className="flex flex-col gap-4">
+          {groupedByRegion.map((group) => (
+            <GroupSection key={group.name} group={group} cardClass={cardClass} darkMode={darkMode} favorites={favorites} onToggleFavorite={onToggleFavorite} onRead={onRead} onOpenEvent={onOpenEvent} timelineEvents={timelineEvents} icon={MapPin} />
+          ))}
+        </div>
+      )
+    }
+    if (groupByAuthor) {
+      return (
+        <div className="flex flex-col gap-4">
+          {groupedBooks.map((group) => (
+            <GroupSection key={group.name} group={group} cardClass={cardClass} darkMode={darkMode} favorites={favorites} onToggleFavorite={onToggleFavorite} onRead={onRead} onOpenEvent={onOpenEvent} timelineEvents={timelineEvents} icon={Users} />
+          ))}
+        </div>
+      )
+    }
+    return (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {filtered.map((book, idx) => (
+          <GridCard key={`${book.region}-${book.title}`} book={book} idx={idx} favorites={favorites} onToggleFavorite={onToggleFavorite} onRead={onRead} onOpenEvent={onOpenEvent} timelineEvents={timelineEvents} darkMode={darkMode} cardClass={cardClass} />
+        ))}
+      </div>
+    )
+  }
 
   return (
     <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
-      <div className="flex items-center gap-3 mb-2">
-        <BookOpen className={darkMode ? 'text-red-400' : 'text-amber-800'} size={28} />
-        <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
-          Biblioteca
-        </h2>
-      </div>
+      <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
+        Biblioteca
+      </h2>
       <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-        {filtered.length} de {allBooks.length} obras del archivo. Busca y filtra por categoría, región, década, autor, disponibilidad, tipo o favoritos.
+        {filtered.length} de {allBooks.length} obras del archivo. Busca y filtra por categoría, década, tipo o favoritos.
       </p>
 
       <FeaturedBook darkMode={darkMode} book={featured} onRead={onRead} />
@@ -165,31 +329,11 @@ const LibraryView = ({
             ))}
           </select>
 
-          <select value={region} onChange={(e) => setRegion(e.target.value)} className={selectClass} aria-label="Filtrar por región">
-            <option value="all">Todas las regiones</option>
-            {REGIONS.filter((r) => r !== 'all').map((r) => (
-              <option key={r} value={r}>{r}</option>
-            ))}
-          </select>
-
           <select value={decade} onChange={(e) => setDecade(e.target.value)} className={selectClass} aria-label="Filtrar por década">
             <option value="all">Todas las décadas</option>
             {availableDecades.filter((d) => d !== 'all').map((d) => (
               <option key={d} value={d}>{d.replace('s', '')}s</option>
             ))}
-          </select>
-
-          <select value={author} onChange={(e) => setAuthor(e.target.value)} className={`${selectClass} max-w-[220px]`} aria-label="Filtrar por autor">
-            <option value="all">Todos los autores</option>
-            {availableAuthors.map((a) => (
-              <option key={a} value={a}>{a}</option>
-            ))}
-          </select>
-
-          <select value={availability} onChange={(e) => setAvailability(e.target.value)} className={selectClass} aria-label="Filtrar por disponibilidad">
-            <option value="all">Con y sin archivo</option>
-            <option value="withFile">Solo con archivo</option>
-            <option value="withoutFile">Solo sin archivo</option>
           </select>
 
           <select value={type} onChange={(e) => setType(e.target.value)} className={selectClass} aria-label="Filtrar por tipo de obra">
@@ -215,11 +359,7 @@ const LibraryView = ({
             aria-pressed={groupByAuthor}
             aria-label={groupByAuthor ? 'Desagrupar por autor' : 'Agrupar por autor'}
             title={groupByAuthor ? 'Desagrupar: una tarjeta por obra' : 'Agrupar: todas las obras de cada autor en una tarjeta'}
-            className={`px-3 py-2 rounded-lg text-sm flex items-center gap-1.5 transition-colors ${
-              groupByAuthor
-                ? darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
-                : darkMode ? 'bg-gray-800 border border-gray-700 text-gray-300 hover:bg-gray-700' : 'bg-white border border-amber-300 text-gray-700 hover:bg-amber-100'
-            }`}
+            className={`px-3 py-2 rounded-lg text-sm flex items-center gap-1.5 transition-colors ${getGroupBtnClass(groupByAuthor, darkMode)}`}
           >
             <Users size={14} />
             {groupByAuthor ? 'Desagrupar' : 'Agrupar por autor'}
@@ -231,17 +371,13 @@ const LibraryView = ({
             aria-pressed={groupByRegion}
             aria-label={groupByRegion ? 'Desagrupar por región' : 'Agrupar por región'}
             title={groupByRegion ? 'Desagrupar: una tarjeta por obra' : 'Agrupar: todas las obras de cada región en una tarjeta'}
-            className={`px-3 py-2 rounded-lg text-sm flex items-center gap-1.5 transition-colors ${
-              groupByRegion
-                ? darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
-                : darkMode ? 'bg-gray-800 border border-gray-700 text-gray-300 hover:bg-gray-700' : 'bg-white border border-amber-300 text-gray-700 hover:bg-amber-100'
-            }`}
+            className={`px-3 py-2 rounded-lg text-sm flex items-center gap-1.5 transition-colors ${getGroupBtnClass(groupByRegion, darkMode)}`}
           >
             <MapPin size={14} />
             {groupByRegion ? 'Desagrupar' : 'Agrupar por región'}
           </button>
 
-          {(searchTerm || category !== 'all' || region !== 'all' || decade !== 'all' || author !== 'all' || availability !== 'all' || type !== 'all' || favoritesOnly) && (
+          {hasActiveFilters && (
             <button
               onClick={clearFilters}
               className={`px-3 py-2 rounded-lg text-sm flex items-center gap-1 ${darkMode ? 'bg-red-900/40 text-red-300 hover:bg-red-900/60' : 'bg-red-100 text-red-700 hover:bg-red-200'}`}
@@ -252,272 +388,9 @@ const LibraryView = ({
         </div>
       </div>
 
-      {filtered.length === 0 ? (
-        <p className={`text-center py-12 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-          No hay obras que coincidan con los filtros.
-        </p>
-      ) : groupByRegion ? (
-        <div className="flex flex-col gap-4">
-          {groupedByRegion.map((group) => (
-            <div key={group.name} className={`${cardClass} border-2 rounded-lg p-5`}>
-              <div className="flex items-center justify-between gap-2 mb-4">
-                <h3 className={`font-bold text-lg flex items-center gap-2 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
-                  <MapPin size={16} className={darkMode ? 'text-red-400' : 'text-amber-700'} />
-                  {group.name}
-                </h3>
-                <span className={`text-xs px-2 py-1 rounded-full ${darkMode ? 'bg-gray-700 text-gray-300' : 'bg-amber-200 text-amber-900'}`}>
-                  {group.bookCount} {group.bookCount === 1 ? 'obra' : 'obras'}
-                </span>
-              </div>
-              <div className="flex flex-col gap-3">
-                {group.books.map((book, idx) => {
-                  const isFavorite = favorites.includes(book.title);
-                  const bookEvents = getBookEvents(timelineEvents, book);
-                  return (
-                    <div key={`${book.region}-${book.title}-${idx}`} className={`rounded-lg p-4 ${darkMode ? 'bg-gray-900/50 border border-gray-700' : 'bg-white/50 border border-amber-200'}`}>
-                      <div className="flex items-start justify-between gap-2 mb-1">
-                        <div>
-                          <h4 className={`font-semibold ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
-                            {book.title}
-                          </h4>
-                          <div className="flex items-center gap-3 text-xs flex-wrap mt-1">
-                            <span className={`px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800 text-gray-300' : 'bg-amber-200 text-amber-900'}`}>
-                              {book.author}
-                            </span>
-                            <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>📅 {book.year || '—'}</span>
-                            <span className={`px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800' : 'bg-amber-200'}`}>{book.category}</span>
-                            {book.rating && <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>⭐ {book.rating}</span>}
-                          </div>
-                        </div>
-                        <button
-                          onClick={() => onToggleFavorite(book.title)}
-                          className="transition-transform hover:scale-110 shrink-0"
-                          title={isFavorite ? 'Remover de favoritos' : 'Agregar a favoritos'}
-                          aria-label={isFavorite ? 'Remover de favoritos' : 'Agregar a favoritos'}
-                        >
-                          <Heart
-                            size={18}
-                            className={isFavorite ? 'fill-red-500 text-red-500' : darkMode ? 'text-gray-500' : 'text-amber-600'}
-                          />
-                        </button>
-                      </div>
-
-                      {bookEvents.length > 0 && (
-                        <button
-                          onClick={() => onOpenEvent(bookEvents[0])}
-                          className={`mt-2 flex items-center gap-1.5 text-xs font-medium transition-colors ${
-                            darkMode ? 'text-red-400 hover:text-red-300' : 'text-amber-700 hover:text-amber-900'
-                          } hover:underline`}
-                          title={`Ir al evento de la línea temporal: ${bookEvents[0].title} (${bookEvents[0].year})`}
-                        >
-                          <CalendarClock size={14} />
-                          Ver en la línea temporal: {bookEvents[0].title} ({bookEvents[0].year})
-                        </button>
-                      )}
-
-                      <div className="flex items-center gap-3 mt-3">
-                        {book.filename ? (
-                          <button
-                            onClick={() => onRead(book)}
-                            className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                              darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
-                            }`}
-                          >
-                            <BookOpen size={14} />
-                            Leer
-                          </button>
-                        ) : (
-                          <span
-                            className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm border ${
-                              darkMode ? 'border-gray-700 text-gray-500' : 'border-amber-300 text-amber-600'
-                            }`}
-                            title="Esta obra aún no tiene archivo digitalizado en el archivo"
-                          >
-                            Sin archivo disponible
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
-        </div>
-      ) : groupByAuthor ? (
-        <div className="flex flex-col gap-4">
-          {groupedBooks.map((group) => (
-            <div key={group.name} className={`${cardClass} border-2 rounded-lg p-5`}>
-              <div className="flex items-center justify-between gap-2 mb-4">
-                <h3 className={`font-bold text-lg ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
-                  {group.name}
-                </h3>
-                <span className={`text-xs px-2 py-1 rounded-full ${darkMode ? 'bg-gray-700 text-gray-300' : 'bg-amber-200 text-amber-900'}`}>
-                  {group.bookCount} {group.bookCount === 1 ? 'obra' : 'obras'}
-                </span>
-              </div>
-              <div className="flex flex-col gap-3">
-                {group.books.map((book, idx) => {
-                  const isFavorite = favorites.includes(book.title);
-                  const bookEvents = getBookEvents(timelineEvents, book);
-                  return (
-                    <div key={`${book.region}-${book.title}-${idx}`} className={`rounded-lg p-4 ${darkMode ? 'bg-gray-900/50 border border-gray-700' : 'bg-white/50 border border-amber-200'}`}>
-                      <div className="flex items-start justify-between gap-2 mb-1">
-                        <div>
-                          <h4 className={`font-semibold ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
-                            {book.title}
-                          </h4>
-                          <div className="flex items-center gap-3 text-xs flex-wrap mt-1">
-                            <span className={`px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800 text-gray-300' : 'bg-amber-200 text-amber-900'}`}>
-                              {book.region}
-                            </span>
-                            <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>📅 {book.year || '—'}</span>
-                            <span className={`px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800' : 'bg-amber-200'}`}>{book.category}</span>
-                            {book.rating && <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>⭐ {book.rating}</span>}
-                          </div>
-                        </div>
-                        <button
-                          onClick={() => onToggleFavorite(book.title)}
-                          className="transition-transform hover:scale-110 shrink-0"
-                          title={isFavorite ? 'Remover de favoritos' : 'Agregar a favoritos'}
-                          aria-label={isFavorite ? 'Remover de favoritos' : 'Agregar a favoritos'}
-                        >
-                          <Heart
-                            size={18}
-                            className={isFavorite ? 'fill-red-500 text-red-500' : darkMode ? 'text-gray-500' : 'text-amber-600'}
-                          />
-                        </button>
-                      </div>
-
-                      {bookEvents.length > 0 && (
-                        <button
-                          onClick={() => onOpenEvent(bookEvents[0])}
-                          className={`mt-2 flex items-center gap-1.5 text-xs font-medium transition-colors ${
-                            darkMode ? 'text-red-400 hover:text-red-300' : 'text-amber-700 hover:text-amber-900'
-                          } hover:underline`}
-                          title={`Ir al evento de la línea temporal: ${bookEvents[0].title} (${bookEvents[0].year})`}
-                        >
-                          <CalendarClock size={14} />
-                          Ver en la línea temporal: {bookEvents[0].title} ({bookEvents[0].year})
-                        </button>
-                      )}
-
-                      <div className="flex items-center gap-3 mt-3">
-                        {book.filename ? (
-                          <button
-                            onClick={() => onRead(book)}
-                            className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                              darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
-                            }`}
-                          >
-                            <BookOpen size={14} />
-                            Leer
-                          </button>
-                        ) : (
-                          <span
-                            className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm border ${
-                              darkMode ? 'border-gray-700 text-gray-500' : 'border-amber-300 text-amber-600'
-                            }`}
-                            title="Esta obra aún no tiene archivo digitalizado en el archivo"
-                          >
-                            Sin archivo disponible
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {filtered.map((book, idx) => {
-            const isFavorite = favorites.includes(book.title);
-            return (
-              <div key={`${book.region}-${book.title}-${idx}`} className={`${cardClass} border-2 rounded-lg p-5 hover:shadow-xl transition-all flex flex-col card-appear`} style={{ animationDelay: `${Math.min(idx, 8) * 40}ms` }}>
-                <div className="flex items-start justify-between gap-2 mb-2">
-                  <span className={`text-xs px-2 py-1 rounded-full ${darkMode ? 'bg-gray-700 text-gray-300' : 'bg-amber-200 text-amber-900'}`}>
-                    {book.region}
-                  </span>
-                  <button
-                    onClick={() => onToggleFavorite(book.title)}
-                    className="transition-transform hover:scale-110"
-                    title={isFavorite ? 'Remover de favoritos' : 'Agregar a favoritos'}
-                    aria-label={isFavorite ? 'Remover de favoritos' : 'Agregar a favoritos'}
-                  >
-                    <Heart
-                      size={18}
-                      className={isFavorite ? 'fill-red-500 text-red-500' : darkMode ? 'text-gray-500' : 'text-amber-600'}
-                    />
-                  </button>
-                </div>
-
-                <h3 className={`font-bold ${darkMode ? 'text-gray-100' : 'text-gray-800'} mb-1`}>
-                  {book.title}
-                </h3>
-                <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'} mb-3`}>
-                  por {book.author}
-                </p>
-                <div className="flex items-center gap-3 text-xs flex-wrap mb-3">
-                  <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>📅 {book.year || '—'}</span>
-                  <span className={`px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800' : 'bg-amber-200'}`}>{book.category}</span>
-                  {book.rating && <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>⭐ {book.rating}</span>}
-                </div>
-
-                {book.summary && (
-                  <p className={`text-xs ${darkMode ? 'text-gray-500' : 'text-gray-600'} mb-4 line-clamp-2 flex-1`}>
-                    {book.summary}
-                  </p>
-                )}
-
-                {(() => {
-                  const bookEvents = getBookEvents(timelineEvents, book);
-                  if (!bookEvents.length) return null;
-                  return (
-                    <button
-                      onClick={() => onOpenEvent(bookEvents[0])}
-                      className={`mb-3 flex items-center gap-1.5 text-xs font-medium transition-colors ${
-                        darkMode ? 'text-red-400 hover:text-red-300' : 'text-amber-700 hover:text-amber-900'
-                      } hover:underline`}
-                      title={`Ir al evento de la línea temporal: ${bookEvents[0].title} (${bookEvents[0].year})`}
-                    >
-                      <CalendarClock size={14} />
-                      Ver en la línea temporal: {bookEvents[0].title} ({bookEvents[0].year})
-                    </button>
-                  );
-                })()}
-
-                <div className="flex items-center gap-3 mt-auto">
-                  {book.filename ? (
-                    <button
-                      onClick={() => onRead(book)}
-                      className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
-                      }`}
-                    >
-                      <BookOpen size={14} />
-                      Leer
-                    </button>
-                  ) : (
-                    <span
-                      className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm border ${
-                        darkMode ? 'border-gray-700 text-gray-500' : 'border-amber-300 text-amber-600'
-                      }`}
-                      title="Esta obra aún no tiene archivo digitalizado en el archivo"
-                    >
-                      Sin archivo disponible
-                    </span>
-                  )}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      )}
+      {renderContent()}
     </div>
-  );
-};
+  )
+}
 
-export default LibraryView;
+export default LibraryView

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Calendar, MapPin, User, Heart, BookOpen, Compass, Milestone, BookMarked, X } from 'lucide-react';
+import { Calendar, MapPin, User, Heart, BookOpen, Compass, Milestone, BookMarked, Share2, X } from 'lucide-react';
 import { THEME, VIEWS } from '../constants';
 
 const Navigation = ({
@@ -12,7 +12,6 @@ const Navigation = ({
 }) => {
   const themeClass = darkMode ? THEME.dark : THEME.light;
 
-  // Cerrar el drawer con Escape y bloquear el scroll de fondo mientras está abierto.
   useEffect(() => {
     if (!menuOpen) return undefined;
     const onKey = (e) => {
@@ -20,10 +19,10 @@ const Navigation = ({
     };
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
-    window.addEventListener('keydown', onKey);
+    globalThis.addEventListener('keydown', onKey);
     return () => {
       document.body.style.overflow = prevOverflow;
-      window.removeEventListener('keydown', onKey);
+      globalThis.removeEventListener('keydown', onKey);
     };
   }, [menuOpen, onMenuClose]);
 
@@ -37,18 +36,17 @@ const Navigation = ({
     { view: VIEWS.MAP, label: 'Mapa', icon: MapPin },
     { view: VIEWS.TIMELINE, label: 'Línea Temporal', icon: Calendar },
     { view: VIEWS.AUTHORS, label: 'Autores', icon: User },
+    { view: VIEWS.INFLUENCES, label: 'Red de Autores', icon: Share2 },
     { view: VIEWS.THEORIES, label: 'Teorías', icon: Compass },
     { view: VIEWS.PATHS, label: 'Rutas', icon: Milestone },
     { view: VIEWS.GLOSSARY, label: 'Glosario', icon: BookMarked },
-    { view: VIEWS.FAVORITES, label: `Favoritos (${favoriteCount})`, icon: Heart }
+    { view: VIEWS.FAVORITES, label: `Mi Biblioteca (${favoriteCount})`, icon: Heart }
   ];
 
   return (
     <>
-      {/* Drawer lateral: overlay + panel. Se abre con la hamburguesa del header
-          (aria-controls="menu-lateral") en todos los tamaños. */}
       {menuOpen && (
-        <div id="menu-lateral" className="fixed inset-0 z-50" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+        <dialog id="menu-lateral" open className="fixed inset-0 z-50" aria-modal="true" aria-label="Menú de navegación">
           <div
             className="absolute inset-0 bg-black/60"
             onClick={onMenuClose}
@@ -96,7 +94,7 @@ const Navigation = ({
               ))}
             </div>
           </nav>
-        </div>
+        </dialog>
       )}
     </>
   );

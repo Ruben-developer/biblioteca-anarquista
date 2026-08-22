@@ -49,27 +49,68 @@ export const useDarkMode = () => {
 
 /**
  * Hook personalizado para manejar favoritos
+ * Soporta dos formatos: strings legacy (títulos) y objetos enriquecidos:
+ * { title, author, year, filename, category, note, addedAt }
  */
 export const useFavorites = () => {
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
-    // Leer favoritos guardados en localStorage
     const saved = localStorage.getItem('favorites');
     if (saved) {
-      setFavorites(JSON.parse(saved));
+      const parsed = JSON.parse(saved);
+      // Migrar strings legacy a objetos enriquecidos
+      const migrated = parsed.map((f) =>
+        typeof f === 'string' ? { title: f, note: '', addedAt: Date.now() } : f
+      );
+      setFavorites(migrated);
     }
   }, []);
 
-  const toggleFavorite = (title) => {
+  // Toggle: si el título ya está, lo quita; si no, lo agrega con metadata vacía
+  const toggleFavorite = (title, bookMeta = {}) => {
     setFavorites(prev => {
-      const newFavorites = prev.includes(title)
-        ? prev.filter(b => b !== title)
-        : [...prev, title];
+      const exists = prev.find(f => f.title === title);
+      const newFavorites = exists
+        ? prev.filter(f => f.title !== title)
+        : [...prev, {
+            title,
+            author: bookMeta.author || '',
+            year: bookMeta.year || null,
+            filename: bookMeta.filename || '',
+            category: bookMeta.category || '',
+            note: '',
+            addedAt: Date.now()
+          }];
       localStorage.setItem('favorites', JSON.stringify(newFavorites));
       return newFavorites;
     });
   };
 
-  return { favorites, toggleFavorite };
+  // Actualizar la nota personal de un favorito
+  const updateFavoriteNote = (title, note) => {
+    setFavorites(prev => {
+      const updated = prev.map(f =>
+        f.title === title ? { ...f, note } : f
+      );
+      localStorage.setItem('favorites', JSON.stringify(updated));
+      return updated;
+    });
+  };
+
+  // Verificar si un título es favorito
+  const isFavorite = (title) => favorites.some(f => f.title === title);
+
+  // Exportar favoritos como texto plano
+  const exportFavorites = () => {
+    return favorites.map((f, i) => {
+      const parts = [`${i + 1}. ${f.title}`];
+      if (f.author) parts.push(`   Autor: ${f.author}`);
+      if (f.year) parts.push(`   Año: ${f.year}`);
+      if (f.note) parts.push(`   Nota: ${f.note}`);
+      return parts.join('\n');
+    }).join('\n\n');
+  };
+
+  return { favorites, toggleFavorite, updateFavoriteNote, isFavorite, exportFavorites };
 };
