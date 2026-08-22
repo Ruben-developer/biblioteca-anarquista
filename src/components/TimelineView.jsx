@@ -8,7 +8,6 @@ const TimelineView = ({
   onSelectEvent,
   onClearFilters
 }) => {
-  const themeClass = darkMode ? THEME.dark : THEME.light;
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
   const [layout, setLayout] = useState('horizontal');
 
@@ -35,7 +34,6 @@ const TimelineView = ({
     );
   }
 
-  // Agrupar eventos por década para la vista vertical
   const groupedByDecade = {};
   filteredEvents.forEach((event) => {
     const decade = event.decade || `${Math.floor(event.year / 10) * 10}s`;
@@ -55,14 +53,19 @@ const TimelineView = ({
       : 'bg-amber-800 text-amber-50'
   }`;
 
+  const dashedColor = darkMode ? 'rgba(220,38,38,0.3)' : 'rgba(180,83,9,0.3)';
+  const dotColor = darkMode ? 'bg-red-500' : 'bg-amber-600';
+  const dotBorder = darkMode ? 'border-gray-900' : 'border-amber-100';
+  const decadeBg = darkMode ? 'bg-red-600 border-gray-900' : 'bg-amber-700 border-amber-100';
+  const lineColor = darkMode ? 'bg-red-900/50' : 'bg-amber-300';
+
   return (
     <div>
-      {/* Toggle de layout */}
       <div className="flex items-center gap-2 mb-4">
         <button
           onClick={() => setLayout('horizontal')}
           className={layout === 'horizontal' ? toggleBtnActive : toggleBtn}
-          title="Vista horizontal (scroll)"
+          title="Vista horizontal"
         >
           <LayoutGrid size={14} className="inline mr-1" />
           Línea
@@ -81,38 +84,58 @@ const TimelineView = ({
       </div>
 
       {layout === 'horizontal' ? (
-        /* ── Vista horizontal (original) ── */
+        /* ── Vista horizontal con estética feed ── */
         <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 overflow-x-auto`}>
-          <div className="relative" style={{ minWidth: `${filteredEvents.length * 380}px` }}>
-            <div className={`absolute top-12 left-0 right-0 h-1 ${darkMode ? 'bg-gradient-to-r from-red-600 via-red-500 to-red-800' : 'bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800'}`}></div>
-            <div className="flex gap-8">
-              {filteredEvents.map((event, idx) => (
-                <div key={idx} className="relative flex flex-col items-center" style={{ minWidth: '360px' }}>
-                  <div className={`w-10 h-10 ${darkMode ? 'bg-red-600 border-gray-900' : 'bg-amber-700 border-amber-100'} rounded-full border-4 flex items-center justify-center text-2xl shadow-lg z-10 mb-4`}>
-                    {event.image}
+          <div className="flex gap-6" style={{ minWidth: 'max-content' }}>
+            {sortedDecades.map((decade) => (
+              <div key={decade} className="flex flex-col" style={{ minWidth: `${groupedByDecade[decade].length * 300 + 80}px` }}>
+                {/* Separador de década */}
+                <div className="flex items-center gap-3 mb-4 flex-shrink-0">
+                  <div className={`flex-shrink-0 w-14 h-14 ${decadeBg} rounded-full border-4 flex items-center justify-center shadow-lg`}>
+                    <span className="text-base font-display text-white">{decade.replace('s', '')}</span>
                   </div>
-                  <button
-                    className={`${cardClass} border-2 rounded-lg p-5 shadow-md hover:shadow-xl transition-all w-full cursor-pointer text-left`}
-                    onClick={() => onSelectEvent(event)}
-                  >
-                    <div className="flex justify-between mb-3">
-                      <span className={`text-3xl font-display ${darkMode ? 'text-gray-300' : 'text-amber-800'}`}>
-                        {event.year}
-                      </span>
-                      <span className={`text-xs px-3 py-1 rounded-full ${darkMode ? 'bg-gray-800' : 'bg-amber-200'}`}>
-                        {event.region}
-                      </span>
-                    </div>
-                    <h3 className={`text-lg font-semibold ${darkMode ? 'text-gray-100' : 'text-gray-800'} mb-3`}>
-                      {event.title}
-                    </h3>
-                    <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-700'}`}>
-                      {event.description}
-                    </p>
-                  </button>
+                  <div className={`flex-1 h-px ${lineColor}`}></div>
+                  <span className={`text-xs font-display uppercase tracking-wider flex-shrink-0 ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
+                    {groupedByDecade[decade].length}
+                  </span>
                 </div>
-              ))}
-            </div>
+
+                {/* Línea con eventos */}
+                <div className="relative flex-1" style={{ borderTop: `2px dashed ${dashedColor}`, paddingTop: '24px' }}>
+                  <div className="flex gap-5">
+                    {groupedByDecade[decade].map((event, idx) => (
+                      <div key={idx} className="relative flex flex-col items-center" style={{ minWidth: '280px' }}>
+                        {/* Punto */}
+                        <div className={`absolute -top-[31px] left-1/2 -translate-x-1/2 w-3.5 h-3.5 ${dotColor} rounded-full border-2 ${dotBorder} z-10`}></div>
+
+                        <button
+                          className={`${cardClass} border-2 rounded-lg p-4 shadow-md hover:shadow-xl transition-all w-full cursor-pointer text-left`}
+                          onClick={() => onSelectEvent(event)}
+                        >
+                          <div className="flex items-center justify-between gap-2 mb-2">
+                            <div className="flex items-center gap-2">
+                              <span className="text-xl">{event.image}</span>
+                              <span className={`text-xl font-display ${darkMode ? 'text-gray-300' : 'text-amber-800'}`}>
+                                {event.year}
+                              </span>
+                            </div>
+                            <span className={`text-[10px] px-2 py-0.5 rounded-full flex-shrink-0 ${darkMode ? 'bg-gray-800 text-gray-400' : 'bg-amber-200 text-amber-800'}`}>
+                              {event.region}
+                            </span>
+                          </div>
+                          <h3 className={`text-sm font-semibold ${darkMode ? 'text-gray-100' : 'text-gray-800'} mb-1.5 line-clamp-2`}>
+                            {event.title}
+                          </h3>
+                          <p className={`text-xs leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-700'} line-clamp-3`}>
+                            {event.description}
+                          </p>
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       ) : (
@@ -120,23 +143,20 @@ const TimelineView = ({
         <div className="space-y-8">
           {sortedDecades.map((decade) => (
             <div key={decade}>
-              {/* Separador de década */}
               <div className="flex items-center gap-4 mb-4">
-                <div className={`flex-shrink-0 w-16 h-16 ${darkMode ? 'bg-red-600 border-gray-900' : 'bg-amber-700 border-amber-100'} rounded-full border-4 flex items-center justify-center shadow-lg`}>
+                <div className={`flex-shrink-0 w-16 h-16 ${decadeBg} rounded-full border-4 flex items-center justify-center shadow-lg`}>
                   <span className="text-lg font-display text-white">{decade.replace('s', '')}</span>
                 </div>
-                <div className={`flex-1 h-px ${darkMode ? 'bg-red-900/50' : 'bg-amber-300'}`}></div>
+                <div className={`flex-1 h-px ${lineColor}`}></div>
                 <span className={`text-xs font-display uppercase tracking-wider ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
                   {groupedByDecade[decade].length} evento{groupedByDecade[decade].length !== 1 ? 's' : ''}
                 </span>
               </div>
 
-              {/* Eventos de la década */}
-              <div className="space-y-4 ml-8 border-l-2 border-dashed pl-6" style={{ borderColor: darkMode ? 'rgba(220,38,38,0.3)' : 'rgba(180,83,9,0.3)' }}>
+              <div className="space-y-4 ml-8 border-l-2 border-dashed pl-6" style={{ borderColor: dashedColor }}>
                 {groupedByDecade[decade].map((event, idx) => (
                   <div key={idx} className="relative">
-                    {/* Punto en la línea */}
-                    <div className={`absolute -left-[31px] top-5 w-4 h-4 ${darkMode ? 'bg-red-500' : 'bg-amber-600'} rounded-full border-2 ${darkMode ? 'border-gray-900' : 'border-amber-100'} z-10`}></div>
+                    <div className={`absolute -left-[31px] top-5 w-4 h-4 ${dotColor} rounded-full border-2 ${dotBorder} z-10`}></div>
 
                     <button
                       className={`${cardClass} border-2 rounded-lg p-5 shadow-md hover:shadow-xl transition-all w-full cursor-pointer text-left`}

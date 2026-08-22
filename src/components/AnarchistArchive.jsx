@@ -212,55 +212,13 @@ const AnarchistArchive = () => {
       </main>
 
       <footer className={`border-t-4 ${darkMode ? 'border-red-900 bg-black/30' : 'border-amber-800 bg-amber-100/60'}`}>
-        <div className="container mx-auto px-4 py-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            {/* Identidad */}
-            <div>
-              <h3 className={`font-display text-lg uppercase tracking-wider mb-3 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
-                La Idea
-              </h3>
-              <p className={`text-sm leading-relaxed ${darkMode ? 'text-gray-400' : 'text-amber-800'}`}>
-                Archivo Histórico Anarquista — una colección curada de textos del movimiento libertario mundial, desde las primeras teorías mutualistas hasta las corrientes contemporáneas.
-              </p>
-            </div>
-
-            {/* Métricas del archivo */}
-            <div>
-              <h3 className={`font-display text-lg uppercase tracking-wider mb-3 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
-                El Archivo
-              </h3>
-              <div className={`grid grid-cols-2 gap-2 text-sm ${darkMode ? 'text-gray-400' : 'text-amber-800'}`}>
-                <div><span className={`font-mono text-lg ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>{stats.texts}</span> textos</div>
-                <div><span className={`font-mono text-lg ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>{stats.events}</span> eventos</div>
-                <div><span className={`font-mono text-lg ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>{stats.regions}</span> regiones</div>
-                <div><span className={`font-mono text-lg ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>{stats.authors}</span> autores</div>
-              </div>
-            </div>
-
-            {/* Contacto y links */}
-            <div>
-              <h3 className={`font-display text-lg uppercase tracking-wider mb-3 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
-                Contacto
-              </h3>
-              <div className={`text-sm space-y-1.5 ${darkMode ? 'text-gray-400' : 'text-amber-800'}`}>
-                <p>antarquia@riseup.net</p>
-                <p>Textos de dominio público</p>
-                <p className={`text-xs mt-3 ${darkMode ? 'text-gray-600' : 'text-amber-600'}`}>
-                  Contenido clasificado bajo principios de domino público y acceso abierto.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Colofón */}
-          <div className={`border-t pt-6 text-center ${darkMode ? 'border-gray-800' : 'border-amber-300'}`}>
-            <p className={`font-display uppercase tracking-widest text-xs ${darkMode ? 'text-gray-500' : 'text-amber-700'}`}>
-              La Idea · Archivo Histórico Anarquista · 1840–presente
-            </p>
-            <p className={`text-xs mt-1 ${darkMode ? 'text-gray-600' : 'text-amber-600'}`}>
-              Construido con memoria, justicia y código abierto
-            </p>
-          </div>
+        <div className="container mx-auto px-4 py-8 text-center">
+          <p className={`font-display uppercase tracking-widest text-sm mb-2 ${darkMode ? 'text-gray-300' : 'text-amber-900'}`}>
+            La Idea · Archivo Histórico Anarquista · 1840–1968
+          </p>
+          <p className={`text-xs ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
+            Textos de dominio público · {stats.texts} registros en el catálogo
+          </p>
         </div>
       </footer>
 
@@ -291,6 +249,8 @@ const AnarchistArchive = () => {
           book={readingBook}
           darkMode={darkMode}
           onClose={() => setReadingBook(null)}
+          favorites={favorites}
+          onToggleFavorite={toggleFavorite}
         />
       )}
 
