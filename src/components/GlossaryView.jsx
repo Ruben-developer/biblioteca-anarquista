@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { BookOpen, Search, BookMarked, Library } from 'lucide-react';
 import { THEME } from '../constants';
 import { glossaryTerms } from '../data/glossary';
@@ -73,7 +72,7 @@ const GlossaryView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
                     </p>
                     <div className="space-y-1.5">
                       {books.map((book, idx) => (
-                        <div key={idx} className="flex items-center justify-between gap-2">
+                        <div key={book.title} className="flex items-center justify-between gap-2">
                           <span className={`text-xs ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                             {book.title}
                           </span>
@@ -126,11 +125,5 @@ const GlossaryView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
   );
 };
 
-GlossaryView.propTypes = {
-  darkMode: PropTypes.bool.isRequired,
-  regionData: PropTypes.object.isRequired,
-  onRead: PropTypes.func,
-  onOpenLibrary: PropTypes.func
-};
 
 export default GlossaryView;

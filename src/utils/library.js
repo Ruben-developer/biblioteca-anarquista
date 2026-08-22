@@ -25,46 +25,27 @@ export const getAllBooks = (regionData) => {
 //  - `availability`: 'all' | 'withFile' (solo con archivo) | 'withoutFile' (solo sin archivo).
 //  - `type`: 'all' | 'historical' (categorías del mapa/timeline) | 'ideas' (teoría/biografía/diálogo).
 //  - `favorites`: array de títulos guardados como favoritos (null/undefined desactiva el filtro).
+const matchesFilter = (book, { term, category, region, decade, author, availability, type, favorites }) => {
+  if (term && !`${book.title} ${book.author}`.toLowerCase().includes(term)) return false
+  if (category !== 'all' && book.category !== category) return false
+  if (region !== 'all' && book.region !== region) return false
+  if (decade !== 'all' && getDecadeFromYear(book.year) !== decade) return false
+  if (author !== 'all' && String(book.author || '').trim().toLowerCase() !== String(author).trim().toLowerCase()) return false
+  if (availability === 'withFile' && !book.filename) return false
+  if (availability === 'withoutFile' && book.filename) return false
+  if (type === 'historical' && !isHistoricalBook(book)) return false
+  if (type === 'ideas' && isHistoricalBook(book)) return false
+  if (Array.isArray(favorites) && !favorites.some((f) => (f.title || f) === book.title)) return false
+  return true
+}
+
 export const filterBooks = (
   books,
   { searchTerm = '', category = 'all', region = 'all', decade = 'all', author = 'all', availability = 'all', type = 'all', favorites = null } = {}
 ) => {
-  const term = searchTerm.trim().toLowerCase();
-
-  return books.filter((book) => {
-    if (term && !`${book.title} ${book.author}`.toLowerCase().includes(term)) {
-      return false;
-    }
-    if (category !== 'all' && book.category !== category) {
-      return false;
-    }
-    if (region !== 'all' && book.region !== region) {
-      return false;
-    }
-    if (decade !== 'all' && getDecadeFromYear(book.year) !== decade) {
-      return false;
-    }
-    if (author !== 'all' && String(book.author || '').trim().toLowerCase() !== String(author).trim().toLowerCase()) {
-      return false;
-    }
-    if (availability === 'withFile' && !book.filename) {
-      return false;
-    }
-    if (availability === 'withoutFile' && book.filename) {
-      return false;
-    }
-    if (type === 'historical' && !isHistoricalBook(book)) {
-      return false;
-    }
-    if (type === 'ideas' && isHistoricalBook(book)) {
-      return false;
-    }
-    if (Array.isArray(favorites) && !favorites.some(f => (f.title || f) === book.title)) {
-      return false;
-    }
-    return true;
-  });
-};
+  const term = searchTerm.trim().toLowerCase()
+  return books.filter((book) => matchesFilter(book, { term, category, region, decade, author, availability, type, favorites }))
+}
 
 // Ordena los libros: rating (desc), año (asc) o título (alfabético).
 export const sortBooks = (books, sort = 'rating') => {
@@ -110,14 +91,14 @@ export const countRegionTexts = (regionData, region) => regionData?.[region]?.bo
 // textos) no declaran relatedTexts y devuelven [].
 export const getEventRelatedTexts = (regionData, event) => {
   if (!event || !regionData || !Array.isArray(event.relatedTexts)) return [];
-  const wanted = event.relatedTexts.map((t) => String(t).trim().toLowerCase());
-  const allBooks = [];
+  const wanted = new Set(event.relatedTexts.map((t) => String(t).trim().toLowerCase()))
+  const allBooks = []
   Object.entries(regionData).forEach(([region, data]) =>
     (data.books || []).forEach((b) => allBooks.push({ ...b, region }))
-  );
+  )
   return allBooks
-    .filter((b) => wanted.includes(String(b.title).trim().toLowerCase()))
-    .sort((a, b) => (b.year || 0) - (a.year || 0));
+    .filter((b) => wanted.has(String(b.title).trim().toLowerCase()))
+    .sort((a, b) => (b.year || 0) - (a.year || 0))
 };
 
 // Eventos de la línea temporal que agrupan un libro (inversa de
@@ -238,7 +219,7 @@ const hashDate = (date) => {
   const seed = `${y}-${m}-${d}`;
   let hash = 0;
   for (let i = 0; i < seed.length; i += 1) {
-    hash = (hash * 31 + seed.charCodeAt(i)) >>> 0;
+    hash = (hash * 31 + seed.codePointAt(i)) >>> 0
   }
   return hash;
 };
@@ -253,7 +234,7 @@ export const getDailyFeaturedBook = (regionData, date = new Date()) => {
   const validDate = date instanceof Date && !Number.isNaN(date.getTime()) ? date : new Date();
   const readable = all.filter((b) => b.filename);
   const withResena = readable.filter((b) => b.summary);
-  const pool = withResena.length ? withResena : readable.length ? readable : all;
+  const pool = withResena.length ? withResena : (readable.length ? readable : all)
   return pool[hashDate(validDate) % pool.length] || undefined;
 };
 

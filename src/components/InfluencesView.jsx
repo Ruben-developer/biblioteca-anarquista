@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { BookOpen, Share2 } from 'lucide-react';
 import { THEME } from '../constants';
 import { influenceNodes, influenceEdges } from '../data/influences';
@@ -183,7 +182,7 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
               <div className="flex flex-wrap gap-2">
                 {selectedAuthor.books.map((book, idx) => (
                   <div
-                    key={idx}
+                    key={book.title}
                     className={`rounded-lg border px-3 py-2 flex items-center gap-2 ${darkMode ? 'bg-gray-900/50 border-gray-700' : 'bg-white/50 border-amber-200'}`}
                   >
                     <span className={`text-xs ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
@@ -216,10 +215,5 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
   );
 };
 
-InfluencesView.propTypes = {
-  darkMode: PropTypes.bool.isRequired,
-  regionData: PropTypes.object.isRequired,
-  onRead: PropTypes.func
-};
 
 export default InfluencesView;

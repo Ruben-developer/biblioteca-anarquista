@@ -9,6 +9,64 @@ const CATEGORY_LABELS = {
   dialogo: 'Diálogo'
 };
 
+const renderNoteSection = (fav, { editingNote, noteText, setNoteText, saveNote, setEditingNote, startEditNote }, darkMode) => {
+  if (editingNote === fav.title) {
+    return (
+      <div className="mb-3">
+        <textarea
+          value={noteText}
+          onChange={(e) => setNoteText(e.target.value)}
+          placeholder="Escribe una nota personal sobre este texto..."
+          className={`w-full text-sm rounded-lg border p-2.5 resize-none ${
+            darkMode
+              ? 'bg-gray-800 border-gray-600 text-gray-200 placeholder-gray-500'
+              : 'bg-white border-amber-300 text-gray-800 placeholder-amber-400'
+          }`}
+          rows={3}
+          autoFocus
+        />
+        <div className="flex gap-2 mt-2">
+          <button
+            onClick={saveNote}
+            className={`px-3 py-1 rounded text-xs font-medium ${
+              darkMode ? 'bg-red-600 text-white' : 'bg-amber-700 text-amber-50'
+            }`}
+          >
+            Guardar
+          </button>
+          <button
+            onClick={() => setEditingNote(null)}
+            className={`px-3 py-1 rounded text-xs ${
+              darkMode ? 'text-gray-400 hover:text-gray-300' : 'text-amber-600 hover:text-amber-700'
+            }`}
+          >
+            Cancelar
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  if (fav.note) {
+    return (
+      <button
+        className={`mb-3 p-2.5 rounded-lg text-sm cursor-pointer text-left w-full ${
+          darkMode ? 'bg-gray-800/60 text-gray-300' : 'bg-amber-50 text-amber-800'
+        }`}
+        onClick={() => startEditNote(fav)}
+      >
+        <div className="flex items-center gap-1.5 mb-1">
+          <StickyNote size={12} className={darkMode ? 'text-amber-400' : 'text-amber-600'} />
+          <span className={`text-xs font-medium ${darkMode ? 'text-amber-400' : 'text-amber-600'}`}>Mi nota</span>
+        </div>
+        {fav.note}
+      </button>
+    );
+  }
+
+  return null;
+};
+
 const FavoritesView = ({
   darkMode,
   favorites,
@@ -72,7 +130,7 @@ const FavoritesView = ({
             Mi Biblioteca
           </h2>
           <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-            {favorites.length} texto{favorites.length !== 1 ? 's' : ''} en tu colección personal
+            {favorites.length} texto{favorites.length === 1 ? '' : 's'} en tu colección personal
           </p>
         </div>
         <button
@@ -130,54 +188,7 @@ const FavoritesView = ({
               )}
             </div>
 
-            {/* Nota personal */}
-            {editingNote === fav.title ? (
-              <div className="mb-3">
-                <textarea
-                  value={noteText}
-                  onChange={(e) => setNoteText(e.target.value)}
-                  placeholder="Escribe una nota personal sobre este texto..."
-                  className={`w-full text-sm rounded-lg border p-2.5 resize-none ${
-                    darkMode
-                      ? 'bg-gray-800 border-gray-600 text-gray-200 placeholder-gray-500'
-                      : 'bg-white border-amber-300 text-gray-800 placeholder-amber-400'
-                  }`}
-                  rows={3}
-                  autoFocus
-                />
-                <div className="flex gap-2 mt-2">
-                  <button
-                    onClick={saveNote}
-                    className={`px-3 py-1 rounded text-xs font-medium ${
-                      darkMode ? 'bg-red-600 text-white' : 'bg-amber-700 text-amber-50'
-                    }`}
-                  >
-                    Guardar
-                  </button>
-                  <button
-                    onClick={() => setEditingNote(null)}
-                    className={`px-3 py-1 rounded text-xs ${
-                      darkMode ? 'text-gray-400 hover:text-gray-300' : 'text-amber-600 hover:text-amber-700'
-                    }`}
-                  >
-                    Cancelar
-                  </button>
-                </div>
-              </div>
-            ) : fav.note ? (
-              <div
-                className={`mb-3 p-2.5 rounded-lg text-sm cursor-pointer ${
-                  darkMode ? 'bg-gray-800/60 text-gray-300' : 'bg-amber-50 text-amber-800'
-                }`}
-                onClick={() => startEditNote(fav)}
-              >
-                <div className="flex items-center gap-1.5 mb-1">
-                  <StickyNote size={12} className={darkMode ? 'text-amber-400' : 'text-amber-600'} />
-                  <span className={`text-xs font-medium ${darkMode ? 'text-amber-400' : 'text-amber-600'}`}>Mi nota</span>
-                </div>
-                {fav.note}
-              </div>
-            ) : null}
+            {renderNoteSection(fav, { editingNote, noteText, setNoteText, saveNote, setEditingNote, startEditNote }, darkMode)}
 
             <div className="flex items-center gap-2 mt-auto">
               {fav.filename && (

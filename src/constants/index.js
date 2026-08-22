@@ -15,10 +15,8 @@ export const CATEGORIES = [
 // Textos "históricos": hechos del movimiento (mapa y línea temporal).
 // Los de filosofía/ideas (teoria, biografia, dialogo) viven en la sección de Autores.
 // FUENTE ÚNICA definida en utils/library.js — aquí solo se re-exporta.
-import { HISTORICAL_CATEGORIES as HC, isHistoricalCategory as isHC } from '../utils/library';
-export const HISTORICAL_CATEGORIES = HC;
+export { HISTORICAL_CATEGORIES, isHistoricalCategory } from '../utils/library';
 export const IDEAS_CATEGORIES = ['teoria', 'biografia', 'dialogo'];
-export const isHistoricalCategory = isHC;
 
 export const DECADES = ['all', '1860s', '1870s', '1880s', '1900s', '1910s', '1920s', '1930s', '1960s', '1970s', '1990s', '2000s', '2010s'];
 

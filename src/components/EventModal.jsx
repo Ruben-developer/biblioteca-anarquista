@@ -11,16 +11,17 @@ const EventModal = ({ darkMode, event, regionData, onClose, onRead = () => {} })
   const relatedTexts = getEventRelatedTexts(regionData, event);
 
   return (
-    <div
+    <dialog
+      open
       className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4"
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose();
       }}
-      role="dialog"
       aria-modal="true"
       aria-label={event.title}
+      tabIndex={0}
       onKeyDown={(e) => {
-        if (e.key === 'Escape') onClose();
+        if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') onClose();
       }}
     >
       <div className={`${cardClass} border-4 rounded-lg max-w-2xl w-full max-h-[80vh] overflow-hidden`}>
@@ -42,7 +43,7 @@ const EventModal = ({ darkMode, event, regionData, onClose, onRead = () => {} })
             </button>
           </div>
         </div>
-        
+
         <div className="p-6 overflow-y-auto max-h-96">
           <p className={`${darkMode ? 'text-gray-300' : 'text-gray-700'} leading-relaxed mb-4`}>
             {event.description}
@@ -95,7 +96,7 @@ const EventModal = ({ darkMode, event, regionData, onClose, onRead = () => {} })
           )}
         </div>
       </div>
-    </div>
+    </dialog>
   );
 };
 

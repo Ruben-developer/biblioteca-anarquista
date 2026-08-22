@@ -1,9 +1,33 @@
 import React, { useState, useMemo } from 'react';
-import PropTypes from 'prop-types';
 import { Book, ChevronDown, ChevronUp, BookOpen, MapPin, Search } from 'lucide-react';
 import { THEME } from '../constants';
 
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+
+const getTodosButtonClass = (darkMode, activeLetter, search) => {
+  const isActive = !activeLetter && !search;
+  if (isActive) {
+    return darkMode ? 'bg-red-600 text-white' : 'bg-amber-800 text-amber-50';
+  }
+  return darkMode ? 'bg-gray-800 text-gray-400 hover:bg-gray-700' : 'bg-amber-100 text-amber-700 hover:bg-amber-200';
+};
+
+const getLetterButtonClass = (darkMode, activeLetter, letter, letterCount) => {
+  if (activeLetter === letter) {
+    return darkMode ? 'bg-red-600 text-white' : 'bg-amber-800 text-amber-50';
+  }
+  if (letterCount) {
+    return darkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-amber-100 text-amber-800 hover:bg-amber-200';
+  }
+  return darkMode ? 'bg-gray-900 text-gray-600 cursor-default' : 'bg-gray-100 text-gray-400 cursor-default';
+};
+
+const getLetterCountClass = (darkMode, activeLetter, letter) => {
+  if (activeLetter === letter) {
+    return '';
+  }
+  return darkMode ? 'text-gray-500' : 'text-amber-600';
+};
 
 const AuthorsView = ({
   darkMode,
@@ -59,7 +83,6 @@ const AuthorsView = ({
         {authors.length} autores, ordenados de más a menos textos de su autoría.
       </p>
 
-      {/* Buscador */}
       <div className="relative mb-4">
         <Search className={`absolute left-3 top-1/2 -translate-y-1/2 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`} size={18} />
         <input
@@ -71,15 +94,10 @@ const AuthorsView = ({
         />
       </div>
 
-      {/* Barra alfabética */}
       <div className="flex flex-wrap gap-1 mb-5">
         <button
           onClick={() => { setActiveLetter(null); setSearch(''); }}
-          className={`px-2 py-1 rounded text-xs font-medium transition-colors ${
-            !activeLetter && !search
-              ? darkMode ? 'bg-red-600 text-white' : 'bg-amber-800 text-amber-50'
-              : darkMode ? 'bg-gray-800 text-gray-400 hover:bg-gray-700' : 'bg-amber-100 text-amber-700 hover:bg-amber-200'
-          }`}
+          className={`px-2 py-1 rounded text-xs font-medium transition-colors ${getTodosButtonClass(darkMode, activeLetter, search)}`}
         >
           Todos
         </button>
@@ -88,17 +106,11 @@ const AuthorsView = ({
             key={letter}
             onClick={() => handleLetterClick(letter)}
             disabled={!letterCounts[letter]}
-            className={`px-2 py-1 rounded text-xs font-medium transition-colors min-w-[28px] ${
-              activeLetter === letter
-                ? darkMode ? 'bg-red-600 text-white' : 'bg-amber-800 text-amber-50'
-                : letterCounts[letter]
-                  ? darkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-amber-100 text-amber-800 hover:bg-amber-200'
-                  : darkMode ? 'bg-gray-900 text-gray-600 cursor-default' : 'bg-gray-100 text-gray-400 cursor-default'
-            }`}
+            className={`px-2 py-1 rounded text-xs font-medium transition-colors min-w-[28px] ${getLetterButtonClass(darkMode, activeLetter, letter, letterCounts[letter])}`}
           >
             {letter}
             {letterCounts[letter] ? (
-              <span className={`ml-0.5 text-[9px] ${activeLetter === letter ? '' : darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
+              <span className={`ml-0.5 text-[9px] ${getLetterCountClass(darkMode, activeLetter, letter)}`}>
                 {letterCounts[letter]}
               </span>
             ) : null}
@@ -106,14 +118,12 @@ const AuthorsView = ({
         ))}
       </div>
 
-      {/* Conteo de resultados */}
       {(search || activeLetter) && (
         <p className={`text-xs mb-4 ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
-          {filtered.length} autor{filtered.length !== 1 ? 'es' : ''} encontrado{filtered.length !== 1 ? 's' : ''}
+          {filtered.length} autor{filtered.length === 1 ? '' : 'es'} encontrado{filtered.length === 1 ? '' : 's'}
         </p>
       )}
 
-      {/* Grid de autores */}
       {filtered.length === 0 ? (
         <p className={`text-center py-8 ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
           No se encontraron autores con ese criterio.
@@ -232,18 +242,4 @@ const AuthorsView = ({
   );
 };
 
-AuthorsView.propTypes = {
-  darkMode: PropTypes.bool.isRequired,
-  authors: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      bookCount: PropTypes.number.isRequired,
-      books: PropTypes.array,
-      regions: PropTypes.array,
-      yearsRange: PropTypes.string
-    })
-  ).isRequired,
-  onRead: PropTypes.func
-};
-
-export default AuthorsView;
+export default AuthorsView

@@ -23,7 +23,7 @@ describe('EventModal', () => {
     const html = renderToStaticMarkup(
       <EventModal darkMode event={event} onClose={() => {}} />
     );
-    expect(html).toContain('role="dialog"');
+    expect(html).toContain('<dialog');
     expect(html).toContain('aria-modal="true"');
     expect(html).toContain(event.title);
     expect(html).toContain(event.quote);
@@ -92,7 +92,7 @@ describe('RegionModal', () => {
         onToggleFavorite={() => {}}
       />
     );
-    expect(html).toContain('role="dialog"');
+    expect(html).toContain('<dialog');
     expect(html).toContain('Obra A');
   });
 
@@ -157,7 +157,7 @@ describe('TourModal', () => {
     const html = renderToStaticMarkup(
       <TourModal darkMode onClose={() => {}} />
     );
-    expect(html).toContain('role="dialog"');
+    expect(html).toContain('<dialog');
     expect(html).toContain('Bienvenido');
     expect(html).toContain('Comenzar');
   });

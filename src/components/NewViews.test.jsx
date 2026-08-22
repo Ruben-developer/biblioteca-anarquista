@@ -189,8 +189,8 @@ describe('ReaderOverlay', () => {
     const html = renderToStaticMarkup(
       <ReaderOverlay book={book} darkMode={false} onClose={() => {}} />
     );
-    expect(html).toContain('role="dialog"');
-    expect(html).toContain('aria-modal="true"');
+    expect(html).toContain('<dialog');
+    expect(html).toContain('Lector: La Conquista del Pan');
     expect(html).toContain('La Conquista del Pan');
     expect(html).toContain('/pdfs/anarquismo/conquista.pdf');
     expect(html).toContain('Cerrar');

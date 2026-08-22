@@ -38,7 +38,7 @@ const WorldMap = ({
   const maxValue = numericValues.length > 0 ? Math.max(...numericValues) : 0;
 
   const defaultStyle = (context) => {
-    const hasValue = typeof context.countryValue !== 'undefined';
+    const hasValue = context.countryValue !== undefined;
     return {
       fill: hasValue ? '#dddddd' : '#eeeeee',
       stroke: borderColor,
@@ -49,7 +49,7 @@ const WorldMap = ({
   const styleFn = styleFunction || defaultStyle;
   const defaultTooltip = (context) => {
     const { countryNameEs, countryValue } = context;
-    return typeof countryValue === 'undefined'
+    return countryValue === undefined
       ? countryNameEs
       : `${countryNameEs}: ${countryValue}`;
   };

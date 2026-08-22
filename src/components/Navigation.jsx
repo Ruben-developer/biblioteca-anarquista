@@ -12,7 +12,6 @@ const Navigation = ({
 }) => {
   const themeClass = darkMode ? THEME.dark : THEME.light;
 
-  // Cerrar el drawer con Escape y bloquear el scroll de fondo mientras está abierto.
   useEffect(() => {
     if (!menuOpen) return undefined;
     const onKey = (e) => {
@@ -20,10 +19,10 @@ const Navigation = ({
     };
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
-    window.addEventListener('keydown', onKey);
+    globalThis.addEventListener('keydown', onKey);
     return () => {
       document.body.style.overflow = prevOverflow;
-      window.removeEventListener('keydown', onKey);
+      globalThis.removeEventListener('keydown', onKey);
     };
   }, [menuOpen, onMenuClose]);
 
@@ -46,10 +45,8 @@ const Navigation = ({
 
   return (
     <>
-      {/* Drawer lateral: overlay + panel. Se abre con la hamburguesa del header
-          (aria-controls="menu-lateral") en todos los tamaños. */}
       {menuOpen && (
-        <div id="menu-lateral" className="fixed inset-0 z-50" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+        <dialog id="menu-lateral" open className="fixed inset-0 z-50" aria-modal="true" aria-label="Menú de navegación">
           <div
             className="absolute inset-0 bg-black/60"
             onClick={onMenuClose}
@@ -97,7 +94,7 @@ const Navigation = ({
               ))}
             </div>
           </nav>
-        </div>
+        </dialog>
       )}
     </>
   );

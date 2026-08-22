@@ -14,16 +14,17 @@ const TourModal = ({ darkMode, onClose }) => {
   ];
 
   return (
-    <div
+    <dialog
+      open
       className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4"
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose();
       }}
-      role="dialog"
       aria-modal="true"
       aria-label="Tour de bienvenida"
+      tabIndex={0}
       onKeyDown={(e) => {
-        if (e.key === 'Escape') onClose();
+        if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') onClose();
       }}
     >
       <div className={`${cardClass} border-2 rounded-lg max-w-2xl w-full p-8`}>
@@ -47,7 +48,7 @@ const TourModal = ({ darkMode, onClose }) => {
           ¡Comenzar!
         </button>
       </div>
-    </div>
+    </dialog>
   );
 };
 

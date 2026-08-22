@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { BookOpen, ChevronDown, ChevronUp, Compass, Library } from 'lucide-react';
 import { THEME } from '../constants';
 import { anarchistTheories } from '../data/anarchistTheories';
@@ -141,11 +140,5 @@ const TheoriesView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
   );
 };
 
-TheoriesView.propTypes = {
-  darkMode: PropTypes.bool.isRequired,
-  regionData: PropTypes.object.isRequired,
-  onRead: PropTypes.func,
-  onOpenLibrary: PropTypes.func
-};
 
 export default TheoriesView;

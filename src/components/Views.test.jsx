@@ -25,8 +25,8 @@ describe('Navigation', () => {
     expect(html).toContain('Teorías');
     expect(html).toContain('Rutas');
     expect(html).toContain('Glosario');
-    // El drawer tiene rol dialog y aria-modal.
-    expect(html).toContain('role="dialog"');
+    // El drawer usa <dialog> con rol implícito y aria-modal.
+    expect(html).toContain('<dialog');
   });
 
   it('marca la vista activa en el drawer', () => {
@@ -43,7 +43,7 @@ describe('Navigation', () => {
     const html = renderToStaticMarkup(
       <Navigation activeView={VIEWS.LIBRARY} onViewChange={() => {}} darkMode={false} favoriteCount={0} menuOpen={false} onMenuClose={() => {}} />
     );
-    expect(html).not.toContain('role="dialog"');
+    expect(html).not.toContain('<dialog');
   });
 });
 

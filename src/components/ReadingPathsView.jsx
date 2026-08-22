@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { BookOpen, ChevronDown, ChevronUp, Milestone, Library } from 'lucide-react';
+import { BookOpen, ChevronDown, ChevronUp, Library } from 'lucide-react';
 import { THEME } from '../constants';
 import { readingPaths } from '../data/readingPaths';
 import { findBookByTitle } from '../utils/library';
@@ -59,7 +58,7 @@ const ReadingPathsView = ({ darkMode, regionData, onRead = () => {}, onOpenLibra
                     <div className={`absolute top-0 bottom-0 left-[11px] w-0.5 ${darkMode ? 'bg-red-600/60' : 'bg-amber-600/60'}`} />
                     <div className="flex flex-col gap-3">
                       {books.map((book, idx) => (
-                        <div key={idx} className="relative flex items-center gap-3 pl-7">
+                        <div key={book.title} className="relative flex items-center gap-3 pl-7">
                           <span className={`absolute left-0 top-1/2 -translate-y-1/2 w-5 h-5 rounded-full border-2 flex items-center justify-center text-[10px] ${
                             darkMode ? 'bg-gray-900 border-red-600 text-red-400' : 'bg-amber-50 border-amber-700 text-amber-800'
                           }`}>
@@ -125,11 +124,5 @@ const ReadingPathsView = ({ darkMode, regionData, onRead = () => {}, onOpenLibra
   );
 };
 
-ReadingPathsView.propTypes = {
-  darkMode: PropTypes.bool.isRequired,
-  regionData: PropTypes.object.isRequired,
-  onRead: PropTypes.func,
-  onOpenLibrary: PropTypes.func
-};
 
 export default ReadingPathsView;

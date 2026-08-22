@@ -16,20 +16,20 @@ const TimelineFilters = ({
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
 
   const handleSearchChange = (e) => {
-    onFilterChange({ ...filters, searchTerm: e.target.value });
-  };
+    onFilterChange({ ...filters, searchTerm: e.target.value })
+  }
 
   const handleDecadeChange = (decade) => {
-    onFilterChange({ ...filters, decade });
-  };
+    onFilterChange({ ...filters, decade })
+  }
 
   const handleCategoryChange = (category) => {
-    onFilterChange({ ...filters, category });
-  };
+    onFilterChange({ ...filters, category })
+  }
 
   const handleRegionChange = (region) => {
-    onFilterChange({ ...filters, region });
-  };
+    onFilterChange({ ...filters, region })
+  }
 
   return (
     <div className="space-y-6">
