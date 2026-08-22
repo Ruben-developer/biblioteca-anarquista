@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
-import { Book, ChevronDown, ChevronUp, BookOpen, MapPin } from 'lucide-react';
+import { Book, ChevronDown, ChevronUp, BookOpen, MapPin, Search } from 'lucide-react';
 import { THEME } from '../constants';
+
+const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
 const AuthorsView = ({
   darkMode,
@@ -11,9 +13,42 @@ const AuthorsView = ({
 }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
   const [openAuthor, setOpenAuthor] = useState(null);
+  const [search, setSearch] = useState('');
+  const [activeLetter, setActiveLetter] = useState(null);
 
   const toggleAuthor = (name) => {
     setOpenAuthor((prev) => (prev === name ? null : name));
+  };
+
+  const letterCounts = useMemo(() => {
+    const counts = {};
+    authors.forEach((a) => {
+      const letter = a.name.charAt(0).toUpperCase();
+      counts[letter] = (counts[letter] || 0) + 1;
+    });
+    return counts;
+  }, [authors]);
+
+  const filtered = useMemo(() => {
+    let result = authors;
+    if (search.trim()) {
+      const term = search.toLowerCase();
+      result = result.filter((a) => a.name.toLowerCase().includes(term));
+    }
+    if (activeLetter) {
+      result = result.filter((a) => a.name.charAt(0).toUpperCase() === activeLetter);
+    }
+    return result;
+  }, [authors, search, activeLetter]);
+
+  const handleLetterClick = (letter) => {
+    setActiveLetter((prev) => (prev === letter ? null : letter));
+    setSearch('');
+  };
+
+  const handleSearchChange = (e) => {
+    setSearch(e.target.value);
+    if (e.target.value) setActiveLetter(null);
   };
 
   return (
@@ -21,117 +56,179 @@ const AuthorsView = ({
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         Autores del Archivo
       </h2>
-      <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-        {authors.length} autores, ordenados de más a menos textos de su autoría. Haz clic en un autor para ver su obra completa.
+      <p className={`text-sm mb-4 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
+        {authors.length} autores, ordenados de más a menos textos de su autoría.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {authors.map((author) => {
-          const isOpen = openAuthor === author.name;
-          const primaryRegion = author.regions[0];
-          return (
-            <div key={author.name} className={`${cardClass} border-2 rounded-lg p-6 shadow-md hover:shadow-xl transition-all flex flex-col`}>
-              <button
-                className="text-left w-full"
-                onClick={() => toggleAuthor(author.name)}
-                aria-expanded={isOpen}
-              >
-                <div className="text-5xl mb-3 text-center">👤</div>
-                <h3 className={`text-xl font-bold ${darkMode ? 'text-gray-100' : 'text-gray-800'} mb-2 text-center`}>
-                  {author.name}
-                </h3>
-                {author.yearsRange && (
-                  <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-amber-700'} mb-2 text-center`}>
-                    {author.yearsRange} (años de sus obras)
-                  </p>
-                )}
-                {primaryRegion && (
-                  <p className={`text-xs ${darkMode ? 'text-red-400' : 'text-amber-600'} mb-3 text-center`}>
-                    📍 {author.regions.join(', ')}
-                  </p>
-                )}
-                <div className={`flex items-center justify-between pt-3 mt-3 border-t ${darkMode ? 'border-gray-700' : 'border-amber-300'}`}>
-                  <span className="text-sm">
-                    <Book size={16} className="inline mr-1" />
-                    {author.bookCount} {author.bookCount === 1 ? 'texto' : 'textos'}
-                  </span>
-                  <span className="text-sm flex items-center gap-1">
-                    {isOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                  </span>
-                </div>
-              </button>
 
-              {isOpen && (
-                <div className="mt-4 space-y-2">
-                  {author.books.filter((b) => b.year).length > 1 && (
-                    <div className={`rounded-lg border p-3 ${darkMode ? 'bg-gray-800/60 border-gray-700/50' : 'bg-white/80 border-amber-300'}`}>
-                      <p className={`text-xs uppercase tracking-wide mb-2 ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
-                        Línea de tiempo de su obra
-                      </p>
-                      <div className="flex items-center gap-0 overflow-x-auto pb-1">
-                        {author.books
-                          .filter((b) => b.year)
-                          .sort((a, b) => a.year - b.year)
-                          .map((b, i, arr) => (
-                            <div key={`${b.title}-${i}`} className="flex items-center">
-                              <div className="flex flex-col items-center min-w-[64px]">
-                                <span className={`text-[10px] ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>{b.year}</span>
-                                <span className={`w-3 h-3 rounded-full mt-1 ${darkMode ? 'bg-red-600' : 'bg-amber-700'}`} />
-                                <span className={`text-[10px] text-center leading-tight mt-1 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                                  {b.title.length > 22 ? `${b.title.slice(0, 22)}…` : b.title}
-                                </span>
+      {/* Buscador */}
+      <div className="relative mb-4">
+        <Search className={`absolute left-3 top-1/2 -translate-y-1/2 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`} size={18} />
+        <input
+          type="text"
+          placeholder="Buscar autor..."
+          value={search}
+          onChange={handleSearchChange}
+          className={`w-full ${darkMode ? 'bg-gray-800 border-gray-700 text-gray-100 placeholder-gray-500' : 'bg-white/80 border-amber-300 text-gray-800 placeholder-amber-600'} border-2 rounded-lg pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:border-amber-600 transition-colors`}
+        />
+      </div>
+
+      {/* Barra alfabética */}
+      <div className="flex flex-wrap gap-1 mb-5">
+        <button
+          onClick={() => { setActiveLetter(null); setSearch(''); }}
+          className={`px-2 py-1 rounded text-xs font-medium transition-colors ${
+            !activeLetter && !search
+              ? darkMode ? 'bg-red-600 text-white' : 'bg-amber-800 text-amber-50'
+              : darkMode ? 'bg-gray-800 text-gray-400 hover:bg-gray-700' : 'bg-amber-100 text-amber-700 hover:bg-amber-200'
+          }`}
+        >
+          Todos
+        </button>
+        {ALPHABET.map((letter) => (
+          <button
+            key={letter}
+            onClick={() => handleLetterClick(letter)}
+            disabled={!letterCounts[letter]}
+            className={`px-2 py-1 rounded text-xs font-medium transition-colors min-w-[28px] ${
+              activeLetter === letter
+                ? darkMode ? 'bg-red-600 text-white' : 'bg-amber-800 text-amber-50'
+                : letterCounts[letter]
+                  ? darkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-amber-100 text-amber-800 hover:bg-amber-200'
+                  : darkMode ? 'bg-gray-900 text-gray-600 cursor-default' : 'bg-gray-100 text-gray-400 cursor-default'
+            }`}
+          >
+            {letter}
+            {letterCounts[letter] ? (
+              <span className={`ml-0.5 text-[9px] ${activeLetter === letter ? '' : darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
+                {letterCounts[letter]}
+              </span>
+            ) : null}
+          </button>
+        ))}
+      </div>
+
+      {/* Conteo de resultados */}
+      {(search || activeLetter) && (
+        <p className={`text-xs mb-4 ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
+          {filtered.length} autor{filtered.length !== 1 ? 'es' : ''} encontrado{filtered.length !== 1 ? 's' : ''}
+        </p>
+      )}
+
+      {/* Grid de autores */}
+      {filtered.length === 0 ? (
+        <p className={`text-center py-8 ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
+          No se encontraron autores con ese criterio.
+        </p>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filtered.map((author) => {
+            const isOpen = openAuthor === author.name;
+            const primaryRegion = author.regions[0];
+            return (
+              <div key={author.name} className={`${cardClass} border-2 rounded-lg p-6 shadow-md hover:shadow-xl transition-all flex flex-col`}>
+                <button
+                  className="text-left w-full"
+                  onClick={() => toggleAuthor(author.name)}
+                  aria-expanded={isOpen}
+                >
+                  <div className="text-5xl mb-3 text-center">👤</div>
+                  <h3 className={`text-xl font-bold ${darkMode ? 'text-gray-100' : 'text-gray-800'} mb-2 text-center`}>
+                    {author.name}
+                  </h3>
+                  {author.yearsRange && (
+                    <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-amber-700'} mb-2 text-center`}>
+                      {author.yearsRange} (años de sus obras)
+                    </p>
+                  )}
+                  {primaryRegion && (
+                    <p className={`text-xs ${darkMode ? 'text-red-400' : 'text-amber-600'} mb-3 text-center`}>
+                      📍 {author.regions.join(', ')}
+                    </p>
+                  )}
+                  <div className={`flex items-center justify-between pt-3 mt-3 border-t ${darkMode ? 'border-gray-700' : 'border-amber-300'}`}>
+                    <span className="text-sm">
+                      <Book size={16} className="inline mr-1" />
+                      {author.bookCount} {author.bookCount === 1 ? 'texto' : 'textos'}
+                    </span>
+                    <span className="text-sm flex items-center gap-1">
+                      {isOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                    </span>
+                  </div>
+                </button>
+
+                {isOpen && (
+                  <div className="mt-4 space-y-2">
+                    {author.books.filter((b) => b.year).length > 1 && (
+                      <div className={`rounded-lg border p-3 ${darkMode ? 'bg-gray-800/60 border-gray-700/50' : 'bg-white/80 border-amber-300'}`}>
+                        <p className={`text-xs uppercase tracking-wide mb-2 ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
+                          Línea de tiempo de su obra
+                        </p>
+                        <div className="flex items-center gap-0 overflow-x-auto pb-1">
+                          {author.books
+                            .filter((b) => b.year)
+                            .sort((a, b) => a.year - b.year)
+                            .map((b, i, arr) => (
+                              <div key={`${b.title}-${i}`} className="flex items-center">
+                                <div className="flex flex-col items-center min-w-[64px]">
+                                  <span className={`text-[10px] ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>{b.year}</span>
+                                  <span className={`w-3 h-3 rounded-full mt-1 ${darkMode ? 'bg-red-600' : 'bg-amber-700'}`} />
+                                  <span className={`text-[10px] text-center leading-tight mt-1 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                                    {b.title.length > 22 ? `${b.title.slice(0, 22)}…` : b.title}
+                                  </span>
+                                </div>
+                                {i < arr.length - 1 && (
+                                  <span className={`h-0.5 w-4 ${darkMode ? 'bg-gray-600' : 'bg-amber-400'}`} />
+                                )}
                               </div>
-                              {i < arr.length - 1 && (
-                                <span className={`h-0.5 w-4 ${darkMode ? 'bg-gray-600' : 'bg-amber-400'}`} />
+                            ))}
+                        </div>
+                      </div>
+                    )}
+                    {author.books.map((book, idx) => (
+                      <div
+                        key={`${book.region}-${book.title}-${idx}`}
+                        className={`rounded-lg border p-3 ${darkMode ? 'bg-gray-800/60 border-gray-700/50' : 'bg-white/80 border-amber-300'}`}
+                      >
+                        <div className="flex justify-between items-start gap-2">
+                          <div className="flex-1">
+                            <p className={`text-sm font-medium ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
+                              {book.title}
+                            </p>
+                            <div className="flex items-center gap-2 mt-1 flex-wrap">
+                              <span className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-600'} flex items-center gap-1`}>
+                                <MapPin size={12} /> {book.region}
+                              </span>
+                              <span className={`px-2 py-0.5 rounded text-xs ${darkMode ? 'bg-gray-700' : 'bg-amber-200'}`}>
+                                {book.category}
+                              </span>
+                              {book.year && (
+                                <span className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                                  {book.year}
+                                </span>
                               )}
                             </div>
-                          ))}
-                      </div>
-                    </div>
-                  )}
-                  {author.books.map((book, idx) => (
-                    <div
-                      key={`${book.region}-${book.title}-${idx}`}
-                      className={`rounded-lg border p-3 ${darkMode ? 'bg-gray-800/60 border-gray-700/50' : 'bg-white/80 border-amber-300'}`}
-                    >
-                      <div className="flex justify-between items-start gap-2">
-                        <div className="flex-1">
-                          <p className={`text-sm font-medium ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
-                            {book.title}
-                          </p>
-                          <div className="flex items-center gap-2 mt-1 flex-wrap">
-                            <span className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-600'} flex items-center gap-1`}>
-                              <MapPin size={12} /> {book.region}
-                            </span>
-                            <span className={`px-2 py-0.5 rounded text-xs ${darkMode ? 'bg-gray-700' : 'bg-amber-200'}`}>
-                              {book.category}
-                            </span>
-                            {book.year && (
-                              <span className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                                {book.year}
-                              </span>
-                            )}
                           </div>
+                          {book.filename && (
+                            <button
+                              onClick={() => onRead(book)}
+                              className={`flex-shrink-0 flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-colors ${
+                                darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
+                              }`}
+                            >
+                              <BookOpen size={12} />
+                              Leer
+                            </button>
+                          )}
                         </div>
-                        {book.filename && (
-                          <button
-                            onClick={() => onRead(book)}
-                            className={`flex-shrink-0 flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-colors ${
-                              darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
-                            }`}
-                          >
-                            <BookOpen size={12} />
-                            Leer
-                          </button>
-                        )}
                       </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          );
-        })}
-      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 };
