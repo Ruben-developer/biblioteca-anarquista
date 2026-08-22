@@ -79,7 +79,8 @@ const VerticalTimeline = ({
   cardClass,
   onSelectEvent
 }) => (
-  <div className="space-y-8">
+  <div className={`${darkMode ? 'bg-gray-900/40 border-gray-700/30' : 'bg-white/40 border-amber-200'} rounded-lg border p-6`}>
+    <div className="space-y-8">
     {sortedDecades.map((decade) => (
       <div key={decade}>
         <div className="flex items-center gap-4 mb-4">
@@ -124,6 +125,7 @@ const VerticalTimeline = ({
         </div>
       </div>
     ))}
+    </div>
   </div>
 )
 

@@ -36,7 +36,7 @@ const ReadingPathsView = ({ darkMode, regionData, onRead = () => {}, onOpenLibra
                     <h3 className={`font-bold text-lg break-words ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
                       {path.title}
                     </h3>
-                    <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-amber-700'} line-clamp-2`}>
+                    <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
                       {path.description}
                     </p>
                   </div>
@@ -62,38 +62,34 @@ const ReadingPathsView = ({ darkMode, regionData, onRead = () => {}, onOpenLibra
                             {idx + 1}
                           </span>
                           <div className={`flex-1 min-w-0 rounded-lg border p-3 ${darkMode ? 'bg-gray-800/60 border-gray-700/50' : 'bg-white/80 border-amber-300'}`}>
-                            <div className="flex items-center justify-between gap-2">
-                              <div className="min-w-0">
-                                <p className={`text-sm font-medium break-words ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
-                                  {book.title}
-                                </p>
-                                <p className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                                  {book.author} · {book.year || '—'}
-                                </p>
-                              </div>
-                              <span className="flex items-center gap-1.5 flex-shrink-0">
-                                {book.filename && (
-                                  <button
-                                    onClick={() => onRead(book)}
-                                    className={`flex-shrink-0 flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-colors ${
-                                      darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
-                                    }`}
-                                  >
-                                    <BookOpen size={12} />
-                                    Leer
-                                  </button>
-                                )}
+                            <p className={`text-sm font-medium break-words ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
+                              {book.title}
+                            </p>
+                            <p className={`text-xs mb-2 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                              {book.author} · {book.year || '—'}
+                            </p>
+                            <div className="flex items-center gap-1.5">
+                              {book.filename && (
                                 <button
-                                  onClick={() => onOpenLibrary({ searchTerm: book.title })}
-                                  className={`flex-shrink-0 flex items-center gap-1 px-2 py-1 rounded text-xs font-medium transition-colors ${
-                                    darkMode ? 'bg-gray-700 text-gray-200 hover:bg-gray-600' : 'bg-white border border-amber-300 text-amber-800 hover:bg-amber-100'
+                                  onClick={() => onRead(book)}
+                                  className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-colors ${
+                                    darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
                                   }`}
-                                  title={`Ver "${book.title}" en el catálogo`}
                                 >
-                                  <Library size={12} />
-                                  En el catálogo
+                                  <BookOpen size={12} />
+                                  Leer
                                 </button>
-                              </span>
+                              )}
+                              <button
+                                onClick={() => onOpenLibrary({ searchTerm: book.title })}
+                                className={`flex items-center gap-1 px-2 py-1 rounded text-xs font-medium transition-colors ${
+                                  darkMode ? 'bg-gray-700 text-gray-200 hover:bg-gray-600' : 'bg-white border border-amber-300 text-amber-800 hover:bg-amber-100'
+                                }`}
+                                title={`Ver "${book.title}" en el catálogo`}
+                              >
+                                <Library size={12} />
+                                En el catálogo
+                              </button>
                             </div>
                           </div>
                         </div>
