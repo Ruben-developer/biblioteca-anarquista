@@ -44,7 +44,7 @@ describe('AnarchistArchive interactivo (jsdom)', () => {
     const { container } = render(<AnarchistArchive />);
     openDrawer(screen, fireEvent);
     fireEvent.click(screen.getByRole('button', { name: 'Autores' }));
-    expect(screen.getByText('Autores del Archivo')).toBeTruthy();
+    expect(screen.getByText('Autores', { selector: 'h2' })).toBeTruthy();
     openDrawer(screen, fireEvent);
     const favButtons = screen.getAllByRole('button', { name: /Mi Biblioteca/ });
     fireEvent.click(favButtons[0]);

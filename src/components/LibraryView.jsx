@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react'
-import { Search, BookOpen, Heart, X, CalendarClock, Users, MapPin } from 'lucide-react'
+import { Search, BookOpen, Heart, X, CalendarClock, Users, MapPin, ChevronLeft, ChevronRight } from 'lucide-react'
 import { THEME, CATEGORIES } from '../constants'
 import { getAllBooks, filterBooks, sortBooks, getDecadeFromYear, getDailyFeaturedBook, getBookEvents, groupBooksByAuthor, groupBooksByRegion } from '../utils/library'
 import FeaturedBook from './FeaturedBook'
@@ -13,6 +13,8 @@ const DEFAULT_FILTERS = {
 }
 
 const DECADE_OPTIONS = ['all', '1840s', '1850s', '1860s', '1870s', '1880s', '1890s', '1900s', '1910s', '1920s', '1930s', '1940s', '1950s', '1960s']
+
+const PAGE_SIZE = 10
 
 const getHeartClass = (isFav, darkMode) => {
   if (isFav) return 'fill-red-500 text-red-500'
@@ -207,6 +209,7 @@ const LibraryView = ({
   const [sort, setSort] = useState('rating')
   const [groupByAuthor, setGroupByAuthor] = useState(false)
   const [groupByRegion, setGroupByRegion] = useState(false)
+  const [page, setPage] = useState(1)
 
   useEffect(() => {
     setSearchTerm(initialFilters?.searchTerm ?? DEFAULT_FILTERS.searchTerm)
@@ -214,6 +217,7 @@ const LibraryView = ({
     setDecade(initialFilters?.decade ?? DEFAULT_FILTERS.decade)
     setType(initialFilters?.type ?? DEFAULT_FILTERS.type)
     setFavoritesOnly(initialFilters?.favoritesOnly ?? DEFAULT_FILTERS.favoritesOnly)
+    setPage(1)
   }, [initialFilters])
 
   const allBooks = useMemo(() => getAllBooks(regionData), [regionData])
@@ -232,12 +236,15 @@ const LibraryView = ({
     [allBooks, searchTerm, category, decade, type, favoritesOnly, favorites, sort]
   )
 
+  useEffect(() => { setPage(1) }, [searchTerm, category, decade, type, favoritesOnly, sort])
+
   const clearFilters = () => {
     setSearchTerm(DEFAULT_FILTERS.searchTerm)
     setCategory(DEFAULT_FILTERS.category)
     setDecade(DEFAULT_FILTERS.decade)
     setType(DEFAULT_FILTERS.type)
     setFavoritesOnly(DEFAULT_FILTERS.favoritesOnly)
+    setPage(1)
   }
 
   const groupedBooks = useMemo(() => groupBooksByAuthor(filtered), [filtered])
@@ -288,12 +295,39 @@ const LibraryView = ({
         </div>
       )
     }
+    const totalPages = Math.ceil(filtered.length / PAGE_SIZE)
+    const paged = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
     return (
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {filtered.map((book, idx) => (
-          <GridCard key={`${book.region}-${book.title}`} book={book} idx={idx} favorites={favorites} onToggleFavorite={onToggleFavorite} onRead={onRead} onOpenEvent={onOpenEvent} timelineEvents={timelineEvents} darkMode={darkMode} cardClass={cardClass} />
-        ))}
-      </div>
+      <>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {paged.map((book, idx) => (
+            <GridCard key={`${book.region}-${book.title}`} book={book} idx={idx} favorites={favorites} onToggleFavorite={onToggleFavorite} onRead={onRead} onOpenEvent={onOpenEvent} timelineEvents={timelineEvents} darkMode={darkMode} cardClass={cardClass} />
+          ))}
+        </div>
+        {totalPages > 1 && (
+          <div className={`flex items-center justify-center gap-3 mt-6 pt-4 border-t ${darkMode ? 'border-gray-700' : 'border-amber-300'}`}>
+            <button
+              onClick={() => setPage((p) => Math.max(1, p - 1))}
+              disabled={page === 1}
+              className={`p-2 rounded-lg transition-colors ${page === 1 ? 'opacity-30 cursor-default' : darkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-amber-100 text-amber-800 hover:bg-amber-200'}`}
+              aria-label="Página anterior"
+            >
+              <ChevronLeft size={18} />
+            </button>
+            <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
+              Página {page} de {totalPages}
+            </span>
+            <button
+              onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+              disabled={page === totalPages}
+              className={`p-2 rounded-lg transition-colors ${page === totalPages ? 'opacity-30 cursor-default' : darkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-amber-100 text-amber-800 hover:bg-amber-200'}`}
+              aria-label="Página siguiente"
+            >
+              <ChevronRight size={18} />
+            </button>
+          </div>
+        )}
+      </>
     )
   }
 

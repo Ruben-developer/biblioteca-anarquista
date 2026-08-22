@@ -273,7 +273,7 @@ describe('AuthorsView', () => {
 
   it('renderiza la lista de autores con su conteo', () => {
     const html = renderToStaticMarkup(<AuthorsView darkMode={false} authors={authors} />);
-    expect(html).toContain('Autores del Archivo');
+    expect(html).toContain('Autores');
     expect(html).toContain('Ricardo Mella');
     expect(html).toContain('4 textos');
     expect(html).toContain('1890-1905');

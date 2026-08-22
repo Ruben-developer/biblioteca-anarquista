@@ -135,10 +135,11 @@ describe('ReadingPathsView', () => {
     expect(html).toContain('Anarquismo en España');
   });
 
-  it('la primera ruta está abierta y muestra sus obras', async () => {
+  it('al abrir una ruta muestra sus obras', async () => {
     // @vitest-environment jsdom
-    const { render, screen } = await import('@testing-library/react');
+    const { render, screen, fireEvent } = await import('@testing-library/react');
     render(<ReadingPathsView darkMode regionData={regionData} />);
+    fireEvent.click(screen.getByText('Orígenes y fundamentos'));
     expect(screen.getByText('¿Qué es la Propiedad?')).toBeTruthy();
     expect(screen.getByText('Dios y el Estado')).toBeTruthy();
   });
@@ -148,6 +149,7 @@ describe('ReadingPathsView', () => {
     const { render, screen, fireEvent } = await import('@testing-library/react');
     const onOpenLibrary = vi.fn();
     render(<ReadingPathsView darkMode regionData={regionData} onOpenLibrary={onOpenLibrary} />);
+    fireEvent.click(screen.getByText('Orígenes y fundamentos'));
     fireEvent.click(screen.getAllByTitle(/Ver "¿Qué es la Propiedad\?" en el catálogo/)[0]);
     expect(onOpenLibrary).toHaveBeenCalledWith({ searchTerm: '¿Qué es la Propiedad?' });
   });
