@@ -1,8 +1,9 @@
-import React, { useState, useMemo } from 'react';
-import { Book, ChevronDown, ChevronUp, BookOpen, MapPin, Search } from 'lucide-react';
+import React, { useState, useMemo, useEffect } from 'react';
+import { Book, ChevronDown, ChevronUp, BookOpen, MapPin, Search, ChevronLeft, ChevronRight } from 'lucide-react';
 import { THEME } from '../constants';
 
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+const PAGE_SIZE = 12;
 
 const getTodosButtonClass = (darkMode, activeLetter, search) => {
   const isActive = !activeLetter && !search;
@@ -38,6 +39,7 @@ const AuthorsView = ({
   const [openAuthor, setOpenAuthor] = useState(null);
   const [search, setSearch] = useState('');
   const [activeLetter, setActiveLetter] = useState(null);
+  const [page, setPage] = useState(1);
 
   const toggleAuthor = (name) => {
     setOpenAuthor((prev) => (prev === name ? null : name));
@@ -64,6 +66,8 @@ const AuthorsView = ({
     return result;
   }, [authors, search, activeLetter]);
 
+  useEffect(() => { setPage(1) }, [search, activeLetter]);
+
   const handleLetterClick = (letter) => {
     setActiveLetter((prev) => (prev === letter ? null : letter));
     setSearch('');
@@ -77,7 +81,7 @@ const AuthorsView = ({
   return (
     <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
-        Autores del Archivo
+        Autores
       </h2>
       <p className={`text-sm mb-4 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
         {authors.length} autores, ordenados de más a menos textos de su autoría.
@@ -128,9 +132,13 @@ const AuthorsView = ({
         <p className={`text-center py-8 ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
           No se encontraron autores con ese criterio.
         </p>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map((author) => {
+      ) : (() => {
+        const totalPages = Math.ceil(filtered.length / PAGE_SIZE)
+        const paged = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
+        return (
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {paged.map((author) => {
             const isOpen = openAuthor === author.name;
             const primaryRegion = author.regions[0];
             return (
@@ -236,8 +244,33 @@ const AuthorsView = ({
               </div>
             );
           })}
-        </div>
-      )}
+            </div>
+            {totalPages > 1 && (
+              <div className={`flex items-center justify-center gap-3 mt-6 pt-4 border-t ${darkMode ? 'border-gray-700' : 'border-amber-300'}`}>
+                <button
+                  onClick={() => setPage((p) => Math.max(1, p - 1))}
+                  disabled={page === 1}
+                  className={`p-2 rounded-lg transition-colors ${page === 1 ? 'opacity-30 cursor-default' : darkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-amber-100 text-amber-800 hover:bg-amber-200'}`}
+                  aria-label="Página anterior"
+                >
+                  <ChevronLeft size={18} />
+                </button>
+                <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
+                  Página {page} de {totalPages}
+                </span>
+                <button
+                  onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+                  disabled={page === totalPages}
+                  className={`p-2 rounded-lg transition-colors ${page === totalPages ? 'opacity-30 cursor-default' : darkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-amber-100 text-amber-800 hover:bg-amber-200'}`}
+                  aria-label="Página siguiente"
+                >
+                  <ChevronRight size={18} />
+                </button>
+              </div>
+            )}
+          </>
+        )
+      })()}
     </div>
   );
 };

@@ -6,7 +6,7 @@ import { findBookByTitle } from '../utils/library';
 
 const ReadingPathsView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary = () => {} }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
-  const [openId, setOpenId] = useState(readingPaths[0]?.id || null);
+  const [openId, setOpenId] = useState(null)
 
   const toggle = (id) => setOpenId((prev) => (prev === id ? null : id));
 
@@ -51,9 +51,6 @@ const ReadingPathsView = ({ darkMode, regionData, onRead = () => {}, onOpenLibra
 
               {isOpen && (
                 <div className={`mt-4 pt-4 border-t ${darkMode ? 'border-gray-700' : 'border-amber-300'}`}>
-                  <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-amber-700'} mb-4`}>
-                    {path.description}
-                  </p>
                   <div className="relative">
                     <div className={`absolute top-0 bottom-0 left-[11px] w-0.5 ${darkMode ? 'bg-red-600/60' : 'bg-amber-600/60'}`} />
                     <div className="flex flex-col gap-3">

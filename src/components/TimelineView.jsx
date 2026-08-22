@@ -92,7 +92,7 @@ const VerticalTimeline = ({
           </span>
         </div>
 
-        <div className="space-y-4 ml-8 border-l-2 border-dashed pl-6" style={{ borderColor: dashedColor }}>
+        <div className="space-y-4 ml-8 pl-6" style={{ borderLeft: `2px dashed ${dashedColor}` }}>
           {groupedByDecade[decade].map((event) => (
             <div key={`${event.year}-${event.title}`} className="relative">
               <div className={`absolute -left-[31px] top-5 w-4 h-4 ${dotColor} rounded-full border-2 ${dotBorder} z-10`}></div>

@@ -31,11 +31,10 @@ const TheoriesView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
                 onClick={() => toggle(theory.id)}
                 aria-expanded={isOpen}
               >
-                <div className="text-5xl mb-3 text-center">{theory.icon}</div>
-                <h3 className={`text-xl font-bold ${darkMode ? 'text-gray-100' : 'text-gray-800'} mb-2 text-center`}>
+                <h3 className={`text-xl font-bold ${darkMode ? 'text-gray-100' : 'text-gray-800'} mb-2`}>
                   {theory.name}
                 </h3>
-                <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-amber-700'} mb-3 line-clamp-3`}>
+                <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-amber-700'} mb-3`}>
                   {theory.description}
                 </p>
                 <div className={`flex items-center justify-between pt-3 mt-3 border-t ${darkMode ? 'border-gray-700' : 'border-amber-300'}`}>
@@ -52,9 +51,6 @@ const TheoriesView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
               {isOpen && (
                 <div className="mt-4 space-y-3">
                   <div className={`rounded-lg border p-3 ${darkMode ? 'bg-gray-800/60 border-gray-700/50' : 'bg-white/80 border-amber-300'}`}>
-                    <p className={`text-sm ${darkMode ? 'text-gray-200' : 'text-gray-800'} mb-2`}>
-                      {theory.description}
-                    </p>
                     <ul className="space-y-1">
                       {theory.keyIdeas.map((idea) => (
                         <li key={idea} className={`text-xs flex gap-2 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
