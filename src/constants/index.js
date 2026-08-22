@@ -47,7 +47,7 @@ export const VIEW_LABELS = {
   [VIEWS.TIMELINE]: 'Línea Temporal',
   [VIEWS.MAP]: 'Mapa',
   [VIEWS.AUTHORS]: 'Autores',
-  [VIEWS.FAVORITES]: 'Favoritos',
+  [VIEWS.FAVORITES]: 'Mi Biblioteca',
   [VIEWS.LIBRARY]: 'Biblioteca',
   [VIEWS.THEORIES]: 'Teorías',
   [VIEWS.INFLUENCES]: 'Red de Autores',

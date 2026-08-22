@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import { LayoutList, LayoutGrid } from 'lucide-react';
 import { THEME } from '../constants';
+import TimelineFilters from './TimelineFilters';
 
 const TimelineView = ({
   darkMode,
   filteredEvents,
   onSelectEvent,
-  onClearFilters
+  onClearFilters,
+  filters,
+  onFilterChange,
+  onShowFilters,
+  showFilters,
+  totalEventCount
 }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
   const [layout, setLayout] = useState('horizontal');
@@ -64,9 +70,20 @@ const TimelineView = ({
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         Línea Temporal
       </h2>
-      <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-        {filteredEvents.length} evento{filteredEvents.length !== 1 ? 's' : ''} del movimiento anarquista. Navega por décadas o cambia a vista feed.
+      <p className={`text-sm mb-4 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
+        Navega por décadas o cambia a vista feed.
       </p>
+
+      <TimelineFilters
+        darkMode={darkMode}
+        filters={filters}
+        onFilterChange={onFilterChange}
+        onShowFilters={onShowFilters}
+        showFilters={showFilters}
+        onClearFilters={onClearFilters}
+        eventCount={filteredEvents.length}
+        totalEventCount={totalEventCount}
+      />
 
       <div className="flex items-center gap-2 mb-4">
         <button

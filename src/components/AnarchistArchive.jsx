@@ -9,11 +9,11 @@ import { useScrollTop, useDarkMode, useFavorites } from '../hooks';
 // Components
 import Header from './Header';
 import Navigation from './Navigation';
-import TimelineFilters from './TimelineFilters';
 import StatsPanel from './StatsPanel';
 import TimelineView from './TimelineView';
 import WorldMapView from './WorldMapView';
 import AuthorsView from './AuthorsView';
+import InfluencesView from './InfluencesView';
 import FavoritesView from './FavoritesView';
 import LibraryView from './LibraryView';
 import TheoriesView from './TheoriesView';
@@ -117,24 +117,17 @@ const AnarchistArchive = () => {
           )}
 
           {activeView === VIEWS.TIMELINE && (
-            <div className="space-y-6">
-              <TimelineFilters
-                darkMode={darkMode}
-                filters={filters}
-                onFilterChange={setFilters}
-                onShowFilters={() => setShowFilters(!showFilters)}
-                showFilters={showFilters}
-                onClearFilters={clearFilters}
-                eventCount={filteredEvents.length}
-                totalEventCount={timelineEvents.length}
-              />
-              <TimelineView
-                darkMode={darkMode}
-                filteredEvents={filteredEvents}
-                onSelectEvent={setSelectedEvent}
-                onClearFilters={clearFilters}
-              />
-            </div>
+            <TimelineView
+              darkMode={darkMode}
+              filteredEvents={filteredEvents}
+              onSelectEvent={setSelectedEvent}
+              onClearFilters={clearFilters}
+              filters={filters}
+              onFilterChange={setFilters}
+              onShowFilters={() => setShowFilters(!showFilters)}
+              showFilters={showFilters}
+              totalEventCount={timelineEvents.length}
+            />
           )}
 
           {activeView === VIEWS.MAP && (
@@ -149,6 +142,14 @@ const AnarchistArchive = () => {
             <AuthorsView
               darkMode={darkMode}
               authors={dynamicAuthors}
+              regionData={regionData}
+              onRead={setReadingBook}
+            />
+          )}
+
+          {activeView === VIEWS.INFLUENCES && (
+            <InfluencesView
+              darkMode={darkMode}
               regionData={regionData}
               onRead={setReadingBook}
             />

@@ -372,7 +372,8 @@ describe('AnarchistArchive interactivo (navegación completa)', () => {
   it('navega a Biblioteca y filtra una obra desde el buscador', () => {
     const { container } = render(<AnarchistArchive />);
     openDrawer();
-    fireEvent.click(screen.getByRole('button', { name: /Biblioteca/ }));
+    const navButtons = screen.getAllByRole('button', { name: /Biblioteca/ });
+    fireEvent.click(navButtons[0]);
     expect(screen.getAllByText('Biblioteca').length).toBeGreaterThan(0);
     fireEvent.change(screen.getByLabelText('Buscar obra'), { target: { value: 'Kropotkin' } });
     expect(screen.getAllByText(/Kropotkin/).length).toBeGreaterThan(0);
@@ -395,7 +396,8 @@ it('abre un evento de la línea temporal y cierra el modal con Escape', () => {
   it('referencia cruzada: desde la Biblioteca abre el evento en la línea temporal', () => {
     const { container } = render(<AnarchistArchive />);
     openDrawer();
-    fireEvent.click(screen.getByRole('button', { name: /Biblioteca/ }));
+    const navButtons = screen.getAllByRole('button', { name: /Biblioteca/ });
+    fireEvent.click(navButtons[0]);
     const link = screen.getAllByText(/Ver en la línea temporal:/)[0];
     const eventTitle = link.textContent.replace('Ver en la línea temporal: ', '').split(' (')[0];
     fireEvent.click(link);
@@ -452,7 +454,8 @@ it('abre un evento de la línea temporal y cierra el modal con Escape', () => {
     expect(screen.getByLabelText('Buscar obra').value).not.toBe('');
     // Navegar a Biblioteca desde el menú vuelve a abrir el catálogo completo.
     openDrawer();
-    fireEvent.click(screen.getByRole('button', { name: /Biblioteca/ }));
+    const navButtons = screen.getAllByRole('button', { name: /Biblioteca/ });
+    fireEvent.click(navButtons[0]);
     expect(screen.getByLabelText('Buscar obra').value).toBe('');
     container.remove();
   });
@@ -506,16 +509,17 @@ describe('Navigation móvil (drawer/hamburguesa)', () => {
     const drawer = screen.getByRole('dialog', { name: 'Menú de navegación' });
     expect(drawer).toBeTruthy();
     expect(screen.getByRole('button', { name: 'Abrir menú de navegación' }).getAttribute('aria-expanded')).toBe('true');
-    expect(within(drawer).getByRole('button', { name: /Biblioteca/ })).toBeTruthy();
+    expect(within(drawer).getAllByRole('button', { name: /Biblioteca/ }).length).toBeGreaterThanOrEqual(1);
     expect(within(drawer).getByRole('button', { name: /Mapa/ })).toBeTruthy();
     expect(within(drawer).getByRole('button', { name: /Línea Temporal/ })).toBeTruthy();
-    expect(within(drawer).getByRole('button', { name: /Autores/ })).toBeTruthy();
+    expect(within(drawer).getAllByRole('button', { name: /Autores/ }).length).toBeGreaterThanOrEqual(1);
     expect(within(drawer).getByRole('button', { name: /Teorías/ })).toBeTruthy();
     expect(within(drawer).getByRole('button', { name: /Rutas/ })).toBeTruthy();
     expect(within(drawer).getByRole('button', { name: /Glosario/ })).toBeTruthy();
-    expect(within(drawer).getByRole('button', { name: /Favoritos \(3\)/ })).toBeTruthy();
+    expect(within(drawer).getByRole('button', { name: /Mi Biblioteca \(3\)/ })).toBeTruthy();
     // La vista activa se marca con aria-current en el drawer.
-    expect(within(drawer).getByRole('button', { name: /Biblioteca/ }).getAttribute('aria-current')).toBe('page');
+    const bibliotecaBtn = within(drawer).getAllByRole('button', { name: /Biblioteca/ })[0];
+    expect(bibliotecaBtn.getAttribute('aria-current')).toBe('page');
     container.remove();
   });
 

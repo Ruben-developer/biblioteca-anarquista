@@ -21,7 +21,7 @@ describe('Navigation', () => {
     expect(html).toContain('Mapa');
     expect(html).toContain('Biblioteca');
     expect(html).toContain('Autores');
-    expect(html).toContain('Favoritos (3)');
+    expect(html).toContain('Mi Biblioteca (3)');
     expect(html).toContain('Teorías');
     expect(html).toContain('Rutas');
     expect(html).toContain('Glosario');
@@ -146,7 +146,17 @@ describe('TimelineView', () => {
 
   it('renderiza cada evento con su año, región y título', () => {
     const html = renderToStaticMarkup(
-      <TimelineView darkMode={false} filteredEvents={events} onSelectEvent={() => {}} />
+      <TimelineView
+        darkMode={false}
+        filteredEvents={events}
+        onSelectEvent={() => {}}
+        onClearFilters={() => {}}
+        filters={{ searchTerm: '', decade: 'all', category: 'all', region: 'all' }}
+        onFilterChange={() => {}}
+        onShowFilters={() => {}}
+        showFilters={false}
+        totalEventCount={2}
+      />
     );
     expect(html).toContain('Mártires de Chicago');
     expect(html).toContain('1886');
@@ -277,7 +287,17 @@ describe('TimelineView en modo oscuro', () => {
 
   it('renderiza con las clases de tema oscuro', () => {
     const html = renderToStaticMarkup(
-      <TimelineView darkMode filteredEvents={events} onSelectEvent={() => {}} />
+      <TimelineView
+        darkMode
+        filteredEvents={events}
+        onSelectEvent={() => {}}
+        onClearFilters={() => {}}
+        filters={{ searchTerm: '', decade: 'all', category: 'all', region: 'all' }}
+        onFilterChange={() => {}}
+        onShowFilters={() => {}}
+        showFilters={false}
+        totalEventCount={1}
+      />
     );
     expect(html).toContain('bg-gray-900/60');
     expect(html).toContain('Mártires de Chicago');

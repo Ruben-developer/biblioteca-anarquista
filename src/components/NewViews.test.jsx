@@ -165,7 +165,7 @@ describe('ReadingPathsView', () => {
 describe('InfluencesView', () => {
   it('renderiza el grafo con nodos y leyenda', () => {
     const html = renderToStaticMarkup(<InfluencesView darkMode={false} regionData={regionData} />);
-    expect(html).toContain('Red de autores');
+    expect(html).toContain('Red de Autores');
     expect(html).toContain('Grafo de influencias');
     expect(html).toContain('Haz clic en cualquier autor');
   });

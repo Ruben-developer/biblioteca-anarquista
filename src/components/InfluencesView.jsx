@@ -51,9 +51,9 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
   const labelColor = darkMode ? '#E5DCD0' : '#33291A';
 
   return (
-    <div>
-      <h2 className={`text-4xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
-        Red de autores
+    <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
+      <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
+        Red de Autores
       </h2>
       <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
         {influenceNodes.length} pensadores y {influenceEdges.length} relaciones de influencia. Pasa el cursor para seguir las conexiones; haz clic para ver quién influyó en quién y sus obras.
