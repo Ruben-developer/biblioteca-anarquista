@@ -183,13 +183,13 @@ const FavoritesView = ({
               {fav.filename && (
                 <button
                   onClick={() => onRead({ title: fav.title, author: fav.author, filename: fav.filename })}
-                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
+                  className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-colors ${
                     darkMode
                       ? 'bg-red-600 text-white hover:bg-red-700'
                       : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
                   }`}
                 >
-                  <BookOpen size={13} />
+                  <BookOpen size={12} />
                   Leer
                 </button>
               )}

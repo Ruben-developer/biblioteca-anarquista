@@ -81,9 +81,11 @@ const RegionModal = ({
                     {book.filename && (
                       <button
                         onClick={() => onRead(book)}
-                        className={`text-xs ${darkMode ? 'text-red-400 hover:text-red-300' : 'text-amber-700 hover:text-amber-900'} flex items-center gap-1 hover:underline transition-colors`}
+                        className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-colors ${
+                          darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
+                        }`}
                       >
-                        <BookOpen size={14} />
+                        <BookOpen size={12} />
                         Leer
                       </button>
                     )}

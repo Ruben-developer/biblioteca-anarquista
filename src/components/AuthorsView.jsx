@@ -177,7 +177,7 @@ const AuthorsView = ({
                         {book.filename && (
                           <button
                             onClick={() => onRead(book)}
-                            className={`flex-shrink-0 flex items-center gap-1 px-2 py-1 rounded text-xs font-medium transition-colors ${
+                            className={`flex-shrink-0 flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-colors ${
                               darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
                             }`}
                           >
