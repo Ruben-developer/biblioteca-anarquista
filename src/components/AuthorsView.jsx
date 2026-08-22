@@ -58,7 +58,7 @@ const AuthorsView = ({
   }
 
   return (
-    <div>
+    <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <div className="flex gap-2 mb-6" role="tablist" aria-label="Modo de vista de autores">
         <button
           role="tab"

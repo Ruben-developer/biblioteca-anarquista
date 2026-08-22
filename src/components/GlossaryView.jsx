@@ -25,7 +25,7 @@ const GlossaryView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
   }`;
 
   return (
-    <div>
+    <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         Glosario libertario
       </h2>
