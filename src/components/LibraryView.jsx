@@ -110,13 +110,10 @@ const LibraryView = ({
   }`;
 
   return (
-    <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
-      <div className="flex items-center gap-3 mb-2">
-        <BookOpen className={darkMode ? 'text-red-400' : 'text-amber-800'} size={28} />
-        <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
-          Biblioteca
-        </h2>
-      </div>
+    <div>
+      <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
+        Biblioteca
+      </h2>
       <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
         {filtered.length} de {allBooks.length} obras del archivo. Busca y filtra por categoría, década, tipo o favoritos.
       </p>

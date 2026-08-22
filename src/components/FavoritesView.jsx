@@ -71,7 +71,7 @@ const FavoritesView = ({
           <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
             Mi Biblioteca
           </h2>
-          <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-amber-700'} mt-1`}>
+          <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
             {favorites.length} texto{favorites.length !== 1 ? 's' : ''} en tu colección personal
           </p>
         </div>

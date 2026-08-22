@@ -114,7 +114,6 @@ describe('LibraryView edge cases', () => {
     const html = renderToStaticMarkup(
       <LibraryView darkMode regionData={regionDataEdge} favorites={[]} onToggleFavorite={noop} />
     );
-    expect(html).toContain('bg-gray-900/60');
     expect(html).toContain('text-red-400');
     expect(html).toContain('3 de 3 obras');
   });

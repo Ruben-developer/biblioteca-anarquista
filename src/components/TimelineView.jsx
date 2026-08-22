@@ -61,6 +61,13 @@ const TimelineView = ({
 
   return (
     <div>
+      <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
+        Línea Temporal
+      </h2>
+      <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
+        {filteredEvents.length} evento{filteredEvents.length !== 1 ? 's' : ''} del movimiento anarquista. Navega por décadas o cambia a vista feed.
+      </p>
+
       <div className="flex items-center gap-2 mb-4">
         <button
           onClick={() => setLayout('horizontal')}
