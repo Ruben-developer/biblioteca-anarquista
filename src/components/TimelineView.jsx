@@ -88,7 +88,7 @@ const TimelineView = ({
         <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 overflow-x-auto`}>
           <div className="flex gap-6" style={{ minWidth: 'max-content' }}>
             {sortedDecades.map((decade) => (
-              <div key={decade} className="flex flex-col" style={{ minWidth: `${groupedByDecade[decade].length * 300 + 80}px` }}>
+              <div key={decade} className="flex flex-col" style={{ minWidth: `${groupedByDecade[decade].length * 220 + 60}px` }}>
                 {/* Separador de década */}
                 <div className="flex items-center gap-3 mb-4 flex-shrink-0">
                   <div className={`flex-shrink-0 w-14 h-14 ${decadeBg} rounded-full border-4 flex items-center justify-center shadow-lg`}>
@@ -104,18 +104,18 @@ const TimelineView = ({
                 <div className="relative flex-1" style={{ borderTop: `2px dashed ${dashedColor}`, paddingTop: '24px' }}>
                   <div className="flex gap-5">
                     {groupedByDecade[decade].map((event, idx) => (
-                      <div key={idx} className="relative flex flex-col items-center" style={{ minWidth: '280px' }}>
+                      <div key={idx} className="relative flex flex-col items-center" style={{ minWidth: '200px', maxWidth: '240px' }}>
                         {/* Punto */}
                         <div className={`absolute -top-[31px] left-1/2 -translate-x-1/2 w-3.5 h-3.5 ${dotColor} rounded-full border-2 ${dotBorder} z-10`}></div>
 
                         <button
-                          className={`${cardClass} border-2 rounded-lg p-4 shadow-md hover:shadow-xl transition-all w-full cursor-pointer text-left`}
+                          className={`${cardClass} border-2 rounded-lg p-3 shadow-md hover:shadow-xl transition-all w-full cursor-pointer text-left`}
                           onClick={() => onSelectEvent(event)}
                         >
-                          <div className="flex items-center justify-between gap-2 mb-2">
-                            <div className="flex items-center gap-2">
-                              <span className="text-xl">{event.image}</span>
-                              <span className={`text-xl font-display ${darkMode ? 'text-gray-300' : 'text-amber-800'}`}>
+                          <div className="flex items-center justify-between gap-2 mb-1.5">
+                            <div className="flex items-center gap-1.5">
+                              <span className="text-lg">{event.image}</span>
+                              <span className={`text-lg font-display ${darkMode ? 'text-gray-300' : 'text-amber-800'}`}>
                                 {event.year}
                               </span>
                             </div>
@@ -123,10 +123,10 @@ const TimelineView = ({
                               {event.region}
                             </span>
                           </div>
-                          <h3 className={`text-sm font-semibold ${darkMode ? 'text-gray-100' : 'text-gray-800'} mb-1.5 line-clamp-2`}>
+                          <h3 className={`text-sm font-semibold ${darkMode ? 'text-gray-100' : 'text-gray-800'} mb-1 line-clamp-2`}>
                             {event.title}
                           </h3>
-                          <p className={`text-xs leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-700'} line-clamp-3`}>
+                          <p className={`text-xs leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-700'} line-clamp-2`}>
                             {event.description}
                           </p>
                         </button>
