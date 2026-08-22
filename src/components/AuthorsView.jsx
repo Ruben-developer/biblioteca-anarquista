@@ -8,7 +8,6 @@ const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const AuthorsView = ({
   darkMode,
   authors,
-  regionData,
   onRead = () => {}
 }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
@@ -244,7 +243,6 @@ AuthorsView.propTypes = {
       yearsRange: PropTypes.string
     })
   ).isRequired,
-  regionData: PropTypes.object.isRequired,
   onRead: PropTypes.func
 };
 

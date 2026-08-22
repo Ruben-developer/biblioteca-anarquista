@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { LayoutList, LayoutGrid } from 'lucide-react';
 import { THEME } from '../constants';
 import TimelineFilters from './TimelineFilters';
@@ -16,6 +16,16 @@ const TimelineView = ({
 }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
   const [layout, setLayout] = useState('horizontal');
+
+  const { groupedByDecade, sortedDecades } = useMemo(() => {
+    const grouped = {};
+    filteredEvents.forEach((event) => {
+      const decade = event.decade || `${Math.floor(event.year / 10) * 10}s`;
+      if (!grouped[decade]) grouped[decade] = [];
+      grouped[decade].push(event);
+    });
+    return { groupedByDecade: grouped, sortedDecades: Object.keys(grouped).sort((a, b) => parseInt(a) - parseInt(b)) };
+  }, [filteredEvents]);
 
   if (filteredEvents.length === 0) {
     return (
@@ -39,14 +49,6 @@ const TimelineView = ({
       </div>
     );
   }
-
-  const groupedByDecade = {};
-  filteredEvents.forEach((event) => {
-    const decade = event.decade || `${Math.floor(event.year / 10) * 10}s`;
-    if (!groupedByDecade[decade]) groupedByDecade[decade] = [];
-    groupedByDecade[decade].push(event);
-  });
-  const sortedDecades = Object.keys(groupedByDecade).sort((a, b) => parseInt(a) - parseInt(b));
 
   const toggleBtn = `px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
     darkMode

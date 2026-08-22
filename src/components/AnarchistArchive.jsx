@@ -27,7 +27,7 @@ import ScrollTopButton from './ScrollTopButton';
 
 const AnarchistArchive = () => {
   const { darkMode, toggleDarkMode } = useDarkMode();
-  const { favorites, toggleFavorite, updateFavoriteNote, isFavorite, exportFavorites } = useFavorites();
+  const { favorites, toggleFavorite, updateFavoriteNote, exportFavorites } = useFavorites();
   const { showScrollTop, scrollToTop } = useScrollTop();
 
   const [activeView, setActiveView] = useState(VIEWS.LIBRARY);
@@ -142,7 +142,6 @@ const AnarchistArchive = () => {
             <AuthorsView
               darkMode={darkMode}
               authors={dynamicAuthors}
-              regionData={regionData}
               onRead={setReadingBook}
             />
           )}
