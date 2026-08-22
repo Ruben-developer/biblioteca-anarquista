@@ -387,3 +387,19 @@ a.animate-lift:hover {
   transform: translateY(-2px);
 }
 
+/* Reset de estilos nativos de <dialog> para menú lateral y modales */
+dialog {
+  padding: 0;
+  border: none;
+  background: transparent;
+  max-width: none;
+  max-height: none;
+  width: auto;
+  height: auto;
+  color: inherit;
+}
+
+dialog::backdrop {
+  background: transparent;
+}
+
