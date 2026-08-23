@@ -14,7 +14,7 @@ const DEFAULT_FILTERS = {
 
 const DECADE_OPTIONS = ['all', '1840s', '1850s', '1860s', '1870s', '1880s', '1890s', '1900s', '1910s', '1920s', '1930s', '1940s', '1950s', '1960s']
 
-const PAGE_SIZE = 10
+const PAGE_SIZE = 12
 
 const getHeartClass = (isFav, darkMode) => {
   if (isFav) return 'fill-red-500 text-red-500'
@@ -87,9 +87,9 @@ const BookMeta = ({ book, darkMode }) => (
     <span className={`px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800 text-gray-300' : 'bg-amber-200 text-amber-900'}`}>
       {book.region || book.author}
     </span>
-    <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>📅 {book.year || '—'}</span>
+    <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{book.year || '—'}</span>
     <span className={`px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800' : 'bg-amber-200'}`}>{book.category}</span>
-    {book.rating && <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>⭐ {book.rating}</span>}
+        {book.rating && <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{book.rating}</span>}
   </div>
 )
 
@@ -160,9 +160,9 @@ const GridCard = ({ book, idx, favorites, onToggleFavorite, onRead, onOpenEvent,
         por {book.author}
       </p>
       <div className="flex items-center gap-3 text-xs flex-wrap mb-3">
-        <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>📅 {book.year || '—'}</span>
+        <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{book.year || '—'}</span>
         <span className={`px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800' : 'bg-amber-200'}`}>{book.category}</span>
-        {book.rating && <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>⭐ {book.rating}</span>}
+        {book.rating && <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{book.rating}</span>}
       </div>
       {book.summary && (
         <p className={`text-xs ${darkMode ? 'text-gray-500' : 'text-gray-600'} mb-4 line-clamp-2 flex-1`}>

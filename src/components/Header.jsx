@@ -73,7 +73,7 @@ const Header = ({
             <h1
               className={`text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-display tracking-tight uppercase flex items-center gap-2 md:gap-3 ${darkMode ? 'text-red-500' : ''}`}
             >
-              <span className="text-5xl sm:text-6xl md:text-6xl">🏴</span>
+              <span className="text-5xl sm:text-6xl md:text-6xl inline-block -rotate-45">Ⓐ</span>
               <span className="break-words">La Idea</span>
             </h1>
             <p className={`hidden sm:block text-xs sm:text-sm ${darkMode ? 'text-gray-400' : 'text-amber-900'}`}>

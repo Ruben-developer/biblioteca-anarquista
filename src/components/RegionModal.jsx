@@ -70,13 +70,13 @@ const RegionModal = ({
                   </p>
                   <div className="flex items-center gap-3 text-sm flex-wrap">
                     <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>
-                      📅 {book.year}
+                      {book.year}
                     </span>
                     <span className={`px-2 py-1 rounded text-xs ${darkMode ? 'bg-gray-700' : 'bg-amber-200'}`}>
                       {book.category}
                     </span>
                     <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>
-                      ⭐ {book.rating}
+                      {book.rating}
                     </span>
                   </div>
                   {book.summary && (

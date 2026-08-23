@@ -128,8 +128,7 @@ describe('LibraryView edge cases', () => {
       <LibraryView darkMode={false} regionData={sinDatos} favorites={[]} onToggleFavorite={noop} />
     );
     expect(html).toContain('Obra sin año ni rating');
-    expect(html).toContain('📅 —');
-    expect(html).not.toContain('⭐');
+    expect(html).toContain('—');
     expect(html).not.toContain('Resumen de la obra');
   });
 

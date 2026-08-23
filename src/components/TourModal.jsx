@@ -7,10 +7,10 @@ const TourModal = ({ darkMode, onClose }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
 
   const tourItems = [
-    { icon: '📅', title: 'Línea Temporal', description: 'Navega por eventos históricos' },
-    { icon: '🗺️', title: 'Mapa', description: 'Explora textos por región' },
-    { icon: '👤', title: 'Autores', description: 'Conoce a los pensadores y sus obras' },
-    { icon: '⭐', title: 'Favoritos', description: 'Guarda textos' }
+    { title: 'Línea Temporal', description: 'Navega por eventos históricos' },
+    { title: 'Mapa', description: 'Explora textos por región' },
+    { title: 'Autores', description: 'Conoce a los pensadores y sus obras' },
+    { title: 'Favoritos', description: 'Guarda textos' }
   ];
 
   return (
@@ -37,7 +37,7 @@ const TourModal = ({ darkMode, onClose }) => {
         <div className="space-y-4">
           {tourItems.map((item) => (
             <p key={item.title}>
-              {item.icon} <strong>{item.title}:</strong> {item.description}
+              <strong>{item.title}:</strong> {item.description}
             </p>
           ))}
         </div>

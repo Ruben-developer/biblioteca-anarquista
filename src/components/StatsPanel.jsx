@@ -139,7 +139,7 @@ const StatsPanel = ({ darkMode, stats }) => {
             cardClass={cardClass}
             trackClass={trackClass}
             fillClass={fillClass}
-            countLabelFn={(r) => r.historical > 0 ? `🗺️ ${r.historical}` : '—'}
+            countLabelFn={(r) => r.historical > 0 ? `${r.historical}` : '—'}
             emptyMessage="Sin regiones registradas."
           />
 
