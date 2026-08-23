@@ -65,7 +65,7 @@ describe('Header', () => {
     const html = renderToStaticMarkup(
       <Header darkMode onDarkModeToggle={() => {}} onShowStats={() => {}} onShowContact={() => {}} stats={stats} />
     );
-    expect(html).toContain('☀️');
+    expect(html).toContain('lucide-sun');
   });
 
   it('muestra el texto del menú elegido junto a los botones de tema y correo', () => {

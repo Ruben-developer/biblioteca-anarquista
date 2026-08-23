@@ -1,5 +1,5 @@
 import React from 'react';
-import { BarChart3, Mail, Menu } from 'lucide-react';
+import { BarChart3, Mail, Menu, Sun, Moon } from 'lucide-react';
 import { THEME, VIEW_LABELS } from '../constants';
 
 const Header = ({
@@ -65,7 +65,7 @@ const Header = ({
               className={`p-2 md:p-3 rounded-lg ${themeClass.button} transition-colors`}
               title="Cambiar tema"
             >
-              {darkMode ? '☀️' : '🌙'}
+              {darkMode ? <Sun size={20} /> : <Moon size={20} />}
             </button>
           </div>
 
@@ -73,7 +73,7 @@ const Header = ({
             <h1
               className={`text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-display tracking-tight uppercase flex items-center gap-2 md:gap-3 ${darkMode ? 'text-red-500' : ''}`}
             >
-              <span className="text-5xl sm:text-6xl md:text-6xl inline-block -rotate-45">Ⓐ</span>
+              <img src="/favicon.png" alt="" className="w-12 h-12 sm:w-14 sm:h-14 md:w-14 md:h-14 lg:w-16 lg:h-16 inline-block -rotate-45" />
               <span className="break-words">La Idea</span>
             </h1>
             <p className={`hidden sm:block text-xs sm:text-sm ${darkMode ? 'text-gray-400' : 'text-amber-900'}`}>
