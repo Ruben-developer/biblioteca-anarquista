@@ -73,7 +73,6 @@ const Header = ({
             <h1
               className={`text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-display tracking-tight uppercase flex items-center gap-2 md:gap-3 ${darkMode ? 'text-red-500' : ''}`}
             >
-              <img src="/favicon.png" alt="" className="w-12 h-12 sm:w-14 sm:h-14 md:w-14 md:h-14 lg:w-16 lg:h-16 inline-block -rotate-45" />
               <span className="break-words">La Idea</span>
             </h1>
             <p className={`hidden sm:block text-xs sm:text-sm ${darkMode ? 'text-gray-400' : 'text-amber-900'}`}>
