@@ -443,7 +443,6 @@ export const timelineEvents = [
     author: 'EZLN',
     relatedTexts: [
       'Tierra y Libertad',
-      'Regeneración',
       'La bala y la escuela',
       'Artículos de combate',
       'La traición de la Hoz y el Martillo'

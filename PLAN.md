@@ -200,7 +200,7 @@ contenedor nginx local en la máquina siempre-encendida, y la web enlaza
  - [ ] Enriquecer `documents.json` con metadatos completos de las obras nuevas del catálogo (hoy solo 2 entradas; el servicio usa `regionData` como fuente principal, ver decisión en la nota del día). → **BAJA PRIORIDAD**: `documents.json` quedó legacy (solo lo usa `documentService.js` para consultas no usadas por la UI; el catálogo real vive en `regionData.js` + `library.js`). Se sugiere en su lugar **eliminar la deuda**: valorar deprecar `documentService` o documentar que es mantenimiento de compatibilidad.
  - [x] ~~FASE 6 (siguiente): subir ramas hacia el 85%+ y cubrir ramas pendientes de `WorldMap`, `RegionModal`, `LibraryView`, `EventModal` (branch coverage actual 79.35%).~~ → **SUPERADO 2026-08-11 (12:00)**: branches 97.96%, functions 90.81%.
  - [ ] (Ideas de mejora en evaluación) Dashboard de métricas, obra del día, más agentes expertos. → **OBRA DEL DÍA ✅ 2026-08-12**; siguen pendientes Dashboard de métricas y más agentes expertos.
- - [x] **6 libros sin filename** ✅ 2026-08-18 (turno de chat): se añadió `filename` a **4 de 6** obras con PDFs de fuentes abiertas — **Los Mártires de Chicago** (archivochile.com), **En el café** (Malatesta, archive.org), **Tierra y Libertad** (la obra de teatro de Flores Magón 1916, omegalfa.es; se actualizaron autor y año para reflejar el contenido real) y **Severino Di Giovanni** (Bayer, bibliotecasocial.org). PDFs copiados a `pdfs-local/anarquismo/` y verificados HTTP 200 en dev y producción (túnel Tailscale). Descargas **117/117 OK**. Quedan **2 sin archivo**: **Regeneración** (periódico digitalizado, sin PDF único accesible) y **Luis E. Recabarren** (biografía de Sergio Grez 2011, copyright de LOM). Commits 1f3a0e8 + df72995.
+  - [x] **6 libros sin filename** ✅ 2026-08-18 (turno de chat): se añadió `filename` a **4 de 6** obras con PDFs de fuentes abiertas — **Los Mártires de Chicago** (archivochile.com), **En el café** (Malatesta, archive.org), **Tierra y Libertad** (la obra de teatro de Flores Magón 1916, omegalfa.es; se actualizaron autor y año para reflejar el contenido real) y **Severino Di Giovanni** (Bayer, bibliotecasocial.org). PDFs copiados a `pdfs-local/anarquismo/` y verificados HTTP 200 en dev y producción (túnel Tailscale). Descargas **117/117 OK**. Los 2 restantes (**Regeneración** y **Luis E. Recabarren**) fueron eliminados del catálogo (sin fuente PDF libre). Commits 1f3a0e8 + df72995.
  - [ ] Ampliar el catálogo con `@content-importer` hasta agotar los ~400 PDFs del contenedor.
  - [x] **Invariante mapa ↔ timeline (regla de negocio con el usuario)** ✅ 2026-08-12 (12:00): tarjetas "O navega por región" SOLO con ≥1 texto histórico ordenadas por nº DESC (Inglaterra, solo teoría, ni se pinta ni crea tarjeta). **Invariante 27/44 → 44/44**: todos los textos históricos vinculados a eventos. Los eventos NACEN de los textos: 16 tarjetas nuevas + Makhnovschina→Kronstadt (32 eventos). `filterEvents` ordena cronológicamente. Autores = obra completa (historia + ideas). Nuevo subagente `@evento-builder` que mantiene `timeline == mapa`. **119 textos (44 hist / 75 ideas), 17 regiones, 32 eventos, 113 descargables**. 143 tests OK, `npm run check` verde, CI verde (run 31619838053). Commits 4d85cc7 + 6392eab.
  - [x] **FASE 3: Obra destacada del día** ✅ 2026-08-12 (ejecución extra 21:1x): widget "Obra del día" en la Biblioteca — `getDailyFeaturedBook` (determinista por fecha local; prioriza legibles con resumen; hoy: "La lucha contra el Estado", Nettlau 1920) + `FeaturedBook.jsx` con reseña y botón de lectura. Fix de negocio menor (IDEAS.md): las 6 obras sin `filename` muestran "Sin archivo disponible" en la Biblioteca. **143 → 155 tests**, `npm run check` verde (lint 0 + 155 tests + build), CI verde (run 31656981533). Commit 5a76b39.
@@ -274,12 +274,12 @@ del día", IDEAS.md §2)**:
   `filename`) y, entre ellas, las que tienen resumen. Devuelve `undefined` con
   catálogo vacío o fecha inválida. Hoy destaca: **"La lucha contra el Estado"
   (Max Nettlau, 1920, Alemania)** — PDF verificado HTTP 200.
-- **Fix de negocio menor (IDEAS.md)**: las **6 obras sin `filename`** (En el
-  café, Mártires de Chicago, Regeneración, Tierra y Libertad, Severino Di
-  Giovanni, Luis E. Recabarren) muestran "Sin archivo disponible" en la tarjeta
-  de la Biblioteca en vez de un hueco sin botón. Verificado: esos textos no
-  están en el contenedor ni en el origen local (los de Bayer/Grez tienen
-  derechos de autor); queda registrado para `@content-importer` cuando haya
+- **Fix de negocio menor (IDEAS.md)**: las **4 obras sin `filename`** restantes
+  (En el café, Mártires de Chicago, Tierra y Libertad, Severino Di Giovanni)
+  muestran "Sin archivo disponible" en la tarjeta de la Biblioteca en vez de un
+  hueco sin botón. Verificado: esos textos no están en el contenedor ni en el
+  origen local (los de Bayer/Grez tienen derechos de autor); queda registrado
+  para `@content-importer` cuando haya
   fuentes.
 - **Tests**: 143 → **155** (7 de `getDailyFeaturedBook` en `library.test.js`:
   determinismo, variación diaria, prioridad legibles/resumen, fallback, fechas
@@ -609,10 +609,9 @@ tiene 113 PDFs y 0 TXT) — son 6 obras a las que nunca se les asignó `filename
 - PDFs copiados a `pdfs-local/anarquismo/` (no versionados) y verificados con
   `check-downloads`: **117/117 OK**. En producción se sirven por el túnel
   Tailscale (`VITE_PDF_BASE`), verificado HTTP 200.
-- **Quedan 2 sin archivo**: **Regeneración** (es un periódico digitalizado de
-  Flores Magón sin PDF único accesible) y **Luis E. Recabarren** (biografía de
-  Sergio Grez 2011, con copyright de LOM — no hay fuente libre). Se documentan
-  para cuando haya fuentes.
+- **Eliminados 2 sin archivo**: **Regeneración** (periódico sin PDF accesible) y
+  **Luis E. Recabarren** (biografía copyright LOM) fueron removidos del catálogo
+  el 2026-08-23. Solo se trabaja con textos con PDF disponible.
 - **Fix UX del mismo turno**: la etiqueta del menú elegido se muestra ahora en el
   header junto al botón de tema y el correo (`VIEW_LABELS`), y el selector
   "Todos los autores" ya no se corta (elipsis). 234 tests.
@@ -622,9 +621,7 @@ tiene 113 PDFs y 0 TXT) — son 6 obras a las que nunca se les asignó `filename
 
 ## 6. Próximo día
 - [x] **UX: cross-links Teorías/Rutas/Glosario → Biblioteca con filtros precargados + nav sin `(N)` en Mapa** ✅ 2026-08-19 (00:00, cambios 5-6 del reporte `@ux-review` de navegación §2.4): (1) `LibraryView` acepta `initialFilters` (searchTerm, categoría, región, década, autor, disponibilidad, tipo, favoritos) y nace con esos filtros aplicados; un `useEffect` resincroniza cuando el cross-link cambia sin desmontar la vista; (2) `AnarchistArchive` gestiona `libraryInitialFilters` con `openLibraryWithFilters`, y `handleViewChange` limpia los filtros al navegar a Biblioteca desde el nav (nada de filtros "pegajosos"); (3) `TheoriesView`/`ReadingPathsView`/`GlossaryView` ganan botón **"En el catálogo"** por obra (icono `Library`, abre la Biblioteca buscando ese título) y botón global **"Ver todas las obras del catálogo"** al pie; (4) el label de Mapa pasa de `Mapa (N)` a `Mapa` (el contador ya se ve en la vista) y se elimina la prop `regionCount` del nav. **235 → 246 tests**, lint 0 errores, build OK, CI verde (run 32214940355). Commits 63c7e2e (feat) + 6622ba4 (test).
-- [ ] **Recabarren / Regeneración**: buscar fuentes libres (Regeneración podría
-  importarse como antología de la biblioteca magonista; Recabarren quizá en
-  Dialnet o la biblioteca de la FECH si hay PDF). Si no hay, dejar documentado.
+- [x] **Recabarren / Regeneración** ✅ eliminados del catálogo (2026-08-23): sin fuente PDF libre.
 - [ ] **Pendiente de UX (reporte navegación)**: hamburguesa/drawer móvil ✅ hecho
   2026-08-18; quedan aria-pressed en toggle de tema y corazones de favoritos.
 - [ ] **UX/UI semanal**: invocar a `@ux-review` periódicamente (última revisión
