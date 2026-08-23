@@ -1,15 +1,15 @@
 export const CATEGORIES = [
-  { id: 'all', name: 'Todas', icon: '📚' },
-  { id: 'teoria', name: 'Teoría', icon: '📖' },
-  { id: 'historia', name: 'Historia', icon: '📜' },
-  { id: 'revolucion', name: 'Revolución', icon: '🏴' },
-  { id: 'movimiento', name: 'Movimiento', icon: '✊' },
-  { id: 'organizacion', name: 'Organización', icon: '🤝' },
-  { id: 'represion', name: 'Represión', icon: '⚖️' },
-  { id: 'biografia', name: 'Biografía', icon: '👤' },
-  { id: 'periodismo', name: 'Periodismo', icon: '📰' },
-  { id: 'manifiesto', name: 'Manifiesto', icon: '📯' },
-  { id: 'dialogo', name: 'Diálogo', icon: '💬' }
+  { id: 'all', name: 'Todas' },
+  { id: 'teoria', name: 'Teoría' },
+  { id: 'historia', name: 'Historia' },
+  { id: 'revolucion', name: 'Revolución' },
+  { id: 'movimiento', name: 'Movimiento' },
+  { id: 'organizacion', name: 'Organización' },
+  { id: 'represion', name: 'Represión' },
+  { id: 'biografia', name: 'Biografía' },
+  { id: 'periodismo', name: 'Periodismo' },
+  { id: 'manifiesto', name: 'Manifiesto' },
+  { id: 'dialogo', name: 'Diálogo' }
 ];
 
 // Textos "históricos": hechos del movimiento (mapa y línea temporal).
@@ -18,7 +18,7 @@ export const CATEGORIES = [
 export { HISTORICAL_CATEGORIES, isHistoricalCategory } from '../utils/library';
 export const IDEAS_CATEGORIES = ['teoria', 'biografia', 'dialogo'];
 
-export const DECADES = ['all', '1860s', '1870s', '1880s', '1900s', '1910s', '1920s', '1930s', '1960s', '1970s', '1990s', '2000s', '2010s'];
+export const DECADES = ['all', '1700s', '1840s', '1860s', '1870s', '1880s', '1890s', '1900s', '1910s', '1920s', '1930s', '1940s', '1950s', '1960s', '1970s', '1980s', '1990s', '2000s', '2010s'];
 
 // Regiones disponibles en el archivo. FUENTE ÚNICA: se deriva de las claves de
 // regionData.js, de modo que añadir/editar una región en regionData actualiza

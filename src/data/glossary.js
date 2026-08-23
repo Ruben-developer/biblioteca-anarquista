@@ -62,5 +62,45 @@ export const glossaryTerms = [
     term: 'Solidaridad',
     definition: 'La unión y el apoyo mutuo entre los explotados y oprimidos como base de la fuerza del movimiento; contrapartida práctica del internacionalismo.',
     books: ['La responsabilidad y la solidaridad en la lucha obrera', 'El Apoyo Mutuo']
+  },
+  {
+    term: 'Individualismo anarquista',
+    definition: 'Corriente que pone al individuo por encima de toda colectividad: contra el Estado, la sociedad y toda forma de mando exterior, el individuo se afirma como soberano de sí mismo.',
+    books: ['El único y su propiedad', 'El anarquismo individualista. Lo que es, vale y puede', 'El anarquismo individualista en España (1923-1938)', 'Hacia la nada creadora. Individuo y revuelta', 'Socialismo de Estado y anarquismo']
+  },
+  {
+    term: 'Anarcofeminismo',
+    definition: 'Convergencia entre anarquismo y feminismo: la dominación patriarcal como sistema de opresión paralelo al estatal, y la emancipación de la mujer como condición de la revolución social.',
+    books: ['Anarquismo: la conexión feminista', 'Mujeres Libres (1936-1939). Una lectura feminista', 'El anarcofeminismo en España: las propuestas de Mujeres Libres', 'Anarcofeminismo e identidad(es)']
+  },
+  {
+    term: 'Insurreccionalismo',
+    definition: 'Tendencia del anarquismo que prioriza la insurrección armada, la organización informal por grupos de afinidad y la guerra social como medio de transformación revolucionaria.',
+    books: ['Anarquismo, insurrecciones e insurreccionalismo', 'Ai ferri corti. Romper con esta realidad', 'Archipiélago. Afinidad, organización informal y proyectos insurreccionales', 'La insurrección que llega']
+  },
+  {
+    term: 'Plataforma organizacional',
+    definition: 'Propuesta de organización anarquista formulada por Dielo Truda (1926): unitaria, disciplinada y con tendencia única, abrió el gran debate sobre la unidad orgánica del movimiento.',
+    books: ['Plataforma organizacional de los comunistas libertarios', 'El debate sobre La Plataforma']
+  },
+  {
+    term: 'Síntesis anarquista',
+    definition: 'Corriente que busca unir las distintas tendencias del anarquismo (comunista, sindicalista, individualista) en una síntesis orgánica sin imponer una línea única.',
+    books: ['La síntesis del anarquismo', 'El anarquismo sin adjetivos: de ayer a hoy']
+  },
+  {
+    term: 'Ecología social',
+    definition: 'Corriente desarrollada por Murray Bookchin que integra la ecología con el anarquismo: la descentralización, la autogestión y la tecnología liberadora como base de una sociedad ecológica.',
+    books: ['Tecnología y anarquismo', 'Anarquismo social o anarquismo personal', 'Una solución anarquista al calentamiento global', 'El anarquismo y el movimiento ambiental']
+  },
+  {
+    term: 'Apoyo mutuo',
+    definition: 'Principio formulado por Kropotkin: la cooperación entre especies y entre individuos como factor de evolución y base de la sociedad sin Estado, frente al darwinismo social.',
+    books: ['El Apoyo Mutuo', 'El pensamiento de Kropotkin: ciencia, ética y anarquía', 'El altruismo como factor de la evolución']
+  },
+  {
+    term: 'No-violencia',
+    definition: 'Postura que rechaza la violencia como medio de transformación social; debatida dentro del anarquismo entre quienes la consideran estratégica y quienes la ven como colaboración con el Estado.',
+    books: ['Cómo la no violencia protege al Estado', 'El Reino de Dios está dentro de vosotros']
   }
 ];
