@@ -8,7 +8,7 @@ export const FORM_ENDPOINT = 'https://formsubmit.co/ajax/antarquia@riseup.net'
 const SuccessView = ({ email, darkMode, resetForm, cardClass }) => (
   <div className={`${cardClass} border-2 rounded-lg p-6 shadow-md max-w-2xl card-appear`}>
     <p className={`text-sm mb-4 ${darkMode ? 'text-gray-300' : 'text-amber-900'}`}>
-      ✓ Mensaje enviado. Gracias por escribir al archivo
+      Mensaje enviado. Gracias por escribir al archivo
       {email.trim() ? ` — te responderemos a ${email.trim()}` : ''}.
     </p>
     <button
@@ -25,7 +25,7 @@ const SuccessView = ({ email, darkMode, resetForm, cardClass }) => (
 const ErrorView = ({ darkMode, resetForm, cardClass }) => (
   <div className={`${cardClass} border-2 border-red-600 rounded-lg p-6 shadow-md max-w-2xl card-appear`}>
     <p className={`text-sm mb-4 ${darkMode ? 'text-gray-300' : 'text-amber-900'}`}>
-      ✗ No se pudo enviar el mensaje desde la página. Escríbenos directamente
+      No se pudo enviar el mensaje desde la página. Escríbenos directamente
       a <a className="underline" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
     </p>
     <button

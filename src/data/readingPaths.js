@@ -78,5 +78,33 @@ export const readingPaths = [
     icon: 'church',
     description: 'De la no resistencia de Tolstói a lo impersonal de Weil y el Estado como poder de Ellul: el Evangelio como subversión radical.',
     books: ['El Reino de Dios está dentro de vosotros', '¿Qué es el arte?', 'Reflexiones sobre las causas de la libertad y de la opresión social', 'La persona y lo sagrado', 'Anarquía y cristianismo']
+  },
+  {
+    id: 'chile',
+    title: 'Anarquismo en Chile',
+    icon: 'flag-chile',
+    description: 'Del anarcosindicalismo peruano a la violencia popular chilena: sindicalismo, propaganda por los hechos y memoria libertaria en el cono sur.',
+    books: ['Anarquismo y violencia popular en Chile (1898-1927)', 'Destruir para construir: violencia y acción directa en la corriente anarquista chilena (1890-1914)', 'Sin Dios ni patrones. Historia del anarquismo en la región chilena (1890-1990)', 'La propaganda por los hechos en el movimiento anarquista chileno (1890-1910)', 'La masacre de la Escuela Santa María de Iquique', 'Vanguardias silenciadas: tejidos de la memoria']
+  },
+  {
+    id: 'japon',
+    title: 'Anarquismo en Japón',
+    icon: 'flag-japon',
+    description: 'Los mártires de Tokio, Ōsugi Sakae y la Sociedad de la Guillotina: el anarquismo japonés entre la tradición y la insurrección.',
+    books: ['Los Mártires de Tokio y la Sociedad de la Guillotina', 'Kotoku, Osugi, Yamaga: tres anarquistas japoneses', 'Contra el Dios Emperador. Juicios de la traición anarquista en Japón', 'Museihushugi: el anarquismo japonés', 'Reflexiones en el camino hacia la horca']
+  },
+  {
+    id: 'anarcfeminismo',
+    title: 'Anarcofeminismo',
+    icon: 'heart-handshake',
+    description: 'La conexión entre anarquismo y feminismo: de las milicianas de la Guerra Civil a las Mujeres Libres contemporáneas.',
+    books: ['Anarquismo: la conexión feminista', 'Mujeres Libres (1936-1939). Una lectura feminista', 'El anarcofeminismo en España: las propuestas de Mujeres Libres', 'Mujeres Libres: emancipación femenina y revolución social', 'Anarcofeminismo e identidad(es)', 'Vanguardias silenciadas: tejidos de la memoria', 'Cocinando la revolución en la ciudad de La Paz (1927-1946)']
+  },
+  {
+    id: 'insurreccionalismo',
+    title: 'Insurreccionalismo',
+    icon: 'flame',
+    description: 'La organización informal, la afinidad y la guerra social: del Matese de Malatesta a las prácticas contemporáneas.',
+    books: ['La insurrección que llega', 'Anarquismo, insurrecciones e insurreccionalismo', 'Ai ferri corti. Romper con esta realidad', 'Archipiélago. Afinidad, organización informal y proyectos insurreccionales', 'Apuntes sobre revuelta y guerra social', 'Cuando se señala la luna... A vueltas con el insurreccionalismo', 'Nos estamos acercando: La historia de Angry Brigade']
   }
 ];

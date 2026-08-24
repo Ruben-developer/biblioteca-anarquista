@@ -148,7 +148,6 @@ const AuthorsView = ({
                   onClick={() => toggleAuthor(author.name)}
                   aria-expanded={isOpen}
                 >
-                  <div className="text-5xl mb-3 text-center">👤</div>
                   <h3 className={`text-xl font-bold ${darkMode ? 'text-gray-100' : 'text-gray-800'} mb-2 text-center`}>
                     {author.name}
                   </h3>
@@ -159,7 +158,7 @@ const AuthorsView = ({
                   )}
                   {primaryRegion && (
                     <p className={`text-xs ${darkMode ? 'text-red-400' : 'text-amber-600'} mb-3 text-center`}>
-                      📍 {author.regions.join(', ')}
+                      {author.regions.join(', ')}
                     </p>
                   )}
                   <div className={`flex items-center justify-between pt-3 mt-3 border-t ${darkMode ? 'border-gray-700' : 'border-amber-300'}`}>

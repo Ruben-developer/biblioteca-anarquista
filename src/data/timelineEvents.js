@@ -443,7 +443,6 @@ export const timelineEvents = [
     author: 'EZLN',
     relatedTexts: [
       'Tierra y Libertad',
-      'Regeneración',
       'La bala y la escuela',
       'Artículos de combate',
       'La traición de la Hoz y el Martillo'
@@ -976,5 +975,41 @@ export const timelineEvents = [
     quote: 'Descolonizar el canon anarquista',
     author: 'Laura Galián',
     relatedTexts: ['El Anarquismo Descolonizado: una historia de las experiencias antiautoritarias en Egipto (1860-2016)', 'Hacia un estudio decolonial del anarquismo. Egipto y Túnez']
+  },
+  {
+    year: 2010,
+    decade: '2010s',
+    type: 'con_texto',
+    title: 'Revuelta griega',
+    description: 'Las ocupaciones y protestas en Grecia contra la austeridad: el movimiento anarquista griego como punta de lanza de la resistencia social.',
+    region: 'Grecia',
+    category: 'movimiento',
+    quote: 'Que la crisis sea de ellos, la revolución es nuestra',
+    author: 'Movimiento anarquista griego',
+    relatedTexts: ['A tres años de la revuelta griega', 'Reflexiones sobre el movimiento anarquista en Grecia y la solidaridad con los presos políticos']
+  },
+  {
+    year: 1971,
+    decade: '1970s',
+    type: 'con_texto',
+    title: 'Angry Brigade',
+    description: 'La guerrilla urbana anarquista británica: bombas contra embajadas, bancos y ministerios, y la cacería del Estado contra los revoltosos.',
+    region: 'Inglaterra',
+    category: 'represion',
+    quote: 'La revolución no es un espectáculo',
+    author: 'Servando Rocha',
+    relatedTexts: ['Nos estamos acercando: La historia de Angry Brigade']
+  },
+  {
+    year: 2018,
+    decade: '2010s',
+    type: 'con_texto',
+    title: 'Insurreccionalismo contemporáneo',
+    description: 'La teoría y la práctica insurreccionalista en el anarquismo contemporáneo: organización informal, afinidad y guerra social.',
+    region: 'Internacional',
+    category: 'movimiento',
+    quote: 'La insurrección no es un evento, es un proceso',
+    author: 'Colectivo',
+    relatedTexts: ['La insurrección que llega', 'Apuntes sobre revuelta y guerra social', 'Cuando se señala la luna... A vueltas con el insurreccionalismo', 'Anarquismo, insurrecciones e insurreccionalismo', 'Ai ferri corti. Romper con esta realidad', 'Archipiélago. Afinidad, organización informal y proyectos insurreccionales']
   }
 ];

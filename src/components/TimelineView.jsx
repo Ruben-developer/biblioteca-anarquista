@@ -41,7 +41,6 @@ const HorizontalTimeline = ({
                   >
                     <div className="flex items-center justify-between gap-2 mb-1.5">
                       <div className="flex items-center gap-1.5">
-                        <span className="text-lg">{event.image}</span>
                         <span className={`text-lg font-display ${darkMode ? 'text-gray-300' : 'text-amber-800'}`}>
                           {event.year}
                         </span>
@@ -104,7 +103,6 @@ const VerticalTimeline = ({
               >
                 <div className="flex items-start justify-between gap-3 mb-2">
                   <div className="flex items-center gap-2">
-                    <span className="text-2xl">{event.image}</span>
                     <span className={`text-2xl font-display ${darkMode ? 'text-gray-300' : 'text-amber-800'}`}>
                       {event.year}
                     </span>

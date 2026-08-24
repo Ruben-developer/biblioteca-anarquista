@@ -29,7 +29,6 @@ const EventModal = ({ darkMode, event, regionData, onClose, onRead = () => {} })
           <div className="flex justify-between items-start">
             <div>
               <div className="flex items-center gap-3 mb-2">
-                <span className="text-4xl">{event.image}</span>
                 <h2 className={`text-2xl font-bold ${darkMode ? 'text-gray-100' : 'text-amber-50'}`}>
                   {event.title}
                 </h2>
@@ -74,7 +73,7 @@ const EventModal = ({ darkMode, event, regionData, onClose, onRead = () => {} })
                     </p>
                     <div className="flex items-center gap-3 text-sm flex-wrap">
                       <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>por {book.author}</span>
-                      <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>📅 {book.year}</span>
+                      <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{book.year}</span>
                     </div>
                     <div className="flex gap-3 mt-2 flex-wrap">
                       {book.filename && (

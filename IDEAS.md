@@ -74,6 +74,7 @@
   por `getHistoricalBooks(regionData, region).length` desc.
 - **Rating hardcodeado**: los 118 libros llevan `rating` fijo (ej. 4.8) sin
   origen real. Quitar de la UI y guardar la idea de "valoración puntuable" aquí.
-- **6 libros sin `filename`** (En el café de Malatesta, Mártires de Chicago,
-  Regeneración, Tierra y Libertad, Severino Di Giovanni, Luis E. Recabarren):
-  aparecen en la Biblioteca pero no tienen PDF/TXT → no se pueden leer.
+- **4 libros sin `filename`** (En el café de Malatesta, Mártires de Chicago,
+  Tierra y Libertad, Severino Di Giovanni): aparecen en la Biblioteca pero no
+  tienen PDF/TXT → no se pueden leer. Regeneración y Recabarren fueron
+  eliminados del catálogo (sin fuente PDF libre).
