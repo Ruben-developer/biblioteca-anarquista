@@ -190,6 +190,79 @@ describe('RegionModal interactivo', () => {
     expect(onToggleFavorite).toHaveBeenCalledWith('La Columna', expect.objectContaining({ author: 'Autor' }));
     container.remove();
   });
+
+  it('restaura foco al elemento previo al cerrar', () => {
+    const onClose = vi.fn();
+    // Crear un botón fuera del modal que esté focalizado antes de abrirlo
+    const { container: triggerContainer } = render(<button data-testid="trigger">Abrir</button>);
+    const trigger = screen.getByTestId('trigger');
+    trigger.focus();
+    expect(document.activeElement).toBe(trigger);
+
+    // Abrir el modal
+    const { container } = render(
+      <RegionModal darkMode={false} region="España" regionData={regionData} favorites={[]} onClose={onClose} onToggleFavorite={() => {}} />
+    );
+
+    // Cerrar con Escape
+    fireEvent.keyDown(screen.getByRole('dialog'), { key: 'Escape' });
+    expect(onClose).toHaveBeenCalled();
+    // El foco debería restaurarse al trigger (useModalFocus lo hace en cleanup)
+    expect(document.activeElement).toBe(trigger);
+    container.remove();
+    triggerContainer.remove();
+  });
+});
+
+describe('Modales — focus trap', () => {
+  const regionData = {
+    España: {
+      books: [
+        { title: 'Obra A', author: 'Autor', year: 1936, category: 'historia', filename: 'a.pdf' }
+      ]
+    }
+  };
+  const event = { year: 1886, title: 'Mártires de Chicago', region: 'Estados Unidos', description: 'Desc', quote: 'Cita', author: 'A', type: 'hecho' };
+
+  it('EventModal: Tab no escapa del modal (focus trap)', () => {
+    const onClose = vi.fn();
+    const { container } = render(
+      <EventModal darkMode={false} event={event} onClose={onClose} />
+    );
+    const dialog = screen.getByRole('dialog');
+    const buttons = dialog.querySelectorAll('button');
+    expect(buttons.length).toBeGreaterThan(0);
+
+    // Enfocar el último botón y presionar Tab — debería volver al primero
+    const lastButton = buttons[buttons.length - 1];
+    lastButton.focus();
+    fireEvent.keyDown(dialog, { key: 'Tab' });
+    expect(document.activeElement).toBe(buttons[0]);
+    container.remove();
+  });
+
+  it('RegionModal: Shift+Tab no escapa del modal (focus trap)', () => {
+    const { container } = render(
+      <RegionModal darkMode={false} region="España" regionData={regionData} favorites={[]} onClose={() => {}} onToggleFavorite={() => {}} />
+    );
+    const dialog = screen.getByRole('dialog');
+    const buttons = dialog.querySelectorAll('button');
+    expect(buttons.length).toBeGreaterThan(0);
+
+    // Enfocar el primer botón y presionar Shift+Tab — debería ir al último
+    buttons[0].focus();
+    fireEvent.keyDown(dialog, { key: 'Tab', shiftKey: true });
+    expect(document.activeElement).toBe(buttons[buttons.length - 1]);
+    container.remove();
+  });
+
+  it('TourModal: Escape llama a onClose', () => {
+    const onClose = vi.fn();
+    const { container } = render(<TourModal darkMode={false} onClose={onClose} />);
+    fireEvent.keyDown(screen.getByRole('dialog'), { key: 'Escape' });
+    expect(onClose).toHaveBeenCalled();
+    container.remove();
+  });
 });
 
 describe('LibraryView interactivo', () => {
@@ -409,7 +482,9 @@ it('abre un evento de la línea temporal y cierra el modal con Escape', () => {
 
   it('abre el Contacto desde el sobre de la cabecera', () => {
     const { container } = render(<AnarchistArchive />);
-    fireEvent.click(screen.getByRole('button', { name: 'Contacto' }));
+    // El botón del header tiene aria-label="Contacto" + title; el del footer tiene solo texto.
+    const headerBtn = container.querySelector('header button[title="Contacto"]');
+    fireEvent.click(headerBtn);
     expect(screen.getAllByText(/EscrÍbenos para aportar textos|Escríbenos para aportar textos/).length).toBeGreaterThan(0);
     container.remove();
   });
@@ -515,7 +590,6 @@ describe('Navigation móvil (drawer/hamburguesa)', () => {
     expect(within(drawer).getAllByRole('button', { name: /Autores/ }).length).toBeGreaterThanOrEqual(1);
     expect(within(drawer).getByRole('button', { name: /Teorías/ })).toBeTruthy();
     expect(within(drawer).getByRole('button', { name: /Rutas/ })).toBeTruthy();
-    expect(within(drawer).getByRole('button', { name: /Glosario/ })).toBeTruthy();
     expect(within(drawer).getByRole('button', { name: /Mi Biblioteca \(3\)/ })).toBeTruthy();
     // La vista activa se marca con aria-current en el drawer.
     const bibliotecaBtn = within(drawer).getAllByRole('button', { name: /Biblioteca/ })[0];

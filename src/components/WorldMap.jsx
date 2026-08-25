@@ -80,6 +80,9 @@ const WorldMap = ({
         };
         const style = styleFn(context);
 
+        const hasData = context.countryValue !== undefined;
+        const isClickable = hasData && onClickFunction;
+
         return (
           <path
             key={isoCode}
@@ -87,10 +90,18 @@ const WorldMap = ({
             style={style}
             className="worldmap__country"
             aria-label={context.countryNameEs}
+            tabIndex={isClickable ? 0 : undefined}
+            role={isClickable ? 'button' : undefined}
             onMouseEnter={(event) => showTooltip(event, context)}
             onMouseMove={(event) => showTooltip(event, context)}
             onMouseLeave={() => setTooltip(null)}
-            onClick={onClickFunction ? (event) => onClickFunction({ ...context, event }) : undefined}
+            onClick={isClickable ? (event) => onClickFunction({ ...context, event }) : undefined}
+            onKeyDown={isClickable ? (e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                onClickFunction({ ...context, event: e });
+              }
+            } : undefined}
           />
         );
       }),

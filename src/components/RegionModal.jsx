@@ -2,6 +2,7 @@ import React from 'react';
 import { X, MapPin, Heart, BookOpen } from 'lucide-react';
 import { THEME } from '../constants';
 import { getHistoricalBooks } from '../utils/library';
+import { useModalFocus } from '../hooks';
 
 const RegionModal = ({
   darkMode,
@@ -13,6 +14,7 @@ const RegionModal = ({
   onRead = () => {}
 }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
+  const dialogRef = useModalFocus(onClose);
 
   if (!region || !regionData[region]) return null;
 
@@ -26,6 +28,7 @@ const RegionModal = ({
 
   return (
     <dialog
+      ref={dialogRef}
       open
       className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4"
       onClick={(e) => {
@@ -33,10 +36,6 @@ const RegionModal = ({
       }}
       aria-modal="true"
       aria-label={region}
-      tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') onClose();
-      }}
     >
       <div className={`${cardClass} border-4 ${darkMode ? 'border-red-900/50' : 'border-amber-700'} rounded-lg max-w-2xl w-full p-6`}>
         <div className={`${darkMode ? 'bg-red-900/30' : 'bg-amber-700'} rounded-t-lg -m-6 mb-4 p-4`}>

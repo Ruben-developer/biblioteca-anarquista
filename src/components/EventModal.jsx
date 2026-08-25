@@ -2,9 +2,11 @@ import React from 'react';
 import { X, Quote, BookOpen } from 'lucide-react';
 import { THEME } from '../constants';
 import { getEventRelatedTexts } from '../utils/library';
+import { useModalFocus } from '../hooks';
 
 const EventModal = ({ darkMode, event, regionData, onClose, onRead = () => {} }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
+  const dialogRef = useModalFocus(onClose);
 
   if (!event) return null;
 
@@ -12,6 +14,7 @@ const EventModal = ({ darkMode, event, regionData, onClose, onRead = () => {} })
 
   return (
     <dialog
+      ref={dialogRef}
       open
       className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4"
       onClick={(e) => {
@@ -19,10 +22,6 @@ const EventModal = ({ darkMode, event, regionData, onClose, onRead = () => {} })
       }}
       aria-modal="true"
       aria-label={event.title}
-      tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') onClose();
-      }}
     >
       <div className={`${cardClass} border-4 rounded-lg max-w-2xl w-full max-h-[80vh] overflow-hidden`}>
         <div className={`${darkMode ? 'bg-red-900/30' : 'bg-amber-700'} p-6`}>
