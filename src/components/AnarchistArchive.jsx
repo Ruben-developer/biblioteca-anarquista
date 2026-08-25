@@ -212,52 +212,23 @@ const AnarchistArchive = () => {
 
       <footer className={`border-t-4 ${darkMode ? 'border-red-900 bg-black/30' : 'border-amber-800 bg-amber-100/60'}`}>
         <div className="container mx-auto px-4 py-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
-            {/* Marca */}
-            <div>
-              <p className={`font-display uppercase tracking-widest text-sm ${darkMode ? 'text-gray-300' : 'text-amber-900'}`}>
-                La Idea · Archivo Histórico Anarquista
-              </p>
-              <p className={`text-xs mt-1 ${darkMode ? 'text-gray-500' : 'text-amber-700'}`}>
-                1840–1968 · Textos de dominio público
-              </p>
-            </div>
-
-            {/* Navegación secundaria */}
-            <div>
-              <p className={`text-xs font-semibold uppercase tracking-wide ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-                Navegación
-              </p>
-              <nav aria-label="Enlaces secundarios" className="flex flex-col gap-1 mt-1">
-                <button
-                  onClick={() => setActiveView(VIEWS.GLOSSARY)}
-                  className={`text-xs transition-colors ${darkMode ? 'text-gray-400 hover:text-red-400' : 'text-amber-700 hover:text-amber-900'}`}
-                >
-                  Glosario libertario
-                </button>
-                <button
-                  onClick={() => setActiveView(VIEWS.STATS)}
-                  className={`text-xs transition-colors ${darkMode ? 'text-gray-400 hover:text-red-400' : 'text-amber-700 hover:text-amber-900'}`}
-                >
-                  Estadísticas
-                </button>
-                <button
-                  onClick={() => setActiveView(VIEWS.CONTACT)}
-                  className={`text-xs transition-colors ${darkMode ? 'text-gray-400 hover:text-red-400' : 'text-amber-700 hover:text-amber-900'}`}
-                >
-                  Contacto
-                </button>
-              </nav>
-            </div>
-
-            {/* Estadísticas resumen */}
-            <div className="md:text-right">
-              <p className={`text-xs ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-                <span className="font-semibold">{stats.texts}</span> textos ·{' '}
-                <span className="font-semibold">{stats.events}</span> eventos ·{' '}
-                <span className="font-semibold">{stats.regions}</span> regiones ·{' '}
-                <span className="font-semibold">{stats.authors}</span> autores
-              </p>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className={`font-display uppercase tracking-widest text-sm ${darkMode ? 'text-gray-300' : 'text-amber-900'}`}>
+              La Idea · Archivo Histórico Anarquista · 1840–1968
+            </p>
+            <div className="flex items-center gap-4">
+              <button
+                onClick={() => setActiveView(VIEWS.GLOSSARY)}
+                className={`text-xs transition-colors ${darkMode ? 'text-gray-400 hover:text-red-400' : 'text-amber-700 hover:text-amber-900'}`}
+              >
+                Glosario libertario
+              </button>
+              <button
+                onClick={() => setActiveView(VIEWS.STATS)}
+                className={`text-xs transition-colors ${darkMode ? 'text-gray-400 hover:text-red-400' : 'text-amber-700 hover:text-amber-900'}`}
+              >
+                Estadísticas
+              </button>
             </div>
           </div>
         </div>
