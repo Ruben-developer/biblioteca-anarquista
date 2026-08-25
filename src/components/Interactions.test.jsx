@@ -482,7 +482,9 @@ it('abre un evento de la línea temporal y cierra el modal con Escape', () => {
 
   it('abre el Contacto desde el sobre de la cabecera', () => {
     const { container } = render(<AnarchistArchive />);
-    fireEvent.click(screen.getByRole('button', { name: 'Contacto' }));
+    // El botón del header tiene aria-label="Contacto" + title; el del footer tiene solo texto.
+    const headerBtn = container.querySelector('header button[title="Contacto"]');
+    fireEvent.click(headerBtn);
     expect(screen.getAllByText(/EscrÍbenos para aportar textos|Escríbenos para aportar textos/).length).toBeGreaterThan(0);
     container.remove();
   });
