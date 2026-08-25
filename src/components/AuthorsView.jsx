@@ -1,9 +1,10 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Book, ChevronDown, ChevronUp, BookOpen, MapPin, Search, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Book, ChevronDown, ChevronUp, BookOpen, MapPin, Search, ChevronLeft, ChevronRight, Share2, Users } from 'lucide-react';
 import { THEME } from '../constants';
 
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const PAGE_SIZE = 12;
+const SUBMODES = { LIST: 'list', INFLUENCES: 'influences' };
 
 const getTodosButtonClass = (darkMode, activeLetter, search) => {
   const isActive = !activeLetter && !search;
@@ -33,9 +34,11 @@ const getLetterCountClass = (darkMode, activeLetter, letter) => {
 const AuthorsView = ({
   darkMode,
   authors,
-  onRead = () => {}
+  onRead = () => {},
+  influencesView = null
 }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
+  const [subMode, setSubMode] = useState(SUBMODES.LIST);
   const [openAuthor, setOpenAuthor] = useState(null);
   const [search, setSearch] = useState('');
   const [activeLetter, setActiveLetter] = useState(null);
@@ -83,6 +86,42 @@ const AuthorsView = ({
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         Autores
       </h2>
+
+      {/* Toggle segmentado Autores / Red de influencias */}
+      <div className="flex gap-2 mb-4" role="tablist" aria-label="Sub-modos de Autores">
+        <button
+          role="tab"
+          aria-selected={subMode === SUBMODES.LIST}
+          onClick={() => setSubMode(SUBMODES.LIST)}
+          className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+            subMode === SUBMODES.LIST
+              ? darkMode ? 'bg-red-600 text-white' : 'bg-amber-800 text-amber-50'
+              : darkMode ? 'bg-gray-800/50 text-gray-400 hover:bg-gray-700/50' : 'bg-amber-200/50 text-amber-700 hover:bg-amber-200'
+          }`}
+        >
+          <Users size={16} />
+          Autores
+        </button>
+        {influencesView && (
+          <button
+            role="tab"
+            aria-selected={subMode === SUBMODES.INFLUENCES}
+            onClick={() => setSubMode(SUBMODES.INFLUENCES)}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+              subMode === SUBMODES.INFLUENCES
+                ? darkMode ? 'bg-red-600 text-white' : 'bg-amber-800 text-amber-50'
+                : darkMode ? 'bg-gray-800/50 text-gray-400 hover:bg-gray-700/50' : 'bg-amber-200/50 text-amber-700 hover:bg-amber-200'
+            }`}
+          >
+            <Share2 size={16} />
+            Red de influencias
+          </button>
+        )}
+      </div>
+
+      {subMode === SUBMODES.INFLUENCES && influencesView ? (
+        influencesView
+      ) : (<>
       <p className={`text-sm mb-4 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
         {authors.length} autores, ordenados de más a menos textos de su autoría.
       </p>
@@ -270,6 +309,7 @@ const AuthorsView = ({
           </>
         )
       })()}
+      </>)}
     </div>
   );
 };

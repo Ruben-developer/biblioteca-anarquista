@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Calendar, MapPin, User, Heart, BookOpen, Compass, Milestone, BookMarked, Share2, X } from 'lucide-react';
+import { Calendar, MapPin, User, Heart, BookOpen, Compass, Milestone, X } from 'lucide-react';
 import { THEME, VIEWS } from '../constants';
 
 const Navigation = ({
@@ -36,10 +36,8 @@ const Navigation = ({
     { view: VIEWS.MAP, label: 'Mapa', icon: MapPin },
     { view: VIEWS.TIMELINE, label: 'Línea Temporal', icon: Calendar },
     { view: VIEWS.AUTHORS, label: 'Autores', icon: User },
-    { view: VIEWS.INFLUENCES, label: 'Red de Autores', icon: Share2 },
     { view: VIEWS.THEORIES, label: 'Teorías', icon: Compass },
     { view: VIEWS.PATHS, label: 'Rutas', icon: Milestone },
-    { view: VIEWS.GLOSSARY, label: 'Glosario', icon: BookMarked },
     { view: VIEWS.FAVORITES, label: `Mi Biblioteca (${favoriteCount})`, icon: Heart }
   ];
 

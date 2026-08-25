@@ -20,7 +20,7 @@ const renderNoteSection = (fav, { editingNote, noteText, setNoteText, saveNote, 
           className={`w-full text-sm rounded-lg border p-2.5 resize-none ${
             darkMode
               ? 'bg-gray-800 border-gray-600 text-gray-200 placeholder-gray-500'
-              : 'bg-white border-amber-300 text-gray-800 placeholder-amber-400'
+              : 'bg-white border-amber-300 text-gray-800 placeholder-amber-600'
           }`}
           rows={3}
           autoFocus

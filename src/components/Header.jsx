@@ -63,7 +63,9 @@ const Header = ({
             <button
               onClick={onDarkModeToggle}
               className={`p-2 md:p-3 rounded-lg ${themeClass.button} transition-colors`}
-              title="Cambiar tema"
+              title={darkMode ? 'Activar tema claro' : 'Activar tema oscuro'}
+              aria-label={darkMode ? 'Activar tema claro' : 'Activar tema oscuro'}
+              aria-pressed={darkMode}
             >
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
             </button>

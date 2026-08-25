@@ -1,10 +1,11 @@
 import React from 'react';
-import { X } from 'lucide-react';
 import { THEME } from '../constants';
+import { useModalFocus } from '../hooks';
 
 const TourModal = ({ darkMode, onClose }) => {
   const themeClass = darkMode ? THEME.dark : THEME.light;
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
+  const dialogRef = useModalFocus(onClose);
 
   const tourItems = [
     { title: 'Línea Temporal', description: 'Navega por eventos históricos' },
@@ -15,6 +16,7 @@ const TourModal = ({ darkMode, onClose }) => {
 
   return (
     <dialog
+      ref={dialogRef}
       open
       className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4"
       onClick={(e) => {
@@ -22,10 +24,6 @@ const TourModal = ({ darkMode, onClose }) => {
       }}
       aria-modal="true"
       aria-label="Tour de bienvenida"
-      tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') onClose();
-      }}
     >
       <div className={`${cardClass} border-2 rounded-lg max-w-2xl w-full p-8`}>
         <div className="flex items-center gap-3 mb-6">

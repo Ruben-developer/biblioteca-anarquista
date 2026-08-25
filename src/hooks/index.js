@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 
 /**
  * Hook personalizado para manejar el desplazamiento y mostrar botón "ir arriba"
@@ -113,4 +113,93 @@ export const useFavorites = () => {
   };
 
   return { favorites, toggleFavorite, updateFavoriteNote, isFavorite, exportFavorites };
+};
+
+/**
+ * Hook para trampa de foco en modales (dialog).
+ * - Guarda el elemento activo al abrir y lo restaura al cerrar.
+ * - Bloquea Tab dentro del modal (focus trap).
+ * - Bloquea scroll del fondo mientras está abierto.
+ * - Escape cierra el modal.
+ * - Devuelve ref que debe colocarse en el <dialog>.
+ */
+const FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+export const useModalFocus = (onClose) => {
+  const dialogRef = useRef(null);
+  const previousFocus = useRef(null);
+
+  const getFocusableElements = useCallback(() => {
+    if (!dialogRef.current) return [];
+    return Array.from(dialogRef.current.querySelectorAll(FOCUSABLE));
+  }, []);
+
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+
+    // Save previously focused element
+    previousFocus.current = document.activeElement;
+
+    // Block body scroll
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    // Focus first focusable element (or the dialog itself)
+    const focusFirst = () => {
+      const elements = getFocusableElements();
+      if (elements.length > 0) {
+        elements[0].focus();
+      } else {
+        dialog.focus();
+      }
+    };
+    // Use requestAnimationFrame to ensure the dialog is rendered
+    requestAnimationFrame(focusFirst);
+
+    // Handle keydown: Escape + focus trap
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        onClose();
+        return;
+      }
+      if (e.key !== 'Tab') return;
+
+      const elements = getFocusableElements();
+      if (elements.length === 0) {
+        e.preventDefault();
+        return;
+      }
+      const first = elements[0];
+      const last = elements[elements.length - 1];
+
+      if (e.shiftKey) {
+        // Shift+Tab: si estamos en el primero, ir al último
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else {
+        // Tab: si estamos en el último, ir al primero
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    };
+
+    dialog.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      dialog.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = prevOverflow;
+      // Restore focus
+      if (previousFocus.current && typeof previousFocus.current.focus === 'function') {
+        previousFocus.current.focus();
+      }
+    };
+  }, [onClose, getFocusableElements]);
+
+  return dialogRef;
 };

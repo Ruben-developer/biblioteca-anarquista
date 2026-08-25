@@ -101,4 +101,26 @@ describe('AnarchistArchive interactivo (jsdom)', () => {
     if (original) Object.defineProperty(window, 'scrollY', original);
     container.remove();
   });
+
+  it('muestra enlaces al Glosario, Estadísticas, Contacto y stats en el footer', async () => {
+    const { render, screen } = await import('@testing-library/react');
+    const { container } = render(<AnarchistArchive />);
+    expect(screen.getByText('Glosario libertario')).toBeTruthy();
+    expect(screen.getByText('Estadísticas')).toBeTruthy();
+    expect(container.innerHTML).toContain('Archivo Histórico Anarquista');
+    // Footer con Contacto y estadísticas resumen
+    const footer = container.querySelector('footer');
+    expect(footer).toBeTruthy();
+    const footerButtons = footer.querySelectorAll('button');
+    const footerLabels = Array.from(footerButtons).map(b => b.textContent.trim());
+    expect(footerLabels).toContain('Contacto');
+    expect(footerLabels).toContain('Glosario libertario');
+    expect(footerLabels).toContain('Estadísticas');
+    // Stats: "N textos · N eventos · N regiones · N autores"
+    expect(footer.textContent).toMatch(/\d+ textos/);
+    expect(footer.textContent).toMatch(/\d+ eventos/);
+    expect(footer.textContent).toMatch(/\d+ regiones/);
+    expect(footer.textContent).toMatch(/\d+ autores/);
+    container.remove();
+  });
 });
