@@ -102,11 +102,11 @@ describe('AnarchistArchive interactivo (jsdom)', () => {
     container.remove();
   });
 
-  it('muestra enlaces al Glosario y Estadísticas en el footer', async () => {
+  it('muestra la marca en el footer sin enlaces redundantes', async () => {
     const { render, screen } = await import('@testing-library/react');
     const { container } = render(<AnarchistArchive />);
-    expect(screen.getByText('Glosario libertario')).toBeTruthy();
-    expect(screen.getByText('Estadísticas')).toBeTruthy();
+    expect(screen.queryByText('Glosario libertario')).toBeNull();
+    expect(screen.queryByText('Estadísticas')).toBeNull();
     expect(container.innerHTML).toContain('Archivo Histórico Anarquista');
     container.remove();
   });
