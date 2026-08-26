@@ -84,11 +84,11 @@ const FavoriteButton = ({ book, isFavorite, onToggleFavorite, darkMode, size = 1
 
 const BookMeta = ({ book, darkMode }) => (
   <div className="flex items-center gap-3 text-xs flex-wrap mt-1">
-    <span className={`px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800 text-gray-300' : 'bg-amber-200 text-amber-900'}`}>
+    <span className={`font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800 text-gray-300' : 'bg-amber-200 text-amber-900'}`}>
       {book.region || book.author}
     </span>
     <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{book.year || '—'}</span>
-    <span className={`px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800' : 'bg-amber-200'}`}>{book.category}</span>
+    <span className={`font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800' : 'bg-amber-200'}`}>{book.category}</span>
         {book.rating && <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{book.rating}</span>}
   </div>
 )
@@ -161,7 +161,7 @@ const GridCard = ({ book, idx, favorites, onToggleFavorite, onRead, onOpenEvent,
       </p>
       <div className="flex items-center gap-3 text-xs flex-wrap mb-3">
         <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{book.year || '—'}</span>
-        <span className={`px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800' : 'bg-amber-200'}`}>{book.category}</span>
+        <span className={`font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800' : 'bg-amber-200'}`}>{book.category}</span>
         {book.rating && <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{book.rating}</span>}
       </div>
       {book.summary && (

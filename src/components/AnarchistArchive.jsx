@@ -212,25 +212,9 @@ const AnarchistArchive = () => {
 
       <footer className={`border-t-4 ${darkMode ? 'border-red-900 bg-black/30' : 'border-amber-800 bg-amber-100/60'}`}>
         <div className="container mx-auto px-4 py-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className={`font-display uppercase tracking-widest text-sm ${darkMode ? 'text-gray-300' : 'text-amber-900'}`}>
-              La Idea · Archivo Histórico Anarquista · 1840–1968
-            </p>
-            <div className="flex items-center gap-4">
-              <button
-                onClick={() => setActiveView(VIEWS.GLOSSARY)}
-                className={`text-xs transition-colors ${darkMode ? 'text-gray-400 hover:text-red-400' : 'text-amber-700 hover:text-amber-900'}`}
-              >
-                Glosario libertario
-              </button>
-              <button
-                onClick={() => setActiveView(VIEWS.STATS)}
-                className={`text-xs transition-colors ${darkMode ? 'text-gray-400 hover:text-red-400' : 'text-amber-700 hover:text-amber-900'}`}
-              >
-                Estadísticas
-              </button>
-            </div>
-          </div>
+          <p className={`font-display uppercase tracking-widest text-sm text-center ${darkMode ? 'text-gray-300' : 'text-amber-900'}`}>
+            La Idea · Archivo Histórico Anarquista
+          </p>
         </div>
       </footer>
 

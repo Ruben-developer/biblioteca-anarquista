@@ -105,6 +105,8 @@ const WorldMap = ({
           />
         );
       }),
+    // showTooltip is intentionally omitted: it depends on stable refs/state setters
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [countryValueMap, minValue, maxValue, styleFn, onClickFunction]
   );
 

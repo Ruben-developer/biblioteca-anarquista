@@ -462,6 +462,24 @@
       "prs": 0,
       "ci": "verde (run 32383052075)",
       "nota": "Linea anarcocristiana para la red de influencias (solicitud del usuario): 4 textos nuevos importados (Tolstoi El Reino de Dios esta dentro de vosotros 1894, Weil La persona y lo sagrado 1942, Weil Reflexiones sobre las causas de la libertad y de la opresion social 1934, Ellul Anarquia y cristianismo 1991) descargados y verificados de fuentes abiertas (escueladeruso, crucecontemporaneo, archive.org, solidaridadobrera). 290->294 obras. influences.js: 2 nodos nuevos (weil, ellul) + 3 aristas (tolstoi->weil, tolstoi->ellul, weil->ellul); red 26->28 pensadores, 35->38 relaciones. Nueva corriente anarcocristianismo en anarchistTheories.js (11 corrientes) y ruta Anarquismo cristiano en readingPaths.js (11 rutas). 292/292 descargas, 246 tests, lint 0, build OK."
+    },
+    {
+      "fecha": "2026-08-26",
+      "obras": 330,
+      "palabras": 0,
+      "commits": 1,
+      "prs": 0,
+      "ci": "verde (run 32929229812)",
+      "nota": "TURNO 00:00 agente daily-dev. Inspeccion: descargas 329/330 OK - 1 descarga rota (El Gran Rescate, Ricardo Palma Salamanca) hallada y corregida (404->200, PDF restaurado desde descartados/no-anarquista/ a pdfs-local/). 330/330 OK tras fix. Lint: 6 warnings eliminados (4 unused vars en GlossaryView/InfluencesView/Interactions.test/LibraryView.test, 1 react-hooks dep en WorldMap.jsx). La coleccion Crimental ya fue importada por el developer (commit 0fd260e, 33 entradas nuevas) y 100 textos adicionales (commit c04fd9e). Catalogo: 330 obras, 31 regiones, 73 eventos, 251 tests, 330/330 descargas OK. npm run check verde (lint 0 errores + 0 warnings + 251 tests + build), CI Pages verde. Commit c0868b3."
+    },
+    {
+      "fecha": "2026-08-26",
+      "obras": 330,
+      "palabras": 0,
+      "commits": 2,
+      "prs": 0,
+      "ci": "pendiente (run trigger 044c6d3)",
+      "nota": "TURNO 12:00 agente daily-dev. Inspeccion: descargas 330/330 OK, lint 0 errores, 251 tests OK, build OK. Se resolvio rebase interactivo pendiente (conflictos en AnarchistArchive.jsx - footer: version del revert c2df2ed 'no gusto' prevalece). Tarea: UX/UI semanal - invocado @ux-review con foco en estetica/diseno visual (reporte data/registros/ux-report-estetica.md: 3 HIGH, 7 MEDIUM, 5 LOW). Implementados los 3 HIGH: H1 font-serif en blockquotes EventModal + font-mono text-[10px] uppercase en chips de category/region (LibraryView, FeaturedBook) - fuentes Google Fonts cargadas pero no usadas ahora aprovechadas; H2 @media (prefers-reduced-motion: reduce) en index.css - desactiva animaciones CSS para usuarios con vertigo (WCAG 2.3.3); H3 FeaturedBook distingue visualmente con border-amber-600/50 (claro) o border-red-500/40 (oscuro) + shadow-xl. Catalogo: 330 obras, 31 regiones, 73 eventos, 251 tests, 330/330 descargas OK. npm run check verde, CI Pages pendiente. Commits bfc5480 + 044c6d3."
     }
   ]
 }
