@@ -143,13 +143,14 @@ const AnarchistArchive = () => {
               darkMode={darkMode}
               authors={dynamicAuthors}
               onRead={setReadingBook}
-              influencesView={
-                <InfluencesView
-                  darkMode={darkMode}
-                  regionData={regionData}
-                  onRead={setReadingBook}
-                />
-              }
+            />
+          )}
+
+          {activeView === VIEWS.INFLUENCES && (
+            <InfluencesView
+              darkMode={darkMode}
+              regionData={regionData}
+              onRead={setReadingBook}
             />
           )}
 
