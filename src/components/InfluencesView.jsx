@@ -180,7 +180,7 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
                 Obras en el archivo ({selectedAuthor.bookCount})
               </p>
               <div className="flex flex-wrap gap-2">
-                {selectedAuthor.books.map((book, idx) => (
+                {selectedAuthor.books.map((book) => (
                   <div
                     key={book.title}
                     className={`rounded-lg border px-3 py-2 flex items-center gap-2 ${darkMode ? 'bg-gray-900/50 border-gray-700' : 'bg-white/50 border-amber-200'}`}

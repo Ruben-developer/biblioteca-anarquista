@@ -1,7 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { render, screen } from '@testing-library/react';
 import LibraryView from './LibraryView';
 
 const regionData = {
