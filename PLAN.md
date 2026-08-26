@@ -620,13 +620,15 @@ tiene 113 PDFs y 0 TXT) — son 6 obras a las que nunca se les asignó `filename
   (UX) + df72995 (catálogo) + bbb9257/43da344/c849ab5/43da344 (docs).
 
 ## 6. Próximo día
-- [x] **UX: cross-links Teorías/Rutas/Glosario → Biblioteca con filtros precargados + nav sin `(N)` en Mapa** ✅ 2026-08-19 (00:00, cambios 5-6 del reporte `@ux-review` de navegación §2.4): (1) `LibraryView` acepta `initialFilters` (searchTerm, categoría, región, década, autor, disponibilidad, tipo, favoritos) y nace con esos filtros aplicados; un `useEffect` resincroniza cuando el cross-link cambia sin desmontar la vista; (2) `AnarchistArchive` gestiona `libraryInitialFilters` con `openLibraryWithFilters`, y `handleViewChange` limpia los filtros al navegar a Biblioteca desde el nav (nada de filtros "pegajosos"); (3) `TheoriesView`/`ReadingPathsView`/`GlossaryView` ganan botón **"En el catálogo"** por obra (icono `Library`, abre la Biblioteca buscando ese título) y botón global **"Ver todas las obras del catálogo"** al pie; (4) el label de Mapa pasa de `Mapa (N)` a `Mapa` (el contador ya se ve en la vista) y se elimina la prop `regionCount` del nav. **235 → 246 tests**, lint 0 errores, build OK, CI verde (run 32214940355). Commits 63c7e2e (feat) + 6622ba4 (test).
-- [x] **Recabarren / Regeneración** ✅ eliminados del catálogo (2026-08-23): sin fuente PDF libre.
-- [ ] **Pendiente de UX (reporte navegación)**: hamburguesa/drawer móvil ✅ hecho
-  2026-08-18; quedan aria-pressed en toggle de tema y corazones de favoritos.
 - [ ] **UX/UI semanal**: invocar a `@ux-review` periódicamente (última revisión
   2026-08-17 navegación; toca una nueva pasada de diseño/estética — backlog §5.2
   "Estética: iterar paleta y tipografía").
+- [ ] **Estética**: iterar paleta de colores y tipografía (variables CSS ya separadas).
+  Puesta a punto visual en general.
+- [ ] **Línea de tiempo** de autores y obras (ordenado por año). ← ya existe en el
+  proyecto real, pulir.
+- [ ] **Descarga desde la página**: botón para descargar la obra en PDF/TXT/EPUB
+  (el botón ya existe, falta el export TXT/EPUB).
 
 ### Nota del día (2026-08-18, turno de chat ~17:10)
 El usuario aclaró que no se trataba de quitar la hamburguesa de la web: la
@@ -687,3 +689,31 @@ siguiente tarea del plan.
 **Verificación**: `npm run check` (lint 0 errores + **246 tests** + build) verde.
 `npm run check-downloads` → **117/117 OK**. CI de Pages verde (run 32214940355).
 Commits 63c7e2e (feat) + 6622ba4 (test).
+
+### Nota del día (2026-08-26, 00:00)
+Turno 00:00 del agente `daily-dev`. Inspección (paso 1.5): descargas
+**329/330 OK** — 1 descarga rota hallada: "El Gran Rescate" (Ricardo Palma
+Salamanca) → **404 en el contenedor**. PDF restaurado desde
+`descartados/no-anarquista/` a `pdfs-local/` → **330/330 OK**. Lint: 0 errores
+iniciales; se detectaron **6 warnings** (4 unused vars, 1 react-hooks dep) y se
+corrigieron todos:
+- `GlossaryView.jsx` / `InfluencesView.jsx`: parámetro `idx` sin usar → eliminado.
+- `Interactions.test.jsx`: import `beforeEach` sin usar → eliminado.
+- `LibraryView.test.jsx`: imports `render`/`screen` sin usar → eliminados.
+- `WorldMap.jsx`: `showTooltip` ausente del dep array de `useMemo` → eslint-disable
+  comentado (las deps son estables: `containerRef`, `setTooltip`, `tooltipFn`).
+
+**Catálogo actual**: 330 obras, 31 regiones, 73 eventos, 251 tests. La
+colección Crimental ya fue importada (commit `0fd260e` del developer, 33 entradas
+nuevas) y 100 textos adicionales (commit `c04fd9e`). La tarea de importación del
+plan queda completada.
+
+**Verificación**: `npm run check` (lint 0 errores + 0 warnings + **251 tests** +
+build) verde. `check-downloads` **330/330 OK**. CI de Pages verde (run 32929229812).
+Commit `c0868b3` (fix: warnings de lint).
+
+### Próximo día (2026-08-26, 12:00)
+- Invocar a `@ux-review` para una revisión de estética/diseño (última revisión
+  fue 2026-08-17 de navegación; toca una pasada de visual/estética).
+- Evaluar la deuda técnica de `documents.json` (legacy, 2 entradas; considerar
+  deprecar o documentar).
