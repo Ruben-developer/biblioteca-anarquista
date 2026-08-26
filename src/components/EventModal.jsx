@@ -48,7 +48,7 @@ const EventModal = ({ darkMode, event, regionData, onClose, onRead = () => {} })
           </p>
           <div className={`${darkMode ? 'bg-gray-800/50 border-red-900/30' : 'bg-amber-100/50 border-amber-400'} border-l-4 p-4 rounded-r-lg`}>
             <Quote className={`${darkMode ? 'text-red-500' : 'text-amber-600'} mb-2`} size={32} />
-            <blockquote className={`text-lg italic ${darkMode ? 'text-gray-200' : 'text-gray-800'} mb-2`}>
+            <blockquote className={`font-serif text-lg italic ${darkMode ? 'text-gray-200' : 'text-gray-800'} mb-2`}>
               &ldquo;{event.quote}&rdquo;
             </blockquote>
             <p className={`text-right font-semibold ${darkMode ? 'text-gray-400' : 'text-amber-900'}`}>

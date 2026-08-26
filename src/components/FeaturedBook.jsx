@@ -10,7 +10,7 @@ const FeaturedBook = ({ darkMode, book, onRead = () => {} }) => {
   return (
     <section
       aria-label="Obra del día"
-      className={`${cardClass} border-2 rounded-xl p-6 mb-8 relative overflow-hidden`}
+      className={`${cardClass} border-2 ${darkMode ? 'border-red-500/40' : 'border-amber-600/50'} rounded-xl p-6 md:p-8 mb-8 relative overflow-hidden shadow-xl`}
     >
       <span
         className={`inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded-full font-medium mb-4 ${
@@ -35,7 +35,7 @@ const FeaturedBook = ({ darkMode, book, onRead = () => {} }) => {
             <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>
               {book.year || '—'}
             </span>
-            <span className={`px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800 text-gray-300' : 'bg-amber-200 text-amber-900'}`}>
+            <span className={`font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800 text-gray-300' : 'bg-amber-200 text-amber-900'}`}>
               {book.region} · {book.category}
             </span>
             {book.rating && (

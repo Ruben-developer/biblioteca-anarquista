@@ -352,6 +352,24 @@ code {
    - .card-appear: entrada escalonada de las tarjetas.
    - Hover de tarjetas: elevación sutil.
    ============================================================ */
+
+/* Accesibilidad: desactivar animaciones para usuarios con vértigo */
+@media (prefers-reduced-motion: reduce) {
+  .view-transition,
+  .card-appear {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+  button.animate-lift:hover,
+  a.animate-lift:hover {
+    transform: none !important;
+  }
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
 @keyframes view-fade-slide {
   from {
     opacity: 0;
