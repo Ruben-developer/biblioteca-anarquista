@@ -421,8 +421,8 @@ describe('AuthorsView interactivo (jsdom)', () => {
     container.remove();
   });
 
-  it('muestra el toggle Autores / Red de influencias y alterna entre modos', async () => {
-    const { render, screen, fireEvent } = await import('@testing-library/react');
+  it('Autores muestra la lista de autores sin embeber Red de influencias', async () => {
+    const { render, screen } = await import('@testing-library/react');
     const authors = [
       {
         name: 'Ricardo Mella',
@@ -434,40 +434,12 @@ describe('AuthorsView interactivo (jsdom)', () => {
         ]
       }
     ];
-    const InfluencesStub = () => <div data-testid="influences-stub">Red de Autores stub</div>;
-    const { container } = render(
-      <AuthorsView darkMode={false} authors={authors} influencesView={<InfluencesStub />} />
-    );
-    // Por defecto se muestra la lista de autores
-    expect(screen.getByText('Ricardo Mella')).toBeTruthy();
-    expect(screen.queryByTestId('influences-stub')).toBeNull();
-    // El toggle de Red de influencias está presente
-    const toggleBtn = screen.getByRole('tab', { name: /Red de influencias/ });
-    expect(toggleBtn).toBeTruthy();
-    // Clic en Red de influencias → se muestra el sub-componente
-    fireEvent.click(toggleBtn);
-    expect(screen.getByTestId('influences-stub')).toBeTruthy();
-    expect(screen.queryByText('Ricardo Mella')).toBeNull();
-    // Clic en Autores → vuelve a la lista
-    fireEvent.click(screen.getByRole('tab', { name: /^Autores$/ }));
-    expect(screen.getByText('Ricardo Mella')).toBeTruthy();
-    expect(screen.queryByTestId('influences-stub')).toBeNull();
-    container.remove();
-  });
-
-  it('no muestra el toggle de Red de influencias si no se pasa influencesView', async () => {
-    const { render, screen } = await import('@testing-library/react');
-    const authors = [
-      {
-        name: 'Test Author',
-        bookCount: 1,
-        regions: ['España'],
-        yearsRange: '1900',
-        books: [{ title: 'Obra', region: 'España', category: 'teoria', year: 1900, filename: 'a.pdf' }]
-      }
-    ];
     const { container } = render(<AuthorsView darkMode={false} authors={authors} />);
+    // Lista de autores presente
+    expect(screen.getByText('Ricardo Mella')).toBeTruthy();
+    // Red de influencias es una sección aparte, no un submodo embebido
     expect(screen.queryByRole('tab', { name: /Red de influencias/ })).toBeNull();
+    expect(screen.queryByText('Red de influencias')).toBeNull();
     container.remove();
   });
 });
