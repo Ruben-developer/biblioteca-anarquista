@@ -620,15 +620,28 @@ tiene 113 PDFs y 0 TXT) — son 6 obras a las que nunca se les asignó `filename
   (UX) + df72995 (catálogo) + bbb9257/43da344/c849ab5/43da344 (docs).
 
 ## 6. Próximo día
-- [ ] **UX/UI semanal**: invocar a `@ux-review` periódicamente (última revisión
-  2026-08-17 navegación; toca una nueva pasada de diseño/estética — backlog §5.2
-  "Estética: iterar paleta y tipografía").
+- [x] **UX/UI semanal** ✅ 2026-08-26 (12:00): invocado `@ux-review` con foco en
+  estética/diseño visual (última revisión 2026-08-17 era de navegación). Reporte
+  completo en `data/registros/ux-report-estetica.md` (3 HIGH, 7 MEDIUM, 5 LOW).
+  Se implementaron los 3 hallazgos HIGH: (H1) `font-serif` en blockquotes de
+  EventModal + `font-mono text-[10px] uppercase tracking-wider` en chips de
+  categoría/región de LibraryView y FeaturedBook — fuentes tipográficas cargadas
+  pero no usadas ahora se aprovechan; (H2) `@media (prefers-reduced-motion: reduce)`
+  en index.css — desactiva animaciones CSS para usuarios con vértigo (WCAG 2.3.3);
+  (H3) FeaturedBook distingue visualmente con `border-amber-600/50` (claro) /
+  `border-red-500/40` (oscuro) + `shadow-xl` — la obra del día se ve como
+  recomendación editorial. **251 tests**, lint 0 errores, build OK.
+- [ ] **MEDIUM del reporte estética**: padding/sombras/gaps consistentes entre
+  tarjetas (M1-M4), footer mejorado con stats (M5), modal header compartido (M6),
+  gradiente scroll timeline móvil (M7).
 - [ ] **Estética**: iterar paleta de colores y tipografía (variables CSS ya separadas).
   Puesta a punto visual en general.
 - [ ] **Línea de tiempo** de autores y obras (ordenado por año). ← ya existe en el
   proyecto real, pulir.
 - [ ] **Descarga desde la página**: botón para descargar la obra en PDF/TXT/EPUB
   (el botón ya existe, falta el export TXT/EPUB).
+- [ ] Evaluar la deuda técnica de `documents.json` (legacy, 2 entradas; considerar
+  deprecar o documentar).
 
 ### Nota del día (2026-08-18, turno de chat ~17:10)
 El usuario aclaró que no se trataba de quitar la hamburguesa de la web: la
@@ -717,3 +730,35 @@ Commit `c0868b3` (fix: warnings de lint).
   fue 2026-08-17 de navegación; toca una pasada de visual/estética).
 - Evaluar la deuda técnica de `documents.json` (legacy, 2 entradas; considerar
   deprecar o documentar).
+
+### Nota del día (2026-08-26, 12:00)
+Turno 12:00 del agente `daily-dev`. Inspección (paso 1.5): descargas **330/330 OK**,
+lint 0 errores, 251 tests OK, build OK. Sin errores críticos. Se resolvió un rebase
+interactivo pendiente del turno anterior (conflictos en `AnarchistArchive.jsx` y su
+test — footer: la versión del revert `c2df2ed` "no gustó" prevalece sobre la versión
+mejorada de `0b8f278`; se resolvió conservando el footer simple con solo Glosario y
+Estadísticas).
+
+**Tarea del plan ("Próximo día" 2026-08-26 00:00 — UX/UI semanal)**:
+- Invocado `@ux-review` con foco en estética/diseño visual (no navegación).
+  Reporte completo en `data/registros/ux-report-estetica.md`: 3 hallazgos HIGH,
+  7 MEDIUM, 5 LOW.
+- **H1 (tipografía a medio implementar)**: `font-serif` añadida al `<blockquote>`
+  de `EventModal.jsx`; `font-mono text-[10px] uppercase tracking-wider` añadida
+  a chips de categoría/región en `LibraryView.jsx` (BookMeta + GroupCard) y
+  `FeaturedBook.jsx`. Las 4 fuentes Google Fonts cargadas ahora se aprovechan.
+- **H2 (WCAG 2.3.3 — animaciones)**: `@media (prefers-reduced-motion: reduce)`
+  en `src/index.css` — desactiva `.view-transition`, `.card-appear` y
+  `transform` en hover para usuarios con vértigo.
+- **H3 (FeaturedBook destaca)**: borde acento `border-amber-600/50` (claro) /
+  `border-red-500/40` (oscuro) + `shadow-xl` — la obra del día se distingue
+  como recomendación editorial.
+
+**Verificación**: `npm run check` (lint 0 errores + **251 tests** + build) verde.
+`check-downloads` **330/330 OK**. CI de Pages: run trigger (`044c6d3`), esperando
+resultado. Commits `bfc5480` (feat: estética) + `044c6d3` (ci: trigger).
+
+### Próximo día (2026-08-26, 00:00)
+- Implementar hallazgos MEDIUM del reporte estética (padding/sombras consistentes,
+  footer mejorado, modal header compartido, gradiente scroll timeline móvil).
+- Evaluar deuda técnica de `documents.json` (legacy, solo 2 entradas).
