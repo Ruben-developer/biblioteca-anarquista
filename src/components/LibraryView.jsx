@@ -23,14 +23,14 @@ const getHeartClass = (isFav, darkMode) => {
 
 const getGroupBtnClass = (active, darkMode) => {
   if (active) return darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
-  return darkMode ? 'bg-gray-800 border border-gray-700 text-gray-300 hover:bg-gray-700' : 'bg-white border border-amber-300 text-gray-700 hover:bg-amber-100'
+  return darkMode ? 'bg-gray-800 border border-[#872320] text-gray-300 hover:bg-gray-700' : 'bg-white border border-[#B79F6E] text-gray-700 hover:bg-amber-100'
 }
 
 const getLeerBtnClass = (darkMode) =>
   darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
 
 const getSinArchivoClass = (darkMode) =>
-  darkMode ? 'border-gray-700 text-gray-500' : 'border-amber-300 text-amber-600'
+  darkMode ? 'border-[#872320] text-gray-500' : 'border-[#B79F6E] text-amber-600'
 
 const BookEventLink = ({ book, timelineEvents, onOpenEvent, darkMode }) => {
   const bookEvents = getBookEvents(timelineEvents, book)
@@ -96,7 +96,7 @@ const BookMeta = ({ book, darkMode }) => (
 const BookCardInGroup = ({ book, favorites, onToggleFavorite, onRead, onOpenEvent, timelineEvents, darkMode }) => {
   const isFav = favorites.some((f) => f.title === book.title)
   return (
-    <div className={`rounded-lg p-4 ${darkMode ? 'bg-gray-900/50 border border-gray-700' : 'bg-white/50 border border-amber-200'}`}>
+    <div className={`rounded-lg p-4 ${darkMode ? 'bg-gray-900/50 border border-[#872320]' : 'bg-white/50 border border-[#B79F6E]'}`}>
       <div className="flex items-start justify-between gap-2 mb-1">
         <div>
           <h4 className={`font-semibold ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
@@ -262,11 +262,11 @@ const LibraryView = ({
   const hasActiveFilters = searchTerm || category !== 'all' || decade !== 'all' || type !== 'all' || favoritesOnly
 
   const selectClass = `px-3 py-2 rounded-lg border text-sm max-w-full overflow-hidden text-ellipsis whitespace-nowrap ${
-    darkMode ? 'bg-gray-800 border-gray-700 text-gray-200' : 'bg-white border-amber-300 text-gray-800'
+    darkMode ? 'bg-gray-800 border-[#872320] text-gray-200' : 'bg-white border-[#B79F6E] text-gray-800'
   }`
 
   const inputClass = `w-full md:w-72 px-4 py-2 rounded-lg border text-sm ${
-    darkMode ? 'bg-gray-800 border-gray-700 text-gray-200 placeholder-gray-500' : 'bg-white border-amber-300 text-gray-800 placeholder-amber-700'
+    darkMode ? 'bg-gray-800 border-[#872320] text-gray-200 placeholder-gray-500' : 'bg-white border-[#B79F6E] text-gray-800 placeholder-amber-700'
   }`
 
   const renderContent = () => {
@@ -305,7 +305,7 @@ const LibraryView = ({
           ))}
         </div>
         {totalPages > 1 && (
-          <div className={`flex items-center justify-center gap-3 mt-6 pt-4 border-t ${darkMode ? 'border-gray-700' : 'border-amber-300'}`}>
+          <div className={`flex items-center justify-center gap-3 mt-6 pt-4 border-t ${darkMode ? 'border-[#872320]' : 'border-[#B79F6E]'}`}>
             <button
               onClick={() => setPage((p) => Math.max(1, p - 1))}
               disabled={page === 1}
@@ -332,7 +332,7 @@ const LibraryView = ({
   }
 
   return (
-    <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
+    <div className={`${darkMode ? 'bg-gray-900/60 border-[#872320]/50' : 'bg-white/60 border-[#B79F6E]'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         Biblioteca
       </h2>

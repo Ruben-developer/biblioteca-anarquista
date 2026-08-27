@@ -46,7 +46,7 @@ const EventModal = ({ darkMode, event, regionData, onClose, onRead = () => {} })
           <p className={`${darkMode ? 'text-gray-300' : 'text-gray-700'} leading-relaxed mb-4`}>
             {event.description}
           </p>
-          <div className={`${darkMode ? 'bg-gray-800/50 border-red-900/30' : 'bg-amber-100/50 border-amber-400'} border-l-4 p-4 rounded-r-lg`}>
+          <div className={`${darkMode ? 'bg-gray-800/50 border-[#872320]/30' : 'bg-amber-100/50 border-[#B79F6E]'} border-l-4 p-4 rounded-r-lg`}>
             <Quote className={`${darkMode ? 'text-red-500' : 'text-amber-600'} mb-2`} size={32} />
             <blockquote className={`font-serif text-lg italic ${darkMode ? 'text-gray-200' : 'text-gray-800'} mb-2`}>
               &ldquo;{event.quote}&rdquo;
@@ -65,7 +65,7 @@ const EventModal = ({ darkMode, event, regionData, onClose, onRead = () => {} })
                 {relatedTexts.map((book, idx) => (
                   <div
                     key={`${book.region}-${book.title}-${idx}`}
-                    className={`rounded-lg border p-3 ${darkMode ? 'bg-gray-800/50 border-gray-700/50' : 'bg-white/80 border-amber-300'}`}
+                    className={`rounded-lg border p-3 ${darkMode ? 'bg-gray-800/50 border-[#872320]/50' : 'bg-white/80 border-[#B79F6E]'}`}
                   >
                     <p className={`font-medium ${darkMode ? 'text-gray-200' : 'text-gray-800'} mb-1`}>
                       {book.title}

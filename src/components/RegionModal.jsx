@@ -37,7 +37,7 @@ const RegionModal = ({
       aria-modal="true"
       aria-label={region}
     >
-      <div className={`${cardClass} border-4 ${darkMode ? 'border-red-900/50' : 'border-amber-700'} rounded-lg max-w-2xl w-full p-6`}>
+      <div className={`${cardClass} border-4 ${darkMode ? 'border-[#872320]/50' : 'border-[#B79F6E]'} rounded-lg max-w-2xl w-full p-6`}>
         <div className={`${darkMode ? 'bg-red-900/30' : 'bg-amber-700'} rounded-t-lg -m-6 mb-4 p-4`}>
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-3">
@@ -58,7 +58,7 @@ const RegionModal = ({
 
         <div className="space-y-3 max-h-96 overflow-y-auto">
           {historicalBooks.map((book, idx) => (
-            <div key={idx} className={`${darkMode ? 'bg-gray-800/50 border-gray-700/50' : 'bg-white/80 border-amber-300'} border-2 rounded-lg p-4`}>
+            <div key={idx} className={`${darkMode ? 'bg-gray-800/50 border-[#872320]/50' : 'bg-white/80 border-[#B79F6E]'} border-2 rounded-lg p-4`}>
               <div className="flex justify-between items-start gap-3">
                 <div className="flex-1">
                   <p className={`font-medium ${darkMode ? 'text-gray-200' : 'text-gray-800'} mb-2`}>

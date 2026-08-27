@@ -19,8 +19,8 @@ const renderNoteSection = (fav, { editingNote, noteText, setNoteText, saveNote, 
           placeholder="Escribe una nota personal sobre este texto..."
           className={`w-full text-sm rounded-lg border p-2.5 resize-none ${
             darkMode
-              ? 'bg-gray-800 border-gray-600 text-gray-200 placeholder-gray-500'
-              : 'bg-white border-amber-300 text-gray-800 placeholder-amber-600'
+              ? 'bg-gray-800 border-[#872320] text-gray-200 placeholder-gray-500'
+              : 'bg-white border-[#B79F6E] text-gray-800 placeholder-amber-600'
           }`}
           rows={3}
           autoFocus
@@ -105,7 +105,7 @@ const FavoritesView = ({
 
   if (favorites.length === 0) {
     return (
-      <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
+      <div className={`${darkMode ? 'bg-gray-900/60 border-[#872320]/50' : 'bg-white/60 border-[#B79F6E]'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
         <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-6 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
           Mi Biblioteca
         </h2>
@@ -123,7 +123,7 @@ const FavoritesView = ({
   }
 
   return (
-    <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
+    <div className={`${darkMode ? 'bg-gray-900/60 border-[#872320]/50' : 'bg-white/60 border-[#B79F6E]'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
@@ -137,8 +137,8 @@ const FavoritesView = ({
           onClick={handleExport}
           className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
             darkMode
-              ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700'
-              : 'bg-amber-100 text-amber-800 hover:bg-amber-200 border border-amber-300'
+              ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-[#872320]'
+              : 'bg-amber-100 text-amber-800 hover:bg-amber-200 border border-[#B79F6E]'
           }`}
         >
           <Download size={16} />

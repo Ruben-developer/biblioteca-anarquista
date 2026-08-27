@@ -10,7 +10,7 @@ const FeaturedBook = ({ darkMode, book, onRead = () => {} }) => {
   return (
     <section
       aria-label="Obra del día"
-      className={`${cardClass} border-2 ${darkMode ? 'border-red-500/40' : 'border-amber-600/50'} rounded-xl p-6 md:p-8 mb-8 relative overflow-hidden shadow-xl`}
+      className={`${cardClass} border-2 ${darkMode ? 'border-[#872320]/40' : 'border-[#B79F6E]/50'} rounded-xl p-6 md:p-8 mb-8 relative overflow-hidden shadow-xl`}
     >
       <span
         className={`inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded-full font-medium mb-4 ${
