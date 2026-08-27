@@ -101,18 +101,43 @@ export const useFavorites = () => {
   // Verificar si un título es favorito
   const isFavorite = (title) => favorites.some(f => f.title === title);
 
-  // Exportar favoritos como texto plano
+  // Exportar favoritos como JSON (incluye notas y metadata, reimportable)
   const exportFavorites = () => {
-    return favorites.map((f, i) => {
-      const parts = [`${i + 1}. ${f.title}`];
-      if (f.author) parts.push(`   Autor: ${f.author}`);
-      if (f.year) parts.push(`   Año: ${f.year}`);
-      if (f.note) parts.push(`   Nota: ${f.note}`);
-      return parts.join('\n');
-    }).join('\n\n');
+    return JSON.stringify(favorites, null, 2);
   };
 
-  return { favorites, toggleFavorite, updateFavoriteNote, isFavorite, exportFavorites };
+  // Importar favoritos desde un JSON (array de objetos o strings legados).
+  // Reemplaza la lista actual y preserva las notas. Devuelve { ok, count?, error? }.
+  const importFavorites = (jsonString) => {
+    try {
+      const parsed = JSON.parse(jsonString);
+      if (!Array.isArray(parsed)) {
+        return { ok: false, error: 'El archivo no es una lista válida.' };
+      }
+      const cleaned = parsed
+        .filter((f) => f && (typeof f === 'string' || f.title))
+        .map((f) =>
+          typeof f === 'string'
+            ? { title: f, author: '', year: null, filename: '', category: '', note: '', addedAt: Date.now() }
+            : {
+                title: f.title,
+                author: f.author || '',
+                year: f.year ?? null,
+                filename: f.filename || '',
+                category: f.category || '',
+                note: f.note || '',
+                addedAt: f.addedAt || Date.now()
+              }
+        );
+      setFavorites(cleaned);
+      localStorage.setItem('favorites', JSON.stringify(cleaned));
+      return { ok: true, count: cleaned.length };
+    } catch (e) {
+      return { ok: false, error: 'No se pudo leer el archivo.' };
+    }
+  };
+
+  return { favorites, toggleFavorite, updateFavoriteNote, isFavorite, exportFavorites, importFavorites };
 };
 
 /**
