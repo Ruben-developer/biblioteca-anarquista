@@ -59,7 +59,7 @@ export const VIEW_LABELS = {
 export const THEME = {
   dark: {
     bg: 'bg-gradient-to-br from-red-950 via-black to-gray-900 text-gray-100',
-    header: 'bg-gray-900 border-[#872320]/30',
+    header: 'bg-black border-[#872320]/30',
     nav: 'bg-black/30 border-[#872320]/20',
     card: 'bg-gradient-to-br from-gray-800/80 to-gray-900/80 border-[#872320]/30',
     accentText: 'text-red-400',
@@ -69,7 +69,7 @@ export const THEME = {
   },
   light: {
     bg: 'bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 text-gray-800',
-    header: 'bg-white border-[#B79F6E]/30',
+    header: 'bg-amber-100 border-[#B79F6E]/30',
     nav: 'bg-amber-100/60 border-[#B79F6E]/20',
     card: 'bg-gradient-to-br from-amber-50 to-orange-50 border-[#B79F6E]',
     accentText: 'text-amber-800',
