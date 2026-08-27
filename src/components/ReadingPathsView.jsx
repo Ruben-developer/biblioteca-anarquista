@@ -11,7 +11,7 @@ const ReadingPathsView = ({ darkMode, regionData, onRead = () => {}, onOpenLibra
   const toggle = (id) => setOpenId((prev) => (prev === id ? null : id));
 
   return (
-    <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
+    <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-200'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         Rutas de lectura
       </h2>
@@ -50,7 +50,7 @@ const ReadingPathsView = ({ darkMode, regionData, onRead = () => {}, onOpenLibra
               </button>
 
               {isOpen && (
-                <div className={`mt-4 pt-4 border-t ${darkMode ? 'border-gray-700' : 'border-amber-300'}`}>
+                <div className={`mt-4 pt-4 border-t ${darkMode ? 'border-gray-700' : 'border-amber-200'}`}>
                   <div className="relative">
                     <div className={`absolute top-0 bottom-0 left-[11px] w-0.5 ${darkMode ? 'bg-red-600/60' : 'bg-amber-600/60'}`} />
                     <div className="flex flex-col gap-3">
@@ -61,8 +61,8 @@ const ReadingPathsView = ({ darkMode, regionData, onRead = () => {}, onOpenLibra
                           }`}>
                             {idx + 1}
                           </span>
-                          <div className={`flex-1 min-w-0 rounded-lg border p-3 ${darkMode ? 'bg-gray-800/60 border-gray-700/50' : 'bg-white/80 border-amber-300'}`}>
-                            <p className={`text-sm font-medium break-words ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
+                          <div className={`flex-1 min-w-0 rounded-lg border p-3 ${darkMode ? 'bg-gray-800/60 border-gray-700/50' : 'bg-white/80 border-amber-200'}`}>
+                            <p className={`text-sm font-medium break-words ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
                               {book.title}
                             </p>
                             <p className={`text-xs mb-2 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -83,7 +83,7 @@ const ReadingPathsView = ({ darkMode, regionData, onRead = () => {}, onOpenLibra
                               <button
                                 onClick={() => onOpenLibrary({ searchTerm: book.title })}
                                 className={`flex items-center gap-1 px-2 py-1 rounded text-xs font-medium transition-colors ${
-                                  darkMode ? 'bg-gray-700 text-gray-200 hover:bg-gray-600' : 'bg-white border border-amber-300 text-amber-800 hover:bg-amber-100'
+                                  darkMode ? 'bg-gray-700 text-gray-100 hover:bg-gray-600' : 'bg-white border border-amber-200 text-amber-800 hover:bg-amber-100'
                                 }`}
                                 title={`Ver "${book.title}" en el catálogo`}
                               >
@@ -107,7 +107,7 @@ const ReadingPathsView = ({ darkMode, regionData, onRead = () => {}, onOpenLibra
         type="button"
         onClick={() => onOpenLibrary({})}
         className={`mt-4 flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-          darkMode ? 'bg-gray-800 border border-gray-700 text-gray-200 hover:bg-gray-700' : 'bg-white border border-amber-300 text-amber-800 hover:bg-amber-100'
+          darkMode ? 'bg-gray-800 border border-gray-700 text-gray-100 hover:bg-gray-700' : 'bg-white border border-amber-200 text-amber-800 hover:bg-amber-100'
         }`}
       >
         <Library size={16} />

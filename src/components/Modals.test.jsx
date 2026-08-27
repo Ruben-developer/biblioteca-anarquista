@@ -134,7 +134,7 @@ describe('RegionModal', () => {
     );
     expect(html).toContain('Resumen de la obra A');
     expect(html).toContain('Remover de favoritos');
-    expect(html).toContain('fill-red-500 text-red-500');
+    expect(html).toContain('fill-red-400 text-red-400');
   });
 
   it('muestra "Agregar a favoritos" cuando la obra no está guardada', () => {

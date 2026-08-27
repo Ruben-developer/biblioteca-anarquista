@@ -10,11 +10,11 @@ const FeaturedBook = ({ darkMode, book, onRead = () => {} }) => {
   return (
     <section
       aria-label="Obra del día"
-      className={`${cardClass} border-2 ${darkMode ? 'border-red-500/40' : 'border-amber-600/50'} rounded-xl p-6 md:p-8 mb-8 relative overflow-hidden shadow-xl`}
+      className={`${cardClass} border-2 ${darkMode ? 'border-red-400/40' : 'border-amber-600/50'} rounded-xl p-6 md:p-8 mb-8 relative overflow-hidden shadow-xl`}
     >
       <span
         className={`inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded-full font-medium mb-4 ${
-          darkMode ? 'bg-red-900/50 text-red-300' : 'bg-amber-800 text-amber-50'
+          darkMode ? 'bg-red-900/50 text-red-400' : 'bg-amber-800 text-amber-50'
         }`}
       >
         <Sparkles size={12} />

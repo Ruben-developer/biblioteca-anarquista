@@ -22,7 +22,7 @@ const RegionModal = ({
 
   const getHeartClass = (book) => {
     const isFav = favorites.some((f) => f.title === book.title);
-    if (isFav) return 'fill-red-500 text-red-500';
+    if (isFav) return 'fill-red-400 text-red-400';
     return darkMode ? 'text-gray-500 hover:text-gray-400' : 'text-amber-600 hover:text-amber-700';
   };
 
@@ -58,10 +58,10 @@ const RegionModal = ({
 
         <div className="space-y-3 max-h-96 overflow-y-auto">
           {historicalBooks.map((book, idx) => (
-            <div key={idx} className={`${darkMode ? 'bg-gray-800/50 border-gray-700/50' : 'bg-white/80 border-amber-300'} border-2 rounded-lg p-4`}>
+            <div key={idx} className={`${darkMode ? 'bg-gray-800/50 border-gray-700/50' : 'bg-white/80 border-amber-200'} border-2 rounded-lg p-4`}>
               <div className="flex justify-between items-start gap-3">
                 <div className="flex-1">
-                  <p className={`font-medium ${darkMode ? 'text-gray-200' : 'text-gray-800'} mb-2`}>
+                  <p className={`font-medium ${darkMode ? 'text-gray-100' : 'text-gray-800'} mb-2`}>
                     {book.title}
                   </p>
                   <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'} mb-2`}>

@@ -25,14 +25,14 @@ const ReaderOverlay = ({ book, darkMode, onClose, favorites = [], onToggleFavori
   return (
     <dialog
       open
-      className={`fixed inset-0 z-50 flex flex-col ${readingDark ? 'bg-gray-950' : 'bg-[#F5EDD9]'}`}
+      className={`fixed inset-0 z-50 flex flex-col ${readingDark ? 'bg-gray-900' : 'bg-[#F5EDD9]'}`}
       aria-label={`Lector: ${book.title}`}
     >
       <div className={`flex items-center gap-3 px-4 py-3 border-b ${readingDark ? 'bg-gray-900 border-gray-800' : 'bg-[#EDE1C8] border-[#CBB788]'}`}>
         <button
           onClick={onClose}
           className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-            readingDark ? 'bg-gray-800 text-gray-200 hover:bg-gray-700' : 'bg-white/70 text-gray-800 hover:bg-white'
+            readingDark ? 'bg-gray-800 text-gray-100 hover:bg-gray-700' : 'bg-white/70 text-gray-800 hover:bg-white'
           }`}
           aria-label="Cerrar lector"
         >
@@ -53,7 +53,7 @@ const ReaderOverlay = ({ book, darkMode, onClose, favorites = [], onToggleFavori
           <button
             onClick={() => setReadingDark((v) => !v)}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-              readingDark ? 'bg-gray-800 text-gray-200 hover:bg-gray-700' : 'bg-white/70 text-gray-800 hover:bg-white'
+              readingDark ? 'bg-gray-800 text-gray-100 hover:bg-gray-700' : 'bg-white/70 text-gray-800 hover:bg-white'
             }`}
             title={readingDark ? 'Fondo de lectura claro' : 'Fondo de lectura oscuro'}
           >
@@ -65,7 +65,7 @@ const ReaderOverlay = ({ book, darkMode, onClose, favorites = [], onToggleFavori
               href={url}
               download
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-                readingDark ? 'bg-gray-800 text-gray-200 hover:bg-gray-700' : 'bg-white/70 text-gray-800 hover:bg-white'
+                readingDark ? 'bg-gray-800 text-gray-100 hover:bg-gray-700' : 'bg-white/70 text-gray-800 hover:bg-white'
               }`}
               title="Descargar el documento"
             >
@@ -78,7 +78,7 @@ const ReaderOverlay = ({ book, darkMode, onClose, favorites = [], onToggleFavori
               target="_blank"
               rel="noopener noreferrer"
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-                readingDark ? 'bg-gray-800 text-gray-200 hover:bg-gray-700' : 'bg-white/70 text-gray-800 hover:bg-white'
+                readingDark ? 'bg-gray-800 text-gray-100 hover:bg-gray-700' : 'bg-white/70 text-gray-800 hover:bg-white'
               }`}
               title="Abrir en pestaña nueva"
             >
@@ -89,20 +89,20 @@ const ReaderOverlay = ({ book, darkMode, onClose, favorites = [], onToggleFavori
             <button
               onClick={() => onToggleFavorite(book.title, { author: book.author, year: book.year, filename: book.filename, category: book.category })}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-                readingDark ? 'bg-gray-800 text-gray-200 hover:bg-gray-700' : 'bg-white/70 text-gray-800 hover:bg-white'
+                readingDark ? 'bg-gray-800 text-gray-100 hover:bg-gray-700' : 'bg-white/70 text-gray-800 hover:bg-white'
               }`}
               title={favorites.some((f) => (f.title || f) === book.title) ? 'Quitar de favoritos' : 'Agregar a favoritos'}
             >
               <Heart
                 size={16}
-                className={favorites.some((f) => (f.title || f) === book.title) ? 'fill-red-500 text-red-500' : ''}
+                className={favorites.some((f) => (f.title || f) === book.title) ? 'fill-red-400 text-red-400' : ''}
               />
             </button>
           )}
         </div>
       </div>
 
-      <div className={`flex-1 flex flex-col items-center px-4 py-4 overflow-hidden ${readingDark ? 'bg-gray-950' : 'bg-[#F5EDD9]'}`}>
+      <div className={`flex-1 flex flex-col items-center px-4 py-4 overflow-hidden ${readingDark ? 'bg-gray-900' : 'bg-[#F5EDD9]'}`}>
         {url ? (
           <iframe
             src={url}

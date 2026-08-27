@@ -145,7 +145,7 @@ describe('LibraryView edge cases', () => {
     const html = renderToStaticMarkup(
       <LibraryView darkMode={false} regionData={regionData} favorites={[{ title: '¿Qué es la Propiedad?', author: 'Proudhon', year: 1840, filename: '', category: 'teoria', note: '', addedAt: 1 }]} onToggleFavorite={noop} />
     );
-    expect(html).toContain('fill-red-500 text-red-500');
+    expect(html).toContain('fill-red-400 text-red-400');
   });
 
   it('precarga filtros desde initialFilters (cross-links de Teorías/Rutas/Glosario)', () => {

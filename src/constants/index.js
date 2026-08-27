@@ -58,7 +58,7 @@ export const VIEW_LABELS = {
 // Color themes for dark and light modes
 export const THEME = {
   dark: {
-    bg: 'bg-gradient-to-br from-red-950 via-black to-gray-900 text-gray-100',
+    bg: 'bg-gradient-to-br from-red-900 via-black to-gray-900 text-gray-100',
     header: 'bg-black/50 border-red-900/30',
     nav: 'bg-black/30 border-red-900/20',
     card: 'bg-gradient-to-br from-gray-800/80 to-gray-900/80 border-red-900/30',
@@ -71,10 +71,10 @@ export const THEME = {
     bg: 'bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 text-gray-800',
     header: 'bg-amber-100/80 border-amber-800/30',
     nav: 'bg-amber-100/60 border-amber-800/20',
-    card: 'bg-gradient-to-br from-amber-50 to-orange-50 border-amber-400',
+    card: 'bg-gradient-to-br from-amber-50 to-orange-50 border-amber-600',
     accentText: 'text-amber-800',
     accentBg: 'bg-amber-700',
     accentBgHover: 'hover:bg-amber-800',
-    button: 'bg-amber-200 hover:bg-amber-300'
+    button: 'bg-amber-200 hover:bg-amber-100'
   }
 };

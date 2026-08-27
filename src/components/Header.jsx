@@ -73,7 +73,7 @@ const Header = ({
 
           <div className="[grid-area:titu] md:justify-self-start min-w-0">
             <h1
-              className={`text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-display tracking-tight uppercase flex items-center gap-2 md:gap-3 ${darkMode ? 'text-red-500' : ''}`}
+              className={`text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-display tracking-tight uppercase flex items-center gap-2 md:gap-3 ${darkMode ? 'text-red-400' : ''}`}
             >
               <span className="break-words">La Idea</span>
             </h1>
