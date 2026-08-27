@@ -1,0 +1,19 @@
+{
+  "slug": "dios-y-el-estado",
+  "ms": 149574,
+  "fields": {
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "historia",
+    "titulo": "Dios y el Estado",
+    "autor": "Mikhail Alexandrovich Bakunin",
+    "anio": "1882",
+    "region": "Geneva",
+    "contexto": "La obra de Bakunin aborda su visión de la autoridad divina y la necesidad de la humanidad para autoconstruir un gobierno.",
+    "epoca": "1882",
+    "corriente": "anarquismo",
+    "nota_otro": "novela"
+  },
+  "raw": "{\n  \"es_anarquista\": true,\n  \"es_espanol\": true,\n  \"tipo\": \"historia\",\n  \"titulo\": \"Dios y el Estado\",\n  \"autor\": \"Mikhail Alexandrovich Bakunin\",\n  \"anio\": \"1882\",\n  \"region\": \"Geneva\",\n  \"contexto\": \"La obra de Bakunin aborda su visión de la autoridad divina y la necesidad de la humanidad para autoconstruir un gobierno.\",\n  \"epoca\": \"1882\",\n  \"corriente\": \"anarquismo\",\n  \"nota_otro\": \"novela\"\n}",
+  "err": ""
+}

@@ -1,0 +1,19 @@
+{
+  "slug": "arshinov-historia-del-movimiento-makhnovista",
+  "ms": 155147,
+  "fields": {
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "historia",
+    "titulo": "Piotr Arshinov HISTORIA DEL MOVIMIENTO MAKHNOVISTA",
+    "autor": "Piotr Arshinov",
+    "anio": "1919-1920",
+    "region": "Estados Unidos",
+    "contexto": "La epopeya machnovista se centra en la vida de Machno y los eventos históricos relacionados con el movimiento anarquista.",
+    "epoca": "1919-1920",
+    "corriente": "anarquismo",
+    "nota_otro": "historia"
+  },
+  "raw": "{\n  \"es_anarquista\": true,\n  \"es_espanol\": true,\n  \"tipo\": \"historia\",\n  \"titulo\": \"Piotr Arshinov HISTORIA DEL MOVIMIENTO MAKHNOVISTA\",\n  \"autor\": \"Piotr Arshinov\",\n  \"anio\": \"1919-1920\",\n  \"region\": \"Estados Unidos\",\n  \"contexto\": \"La epopeya machnovista se centra en la vida de Machno y los eventos históricos relacionados con el movimiento anarquista.\",\n  \"epoca\": \"1919-1920\",\n  \"corriente\": \"anarquismo\",\n  \"nota_otro\": \"historia\"\n}",
+  "err": ""
+}

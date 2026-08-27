@@ -1,0 +1,8 @@
+{
+  "model": "qwen3:0.6b",
+  "size": "0.5 GB",
+  "totalMs": 1012048,
+  "avgMs": 202410,
+  "ok": 4,
+  "total": 5
+}

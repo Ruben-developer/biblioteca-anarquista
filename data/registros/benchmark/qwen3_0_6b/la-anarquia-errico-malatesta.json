@@ -1,0 +1,19 @@
+{
+  "slug": "la-anarquia-errico-malatesta",
+  "ms": 147344,
+  "fields": {
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "historia",
+    "titulo": "Anarchy",
+    "autor": "Errico Malatesta",
+    "anio": "1891",
+    "region": "Italiana",
+    "contexto": "La Anarquía es la ausencia de orden y la necesidad de la cooperación sin autoridad.",
+    "epoca": "19th century",
+    "corriente": "anarquismo",
+    "nota_otro": ""
+  },
+  "raw": "{\n  \"es_anarquista\": true,\n  \"es_espanol\": true,\n  \"tipo\": \"historia\",\n  \"titulo\": \"Anarchy\",\n  \"autor\": \"Errico Malatesta\",\n  \"anio\": \"1891\",\n  \"region\": \"Italiana\",\n  \"contexto\": \"La Anarquía es la ausencia de orden y la necesidad de la cooperación sin autoridad.\",\n  \"epoca\": \"19th century\",\n  \"corriente\": \"anarquismo\",\n  \"nota_otro\": \"\"\n}",
+  "err": ""
+}

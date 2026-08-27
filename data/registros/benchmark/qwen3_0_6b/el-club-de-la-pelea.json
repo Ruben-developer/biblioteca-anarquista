@@ -1,0 +1,16 @@
+{
+  "slug": "el-club-de-la-pelea",
+  "ms": 259212,
+  "fields": {
+    "type": "historia",
+    "author": "Chuck Palahniuk",
+    "year": 1996,
+    "region": "Estados Unidos",
+    "title": "El Club de la Lucha",
+    "context": "Un relato ficticio sobre una sociedad que se destruye, con elementos anarquistas y acción dramática.",
+    "corriente": "anarquismo",
+    "nota": "Un relato de historia ficticia"
+  },
+  "raw": "```json\n{\n  \"type\": \"historia\",\n  \"author\": \"Chuck Palahniuk\",\n  \"year\": 1996,\n  \"region\": \"Estados Unidos\",\n  \"title\": \"El Club de la Lucha\",\n  \"context\": \"Un relato ficticio sobre una sociedad que se destruye, con elementos anarquistas y acción dramática.\",\n  \"corriente\": \"anarquismo\",\n  \"nota\": \"Un relato de historia ficticia\"\n}\n```",
+  "err": ""
+}

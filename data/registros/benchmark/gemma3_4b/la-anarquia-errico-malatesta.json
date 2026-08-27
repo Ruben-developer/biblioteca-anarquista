@@ -1,0 +1,19 @@
+{
+  "slug": "la-anarquia-errico-malatesta",
+  "ms": 176379,
+  "fields": {
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "teoria",
+    "titulo": "La Anarquía",
+    "autor": "Errico Malatesta",
+    "anio": "1891",
+    "region": "Italiana",
+    "contexto": "Definición y crítica del concepto de gobierno y Estado, presentando la anarquía como una alternativa basada en la libertad y la cooperación.",
+    "epoca": "Finales del siglo XIX - Principios del siglo XX",
+    "corriente": "Anarquismo (principalmente anarquismo individualista y corriente principal)",
+    "nota_otro": null
+  },
+  "raw": "```json\n{\n  \"es_anarquista\": true,\n  \"es_espanol\": true,\n  \"tipo\": \"teoria\",\n  \"titulo\": \"La Anarquía\",\n  \"autor\": \"Errico Malatesta\",\n  \"anio\": \"1891\",\n  \"region\": \"Italiana\",\n  \"contexto\": \"Definición y crítica del concepto de gobierno y Estado, presentando la anarquía como una alternativa basada en la libertad y la cooperación.\",\n  \"epoca\": \"Finales del siglo XIX - Principios del siglo XX\",\n  \"corriente\": \"Anarquismo (principalmente anarquismo individualista y corriente principal)\",\n  \"nota_otro\": null\n}\n```",
+  "err": ""
+}
