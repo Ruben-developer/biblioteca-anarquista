@@ -17,20 +17,20 @@ const DECADE_OPTIONS = ['all', '1840s', '1850s', '1860s', '1870s', '1880s', '189
 const PAGE_SIZE = 12
 
 const getHeartClass = (isFav, darkMode) => {
-  if (isFav) return 'fill-red-400 text-red-400'
+  if (isFav) return 'fill-red-500 text-red-500'
   return darkMode ? 'text-gray-500' : 'text-amber-600'
 }
 
 const getGroupBtnClass = (active, darkMode) => {
   if (active) return darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
-  return darkMode ? 'bg-gray-800 border border-gray-700 text-gray-300 hover:bg-gray-700' : 'bg-white border border-amber-200 text-gray-700 hover:bg-amber-100'
+  return darkMode ? 'bg-gray-800 border border-gray-700 text-gray-300 hover:bg-gray-700' : 'bg-white border border-amber-300 text-gray-700 hover:bg-amber-100'
 }
 
 const getLeerBtnClass = (darkMode) =>
   darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
 
 const getSinArchivoClass = (darkMode) =>
-  darkMode ? 'border-gray-700 text-gray-500' : 'border-amber-200 text-amber-600'
+  darkMode ? 'border-gray-700 text-gray-500' : 'border-amber-300 text-amber-600'
 
 const BookEventLink = ({ book, timelineEvents, onOpenEvent, darkMode }) => {
   const bookEvents = getBookEvents(timelineEvents, book)
@@ -39,7 +39,7 @@ const BookEventLink = ({ book, timelineEvents, onOpenEvent, darkMode }) => {
     <button
       onClick={() => onOpenEvent(bookEvents[0])}
       className={`mt-2 flex items-center gap-1.5 text-xs font-medium transition-colors ${
-        darkMode ? 'text-red-400 hover:text-red-400' : 'text-amber-700 hover:text-amber-900'
+        darkMode ? 'text-red-400 hover:text-red-300' : 'text-amber-700 hover:text-amber-900'
       } hover:underline`}
       title={`Ir al evento de la línea temporal: ${bookEvents[0].title} (${bookEvents[0].year})`}
     >
@@ -173,7 +173,7 @@ const GridCard = ({ book, idx, favorites, onToggleFavorite, onRead, onOpenEvent,
         <button
           onClick={() => onOpenEvent(bookEvents[0])}
           className={`mb-3 flex items-center gap-1.5 text-xs font-medium transition-colors ${
-            darkMode ? 'text-red-400 hover:text-red-400' : 'text-amber-700 hover:text-amber-900'
+            darkMode ? 'text-red-400 hover:text-red-300' : 'text-amber-700 hover:text-amber-900'
           } hover:underline`}
           title={`Ir al evento de la línea temporal: ${bookEvents[0].title} (${bookEvents[0].year})`}
         >
@@ -262,11 +262,11 @@ const LibraryView = ({
   const hasActiveFilters = searchTerm || category !== 'all' || decade !== 'all' || type !== 'all' || favoritesOnly
 
   const selectClass = `px-3 py-2 rounded-lg border text-sm max-w-full overflow-hidden text-ellipsis whitespace-nowrap ${
-    darkMode ? 'bg-gray-800 border-gray-700 text-gray-100' : 'bg-white border-amber-200 text-gray-800'
+    darkMode ? 'bg-gray-800 border-gray-700 text-gray-200' : 'bg-white border-amber-300 text-gray-800'
   }`
 
   const inputClass = `w-full md:w-72 px-4 py-2 rounded-lg border text-sm ${
-    darkMode ? 'bg-gray-800 border-gray-700 text-gray-100 placeholder-gray-500' : 'bg-white border-amber-200 text-gray-800 placeholder-amber-700'
+    darkMode ? 'bg-gray-800 border-gray-700 text-gray-200 placeholder-gray-500' : 'bg-white border-amber-300 text-gray-800 placeholder-amber-700'
   }`
 
   const renderContent = () => {
@@ -305,7 +305,7 @@ const LibraryView = ({
           ))}
         </div>
         {totalPages > 1 && (
-          <div className={`flex items-center justify-center gap-3 mt-6 pt-4 border-t ${darkMode ? 'border-gray-700' : 'border-amber-200'}`}>
+          <div className={`flex items-center justify-center gap-3 mt-6 pt-4 border-t ${darkMode ? 'border-gray-700' : 'border-amber-300'}`}>
             <button
               onClick={() => setPage((p) => Math.max(1, p - 1))}
               disabled={page === 1}
@@ -332,7 +332,7 @@ const LibraryView = ({
   }
 
   return (
-    <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-200'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
+    <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         Biblioteca
       </h2>
@@ -344,7 +344,7 @@ const LibraryView = ({
 
       <div className="flex flex-col gap-3 mb-6">
         <div className="relative">
-          <Search className={`absolute left-3 top-1/2 -translate-y-1/2 ${darkMode ? 'text-gray-500' : 'text-amber-600'}`} size={18} />
+          <Search className={`absolute left-3 top-1/2 -translate-y-1/2 ${darkMode ? 'text-gray-500' : 'text-amber-500'}`} size={18} />
           <input
             type="text"
             value={searchTerm}
@@ -414,7 +414,7 @@ const LibraryView = ({
           {hasActiveFilters && (
             <button
               onClick={clearFilters}
-              className={`px-3 py-2 rounded-lg text-sm flex items-center gap-1 ${darkMode ? 'bg-red-900/40 text-red-400 hover:bg-red-900/60' : 'bg-red-400 text-red-700 hover:bg-red-400'}`}
+              className={`px-3 py-2 rounded-lg text-sm flex items-center gap-1 ${darkMode ? 'bg-red-900/40 text-red-300 hover:bg-red-900/60' : 'bg-red-100 text-red-700 hover:bg-red-200'}`}
             >
               <X size={14} /> Limpiar filtros
             </button>

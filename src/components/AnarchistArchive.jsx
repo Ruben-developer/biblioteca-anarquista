@@ -85,7 +85,7 @@ const AnarchistArchive = () => {
   };
 
   const bgClass = darkMode
-    ? 'bg-gradient-to-br from-red-900 via-black to-gray-900 text-gray-100'
+    ? 'bg-gradient-to-br from-red-950 via-black to-gray-900 text-gray-100'
     : 'bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 text-gray-800';
 
   return (

@@ -50,7 +50,7 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
   const labelColor = darkMode ? '#E5DCD0' : '#33291A';
 
   return (
-    <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-200'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
+    <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         Red de Autores
       </h2>
@@ -143,7 +143,7 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
                       key={n.id}
                       onClick={() => setSelectedId(n.id)}
                       className={`text-xs px-2 py-1 rounded-full transition-colors ${
-                        darkMode ? 'bg-gray-700 text-gray-100 hover:bg-gray-600' : 'bg-amber-200 text-amber-900 hover:bg-amber-100'
+                        darkMode ? 'bg-gray-700 text-gray-200 hover:bg-gray-600' : 'bg-amber-200 text-amber-900 hover:bg-amber-300'
                       }`}
                     >
                       {n.name}
@@ -163,7 +163,7 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
                       key={n.id}
                       onClick={() => setSelectedId(n.id)}
                       className={`text-xs px-2 py-1 rounded-full transition-colors ${
-                        darkMode ? 'bg-gray-700 text-gray-100 hover:bg-gray-600' : 'bg-amber-200 text-amber-900 hover:bg-amber-100'
+                        darkMode ? 'bg-gray-700 text-gray-200 hover:bg-gray-600' : 'bg-amber-200 text-amber-900 hover:bg-amber-300'
                       }`}
                     >
                       {n.name}
@@ -175,7 +175,7 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
           </div>
 
           {selectedAuthor && (
-            <div className={`rounded-lg border p-4 ${darkMode ? 'bg-gray-800/60 border-gray-700/50' : 'bg-white/80 border-amber-200'}`}>
+            <div className={`rounded-lg border p-4 ${darkMode ? 'bg-gray-800/60 border-gray-700/50' : 'bg-white/80 border-amber-300'}`}>
               <p className={`text-xs uppercase tracking-wide mb-2 ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
                 Obras en el archivo ({selectedAuthor.bookCount})
               </p>
@@ -185,7 +185,7 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
                     key={book.title}
                     className={`rounded-lg border px-3 py-2 flex items-center gap-2 ${darkMode ? 'bg-gray-900/50 border-gray-700' : 'bg-white/50 border-amber-200'}`}
                   >
-                    <span className={`text-xs ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
+                    <span className={`text-xs ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
                       {book.title}
                     </span>
                     {book.filename && (

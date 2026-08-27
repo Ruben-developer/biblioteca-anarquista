@@ -14,7 +14,7 @@ const SuccessView = ({ email, darkMode, resetForm, cardClass }) => (
     <button
       type="button"
       onClick={resetForm}
-      className={`inline-flex items-center gap-2 px-4 py-3 rounded-lg font-display uppercase tracking-wider text-sm transition-all ${darkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-amber-200 text-amber-900 hover:bg-amber-100'}`}
+      className={`inline-flex items-center gap-2 px-4 py-3 rounded-lg font-display uppercase tracking-wider text-sm transition-all ${darkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-amber-200 text-amber-900 hover:bg-amber-300'}`}
     >
       <RotateCcw size={16} />
       Enviar otro mensaje
@@ -31,7 +31,7 @@ const ErrorView = ({ darkMode, resetForm, cardClass }) => (
     <button
       type="button"
       onClick={resetForm}
-      className={`inline-flex items-center gap-2 px-4 py-3 rounded-lg font-display uppercase tracking-wider text-sm transition-all ${darkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-amber-200 text-amber-900 hover:bg-amber-100'}`}
+      className={`inline-flex items-center gap-2 px-4 py-3 rounded-lg font-display uppercase tracking-wider text-sm transition-all ${darkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-amber-200 text-amber-900 hover:bg-amber-300'}`}
     >
       <RotateCcw size={16} />
       Reintentar
@@ -105,7 +105,7 @@ const ContactForm = ({ name, email, message, status, darkMode, setName, setEmail
 const ContactView = ({ darkMode }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card
   const inputClass = `w-full px-4 py-2 rounded-lg border text-sm ${
-    darkMode ? 'bg-gray-800 border-gray-700 text-gray-100 placeholder-gray-500' : 'bg-white border-amber-200 text-gray-800 placeholder-amber-700'
+    darkMode ? 'bg-gray-800 border-gray-700 text-gray-200 placeholder-gray-500' : 'bg-white border-amber-300 text-gray-800 placeholder-amber-700'
   }`
   const labelClass = `block text-sm font-semibold mb-1 ${darkMode ? 'text-gray-300' : 'text-amber-900'}`
 

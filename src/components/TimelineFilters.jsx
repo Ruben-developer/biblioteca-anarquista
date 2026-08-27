@@ -41,7 +41,7 @@ const TimelineFilters = ({
           aria-label="Buscar eventos"
           value={filters.searchTerm}
           onChange={handleSearchChange}
-          className={`w-full ${darkMode ? 'bg-gray-800 border-gray-700 text-gray-100' : 'bg-white/80 border-amber-200 text-gray-800'} border-2 rounded-lg pl-10 pr-4 py-3 focus:outline-none focus:border-amber-600`}
+          className={`w-full ${darkMode ? 'bg-gray-800 border-gray-700 text-gray-100' : 'bg-white/80 border-amber-300 text-gray-800'} border-2 rounded-lg pl-10 pr-4 py-3 focus:outline-none focus:border-amber-600`}
         />
       </div>
 

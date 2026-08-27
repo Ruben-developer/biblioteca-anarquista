@@ -48,7 +48,7 @@ const TopAuthorsSection = ({ authors, darkMode, accent, secondary, cardClass }) 
       <ol className="space-y-2">
         {authors.map((a) => (
           <li key={a.name} className="flex items-center justify-between gap-2">
-            <span className={`text-sm truncate ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>{a.name}</span>
+            <span className={`text-sm truncate ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>{a.name}</span>
             <span className={`text-xs shrink-0 ${accent}`}>{a.count} {a.count === 1 ? 'obra' : 'obras'}</span>
           </li>
         ))}

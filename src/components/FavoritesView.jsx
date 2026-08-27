@@ -19,8 +19,8 @@ const renderNoteSection = (fav, { editingNote, noteText, setNoteText, saveNote, 
           placeholder="Escribe una nota personal sobre este texto..."
           className={`w-full text-sm rounded-lg border p-2.5 resize-none ${
             darkMode
-              ? 'bg-gray-800 border-gray-600 text-gray-100 placeholder-gray-500'
-              : 'bg-white border-amber-200 text-gray-800 placeholder-amber-600'
+              ? 'bg-gray-800 border-gray-600 text-gray-200 placeholder-gray-500'
+              : 'bg-white border-amber-300 text-gray-800 placeholder-amber-600'
           }`}
           rows={3}
           autoFocus
@@ -56,8 +56,8 @@ const renderNoteSection = (fav, { editingNote, noteText, setNoteText, saveNote, 
         onClick={() => startEditNote(fav)}
       >
         <div className="flex items-center gap-1.5 mb-1">
-          <StickyNote size={12} className={darkMode ? 'text-amber-600' : 'text-amber-600'} />
-          <span className={`text-xs font-medium ${darkMode ? 'text-amber-600' : 'text-amber-600'}`}>Mi nota</span>
+          <StickyNote size={12} className={darkMode ? 'text-amber-400' : 'text-amber-600'} />
+          <span className={`text-xs font-medium ${darkMode ? 'text-amber-400' : 'text-amber-600'}`}>Mi nota</span>
         </div>
         {fav.note}
       </button>
@@ -105,12 +105,12 @@ const FavoritesView = ({
 
   if (favorites.length === 0) {
     return (
-      <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-200'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
+      <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
         <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-6 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
           Mi Biblioteca
         </h2>
         <div className={`${cardClass} border-2 rounded-lg p-12 text-center`}>
-          <Heart size={64} className={`mx-auto mb-4 ${darkMode ? 'text-gray-600' : 'text-amber-200'}`} />
+          <Heart size={64} className={`mx-auto mb-4 ${darkMode ? 'text-gray-600' : 'text-amber-300'}`} />
           <p className={`text-xl ${darkMode ? 'text-gray-400' : 'text-amber-800'}`}>
             Tu biblioteca personal está vacía
           </p>
@@ -123,7 +123,7 @@ const FavoritesView = ({
   }
 
   return (
-    <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-200'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
+    <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
@@ -138,7 +138,7 @@ const FavoritesView = ({
           className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
             darkMode
               ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700'
-              : 'bg-amber-100 text-amber-800 hover:bg-amber-200 border border-amber-200'
+              : 'bg-amber-100 text-amber-800 hover:bg-amber-200 border border-amber-300'
           }`}
         >
           <Download size={16} />
@@ -166,7 +166,7 @@ const FavoritesView = ({
               </div>
               <button
                 onClick={() => onToggleFavorite(fav.title)}
-                className={`${darkMode ? 'text-red-400 hover:text-red-400' : 'text-red-400 hover:text-red-600'} transition-colors flex-shrink-0`}
+                className={`${darkMode ? 'text-red-400 hover:text-red-500' : 'text-red-500 hover:text-red-600'} transition-colors flex-shrink-0`}
                 title="Quitar de favoritos"
               >
                 <X size={20} />
