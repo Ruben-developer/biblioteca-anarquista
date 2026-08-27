@@ -4,12 +4,14 @@
 // Uso:
 //   node scripts/text-pipeline.mjs extract  --input data/registros/pipeline-input.txt --out data/registros/pipeline
 //   node scripts/text-pipeline.mjs aggregate --out data/registros/pipeline [--telegram]
+//   node scripts/text-pipeline.mjs notify   --out data/registros/pipeline
 //
 // extract : por cada PDF en el input, corre pdftotext, guarda las primeras 1500
 //           palabras en <slug>.txt y crea <slug>.meta.json (plantilla vacía que
 //           debe rellenar un humano/IA).
 // aggregate: lee los meta.json rellenados, genera pipeline-review.md (doc editable),
 //            anexa dudas a pipeline-dudas.log y (--telegram) avisa por Telegram.
+// notify  : reenvía solo el mensaje detallado de Telegram (sin tocar doc ni dudas).
 
 import { readFileSync, writeFileSync, existsSync, readdirSync, appendFileSync, mkdirSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
@@ -75,6 +77,37 @@ function extract(inputFile, outDir) {
   console.log(`\n${manifest.length} PDFs extraídos en ${outDir}`);
 }
 
+function loadRows(outDir) {
+  const files = readdirSync(outDir).filter(f => f.endsWith('.meta.json'));
+  const rows = [];
+  const doubts = [];
+  for (const f of files) {
+    const m = JSON.parse(readFileSync(join(outDir, f), 'utf8'));
+    rows.push(m);
+    if (m.doubt && m.doubt.trim()) doubts.push({ slug: m.slug, doubt: m.doubt.trim() });
+  }
+  rows.sort((a, b) => (a.type || 'z').localeCompare(b.type || 'z') || a.slug.localeCompare(b.slug));
+  const counts = rows.reduce((acc, m) => { acc[m.type || '??'] = (acc[m.type || '??'] || 0) + 1; return acc; }, {});
+  return { rows, doubts, counts };
+}
+
+function buildTelegram(rows, counts, doubts) {
+  const head = `Pipeline de textos — ${rows.length} obras (${Object.entries(counts).map(([k, v]) => `${k} ${v}`).join(', ')})\n`;
+  const lines = rows.map((m, i) => {
+    const meta = [
+      m.type && `tipo: ${m.type}`,
+      m.author && `autor: ${m.author}`,
+      m.year && `año: ${m.year}`,
+      m.region && `región: ${m.region}`,
+      m.category && `cat: ${m.category}`,
+      (m.type === 'historia' && (m.place || m.date)) ? `(${[m.place, m.date].filter(Boolean).join(' / ')})` : '',
+    ].filter(Boolean).join(' · ');
+    return `${i + 1}. ${m.title || m.slug}\n   ${meta}`;
+  });
+  const tail = `\nDudas: ${doubts.length}. Revisa data/registros/pipeline/pipeline-review.md`;
+  return head + lines.join('\n') + tail;
+}
+
 function aggregate(outDir, telegram) {
   const files = readdirSync(outDir).filter(f => f.endsWith('.meta.json'));
   const rows = [];
@@ -122,12 +155,11 @@ function aggregate(outDir, telegram) {
   }
 
   // Mensaje Telegram.
-  const summary = `Pipeline textos: ${rows.length} procesados (${Object.entries(counts).map(([k, v]) => `${k}=${v}`).join(', ')}). ` +
-    `Dudas: ${doubts.length}. Revisa data/registros/pipeline/pipeline-review.md`;
-  console.log(`\n${summary}`);
+  const telegramMsg = buildTelegram(rows, counts, doubts);
+  console.log(`\n${telegramMsg}`);
   console.log(`Doc editable: ${reviewPath}`);
   if (telegram) {
-    const r = spawnSync('bash', [NOTIFY, '--auto', summary], { encoding: 'utf8' });
+    const r = spawnSync('bash', [NOTIFY, '--auto', telegramMsg], { encoding: 'utf8' });
     console.log(r.stdout || r.stderr || '(sin salida de notify)');
   }
 }
@@ -138,6 +170,12 @@ if (cmd === 'extract') {
   extract(getOpt('--input'), getOpt('--out'));
 } else if (cmd === 'aggregate') {
   aggregate(getOpt('--out'), rest.includes('--telegram'));
+} else if (cmd === 'notify') {
+  const { rows, doubts, counts } = loadRows(getOpt('--out'));
+  const msg = buildTelegram(rows, counts, doubts);
+  console.log(msg);
+  const r = spawnSync('bash', [NOTIFY, '--auto', msg], { encoding: 'utf8' });
+  console.log(r.stdout || r.stderr || '(sin salida de notify)');
 } else {
   console.error('uso: text-pipeline.mjs extract|aggregate ...');
   process.exit(1);
