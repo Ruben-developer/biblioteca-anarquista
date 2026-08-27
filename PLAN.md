@@ -762,3 +762,47 @@ resultado. Commits `bfc5480` (feat: estética) + `044c6d3` (ci: trigger).
 - Implementar hallazgos MEDIUM del reporte estética (padding/sombras consistentes,
   footer mejorado, modal header compartido, gradiente scroll timeline móvil).
 - Evaluar deuda técnica de `documents.json` (legacy, solo 2 entradas).
+
+---
+
+## Pipeline de textos (acordado 2026-08-27)
+
+Organizar los textos importados en **carpetas por tipo** (no por región/categoría/
+autor). Base: `/home/fdr/Documentos/anarquismo_importado/PDFs/`.
+
+### Carpetas de etapa
+- `sin_clasificar/` — entrada cruda (PDFs recién llegados).
+- `otros/` — no es ES/PT o no es temática anarquista (sale en el triage de idioma/temática).
+- `historia/` — hechos del movimiento (alimentan Mapa + Línea Temporal).
+- `teoria/` — ideas/ensayo/filosofía (alimentan Autores, Teorías, Rutas).
+  > Nota: sustituye a la carpeta `filosofia/` existente.
+- `otros2/` — ES/PT pero novela, cómic u otro no archivable.
+- `listos_para_subir/` — publicables (PDF copiado luego a `pdfs-local/` del contenedor).
+
+### Etapas
+1. **Adquisición** → el PDF entra en `sin_clasificar/`.
+2. **Triage idioma/temática** → si es Español/Portugués **y** temática anarquista,
+   sigue; si no → `otros/`.
+3. **Clasificación por tipo** → `historia/` (hecho/biografía de hecho/manifiesto…),
+   `teoria/` (ensayo/filosofía), o `otros2/` (novela/cómic/otro).
+4. **Extracción y análisis** (SIN metadata manual):
+   - `pdftotext` y leer las **primeras 1500 palabras** del texto.
+   - Inferir del texto: autor, título, año, región, categoría.
+   - Si es **historia**: deducir **dónde ocurrió y cuándo** (para Mapa y Línea Temporal).
+   - Si es **teoría**: evaluar si sirve para **Teorías** y **Rutas**.
+   - Dudas → anotar en archivo de registro (`data/registros/pipeline-dudas.log`).
+5. **Entrega revisable**: generar un **documento editable** (borrador de catálogo,
+   markdown/JSON) con toda la info para revisión humana, y **enviar mensaje por
+   Telegram** (`~/.config/biblioteca/notify.sh`) con el resumen de resultados.
+
+### Mapeo al catálogo (fuente única `src/data/regionData.js`)
+- `historia/` → `HISTORICAL_CATEGORIES` (mapa + timeline). Tras importar,
+  `@evento-builder` vincula el texto a un evento (invariante timeline == mapa).
+- `teoria/` → `IDEAS_CATEGORIES` (Autores, Teorías, Rutas).
+- `otros/`, `otros2/` → no se catalogan (revisión aparte).
+
+### Pendiente de implementación
+- Script `scripts/text-pipeline.mjs` que automatice las etapas 4-5: extracción
+  (`pdftotext`), heurística de metadata desde las primeras 1500 palabras, detección
+  de región/fecha para históricos, doc editable de revisión + reporte Telegram.
+- Renombrar `filosofia/` → `teoria/` y crear `otros2/` en la carpeta de importación.
