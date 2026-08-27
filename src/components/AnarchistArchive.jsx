@@ -95,6 +95,8 @@ const AnarchistArchive = () => {
         onDarkModeToggle={toggleDarkMode}
         onShowStats={() => setActiveView(VIEWS.STATS)}
         onShowContact={() => setActiveView(VIEWS.CONTACT)}
+        onViewChange={handleViewChange}
+        favoriteCount={favorites.length}
         stats={stats}
         activeView={activeView}
         menuOpen={menuOpen}

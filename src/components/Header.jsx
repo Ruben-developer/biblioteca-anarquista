@@ -1,12 +1,14 @@
 import React from 'react';
-import { BarChart3, Mail, Menu, Sun, Moon } from 'lucide-react';
-import { THEME, VIEW_LABELS } from '../constants';
+import { BarChart3, Mail, Menu, Sun, Moon, Heart } from 'lucide-react';
+import { THEME, VIEW_LABELS, VIEWS } from '../constants';
 
 const Header = ({
   darkMode,
   onDarkModeToggle,
   onShowStats,
   onShowContact,
+  onViewChange,
+  favoriteCount,
   stats,
   activeView,
   menuOpen,
@@ -37,14 +39,6 @@ const Header = ({
           </button>
 
           <div className="[grid-area:bots] justify-self-end flex items-center gap-2 md:gap-3">
-            {activeLabel && (
-              <span
-                className={`hidden sm:inline-block px-3 py-1.5 rounded-lg text-xs md:text-sm font-display uppercase tracking-wider ${darkMode ? 'bg-gray-800/60 text-red-400' : 'bg-amber-100/70 text-amber-900'}`}
-                aria-hidden="true"
-              >
-                {activeLabel}
-              </span>
-            )}
             <button
               onClick={onShowStats}
               className={`p-2 md:p-3 rounded-lg ${themeClass.button} transition-colors`}
@@ -59,6 +53,19 @@ const Header = ({
               aria-label="Contacto"
             >
               <Mail size={20} />
+            </button>
+            <button
+              onClick={() => onViewChange(VIEWS.FAVORITES)}
+              className={`p-2 md:p-3 rounded-lg ${themeClass.button} transition-colors relative`}
+              title="Ir a favoritos"
+              aria-label="Ir a favoritos"
+            >
+              <Heart size={20} />
+              {favoriteCount > 0 && (
+                <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-red-600 text-white text-[11px] leading-[18px] text-center font-semibold">
+                  {favoriteCount}
+                </span>
+              )}
             </button>
             <button
               onClick={onDarkModeToggle}
