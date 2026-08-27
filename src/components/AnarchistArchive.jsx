@@ -214,7 +214,7 @@ const AnarchistArchive = () => {
         </div>
       </main>
 
-      <footer className={`border-t-4 ${darkMode ? 'border-[#872320] bg-black/30' : 'border-[#B79F6E] bg-amber-100/60'}`}>
+      <footer className={`border-t-4 ${darkMode ? 'border-[#FFFFF0] bg-black/30' : 'border-[#dc2626] bg-amber-100/60'}`}>
         <div className="container mx-auto px-4 py-8">
           <p className={`font-display uppercase tracking-widest text-sm text-center ${darkMode ? 'text-gray-300' : 'text-amber-900'}`}>
             La Idea · Archivo Histórico Anarquista

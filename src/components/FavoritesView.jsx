@@ -124,21 +124,23 @@ const FavoritesView = ({
   if (favorites.length === 0) {
     return (
       <div className={`${darkMode ? 'bg-gray-900/60 border-[#872320]/50' : 'bg-white/60 border-[#B79F6E]'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
-        <div className="flex items-center justify-between mb-6">
+        <div className="mb-6 text-center">
           <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
             Mi Biblioteca
           </h2>
-          <button
-            onClick={handleImportClick}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-              darkMode
-                ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-[#872320]'
-                : 'bg-amber-100 text-amber-800 hover:bg-amber-200 border border-[#B79F6E]'
-            }`}
-          >
-            <Upload size={16} />
-            Importar lista
-          </button>
+          <div className="flex justify-center mt-4">
+            <button
+              onClick={handleImportClick}
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                darkMode
+                  ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-[#872320]'
+                  : 'bg-amber-100 text-amber-800 hover:bg-amber-200 border border-[#B79F6E]'
+              }`}
+            >
+              <Upload size={16} />
+              Importar lista
+            </button>
+          </div>
         </div>
         <input ref={fileInputRef} type="file" accept="application/json,.json" className="hidden" onChange={handleImportFile} />
         {importMsg && (
@@ -161,37 +163,37 @@ const FavoritesView = ({
 
   return (
     <div className={`${darkMode ? 'bg-gray-900/60 border-[#872320]/50' : 'bg-white/60 border-[#B79F6E]'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
-      <div className="flex items-center justify-between mb-6">
-        <div>
-          <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
-            Mi Biblioteca
-          </h2>
-          <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-            {favorites.length} texto{favorites.length === 1 ? '' : 's'} en tu colección personal
-          </p>
+      <div className="mb-6 text-center">
+        <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
+          Mi Biblioteca
+        </h2>
+        <p className={`text-sm mt-1 mb-4 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
+          {favorites.length} texto{favorites.length === 1 ? '' : 's'} en tu colección personal
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          <button
+            onClick={handleImportClick}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+              darkMode
+                ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-[#872320]'
+                : 'bg-amber-100 text-amber-800 hover:bg-amber-200 border border-[#B79F6E]'
+            }`}
+          >
+            <Upload size={16} />
+            Importar lista
+          </button>
+          <button
+            onClick={handleExport}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+              darkMode
+                ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-[#872320]'
+                : 'bg-amber-100 text-amber-800 hover:bg-amber-200 border border-[#B79F6E]'
+            }`}
+          >
+            <Download size={16} />
+            Exportar lista
+          </button>
         </div>
-        <button
-          onClick={handleImportClick}
-          className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-            darkMode
-              ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-[#872320]'
-              : 'bg-amber-100 text-amber-800 hover:bg-amber-200 border border-[#B79F6E]'
-          }`}
-        >
-          <Upload size={16} />
-          Importar lista
-        </button>
-        <button
-          onClick={handleExport}
-          className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-            darkMode
-              ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-[#872320]'
-              : 'bg-amber-100 text-amber-800 hover:bg-amber-200 border border-[#B79F6E]'
-          }`}
-        >
-          <Download size={16} />
-          Exportar lista
-        </button>
       </div>
       <input ref={fileInputRef} type="file" accept="application/json,.json" className="hidden" onChange={handleImportFile} />
       {importMsg && (
