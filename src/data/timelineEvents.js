@@ -952,7 +952,7 @@ export const timelineEvents = [
   },
   {
     year: 1890,
-    decade: "18900s",
+    decade: "1890s",
     type: "con_texto",
     title: "Anarquismo en Argentina",
     description: "El movimiento anarquista y obrero argentino: la FORA, sus figuras (Juan Lazarte) y la historia general del país leída desde la perspectiva libertaria de Diego Abad de Santillán.",
@@ -963,7 +963,7 @@ export const timelineEvents = [
   },
   {
     year: 1939,
-    decade: "19300s",
+    decade: "1930s",
     type: "con_texto",
     title: "Resistencia libertaria contra el franquismo",
     description: "La oposición clandestina del movimiento libertario al franquismo: Defensa Interior, grupos de acción y defensa confederal, la memoria histórica y el pensamiento de Octavio Alberola.",
@@ -974,7 +974,7 @@ export const timelineEvents = [
   },
   {
     year: 1910,
-    decade: "19100s",
+    decade: "1910s",
     type: "con_texto",
     title: "La Revolución Mexicana",
     description: "La gran revolución mexicana de 1910 contada desde el anarquismo por Diego Abad de Santillán en sus distintas ediciones.",
@@ -985,7 +985,7 @@ export const timelineEvents = [
   },
   {
     year: 1910,
-    decade: "19100s",
+    decade: "1910s",
     type: "con_texto",
     title: "Magonismo y Ricardo Flores Magón",
     description: "El magonismo, la Revolución Mexicana desde el Partido Liberal y la figura de Ricardo Flores Magón y Librado Rivera: prensa, exilio, espionaje y la revuelta en Baja California.",
@@ -996,7 +996,7 @@ export const timelineEvents = [
   },
   {
     year: 1890,
-    decade: "18900s",
+    decade: "1890s",
     type: "con_texto",
     title: "Eliseo Reclus y el anarquismo en Francia",
     description: "El geógrafo anarquista Élisée Reclus y su paisaje de la libertad, figura mayor del pensamiento libertario francés.",
@@ -1007,7 +1007,7 @@ export const timelineEvents = [
   },
   {
     year: 1869,
-    decade: "18600s",
+    decade: "1860s",
     type: "con_texto",
     title: "Bakunin y Necháiev: el Catecismo Revolucionario",
     description: "El Catecismo revolucionario de Bakunin y Necháiev, uno de los textos fundacionales de la propaganda por el hecho y el pensamiento insurreccional ruso.",
@@ -1018,7 +1018,7 @@ export const timelineEvents = [
   },
   {
     year: 1968,
-    decade: "19600s",
+    decade: "1960s",
     type: "con_texto",
     title: "Anarquismo contemporáneo internacional",
     description: "El anarquismo internacional de finales del siglo XX: Mayo del 68 como acontecimiento mundial, situacionistas, autonomía obrera y la cólera de los suburbios.",
@@ -1029,7 +1029,7 @@ export const timelineEvents = [
   },
   {
     year: 2000,
-    decade: "20000s",
+    decade: "2000s",
     type: "con_texto",
     title: "Anarquismo y prisiones en Bélgica",
     description: "La agitación anarquista dentro y fuera de las cárceles belgas: práctica, solidaridad y lucha contra el encierro.",
@@ -1040,7 +1040,7 @@ export const timelineEvents = [
   },
   {
     year: 1921,
-    decade: "19200s",
+    decade: "1920s",
     type: "con_texto",
     title: "El Expediente Picasso y el Desastre de Annual",
     description: "La investigación parlamentaria (Expediente Picasso) sobre las responsabilidades del Desastre de Annual en la guerra de Marruecos, pieza clave de la historia contemporánea de España.",
@@ -1051,7 +1051,7 @@ export const timelineEvents = [
   },
   {
     year: 1985,
-    decade: "19800s",
+    decade: "1980s",
     type: "con_texto",
     title: "Okupación y autogestión en Madrid",
     description: "El movimiento okupa madrileño (1985-2011): memoria, reflexión, debate y autogestión como práctica libertaria contemporánea en la ciudad.",
