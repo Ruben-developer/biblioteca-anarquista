@@ -98,7 +98,7 @@ export const timelineEvents = [
     description: "1900–1925 · México y Sur de EE.UU.",
     region: "México y Sur de EE.UU.",
     category: "historia",
-    relatedTexts: ["Historia de la Revolucion Mexicana", "Ricardo Flores Magon, el apostol de la revolucion social mexicana", "Revolución en Baja California, México (1911)", "Baja California heroica", "Librado Rivera en el movimiento anarquista mexicano", "Lazos indisolubles de una amistad revolucionaria. Librado Rivera y Ricardo Flores Magon", "Librado Rivera y los hermanos rojos en el movimiento social y cultural anarquista en Villa Cecilia y Tampico, Tamaulipas, 1915-1930", "Librado Rivera. El indomable magonero", "El correo de la revolucion magonista. Espias y revoltosos", "El papel revolucionario de la prensa en el movimiento obrero anarquista mexicano"]
+    relatedTexts: ["Historia de la Revolucion Mexicana", "Ricardo Flores Magon, el apostol de la revolucion social mexicana", "Revolución en Baja California, México (1911)", "Baja California heroica", "Librado Rivera en el movimiento anarquista mexicano", "Lazos indisolubles de una amistad revolucionaria. Librado Rivera y Ricardo Flores Magon", "Librado Rivera y los hermanos rojos en el movimiento social y cultural anarquista en Villa Cecilia y Tampico, Tamaulipas, 1915-1930", "Librado Rivera. El indomable magonero", "El correo de la revolucion magonista. Espias y revoltosos", "El papel revolucionario de la prensa en el movimiento obrero anarquista mexicano", "Quién es Flores Magón y cuál su obra"]
   },
   {
     year: 1901,
@@ -168,7 +168,7 @@ export const timelineEvents = [
     description: "1936–1939 · España",
     region: "España",
     category: "historia",
-    relatedTexts: ["Los anarquistas en la crisis política española (1869-1939)", "El eco de los pasos", "Homenaje a Cataluña", "El corto verano de la anarquía", "Colectividades Libertarias", "Las colectividades libertarias en España (1936-1938)", "La experiencia autogestionaria durante la Guerra Civil española", "Barricadas en Barcelona", "La revolucion traicionada. La verdadera historia de Balius y Los Amigos de Durruti", "Durruti en el laberinto", "La muerte de Durruti", "Buenaventura Durruti (antología)", "Buenaventura Durruti, o el heroнsmo bien entendido", "Durruti ha muerto, pero está vivo todavía", "Fraternalmente, Emma", "Por que perdimos la guerra (1940)", "Los comitиs de defensa confederales", "Milicias anarquistas y anarcosindicalistas en la guerra civil espaola", "Jose Pellicer, el anarquista integro", "Un incontrolado de la Columna de Hierro", "Maroto, el heroe. Una biografia del anarquismo andaluz", "Francisco Carreno y los arduos caminos de la anarquia", "Juan Peiró, teórico y militante del anarcosindicalismo español", "Cipriano Mera", "1936. De la revolución española", "Catalogo de decisiones y fragilidades", "Anarcosindicalismo y revolución en España (1930-1937)"]
+    relatedTexts: ["Los anarquistas en la crisis política española (1869-1939)", "El eco de los pasos", "Homenaje a Cataluña", "El corto verano de la anarquía", "Colectividades Libertarias", "Las colectividades libertarias en España (1936-1938)", "La experiencia autogestionaria durante la Guerra Civil española", "Barricadas en Barcelona", "La revolucion traicionada. La verdadera historia de Balius y Los Amigos de Durruti", "Durruti en el laberinto", "La muerte de Durruti", "Buenaventura Durruti (antología)", "Buenaventura Durruti, o el heroнsmo bien entendido", "Durruti ha muerto, pero está vivo todavía", "Fraternalmente, Emma", "Por que perdimos la guerra (1940)", "Los comitиs de defensa confederales", "Milicias anarquistas y anarcosindicalistas en la guerra civil espaola", "Jose Pellicer, el anarquista integro", "Un incontrolado de la Columna de Hierro", "Maroto, el heroe. Una biografia del anarquismo andaluz", "Francisco Carreno y los arduos caminos de la anarquia", "Juan Peiró, teórico y militante del anarcosindicalismo español", "Cipriano Mera", "Vida y muerte de Ramón Acín", "1936. De la revolución española", "Catalogo de decisiones y fragilidades", "Anarcosindicalismo y revolución en España (1930-1937)"]
   },
   {
     year: 1936,
@@ -218,7 +218,7 @@ export const timelineEvents = [
     description: "2000–2010 · Francia y Grecia",
     region: "Francia y Grecia",
     category: "historia",
-    relatedTexts: ["A tres años de la revuelta griega", "Reflexiones sobre el movimiento anarquista en Grecia y la solidaridad con los presos políticos"]
+    relatedTexts: ["La revuelta de los Banlieusards", "A tres años de la revuelta griega", "Reflexiones sobre el movimiento anarquista en Grecia y la solidaridad con los presos políticos"]
   },
   {
     year: 2011,

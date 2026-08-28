@@ -21,6 +21,7 @@ for (const [region, r] of Object.entries(regionData)) {
 
 const OVERRIDES = {
   'Barricadas en Barcelona (Mayo 1937)': ['Barricadas en Barcelona'],
+  'La revuelta de los Banlieusards (Francia, 2005)': ['La revuelta de los Banlieusards'],
   'La Banda de Chernopeev (Levantamiento de Ilinden, 1903)': ['La Banda de Chernopeev'],
   'Historia Argentina (Tomos I, II y III)': [
     'Historia ArgentinaDesde la aparicion del hombre hasta la obra de M. M. de Guemes',
