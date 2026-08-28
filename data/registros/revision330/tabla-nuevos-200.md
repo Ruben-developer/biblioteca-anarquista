@@ -1,6 +1,6 @@
 # Nuevos no catalogados (muestra 200)
 
-_Primeros 200 de los 4717 PDFs en pdfs-no-configurados (no están en el catálogo de 330). Solo autor y título, pendientes de clasificación._
+_200 de los 4717 PDFs en pdfs-no-configurados que son candidatos anarquistas. Se excluyeron los títulos no anarquistas (marxistas/guerrilla, ensayo académico, ficción); ver excluidos.md._
 
 | Autor | Título |
 |---|---|
@@ -168,7 +168,6 @@ _Primeros 200 de los 4717 PDFs en pdfs-no-configurados (no están en el catálog
 | Anarquismo en PDF | Breve seleccin de poemas de Sara Berenguer Laosa |
 | Anarquismo en PDF | Cmo hacer portadas para facebook y twitter 2019 |
 | Anarquismo en PDF | Pequea antologнa anarcofeminista |
-| Anderson, Benedict | Bajo tres banderas. Anarquismo e imaginacin anticolonial |
 | Andres Granel, Helena | Anarquismo y sexualidad |
 | Andres Granel, Helena | Anarquismo y sexualidad |
 | Andres Granel, Helena | Discursos y experiencias femeninas en el anarquismo espanol. Mujeres Libres en la retaguardia oscense |
@@ -187,20 +186,21 @@ _Primeros 200 de los 4717 PDFs en pdfs-no-configurados (no están en el catálog
 | Anonimx | Del amor al amor |
 | Anonimx | Dentro contra fuera, sobre la agitacion dentro y fuera de las carceles belgas |
 | Anonimx | Desierto |
-| Anonimx | El informe de Iron Mountain |
-| Anonimx | El libro rojo del cole |
 | Anonimx | Encendiendo la llama del ecologismo revolucionario |
 | Anonimx | Enrabiaos, apuntes sobre la spanishrevolution |
-| Anonimx | Fuego a la polvora. Guerra y guerrilla en Irak |
-| Anonimx | Historia de la antipsiquiatria |
-| Anonimx | La VOP. Historia de una guerrilla olvidada en tiempos de la unidad popular |
 | Anonimx | La accion sometida a la critica |
 | Anonimx | Liberacion animal mas alla del veganismo |
 | Anonimx | Los papeles de Albert Mason, Volumen I. Accion Directa Economica |
 | Anonimx | Manual basico de Seguridad informatica para activistas |
 | Anonimx | Manual de desobediencia economica |
 | Anonimx | Manual de guerrilla de la comunicacion |
-| Anonimx | Manual del guerrillero urbano |
 | Anonimx | Manual del manifestante |
 | Anonimx | Manual para la construccion por autogestion comunitaria |
 | Anonimx | Ni 3Rs ni ostias, la viviseccion es un fraude |
+| Anonimx | Okupa Madrid (1985-2011). Memoria, reflexion, debate y autogestion |
+| Anonimx | Poemas de sedicion y frenesi |
+| Anonimx | Pornograma libertario |
+| Anonimx | Preguntas frecuentes sobre el anarquismo |
+| Anonimx | R-209, Habla el Frente de Liberacion Animal |
+| Anonimx | Reflexiones para un mundo libre |
+| Anonimx | Un incontrolado de la Columna de Hierro |
