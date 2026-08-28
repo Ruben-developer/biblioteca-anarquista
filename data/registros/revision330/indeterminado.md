@@ -1,0 +1,1605 @@
+# Textos indeterminados (sin catalogar, revisar) — título · autor
+
+Total: 1599
+
+_título y autor parsados del nombre de archivo; pueden necesitar limpieza._
+
+- Desventuras de ┬лEl escudero de la firme figura┬╗. Autobiograf├нa no autorizada por el autobiografiado · (A)ncho Panz(A)
+- El crimen no compensa a los peque├▒os delincuentes. O sobre c├│mo la realidad supera a la falsa ficci├│n. Las historias negras · (A)ncho Panz(A)
+- Escritos, Relatos, Poemas y dem├бs Sinsentidos del Fuckbook · (A)ncho Panz(A)
+- Los chicos buenos van al cielo. Tercera antolog├нa no negra de (A)ncho Panz(A) · (A)ncho Panz(A)
+- Poemas del hoy por si no hay un ma├▒ana. Cien a├▒os y un d├нa sin Boris Vian. Un brev├нsimo poemario incendiario · (A)ncho Panz(A)
+- Pretextos y postextos para escribir m├бs y m├бs textos. El emprendedor inconstante. Segunda antolog├нa no negra de (A)ncho Panz(A) · (A)ncho Panz(A)
+- Segunda parte de las desventuras de ┬лEl escudero de la firme figura┬╗ contadas por ├йl mismo · (A)ncho Panz(A)
+- Tercera parte de las desventuras de ┬лEl escudero de la firme figura┬╗ contadas por ├йl mismo · (A)ncho Panz(A)
+- ¿Feminismo o feminismos¿ Una introducción a las diferencias teóricas del feminismo · (s/a)
+- '┬┐Qui├йn resucita a un muerto'  [borrador] [1973] · (s/a)
+- 'Organizaci├│n pol.-mil.' [borrador] [1973] · (s/a)
+- ['Apunte de discusi├│n'] [1973] · (s/a)
+- ['Desde la genial idea de desmembrar al grupo [...]'] [borrador] [1973] · (s/a)
+- [Catálogo General] · (s/a)
+- [Dossier MIL] Del Movimiento Ibérico de Liberación a los Grupos Autónomos de Combate y Ediciones Mayo-37 · (s/a)
+- [Esquema de atraco] [borrador] [1973] · (s/a)
+- ┬┐Huelga de alquileres┬┐ [Editorial Segadores, 2020] · (s/a)
+- 1 CONGRESO CONSTITUCIÓN CNT 1910 · (s/a)
+- 10 cosas que los ecologistas deben saber sobre la energ├нa renovable · (s/a)
+- 11 CONGRESO CNT 2015 ZARAGOZA · (s/a)
+- 1º de mayo. Su origen y significado [Agrupación 'Tiempos Nuevos', 1912] · (s/a)
+- 2 CONGRESO CNT 1919 · (s/a)
+- 23 Tesis en torno a la revuelta · (s/a)
+- 3 CONGRESO CNT 1931 · (s/a)
+- 4 CONGRESO CNT 1936  ZARAGOZA · (s/a)
+- 5 CONGRESO CNT 1977 MADRID · (s/a)
+- 7 CONGRESO CNT 1990 BILBAO · (s/a)
+- 8 CONGRESO CNT 1995 GRANADA · (s/a)
+- A la Comisi├│n Central de Solidaridad [borrador] [julio de 1973] · (s/a)
+- A la Comisi├│n Central de Solidaridad [texto mecanografiado] [julio de 1973] · (s/a)
+- A propósito de la Rebelión en Asturias. Octubre 1934 · (s/a)
+- A tres años de la revuelta griega · (s/a)
+- Actividades de la FN Mujeres Libres · (s/a)
+- Agitaci├│n armada-movimiento real [borrador] [1973] · (s/a)
+- Aprender a ser hombre · (s/a)
+- Apuntes Sobre Revuelta y Guerra Social · (s/a)
+- Arshinov-Historia-del-movimiento-makhnovista · (s/a)
+- Autobiografia de un irreductible · (s/a)
+- Banalidades de Base · (s/a)
+- Biófilo Panclasta. Amante de la vida y destructor de todo [Pirotecnia] · (s/a)
+- Biograf├нa de Albert Libertad · (s/a)
+- Biografía de Pierre Quiroule · (s/a)
+- Brujer├нa y cointracultura gay · (s/a)
+- C├│mo organizar una Agrupaci├│n Mujeres Libres · (s/a)
+- Caos No Murio · (s/a)
+- Carlos Taibo en Chile [Casa Volnitza, 17-6-2016] · (s/a)
+- Carta 29 de Junio de 1924 del Grupo Atlantis a E. Armand · (s/a)
+- Cartel Congreso Regional Mujeres Libres · (s/a)
+- Cartilla filológica española. Primer libro de lectura [Publicaciones de la Escuela Moderna, 1903] · (s/a)
+- Catálogo de publicaciones obreras argentinas · (s/a)
+- Catorce cartas in├йditas de Sim├│n Radowitzky a Salvadora Medina Onrubia · (s/a)
+- Centros sociales okupados. La metr├│polis y la auto-organizaci├│n · (s/a)
+- Centros sociales okupados. Portada · (s/a)
+- Ciudadano, demasiado ciudadano. Una breve crítica a la ideología ciudadanista · (s/a)
+- CNT a los trabajadores del espectáculo · (s/a)
+- Colectividades de Castilla. El colectivismo en la provincia de Madrid [CNT] · (s/a)
+- Colonialismo, imperialismo y liberaci├│n animal · (s/a)
+- Comicios históricos de la CNT. Congreso de constitución de la Confederación Nacional del Trabajo [Ediciones CNT, 1959] · (s/a)
+- Comité Pro Presos- Ideas y tragedias [Imprenta 'El Trabajo', 1923] · (s/a)
+- Como Hacer · (s/a)
+- Como la NoViolencia Protege al Estado2 · (s/a)
+- Correspondencia entre Abel Paz y Juan García Oliver · (s/a)
+- Cuaderno manuscrito. Recapitulación de pensamientos antimilitaristas [Publicaciones de la Escuela Moderna, 1903] · (s/a)
+- Cuadernos de Negación · (s/a)
+- De Companys a Indalecio Prieto [Servicio de Propaganda España, 1939] · (s/a)
+- De fugas y otras negaciones no-humanas contra el encierro · (s/a)
+- Debate entre Agust├нn Guiillam├│n y Octavio Alberola [Biblioteca Subversiva Crimental] · (s/a)
+- Debate entre Octavio Alberola  y Agustín Guillmón · (s/a)
+- Declaración de Ravachol [ALasBarricadas] · (s/a)
+- Dictámenes y resoluciones del 2º Congreso del MLE-CNT en Francia [1947] · (s/a)
+- Dios y el Estado · (s/a)
+- Documentos de la IFA [2001] · (s/a)
+- El 1000 y la OLLA [Klinamen, 2014] · (s/a)
+- El adi├│s a la red de Hakim Bey · (s/a)
+- El antagonismo social y de clase en Grecia, 1975-1985 · (s/a)
+- El Club de la Pelea · (s/a)
+- El MIL en sus textos [CICA] · (s/a)
+- El Pensamiento Politico de Efrain Plaza Olmedo · (s/a)
+- El Poder y Estado. Reflexiones sobre la Dominaci├│n · (s/a)
+- El Poder y Estado. Reflexiones sobre la Dominaci├│n. Portada · (s/a)
+- El Robo. Dos textos sobre la expropiación individual · (s/a)
+- El Solidario, n┬║ 14. Con dos textos de Chris Ealham · (s/a)
+- El-movimiento-obrero-brasileno-Marini · (s/a)
+- Entre La Plataforma y El Partido · (s/a)
+- Estampas de la revolución española · (s/a)
+- Flores_Magon_Tierra_y_Libertad · (s/a)
+- Guerra Social, Tensi├│n Antisocial · (s/a)
+- Hasta que todes seamos libres... · (s/a)
+- Historia 'terrible', diciembre 72-julio 73 [borrador] [1973] · (s/a)
+- Historia del anarcofeminismo en América Latina [Marea Negra Ediciones] · (s/a)
+- Hoja volante de la Huelga de los Vapores Pareja · (s/a)
+- Homenaje a cataluña · (s/a)
+- Huelga de alquileres. Dudas frecuentes · (s/a)
+- Hugas, Emilio y Serrano, V. -Di├бlogos del calobozo (El socialismo colectivista y el comunismo-an├бrquico) · (s/a)
+- Intervenir. Historia, documentos y análisis de dos luchas en territorio uruguayo, 2011-2016 · (s/a)
+- Introduccion a la guerra civil · (s/a)
+- Jefes, Cabecillas, Abusones · (s/a)
+- Jesto i Palabra Idea i Acción · (s/a)
+- Karaganda. La tragedia del antifascismo español [Ediciones del MLE-CNT, 1948] · (s/a)
+- La Amenaza Nuclear · (s/a)
+- La autogestión según Abraham Guillén · (s/a)
+- La Brigada de la C├│lera · (s/a)
+- La Brigada de la C├│lera [Ediciones Aut├│nomas] · (s/a)
+- La historia de las Rote Zora y las Células Revolucionarias · (s/a)
+- La Insurreccion que llega · (s/a)
+- La Internacional defendida por Salmerón y Pi y Margall [Publicaciones de la Escuela Moderna] · (s/a)
+- La militancia pide la palabra [CNT de España en Venezuela, 1961] · (s/a)
+- La Ni├▒a de la Bruja · (s/a)
+- La Semana Santa. Los atentados [Agrupación 'Tiempos Nuevos', 1912] · (s/a)
+- La Sociedad Industrial y Su Futuro · (s/a)
+- La verdad sobre la tragedia de Casas Viejas [Comité Nacional de la CNT] · (s/a)
+- Las 1000 y una del 1000 [Klinamen] · (s/a)
+- Las 12 Pruebas De la Inexistencia de Dios · (s/a)
+- Lewis Mumford vs Paul Virilio. Mensurabilidad e inconmensurabilidad en la t├йcnica moderna · (s/a)
+- Libres y salvajes. La diversidad insurreccional [La Turba ediciones] · (s/a)
+- Llamamiento · (s/a)
+- Los Delirios de Calib├бn · (s/a)
+- Los Invisibles · (s/a)
+- Los males de la guerra [Agrupación 'Tiempos Nuevos', 1912] · (s/a)
+- Los_Martires_de_Chicago · (s/a)
+- Lucidez de Jean Grave ante la militancia · (s/a)
+- Luz en las barracas. Carta de Miguel Giménez Igualada a un ministro francés ante la situación vivida en el 'Campo de Bram' · (s/a)
+- Makhno-La-Revolucion-Rusa-en-Ucrania-1918-1921 · (s/a)
+- Manel Aisa conversa con Pons Prades · (s/a)
+- Manifiesto Reclama tu mente · (s/a)
+- Memorias de Libertad · (s/a)
+- No, no volvemos a casa. Relatos de la revuelta de Ferguson · (s/a)
+- Non-Grata · (s/a)
+- Nuestra única propuesta es el conflicto · (s/a)
+- Organizacion ├Бcrata · (s/a)
+- Organizacion ├Бcrata. Portada · (s/a)
+- Origen del Cristianismo. Cuarto libro de lectura [Publicaciones de la Escuela Moderna, 1906] · (s/a)
+- Paz-Paredes-La-Makhnovschina · (s/a)
+- Por una teoria propia · (s/a)
+- Preliminares a toda lucha anti-carcelaria · (s/a)
+- Punto de Quiebre · (s/a)
+- Reflexiones para un mundo sin polic├нa · (s/a)
+- Reflexiones Sobre el Extravio Teorico · (s/a)
+- Rote Zora [2013] · (s/a)
+- Segundo Certamen Socialista [Establecimiento Tipográfico 'La Academia', 1890] · (s/a)
+- Standing Rock. Los guardianes del agua contra la serpiente negra [Descontrol, 2017] · (s/a)
+- Toda una vida de lucha. Mollie Steimer [KCL] · (s/a)
+- Un hombre de acción. Simón Radowitzky · (s/a)
+- VV.AA.- Wobblies del mundo · (s/a)
+- WITCH. Comunicados y hechizos [La Felguera, 2015] · (s/a)
+- CNT. Ser o no ser · [Cuadernos de Ruedo Ibérico]
+- El vaquero indomable · Abbey, Edward
+- El vaquero indomable [Berenice, 2013] · Abbey, Edward
+- Minigu├нa para el an├бlisis r├бpido de noticias en redes sociales [2018-04-16] · Anarcanine
+- ¡Seamos rebeldes! Folletos y otros escritos [¡Libertad!] · Antillí, Teodoro
+- Antología. Un huerto para teodoro Antillí · Antillí, Teodoro
+- Patria y militarismo · Antillí, Teodoro
+- Historia del movimiento obrero en M├йxico Vol. I) [Casa del Obrero Mundial, 1975] · Araiza, Luis
+- Historia del movimiento obrero en M├йxico Vol. II) [Casa del Obrero Mundial, 1975] · Araiza, Luis
+- Los wobblies criollos [Tesis, 2008] · Araya Saavedra, Mario
+- Historia del Movimiento Makhnovista [HL, 2006] · Archinov, Piotr
+- Historia del Movimiento Makhnovista [KCL] · Archinov, Piotr
+- Historia del Movimiento Makhnovista [Proyecto Espartaco, 2014] · Archinov, Piotr
+- Los dos Octubres (1927) [SOV Baix Llobregat, 2009] · Archinov, Piotr
+- ¿Cómo murió Durruti¿ [1945] · Ariel
+- Memorias (1936-1938). Hacia un nuevo Aragón [PUZ, 2006] · Ascaso, Joaquín
+- El Raval. Epicentro del movimiento obrero barcelon├йs [El Lokal, 2018] · Assemblea del Raval
+- La insurrecci├│n de una f├бbrica. El mot├нn de 1880 en la f├бbrica ┬лMorell y Murillo┬╗ [El Lokal, 2019] · Assemblea del Raval
+- Kronstadt 1921 [Libros de Anarres] · Avrich, Paul
+- ¿Quiénes mataron a Dato¿ [Ediciones Jasón, 1931] [Otro ejemplar] · Bajatierra Morán, Mauro
+- Crónicas del frente de Madrid [Ediciones Tierra y Libertad, 1937] · Bajatierra Morán, Mauro
+- Crónicas del frente de Madrid [Ediciones Tierra y Libertad, 1937] [copia] · Bajatierra Morán, Mauro
+- Desde las barricadas. Una semana de revolución en España [1918] · Bajatierra Morán, Mauro
+- Fuera de la ley [Ediciones Universo] · Bajatierra Morán, Mauro
+- La violencia social-fascista · Bajatierra Morán, Mauro
+- Tutilimundi (Cuentos morales) [Biblioteca Plus Ultra] · Bajatierra, Mauro
+- El fascismo ayer y hoy · Balkanski, G.
+- La colectivizaci├│n [Federaci├│n Local de Drancy de la CNT, 1975] · Balkanski, G.
+- La voz de la sangre [Ediciones Universo] · Ballester Tinoco, Vicente
+- Pr├бxedis G. Guerrero. Un fragmento de la revoluci├│n [1928] · Barreiro Tablada, Enrique
+- Asuntos contemporáneos [F.R. Miller, 1908] · Basterra, Félix B.
+- Carta a Pedro Dorado Montero · Basterra, Félix B.
+- El crepúsculo de los gauchos [1903] · Basterra, Félix B.
+- Militarismo en tiempos de Syriza · Batall├│n descalzo
+- Manifiesto · Bellegarrigue, Anselme
+- Manifiesto [KCL] · Bellegarrigue, Anselme
+- Manifiesto [STARm1919] · Bellegarrigue, Anselme
+- Manifiesto [STARm1919] [Maquetado] · Bellegarrigue, Anselme
+- La Traición de la Hoz y el Martillo [2ª edición] · Benítez Martínez, Erick
+- La Traición de la Hoz y el Martillo [HL] · Benítez Martínez, Erick
+- La Traición de la Hoz y el Martillo [KCL] · Benítez Martínez, Erick
+- Rompamos las cadenas · Benítez Martínez, Erick
+- Temas varios [Publicaciones de La Escuela Moderna, 1916] · Benot, Eduardo
+- La Alianza Obrera Spartacus - [Libros de Anarres, 2005] · Benyo, Javier
+- Entre el sol y la tormenta. Revoluci├│n, guerra y exilio de una mujer libre · Berenguer, Sara
+- El culto al obrero [Eleu] · Berneri, Camillo
+- El delirio racista [UAM, 2010] · Berneri, Camillo
+- El trabajo atractivo · Berneri, Camillo
+- El trabajo atrayente [Tierra y Libertad, 1937] · Berneri, Camillo
+- Entre la revoluci├│n y las trincheras (9 art├нculos 1936-1937) · Berneri, Camillo
+- La apoteosis imperial. Genealog├нa religiosa del poder [Eleuterio, 2019] · Berneri, Camillo
+- La autodemocracia [Eleu] · Berneri, Camillo
+- Maldiciones b├нblicas [Ediciones N├║├▒ez, 1977] · Berneri, Camillo
+- Viaje a trav├йs de utop├нa [KCL] · Berneri, Marie Louise
+- Contribución a la historia de la CNT de España en el exilio [Editores Mexicanos Unidos, 1967] · Berruezo Silvente, José
+- Por el sendero de mis recuerdos (1920-1939) · Berruezo Silvente, José
+- Los Sindicatos Obreros y la Revoluci├│n Social [CNT, 1931] · Besnard, Pierre
+- Inmediatismo [Virus] · Bey, Hakim
+- Millennium · Bey, Hakim
+- Utop├нas piratas [CorazonDeFuego Ediciones] · Bey, Hakim
+- Zona temporalmente aut├│noma [KCL] · Bey, Hakim
+- La Semana Tr├бgica [Centro Editor de Am├йrica Latina, 1984] · Bilsky, Edgardo J.
+- La abolici├│n del trabajo [Afila tus ideas Editorial] · Black, Bob
+- La abolici├│n del trabajo [KCL] · Black, Bob
+- Montjuich. Notas y recuerdos hist├│ricos [Maucci] · Bo i Singla, Ignasi
+- Textos · Bolten, Virginia
+- Barcelona 1909. La revolución de julio [Dirección Única, 2016] · Bonafulla, Leopoldo
+- Nociones de idioma francés [Publicaciones de la Escuela Moderna, 1903] · Bonnard, Leopoldina
+- Al sur de granada · Brenan, Gerald
+- El laberinto espa├▒ol (Antecedentes sociales y pol├нticos de la guerra civil) [Ruedo Ib├йrico, 1962] · Brenan, Gerald
+- Juan├нn y Bedoya. Los ├║ltimos guerrilleros · Brevers, Antonio
+- Descentrar la mirada para ampliar la visión [Descontrol, 2018] · Brizuela González, Florencia y López Martínez, Uriel
+- Historias peligrosas (sobre Howard Zinn) · Brooks, David
+- Todos culpables (seguido de No al nuevo orden) · Brossat, Alain
+- Caminos de utop├нa [FCE, 1955] · Buber, Martin
+- Eclipse de Dios [S├нgueme, 2003] · Buber, Martin
+- Juda├нsmo y Civilizaci├│n [Tribuna, 1973] · Buber, Martin
+- Qu├й es el hombre [FCE, 1995] · Buber, Martin
+- Yo y t├║ [Nueva Visi├│n, 1982] · Buber, Martin
+- Las Ciencias Naturales en la Escuela Moderna V - Edades de la tierra [Publicaciones de la Escuela Moderna, 1908] · Buen, Odón de
+- Nociones de Geografia Física [Publicaciones de la Escuela Moderna, 1905] · Buen, Odón de
+- ┬┐Qu├й es el sindicato ├║nico┬┐ [Editorial Aurora] · Buenacasa, Manuel
+- El movimiento obrero espa├▒ol. Historia y cr├нtica (1886-1926) [Familia y amigos del autor, 1966] · Buenacasa, Manuel
+- La Rusia roja. C├│mo tomaron el poder los bolcheviques [Biblioteca Renovaci├│n Proletaria] · Buenacasa, Manuel
+- 1936-1939. El colectivismo en Membrilla (C. Real) [Starm1919] · Caba Guijarro, Juan
+- 1936-1986. Ciencuentenario de las desventuras espa├▒olas en su Guerra Civil [Autoedici├│n, 1986] · Caba Guijarro, Juan
+- No somos clasistas [Cultura Proletaria, Nueva York, 1947] · Campos Campos, Severino
+- Una vida por un ideal · Campos Campos, Severino
+- El colectivismo agrario en la Revolución Española · Cano Ruiz, Benjamín y Viadiu, Ismael
+- William Godwin (su vida y su obra) [Ideas, 1977] · Cano Ruiz, Benjamín
+- William Godwin (su vida y su obra) [Ideas, 1977] [OCR] · Cano Ruiz, Benjamín
+- El cantón de Cartagena [Grupo Cultural de Estudios Sociales de Melbourne, 2012] · Cano Ruiz, Tomás
+- Toda mi vida fue una lucha (Tomo I) [Descontrol, 2018] · Cansiz, Sakine
+- El Caso Scala. Terrorismo de Estado y algo más [Virus, 2008] · Cañadas Gascón, Xavier
+- El Tubo (Terror y miseria en las cárceles españolas de la democracia) · Cañadas Gascón, Xavier
+- Entremuros (Las prisiones en la Transacción Democrática) · Cañadas Gascón, Xavier
+- El matrimonio esclavo y el matrimonio libre. El deseo esclavo y el deseo libre · Capetillo Perón, Luisa
+- Mi opinión sobre las libertades, derechos y deberes de la mujer [1911] · Capetillo Perón, Luisa
+- Colectividades agrarias en la región de Girona, 1936-1939 [Tesis] · Cárdaba Carrascal, Marciano
+- La CNT y la Revolución Social (1931-1939) [Sindicat d’Oficis Varis de la CNT-AIT Sabadell, 2011] · Cárdaba Carrascal, Marciano
+- Aproximación al papel de las mujeres dentro de los Grupos Autónomos de la Transición [Descontrol, 2017] · Cardona Curcó, Irene
+- La vida difícil · Carranque de Ríos, Andrés
+- Federalismo. Estructura y dinámica federal [Descontrol, 2018] · Carrasquer Launed, Félix
+- La escuela de militantes de Aragón (Una experiencia de autogestión y de análisis sociológico) · Carrasquer Launed, Félix
+- La escuela de militantes de Aragón [Descontrol, 2015] · Carrasquer Launed, Félix
+- Las Colectividades de Aragón. Un vivir autogestionado, promesa de futuro · Carrasquer Launed, Félix
+- Las Colectividades de Aragón. Un vivir autogestionado, promesa de futuro [Descontrol, 2016] · Carrasquer Launed, Félix
+- Una experiencia de educación autogestionada [Descontrol, 2015] · Carrasquer Launed, Félix
+- Ascaso y Zaragoza. Dos p├йrdidas, la p├йrdida · Carrasquer Launed, Francisco
+- Cinco oscenses (Samblancat, Alaiz, Ac├нn, Maur├нn y Sender) en la punta de lanza de la prerrevoluci├│n espa├▒ola [Alazet, 5, 1993] · Carrasquer Launed, Francisco
+- Durruti, Ascaso y Garc├нa Oliver · Carrasquer Launed, Francisco
+- Contratos temporales y precariedad [Solidaridad Obrera, 2007] · Carretero Miramar, José Luis
+- El bienestar malherido [Solidaridad Obrera, 2008] · Carretero Miramar, José Luis
+- El trabajo de la crisis [Solidaridad Obrera, 2012] · Carretero Miramar, José Luis
+- Entender la descentralización productiva [Solidaridad Obrera, 2010] · Carretero Miramar, José Luis
+- La autogestión viva [Queimada, 2013] · Carretero Miramar, José Luis
+- La imaprable crisis del derecho del trabajo · Carretero Miramar, José Luis
+- Palabra de abogado [Solidaridad Obrera, 2012] · Carretero Miramar, José Luis
+- Posici├│n revolucionaria [Tierra y Libertad, 1945] · Casanova, Antonio
+- Breve Historia de la Noviolencia [Pentapé, 2010] · Castañar Pérez, Jesús
+- Las claves de la acción política Noviolenta en contextos de conflicto armado [Tesis, 2016] · Castañar Pérez, Jesús
+- Teoría e historia de la revolución noviolenta [Virus, 2013] · Castañar Pérez, Jesús
+- Violación de los derechos humanos en Palestina. Crónica del apartheid · Castañar Pérez, Jesús
+- Las transformaciones colectivistas en la industria y los servicios de Barcelona (1936-1939) [Fundación Salvador Seguí, 1992] · Castells Durán, Antoni
+- Recuerdos y Vivencias 1 · Castillo, Vicente
+- Recuerdos y Vivencias 2 · Castillo, Vicente
+- Las doctrinas sociales y la revoluci├│n espa├▒ola [CNT, 1938] · Castro, Luis
+- Hachando los alambrados [Cisplatina, 1959] · Castro, Mart├нn y Molina, Carlos
+- La insurrecci├│n an├бrquica del siglo XXI [Veneno ediciones, 2009] · Cavalleri, Constantino et al.
+- Contribuci├│n a lalucha contra la c├бrcel · Cavalleri, Constantino
+- Empresas colectivizadas e intervenidas [Bosch, 1937] · Cerdá Richart, Baldomero
+- Floreal. Drama social en tres actos [Publicaciones de la Escuela Moderna, Barcelona, 1906] · Chardon, J.P.
+- Inmoralidad del matrimonio · Chaughi, René
+- Inmoralidad del matrimonio [Biblioteca Editorial Salud y Fuerza, 1908] · Chaughi, René
+- La mujer esclava · Chaughi, René
+- La mujer esclava [Wikipedia] · Chaughi, René
+- Manual Ninja. Autodefensa Emocional [Editorial Imperdible, 2019] · Cheve
+- Franco me hizo terrorista · Christie, Stuart
+- Selecci├│n de textos feministas · Claramunt, Teresa
+- Redimida (La Novela ideal 16) [Publicaciones de 'La Revista Blanca', 1920┬┐] · Claro, Fernando
+- Acci├│n directa [IEA, 2005] · Cleyre, Voltairine de
+- Acci├│n directa [La Neurosis o Las Barricadas, 2014] · Cleyre, Voltairine de
+- Análisis sobre la situación del campo andaluz · CNT Córdoba
+- Bases de trabajo agrícola (1936) [CNT de Jerez de la Frontera, 2020] · CNT-AIT
+- Memoria del Congreso extraordinario de 1931 · CNT-AIT
+- Acuerdos del Pleno Económico Nacional Ampliado · CNT
+- Acuerdos Vº Congreso [Comité Regional de Cataluña, 1980] · CNT
+- Páginas de Sangre (1920-1921) · CNT
+- Realizaciones Revolucionarias y Estructuras Colectivistas de la Comarcal de Monzón (Huesca) · CNT
+- Vida y muerte de Higinio Carrocera Mortera · CNT
+- El mito de la conspiraci├│n jud├нa mundial [Alianza, 1995] · Cohn, Norman
+- En pos del milenio [Alianza, 1981] · Cohn, Norman
+- Los demonios familiares de Europa [Alianza, 1980] · Cohn, Norman
+- Historia del movimiento obrero revolucionario [Libros de Anarres, 2013] · Colombo, Eduardo (comp.)
+- Delincuencia y poder. La psicolog├нa de la dominaci├│n · Comfort, Alex
+- Luigi Lucheni · Como y Porque Asesine a la Princesa Sissi
+- Comunicados · Conspiración de Células del Fuego
+- Reventando lo existente. Reflexiones del combate minoritario · Conspiración de Células del Fuego
+- La dial├йcica de la liberaci├│n [Siglo XXI, 1970] · Cooper, David (ed.)
+- El lenguaje de la locura [Ariel, 1979] · Cooper, David
+- La muerte de la familia [Planeta, 1986] · Cooper, David
+- La reinvenci├│n del amor · Cooper, David
+- Las transposiciones de la meditaci├│n · Cooper, David
+- Psiquiatr├нa y antipsiquiatr├нa [Paid├│s, 1985] · Cooper, David
+- Psiquiatr├нa y antipsiquiatr├нa ]Ed. Locus Hypocampus] · Cooper, David
+- Educaci├│n revolucionaria · Cornelissen, Christiaan
+- Hundir la flota · Coronado, Rod
+- El feminismo [Biblioteca de 'Tierra y Libertad', 1914] · Costa Iscar, M.
+- Martirio, memoria, historia. Sobre los subversivos y la expulsi├│n de Casimiro Barrios, 1920 [2015] · Craib, Raymond
+- Resistencia digital. Manual de seguridad operacional e instrumental para smartphones [Descontrol, 2019] · Críptica
+- Alberto Ghiraldo · Cuaderno de poes├нa cr├нtica n.┬║ 142
+- Anónimo_a · Cuando se señala la luna…A vueltas con el insurreccionalismo
+- ┬┐Luchas o protestas┬┐ [Descontrol, 2019] · D'Alessandro, Rolando
+- El dogma de la no-violencia [Descontrol, 2015] · D'Alessandro, Rolando
+- Si te vas no vuelvas. 30 a├▒os de vida ilegal y clandestina [Descontrol, 2017] · D'Alessandro, Rolando
+- El hombre, Dios y el Estado. Contribución en torno a la cuestión de la teología política [Libros de Anarres, 2014] · D'Auria, Aníbal
+- El condenado a muerte · Dagerman, Stig
+- El escritor y la conciencia [Cravan Editores] · Dagerman, Stig
+- El hombre desconocido · Dagerman, Stig
+- Escritos [Etc├йtera] · Dagerman, Stig
+- La serpiente · Dagerman, Stig
+- Matar a un ni├▒o · Dagerman, Stig
+- Nuestra necesidad de consuelo es insaciable [Al Marg├йn et al.] · Dagerman, Stig
+- Nuestra necesidad de consuelo es insaciable [Cravan Editores] · Dagerman, Stig
+- Nuestra necesidad de consuelo es insaciable [Etc├йtera] · Dagerman, Stig
+- Nuestra necesidad de consuelo es insaciable [Mar y Tierra Ediciones, 2014] · Dagerman, Stig
+- La oleada de violencia en la Barcelona de 1904-1908 · Dalmau, Antoni
+- A través de la China misteriosa · David-Néel, Alexandra
+- Astravakra Gîtâ. Avadhuta Gîtâ · David-Néel, Alexandra
+- Diario de viaje · David-Néel, Alexandra
+- En el Tíbet misterioso · David-Néel, Alexandra
+- Iniciaciones e iniciados del Tíbet · David-Néel, Alexandra
+- Inmortalidad y reencarnación · David-Néel, Alexandra
+- La vida sobrehumana de Gesar. La gran epopeya del Tíbet · David-Néel, Alexandra
+- Las enseñanzas secretas de los buddhistas tibetanos · David-Néel, Alexandra
+- Magia de amor y magia negra · David-Néel, Alexandra
+- Místicos y magos del Tíbet · David-Néel, Alexandra
+- Textos tibetanos Inéditos · David-Néel, Alexandra
+- El desierto que viene [Virus, 2017] · Davis, Mike
+- Panes y peces. Historia del 'Catholic Worker Movement' · Day, Dorothy
+- Abajo los jefes (1859) [Agitprov Editorial, 2009] · Déjacque, Joseph
+- El humanisferio [KCL] · Déjacque, Joseph
+- La invisible muerte del proletario. Un análisis de la prensa peruana (1904-1925) · Delhom, Joël
+- La primera gran huelga de los constructores de calzado de Barcelona en 1903 · Delhom, Joël
+- Octubre de 1871. Debate parlamentario sobre la Internacional en España · Delhom, Joël
+- Trescientos hombres y yo. Estampa de una revolución · Delso, Ana
+- Tras prisiones y traslados [Diaclasa, 2016] · Derkach, Nadezhda Iákovlevna
+- Malthusianismo y neo-Malthusianismo [B.E. Salud y Fuerza] · Devaldés, Manuel
+- El Derecho al Ocio y a la Expropiaci├│n Individual · Di Giovanni, Severino
+- Grito nocturno · Di Giovanni, Severino
+- Alessandro Stella · Dias de Sueño y de Plomo
+- Historia de las agitaciones campesinas andaluzas · Díaz del Moral, Juan
+- Introducción al pensamiento de Martin Buber [IEM, 1991] · Díaz, Carlos
+- La religiosa [Publicaciones de La Escuela Moderna, 1916] · Diderot, Denis
+- L’aposta municipalista. De les bullangues a les lluites actuals pels municipis lliures a Catalunya [Virus, 2015] · Diez i Rodríguez, Xavier et al.
+- El pensament polític de Salvador Seguí [Virus, 2016] · Diez i Rodríguez, Xavier
+- La construcción ideológica del federalismo. Pi i Margall, inspirador del municipio libre [A5] · Diez i Rodríguez, Xavier
+- Del caciquismo a la colectivización. El desarollo histórico de las colectividades de Guadalajara, 1936-1939 · Díez Torre, Alejandro Ramón
+- El Archivo de la Guerra Civil de Salamanca y sus fuentes documentales para Aragón, 1936-1938 · Díez Torre, Alejandro Ramón
+- VV.AA. · Dinamita Cerebral
+- Estrategias de resistencia y ataque · Distribuidora Coños Como Llamas
+- A algunos maricas les gustan los co├▒os · Distribuidora Peligrosidad Social
+- A la calle los propietarios · Distribuidora Peligrosidad Social
+- A revolta dos caracois · Distribuidora Peligrosidad Social
+- A revolta dos caracois 2 · Distribuidora Peligrosidad Social
+- Abre el culo y se abrir├б tu mente · Distribuidora Peligrosidad Social
+- Anna y las otras · Distribuidora Peligrosidad Social
+- Argumentos contra la procreaci├│n · Distribuidora Peligrosidad Social
+- ASIF · Distribuidora Peligrosidad Social
+- Az├║car es asesinato · Distribuidora Peligrosidad Social
+- Barcelona entre vallas y flores · Distribuidora Peligrosidad Social
+- C├│mo dar el primer paso · Distribuidora Peligrosidad Social
+- C├бncer. Un proceso biol├│gico a nuestro servicio · Distribuidora Peligrosidad Social
+- Consentimiento sexual · Distribuidora Peligrosidad Social
+- Cruising · Distribuidora Peligrosidad Social
+- Cuando cae la noche... · Distribuidora Peligrosidad Social
+- Cuando la militancia elige tomar las armas · Distribuidora Peligrosidad Social
+- Dejar de fumar · Distribuidora Peligrosidad Social
+- Desmontando la cultura de la monogamia · Distribuidora Peligrosidad Social
+- Destruir la sexualidad · Distribuidora Peligrosidad Social
+- Droga es racismo · Distribuidora Peligrosidad Social
+- El manifiesto homosexual · Distribuidora Peligrosidad Social
+- El privilegio cisexual · Distribuidora Peligrosidad Social
+- El timo del virus de la hepatitis-C · Distribuidora Peligrosidad Social
+- Espacios peligrosos · Distribuidora Peligrosidad Social
+- Estamos todas en continuo cambio · Distribuidora Peligrosidad Social
+- Estrategias de resistencia y ataque · Distribuidora Peligrosidad Social
+- Feminismo y lucha armada en Italia · Distribuidora Peligrosidad Social
+- Foucault para encapuchadas · Distribuidora Peligrosidad Social
+- Fuego Queer · Distribuidora Peligrosidad Social
+- Fundamentando las bases de una lucha anticapitalista contra la cultura mon├│gama · Distribuidora Peligrosidad Social
+- Furia travesti · Distribuidora Peligrosidad Social
+- Gorda! · Distribuidora Peligrosidad Social
+- Guerra al patriarcado, guerra a la tecnolog├нa asesina · Distribuidora Peligrosidad Social
+- Hacia la insurrecci├│n m├бs queer · Distribuidora Peligrosidad Social
+- Hacia un mundo menos jodido · Distribuidora Peligrosidad Social
+- Hacia un transfeminismo insurreccional · Distribuidora Peligrosidad Social
+- Historia de un anti-taller de drogas · Distribuidora Peligrosidad Social
+- Homosexualidad, cristianismo y herej├нa en Europa · Distribuidora Peligrosidad Social
+- Imperialismo gay · Distribuidora Peligrosidad Social
+- Ingresos forzosos · Distribuidora Peligrosidad Social
+- Jornadas anarcofeministas · Distribuidora Peligrosidad Social
+- La heterosexualidad obligatoria · Distribuidora Peligrosidad Social
+- La okupaci├│n como analizador · Distribuidora Peligrosidad Social
+- La realidad de las ciencias de la salud. Limitaciones de la psicolog├нa y los cr├нmenes de la psiquiatr├нa · Distribuidora Peligrosidad Social
+- Los Hermanos de la Costa · Distribuidora Peligrosidad Social
+- Los mitos de la II Rep├║blica · Distribuidora Peligrosidad Social
+- Manifiesto Reclama tu mente · Distribuidora Peligrosidad Social
+- Manual b├бsico sobre ayuno · Distribuidora Peligrosidad Social
+- Manual de autodefensa para mujeres y otras expresiones de g├йnero no hegem├│nicas · Distribuidora Peligrosidad Social
+- Manual del crudivegano · Distribuidora Peligrosidad Social
+- Maricas y feminismo · Distribuidora Peligrosidad Social
+- Memorias de Peligrosidad Social (2011-2019) · Distribuidora Peligrosidad Social
+- Mi camino es de todo menos hetero · Distribuidora Peligrosidad Social
+- Okupaci├│n. M├бs que cuatro paredes · Distribuidora Peligrosidad Social
+- Peque├▒a historia del reformismo okupa matritense · Distribuidora Peligrosidad Social
+- Podemos. ┬┐Esperanza o desilusi├│n anunciada┬┐ · Distribuidora Peligrosidad Social
+- Por qu├й Hitler no era vegetariano · Distribuidora Peligrosidad Social
+- Queers, leed esto · Distribuidora Peligrosidad Social
+- RAAD · Distribuidora Peligrosidad Social
+- Recetas crudiveganas · Distribuidora Peligrosidad Social
+- Recopilaci├│n de textos sobre anarcoindependentismo I · Distribuidora Peligrosidad Social
+- Recopilaci├│n de textos sobre anarcoindependentismo II · Distribuidora Peligrosidad Social
+- Reflexionando sobre el sexo · Distribuidora Peligrosidad Social
+- Reflexiones hermafroditas · Distribuidora Peligrosidad Social
+- Reflexiones sobre liberaci├│n animal · Distribuidora Peligrosidad Social
+- Reinonas, putas y chaperas · Distribuidora Peligrosidad Social
+- Relaciones abiertas para principiantes · Distribuidora Peligrosidad Social
+- Responsabiliz├бndonos · Distribuidora Peligrosidad Social
+- SCUM Manifiesto · Distribuidora Peligrosidad Social
+- Sexo colectivo · Distribuidora Peligrosidad Social
+- Sida. Un mito que se derrumba · Distribuidora Peligrosidad Social
+- Sociedades secretas contra el Estado · Distribuidora Peligrosidad Social
+- STAR · Distribuidora Peligrosidad Social
+- Todo lo que quisiste saber sobre la lucha por la vivienda y no te atreviste a preguntar · Distribuidora Peligrosidad Social
+- Veganismo · Distribuidora Peligrosidad Social
+- El magonismo y la Revoluci├│n mexicana en la prensa ├бcrata y radical franc├│fona [INAH, 2013] · Doillon, David
+- La revoluci├│n cubana. Un enfoque cr├нtico [Campo Abierto, 1978] · Dolgoff, Sam
+- Historia del movimiento obrero (Tomo I) · Dolléans, Édouard
+- Historia del movimiento obrero (Tomo I) [Eudeba, 1962] · Dolléans, Édouard
+- Historia del movimiento obrero (Tomo II) · Dolléans, Édouard
+- Historia del movimiento obrero (Tomo II) [Eudeba, 1961] · Dolléans, Édouard
+- Historia del movimiento obrero (Tomo III) · Dolléans, Édouard
+- Historia del movimiento obrero (Tomo III) [Eudeba, 1961] · Dolléans, Édouard
+- La Comuna de París [SOV Baix Llobregat, 2009] · Dolléans, Édouard
+- Historia del primero de mayo [Terramar-Libros de Anarres, 2011] · Dommanget, Maurice, et al.
+- Historia del 1┬║ de mayo [Laia, 1976] · Dommanget, Maurice
+- Rebelde en el para├нso yanqui [Antorcha.net, 2012] · Drinnon, Richard T.
+- Dignidad, libertad e independencia [Biblioteca Editorial Salud y Fuerza] · Drysdale, Ch.
+- Individualismo e individualismo [Biblioteca Editorial Salud y Fuerza] · Dubinsky, Máximo
+- Lo seremos todo · Dubofsky, Melvyn
+- La Columna Durruti y otros art├нculos y entrevistas de la Guerra Civil espa├▒ola · Einstein, Carl
+- Le Brise-Glace · El Ocaso de la Ideologia Democratica
+- Internacional Situacionista + Anónimo_a · El Retorno de la Columna Durruti
+- ┬┐Existe el 'hombre medio' desde el punto de vista sociol├│gico┬┐ · Ellul, Jacques
+- Dinero y poder [Oveja perdida, 2012] · Ellul, Jacques
+- La edad de la t├йcnica [Octaedro, 2003] · Ellul, Jacques
+- Autogesti├│n, autonom├нa e interdependencia [Volap├╝k, 2017] · Encina, Javier et al. (coords.)
+- Autogestion cotidiana de la salud [Volap├╝k, 2018] · Encina, Javier et al. (coords.)
+- Desempoderamiento, educaci├│n y complejidad [CICE, 2016] · Encina, Javier et al. (coords.)
+- Educaci├│n sin propiedad [[Volap├╝k, 2018] · Encina, Javier et al. (coords.)
+- Sin poder. Construyendo colectivamente la autogesti├│n de la vida cotidiana [Volap├╝k, 2017] · Encina, Javier et al. (coords.)
+- Nociones sobre las primeras edades de la humanidad [Publicaciones de la Escuela Moderna, 1905] · Engerrand, Georges
+- An├бlisis multivariado · Errandonea, Alfredo
+- Curso de sociolog├нa (I). La sociolog├нa · Errandonea, Alfredo
+- Curso de sociolog├нa (IV). Las nociones anal├нticas · Errandonea, Alfredo
+- Curso de sociolog├нa (V). La estructura de la sociedad · Errandonea, Alfredo
+- Curso de sociolog├нa (VIII). Integraci├│n, dominaci├│n, participaci├│n y conflicto · Errandonea, Alfredo
+- Dominaci├│n y explotaci├│n · Errandonea, Alfredo
+- Sociolog├нa de la dominaci├│n [Tupac Ediciones] · Errandonea, Alfredo
+- El internado-escuela Durruti [L'Eixam Edicions, 2011] · Escrivá Moscardó, Cristina
+- Experiencia e identidad de una internacionalista. Trazos biogr├бficos de Guillermina Rojas Orgis · Espigado, Gloria
+- La buena nueva de la mujer profeta. Identidad y cultura pol├нtica en las fourieristas · Espigado, Gloria
+- Mujeres ┬лradicales┬╗. Ut├│picas, republicanas e internacionalistas en Espa├▒a (1848-1874) · Espigado, Gloria
+- Reformismo, dictadura, federalismo [Ediciones Universo, 1951] · Esteve, Pedro
+- Aurora Nueva [Starm1919] · Estévez, Antonio
+- Armas de barrio. Luchas por la vivienda [Milvus, 2021] · FAGC et al.
+- Hazlo Tú Mismo. Recupera tu vida [El Lokal, 2008] · FAP
+- El miedo al conflicto · Faun, Feral
+- Los polic├нas en nuestras cabezas · Faun, Feral
+- Revoluci├│n salvaje · Faun, Feral
+- El ej├йrcito insurreccional makhnovista [1972] · Fedeli, Ugo
+- Historia de la USI. 1912-1922 · Fedeli, Ugo
+- Hazlo tu mism@, Recupera tu vida I · Federacion Anarco Punk
+- Hazlo tu mism@, Recupera tu vida II · Federacion Anarco Punk
+- Hazlo tu Mismx, Recupera tu vida · Federacion Anarco Punk
+- Popularización de Gómez Rojas [Ediciones de la 'Revista Universitaria', 1939] · Federación de Estudiantes de Chile
+- El tiempo de los trenes · Fernán Gómez, Fernando
+- El desnarigado [Instituto de Estudios Ceutíes, 2017] · Fernández Andújar, Francisco José
+- Buenos Aires de la utopía · Fernández Cordero, Laura
+- Izquierdas y feminismos, hitos contemporáneos · Fernández Cordero, Laura
+- Anarcocomunismo en España (1882-1896). El grupo de 'Gràcia' y sus relaciones internacionales [Tesis] · Fernández Gómez, Francisco de Paula
+- La Barcelona de los exiliados, antipatriotas, desertores, prófugos y solidarios · Fernández Gómez, Francisco de Paula
+- Oleadas terroristas. Una crítica a la teoría de las oleadas terroristas · Fernández Gómez, Francisco de Paula
+- XIX. El siglo de las insurrecciones · Fernández Gómez, Francisco de Paula
+- El ateísmo contra el pensamiento religioso. La desacralización como libertad de indagación [Germinal nº 10, 2012] ] · Fernández Paniagua, José María
+- La enajenación en la sociedad capitalista. Una aproximación a las tesis de Erich Fromm [Germinal nº 8, 2009] ] · Fernández Paniagua, José María
+- Recuerdos de la vida pampera (Recuerdos de la semana trágica de enero de 1919) [Umbral, 1962] · Fernández, Serafín
+- El futuro de España. Ante la crisis mundial · Ferré, Francisco
+- La vida [Publicaciones de La Escuela Moderna, 1919] · Flammarion, C.
+- Antología de testimonios de precursores de la Revolución Mexicana · Flores Magón, Diego
+- Manifiesto del 16 de marzo de 1918 · Flores Magón, Ricardo y Rivera, Librado
+- 1914. La intervención americana en México · Flores Magón, Ricardo
+- Antología · Flores Magón, Ricardo
+- Artículos políticos 1910 (Regeneración) · Flores Magón, Ricardo
+- Artículos políticos 1910 (Regeneración) [Otra edición] · Flores Magón, Ricardo
+- Artículos políticos 1911 (Regeneración) · Flores Magón, Ricardo
+- Cuentos revolucionarios · Flores Magón, Ricardo
+- Discursos [Antorcha.net] · Flores Magón, Ricardo
+- Discursos [KCL] · Flores Magón, Ricardo
+- El derecho de rebelión · Flores Magón, Ricardo
+- En defensa de la Revolución · Flores Magón, Ricardo
+- Epistolario último · Flores Magón, Ricardo
+- Escritos escogidos · Flores Magón, Ricardo
+- La revolución mexicana [Grijalbo, 1970] · Flores Magón, Ricardo
+- Literatura, Utopía y Revolución (Antología) · Flores Magón, Ricardo
+- Nada es tan desalentador como un esclavo satisfecho (Cartas desde la prisión) · Flores Magón, Ricardo
+- Obras de teatro · Flores Magón, Ricardo
+- Rayos de luz · Flores Magón, Ricardo
+- Tierra y Libertad · Flores Magón, Ricardo
+- Tribuna roja · Flores Magón, Ricardo
+- Las luchas sociales en el Alto Llobregat y Cardoner (Contribución a la historia de Manresa y comarca) [Edición del autor, 1982] · Flores Martínez, Pedro
+- Ocho mon├│logos de teatro · Fo, Dario y Rame, Franca
+- Pareja abierta (casi de par en par) [J├║car, 1986] · Fo, Dario y Rame, Franca
+- Un d├нa cualquiera · Fo, Dario y Rame, Franca
+- Aqu├н no paga nadie · Fo, Dario
+- El campe├│n prohibido · Fo, Dario
+- El loco y la muerte · Fo, Dario
+- La madre pasota · Fo, Dario
+- La mujer sola · Fo, Dario
+- La mujer sola [Otra] · Fo, Dario
+- Misterio bufo [Siruela, 1998] · Fo, Dario
+- Todas tenemos la misma historia · Fo, Dario
+- Los archivos del terrorismo blanco. El fichero Lasarte · Foix, Pere
+- Garrote vil para dos inocentes. El  caso Delgado-Granado · Fonseca, Carlos
+- Garrote vil para dos inocentes. El caso Delgado-Granado · Fonseca, Carlos
+- El mensaje revolucionario de los amigos de Durruti · Fontenis, Georges
+- El mensaje revolucionario de los amigos de Durruti [KCL] · Fontenis, Georges
+- ┬┐Qu├й es la democracia incluyente┬┐ · Fotopoulos, Takis
+- Crisis multidimensional y democracia inclusiva · Fotopoulos, Takis
+- Hacia una democracia inclusiva · Fotopoulos, Takis
+- Conversaci├│n con Eduardo Colombo · G.L.A.D.
+- A vueltas y revueltas con la historia social obrera en Espa├▒a. Historia obrera, historia popular e historia contempor├бnea · Gabriel, Pere
+- Publicistas, soci├│logos y militantes. El nacimiento de la historia obrera en Espa├▒a · Gabriel, Pere
+- El sue├▒o de un millar de gatos · Gaiman, Neil
+- Asalto a la ciudad · Gallego, Gregorio
+- El fest├нn de los buitres · Gallego, Gregorio
+- Encrucijada de caminos · Gallego, Gregorio
+- Educaci├│n, devenir y acontecimiento. M├бs all├б de la utop├нa formativa · Gallo, Silvio
+- Cancionero revolucionario [Tierra y Libertad, 1947] · Gante, Emilio (comp.)
+- Del Mediterr├бneo al Pac├нfico. Viaje al pa├нs de los 'encantos' · Gante, Emilio
+- Los dramas de Monte Carlo. Caciquismos [Imp. de Jose M. Ducazcal, 1893] · Gante, Emilio
+- Los nuevos profetas. Esbozo de novela modernista [Imp. de H. Garc├нa, 1910] · Gante, Emilio
+- ¿Qué comprar¿ ¿Qué vender¿ · García Calvo, Agustín
+- A los dos mil años de la muerte de Virgilio · García Calvo, Agustín
+- Acerca de la escritura · García Calvo, Agustín
+- Acerca del poder moral del arte · García Calvo, Agustín
+- Análisis de la sociedad del bienestar · García Calvo, Agustín
+- Antología de textos · García Calvo, Agustín
+- Apuntes sobre destino · García Calvo, Agustín
+- Arte e indisciplina · García Calvo, Agustín
+- Autor anónimo · García Calvo, Agustín
+- Casas Viejas. No convertir la rebelión en cultura · García Calvo, Agustín
+- Ciencia. Pro y contra · García Calvo, Agustín
+- Ciudad · García Calvo, Agustín
+- Cómo hacer vivir a los muertos · García Calvo, Agustín
+- Cómo se mata a un niño para hacer un hombre · García Calvo, Agustín
+- Comunicado urgente contra el despilfarro · García Calvo, Agustín
+- Contra el 98 · García Calvo, Agustín
+- Contra el arte · García Calvo, Agustín
+- Contra el hombre · García Calvo, Agustín
+- Contra el hombre (con dos epílogos de Isabel Escudero) · García Calvo, Agustín
+- Contra el preso común · García Calvo, Agustín
+- Contra el tiempo · García Calvo, Agustín
+- Contra el Tiempo [Lucina, 1993] · García Calvo, Agustín
+- Contra la democracia · García Calvo, Agustín
+- Contra la fe · García Calvo, Agustín
+- Contra la paz · García Calvo, Agustín
+- Contra la Realidad · García Calvo, Agustín
+- Creencia. Vínculo. Más allá · García Calvo, Agustín
+- Cuestiones sofísticas · García Calvo, Agustín
+- De Dios · García Calvo, Agustín
+- De física · García Calvo, Agustín
+- De la culpa a la causa · García Calvo, Agustín
+- De la luz · García Calvo, Agustín
+- De la realidad · García Calvo, Agustín
+- De lo de la contemporaneidad de la comedia antigua · García Calvo, Agustín
+- De los números · García Calvo, Agustín
+- Del fin al sinfín · García Calvo, Agustín
+- Del hablar insurrecto y la rebelión de las lenguas · García Calvo, Agustín
+- Demencia y razón en las relaciones amorosas · García Calvo, Agustín
+- Deporte, juego y competición · García Calvo, Agustín
+- Desengaños acerca de Universidad, Enseñanza, Investigación · García Calvo, Agustín
+- Dialéctica y mito · García Calvo, Agustín
+- Dios y el dinero · García Calvo, Agustín
+- El común contra la democracia · García Calvo, Agustín
+- El Mercado de Futuros · García Calvo, Agustín
+- El papel del intelectual · García Calvo, Agustín
+- El placer de hacer con las manos · García Calvo, Agustín
+- El sexo y lo sagrado · García Calvo, Agustín
+- El último patriarca · García Calvo, Agustín
+- En compañía de Alicia al otro lado del espejo · García Calvo, Agustín
+- Enseñar a no saber · García Calvo, Agustín
+- Familia. La idea y los sentimientos · García Calvo, Agustín
+- Fragmentos · García Calvo, Agustín
+- Funciones del lenguaje y modalidades de la frase · García Calvo, Agustín
+- Hablar y pintar · García Calvo, Agustín
+- Heráclito y la lógica · García Calvo, Agustín
+- Hijos para qué · García Calvo, Agustín
+- Izquierda-derecha · García Calvo, Agustín
+- La necesidad de ser ateo · García Calvo, Agustín
+- La prohibición de los sintagmas del tipo 'nos amo' y 'me amamos' · García Calvo, Agustín
+- La razón común · García Calvo, Agustín
+- La razón de la sinrazón del Quijote · García Calvo, Agustín
+- La rotura de la máscara · García Calvo, Agustín
+- La rotura del sujeto · García Calvo, Agustín
+- La utilidad del arte · García Calvo, Agustín
+- La versificación del 'Querolus' y el doble condicionamiento prosódico del ritmo · García Calvo, Agustín
+- Lalia (Ensayos de estudio lingüístico de la Sociedad) · García Calvo, Agustín
+- Lecturas presocráticas · García Calvo, Agustín
+- Lenguaje · García Calvo, Agustín
+- Ley de ordenación jerárquica de la procesión sintáctica · García Calvo, Agustín
+- Lo mejor es el agua · García Calvo, Agustín
+- Lo que hacen los mitos en el teatro · García Calvo, Agustín
+- Lo que puede el poder · García Calvo, Agustín
+- Los números en el cuerpo · García Calvo, Agustín
+- Los números y las musas · García Calvo, Agustín
+- Los títeres de la epopeya · García Calvo, Agustín
+- Los versos hablados · García Calvo, Agustín
+- Mito-Historia y otras invenciones · García Calvo, Agustín
+- Muerte lógica y muerte física. De Lucrecio a Heráclito · García Calvo, Agustín
+- O lado da sombra · García Calvo, Agustín
+- O punto o raya · García Calvo, Agustín
+- Orden y providencia · García Calvo, Agustín
+- Otra vez hablando de lo que habla · García Calvo, Agustín
+- Para desconfiar de la aplicación de los métodos tecnológicos en educación · García Calvo, Agustín
+- Para evitar confusiones en el uso del término 'verdad' · García Calvo, Agustín
+- Para la interpretación de la carta a Heródoto de Epicuro · García Calvo, Agustín
+- Para quién se trabaja · García Calvo, Agustín
+- Pequeña introducción a la prosodia latina I · García Calvo, Agustín
+- Pequeña introducción a la prosodia latina II · García Calvo, Agustín
+- Pequeña introducción a la prosodia latina III · García Calvo, Agustín
+- Placer y negación · García Calvo, Agustín
+- Pobres hombres · García Calvo, Agustín
+- Pueblo contra uno, uno contra pueblo · García Calvo, Agustín
+- Qué comprar, qué vender · García Calvo, Agustín
+- Que el yo no soy yo · García Calvo, Agustín
+- Qué es el Estado · García Calvo, Agustín
+- Que no se sabe quién soy yo · García Calvo, Agustín
+- Qué sabe un niño · García Calvo, Agustín
+- Qué se puede contra el poder · García Calvo, Agustín
+- Ritmo de la mirada · García Calvo, Agustín
+- Ritmo, medida y tiempo · García Calvo, Agustín
+- Sobre el sujeto · García Calvo, Agustín
+- Sobre la necesidad del automóvil · García Calvo, Agustín
+- Sobre la realidad · García Calvo, Agustín
+- Sócrates · García Calvo, Agustín
+- Tentativas para precisar la imprecisión del uso de ciertos términos · García Calvo, Agustín
+- Tertulias [Distri Maligna] · García Calvo, Agustín
+- Tomar, Loco y Usted · García Calvo, Agustín
+- Triunfo del matrimonio · García Calvo, Agustín
+- Violencia, organización, enseñanza y cultura · García Calvo, Agustín
+- Yo no soy ése · García Calvo, Agustín
+- 'Homo soberanus' y democracia radical. Una nueva especie humana en la sociedad global · García Guirao, Pedro
+- Entrevista a Richard Cleminson [CNT] · García Guirao, Pedro
+- Entrevista con Richard Cleminson · García Guirao, Pedro
+- La subjetividad encadenada. Crítica de la modernidad graciana · García Guirao, Pedro
+- México y España. Reflexiones en torno a la Casa del Obrero Mundial. Entrevista a Anna Ribero Carbó · García Guirao, Pedro
+- Para matar a Franco (de risa). El periódico ácrata en el exilio y los usos del humor gráfico · García Guirao, Pedro
+- Tradición contra novedad o las antinomias de la España Liberal · García Guirao, Pedro
+- Filosofia para niños. Genealogía de un proyecto · García Moriyón, Félix
+- La condición docente y la calidad de la educación · García Moriyón, Félix
+- Llegar a ser personas razonables · García Moriyón, Félix
+- Los derechos humanos y la educación del ciudadano · García Moriyón, Félix
+- Senderos de libertad [Terramar] · García Moriyón, Félix
+- Tesis sobre los derechos humanos · García Moriyón, Félix
+- El eco de los pasos [Biblioteca OmegAlfa] · García Oliver, Juan
+- El eco de los pasos [Ruedo Ibérico, 1978] · García Oliver, Juan
+- 15-M. Valoración y crítica · García Rúa, José Luis
+- Artículos en 'El País' · García Rúa, José Luis
+- Las ideas socialistas en Feuerbach · García Rúa, José Luis
+- Política y pedagogía · García Rúa, José Luis
+- Aprendiendo a obedecer. Crítica del sistema de enseñanza [La Neurosis o Las Barricadas, 2016] · García, Héctor C. y Olmeda, Alfredo
+- América, hoy [KCL] · García, Víctor
+- La Internacional obrera [KCL] · García, Víctor
+- Alas (Teatro. Un acto y tres cuadros) · Ghiraldo, Alberto
+- Alma Gaucha (Drama en tres actos y seis cuadros) [1907] · Ghiraldo, Alberto
+- Alma Gaucha (Drama en tres actos y seis cuadros) [2┬к edici├│n, 1909] · Ghiraldo, Alberto
+- Carne doliente · Ghiraldo, Alberto
+- Cr├│nicas Argentinas [1912] · Ghiraldo, Alberto
+- Fibras [1895] · Ghiraldo, Alberto
+- Gesta [1900] · Ghiraldo, Alberto
+- La columna de fuego (Drama en tres actos y cinco cuadros) [Editorial Mundo Latino] · Ghiraldo, Alberto
+- La tiran├нa del frac (Cr├│nica de un preso) [ Biblioteca Popular de Mart├нn Fierro, 1905] · Ghiraldo, Alberto
+- Los salvajes (Tr├нptico dram├бtico) [Prensa Moderna] · Ghiraldo, Alberto
+- M├║sica prohibida · Ghiraldo, Alberto
+- M├║sica prohibida ['Ideas y Figuras'] · Ghiraldo, Alberto
+- Hechos y comentarios y otros escritos [KCL] · Gilimón, Eduardo G.
+- Lobos en España (Estudio político-religioso) [KCL] · Giménez Igualada, Miguel
+- Los últimos románticos (Novela) [KCL] · Giménez Igualada, Miguel
+- Del amor, la guerra y la revolución · Giménez, Antoine
+- El darwinismo republicano y librepensador de un joven naturalista. Odón de Buen y del Cos y las Dominicales del Librepensamiento (1883-1900) · Girón Sierra, Álvaro
+- Democracia inocua. Lo que el postfranquismo ha hecho de nosotros [Postmetropolis Editorial, 2015] · Godicheau, François (coord.)
+- El proceso del POUM. Proceso ordinario de una justicia extraordinaria · Godicheau, François
+- La guerra civil, figura del desorden público. El concepto de guerra civil y la definición del orden político · Godicheau, François
+- La represión y la guerra civil española. Memoria y tratamiento histórico · Godicheau, François
+- Los Hechos de Mayo de 1937 y los 'presos antifascistas'. Identificación de un fenómeno represivo [Historia Social, nº 44, 2002] · Godicheau, François
+- Orígenes del concepto de orden público en España · Godicheau, François
+- Investigaci├│n acerca de la justicia pol├нtica y su influencia en la virtud y la dicha generales [Antorcha.net] · Godwin, William
+- Cuentos carcelarios [ZERO, 1970] · Gómez Casas, Juan
+- El apocalipsis [ZERO, 1969] · Gómez Casas, Juan
+- El relanzamiento de la CNT (Con un epílogo hasta la primavera de 1984) [CNT-AIT] · Gómez Casas, Juan
+- Los cruces de caminos (Antecedentes y pequeña historia de una década, 1966-1976) · Gómez Casas, Juan
+- El Vivir bien. Una crítica cultural del capitalismo · Gómez-Muller, Alfredo
+- Subtetividad y justicia social. Reflexiones a partir de Levinas · Gómez-Muller, Alfredo
+- Ricardo Flores Magón y su actitud en la Baja California [Editorial Academia Literaria, 1962] · González Monroy, Jesús
+- Carteles · González Pacheco, Rodolfo
+- Carteles I [¡Libertad!] · González Pacheco, Rodolfo
+- Carteles II [¡Libertad!] · González Pacheco, Rodolfo
+- Carteles. Prosas de Chile [Ediciones Cosmos] · González Pacheco, Rodolfo
+- Compañeros [Tierra y Libertad, 1936] · González Pacheco, Rodolfo
+- El sembrador · González Pacheco, Rodolfo
+- Hijos del Pueblo [Eleuterio, 2015] · González Pacheco, Rodolfo
+- Manos de luz (Comedia dramática) [Cuadernillos Inquietud] · González Pacheco, Rodolfo
+- Algunos [Nascimento, 1959] · González Vera, José Santos
+- Alhué [Universidad de Chile, 1997] · González Vera, José Santos
+- Eutrapelia, honesta recreación [Babel, 1955] · González Vera, José Santos
+- La copia y otros originales [Nascimento, 1961] · González Vera, José Santos
+- Necesidad de compañía [Nascimento, 1968] · González Vera, José Santos
+- El federalismo expuesto por Pi Margall [Agencia General de Libería y Artes Gráficas,1932] · González-Blanco, Edmundo
+- El universo discursivo en el cual se crece · Goodman, Paul
+- La des-educaci├│n obligatoria · Goodman, Paul
+- La des-educaci├│n obligatoria [Solidaridad Obrera] · Goodman, Paul
+- Valores objetivos [Cooper, David (ed.) - La dial├йcica de la liberaci├│n] · Goodman, Paul
+- El primero de mayo [V├йrtice] · Gori, Pietro
+- Ensayos y conferencias [KCL] · Gori, Pietro
+- Evoluci├│n de la sociolog├нa criminalista y otros ensayos · Gori, Pietro
+- La leyenda del Primero de mayo [Trad. de Mariano Mart├нn Rodr├нguez] · Gori, Pietro
+- Lo que queremos · Gori, Pietro
+- Primero de mayo · Gori, Pietro
+- Primero de mayo [B. Fueyo, 1909] · Gori, Pietro
+- Sin patria [El Teatro Universal] · Gori, Pietro
+- Alma de inquisidor (La Novela Ideal 301) [Publicaciones de 'La Revista Blanca', 1932] · Graupera, Ángela
+- Amor que vuelve · Graupera, Ángela
+- Ansias de volar (La Novela Libre 40) [Publicaciones de 'La Revista Blanca', 1920¿] · Graupera, Ángela
+- Bajo los cerezos (La Novela ideal 161) [Publicaciones de 'La Revista Blanca', 1920¿] · Graupera, Ángela
+- Camino de amor (La Novela ideal 173) [Publicaciones de 'La Revista Blanca', 1920¿] · Graupera, Ángela
+- Carmela · Graupera, Ángela
+- Corazón de mujer (La Novela Ideal 214) [Publicaciones de 'La Revista Blanca', 1920¿] · Graupera, Ángela
+- El abismo (La Novela Ideal 200) [Publicaciones de 'La Revista Blanca', 1920¿] · Graupera, Ángela
+- El batelero (La Novela Ideal 231) [Publicaciones de 'La Revista Blanca', 1920¿] · Graupera, Ángela
+- El gran crimen. Lo que yo he visto en la guerra [Ediciones de 'La Revista Blanca', 1935] · Graupera, Ángela
+- En busca del amor (La Novela Libre 26) [Publicaciones de 'La Revista Blanca', 1920] · Graupera, Ángela
+- En familia (La Novela Ideal 355) [Publicaciones de 'La Revista Blanca', 1933] · Graupera, Ángela
+- En las garras del hombre (La Novela ideal 151) [Publicaciones de 'La Revista Blanca', 1929] · Graupera, Ángela
+- La herencia (La Novela Libre 37) [Publicaciones de 'La Revista Blanca', 1920¿] · Graupera, Ángela
+- La moral de la gente bien (La Novela Ideal 188) [Publicaciones de 'La Revista Blanca', 1920] · Graupera, Ángela
+- La mujer que se vendió (La Novela Ideal 341) [Publicaciones de 'La Revista Blanca', 1933] · Graupera, Ángela
+- La persecución del Helenismo en Turquía [Luis Gili, 1920] · Graupera, Ángela
+- La redimida (La Novela Libre 22) [Publicaciones de 'La Revista Blanca', 1920¿] · Graupera, Ángela
+- La romántica (La Novela Ideal 406) [Publicaciones de 'La Revista Blanca', 1934] · Graupera, Ángela
+- La tentación (La Novela Ideal 133) [Publicaciones de 'La Revista Blanca', 1920¿] · Graupera, Ángela
+- La venganza de Jaime (La Novela ideal 42) [Publicaciones de 'La Revista Blanca', 1920¿] · Graupera, Ángela
+- La vocación (La Novela ideal 329) [Publicaciones de 'La Revista Blanca', 1932] · Graupera, Ángela
+- Los rebeldes (La Novela Libre 2) [Publicaciones de 'La Revista Blanca', 1920¿] · Graupera, Ángela
+- Los viejos (La Novela Ideal 253) [Publicaciones de 'La Revista Blanca', 1931] · Graupera, Ángela
+- Odio y amor (La Novela ideal 490) [Publicaciones de 'La Revista Blanca', 1935] · Graupera, Ángela
+- Ofrenda de amor (La Novela Libre 7) [Ediciones de 'La Revista blanca', 1920¿] · Graupera, Ángela
+- Padre y verdugo (La Novela ideal 317) [Publicaciones de 'La Revista Blanca', 1932] · Graupera, Ángela
+- La Socieda Futura (Tomo I) · Grave, Jean
+- La Socieda Futura (Tomo II) · Grave, Jean
+- La sociedad al d├нa siguiente de la revoluci├│n [Barcelona, Biblioteca An├бrquico-Comunista, 1887] · Grave, Jean
+- La sociedad del porvenir [Digitalizado] · Grave, Jean
+- La sociedad del porvenir [Escaneado] · Grave, Jean
+- Las aventuras de Nono · Grave, Jean
+- Las aventuras de Nono [Maucci] · Grave, Jean
+- Tierra Libre [Publicaciones de la Escuela Moderna, 1908] · Grave, Jean
+- ┬┐Teatro ├бcrata o teatro obrero┬┐ Chile, 1895-1927 · Grez Toso, Sergio
+- De la 'Regeneraci├│n del pueblo' a la huelga general [DIBAM, 1998] · Grez Toso, Sergio
+- La cuesti├│n social en Chile. Ideas y debates precursores (1804 - 1902) · Grez Toso, Sergio
+- Versos de amor y de combate [1929] · Gualteri, Fernando
+- Kinsey y la sexualidad · Guérin, Daniel
+- La peste parda · Guérin, Daniel
+- La revolución desjacobinizada · Guérin, Daniel
+- Rosa Luxemburg y la espontaneidad revolucionaria [1971] · Guérin, Daniel
+- Ada Martí (1915-1960) · Guillamón Iborra, Agustín
+- Barricadas en Barcelona. La CNT de la victoria de Julio de 1936 a la necesaria derrota de Mayo de 1937 · Guillamón Iborra, Agustín
+- Carta de Durruti desde la cárcel · Guillamón Iborra, Agustín
+- De los Comités de Defensa a las Milicias Populares · Guillamón Iborra, Agustín
+- El grupo franco-español de Los Amigos de Durruti · Guillamón Iborra, Agustín
+- Joan García Oliver (1902-1980) · Guillamón Iborra, Agustín
+- La agrupación de Los Amigos de Durruti · Guillamón Iborra, Agustín
+- La guerra del pan. Hambre y violencia en la Barcelona revolucionaria. De diciembe de 1936 a mayo de 1937 [Aldarull edicions-Dskntrl_Ed, 2014] · Guillamón Iborra, Agustín
+- La represión contra la CNT y los revolucionarios. Hambre y violencia en la Barcelona revolucionaria. De mayo a septiembre de 1937 [Dskntrl_Ed, 2015] · Guillamón Iborra, Agustín
+- Los Amigos de Durruti. Historia y antologia de textos · Guillamón Iborra, Agustín
+- Los Comités de Defensa de la CNT · Guillamón Iborra, Agustín
+- El terror estalinista en Barcelona (1938) [Descontrol y Aldarull, 2013] · Guillamón, Agustín
+- Revalorización de la guerrilla urbana · Guillén, Abraham y Hodges, Donald
+- Del antagonismo Este-Oeste a la contradicción Norte-Sur · Guillén, Abraham
+- El antagonismo entre las dos Américas · Guillén, Abraham
+- El desarrollo económico desigual · Guillén, Abraham
+- El error militar de las 'izquierdas' [Hacer, 1980] · Guillén, Abraham
+- El error militar de las 'izquierdas' [Hacer, 1980] [Doble página] · Guillén, Abraham
+- El error político militar de la República. La pérdida de la guerra civil (1936-1939) [Queimada Ediciones, 2012] · Guillén, Abraham
+- El futuro de América Latina, ¿será peor o mejor¿ · Guillén, Abraham
+- El pago de la deuda externa deteriora a los Gobiernos demoliberales · Guillén, Abraham
+- Estrategia de la guerrilla urbana [1966] · Guillén, Abraham
+- Hambre en el año 2000 · Guillén, Abraham
+- La automatización del trabajo · Guillén, Abraham
+- La dependencia occidental de minerales estratégicos del Tercer Mundo · Guillén, Abraham
+- La dialéctica de la guerra · Guillén, Abraham
+- La geografía del hambre · Guillén, Abraham
+- La gran crisis de América Latina · Guillén, Abraham
+- La productividad desigual entre las naciones · Guillén, Abraham
+- La propiedad social, modelo peruano de autogestión [Ediciones del Centro, 1976] · Guillén, Abraham
+- La revolución tecnológica, la más importante del siglo XX · Guillén, Abraham
+- Revolución tecnológica y conservadurismo económico · Guillén, Abraham
+- Teoría de la violencia [Editorial Jamcana, 1965] · Guillén, Abraham
+- Una bomba demográfica · Guillén, Abraham
+- Una sociedad de burócratas · Guillén, Abraham
+- Carilanteras. Mujeres y franquismo en un pueblo andaluz [Germinal, nº 7, 2009] · Gutiérrez Molina, José Luis
+- Fermín Salvochea Álvarez. La heterodoxia convertida en mito · Gutiérrez Molina, José Luis
+- Informe sobre el trabajo esclavo en España durante la dictadura franquista [Libre Pensamiento, nº 80, 2014] · Gutiérrez Molina, José Luis
+- La construcción de un mito. La Mano Negra · Gutiérrez Molina, José Luis
+- La huelga general de octubre de 1931 en Cádiz y la pervivencia del mito de la violencia revolucionaria · Gutiérrez Molina, José Luis
+- Los muelles de las Delicias y de la Paja. El barco de la muerte · Gutiérrez Molina, José Luis
+- Mayo de 1937, el freno definitivo de la revolución [Libre pPensamiento, nº 90, 2017] · Gutiérrez Molina, José Luis
+- Trabajo esclavo y obras hidráulicas. Extremeños en el Canal de los Presos · Gutiérrez Molina, José Luis
+- Un día en el Archivo Histórico del Tribunal Militar Territorial Segundo en Sevilla · Gutiérrez Molina, José Luis
+- Una ocasión desaprovechada. Salvochea y el centenario de su muerte [Germinal, nº 5, 2008] · Gutiérrez Molina, José Luis
+- Valeriano Orobón Fernández · Gutiérrez Molina, José Luis
+- El arte desde el punto de vista sociol├│gico · Guyau, Jean-Marie
+- Esbozo de una moral sin sanci├│n ni obligaci├│n [Trad. Jordi Riba] · Guyau, Jean-Marie
+- Esbozos de una moral sin sanci├│n ni obligaci├│n [Antorcha.net, 2003] · Guyau, Jean-Marie
+- Par├бbolas · Guyau, Jean-Marie
+- ¿Se repite la historia¿ De Berenguer a Suárez · Guzmán, Eduardo de
+- Ángel Pestaña · Guzmán, Eduardo de
+- Ángel Pestaña [Digitalizado] · Guzmán, Eduardo de
+- Cádiz, 1812. Dramáticos orígenes de la vida parlamentaria española · Guzmán, Eduardo de
+- CNT contra el terrorismo [Triunfo, n. 801, 1978] · Guzmán, Eduardo de
+- Cuatro días de noviembre · Guzmán, Eduardo de
+- El año de la victoria · Guzmán, Eduardo de
+- El clan de los Franco · Guzmán, Eduardo de
+- El estallido revolucionario de diciembre de 1933 · Guzmán, Eduardo de
+- El exilio español · Guzmán, Eduardo de
+- El terror · Guzmán, Eduardo de
+- Elecciones y abstención en España. UCD. 23 diputados más con un millón de votos menos · Guzmán, Eduardo de
+- Gil-Robles y la monarquía. Unas memorias desmitificadoras · Guzmán, Eduardo de
+- Ifni. Un territorio del Sahara mucho tiempo olvidado · Guzmán, Eduardo de
+- La CNT ante el futuro inmediato [Triunfo, n. 752, 1977] · Guzmán, Eduardo de
+- La muerte de la esperanza · Guzmán, Eduardo de
+- La muerte del general Primo de Rivera · Guzmán, Eduardo de
+- La soberanía popular frente al absolutismo autocrático. Una pugna de dos siglos · Guzmán, Eduardo de
+- La tragedia de millares de españoles bajo el nazismo. 'Los cerdos del comandante' · Guzmán, Eduardo de
+- Little Big Horn en su centenario. La última victoria de los indios americanos · Guzmán, Eduardo de
+- Los cinco congresos históricos de la CNT · Guzmán, Eduardo de
+- Los últimos días de Pablo Iglesias · Guzmán, Eduardo de
+- Madrid Rojo y Negro, Milicias Confederales · Guzmán, Eduardo de
+- Mi condena a muerte en 1940 · Guzmán, Eduardo de
+- Nacimiento, vicisitudes y muerte de la Primera República Española · Guzmán, Eduardo de
+- Periódicos y periodistas del Madrid en guerra · Guzmán, Eduardo de
+- Periodistas depurados, condenados o fusilados al término de nuestra guerra civil · Guzmán, Eduardo de
+- Retorno de Peirats, autor de 'La CNT en la revolución española' · Guzmán, Eduardo de
+- Revisión de la CNT · Guzmán, Eduardo de
+- Serrano Suñer ante la historia · Guzmán, Eduardo de
+- Significación del 1.° de mayo. La huelga general de 1886 en Chicago · Guzmán, Eduardo de
+- Sócrates Gómez. De la derrota a la represión · Guzmán, Eduardo de
+- También el horror fue aquí. La impresionante tragedia de Villarta de los Montes · Guzmán, Eduardo de
+- Terrorismo. El viejo de la montaña · Guzmán, Eduardo de
+- Un millón de presos políticos y doscientos mil muertos en España · Guzmán, Eduardo de
+- Veinticinco años de presidios franquistas. Fernando Carballo. La crisma partida pero el alma entera · Guzmán, Eduardo de
+- Vicisitudes y penalidades de la prensa española de 1936 a 1979 · Guzmán, Eduardo de
+- Vísperas de guerra civil en la España de 1936 (I) · Guzmán, Eduardo de
+- Vísperas de guerra civil en la España de 1936 (II) · Guzmán, Eduardo de
+- Eduardo de - Así empezó nuestro día más largo · Guzmán
+- Compendio de la Historia del socialismo [Biblioteca Salud y Fuerza, 1908] · Hamon, Augustin
+- Compendio de la historia del socialismo [Salud y Fuerza, 1908] · Hamon, Augustin
+- Determinismo y responsabilidad · Hamon, Augustin
+- El movimiento obrero en la Gran Bretaña · Hamon, Augustin
+- La revolución a través de los siglos [Centro Editorial Presa] · Hamon, Augustin
+- La revolución a través de los siglos [Digitalizado] · Hamon, Augustin
+- Psicología del militar profesional · Hamon, Augustin
+- La F├бbula de Yelensky · Hart, Matthew
+- Buscando bajo las piedras · Hermida, Yanira
+- Creando la revolución. Publicaciones anarcofeministas en el Estado español · Hermida, Yanira
+- Luchaban por un mundo nuevo [Descontrol, 2016] · Hermida, Yanira
+- Propuestas anarcofeministas en 'La conquista del pan' · Hermida, Yanira
+- Techo y dignidad. La lucha del Sindicato de Inquilinos de Tenerife · Hermida, Yanira
+- Teresa González de Chávez · Hermida, Yanira
+- No hay virtud en el servilismo. Biografía de Ricardo Flores Magón · Hernández Luna, Juan
+- Las tinajas de Ulúa [México, 1943] · Hernández, Teodoro
+- Los precursores de la revolución [México, 1940] · Hernández, Teodoro
+- 1893. Año clave del terrorismo en la España de la Restauración · Herrerín López, Ángel
+- La represión contra la CNT (1939-1949) · Herrerín López, Ángel
+- Los anarcomonárquicos. La opción monárquica en la CNT · Herrerín López, Ángel
+- El obrero moderno [Imprenta y Librería de F. Martínez, 1911] · Herreros Miguel, Tomás
+- A flor de piel · Hoyos y Vinent, Antonio de
+- El gran pecado la marquesa de Tardiente · Hoyos y Vinent, Antonio de
+- El pecado y la noche · Hoyos y Vinent, Antonio de
+- Eucarist├нa · Hoyos y Vinent, Antonio de
+- Frivolidad · Hoyos y Vinent, Antonio de
+- La estocada de la tarde · Hoyos y Vinent, Antonio de
+- La torer├нa · Hoyos y Vinent, Antonio de
+- La torer├нa [Wikipedia] · Hoyos y Vinent, Antonio de
+- La vejez de Heliog├бbalo · Hoyos y Vinent, Antonio de
+- La zarpa de la esfinge · Hoyos y Vinent, Antonio de
+- Los h├йroes de la visera · Hoyos y Vinent, Antonio de
+- San Sebasti├бn, coso taurino · Hoyos y Vinent, Antonio de
+- Conflicto, identificación y poder en la influencia minoritaria · Ibáñez, Tomás et al.
+- ¿Fondear en la objetividad o navegar hacia el placer¿ · Ibáñez, Tomás
+- Algunos puntos de referencia para descifrar las relaciones de poder · Ibáñez, Tomás
+- Aproximaciones a la psicología social · Ibáñez, Tomás
+- Contra la dominación [Gedisa, 2005] · Ibáñez, Tomás
+- Elogio de la imaginación · Ibáñez, Tomás
+- Factores sociales de la percepción. Hacia una psicosociología del significado · Ibáñez, Tomás
+- Foucault o la ética y la práctica de la libertad · Ibáñez, Tomás
+- La construcción social del socioconstruccionismo. Retrospectiva y perspectivas · Ibáñez, Tomás
+- La psicología social, ¿en busca del paradigma perdido¿ · Ibáñez, Tomás
+- Los efectos políticos de la psicología social · Ibáñez, Tomás
+- Psicología social construccionista · Ibáñez, Tomás
+- Psicología y psicosociología. ¿ Dos disciplinas o dos teorías¿ · Ibáñez, Tomás
+- Revoluci├│n y Dictadura en Cuba [Reconstruir, 1963] · Iglesias, Abelardo
+- Esbozos de la vida de Inocencio Pellegrini Lombardozzi · Ignotus
+- La 'agitadora' Carmen Serrano. Experiencias de lucha y subversi├│n cotidiana (Chile, comienzos del siglo XX) [2020] · Ignotus
+- Un mundo sin escuelas · Illich, Iván et al.
+- Al diablo con las buenas intenciones · Illich, Iván
+- Antología · Illich, Iván
+- El género vernáculo · Illich, Iván
+- El mensaje de la choza de Gandhi y otros textos · Illich, Iván
+- En América latina, ¿para qué sirve la escuela¿ · Illich, Iván
+- En el viñedo del texto. Etología de la lectura. Un comentario al 'Didascalicon' de Hugo de San Víctor · Illich, Iván
+- Energía y equidad · Illich, Iván
+- Energía y equidad. Desempleo creador · Illich, Iván
+- La convivencialidad · Illich, Iván
+- La era de los sistemas (Conversación con David Cayley) · Illich, Iván
+- La sociedad desescolarizada · Illich, Iván
+- La sociedad desescolarizada [Otra edición] · Illich, Iván
+- Némesis médica (La expropiación de la salud) [Digitalizado] · Illich, Iván
+- Némesis médica (La expropiación de la salud) [Escaneado] · Illich, Iván
+- Obras Reunidas (Vol. I) · Illich, Iván
+- Obras Reunidas (Vol. II) · Illich, Iván
+- Potencia de los pobres · Illich, Iván
+- Profesiones inhabilitantes · Illich, Iván
+- Al margen de la ciencia [1908] · Ingenieros, José
+- Criminología [Daniel Jorro, 1913] · Ingenieros, José
+- Dos páginas de psiquiatría criminal [1900] · Ingenieros, José
+- El dogma socialista de Echeverría [1920] · Ingenieros, José
+- El hombre mediocre · Ingenieros, José
+- El hombre mediocre [KCL] · Ingenieros, José
+- Estudios sobre el amor [Claridad] · Ingenieros, José
+- Hacia una moral sin dogmas [KCL] · Ingenieros, José
+- Hacia una moral sin dogmas [Talleres Gráficos de L.J. Rosso & Cía, 1917] · Ingenieros, José
+- Histeria y sugestión. Estudios de psicología clínica [Talleres Gráficos Argentinos, 1919] · Ingenieros, José
+- Italia en la ciencia, en la vida y en el arte [Sempere] · Ingenieros, José
+- La cultura filosófica en España · Ingenieros, José
+- La cultura filosófica en la España medieval · Ingenieros, José
+- La locura en la Argentina [1919] · Ingenieros, José
+- La locura en la Argentina [Cooperativa Editorial 'Buenos Aires', 1920] · Ingenieros, José
+- La psicopatología en el arte [1903] · Ingenieros, José
+- La simulación de la locura · Ingenieros, José
+- La simulación en la lucha por la vida · Ingenieros, José
+- La simulación en la lucha por la vida [Talleres Gráficos de Schenone Hnos y Linari, 1920] · Ingenieros, José
+- Las direcciones filosóficas de la cultura argentina · Ingenieros, José
+- Las doctrinas de Ameghino · Ingenieros, José
+- Las fuerzas morales [Antorcha.net] · Ingenieros, José
+- Las fuerzas morales [La Guillotina, 2010] · Ingenieros, José
+- Las fuerzas morales [Otra edición] · Ingenieros, José
+- Los estudios psicológicos en la Argentina · Ingenieros, José
+- Nueva clasificación de los delincuentes [1907] · Ingenieros, José
+- Por la unión Latino Americana [L.J. Rosso & Cía, 1922] · Ingenieros, José
+- Proposiciones relativas al porvenir de la filosofía [Talleres Gráficos Argentinos, 1919] · Ingenieros, José
+- Tratado del amor [KCL] · Ingenieros, José
+- 1968. Cuando se marchit├│ el rojo de las banderas [El Lokal, 2018] · Izard, Miquel
+- Alucinaciones, artificios, enga├▒os, f├бbulas y mitos · Izard, Miquel
+- Artistas y barruntafechas · Izard, Miquel
+- Caballos, canes, conquistadores y cruzados · Izard, Miquel
+- Cabello planchado, origen negado · Izard, Miquel
+- Cara al sol jugando a contar mentiras · Izard, Miquel
+- Cimarrones, gauchos y cuatreros · Izard, Miquel
+- Cuando los quim├йricos devinieron sanguinarios · Izard, Miquel
+- Esclavos y negreros [Biblioteca OmegaAlfa] · Izard, Miquel
+- Himnos y baladas · Izard, Miquel
+- La encrucijada antillana · Izard, Miquel
+- La memoria callada · Izard, Miquel
+- Los indios son all├н todav├нa indios y vagan en la barbarie esperando la hispanidad · Izard, Miquel
+- Nadie recordar├б nuestros nombres cuando hayamos muerto · Izard, Miquel
+- Que lo sepan ellos y no lo olvidemos nosotros (El inveros├нmil verano del 36 en Catalu├▒a) [Virus, 2012] · Izard, Miquel
+- Quien no trabaja no come · Izard, Miquel
+- Resistiendo la civilizaci├│n o desde├▒ando el progreso. Introducci├│n · Izard, Miquel
+- Por qu├й he robado · Jacob, Alexandre Marius
+- Por qu├й he robado [Ediciones Tierra Verde] · Jacob, Alexandre Marius
+- Cancionero revolucionario [Imprenta El Progreso, 1916] · Jara C., Luis A. (ed.)
+- El socialismo [Publicaciones de la Escuela Moderna] · Jaurès, Jean
+- El poema vidente [Editorial Eleuterio] · José Domingo Gómez Rojas
+- Rebeldías líricas [Ercilla, 1940] · José Domingo Gómez Rojas
+- Rebeldías líricas [Lux, 1921] · José Domingo Gómez Rojas
+- Los sucesos revolucionarios de Bujalance [edición del grupo Los Iguales, 1944] · Juan del Pueblo
+- El barco de los locos · Kaczynski, Theodore
+- El buque de los necios · Kaczynski, Theodore
+- El truco m├бs ingenioso del sistema · Kaczynski, Theodore
+- Golpear donde duele · Kaczynski, Theodore
+- La sociedad industrial y su futuro (Manifiesto Unabomber) [Lo Bosques de Thoureau] · Kaczynski, Theodore
+- La sociedad industrial y su futuro [Isumatag, 2011] · Kaczynski, Theodore
+- Manifiesto de 'Unabomber'. La sociedad industrial y su futuro · Kaczynski, Theodore
+- Manifiesto del 'Unabomber'. La sociedad industrial y su futuro [El Abed├║l] · Kaczynski, Theodore
+- Peleamos contra la injusticia (Vol. I) [México, 1960] · Kaplan, Samuel
+- Walt Whitman y los wobblies · Ketelle, Elizabeth Ann
+- Ideolog├нas y tendencias en la Comuna de Par├нs [Terramar, 2013] · Koechlin, Heinrich
+- Voces rebeldes · Kornbluh, Joyce L. (ed.)
+- Discurso de la servidumbre voluntaria [Trad. Luis Casado] · La Boétie, Étienne de
+- Discurso de la servidumbre voluntaria [Virus, 2016] · La Boétie, Étienne de
+- El discurso de la servidumbre voluntaria [Terramar, 2008] · La Boétie, Étienne de
+- Los Subversivos. Las maquinaciones del poder, тАЬrep├║blicaтАЭ de chile, 1920 [Quimant├║, 2012] · Lagos Mieres, Manuel
+- Incitaci├│n al socialismo [Antorcha.net] · Landauer, Gustav
+- Incitaci├│n al socialismo. La revoluci├│n · Landauer, Gustav
+- La revoluci├│n [KCL] · Landauer, Gustav
+- La red de dominaci├│n [L'Anomia Ediciones] · Landstreicher, Wolfi
+- La red de la dominaci├│n [Ediciones Sin Nombre, 2012] · Landstreicher, Wolfi
+- Tao Te Ching (Traducci├│n an├│nima) · Lao-Tse
+- Tao Te Ching. Los libros del Tao [Trotta, 2012] · Lao-Tse
+- Tao Te King · Lao-Tse
+- Crítica del crisitianismo [Publicaciones de la Escuela Moderna] · Laurent, F.
+- El antisemitismo. Su historia y sus causas · Lazare, Bernard
+- Crisis de las democracias [Im├бn, 1935] · Lazarte, Juan
+- La buroracia. Sentido y significado C├бtedra Lisando de la Torre[, 1960] · Lazarte, Juan
+- La reforma universitaria. L├нneas y trayectorias [Librer├нa Ruiz, 1935] · Lazarte, Juan
+- Liberaci├│n animal m├бs all├б del veganismo [Descontrol, 2016] · Lemes, Roberto
+- Psicología Étnica I [Publicaciones de la Escuela Moderna, 1905] · Letourneau, Ch.
+- Psicología Étnica II [Publicaciones de la Escuela Moderna, 1905] · Letourneau, Ch.
+- Psicología Étnica III [Publicaciones de la Escuela Moderna, 1905] · Letourneau, Ch.
+- Psicología Étnica IV [Publicaciones de la Escuela Moderna, 1905] · Letourneau, Ch.
+- El Estado en la historia · Leval, Gaston
+- El Estado en la historia [ZYX, 1978] · Leval, Gaston
+- Mi palabra ['La Protesta', 1933] · Lévano, Delfín
+- Un despertar al proletariado [1931] · Lévano, Delfín
+- Organización obrera ['La Libertad', 1910] · Lévano, Manuel C.
+- La tiran├нa de la tiran├нa · Levine, Cathy
+- La CNT al servicio del pueblo [Producciones editoriales, 1978] · Liarte, Ramón
+- Maestría y ejemplo de la revolución social española [Grupo Cultural de Estudios Sociales de Melbourne, 2016] · Liarte, Ramón
+- Contra todo pronostico 1972-1986 · Liberacion Animal
+- Mas que palabras · Liberacion Animal
+- Historia de la Comuna de Par├нs · Lissagaray, Prosper Olivier
+- Historia de la Comuna de Par├нs (Vol. I) [Estela, 1971] · Lissagaray, Prosper Olivier
+- Historia de la Comuna de Par├нs (Vol. II) [Estela, 1971] · Lissagaray, Prosper Olivier
+- El Modernismo [Taurus, 1981] · Litvak, Lily
+- La cultura obrera en Cuba. La lectura colectiva en los talleres de tabaquer├нa · Litvak, Lily
+- Libro de la soledad [1950] · Lizano, Jesús
+- Lizania · Lizano, Jesús
+- Lizania (Apéndice) [El Ciervo, 2004] · Lizano, Jesús
+- Campos de concentraci├│n en la Espa├▒a de Franco [Producciones Editoriales, 1978] · Llarch, Joan
+- Cipriano Mera · Llarch, Joan
+- Recuerdo de Benjamín Cano Ruiz · Llorens, Ignacio de
+- Evolución super-orgánica (La naturaleza y el problema social) [Publicaciones de la Escuela Moderna, 1905] · Lluria, Enrique
+- Dirección política u orientación ideológica del movimiento obrero [Wikipedia] · López Arango, Emilio
+- Ideas y ética [Wikipedia] · López Arango, Emilio
+- Medios de lucha [Wikipedia] · López Arango, Emilio
+- Cartas de la Revolución. Reportes de un obrero chileno en la Guerra Civil Española (1936-1939) [Mar y Tierra Ediciones, 2016] · López Cáceres, Félix
+- El botón de fuego [Biblioteca del Obrero, 1902] · López Montenegro, José
+- Rastros de rostros en un prado rojo (y negro). Las Casas Baratas de Can Tunis en la revolución social de los años treinta · López Sánchez, Pere
+- Eco jerezano. Poes├нa [Autoedici├│n, 1987] · Lozano, Manuel
+- C├│mo y por qu├й asesin├й a la princesa Sissi [Crimental, 2015] · Lucheni,Luigi
+- Ante la Muerte y otros textos · M., Cayetano
+- Solidaridad Obrera y el periodismo de ra├нz ├бcrata [Ediciones Solidaridad Obrera, 2007] · Madrid Santos, Francisco
+- Editores Mexicanos Unidos. La obra cultural del exiliado Fidel Miró · Maestre Marín, Rafael y Molina Beneyto, Pilar
+- Henry David Thoreau. ├Йtica como unidad de teor├нa y praxis (Parte I) · Maiso Blanco, Jordi
+- Henry David Thoreau. ├Йtica como unidad de teor├нa y praxis (Parte II) · Maiso Blanco, Jordi
+- Antes del momento [KCL] · Malato, Charles
+- Antes del momento [Presa y Ros├│n] · Malato, Charles
+- Correspondencia escolar. Primer manuscrito. Impresiones y pensamientos de dos ni├▒os ausentes [Publicaciones de la Escuela Moderna, 1905] · Malato, Charles
+- Desenvolvimiento de la humanidad [Centro Editorial Presa] · Malato, Charles
+- La gran huelga (Vol. I) [KCL] · Malato, Charles
+- Le├│n Mart├нn o la miseria, sus causas y sus remedios. Lectura popular [Publicaciones de la Escuela Moderna, 1905] · Malato, Charles
+- Revoluci├│n cristiana y revoluci├│n social [Atlante] · Malato, Charles
+- Revoluci├│n cristiana y revoluci├│n social [KCL] · Malato, Charles
+- Magonismo y vida comunal mesoamericana. A 90 años de la muerte de Ricardo Flores Magón [Oaxaca, 2012] · Maldonado Alvarado, Benjamín
+- Foucault para Encapuchadas · Manada de Lobxs
+- Clandestinos. El maquis contra el franquismo, 1934-1975 · Marin, Dolors
+- Ortiz. General sin dios ni amo [Hacer, 1999] · Márquez Rodríguez J.M. y Gallardo Romero, J.J.
+- El sentido de la vida · Martí Ibáñez, Félix
+- La canción sin palabras [La Novela Española, 1947] · Martí Ibáñez, Félix
+- La epopeya de la medicina · Martí Ibáñez, Félix
+- MD en español (Artículos escogidos) · Martí Ibáñez, Félix
+- Tres mensajes a la mujer · Martí Ibáñez, Félix
+- Educación para la igualdad · Martín Luengo, Josefa
+- Memoria de prácticas de enseñanza · Martín Luengo, Josefa
+- Recuerdos de un militante de la CNT [Ediciones Picazo, 1979] · Martín, Enrique
+- La huelga general de 1917 [Zero-ZYX, 1971] · Martín, Jacinto
+- El movimiento obrero peruano 1918-1919 [Cronos] · Martínez de la Torre, Ricardo
+- La vida heroica de Práxedis G. Guerrero [1960] · Martínez Núñez, Eugenio
+- La vida heroica de Práxedis G. Guerrero [KCL] · Martínez Núñez, Eugenio
+- Voces de revuelta [Descontrol, 2017] · Martínez Paredes, Mariano
+- El paro forzoso [Ediciones Mar] · Martínez Rizo, Alfonso
+- Laicismo [Ediciones Mar] · Martínez Rizo, Alfonso
+- Pistolerismo [Ediciones Mar] · Martínez Rizo, Alfonso
+- La sociología criminal · Martínez Ruiz, José (Azorín)
+- El neomalthusianismo ib├йrico e italiano. Un precedente de la ecolog├нa humana contempor├бnea · Masjuan Bracons, Eduard
+- La ciudad jard├нn o ecol├│gica contra la ciudad lineal. Una controversia hist├│rica · Masjuan Bracons, Eduard
+- Los or├нgenes del neomalthusianismo ib├йrico · Masjuan Bracons, Eduard
+- Procreaci├│n consciente y emigraci├│n. El ejemplo del neomalthusianismo ib├йrico en Am├йrica Latina (1900-1914) · Masjuan Bracons, Eduard
+- Tribunales populares, justicia de clase y nuevo derecho. El caso Barriobero (1936-1939) · Masjuan Bracons, Eduard
+- El hijo del camino [La Novela Ideal] · Maymón, Antonia
+- Almafuerte. El libro humilde y doliente [Buena Vista Editores, 2014] · Medina Onrubia, Salvadora
+- Las descentradas y otras piezas teatrales [Colihue-Biblioteca Nacional, 2007] · Medina Onrubia, Salvadora
+- El movimiento obrero latinoamericano. Tomo I [Editorial Patria, 1990] · Melgar Bao, Ricardo
+- El movimiento obrero latinoamericano. Tomo II [Editorial Patria, 1990] · Melgar Bao, Ricardo
+- Herbert Read. Esbozo biográfico y de introducción a su obra [Germinal, nº 8, 2009] · Méndez, Nelson
+- De nuestra guerra (Diario de campa├▒a) · Mera, Cipriano
+- ┬┐Socialismo o monopolismo┬┐ [Sempere. Trad. Jos├й Prat] · Merlino, Francesco Saverio
+- Cr├нtica de la religi├│n y del Estado · Meslier, Jean
+- La raz├│n natural o Las ideas naturales opuestas a las sobrenaturales · Meslier, Jean
+- La religi├│n natural (Mi testamento) · Meslier, Jean
+- Y ahora, volved a vuestras casas · Mesquida, Evelyn
+- La comuna de Kronstadt · Mett, Ida
+- La comuna de Kronstadt [Ediciones Espartaco Internacional, 2006] · Mett, Ida
+- El mundo nuevo [KCL] · Michel, Louise
+- La Comuna [Centro Editorial Presa] · Michel, Louise
+- Los claveles rojos · Michel, Louise
+- Alexandra David-N├йel · Middleton, Ruth
+- Sobre la distancia [La Neurosis o Las Barricadas, 2015] · Miranda, José A.
+- Cuentos · Mirbeau, Octave
+- El Jard├нn de los Suplicios [Maucci] · Mirbeau, Octave
+- El ni├▒o que recog├нa setas · Mirbeau, Octave
+- El pecado · Mirbeau, Octave
+- Escr├║pulos · Mirbeau, Octave
+- Escr├║pulos [Publicaciones Teatralia, 1909] · Mirbeau, Octave
+- Est├йtica dram├бtica · Mirbeau, Octave
+- La cabeza cortada · Mirbeau, Octave
+- La epidemia [1904] · Mirbeau, Octave
+- La guerra · Mirbeau, Octave
+- La octogenaria · Mirbeau, Octave
+- La vaca manchada · Mirbeau, Octave
+- Leon Bloy · Mirbeau, Octave
+- Los malos pastores · Mirbeau, Octave
+- Los malos pastores [1913] · Mirbeau, Octave
+- Marroquiner├нa · Mirbeau, Octave
+- Paul Gauguin · Mirbeau, Octave
+- Recuerdos de un pobre diablo · Mirbeau, Octave
+- Un combate · Mirbeau, Octave
+- Van Gogh · Mirbeau, Octave
+- En el centro del volc├бn · Mis├йin, Dominique
+- Cant├бndole al pueblo [Cisplatina, 1956] · Molina, Carlos
+- El m├бstil de mi guitarra [1999] · Molina, Carlos
+- Yunques rojos  [Librer├нa Blundi, 1963] · Molina, Carlos
+- Socialización, Colectivización y Represión en Alcoy (1936-1956) [Queimada, 2015] · Moltó, Salomé
+- Introducci├│n al estudio antropol├│gico de la religi├│n · Morris, Brian
+- Religi├│n y antropolog├нa. Una introducci├│n cr├нtica · Morris, Brian
+- Arte y socialismo · Morris, William
+- La sociedad futura [Maucci, 1913] · Morris, William
+- Los peregrinos de la esperanza · Morris, William
+- Manifiestos · Morris, William
+- Noticias de ninguna parte [La Protesta, 1928] · Morris, William
+- Noticias de ninguna parte [Maucci, 1903] · Morris, William
+- Por el renacimiento del arte · Morris, William
+- Trabajo ├║til contra trabajo in├║til · Morris, William
+- Capital y trabajo [Antorcha.net] · Most, Johann
+- La peste religiosa [Biblioteca de Tierra y Libertad, 1915] · Most, Johann
+- La peste religiosa [Tierra y Libertad, 1915] · Most, Johann
+- La peste, la bestia y el monstruo [Libros de Anarres, 2014] · Most, Johann
+- El mito de la m├бquina 1 - T├йcnica y evoluci├│n humana · Mumford, Lewis
+- El mito de la m├бquina 1 - T├йcnica y evoluci├│n humana [Doble p├бgina] · Mumford, Lewis
+- El mito de la m├бquina 2 - El pent├бgono del poder · Mumford, Lewis
+- Historia de las utop├нas · Mumford, Lewis
+- Historia natural de la urbanizaci├│n · Mumford, Lewis
+- La ciudad en la historia · Mumford, Lewis
+- La utop├нa, la ciudad y la m├бquina · Mumford, Lewis
+- T├йcnica y civilizaci├│n · Mumford, Lewis
+- Armando Triviño. Wobblie [Quimantú, 2009] · Muñoz Cortés, Víctor
+- Apuntes para una historia del Sindicato Único del Automóvil (1903-1965) · Muñoz, Pascual
+- Atentado al arzobispo de Montevideo (18 de junio de 1922) · Muñoz, Pascual
+- Cultura obrera en el interior del Uruguay (Salto, Paysandú y Rocha, 1918-1925) [Lupita Ediciones, 2015] · Muñoz, Pascual
+- El 1º de Mayo en Uruguay (1890-1925) [Tierra y Tempestad] · Muñoz, Pascual
+- El último 1º de Mayo bajo el capitalismo [Tierra y Tempestad] · Muñoz, Pascual
+- La primera huelga general en el Uruguay (23 de mayo 1911) [La Turba Ediciones, 2011] · Muñoz, Pascual
+- Obreros o Carneros. De la huelga maritima a la huelga general por la libertad de Ángel González [Tierra y Tempestad] · Muñoz, Pascual
+- Diversidad, multiculturalismos e identidades. Perspectivas de g├йnero · Nash, Mary
+- El aprendizaje del feminismo hist├│rico en Espa├▒a · Nash, Mary
+- Experiencia y aprendizaje. La formaci├│n hist├│rica de los feminismos en Espa├▒a · Nash, Mary
+- Nuevas dimensiones en la historia de la mujer · Nash, Mary
+- Republicanas en la guerra civil. El compromiso antifascista · Nash, Mary
+- Rojas, las mujeres republicanas en la Guerra Civil [KCL] · Nash, Mary
+- Recuerdos de un viejo militante · Negre, José
+- Evolución de los mundos [Publicaciones de la Escuela Moderna, Barcelona] · Nergal, M. J.
+- Qu├нmica de la cuesti├│n social. Tomo I [Jos├й M├йdico, 1906] · Nieva, Teobaldo
+- Qu├нmica de la cuesti├│n social. Tomo II [Jos├й M├йdico, 1906] · Nieva, Teobaldo
+- Servando Rocha · Nos Estamos Acercando… La Historia de Angry Brigade
+- Manual de Okupació [2ª Edición] · Oficina de Okupación de Madrid
+- Manual de Okupación · Oficina de Okupación de Madrid
+- De una a otra revoluci├│n, 1789-1918 [1961] · Olaya Morales, Francisco
+- De una a otra revoluci├│n, 1789-1918 [1961] [Doble p├бgina] · Olaya Morales, Francisco
+- El fusilamiento de Penina [Pu├▒o y Letra, 2012] · Oliva, Aldo
+- La pedagogía obrerista de la imagen · Olivé i Serret, Enric
+- Del apoyo mutuo a la solidaridad neoliberal [La Neurosis o Las Barricadas, 2017] · Olmeda, Alfredo
+- El genocidio franquista en extremadura · Olmedo Alonso, Ángel, et al.
+- El Amigo del Pueblo. Un modelo de prensa obrera. Azuaga 1930-33 · Olmedo Alonso, Ángel
+- La CNT y los comunistas españoles · Orobón Fernández, Valeriano
+- Francisco Ascaso [Maucci] · Orts-Ramos, Antonio
+- Saberes transatlánticos en la historia de la ciencia Barcelona-Buenos Aires. Notas sobre historia urbana relacional · Oyón, José Luis y Golda-Pongratz, Katrhin
+- Historia urbana e historia obrera. Reflexiones sobre la vida obrera y su inscripción en el espacio urbano, 1900-1950 · Oyón, José Luis
+- Mundo obrero, inmigración y radicalismo cenetista en la Barcelona de la década de 1930 · Oyón, José Luis
+- Obreros en la ciudad. Líneas de un proyecto de investigación en historia urbana · Oyón, José Luis
+- Historia urbana. El espacio no es inocente · Oyón,. José Luis y Serra, Marta
+- Memorias [Memoriaren Bideak - Gerónimo de Uztariz, 2009] · Padín Gallo, Félix
+- Movimientos revolucionarios en Veracruz [1941] · Padua, Cándido Donato
+- La cuestión escolar. Críticas y alternativas [Laia, 1984] · Palacios, Jesús
+- Compendio razonado de gramática española [Publicaciones de la Escuela Moderna, 1905] · Palasi Martin, Fabián
+- Siete años enterrado vivo [Indubio Pro Reo-Publicaciones CorazónDeFuego] · Panclasta, Biófilo
+- De La Dictadura a La Guerra Civil (1923-1939) · Paniagua Fuentes, Javier
+- La Europa revolucionaria (1789-1848) · Paniagua Fuentes, Javier
+- La historia social en el div├бn del psicoanalista · Paniagua Fuentes, Javier
+- Elementos de Aritmética. Volumen de principiantes [Publicaciones de la Escuela Moderna, 1905] · Paraf-Javal et al.
+- La sustancia universal [Publicaciones de la Escuela Moderna, 1905] · Paraf-Javal y Bloch, Albert
+- Elementos de Aritmética. Segundo Volumen. Curso Medio [Publicaciones de la Escuela Moderna, 1905] · Paraf-Javal
+- El desorden de la libertad [Tut├нa Ediciones] · Passamani, Massimo
+- La C├бrcel y su Mundo · Passamani, Massimo
+- Durruti en la Revolución española [FAL, 1996] · Paz, Abel
+- Paradigma de una revolución (19 de julio de 1936, en Barcelona) [Ediciones AIT, 1967] · Paz, Abel
+- Viaje al pasado 1936-1939 [FAL, 2002] · Paz, Abel
+- ¡Aprendamos de la revolución de Rojava! [Descontrol, 2018] · Pedraforca, Baran
+- En los orígenes de la geografía crítica · Pelletier, Philippe y Ferretti, Federico
+- El individuo y la masa y La educación de la libertad [Biblioteca Editorial Salud y Fuerza, 1908] · Pellicer Paraire, Antonio
+- El arte y la rebeld├нa (Conferencia, Par├нs, 1896) · Pelloutier, Fernand
+- El arte y la rebeld├нa (Conferencia, Par├нs, 1896) [Biblioteca de 'Tierra y Libertad'. Trad. Jos├й Prat] · Pelloutier, Fernand
+- Historia de las bolsas del trabajo [Antorcha.net] · Pelloutier, Fernand
+- Historia de las bolsas del trabajo [KCL] · Pelloutier, Fernand
+- Historia de las bolsas del trabajo [Zero-ZYX, 1978] · Pelloutier, Fernand
+- Antonio Soto. desde Ferrol hasta el fin del mundo [Galicia en el Mundo, 2009] · Pérez Leira, Lois
+- Manuel Rojas. La novelesca vida de un novelista [Zig-Zag, 1994] · Pérez, Floridor
+- Cómo salí de Rusia [Rojo y Negro, 1933] · Pérez, Vicente (Combina)
+- Un militante de la CNT en Rusia [Rojo y Negro, 1933] · Pérez, Vicente (Combina)
+- Contra el Leviat├бn y contra su historia [Segadores-Descontrol, 2019] · Perlman, Fredy
+- El persistente atractivo del nacionalismo [Etc├йtera et al., 1998] · Perlman, Fredy
+- La reproducci├│n de la vida cotidiana · Perlman, Fredy
+- La reproducci├│n de la vida cotidiana (y otros textos) [Lazo Negro, 2019] · Perlman, Fredy
+- Niño [1987] · Poch y Gascón, Amparo
+- Diario e ideario de un delincuente · Pombo da Silva, Gabriel
+- Parte de un recorrido. Compilado de escritos de Gabriel Pombo da Silva · Pombo da Silva, Gabriel
+- Cadenas de evasi├│n espa├▒olas en la II Guerra Mundial · Pons Prades, Eduardo
+- El asalto al Palacio de Invierno · Pons Prades, Eduardo
+- La banda de Bonnot · Pons Prades, Eduardo
+- Republicanos en la liberaci├│n de Par├нs · Pons Prades, Eduardo
+- Republicanos espa├▒oles en la liberaci├│n de Par├нs · Pons Prades, Eduardo
+- Republicanos espa├▒oles en los campos de exterminio nazis · Pons Prades, Eduardo
+- Golpes y gritos. Poemas en la c├бrcel [Descontrol, 2017] · Pont, Daniel (Comp.)
+- Lucha y muerte por la libertad. La red de evasión de Francisco Ponzán · Ponzán, Pilar
+- El sabotaje · Pouget, Émile
+- El sabotaje [Antorcha.net] · Pouget, Émile
+- La acción directa · Pouget, Émile
+- ¿Herejías¿ · Prat, José
+- Crónicas demoledoras [Sempere] · Prat, José
+- La Burguesía y el Proletariado [Biblioteca Editorial Salud y Fuerza] · Prat, José
+- G├йnesis de la inexistencia de 'dios' [KCL] · Provoste, Everth
+- Pensamiento armado [KCL] · Provoste, Everth
+- Socia Revolucio [KCL] · Provoste, Everth
+- Don Qujote de Alcalá de Henares [Solidaridad Obrera, 1946] · Puyol Albéniz, José María
+- Vida y muerte de Higinio Carrocera Mortera [Subcomité Regional en el Exilio de la CRT de Asturias, León y Palencia, 1960] · Quijano-Lindez, Alonso
+- Utopismo socialista (1830-1893) [Biblioteca Ayacucho] · Rama, Carlos M. (ed.)
+- Los Or├нgenes del Movimiento Obrero en el Uruguay [La Turba ediciones] · Rama, Carlos M., et al.
+- El movimiento obrero y social en Am├йrica Latina. Primeras experiencias (1830-1917) · Rama, Carlos M.
+- Modelos autoritarios latinoamericanos del siglo XX · Rama, Carlos M.
+- Teor├нa de la historia. Introducci├│n a los estudios hist├│ricos [Tecnos, 1974] · Rama, Carlos M.
+- Al diablo con la cultura [KCL] · Read, Herbert
+- Al diablo con la cultura [Terramar, 2013] · Read, Herbert
+- Arte y alienaci├│n [KCL] · Read, Herbert
+- Arte y alienaci├│n [Proyecci├│n, 1976] · Read, Herbert
+- Arte y sociedad [Pen├нnsula, 1977] · Read, Herbert
+- Educaci├│n por el Arte [Paid├│s, 1959] · Read, Herbert
+- El significado del arte · Read, Herbert
+- Imagen e idea. La funci├│n del arte en el desarrollo de la conciencia humana [FCE, 1975] · Read, Herbert
+- La ni├▒a verde [KCL] · Read, Herbert
+- La redenci├│n del robot [Antorcha.net] · Read, Herbert
+- La renuncia a la palabra · Read, Herbert
+- El socialismo salvaje [Virus, 2020] · Reeve, Charles
+- Bulgaria desconocida · Relgis, Eugen
+- Corazones y motores [Ediciones Humanidad] · Relgis, Eugen
+- Humanitarismo y Eugenismo · Relgis, Eugen
+- Humanitarismo y Eugenismo [KCL] · Relgis, Eugen
+- Individualismo, Est├йtica y Humanitarismo · Relgis, Eugen
+- La internacional pacifista [Biblioteca de 'Estudios', 1932] · Relgis, Eugen
+- Las aberraciones sexuales en la Alemania nazi · Relgis, Eugen
+- Las aberraciones sexuales en la Alemania nazi [otro] · Relgis, Eugen
+- Los Principios Humanitaristas · Relgis, Eugen
+- Gustav Landauer · Revista Bicicleta
+- Los 70 a destajo · Ribas, Jos├й
+- Los 70 a destajo · Ribas, José
+- Enseñanzas de la revolución española · Richards, Vernon
+- Cartas y textos [KCL] · Rivera, Librado
+- Degeneración de la especie humana [Biblioteca Editorial Salud y Fuerza, 1909] · Robin, Paul
+- La mujer pública · Robin, Paul
+- Manifiesto a los partidarios de la educación integral · Robin, Paul
+- Veganismo y leyendas Mi'kmaq · Robinson, Margaret
+- Las colectividades agrarias en Castilla-La Mancha · Rodrigo González, Natividad
+- La labor pedagógica de Adela del Campo, una mujer libre en los campos de concentración del sur de Francia · Rodrigo, Antonina
+- Mujeres para la historia. La España soleciada del siglo XX [Ediciones Carena] · Rodrigo, Antonina
+- ¿Paz en Europa¿ · Rojas, Manuel
+- De la poesía a la revolución [Editorial Ercilla, 1938] · Rojas, Manuel
+- Deshecha rosa (poema) · Rojas, Manuel
+- El animismo de Hudson · Rojas, Manuel
+- El Colo Colo · Rojas, Manuel
+- El cuento y la narración · Rojas, Manuel
+- El socialismo y la libertad · Rojas, Manuel
+- El último combatiente · Rojas, Manuel
+- Ensayo de la mañana · Rojas, Manuel
+- España otra vez · Rojas, Manuel
+- Hijo de ladrón · Rojas, Manuel
+- La literatura y el hombre. Horacio Quiroga · Rojas, Manuel
+- Lanchas en la bahía [Zig-Zag] · Rojas, Manuel
+- Recuerdos de José Domingo Gómez Rojas · Rojas, Manuel
+- Sobre 'Hijo de ladrón' · Rojas, Manuel
+- Sombras contra el muro [Sombraysén Editores, 2008] · Rojas, Manuel
+- Sombras contra el muro [Zig-Zag, 1963] · Rojas, Manuel
+- Un espíritu inquieto · Rojas, Manuel
+- Un mendigo · Rojas, Manuel
+- Versos para la Revolución de Octubre · Rojas, Manuel
+- Páginas de la historia del proletariado español (1848-1907) [Cenit, 1971] · Roller, Arnold
+- Breve historia del MIL · Rosés Cordovilla, Sergi
+- Dialéctica, materialismo y cientificismo [@rebeldealegre] · Rossineri, Patrick
+- La quimera del Poder Popular. Una forma de integración al sistema [Libertad!, nº 52, 2009] · Rossineri, Patrick
+- Límites y espejismos del materialismo histórico [@rebeldealegre] · Rossineri, Patrick
+- La danza de Mili sobre el hielo [Diaclasa, 2016] · Rote Zora
+- Historia de un ideal vivido por una mujer · Rouco Buela, Juana
+- Historia de un ideal vivido por una mujer - [Reconstruir, 1964] · Rouco Buela, Juana
+- Evolución de los seres vivientes [Publicaciones de la Escuela Moderna] · Ruben, E. y La Verne, B.
+- El parque. La infancia entre cartones [La Neurosis o Las Barricadas, 2019] · Rubio Gómez, Julio
+- Ramón Vila Capdevila. Apoteosis de la acción [FUL Zaragoza, 2001] · Ruta
+- Juana de Arco. Sacrificada por la Iglesia · Ryner, Han
+- La sabiduría riente · Ryner, Han
+- Pequeño manual individualista [STARm1919] · Ryner, Han
+- Pequeño manual individualista [STARm1919] [maquetado] · Ryner, Han
+- Gómez Rojas. Realidad y símbolo · Sabella Gálvez, Andrés
+- Sus vidas, sus alegatos, sus cartas [Antorcha.net] · Sacco y Vanzetti
+- Sus vidas, sus alegatos, sus cartas [KCL] · Sacco y Vanzetti
+- Noviembre rojo, noviembre negro · Salerno, Salvatore
+- La contribución de sangre [Vértice] · Salvochea Álvarez, Fermín
+- La contribución de sangre. Al esclavo [Biblioteca de 'La Revista Blanca', 1900] · Salvochea Álvarez, Fermín
+- A caballo del Ande. Crónica del Universo Occidental · Samblancat, Ángel
+- El caudillo de las estrellas [El pasquín del pueblo] · Samblancat, Ángel
+- Violencia [Renovación Proletaria, 1923] · Samblancat, Ángel
+- Delfín Lévano [UNMSM, 1985] · Sánchez Ortiz, Guillermo
+- El capitalista y el trabajador y Los inocentes [1918] · Sánchez Rosa, José
+- El arte y la vanguardia. La verdadera y la falsa juventud [El Heraldo de Madrid, 25-1-1929] · Sánchez Saornil, Lucía
+- Horas de Revolución [1937] · Sánchez Saornil, Lucía
+- Horas de Revolución [Publicaciones Mujeres Libres, 1937] · Sánchez Saornil, Lucía
+- La cuestión femenina en nuestros medios [Terra Livre-Eleuterio, 2016] · Sánchez Saornil, Lucía
+- La exacta medida de lo humano [AEP, 2021] · Sánchez Saornil, Lucía
+- Las mujeres. Ellas también lo dieron todo · Sánchez Saornil, Lucía
+- Poemas [STARm1919] · Sánchez Saornil, Lucía
+- Romance a Durruti · Sánchez Saornil, Lucía
+- Romancero de Mujeres Libres · Sánchez Saornil, Lucía
+- ¡Orientales y basta! · Sánchez, Florencio
+- Barranca abajo [Librodot] · Sánchez, Florencio
+- Canillita · Sánchez, Florencio
+- Canillita [Librodot] · Sánchez, Florencio
+- Cédulas De San Juan · Sánchez, Florencio
+- Cédulas De San Juan [Librodot] · Sánchez, Florencio
+- El caudillaje criminal en Sud América · Sánchez, Florencio
+- El caudillaje criminal en Sudamérica [Librodot] · Sánchez, Florencio
+- El desalojo · Sánchez, Florencio
+- El pasado · Sánchez, Florencio
+- En familia [Librodot] · Sánchez, Florencio
+- La gente honesta · Sánchez, Florencio
+- La gente honesta [El Aleph] · Sánchez, Florencio
+- La gringa · Sánchez, Florencio
+- La gringa [Librodot] · Sánchez, Florencio
+- La pobre gente · Sánchez, Florencio
+- La tigra · Sánchez, Florencio
+- Los curdas · Sánchez, Florencio
+- Los derechos de la salud · Sánchez, Florencio
+- Los muertos · Sánchez, Florencio
+- M'hijo el Dotor · Sánchez, Florencio
+- M'hijo el Dotor [El Aleph] · Sánchez, Florencio
+- Mano santa · Sánchez, Florencio
+- Marta Gruni · Sánchez, Florencio
+- Moneda falsa [Librodot] · Sánchez, Florencio
+- Nuestros hijos · Sánchez, Florencio
+- Un buen negocio · Sánchez, Florencio
+- 'Lo que el pueblo español necesita de nosotros' [1962] · Santamaría, Roque
+- Los que fuimos a Madrid · Sanz García, Ricardo
+- Los que fuimos a Madrid. Columna Durruti [Descontrol] · Sanz García, Ricardo
+- Los que fuimos a Madrid. Columna Durruti [HL] · Sanz García, Ricardo
+- Los Treinta Judas · Sanz García, Ricardo
+- Ruta de titanes [Descontrol, 2014] · Sanz García, Ricardo
+- Los tres pilares de la revolución [1945] · Sanz, Víctor
+- Antropomanía (En defensa de lo humano) [Almuzara, 2006] · Saña, Heleno
+- Carta a don Ángel Herrerín López a propósito de su obra 'La CNT durante el franquismo' · Saña, Heleno
+- Cultura proletaria y cultura burguesa [Solidaridad Obrera] · Saña, Heleno
+- Cultura y capitalismo · Saña, Heleno
+- El ejército [Índice, 1974] · Saña, Heleno
+- La autogestión a través de la historia [Solidaridad Obrera] · Saña, Heleno
+- La democracia capitalista [Biblioteca OmegAlfa] · Saña, Heleno
+- La filosofía de Hegel [Gredos, 1983] · Saña, Heleno
+- La filosofía de Heidegger. Un nuevo oscurantismo [Editorial Verbum, 2016] · Saña, Heleno
+- La utopía revolucionaria [Biblioteca OmegAlfa] · Saña, Heleno
+- Por un mundo más justo y más humano. El sentido de la militancia obrera, hoy [Libre Pensamiento, nº 95, 2018] · Saña, Heleno
+- Historia de la tierra [Publicaciones de la Escuela Moderna, 1925] · Sauerwein, C.
+- La USI. 1923-1945 · Schirone, Franco
+- La revolución desconocida. Ukrania 1917-1921, la gesta Makhnovista [Nossa y Jara, 2000] · Schujman, Héctor
+- Explotación normal, resistencia normal [Relaciones Internacionales, nº 26, 2014] · Scott, James C.
+- Los dominados y el arte de la resistencia [Era, 2004] · Scott, James C.
+- Artículos madrileños de Salvador Seguí (ed. Antonio Elorza) · Seguí, Salvador
+- Discurso en el Ateneo de Madrid · Seguí, Salvador
+- Escuela de rebeldía [CGT] · Seguí, Salvador
+- Escuela de rebeldía [STARm1919] · Seguí, Salvador
+- Escuela de rebeldía [STARm1919] [maquetado] · Seguí, Salvador
+- Carolus Rex · Sender, Ramón J.
+- Chandrío en la plaza de las Cortes · Sender, Ramón J.
+- El lugar de un hombre · Sender, Ramón J.
+- El vado [La Novela Española, 1948] · Sender, Ramón J.
+- En la vida de Ignacio Morel · Sender, Ramón J.
+- Imán · Sender, Ramón J.
+- La tesis de Nancy · Sender, Ramón J.
+- Mr Witt en el cantón · Sender, Ramón J.
+- Réquiem por un campesino español · Sender, Ramón J.
+- Siete domingos rojos · Sender, Ramón J.
+- Viaje a la aldea del crimen (Documental de Casas Viejas) · Sender, Ramón J.
+- El jardín de las peculiaridades · Sepúlveda, Jesús
+- El duende del maquis. Jesús Martínez Maluenda [Virus, 2012] · Serra Fontelles, Jaume
+- Tierra y libertad · Sever
+- Adonais y otros poemas · Shelley, Percy Bysshe
+- St Irvyne o El Rosacruz · Shelley, Percy Bysshe
+- Franco y el quinto mandamiento · SIA
+- Grupo de lectura en torno a la locura, la enfermedad y la muerte · Silvestri, Leonor
+- Grupo de lectura en torno a la locura, la enfermedad y la muerte- 2º encuentro · Silvestri, Leonor
+- La guerra en curso [Nos Es Nada ed., 2015] · Silvestri, Leonor
+- Poemas · Silvestri, Leonor
+- El Manifiesto SCUM · Solanas, Valerie
+- Entre dos fascismos (Memorias de un voluntario en las Brigadas Internacionales en España) [KCL] · Solano Palacio, Fernando
+- Poesías ácratas (Vol. I) [Biblioteca Económica del Ateneo Obrero, 1904] · Solís Rojas, Policarpo (comp.)
+- Poesías ácratas (Vol. II) [Biblioteca Económica del Ateneo Obrero, 1904] · Solís Rojas, Policarpo (comp.)
+- Reflexiones sobre la violencia [ La Pléyade, 1978] · Sorel, Georges
+- Semblanza de Carmen Paredes Sans · Soriano Jiménez, Ignacio Clemente
+- Semblanza de Ediciones Pastor · Soriano Jiménez, Ignacio Clemente
+- Semblanza de Editorial Estudios · Soriano Jiménez, Ignacio Clemente
+- Semblanza de Editorial Vértice · Soriano Jiménez, Ignacio Clemente
+- Semblanza de Hermoso Plaja Saló · Soriano Jiménez, Ignacio Clemente
+- Semblanza de Higinio Noja Ruiz · Soriano Jiménez, Ignacio Clemente
+- Semblanza de Joaquín Juan Pastor · Soriano Jiménez, Ignacio Clemente
+- Semblanza de La Novela Ideal · Soriano Jiménez, Ignacio Clemente
+- Semblanza de La Revista Blanca · Soriano Jiménez, Ignacio Clemente
+- Semblanza de Publicaciones de La Escuela Moderna (1901-1937) · Soriano Jiménez, Ignacio Clemente
+- Semblanza de Teresa Mañé Miravet · Soriano Jiménez, Ignacio Clemente
+- Colectivizaciones. La obra constructiva de la revolución española [Fontamara, 1977] · Souchy, Augustin y Folgare, Paul
+- El movimiento cooperativista en Suecia [Biblioteca Tierra y Libertad, 1945] · Souchy, Augustin
+- Erich Mühsam. Su vida, su obra, su martirio · Souchy, Augustin
+- Erich Mühsam. Su vida, su trabajo, su martirio · Souchy, Augustin
+- Testimonios de la revolución cubana [Reconstruir, 1960] · Souchy, Augustin
+- Una vida por un ideal [Grupo de Amigos de Simón Radowitzky, 1956] · Souchy, Augustin
+- Creación y evolución [Publicaciones de la Escuela Moderna] · Spencer, Herbert
+- La Rusia subterránea · Stepniak (Sergéi Micháilovitch Kravchínski)
+- La Rusia subterránea [ExNihilo, 2016] · Stepniak (Sergéi Micháilovitch Kravchínski)
+- La Rusia terrorista. Perfiles y bocetos revolucionarios · Stepniak (Sergéi Micháilovitch Kravchínski)
+- Los festejos del primer Centenario de la Revolución de Mayo y la exclusión del movimiento obrero · Suriano, Juan
+- El MIL, Puig Antich y los GARI [Ruedo Ibérico, 1977] · Tajuelo, Telesforo
+- Carta a 'La Révolte' · Tarrida del Mármol, Fernando
+- Carta a 'La Révolte' [Germinal, octubre de 2007] · Tarrida del Mármol, Fernando
+- Carta a 'La Révolte' [STARm1919] · Tarrida del Mármol, Fernando
+- La muerte · Tarrida del Mármol, Fernando
+- Los malos pastores · Tarrida del Mármol, Fernando
+- Huye, hombre, huye. Diario de un preso FIES [Argentina, 2008] · Tarrío, Xosé
+- Huye, hombre, huye. Diario de un preso FIES [Argentina, 2011] · Tarrío, Xosé
+- Huye, hombre, huye. Diario de un preso FIES [Ediciones Sin Nombre, 2012] · Tarrío, Xosé
+- Que la lucha no muera. Ante la adversidad, rebeldía y amistad [Editorial Imperdible, 2015] · Tarrío, Xosé
+- Facerías. Guerrila urbana (1939-1957) · Téllez Solà, Antonio
+- Sabaté. Guerrilla urbana en España · Téllez Solá, Antonio
+- Tinieblas y sangre (abril 1949 - julio 1952) · Téllez Solà, Antonio
+- Desobediencia civil y no-violencia · Thoreau, Henry David et al.
+- Caminar · Thoreau, Henry David
+- Colores de otoño [Trad. Silvia Komet] · Thoreau, Henry David
+- Del deber de la desobediencia civil [Prólogo de Henry Miller] · Thoreau, Henry David
+- Desobediencia civil [Trad. Hernando Jiménez] · Thoreau, Henry David
+- Desobediencia civil y otros escritos [Trad. Mª Eugenia Díaz] · Thoreau, Henry David
+- Desobediencia civil y otros textos [Selección y prólogo Vanina Escales] · Thoreau, Henry David
+- Escritos sobre la vida civilizada [Trad. Antonio Fernández Díez y José María Jiménez Caballero] · Thoreau, Henry David
+- La vida sin fundamentos [Drapeau Noir] · Thoreau, Henry David
+- Pasear [Trad. Silvia Komet] · Thoreau, Henry David
+- Pequeña antología · Thoreau, Henry David
+- Sobre el deber de la desobediencia civil [Trad. José Gabriel Baena] · Thoreau, Henry David
+- Walden (Selección) [Trad. Jorge Lobato] · Thoreau, Henry David
+- Walden [Freeditorial] · Thoreau, Henry David
+- Walden [Trad. Carlos Sánchez-Rodrigo] · Thoreau, Henry David
+- Magonismo. Utopía y revolución (1910-1913) [Aldarull Edicions, 2010] · Trejo, Rubén
+- El legado pedagógico del siglo XX para la escuela del siglo XXI [Graó, 2007] · Trilla, J. (Coord.)
+- Declaración de propósitos de 'Liberty' · Tucker, Benjamin R.
+- Libertad Individual (Compilación) [KCL] · Tucker, Benjamin R.
+- Un verano kurdo. Historias de resistencia al ISIS, a la ocupación y al exilio [Descontrol, 2016] · Türkeri, Zekine
+- Ricardo Flores Magón y el Partido Liberal Mexicano [Editorial 'Erandi', 1960] · Turner, Ethel Duffy
+- ¿Cuál de los dos es mi padre¿ (La Novela Ideal 412) [Publicaciones de 'La Revista Blanca', 1934] · Urales, Federico
+- ¿Es usted mi madre¿ (La Novela Ideal 81) [Publicaciones de 'La Revista Blanca', 1920¿] · Urales, Federico
+- Amor heroico (La Novela Ideal 196) [Publicaciones de 'La Revista Blanca', 1920¿] · Urales, Federico
+- Aurora (La Novela Libre 39) [Publicaciones de 'La Revista Blanca', 1920] · Urales, Federico
+- Aventuras de un perseguido político (La Novela Ideal 332) [Publicaciones de 'La Revista Blanca', 1932] · Urales, Federico
+- El hijo de nadie [Ediciones 'Universo', 1950¿] · Urales, Federico
+- El ideal y la revolución [Biblioteca de la 'Revista Blanca', 1933] · Urales, Federico
+- El médico galante (La Novela ideal 131) [Publicaciones de 'La Revista Blanca', 1920¿] · Urales, Federico
+- El milagro (La Novela Ideal 203) [Publicaciones de 'La Revista Blanca', 1920] · Urales, Federico
+- El rapto de Matilde (La Novela ideal 505) [Publicaciones de 'La Revista Blanca', 1936] · Urales, Federico
+- El secuestro de Andrea (La Novela Ideal 171) [Publicaciones de 'La Revista Blanca', 1920¿] · Urales, Federico
+- El suicidio de dos enamorados (La Novela Ideal 41) [Publicaciones de 'La Revista Blanca', 1920¿] · Urales, Federico
+- El último Quijote [Ediciones de 'La Revista Blanca', 1925] · Urales, Federico
+- Entre dos amores (La Novela Ideal 70) [Publicaciones de 'La Revista Blanca', 1926¿] · Urales, Federico
+- Es como un sol (La Novela Ideal 404) [Publicaciones de 'La Revista Blanca', 1934] · Urales, Federico
+- Fecundidad (La Novela ideal 344) [Publicaciones de 'La Revista Blanca', 1933] · Urales, Federico
+- Fin de una aventura (La Novela Ideal 340) [Publicaciones de 'La Revista Blanca', 1933] · Urales, Federico
+- Inundación de luz (La Novela ideal 348) [Publicaciones de 'La Revista Blanca', 1933] · Urales, Federico
+- La alegría del Ampurdán (La Novela Ideal 183) [Publicaciones de 'La Revista Blanca', 1920¿] · Urales, Federico
+- La bella aldeana (La Novela Ideal 21) [Publicaciones de 'La Revista Blanca', 1920¿] · Urales, Federico
+- La de mi desgracia (La Novela Ideal 244) [Publicaciones de 'La Revista Blanca', 1931] · Urales, Federico
+- La deseada (La Novela Ideal 315) [Publicaciones de 'La Revista Blanca', 1933] · Urales, Federico
+- La esposa del cacique (La Novela Ideal 476) [Publicaciones de 'La Revista Blanca', 1935] · Urales, Federico
+- La evolución de la filosofía en España (Tomo I) [Ediciones de 'La Revista Blanca', 1934] · Urales, Federico
+- La evolución de la filosofía en España (Tomo II) [Ediciones de 'La Revista Blanca', 1934] · Urales, Federico
+- La evolución de la filosofía en España [Laia, 1977] · Urales, Federico
+- La fuga de dos enamorados (La Novela ideal 235) [Publicaciones de 'La Revista Blanca', 1931] · Urales, Federico
+- La justicia de una doncella (La Novela Ideal 384) [Publicaciones de 'La Revista Blanca', 1933] · Urales, Federico
+- La morena del valle (La Novela Ideal 582) [Publicaciones de 'La Revista Blanca', 1937] · Urales, Federico
+- La persecución de los vagos (La Novela Ideal 376) [Publicaciones de 'La Revista Blanca', 1933] · Urales, Federico
+- La repudiada (La Novela Ideal 291) [Publicaciones de 'La Revista Blanca', 1932] · Urales, Federico
+- La risa de las flores (La Novela Ideal 219) [Publicaciones de 'La Revista Blanca', 1931] · Urales, Federico
+- La sin ventura (La Novela Ideal 212) [Publicaciones de 'La Revista Blanca', 1920¿] · Urales, Federico
+- La tragedia de Pepita (La Novela Ideal 267) [Publicaciones de 'La Revista Blanca', 1931] · Urales, Federico
+- Ladrón de amores (La Novela ideal 100) [Publicaciones de 'La Revista Blanca', 1920¿] · Urales, Federico
+- Las dos son mías (La Novela Ideal 27) [Publicaciones de 'La Revista Blanca', 1920¿] · Urales, Federico
+- Los grandes delincuentes (Novela de lucha social) [Biblioteca de la 'Revista Blanca', 1932] · Urales, Federico
+- Los hijos del amor (novela) [Sempere] · Urales, Federico
+- Los hijos del amor [Ediciones 'Universo', 1951] · Urales, Federico
+- Los pequeños delincuentes (La Novela Ideal 310) [Publicaciones de 'La Revista Blanca', 1932] · Urales, Federico
+- Los peregrinos del ideal (La Novela Ideal 352) [Publicaciones de 'La Revista Blanca', 1933] · Urales, Federico
+- Mi Don Juan (Tomo I) [Ediciones de 'La Revista Blanca', 1936] · Urales, Federico
+- Mi Don Juan (Tomo II) [Ediciones de 'La Revista Blanca', 1937] · Urales, Federico
+- Mi Vida (Tomo I) [Ediciones de 'La Revista Blanca', 1932] · Urales, Federico
+- Mi Vida (Tomo II) [Ediciones de 'La Revista Blanca', 1932] · Urales, Federico
+- Mi Vida (Tomo III) [Ediciones de 'La Revista Blanca', 1932] · Urales, Federico
+- Novias con y sin hijos (La Novela Ideal 152) [Publicaciones de 'La Revista Blanca', 1920¿] · Urales, Federico
+- Novios a prueba (La Novela Ideal 320) [Publicaciones de 'La Revista Blanca', 1932] · Urales, Federico
+- Paloma herida (La Novela Ideal 155) [Publicaciones de 'La Revista Blanca', 1920¿] · Urales, Federico
+- Paloma que levanta el vuelo (La Novela Ideal 159) [Publicaciones de 'La Revista Blanca', 1920¿] · Urales, Federico
+- Pedagogía social. Cómo educar a los hombres [Ediciones de 'La Revista Blanca'] · Urales, federico
+- Renacer. Novela de elevación moral y de amor libre [Biblioteca de 'La Revista Blanca', 1923¿] · Urales, Federico
+- Sembrando Flores (novela social) [Editorial 'La Protesta', 1922] · Urales, Federico
+- Sembrando Flores (novela social) [Publicaciones de la Escuela Moderna, 1906] · Urales, Federico
+- Sor María de la Cruz (La Novela ideal 494) [Publicaciones de 'La Revista Blanca', 1936] · Urales, Federico
+- Tempestad en las almas (La Novela ideal 392) [Publicaciones de 'La Revista Blanca', 1934] · Urales, Federico
+- Un infanticidio (La Novela Ideal 54) [Publicaciones de 'La Revista Blanca', 1926¿] · Urales, Federico
+- Una doncella en peligro (La Novela ideal 177) [Publicaciones de 'La Revista Blanca', 1920¿] · Urales, Federico
+- Corazón de tinta [Náufrago de Ítaca Ediciones, 2001] · Uzcátegui, Rafael
+- Nos seguimos robando el fuego · Uzcátegui, Rafael
+- Preguntas y limites del anarcopunk en america latina · Uzcátegui, Rafael
+- Luisa Capetillo [1975] · Valle, Norma
+- Fermín Salvochea. Crónica de un Revolucionario [Renacimiento, 2012] · Vallina, Pedro
+- Mis memorias [Libre Pensamiento, 2000] · Vallina, Pedro
+- Compilación de escritos · Vallota, Alfredo
+- Descartes y la política · Vallota, Alfredo
+- Necesidad de utopías · Vallota, Alfredo
+- Ser no-violento · Vallota, Alfredo
+- El grupo De Moker [Lazo Negro, 2018] · Van Daele, Els
+- Historia de la vida de un proletario [Difusión Claustrofobia, 2013] · Vanzetti, Bartolomeo
+- El protagonismo político de la CNT en los ayuntamientos catalanes (1936-1939). El Vallés Occidental · Vargas Puga, Matías
+- El obrero del campo [Ediciones 'Adelante', 1945] · Vasco, Neno
+- El cénit de la CNT en Vizcaya en torno a 1920 · Velasco Núñez, Alfredo
+- Los fantasmas de la conciencia · Velasco Núñez, Alfredo
+- El populismo ruso (Vol. I) · Venturi, Franco
+- El populismo ruso (Vol. II) · Venturi, Franco
+- Los orígenes de la Enciclopedia [Crítica, 1980] · Venturi, Franco
+- Acción Directa en Uruguay, 1968-1973 [Lazo Negro, 2019] · Vescovi, Rodrigo
+- Justicia y Libertad. Juana Belén Gutiérrez de Mendoza (1875-1942) [DEMAC, 1994] · Villaneda, Alicia
+- Justicia y Libertad. Juana Belén Gutiérrez de Mendoza (1875-1942) [DEMAC, 1994] [Otro ejemplar] · Villaneda, Alicia
+- Condiciones para la revolución en América [Nervio, 1932] · Villar, Manuel
+- España en la ruta de la libertad [Reconstruir, 1962] · Villar, Manuel
+- Literatura argentina y política (Vol. II) De Lugones a Walsh [Editorial Sudamericana, 1996] · Viñas, David
+- Un idioma para todos. El esperanto [CNT] · Vivancos, Eduardo
+- Miscelánea filosófica [Publicaciones de La Escuela Moderna, 1917] · Voltaire
+- Ciudades ideales · Ward, Colin
+- Reflexiones sobre las Zonas Temporalmente Autónomas · Ward, Colin
+- Gandhi · Woodcock, George
+- V de veganismo [Descontrol, 2015] · X, Roberto
+- Otra mirada al sistema de salud mental [Descontrol, 2018] · XarxaGAM
+- El caso Scala y la CNT. Terrorismo de Estado · Zambrana, Joan
+- El movimiento obrero catalán en el periódico Solidaridad Obrera (1907-1919) · Zambrana, Joan
+- La CNT y la Asamblea de Valencia (Mayo 1916) · Zambrana, Joan
+- Contra la civilización. Compilado de textos · Zerzan, John
+- Esas cosas que hacemos · Zerzan, John
+- Futuro primitivo y otros ensayos [Numa Ediciones, 2001] · Zerzan, John
+- La catástrofe del posmodernismo [KCL] · Zerzan, John
+- La psicología de las masas del sufrimiento [CGT] · Zerzan, John
+- Colón y la civilización occidental [Biblioteca OmegAlfa] · Zinn, Howard
+- Discurso al recibir el premio 'Amis du Monde Diplomatique 2003' en París · Zinn, Howard
+- El genocidio colombino · Zinn, Howard
+- La otra Historia de los Estados Unidos. Desde 1492 hasta hoy · Zinn, Howard
+- La utilización de la Historia y la Guerra contra el Terrorismo · Zinn, Howard
+- Por qué tener esperanzas en tiempos difíciles · Zinn, Howard
+- Sacco y Vanzetti · Zinn, Howard
+- Sobre la guerra (La paz como imperativo moral) · Zinn, Howard
+- Dos artículos · Zo d´Axa
+- La pasión del ego (textos) · Zo d´Axa
+- La clase obrera hace historia. Raíces históricas (1840-1910) [FEM, 2008] · Zugasti, Paco
