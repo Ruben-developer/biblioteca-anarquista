@@ -138,12 +138,12 @@ const AuthorsView = ({
         const paged = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
         return (
           <>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {paged.map((author) => {
             const isOpen = openAuthor === author.name;
             const primaryRegion = author.regions[0];
             return (
-              <div key={author.name} className={`${cardClass} border-2 rounded-lg p-6 shadow-md hover:shadow-xl transition-all flex flex-col`}>
+              <div key={author.name} className={`${cardClass} border-2 rounded-lg p-5 shadow-md hover:shadow-lg transition-all flex flex-col`}>
                 <button
                   className="text-left w-full"
                   onClick={() => toggleAuthor(author.name)}
@@ -176,7 +176,7 @@ const AuthorsView = ({
                 {isOpen && (
                   <div className="mt-4 space-y-2">
                     {author.books.filter((b) => b.year).length > 1 && (
-                      <div className={`rounded-lg border p-3 ${darkMode ? 'bg-gray-800/60 border-[#872320]/50' : 'bg-white/80 border-[#B79F6E]'}`}>
+                      <div className={`rounded-lg border-2 p-3 ${darkMode ? 'bg-gray-800/60 border-[#872320]/50' : 'bg-white/80 border-[#B79F6E]'}`}>
                         <p className={`text-xs uppercase tracking-wide mb-2 ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
                           Línea de tiempo de su obra
                         </p>
@@ -204,7 +204,7 @@ const AuthorsView = ({
                     {author.books.map((book, idx) => (
                       <div
                         key={`${book.region}-${book.title}-${idx}`}
-                        className={`rounded-lg border p-3 ${darkMode ? 'bg-gray-800/60 border-[#872320]/50' : 'bg-white/80 border-[#B79F6E]'}`}
+                        className={`rounded-lg border-2 p-3 ${darkMode ? 'bg-gray-800/60 border-[#872320]/50' : 'bg-white/80 border-[#B79F6E]'}`}
                       >
                         <div className="flex justify-between items-start gap-2">
                           <div className="flex-1">

@@ -99,10 +99,8 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
 
       <WorldMap
         data={mapData}
-        frame
         backgroundColor="transparent"
         borderColor={darkMode ? '#7f1d1d' : '#A0241A'}
-        frameColor={darkMode ? '#7f1d1d' : '#A0241A'}
         onClickFunction={handleCountryClick}
         styleFunction={styleFunction}
         tooltipTextFunction={tooltipTextFunction}
@@ -126,7 +124,7 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
       <h3 className={`text-xl font-display uppercase tracking-wide mt-8 mb-4 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         O navega por región
       </h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {Object.entries(regionData)
           .map(([region]) => ({ region, count: getHistoricalBooks(regionData, region).length }))
           .filter(({ count }) => count > 0)
@@ -135,7 +133,7 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
           <button
             key={region}
             onClick={() => onSelectRegion(region)}
-            className={`${cardClass} border-2 rounded-lg p-6 hover:shadow-lg transition-all text-left`}
+            className={`${cardClass} border-2 rounded-lg p-5 hover:shadow-lg transition-all text-left`}
           >
             <div className="flex items-center gap-3 mb-2">
               <MapPin className={darkMode ? 'text-red-400' : 'text-amber-700'} size={24} />

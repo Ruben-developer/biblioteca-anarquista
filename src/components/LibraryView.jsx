@@ -30,7 +30,7 @@ const getLeerBtnClass = (darkMode) =>
   darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
 
 const getSinArchivoClass = (darkMode) =>
-  darkMode ? 'border-[#872320] text-gray-500' : 'border-[#B79F6E] text-amber-600'
+  darkMode ? 'border-[#872320]/50 text-gray-500' : 'border-[#B79F6E] text-amber-600'
 
 const BookEventLink = ({ book, timelineEvents, onOpenEvent, darkMode }) => {
   const bookEvents = getBookEvents(timelineEvents, book)
@@ -53,7 +53,7 @@ const LeerButton = ({ book, onRead, darkMode }) => {
   if (!book.filename) {
     return (
       <span
-        className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm border ${getSinArchivoClass(darkMode)}`}
+        className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm border-2 ${getSinArchivoClass(darkMode)}`}
         title="Esta obra aún no tiene archivo digitalizado en el archivo"
       >
         Sin archivo disponible
@@ -95,9 +95,9 @@ const BookMeta = ({ book, darkMode }) => (
 
 const BookCardInGroup = ({ book, favorites, onToggleFavorite, onRead, onOpenEvent, timelineEvents, darkMode }) => {
   const isFav = favorites.some((f) => f.title === book.title)
-  return (
-    <div className={`rounded-lg p-4 ${darkMode ? 'bg-gray-900/50 border border-[#872320]' : 'bg-white/50 border border-[#B79F6E]'}`}>
-      <div className="flex items-start justify-between gap-2 mb-1">
+    return (
+      <div className={`rounded-lg p-4 ${darkMode ? 'bg-gray-900/50 border-2 border-[#872320]/50' : 'bg-white/50 border-2 border-[#B79F6E]'}`}>
+        <div className="flex items-start justify-between gap-2 mb-1">
         <div>
           <h4 className={`font-semibold ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
             {book.title}
@@ -146,7 +146,7 @@ const GridCard = ({ book, idx, favorites, onToggleFavorite, onRead, onOpenEvent,
   const isFav = favorites.some((f) => f.title === book.title)
   const bookEvents = getBookEvents(timelineEvents, book)
   return (
-    <div key={`${book.region}-${book.title}`} className={`${cardClass} border-2 rounded-lg p-5 hover:shadow-xl transition-all flex flex-col card-appear`} style={{ animationDelay: `${Math.min(idx, 8) * 40}ms` }}>
+    <div key={`${book.region}-${book.title}`} className={`${cardClass} border-2 rounded-lg p-5 hover:shadow-lg transition-all flex flex-col card-appear`} style={{ animationDelay: `${Math.min(idx, 8) * 40}ms` }}>
       <div className="flex items-start justify-between gap-2 mb-2">
         <span className={`text-xs px-2 py-1 rounded-full ${darkMode ? 'bg-gray-700 text-gray-300' : 'bg-amber-200 text-amber-900'}`}>
           {book.region}
@@ -299,7 +299,7 @@ const LibraryView = ({
     const paged = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
     return (
       <>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {paged.map((book, idx) => (
             <GridCard key={`${book.region}-${book.title}`} book={book} idx={idx} favorites={favorites} onToggleFavorite={onToggleFavorite} onRead={onRead} onOpenEvent={onOpenEvent} timelineEvents={timelineEvents} darkMode={darkMode} cardClass={cardClass} />
           ))}

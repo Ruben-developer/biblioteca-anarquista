@@ -18,14 +18,14 @@ const TheoriesView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
       <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
         {anarchistTheories.length} ramas del pensamiento libertario. Haz clic en una corriente para ver sus ideas, autores y obras del archivo.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {anarchistTheories.map((theory, idx) => {
           const isOpen = openId === theory.id;
           const books = theory.books
             .map((title) => findBookByTitle(regionData, title))
             .filter(Boolean);
           return (
-            <div key={theory.id} className={`${cardClass} border-2 rounded-lg p-6 shadow-md hover:shadow-xl transition-all flex flex-col card-appear`} style={{ animationDelay: `${Math.min(idx, 8) * 45}ms` }}>
+            <div key={theory.id} className={`${cardClass} border-2 rounded-lg p-5 shadow-md hover:shadow-lg transition-all flex flex-col card-appear`} style={{ animationDelay: `${Math.min(idx, 8) * 45}ms` }}>
               <button
                 className="text-left w-full"
                 onClick={() => toggle(theory.id)}
@@ -50,7 +50,7 @@ const TheoriesView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
 
               {isOpen && (
                 <div className="mt-4 space-y-3">
-                  <div className={`rounded-lg border p-3 ${darkMode ? 'bg-gray-800/60 border-[#872320]/50' : 'bg-white/80 border-[#B79F6E]'}`}>
+                  <div className={`rounded-lg border-2 p-3 ${darkMode ? 'bg-gray-800/60 border-[#872320]/50' : 'bg-white/80 border-[#B79F6E]'}`}>
                     <ul className="space-y-1">
                       {theory.keyIdeas.map((idea) => (
                         <li key={idea} className={`text-xs flex gap-2 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -72,7 +72,7 @@ const TheoriesView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
                   {books.length > 0 && (
                     <div className="space-y-2">
                       {books.map((book, idx) => (
-                        <div key={`${theory.id}-${idx}`} className={`rounded-lg border p-3 ${darkMode ? 'bg-gray-800/60 border-[#872320]/50' : 'bg-white/80 border-[#B79F6E]'}`}>
+                        <div key={`${theory.id}-${idx}`} className={`rounded-lg border-2 p-3 ${darkMode ? 'bg-gray-800/60 border-[#872320]/50' : 'bg-white/80 border-[#B79F6E]'}`}>
                           <p className={`text-sm font-medium mb-1 ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
                             {book.title}
                           </p>

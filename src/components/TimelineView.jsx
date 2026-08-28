@@ -15,53 +15,58 @@ const HorizontalTimeline = ({
   cardClass,
   onSelectEvent
 }) => (
-  <div className={`${darkMode ? 'bg-gray-900/60 border-[#872320]/50' : 'bg-white/60 border-[#B79F6E]'} rounded-lg shadow-lg border-2 p-6 overflow-x-auto`}>
-    <div className="flex gap-6" style={{ minWidth: 'max-content' }}>
-      {sortedDecades.map((decade) => (
-        <div key={decade} className="flex flex-col" style={{ minWidth: `${groupedByDecade[decade].length * 220 + 60}px` }}>
-          <div className="flex items-center gap-3 mb-4 flex-shrink-0">
-            <div className={`flex-shrink-0 w-14 h-14 ${decadeBg} rounded-full border-4 flex items-center justify-center shadow-lg`}>
-              <span className="text-base font-display text-white">{decade.replace('s', '')}</span>
-            </div>
-            <div className={`flex-1 h-px ${lineColor}`}></div>
-            <span className={`text-xs font-display uppercase tracking-wider flex-shrink-0 ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
-              {groupedByDecade[decade].length}
-            </span>
-          </div>
-
-          <div className="relative flex-1" style={{ borderTop: `2px dashed ${dashedColor}`, paddingTop: '24px' }}>
-            <div className="flex gap-5">
-              {groupedByDecade[decade].map((event) => (
-                <div key={`${event.year}-${event.title}`} className="relative flex flex-col items-center" style={{ minWidth: '200px', maxWidth: '240px' }}>
-                  <div className={`absolute -top-[31px] left-1/2 -translate-x-1/2 w-3.5 h-3.5 ${dotColor} rounded-full border-2 ${dotBorder} z-10`}></div>
-
-                  <button
-                    className={`${cardClass} border-2 rounded-lg p-3 shadow-md hover:shadow-xl transition-all w-full cursor-pointer text-left`}
-                    onClick={() => onSelectEvent(event)}
-                  >
-                    <div className="flex items-center justify-between gap-2 mb-1.5">
-                      <div className="flex items-center gap-1.5">
-                        <span className={`text-lg font-display ${darkMode ? 'text-gray-300' : 'text-amber-800'}`}>
-                          {event.year}
-                        </span>
-                      </div>
-                      <span className={`text-[10px] px-2 py-0.5 rounded-full flex-shrink-0 ${darkMode ? 'bg-gray-800 text-gray-400' : 'bg-amber-200 text-amber-800'}`}>
-                        {event.region}
-                      </span>
-                    </div>
-                    <h3 className={`text-sm font-semibold ${darkMode ? 'text-gray-100' : 'text-gray-800'} mb-1 line-clamp-2`}>
-                      {event.title}
-                    </h3>
-                    <p className={`text-xs leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-700'} line-clamp-2`}>
-                      {event.description}
-                    </p>
-                  </button>
+  <div className={`${darkMode ? 'bg-gray-900/60 border-[#872320]/50' : 'bg-white/60 border-[#B79F6E]'} rounded-lg shadow-lg border-2 p-6`}>
+    <div className="relative">
+      <div className="overflow-x-auto">
+        <div className="flex gap-6" style={{ minWidth: 'max-content' }}>
+          {sortedDecades.map((decade) => (
+            <div key={decade} className="flex flex-col" style={{ minWidth: `${groupedByDecade[decade].length * 220 + 60}px` }}>
+              <div className="flex items-center gap-3 mb-4 flex-shrink-0">
+                <div className={`flex-shrink-0 w-14 h-14 ${decadeBg} rounded-full border-4 flex items-center justify-center shadow-lg`}>
+                  <span className="text-base font-display text-white">{decade.replace('s', '')}</span>
                 </div>
-              ))}
+                <div className={`flex-1 h-px ${lineColor}`}></div>
+                <span className={`text-xs font-display uppercase tracking-wider flex-shrink-0 ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
+                  {groupedByDecade[decade].length}
+                </span>
+              </div>
+
+              <div className="relative flex-1" style={{ borderTop: `2px dashed ${dashedColor}`, paddingTop: '24px' }}>
+                <div className="flex gap-5">
+                  {groupedByDecade[decade].map((event) => (
+                    <div key={`${event.year}-${event.title}`} className="relative flex flex-col items-center" style={{ minWidth: '200px', maxWidth: '240px' }}>
+                      <div className={`absolute -top-[31px] left-1/2 -translate-x-1/2 w-3.5 h-3.5 ${dotColor} rounded-full border-2 ${dotBorder} z-10`}></div>
+
+                      <button
+                        className={`${cardClass} border-2 rounded-lg p-3 shadow-md hover:shadow-lg transition-all w-full cursor-pointer text-left`}
+                        onClick={() => onSelectEvent(event)}
+                      >
+                        <div className="flex items-center justify-between gap-2 mb-1.5">
+                          <div className="flex items-center gap-1.5">
+                            <span className={`text-lg font-display ${darkMode ? 'text-gray-300' : 'text-amber-800'}`}>
+                              {event.year}
+                            </span>
+                          </div>
+                          <span className={`text-[10px] px-2 py-0.5 rounded-full flex-shrink-0 ${darkMode ? 'bg-gray-800 text-gray-400' : 'bg-amber-200 text-amber-800'}`}>
+                            {event.region}
+                          </span>
+                        </div>
+                        <h3 className={`text-sm font-semibold ${darkMode ? 'text-gray-100' : 'text-gray-800'} mb-1 line-clamp-2`}>
+                          {event.title}
+                        </h3>
+                        <p className={`text-xs leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-700'} line-clamp-2`}>
+                          {event.description}
+                        </p>
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
-      ))}
+      </div>
+      <div className={`absolute right-0 top-0 bottom-0 w-8 pointer-events-none bg-gradient-to-l ${darkMode ? 'from-gray-900' : 'from-amber-50'}`} />
     </div>
   </div>
 )
@@ -78,7 +83,7 @@ const VerticalTimeline = ({
   cardClass,
   onSelectEvent
 }) => (
-  <div className={`${darkMode ? 'bg-gray-900/40 border-[#872320]/30' : 'bg-white/40 border-[#B79F6E]'} rounded-lg border p-6`}>
+  <div className={`${darkMode ? 'bg-gray-900/40 border-[#872320]/50' : 'bg-white/40 border-[#B79F6E]'} rounded-lg border-2 p-6`}>
     <div className="space-y-8">
     {sortedDecades.map((decade) => (
       <div key={decade}>
@@ -98,7 +103,7 @@ const VerticalTimeline = ({
               <div className={`absolute -left-[31px] top-5 w-4 h-4 ${dotColor} rounded-full border-2 ${dotBorder} z-10`}></div>
 
               <button
-                className={`${cardClass} border-2 rounded-lg p-5 shadow-md hover:shadow-xl transition-all w-full cursor-pointer text-left`}
+                className={`${cardClass} border-2 rounded-lg p-5 shadow-md hover:shadow-lg transition-all w-full cursor-pointer text-left`}
                 onClick={() => onSelectEvent(event)}
               >
                 <div className="flex items-start justify-between gap-3 mb-2">

@@ -175,7 +175,7 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
           </div>
 
           {selectedAuthor && (
-            <div className={`rounded-lg border p-4 ${darkMode ? 'bg-gray-800/60 border-[#872320]/50' : 'bg-white/80 border-[#B79F6E]'}`}>
+            <div className={`rounded-lg border-2 p-4 ${darkMode ? 'bg-gray-800/60 border-[#872320]/50' : 'bg-white/80 border-[#B79F6E]'}`}>
               <p className={`text-xs uppercase tracking-wide mb-2 ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
                 Obras en el archivo ({selectedAuthor.bookCount})
               </p>
@@ -183,7 +183,7 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
                 {selectedAuthor.books.map((book) => (
                   <div
                     key={book.title}
-                    className={`rounded-lg border px-3 py-2 flex items-center gap-2 ${darkMode ? 'bg-gray-900/50 border-[#872320]' : 'bg-white/50 border-[#B79F6E]'}`}
+                    className={`rounded-lg border-2 px-3 py-2 flex items-center gap-2 ${darkMode ? 'bg-gray-900/50 border-[#872320]/50' : 'bg-white/50 border-[#B79F6E]'}`}
                   >
                     <span className={`text-xs ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
                       {book.title}

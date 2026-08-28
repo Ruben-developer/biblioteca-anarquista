@@ -114,6 +114,22 @@
 |------|------|--------|---------|
 | 17:20 | 🧑 Manual | `a10da39` | **Catálogo ampliado de 108 → 112 obras (+4)** con el subagente `@content-importer`: **Chile ×2** — *Destruir para construir: violencia y acción directa en el anarquismo chileno (1890-1914)* (Darío Covarrubias Bañados, historia) y *Cuando la patria mata: la historia del anarquista Julio Rebosio* (Víctor Muñoz Cortés, biografia); **Argentina ×2** — *América, hoy* (Víctor García, teoria, 1956) e *Internet, hackers y software libre* (Carlos Gradin comp., teoria, 2004). Se descartaron 4 PDFs (corrupto, manual técnico de antenas, hoja escolar, tapa de revista). 4/4 filenames HTTP 200, `check-downloads` **112/112 OK**, `npm run check` verde (lint + 99 tests + build). |
 
+## 2026-08-27 — Pulido estético MEDIUM del reporte @ux-review (sesión manual)
+
+| Hora | Tipo | Commit | Detalle |
+|------|------|--------|---------|
+| — | 🧑 Manual | (pendiente) | **Implementados los 7 hallazgos MEDIUM** del `ux-report-estetica.md`: **M1** padding de tarjetas de autor/teoría/mapa unificado a `p-5`; **M2** sombras hover de timeline/biblioteca/autores/teorías unificadas a `hover:shadow-lg`; **M3** grid gaps unificados a `gap-5` (biblioteca/favoritos/glosario/autores/teorías/mapa); **M4** StatsPanel ambas filas de métricas a `border-2 p-4`; **M5** footer expandido con stats (1840–1968 · N textos/regiones/eventos), enlaces Glosario/Contacto y crédito de dominio público; **M6** componente `ModalHeader` compartido extraído y usado en `EventModal` y `RegionModal` (mismo `X size={24}`, mismo padding); **M7** indicador de scroll en la timeline horizontal (gradiente de desvanecimiento a la derecha). |
+
+> Verificación: `npm run check` (lint 0 errores + **250 tests** + build) verde. Sin cambios de lógica ni de datos; los HIGH (H1-H3) ya estaban resueltos en el turno 2026-08-26 12:00.
+
+## 2026-08-27 (segunda parte) — Unificación de bordes de toda la app (sesión manual)
+
+| Hora | Tipo | Commit | Detalle |
+|------|------|--------|---------|
+| — | 🧑 Manual | (pendiente) | **Borde único por tema** para toda la interfaz: mismo ancho (2px), color y opacidad en claro/oscuro. Token `THEME.*.border` = `border-2 border-[#872320]/50` (oscuro) / `border-2 border-[#B79F6E]` (claro). Actualizados `card`, `nav` y `header` en `constants/index.js` para usar ese borde. Cabecera y pie comparten ahora la misma línea (`border-b-2`/`border-t-2`, mismo color): el pie lleva sombra hacia arriba (`shadow-[0_-4px_12px_rgba(0,0,0,0.25)]`). Modales `EventModal`/`RegionModal` bajan de `border-4` a `border-2` (heredan el borde de `cardClass`). Se elimina el `frame` interior recto/delgado del mapa (`WorldMapView`) para que solo quede el borde unificado del panel. Subtarjetas anidadas (Autores, Teorías, Rutas, Glosario, Red de Autores, Biblioteca, EventModal) pasan de borde 1px a `border-2` y se unifican a `/50` de opacidad en oscuro. |
+
+> Verificación: `npm run check` (lint 0 errores + **250 tests** + build) verde. Se dejan a 1px los bordes de controles interactivos (botones, inputs, textarea) por convención de UI.
+
 ## Estado actual
 
 - **25+ commits** en `main`, CI de Pages **verde** (lint+tests+audit+build), web **HTTP 200**.

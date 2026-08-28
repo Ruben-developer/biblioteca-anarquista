@@ -631,9 +631,13 @@ tiene 113 PDFs y 0 TXT) — son 6 obras a las que nunca se les asignó `filename
   (H3) FeaturedBook distingue visualmente con `border-amber-600/50` (claro) /
   `border-red-500/40` (oscuro) + `shadow-xl` — la obra del día se ve como
   recomendación editorial. **251 tests**, lint 0 errores, build OK.
-- [ ] **MEDIUM del reporte estética**: padding/sombras/gaps consistentes entre
-  tarjetas (M1-M4), footer mejorado con stats (M5), modal header compartido (M6),
-  gradiente scroll timeline móvil (M7).
+- [x] **MEDIUM del reporte estética**: padding/sombras/gaps consistentes entre
+   tarjetas (M1-M4), footer mejorado con stats (M5), modal header compartido (M6),
+   gradiente scroll timeline móvil (M7). ✅ 2026-08-27: unificado padding de tarjetas
+   a `p-5` (autores/teorías/mapa), sombras hover a `hover:shadow-lg` (timeline/biblioteca/
+   autores/teorías), grid `gap-5`; StatsPanel ambas filas `border-2 p-4`; footer con
+   stats + enlaces Glosario/Contacto + crédito; `ModalHeader` compartido (EventModal/
+   RegionModal); fade gradiente en timeline horizontal. 250 tests, lint 0, build OK.
 - [ ] **Estética**: iterar paleta de colores y tipografía (variables CSS ya separadas).
   Puesta a punto visual en general.
 - [ ] **Línea de tiempo** de autores y obras (ordenado por año). ← ya existe en el
@@ -758,9 +762,14 @@ Estadísticas).
 `check-downloads` **330/330 OK**. CI de Pages: run trigger (`044c6d3`), esperando
 resultado. Commits `bfc5480` (feat: estética) + `044c6d3` (ci: trigger).
 
-### Próximo día (2026-08-26, 00:00)
-- Implementar hallazgos MEDIUM del reporte estética (padding/sombras consistentes,
-  footer mejorado, modal header compartido, gradiente scroll timeline móvil).
+### Próximo día
+- ✅ Implementados (2026-08-27) hallazgos MEDIUM del reporte estética: padding/sombras/
+  gaps consistentes, footer con stats, `ModalHeader` compartido, fade en timeline.
+- ✅ Unificación de bordes de toda la app (2026-08-27): token `THEME.*.border`,
+  cabecera/pie con la misma línea (pie con sombra hacia arriba), modales a `border-2`,
+  borde interior del mapa eliminado, subtarjetas a `border-2`.
+- Evaluar hallazgos LOW pendientes (L2: `BookOpen size={14}`, L3: `transition-colors`
+  en header/nav para sincronizar el cambio de tema, L4: `shadow-sm` base).
 - Evaluar deuda técnica de `documents.json` (legacy, solo 2 entradas).
 
 ---

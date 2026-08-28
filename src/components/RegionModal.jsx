@@ -1,8 +1,9 @@
 import React from 'react';
-import { X, MapPin, Heart, BookOpen } from 'lucide-react';
+import { MapPin, Heart, BookOpen } from 'lucide-react';
 import { THEME } from '../constants';
 import { getHistoricalBooks } from '../utils/library';
 import { useModalFocus } from '../hooks';
+import ModalHeader from './ModalHeader';
 
 const RegionModal = ({
   darkMode,
@@ -37,20 +38,8 @@ const RegionModal = ({
       aria-modal="true"
       aria-label={region}
     >
-      <div className={`${cardClass} border-4 ${darkMode ? 'border-[#872320]/50' : 'border-[#B79F6E]'} rounded-lg max-w-2xl w-full p-6`}>
-        <div className={`${darkMode ? 'bg-red-900/30' : 'bg-amber-700'} rounded-t-lg -m-6 mb-4 p-4`}>
-          <div className="flex justify-between items-center">
-            <div className="flex items-center gap-3">
-              <MapPin className={darkMode ? 'text-red-400' : 'text-amber-100'} size={28} />
-              <h2 className={`text-2xl font-bold ${darkMode ? 'text-gray-100' : 'text-amber-50'}`}>
-                {region}
-              </h2>
-            </div>
-            <button onClick={onClose} className={darkMode ? 'text-gray-300' : 'text-amber-100'}>
-              <X size={24} />
-            </button>
-          </div>
-        </div>
+      <div className={`${cardClass} rounded-lg max-w-2xl w-full p-6`}>
+        <ModalHeader darkMode={darkMode} title={region} icon={MapPin} onClose={onClose} />
 
         <p className={`${darkMode ? 'text-gray-400' : 'text-amber-900'} mb-4`}>
           {historicalBooks.length} textos históricos del anarquismo en {region}

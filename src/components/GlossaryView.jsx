@@ -49,7 +49,7 @@ const GlossaryView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
           No hay términos que coincidan con «{query}».
         </p>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {filtered.map((g) => {
             const books = (g.books || [])
               .map((title) => findBookByTitle(regionData, title))
