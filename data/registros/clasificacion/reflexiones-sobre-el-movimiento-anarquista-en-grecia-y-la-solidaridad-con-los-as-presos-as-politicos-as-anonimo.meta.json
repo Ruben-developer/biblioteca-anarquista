@@ -1,0 +1,19 @@
+{
+  "slug": "reflexiones-sobre-el-movimiento-anarquista-en-grecia-y-la-solidaridad-con-los-as-presos-as-politicos-as-anonimo",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/libros-crimental-coleccion/Reflexiones sobre el Movimiento Anarquista en grecia Y la solidaridad con los_as Presos_as Politicos_as - Anónimo.pdf",
+  "model": "llama3.2:3b",
+  "ms": 197686,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "otro",
+  "titulo": "Reflexiones sobre el movimiento anarquista en Grecia y la solidaridad con los presos políticos",
+  "autor": "Ediciones Crimental",
+  "anio": "2015",
+  "region": "Grecia",
+  "contexto": "Entrevista realizada en Atenas en Julio de 2015",
+  "epoca": "Julio de 2015",
+  "corriente": "anarquismo antiautoritario",
+  "nota_otro": "Publicado por Ediciones Crimental, con el objetivo de difundir la reflexión sobre la situación política y económica en Grecia y su relación con el movimiento anarquista",
+  "doubt": "",
+  "err": ""
+}

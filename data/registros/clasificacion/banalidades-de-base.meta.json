@@ -1,0 +1,19 @@
+{
+  "slug": "banalidades-de-base",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/libros-crimental-coleccion/Banalidades de Base.pdf",
+  "model": "llama3.2:3b",
+  "ms": 174366,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "otro",
+  "titulo": "Banalidades de base",
+  "autor": "Raoul Vaneigem",
+  "anio": "1963",
+  "region": "Europa",
+  "contexto": "Internacional Situacionista",
+  "epoca": "Situacionismo",
+  "corriente": "Anarquismo",
+  "nota_otro": "",
+  "doubt": "",
+  "err": ""
+}

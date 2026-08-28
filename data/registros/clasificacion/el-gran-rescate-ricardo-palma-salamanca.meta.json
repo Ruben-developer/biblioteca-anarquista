@@ -1,0 +1,19 @@
+{
+  "slug": "el-gran-rescate-ricardo-palma-salamanca",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/libros-crimental-coleccion/El Gran Rescate - Ricardo Palma Salamanca.pdf",
+  "model": "llama3.2:3b",
+  "ms": 196724,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "historia",
+  "titulo": "El Gran Rescate",
+  "autor": "Ricardo Palma Salamanca",
+  "anio": "1997",
+  "region": "Chile",
+  "contexto": "Anarquismo, historia de Chile",
+  "epoca": "Siglo XX",
+  "corriente": "Anarquismo chileno",
+  "nota_otro": "",
+  "doubt": "",
+  "err": ""
+}

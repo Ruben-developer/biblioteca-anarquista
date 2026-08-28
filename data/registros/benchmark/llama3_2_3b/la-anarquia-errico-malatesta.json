@@ -1,0 +1,19 @@
+{
+  "slug": "la-anarquia-errico-malatesta",
+  "ms": 160904,
+  "fields": {
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "historia",
+    "titulo": "La Anarquía",
+    "autor": "Errico Malatesta",
+    "anio": "1891",
+    "region": "Italiana",
+    "contexto": "El gobierno es necesario, el gobierno dista de ser necesario, pero la ausencia de gobierno significa ausencia de orden",
+    "epoca": "Fin del siglo XIX",
+    "corriente": "Anarquismo",
+    "nota_otro": ""
+  },
+  "raw": "{\n  \"es_anarquista\": true,\n  \"es_espanol\": true,\n  \"tipo\": \"historia\",\n  \"titulo\": \"La Anarquía\",\n  \"autor\": \"Errico Malatesta\",\n  \"anio\": \"1891\",\n  \"region\": \"Italiana\",\n  \"contexto\": \"El gobierno es necesario, el gobierno dista de ser necesario, pero la ausencia de gobierno significa ausencia de orden\",\n  \"epoca\": \"Fin del siglo XIX\",\n  \"corriente\": \"Anarquismo\",\n  \"nota_otro\": \"\"\n}",
+  "err": ""
+}

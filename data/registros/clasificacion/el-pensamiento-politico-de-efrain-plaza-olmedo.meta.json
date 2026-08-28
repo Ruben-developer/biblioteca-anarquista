@@ -1,0 +1,19 @@
+{
+  "slug": "el-pensamiento-politico-de-efrain-plaza-olmedo",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/libros-crimental-coleccion/El Pensamiento Politico de Efrain Plaza Olmedo.pdf",
+  "model": "llama3.2:3b",
+  "ms": 210810,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "teoria",
+  "titulo": "El Pensamiento Político De Efraín Plaza Olmedo",
+  "autor": "Juan Levadura (seudónimo de Efraín Plaza Olmedo)",
+  "anio": "1921",
+  "region": "Chile",
+  "contexto": "Anarquismo, violencia política, crítica al capitalismo y la burguesía",
+  "epoca": "Primera Guerra Mundial, movimiento obrero en Chile",
+  "corriente": "Anarquismo español",
+  "nota_otro": "Textos de crítica social y política, con un tono radical y antimperialista",
+  "doubt": "",
+  "err": ""
+}

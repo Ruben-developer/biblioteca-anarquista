@@ -27,7 +27,7 @@ import ScrollTopButton from './ScrollTopButton';
 
 const AnarchistArchive = () => {
   const { darkMode, toggleDarkMode } = useDarkMode();
-  const { favorites, toggleFavorite, updateFavoriteNote, exportFavorites } = useFavorites();
+  const { favorites, toggleFavorite, updateFavoriteNote, exportFavorites, importFavorites } = useFavorites();
   const { showScrollTop, scrollToTop } = useScrollTop();
 
   const [activeView, setActiveView] = useState(VIEWS.LIBRARY);
@@ -95,6 +95,8 @@ const AnarchistArchive = () => {
         onDarkModeToggle={toggleDarkMode}
         onShowStats={() => setActiveView(VIEWS.STATS)}
         onShowContact={() => setActiveView(VIEWS.CONTACT)}
+        onViewChange={handleViewChange}
+        favoriteCount={favorites.length}
         stats={stats}
         activeView={activeView}
         menuOpen={menuOpen}
@@ -174,6 +176,7 @@ const AnarchistArchive = () => {
               onToggleFavorite={toggleFavorite}
               onUpdateNote={updateFavoriteNote}
               onExport={exportFavorites}
+              onImport={importFavorites}
               onRead={setReadingBook}
             />
           )}
@@ -211,7 +214,7 @@ const AnarchistArchive = () => {
         </div>
       </main>
 
-      <footer className={`border-t-4 ${darkMode ? 'border-red-900 bg-black/30' : 'border-amber-800 bg-amber-100/60'}`}>
+      <footer className={`border-t-2 shadow-[0_-4px_12px_rgba(0,0,0,0.25)] ${darkMode ? 'border-[#872320]/50 bg-black/30' : 'border-[#B79F6E] bg-amber-100/60'}`}>
         <div className="container mx-auto px-4 py-8">
           <p className={`font-display uppercase tracking-widest text-sm text-center ${darkMode ? 'text-gray-300' : 'text-amber-900'}`}>
             La Idea · Archivo Histórico Anarquista

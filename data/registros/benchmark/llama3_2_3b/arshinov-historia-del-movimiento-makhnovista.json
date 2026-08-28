@@ -1,0 +1,19 @@
+{
+  "slug": "arshinov-historia-del-movimiento-makhnovista",
+  "ms": 198486,
+  "fields": {
+    "es_anarquista": true,
+    "es_espanol": false,
+    "tipo": "historia",
+    "titulo": "Piotr Arshinov, HISTORIA DEL MOVIMIENTO MAKHNOVISTA",
+    "autor": "Piotr Arshinov",
+    "anio": "no especificado",
+    "region": "Ucrania/Rusia",
+    "contexto": "La Revolución Rusa y la lucha del movimiento machnovista contra las fuerzas enemigas",
+    "epoca": "1919-1920",
+    "corriente": "anarquismo",
+    "nota_otro": ""
+  },
+  "raw": "{\n  \"es_anarquista\": true,\n  \"es_espanol\": false,\n  \"tipo\": \"historia\",\n  \"titulo\": \"Piotr Arshinov, HISTORIA DEL MOVIMIENTO MAKHNOVISTA\",\n  \"autor\": \"Piotr Arshinov\",\n  \"anio\": \"no especificado\",\n  \"region\": \"Ucrania/Rusia\",\n  \"contexto\": \"La Revolución Rusa y la lucha del movimiento machnovista contra las fuerzas enemigas\",\n  \"epoca\": \"1919-1920\",\n  \"corriente\": \"anarquismo\",\n  \"nota_otro\": \"\"\n}",
+  "err": ""
+}

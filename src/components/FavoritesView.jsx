@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Heart, BookOpen, X, Download, StickyNote, Calendar, User, Tag } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { Heart, BookOpen, X, Download, Upload, StickyNote, Calendar, User, Tag } from 'lucide-react';
 import { THEME } from '../constants';
 
 const CATEGORY_LABELS = {
@@ -19,8 +19,8 @@ const renderNoteSection = (fav, { editingNote, noteText, setNoteText, saveNote, 
           placeholder="Escribe una nota personal sobre este texto..."
           className={`w-full text-sm rounded-lg border p-2.5 resize-none ${
             darkMode
-              ? 'bg-gray-800 border-gray-600 text-gray-200 placeholder-gray-500'
-              : 'bg-white border-amber-300 text-gray-800 placeholder-amber-600'
+              ? 'bg-gray-800 border-[#872320] text-gray-200 placeholder-gray-500'
+              : 'bg-white border-[#B79F6E] text-gray-800 placeholder-amber-600'
           }`}
           rows={3}
           autoFocus
@@ -73,11 +73,29 @@ const FavoritesView = ({
   onToggleFavorite,
   onUpdateNote,
   onExport,
+  onImport,
   onRead
 }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
   const [editingNote, setEditingNote] = useState(null);
   const [noteText, setNoteText] = useState('');
+  const [importMsg, setImportMsg] = useState(null);
+  const fileInputRef = useRef(null);
+
+  const handleImportClick = () => fileInputRef.current?.click();
+
+  const handleImportFile = (e) => {
+    const file = e.target.files?.[0];
+    e.target.value = '';
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      const res = onImport(reader.result);
+      setImportMsg(res.ok ? `Importados ${res.count} texto(s).` : res.error);
+    };
+    reader.onerror = () => setImportMsg('No se pudo leer el archivo.');
+    reader.readAsText(file);
+  };
 
   const startEditNote = (fav) => {
     setEditingNote(fav.title);
@@ -94,21 +112,42 @@ const FavoritesView = ({
 
   const handleExport = () => {
     const text = onExport();
-    const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+    const blob = new Blob([text], { type: 'application/json;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'la-idea-favoritos.txt';
+    a.download = 'la-idea-favoritos.json';
     a.click();
     URL.revokeObjectURL(url);
   };
 
   if (favorites.length === 0) {
     return (
-      <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
-        <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-6 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
-          Mi Biblioteca
-        </h2>
+      <div className={`${darkMode ? 'bg-gray-900/60 border-[#872320]/50' : 'bg-white/60 border-[#B79F6E]'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
+        <div className="mb-6 text-center">
+          <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
+            Mi Biblioteca
+          </h2>
+          <div className="flex justify-center mt-4">
+            <button
+              onClick={handleImportClick}
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                darkMode
+                  ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-[#872320]'
+                  : 'bg-amber-100 text-amber-800 hover:bg-amber-200 border border-[#B79F6E]'
+              }`}
+            >
+              <Upload size={16} />
+              Importar lista
+            </button>
+          </div>
+        </div>
+        <input ref={fileInputRef} type="file" accept="application/json,.json" className="hidden" onChange={handleImportFile} />
+        {importMsg && (
+          <p className={`text-sm mb-4 ${importMsg.startsWith('Importados') ? (darkMode ? 'text-red-400' : 'text-amber-800') : (darkMode ? 'text-red-400' : 'text-red-600')}`}>
+            {importMsg}
+          </p>
+        )}
         <div className={`${cardClass} border-2 rounded-lg p-12 text-center`}>
           <Heart size={64} className={`mx-auto mb-4 ${darkMode ? 'text-gray-600' : 'text-amber-300'}`} />
           <p className={`text-xl ${darkMode ? 'text-gray-400' : 'text-amber-800'}`}>
@@ -123,30 +162,47 @@ const FavoritesView = ({
   }
 
   return (
-    <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
-      <div className="flex items-center justify-between mb-6">
-        <div>
-          <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
-            Mi Biblioteca
-          </h2>
-          <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-            {favorites.length} texto{favorites.length === 1 ? '' : 's'} en tu colección personal
-          </p>
+    <div className={`${darkMode ? 'bg-gray-900/60 border-[#872320]/50' : 'bg-white/60 border-[#B79F6E]'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
+      <div className="mb-6 text-center">
+        <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
+          Mi Biblioteca
+        </h2>
+        <p className={`text-sm mt-1 mb-4 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
+          {favorites.length} texto{favorites.length === 1 ? '' : 's'} en tu colección personal
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          <button
+            onClick={handleImportClick}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+              darkMode
+                ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-[#872320]'
+                : 'bg-amber-100 text-amber-800 hover:bg-amber-200 border border-[#B79F6E]'
+            }`}
+          >
+            <Upload size={16} />
+            Importar lista
+          </button>
+          <button
+            onClick={handleExport}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+              darkMode
+                ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-[#872320]'
+                : 'bg-amber-100 text-amber-800 hover:bg-amber-200 border border-[#B79F6E]'
+            }`}
+          >
+            <Download size={16} />
+            Exportar lista
+          </button>
         </div>
-        <button
-          onClick={handleExport}
-          className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-            darkMode
-              ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700'
-              : 'bg-amber-100 text-amber-800 hover:bg-amber-200 border border-amber-300'
-          }`}
-        >
-          <Download size={16} />
-          Exportar lista
-        </button>
       </div>
+      <input ref={fileInputRef} type="file" accept="application/json,.json" className="hidden" onChange={handleImportFile} />
+      {importMsg && (
+        <p className={`text-sm mb-4 ${importMsg.startsWith('Importados') ? (darkMode ? 'text-red-400' : 'text-amber-800') : (darkMode ? 'text-red-400' : 'text-red-600')}`}>
+          {importMsg}
+        </p>
+      )}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {[...favorites].reverse().map((fav) => (
           <div
             key={fav.title}

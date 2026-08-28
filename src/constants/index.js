@@ -56,22 +56,26 @@ export const VIEW_LABELS = {
 };
 
 // Color themes for dark and light modes
+// `border` es el borde único de toda la app (mismo ancho, color y opacidad
+// por tema): contenedores, tarjetas, navegación, cabecera/pie, modales, mapa.
 export const THEME = {
   dark: {
     bg: 'bg-gradient-to-br from-red-950 via-black to-gray-900 text-gray-100',
-    header: 'bg-black/50 border-red-900/30',
-    nav: 'bg-black/30 border-red-900/20',
-    card: 'bg-gradient-to-br from-gray-800/80 to-gray-900/80 border-red-900/30',
+    header: 'bg-black/30 border-b-2 border-[#872320]/50',
+    nav: 'bg-black/30 border-2 border-[#872320]/50',
+    card: 'bg-gradient-to-br from-gray-800/80 to-gray-900/80 border-2 border-[#872320]/50',
+    border: 'border-2 border-[#872320]/50',
     accentText: 'text-red-400',
     accentBg: 'bg-red-600',
     accentBgHover: 'hover:bg-red-700',
-    button: 'bg-gray-800/50 hover:bg-gray-700/50'
+    button: 'bg-black/60 hover:bg-black/80'
   },
   light: {
     bg: 'bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 text-gray-800',
-    header: 'bg-amber-100/80 border-amber-800/30',
-    nav: 'bg-amber-100/60 border-amber-800/20',
-    card: 'bg-gradient-to-br from-amber-50 to-orange-50 border-amber-400',
+    header: 'bg-amber-100/60 border-b-2 border-[#B79F6E]',
+    nav: 'bg-amber-100/60 border-2 border-[#B79F6E]',
+    card: 'bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-[#B79F6E]',
+    border: 'border-2 border-[#B79F6E]',
     accentText: 'text-amber-800',
     accentBg: 'bg-amber-700',
     accentBgHover: 'hover:bg-amber-800',

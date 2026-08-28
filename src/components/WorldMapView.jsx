@@ -89,7 +89,7 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
   };
 
   return (
-    <div className={`${darkMode ? 'bg-gray-900/60 border-gray-700/50' : 'bg-white/60 border-amber-300'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
+    <div className={`${darkMode ? 'bg-gray-900/60 border-[#872320]/50' : 'bg-white/60 border-[#B79F6E]'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         Mapa Mundial de Textos
       </h2>
@@ -97,17 +97,17 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
         Haz clic en un país destacado para ver sus textos históricos. Cuanto más oscuro el color, más hechos del movimiento registra ese país. Los textos de filosofía e ideas viven en la sección de Autores.
       </p>
 
-      <WorldMap
-        data={mapData}
-        frame
-        backgroundColor="transparent"
-        borderColor={darkMode ? '#7f1d1d' : '#A0241A'}
-        frameColor={darkMode ? '#7f1d1d' : '#A0241A'}
-        onClickFunction={handleCountryClick}
-        styleFunction={styleFunction}
-        tooltipTextFunction={tooltipTextFunction}
-        containerClassName="w-full"
-      />
+      <div className={`rounded-lg border-2 overflow-hidden ${darkMode ? 'border-[#872320]/50' : 'border-[#B79F6E]'}`}>
+        <WorldMap
+          data={mapData}
+          backgroundColor="transparent"
+          borderColor={darkMode ? '#7f1d1d' : '#A0241A'}
+          onClickFunction={handleCountryClick}
+          styleFunction={styleFunction}
+          tooltipTextFunction={tooltipTextFunction}
+          containerClassName="w-full"
+        />
+      </div>
 
       <div className="mt-4 flex items-center gap-3 justify-center">
         <span className={`text-xs ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>Pocos textos</span>
@@ -126,7 +126,7 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
       <h3 className={`text-xl font-display uppercase tracking-wide mt-8 mb-4 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         O navega por región
       </h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {Object.entries(regionData)
           .map(([region]) => ({ region, count: getHistoricalBooks(regionData, region).length }))
           .filter(({ count }) => count > 0)
@@ -135,7 +135,7 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
           <button
             key={region}
             onClick={() => onSelectRegion(region)}
-            className={`${cardClass} border-2 rounded-lg p-6 hover:shadow-lg transition-all text-left`}
+            className={`${cardClass} border-2 rounded-lg p-5 hover:shadow-lg transition-all text-left`}
           >
             <div className="flex items-center gap-3 mb-2">
               <MapPin className={darkMode ? 'text-red-400' : 'text-amber-700'} size={24} />

@@ -1,0 +1,19 @@
+{
+  "slug": "fragmentos-de-antropologia-anarquista",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/libros-crimental-coleccion/Fragmentos de Antropologia Anarquista.pdf",
+  "model": "llama3.2:3b",
+  "ms": 201858,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "teoria",
+  "titulo": "Fragmentos de Antropología Anarquista",
+  "autor": "David Graeber",
+  "anio": "2004",
+  "region": "Estadounidense",
+  "contexto": "Análisis del anarquismo en la academia y su relación con el marxismo",
+  "epoca": "Actualidad",
+  "corriente": "Anarquista",
+  "nota_otro": "Crítica al marxismo y su relación con el anarquismo",
+  "doubt": "",
+  "err": ""
+}

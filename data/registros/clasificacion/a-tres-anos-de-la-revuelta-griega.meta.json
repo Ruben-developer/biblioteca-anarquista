@@ -1,0 +1,19 @@
+{
+  "slug": "a-tres-anos-de-la-revuelta-griega",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/libros-crimental-coleccion/A tres años de la revuelta griega.pdf",
+  "model": "llama3.2:3b",
+  "ms": 169370,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "historia",
+  "titulo": "Tres Años desde La Insurrección en Grecia",
+  "autor": "CrimethInc. Ex-Workers’ Collective",
+  "anio": "2011",
+  "region": "Grecia",
+  "contexto": "La revuelta griega de 2008-2009 y su impacto en la sociedad griega",
+  "epoca": "Epoca contemporánea",
+  "corriente": "Anarquismo",
+  "nota_otro": "",
+  "doubt": "",
+  "err": ""
+}

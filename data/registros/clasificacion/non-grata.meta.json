@@ -1,0 +1,19 @@
+{
+  "slug": "non-grata",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/libros-crimental-coleccion/Non-Grata.pdf",
+  "model": "llama3.2:3b",
+  "ms": 208234,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "historia",
+  "titulo": "Alfredo M. Bonanno: una propuesta insurreccional",
+  "autor": "Ediciones Crimental",
+  "anio": "2017",
+  "region": "Chile",
+  "contexto": "Anarquismo insurreccional",
+  "epoca": "Actualidad",
+  "corriente": "Insurreccionalismo anarquista",
+  "nota_otro": "Entrevista con Alfredo M. Bonanno",
+  "doubt": "",
+  "err": ""
+}

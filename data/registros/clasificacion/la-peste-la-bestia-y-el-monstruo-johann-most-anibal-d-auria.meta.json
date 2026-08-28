@@ -1,0 +1,19 @@
+{
+  "slug": "la-peste-la-bestia-y-el-monstruo-johann-most-anibal-d-auria",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/libros-crimental-coleccion/La Peste, La Bestia y el Monstruo…Johann Most - Aníbal D'Auria.pdf",
+  "model": "llama3.2:3b",
+  "ms": 185712,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "biografía",
+  "titulo": "Johann Most: Una vida de rebeldía",
+  "autor": "Aníbal D'Auria",
+  "anio": "2016",
+  "region": "Europa",
+  "contexto": "Historia del anarquismo",
+  "epoca": "Fin del siglo XIX - principios del XX",
+  "corriente": "Anarquismo alemán, propaganda por el hecho",
+  "nota_otro": "",
+  "doubt": "",
+  "err": ""
+}

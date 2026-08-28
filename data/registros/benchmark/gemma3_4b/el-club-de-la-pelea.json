@@ -1,0 +1,19 @@
+{
+  "slug": "el-club-de-la-pelea",
+  "ms": 214392,
+  "fields": {
+    "es_anarquista": true,
+    "es_espanol": false,
+    "tipo": "teoria",
+    "titulo": "El Club de la Lucha",
+    "autor": "Chuck Palahniuk",
+    "anio": "1996",
+    "region": "Estados Unidos",
+    "contexto": "La novela explora temas de alienación, nihilismo, y la búsqueda de significado en un mundo capitalista.  La destrucción del edificio Parker-Morris es un acto simbólico de rebelión contra las estructuras de poder.",
+    "epoca": "Actualidad (1990s)",
+    "corriente": "Anarcocapitalismo (implícito), Nihilismo, Anarquía",
+    "nota_otro": null
+  },
+  "raw": "```json\n{\n  \"es_anarquista\": true,\n  \"es_espanol\": false,\n  \"tipo\": \"teoria\",\n  \"titulo\": \"El Club de la Lucha\",\n  \"autor\": \"Chuck Palahniuk\",\n  \"anio\": \"1996\",\n  \"region\": \"Estados Unidos\",\n  \"contexto\": \"La novela explora temas de alienación, nihilismo, y la búsqueda de significado en un mundo capitalista.  La destrucción del edificio Parker-Morris es un acto simbólico de rebelión contra las estructuras de poder.\",\n  \"epoca\": \"Actualidad (1990s)\",\n  \"corriente\": \"Anarcocapitalismo (implícito), Nihilismo, Anarquía\",\n  \"nota_otro\": null\n}\n```",
+  "err": ""
+}

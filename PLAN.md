@@ -631,9 +631,13 @@ tiene 113 PDFs y 0 TXT) — son 6 obras a las que nunca se les asignó `filename
   (H3) FeaturedBook distingue visualmente con `border-amber-600/50` (claro) /
   `border-red-500/40` (oscuro) + `shadow-xl` — la obra del día se ve como
   recomendación editorial. **251 tests**, lint 0 errores, build OK.
-- [ ] **MEDIUM del reporte estética**: padding/sombras/gaps consistentes entre
-  tarjetas (M1-M4), footer mejorado con stats (M5), modal header compartido (M6),
-  gradiente scroll timeline móvil (M7).
+- [x] **MEDIUM del reporte estética**: padding/sombras/gaps consistentes entre
+   tarjetas (M1-M4), footer mejorado con stats (M5), modal header compartido (M6),
+   gradiente scroll timeline móvil (M7). ✅ 2026-08-27: unificado padding de tarjetas
+   a `p-5` (autores/teorías/mapa), sombras hover a `hover:shadow-lg` (timeline/biblioteca/
+   autores/teorías), grid `gap-5`; StatsPanel ambas filas `border-2 p-4`; footer con
+   stats + enlaces Glosario/Contacto + crédito; `ModalHeader` compartido (EventModal/
+   RegionModal); fade gradiente en timeline horizontal. 250 tests, lint 0, build OK.
 - [ ] **Estética**: iterar paleta de colores y tipografía (variables CSS ya separadas).
   Puesta a punto visual en general.
 - [ ] **Línea de tiempo** de autores y obras (ordenado por año). ← ya existe en el
@@ -758,7 +762,56 @@ Estadísticas).
 `check-downloads` **330/330 OK**. CI de Pages: run trigger (`044c6d3`), esperando
 resultado. Commits `bfc5480` (feat: estética) + `044c6d3` (ci: trigger).
 
-### Próximo día (2026-08-26, 00:00)
-- Implementar hallazgos MEDIUM del reporte estética (padding/sombras consistentes,
-  footer mejorado, modal header compartido, gradiente scroll timeline móvil).
+### Próximo día
+- ✅ Implementados (2026-08-27) hallazgos MEDIUM del reporte estética: padding/sombras/
+  gaps consistentes, footer con stats, `ModalHeader` compartido, fade en timeline.
+- ✅ Unificación de bordes de toda la app (2026-08-27): token `THEME.*.border`,
+  cabecera/pie con la misma línea (pie con sombra hacia arriba), modales a `border-2`,
+  borde interior del mapa eliminado, subtarjetas a `border-2`.
+- Evaluar hallazgos LOW pendientes (L2: `BookOpen size={14}`, L3: `transition-colors`
+  en header/nav para sincronizar el cambio de tema, L4: `shadow-sm` base).
 - Evaluar deuda técnica de `documents.json` (legacy, solo 2 entradas).
+
+---
+
+## Pipeline de textos (acordado 2026-08-27)
+
+Organizar los textos importados en **carpetas por tipo** (no por región/categoría/
+autor). Base: `/home/fdr/Documentos/anarquismo_importado/PDFs/`.
+
+### Carpetas de etapa
+- `sin_clasificar/` — entrada cruda (PDFs recién llegados).
+- `otros/` — no es ES/PT o no es temática anarquista (sale en el triage de idioma/temática).
+- `historia/` — hechos del movimiento (alimentan Mapa + Línea Temporal).
+- `teoria/` — ideas/ensayo/filosofía (alimentan Autores, Teorías, Rutas).
+  > Nota: sustituye a la carpeta `filosofia/` existente.
+- `otros2/` — ES/PT pero novela, cómic u otro no archivable.
+- `listos_para_subir/` — publicables (PDF copiado luego a `pdfs-local/` del contenedor).
+
+### Etapas
+1. **Adquisición** → el PDF entra en `sin_clasificar/`.
+2. **Triage idioma/temática** → si es Español/Portugués **y** temática anarquista,
+   sigue; si no → `otros/`.
+3. **Clasificación por tipo** → `historia/` (hecho/biografía de hecho/manifiesto…),
+   `teoria/` (ensayo/filosofía), o `otros2/` (novela/cómic/otro).
+4. **Extracción y análisis** (SIN metadata manual):
+   - `pdftotext` y leer las **primeras 1500 palabras** del texto.
+   - Inferir del texto: autor, título, año, región, categoría.
+   - Si es **historia**: deducir **dónde ocurrió y cuándo** (para Mapa y Línea Temporal).
+   - Si es **teoría**: evaluar si sirve para **Teorías** y **Rutas**.
+   - Dudas → anotar en archivo de registro (`data/registros/pipeline-dudas.log`).
+5. **Entrega revisable**: generar un **documento editable** (borrador de catálogo,
+   markdown/JSON) con toda la info para revisión humana, y **enviar mensaje por
+   Telegram** (`~/.config/biblioteca/notify.sh`) con el resumen de resultados.
+
+### Mapeo al catálogo (fuente única `src/data/regionData.js`)
+- `historia/` → `HISTORICAL_CATEGORIES` (mapa + timeline). Tras importar,
+  `@evento-builder` vincula el texto a un evento (invariante timeline == mapa).
+- `teoria/` → `IDEAS_CATEGORIES` (Autores, Teorías, Rutas).
+- `otros/`, `otros2/` → no se catalogan (revisión aparte).
+
+### Pendiente de implementación
+- Script `scripts/text-pipeline.mjs` que automatice las etapas 4-5: extracción
+  (`pdftotext`), heurística de metadata desde las primeras 1500 palabras, detección
+  de región/fecha para históricos, doc editable de revisión + reporte Telegram.
+- Renombrar `filosofia/` → `teoria/` y crear `otros2/` en la carpeta de importación.

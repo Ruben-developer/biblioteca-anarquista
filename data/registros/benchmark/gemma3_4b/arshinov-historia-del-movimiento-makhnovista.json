@@ -1,0 +1,19 @@
+{
+  "slug": "arshinov-historia-del-movimiento-makhnovista",
+  "ms": 226639,
+  "fields": {
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "teoria",
+    "titulo": "HISTORIA DEL MOVIMIENTO MAKHNOVISTA",
+    "autor": "Piotr Arshinov",
+    "anio": "1920",
+    "region": "Rusia",
+    "contexto": "Análisis del movimiento machnovista durante la Guerra Civil Rusa.",
+    "epoca": "Guerra Civil Rusa (1918-1921)",
+    "corriente": "Anarquismo (específicamente, con elementos de anarcosindicalismo y un enfoque en la experiencia directa del movimiento machnovista)",
+    "nota_otro": null
+  },
+  "raw": "```json\n{\n  \"es_anarquista\": true,\n  \"es_espanol\": true,\n  \"tipo\": \"teoria\",\n  \"titulo\": \"HISTORIA DEL MOVIMIENTO MAKHNOVISTA\",\n  \"autor\": \"Piotr Arshinov\",\n  \"anio\": \"1920\",\n  \"region\": \"Rusia\",\n  \"contexto\": \"Análisis del movimiento machnovista durante la Guerra Civil Rusa.\",\n  \"epoca\": \"Guerra Civil Rusa (1918-1921)\",\n  \"corriente\": \"Anarquismo (específicamente, con elementos de anarcosindicalismo y un enfoque en la experiencia directa del movimiento machnovista)\",\n  \"nota_otro\": null\n}\n```",
+  "err": ""
+}

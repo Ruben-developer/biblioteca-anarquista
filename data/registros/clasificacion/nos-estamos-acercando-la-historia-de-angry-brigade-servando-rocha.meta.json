@@ -1,0 +1,19 @@
+{
+  "slug": "nos-estamos-acercando-la-historia-de-angry-brigade-servando-rocha",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/libros-crimental-coleccion/Nos Estamos Acercando… La Historia de Angry Brigade - Servando Rocha.pdf",
+  "model": "llama3.2:3b",
+  "ms": 215281,
+  "es_anarquista": true,
+  "es_espanol": false,
+  "tipo": "historia",
+  "titulo": "La Historia de la Angry Brigade",
+  "autor": "Servando Rocha",
+  "anio": "2015",
+  "region": "Inglaterra",
+  "contexto": "Activismo político, terrorismo",
+  "epoca": "1970",
+  "corriente": "Anarquismo",
+  "nota_otro": "La historia de la Angry Brigade es un tema complejo y controvertido que ha generado mucha curiosidad y debate en torno a su filosofía y actividades.",
+  "doubt": "",
+  "err": ""
+}

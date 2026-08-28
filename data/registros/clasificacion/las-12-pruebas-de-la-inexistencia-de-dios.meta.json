@@ -1,0 +1,19 @@
+{
+  "slug": "las-12-pruebas-de-la-inexistencia-de-dios",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/libros-crimental-coleccion/Las 12 Pruebas De la Inexistencia de Dios.pdf",
+  "model": "llama3.2:3b",
+  "ms": 180432,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "teoria",
+  "titulo": "Las 12 pruebas de la inexistencia de Dios",
+  "autor": "Sebastián Faure",
+  "anio": "1926",
+  "region": "Europa",
+  "contexto": "Anarquismo, crítica al cristianismo",
+  "epoca": "Siglo XX",
+  "corriente": "Anarquismo religioso",
+  "nota_otro": "Tratado que critica la existencia de Dios y defiende el anarquismo como alternativa",
+  "doubt": "",
+  "err": ""
+}

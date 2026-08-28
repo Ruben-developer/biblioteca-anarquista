@@ -1,0 +1,19 @@
+{
+  "slug": "frank-fernandez-el-anarquismo-en-cuba",
+  "ms": 165303,
+  "fields": {
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "historia",
+    "titulo": "El Anarquismo en Cuba",
+    "autor": "Frank Fernández",
+    "anio": "2000",
+    "region": "Cuba",
+    "contexto": "La historia del movimiento anarquista en Cuba desde la época colonial hasta la guerra civil española",
+    "epoca": "Siglo XX",
+    "corriente": "anarcosindicalismo, individualismo, comunismo anárquico, anarcofeminismo",
+    "nota_otro": ""
+  },
+  "raw": "{\n  \"es_anarquista\": true,\n  \"es_espanol\": true,\n  \"tipo\": \"historia\",\n  \"titulo\": \"El Anarquismo en Cuba\",\n  \"autor\": \"Frank Fernández\",\n  \"anio\": \"2000\",\n  \"region\": \"Cuba\",\n  \"contexto\": \"La historia del movimiento anarquista en Cuba desde la época colonial hasta la guerra civil española\",\n  \"epoca\": \"Siglo XX\",\n  \"corriente\": \"anarcosindicalismo, individualismo, comunismo anárquico, anarcofeminismo\",\n  \"nota_otro\": \"\"\n}",
+  "err": ""
+}

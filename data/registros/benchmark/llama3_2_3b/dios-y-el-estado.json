@@ -1,0 +1,19 @@
+{
+  "slug": "dios-y-el-estado",
+  "ms": 162070,
+  "fields": {
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "teoria",
+    "titulo": "Dios y el Estado",
+    "autor": "Mikhail Bakunin",
+    "anio": "1882",
+    "region": "Europa",
+    "contexto": "La idea de Dios como origen de la sacralización del Estado, mantiene esclavizada a la humanidad desde tiempos inmemoriales.",
+    "epoca": "Siglo XIX",
+    "corriente": "Anarquismo",
+    "nota_otro": ""
+  },
+  "raw": "{\n  \"es_anarquista\": true,\n  \"es_espanol\": true,\n  \"tipo\": \"teoria\",\n  \"titulo\": \"Dios y el Estado\",\n  \"autor\": \"Mikhail Bakunin\",\n  \"anio\": \"1882\",\n  \"region\": \"Europa\",\n  \"contexto\": \"La idea de Dios como origen de la sacralización del Estado, mantiene esclavizada a la humanidad desde tiempos inmemoriales.\",\n  \"epoca\": \"Siglo XIX\",\n  \"corriente\": \"Anarquismo\",\n  \"nota_otro\": \"\"\n}",
+  "err": ""
+}

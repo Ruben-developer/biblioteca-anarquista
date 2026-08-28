@@ -1,0 +1,19 @@
+{
+  "slug": "introduccion-a-la-guerra-civil",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/libros-crimental-coleccion/Introduccion a la guerra civil.pdf",
+  "model": "llama3.2:3b",
+  "ms": 162732,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "teoria",
+  "titulo": "Introducción a la Guerra Civil",
+  "autor": "Tiqqun",
+  "anio": "2006",
+  "region": "Europa",
+  "contexto": "Anarquismo, filosofía crítica",
+  "epoca": "Contemporáneo",
+  "corriente": "Anarquismo de izquierda",
+  "nota_otro": "Crítica a la sociedad moderna y al Estado",
+  "doubt": "",
+  "err": ""
+}

@@ -1,0 +1,19 @@
+{
+  "slug": "fontes-anarquismo-em-portugal",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/historia-anarquista/europa/portugal/Fontes-Anarquismo-em-Portugal.pdf",
+  "model": "llama3.2:3b",
+  "ms": 183360,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "historia",
+  "titulo": "Anarquismo em Portugal",
+  "autor": "Carlos Fontes",
+  "anio": "2024",
+  "region": "Portugal",
+  "contexto": "História do anarquismo em Portugal",
+  "epoca": "Século XVIII - XXIV",
+  "corriente": "Anarquismo português",
+  "nota_otro": "",
+  "doubt": "",
+  "err": ""
+}

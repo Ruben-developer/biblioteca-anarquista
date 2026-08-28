@@ -1,0 +1,19 @@
+{
+  "slug": "frank-fernandez-el-anarquismo-en-cuba",
+  "ms": 181596,
+  "fields": {
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "historia",
+    "titulo": "El ANARQUISMO EN CUBA",
+    "autor": "Frank Fernández",
+    "anio": "2000",
+    "region": "Cuba",
+    "contexto": "Análisis histórico del movimiento anarquista en Cuba, desde el colonialismo hasta la revolución.",
+    "epoca": "1865-1998",
+    "corriente": "Anarcosindicalismo, individualismo, influencias proudhonianas y bakuninistas.",
+    "nota_otro": null
+  },
+  "raw": "```json\n{\n  \"es_anarquista\": true,\n  \"es_espanol\": true,\n  \"tipo\": \"historia\",\n  \"titulo\": \"El ANARQUISMO EN CUBA\",\n  \"autor\": \"Frank Fernández\",\n  \"anio\": \"2000\",\n  \"region\": \"Cuba\",\n  \"contexto\": \"Análisis histórico del movimiento anarquista en Cuba, desde el colonialismo hasta la revolución.\",\n  \"epoca\": \"1865-1998\",\n  \"corriente\": \"Anarcosindicalismo, individualismo, influencias proudhonianas y bakuninistas.\",\n  \"nota_otro\": null\n}\n```",
+  "err": ""
+}

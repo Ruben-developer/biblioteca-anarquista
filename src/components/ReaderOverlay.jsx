@@ -28,7 +28,7 @@ const ReaderOverlay = ({ book, darkMode, onClose, favorites = [], onToggleFavori
       className={`fixed inset-0 z-50 flex flex-col ${readingDark ? 'bg-gray-950' : 'bg-[#F5EDD9]'}`}
       aria-label={`Lector: ${book.title}`}
     >
-      <div className={`flex items-center gap-3 px-4 py-3 border-b ${readingDark ? 'bg-gray-900 border-gray-800' : 'bg-[#EDE1C8] border-[#CBB788]'}`}>
+      <div className={`flex items-center gap-3 px-4 py-3 border-b ${readingDark ? 'bg-gray-900 border-[#872320]' : 'bg-[#EDE1C8] border-[#CBB788]'}`}>
         <button
           onClick={onClose}
           className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
@@ -108,7 +108,7 @@ const ReaderOverlay = ({ book, darkMode, onClose, favorites = [], onToggleFavori
             src={url}
             title={`Lector de ${book.title}`}
             className={`w-full max-w-5xl flex-1 rounded-lg border ${
-              readingDark ? 'bg-white border-gray-800' : 'bg-white border-[#CBB788]'
+              readingDark ? 'bg-white border-[#872320]' : 'bg-white border-[#CBB788]'
             }`}
           />
         ) : (

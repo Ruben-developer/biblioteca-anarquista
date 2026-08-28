@@ -1,0 +1,19 @@
+{
+  "slug": "dios-y-el-estado",
+  "ms": 176841,
+  "fields": {
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "teoria",
+    "titulo": "Dios y el Estado",
+    "autor": "Mikhail Alexandrovich Bakunin",
+    "anio": "1882",
+    "region": "Europa (principalmente Suiza y Francia)",
+    "contexto": "Crítica a la autoridad religiosa y estatal, desarrollo del anarquismo individualista y revolucionario.",
+    "epoca": "Siglo XIX (Revolución Francesa, movimientos obreros)",
+    "corriente": "Anarquismo Individualista",
+    "nota_otro": null
+  },
+  "raw": "```json\n{\n  \"es_anarquista\": true,\n  \"es_espanol\": true,\n  \"tipo\": \"teoria\",\n  \"titulo\": \"Dios y el Estado\",\n  \"autor\": \"Mikhail Alexandrovich Bakunin\",\n  \"anio\": \"1882\",\n  \"region\": \"Europa (principalmente Suiza y Francia)\",\n  \"contexto\": \"Crítica a la autoridad religiosa y estatal, desarrollo del anarquismo individualista y revolucionario.\",\n  \"epoca\": \"Siglo XIX (Revolución Francesa, movimientos obreros)\",\n  \"corriente\": \"Anarquismo Individualista\",\n  \"nota_otro\": null\n}\n```",
+  "err": ""
+}

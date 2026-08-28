@@ -53,10 +53,10 @@ data/registros/   # registro.json (métricas diarias del agente)
 ### Content importer — flujo de clasificación por TIPO
 - Las obras se clasifican en 2 grandes tipos (ver `@content-importer`):
   - **historia** → mapa + línea temporal (categorías: historia, revolucion, movimiento, organizacion, represion, periodismo, manifiesto).
-  - **filosofia** → autores (categorías: teoria, biografia, dialogo).
+  - **teoria** → autores (categorías: teoria, biografia, dialogo).
   - Ambos alimentan la **biblioteca** (`regionData.js`).
 - El material entrante se deja en `PDFs/sin_clasificar/` y al clasificarlo se
-  mueve a `PDFs/historia/` o `PDFs/filosofia/` en `/home/fdr/Documentos/anarquismo_importado/PDFs/`.
+  mueve a `PDFs/historia/`, `PDFs/teoria/` o `PDFs/otros2/` en `/home/fdr/Documentos/anarquismo_importado/PDFs/`.
 - Tras importar un texto HISTÓRICO, invoca a `@evento-builder` para garantizar
   que quede vinculado a una tarjeta de evento (creándola si no existe). Así se
   mantiene la invariante `timeline == mapa`.

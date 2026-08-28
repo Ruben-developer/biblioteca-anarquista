@@ -1,0 +1,19 @@
+{
+  "slug": "el-club-de-la-pelea",
+  "ms": 0,
+  "fields": {
+    "es_anarquista": false,
+    "es_espanol": true,
+    "tipo": "otro",
+    "titulo": "El Club de la Lucha",
+    "autor": "Chuck Palahniuk",
+    "anio": "1996",
+    "region": "Estados Unidos",
+    "contexto": "",
+    "epoca": "",
+    "corriente": "",
+    "nota_otro": "novela (ficción)"
+  },
+  "raw": "",
+  "err": ""
+}

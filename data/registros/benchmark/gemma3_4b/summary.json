@@ -1,0 +1,8 @@
+{
+  "model": "gemma3:4b",
+  "size": "3.3 GB",
+  "totalMs": 975847,
+  "avgMs": 195169,
+  "ok": 5,
+  "total": 5
+}

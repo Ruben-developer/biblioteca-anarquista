@@ -1,0 +1,19 @@
+{
+  "slug": "el-club-de-la-pelea",
+  "ms": 257893,
+  "fields": {
+    "es_anarquista": false,
+    "es_espanol": true,
+    "tipo": "otro",
+    "titulo": "EL CLUB DE LA LUCHA",
+    "autor": "Chuck Palahniuk",
+    "anio": "1996",
+    "region": "Estadounidense",
+    "contexto": "La serie de cinco fotografías sucesivas: en la primera, el edificio está en pie; en la segunda, adopta un ángulo de ochenta grados; en la siguiente, uno de setenta; en la cuarta, cuando el armazón comienza a ceder y la torre describe un ligero arco, el edificio presenta un ángulo de cuarenta y cinco grados; en la última instantánea, la torre, con sus ciento noventa y un pisos, se precipita sobre el museo nacional, que es el verdadero objetivo de Tyler.",
+    "epoca": "Contemporáneo",
+    "corriente": null,
+    "nota_otro": "Novela"
+  },
+  "raw": "{\n  \"es_anarquista\": false,\n  \"es_espanol\": true,\n  \"tipo\": \"otro\",\n  \"titulo\": \"EL CLUB DE LA LUCHA\",\n  \"autor\": \"Chuck Palahniuk\",\n  \"anio\": \"1996\",\n  \"region\": \"Estadounidense\",\n  \"contexto\": \"La serie de cinco fotografías sucesivas: en la primera, el edificio está en pie; en la segunda, adopta un ángulo de ochenta grados; en la siguiente, uno de setenta; en la cuarta, cuando el armazón comienza a ceder y la torre describe un ligero arco, el edificio presenta un ángulo de cuarenta y cinco grados; en la última instantánea, la torre, con sus ciento noventa y un pisos, se precipita sobre el museo nacional, que es el verdadero objetivo de Tyler.\",\n  \"epoca\": \"Contemporáneo\",\n  \"corriente\": null,\n  \"nota_otro\": \"Novela\"\n}",
+  "err": ""
+}

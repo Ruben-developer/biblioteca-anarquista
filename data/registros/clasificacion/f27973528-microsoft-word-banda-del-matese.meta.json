@@ -1,0 +1,19 @@
+{
+  "slug": "f27973528-microsoft-word-banda-del-matese",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/otros/f27973528_Microsoft_Word_Banda_del_Matese.pdf",
+  "model": "llama3.2:3b",
+  "ms": 230172,
+  "es_anarquista": true,
+  "es_espanol": false,
+  "tipo": "historia",
+  "titulo": "La banda del Matese",
+  "autor": "",
+  "anio": "1877",
+  "region": "Italia",
+  "contexto": "Movimento anarchico italiano",
+  "epoca": "Seconda metà dell'800",
+  "corriente": "Internazionalismo",
+  "nota_otro": "",
+  "doubt": "",
+  "err": ""
+}

@@ -1,0 +1,19 @@
+{
+  "slug": "homenaje-a-cataluna",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/libros-crimental-coleccion/Homenaje a cataluña.pdf",
+  "model": "llama3.2:3b",
+  "ms": 167933,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "historia",
+  "titulo": "Homenaje a Cataluña",
+  "autor": "George Orwell",
+  "anio": "1938",
+  "region": "Cataluña",
+  "contexto": "Guerra Civil Española",
+  "epoca": "1936-1939",
+  "corriente": "anarquista",
+  "nota_otro": "",
+  "doubt": "",
+  "err": ""
+}
