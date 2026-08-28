@@ -505,7 +505,7 @@ export const regionData = {
       { title: "El sistema capitalista", author: "Mijaíl Bakunin", year: 1860, category: "teoria", rating: 4.5, summary: "Fragmento de Bakunin sobre el capital y la propiedad: la crítica del sistema capitalista como poder garantizado y protegido por el Estado.", filename: "Mijail Bakunin - El sistema capitalista (1860).pdf" },
       { title: "Chernoe Znamia (anarquistas rusos, 1900s)", author: "Varios Autores", year: 2010, category: "historia", rating: 4.6, summary: "Historia de los grupos anarquistas rusos Chernoe Znamia ('Bandera Negra') de Bialystok, Minsk y otras ciudades entre 1906 y 1907: terrorismo, huelgas y organización en el Imperio ruso.", filename: "Varios Autores - Chernoe Znamia (anarquistas rusos, 1900s) (2010).pdf" },
       { title: "Estatismo y anarquía", author: "Mijaíl Bakunin", year: 1873, category: "teoria", rating: 4.8, summary: "La obra mayor de Bakunin: análisis de la lucha entre el estatismo y la revolución social, con su crítica del marxismo y su visión de la sociedad federada.", filename: "Mijail Bakunin - Estatismo y anarquia (1873).pdf" },
-      { title: "Bakunin-Netchaiev. El Catecismo Revolucionario", author: "Alcalde, Juan J.", category: "historia", rating: 4.5, filename: "Alcalde, Juan J. - Bakunin-Netchaiev. El Catecismo Revolucionario.pdf" }
+       { title: "Bakunin-Netchaiev. El Catecismo Revolucionario", author: "Alcalde, Juan J.", year: 1869, category: "historia", rating: 4.5, filename: "Alcalde, Juan J. - Bakunin-Netchaiev. El Catecismo Revolucionario.pdf" }
     ]
   },
   "Siria": {
