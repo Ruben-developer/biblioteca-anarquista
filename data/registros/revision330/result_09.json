@@ -1,0 +1,153 @@
+[
+  {
+    "slug": "errico-malatesta-socialismo-y-anarquia-1975",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "teoria",
+    "region": "",
+    "epoca": "",
+    "corriente": "comunismo anarquista",
+    "tema": "socialismo y anarquia"
+  },
+  {
+    "slug": "errico-malatesta-un-plan-de-organizacion-anarquista-1927",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "teoria",
+    "region": "",
+    "epoca": "",
+    "corriente": "anarquismo organizativo",
+    "tema": "organizacion anarquista"
+  },
+  {
+    "slug": "federacion-anarquista-del-peru-el-anarcosindicalismo-en-el-peru-1961",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "historia",
+    "region": "Peru",
+    "epoca": "siglo XX",
+    "corriente": "",
+    "tema": ""
+  },
+  {
+    "slug": "federacion-anarquista-del-peru-el-anarcosindicalismo-en-el-peru-1961",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "historia",
+    "region": "Peru",
+    "epoca": "siglo XX",
+    "corriente": "",
+    "tema": ""
+  },
+  {
+    "slug": "felix-garcia-moriyon-senderos-de-libertad-2009",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "teoria",
+    "region": "",
+    "epoca": "",
+    "corriente": "educacion libertaria",
+    "tema": "pedagogia libertaria"
+  },
+  {
+    "slug": "fernando-barbero-carrasco-anarquistas-vengadores-2013",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "historia",
+    "region": "Espana",
+    "epoca": "siglo XIX-XX",
+    "corriente": "",
+    "tema": ""
+  },
+  {
+    "slug": "fernando-cabrera-parra-fidel-miro-solanes-memorias-anarquistas-de-un-catalan-exiliado-2000",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "historia",
+    "region": "Espana/Cataluna",
+    "epoca": "siglo XX (Guerra Civil y exilio)",
+    "corriente": "",
+    "tema": ""
+  },
+  {
+    "slug": "fernando-tarrida-marmol-sebastien-faure-y-volin-la-sintesis-del-anarquismo-2019",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "teoria",
+    "region": "",
+    "epoca": "",
+    "corriente": "anarquismo de sintesis",
+    "tema": "sintesis del anarquismo"
+  },
+  {
+    "slug": "fidel-miro-solanes-anarquismo-y-anarquistas-1996",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "teoria",
+    "region": "",
+    "epoca": "",
+    "corriente": "anarcosindicalismo",
+    "tema": "corrientes del movimiento libertario (CNT)"
+  },
+  {
+    "slug": "floreal-castilla-el-anarquismo-sin-adjetivos-de-ayer-a-hoy-2006",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "teoria",
+    "region": "",
+    "epoca": "",
+    "corriente": "anarquismo sin adjetivos",
+    "tema": "anarquismo sin adjetivos"
+  },
+  {
+    "slug": "francisco-ferrer-guardia-la-escuela-moderna-1908",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "teoria",
+    "region": "",
+    "epoca": "",
+    "corriente": "educacion libertaria",
+    "tema": "pedagogia libertaria / escuela moderna"
+  },
+  {
+    "slug": "francisco-jose-cuevas-noa-anarquismo-y-educacion-la-propuesta-sociopolitica-de-la-pedagogia-libertaria-2003",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "teoria",
+    "region": "",
+    "epoca": "",
+    "corriente": "educacion libertaria",
+    "tema": "pedagogia libertaria"
+  },
+  {
+    "slug": "francois-hombourger-los-anarquistas-en-la-revolucion-rusa-la-makhnovtchina-ucrania-1919-1981",
+    "es_anarquista": null,
+    "es_espanol": null,
+    "tipo": "otro",
+    "region": "",
+    "epoca": "",
+    "corriente": "",
+    "tema": "",
+    "nota": "SIN_TEXTO"
+  },
+  {
+    "slug": "frank-fernandez-el-anarquismo-en-cuba-2000",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "historia",
+    "region": "Cuba",
+    "epoca": "siglo XIX-XX",
+    "corriente": "",
+    "tema": ""
+  },
+  {
+    "slug": "frank-mintz-bakunin-y-sus-persistentes-calumniadores-2013",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "teoria",
+    "region": "",
+    "epoca": "",
+    "corriente": "bakuninismo",
+    "tema": "defensa del pensamiento de Bakunin"
+  }
+]

@@ -228,3 +228,36 @@ export const useModalFocus = (onClose) => {
 
   return dialogRef;
 };
+
+/**
+ * Hook para consultar una media query (CSS) y reaccionar a cambios.
+ * Útil para adaptar la UI entre escritorio y móvil.
+ */
+export const useMediaQuery = (query) => {
+  const getMatch = () => {
+    if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') {
+      return false;
+    }
+    return window.matchMedia(query).matches;
+  };
+  const [matches, setMatches] = useState(getMatch);
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') {
+      return undefined;
+    }
+    const mql = window.matchMedia(query);
+    const handler = (e) => setMatches(e.matches);
+    mql.addEventListener('change', handler);
+    setMatches(mql.matches);
+    return () => mql.removeEventListener('change', handler);
+  }, [query]);
+
+  return matches;
+};
+
+/**
+ * Devuelve true en pantallas pequeñas (móvil).
+ * Se usa para mostrar la línea temporal como feed en smartphone.
+ */
+export const useIsMobile = () => useMediaQuery('(max-width: 768px)');

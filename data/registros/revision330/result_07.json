@@ -1,0 +1,152 @@
+[
+  {
+    "slug": "eduardo-a-godoy-sepulveda-historia-e-historiografia-del-anarquismo-en-chile-1980-2015-2016",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "historia",
+    "region": "Chile",
+    "epoca": "1980-2015",
+    "corriente": "",
+    "tema": "Historiografía del anarquismo chileno"
+  },
+  {
+    "slug": "eduardo-a-godoy-sepulveda-represion-contra-los-anarquistas-voltaire-argandona-y-hortensia-quinio-santiago-1913-2007",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "historia",
+    "region": "Chile",
+    "epoca": "1913 (represión pos-1903-1907)",
+    "corriente": "",
+    "tema": "Represión estatal contra anarquistas en Santiago y Valparaíso"
+  },
+  {
+    "slug": "eduardo-colombo-comp-historia-del-movimiento-obrero-revolucionario-2009",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "historia",
+    "region": "Internacional",
+    "epoca": "Movimiento obrero revolucionario",
+    "corriente": "",
+    "tema": "Historia del movimiento obrero revolucionario"
+  },
+  {
+    "slug": "eduardo-colombo-el-sujeto-de-la-accion-revolucionaria-2010",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "teoria",
+    "region": "",
+    "epoca": "",
+    "corriente": "Anarquismo",
+    "tema": "El sujeto y la voluntad en la acción revolucionaria"
+  },
+  {
+    "slug": "eduardo-colombo-la-voluntad-del-pueblo-democracia-y-anarquia-2006",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "teoria",
+    "region": "",
+    "epoca": "",
+    "corriente": "Anarquismo",
+    "tema": "Democracia y anarquía, voluntad del pueblo"
+  },
+  {
+    "slug": "eduardo-daniel-rodriguez-trejo-los-anarquistas-y-la-revolucion-cubana-entre-el-jubilo-y-el-desencanto-2020",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "historia",
+    "region": "Cuba",
+    "epoca": "Revolución Cubana (1959 en adelante)",
+    "corriente": "",
+    "tema": "Postura de los anarquistas latinoamericanos ante la Revolución Cubana"
+  },
+  {
+    "slug": "elena-sanchez-gomez-kant-y-bakunin-2010",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "teoria",
+    "region": "",
+    "epoca": "",
+    "corriente": "Anarquismo bakuniniano / filosofía política",
+    "tema": "Relación entre Kant, Hegel y el pensamiento de Bakunin en el anarquismo español"
+  },
+  {
+    "slug": "elisee-reclus-el-ideal-anarquista-1898",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "teoria",
+    "region": "",
+    "epoca": "",
+    "corriente": "Anarquismo (geografía libertaria)",
+    "tema": "El ideal anarquista y la sociedad sin gobierno"
+  },
+  {
+    "slug": "elisee-reclus-evolucion-revolucion-y-anarquismo-1890",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "teoria",
+    "region": "",
+    "epoca": "",
+    "corriente": "Anarquismo",
+    "tema": "Relación entre evolución y revolución"
+  },
+  {
+    "slug": "emile-armand-el-anarquismo-individualista-como-vida-y-actividad-1907",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "teoria",
+    "region": "",
+    "epoca": "",
+    "corriente": "Individualismo anarquista",
+    "tema": "El anarquismo individualista como vida y actividad"
+  },
+  {
+    "slug": "emile-armand-el-anarquismo-individualista-lo-que-es-vale-y-puede-1916",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "teoria",
+    "region": "",
+    "epoca": "",
+    "corriente": "Individualismo anarquista",
+    "tema": "Qué es, vale y puede el anarquismo individualista"
+  },
+  {
+    "slug": "emile-armand-el-individualismo-anarquista-1920",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "teoria",
+    "region": "",
+    "epoca": "",
+    "corriente": "Individualismo anarquista",
+    "tema": "El individuo, la asociación y el rechazo a la autoridad"
+  },
+  {
+    "slug": "emile-armand-individualismo-anarquista-y-camaraderia-amorosa-1900",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "teoria",
+    "region": "",
+    "epoca": "",
+    "corriente": "Individualismo anarquista",
+    "tema": "Individualismo anarquista y camaradería amorosa"
+  },
+  {
+    "slug": "emilio-crisi-la-comuna-de-encarnacion-1931",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "historia",
+    "region": "Paraguay",
+    "epoca": "Comuna de Encarnación (experiencia libertaria)",
+    "corriente": "",
+    "tema": "La comuna de Encarnación"
+  },
+  {
+    "slug": "emilio-crisi-revolucion-anarquista-en-corea-la-comuna-de-shinmin-1929-1932-2018",
+    "es_anarquista": true,
+    "es_espanol": true,
+    "tipo": "historia",
+    "region": "Corea",
+    "epoca": "1929-1932",
+    "corriente": "",
+    "tema": "Revolución anarquista y Comuna de Shinmin en Corea/Manchuria"
+  }
+]

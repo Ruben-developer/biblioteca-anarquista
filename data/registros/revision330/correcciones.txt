@@ -1,0 +1,18 @@
+Correcciones del usuario (reclasificados como VÁLIDOS, devueltos a pdfs-local):
+
+1. Carlos Malato - Antes del momento (1905)
+   -> historia; Francia; época 1880-1890 (auge del anarquismo insurreccional en Francia); MAPA.
+   Autobiográfico.
+
+2. Angel J. Cappelletti - Utopias antiguas y modernas (1998)
+   -> historia; Grecia (en mapa); corriente PROTOANARQUISMO.
+   Primera tarjeta sin fecha, al inicio de la línea de tiempo.
+
+3. Leon Tolstoi - Que es el arte (1897)
+   -> teoría; corriente ANARCOCRISTIANISMO.
+
+4. Lopez Ortiz Geovani - El altruismo como factor de la evolucion (2010)
+   -> teoría; corriente ANARCOCOMUNISMO.
+
+5. Ted Kaczynski - La sociedad industrial y su futuro (1995)
+   -> teoría; corriente ANARCOPRIMITIVISMO.

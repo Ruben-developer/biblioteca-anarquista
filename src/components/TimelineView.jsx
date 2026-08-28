@@ -1,6 +1,6 @@
-import React, { useState, useMemo } from 'react'
-import { LayoutList, LayoutGrid } from 'lucide-react'
+import React, { useMemo } from 'react'
 import { THEME } from '../constants'
+import { useIsMobile } from '../hooks'
 import TimelineFilters from './TimelineFilters'
 
 const HorizontalTimeline = ({
@@ -83,7 +83,7 @@ const VerticalTimeline = ({
   cardClass,
   onSelectEvent
 }) => (
-  <div className={`${darkMode ? 'bg-gray-900/40 border-[#872320]/50' : 'bg-white/40 border-[#B79F6E]'} rounded-lg border-2 p-6`}>
+  <div className={`${darkMode ? 'bg-gray-900/60 border-[#872320]/50' : 'bg-white/60 border-[#B79F6E]'} rounded-lg shadow-lg border-2 p-6`}>
     <div className="space-y-8">
     {sortedDecades.map((decade) => (
       <div key={decade}>
@@ -144,7 +144,9 @@ const TimelineView = ({
   totalEventCount
 }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card
-  const [layout, setLayout] = useState('horizontal')
+  // Línea (horizontal) en escritorio, Feed (vertical) en móvil
+  const isMobile = useIsMobile()
+  const layout = isMobile ? 'vertical' : 'horizontal'
 
   const { groupedByDecade, sortedDecades } = useMemo(() => {
     const grouped = {}
@@ -179,17 +181,6 @@ const TimelineView = ({
     )
   }
 
-  const toggleBtn = `px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
-    darkMode
-      ? 'bg-gray-800 text-gray-400 hover:text-gray-200 hover:bg-gray-700'
-      : 'bg-amber-100 text-amber-700 hover:bg-amber-200'
-  }`
-  const toggleBtnActive = `px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
-    darkMode
-      ? 'bg-red-600 text-white'
-      : 'bg-amber-800 text-amber-50'
-  }`
-
   const dashedColor = darkMode ? 'rgba(220,38,38,0.3)' : 'rgba(180,83,9,0.3)'
   const dotColor = darkMode ? 'bg-red-500' : 'bg-amber-600'
   const dotBorder = darkMode ? 'border-[#872320]' : 'border-[#B79F6E]'
@@ -215,7 +206,7 @@ const TimelineView = ({
         Línea Temporal
       </h2>
       <p className={`text-sm mb-4 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-        Navega por décadas o cambia a vista feed.
+        Navega por diferentes contextos históricos.
       </p>
 
       <TimelineFilters
@@ -228,28 +219,6 @@ const TimelineView = ({
         eventCount={filteredEvents.length}
         totalEventCount={totalEventCount}
       />
-
-      <div className="flex items-center gap-2 mb-4">
-        <button
-          onClick={() => setLayout('horizontal')}
-          className={layout === 'horizontal' ? toggleBtnActive : toggleBtn}
-          title="Vista horizontal"
-        >
-          <LayoutGrid size={14} className="inline mr-1" />
-          Línea
-        </button>
-        <button
-          onClick={() => setLayout('vertical')}
-          className={layout === 'vertical' ? toggleBtnActive : toggleBtn}
-          title="Vista vertical (feed)"
-        >
-          <LayoutList size={14} className="inline mr-1" />
-          Feed
-        </button>
-        <span className={`text-xs ml-2 ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
-          {filteredEvents.length} evento{filteredEvents.length === 1 ? '' : 's'}
-        </span>
-      </div>
 
       {layout === 'horizontal' ? (
         <HorizontalTimeline {...timelineProps} />

@@ -1,0 +1,2662 @@
+{
+  "total": 332,
+  "withFilename": 330,
+  "books": [
+    {
+      "region": "Alemania",
+      "title": "El único y su propiedad",
+      "author": "Max Stirner",
+      "filename": "anarquismo/f7520496_El_unico_y_su_propiedad_indd.pdf",
+      "year": 1844,
+      "category": "teoria"
+    },
+    {
+      "region": "Alemania",
+      "title": "Bajo la bandera negra",
+      "author": "Justus F. Wittkop",
+      "filename": "anarquismo/f3257672_Bajo_la_bandera_negra_Justus_F_Wittkop.pdf",
+      "year": 1985,
+      "category": "historia"
+    },
+    {
+      "region": "Alemania",
+      "title": "Comunismo autoritario y comunismo libertario",
+      "author": "Max Nettlau",
+      "filename": "anarquismo/f7519848.pdf",
+      "year": 1928,
+      "category": "teoria"
+    },
+    {
+      "region": "Alemania",
+      "title": "La lucha contra el Estado",
+      "author": "Max Nettlau",
+      "filename": "anarquismo/f4181216.pdf",
+      "year": 1920,
+      "category": "teoria"
+    },
+    {
+      "region": "Alemania",
+      "title": "La responsabilidad y la solidaridad en la lucha obrera",
+      "author": "Max Nettlau",
+      "filename": "anarquismo/f3069592.pdf",
+      "year": 1919,
+      "category": "teoria"
+    },
+    {
+      "region": "Alemania",
+      "title": "La acción como propaganda",
+      "author": "Johann Most",
+      "filename": "anarquismo/f82066608.pdf",
+      "year": 1885,
+      "category": "teoria"
+    },
+    {
+      "region": "Alemania",
+      "title": "La revolución como juego. El movimiento Provo",
+      "author": "José Antonio Recio Cuesta",
+      "filename": "anarquismo/f3193808.pdf",
+      "year": 2014,
+      "category": "movimiento"
+    },
+    {
+      "region": "Argentina",
+      "title": "La FORA",
+      "author": "Diego Abad de Santillán",
+      "filename": "anarquismo/f8908040_FORA_Final_pmd.pdf",
+      "year": 1933,
+      "category": "historia"
+    },
+    {
+      "region": "Argentina",
+      "title": "Severino Di Giovanni",
+      "author": "Osvaldo Bayer",
+      "filename": "anarquismo/f_bayer_severino_di_giovanni.pdf",
+      "year": 1970,
+      "category": "biografia"
+    },
+    {
+      "region": "Argentina",
+      "title": "Utopías antiguas y modernas",
+      "author": "Ángel J. Cappelletti",
+      "filename": "anarquismo/f2930408_Utop_as_antiguas_y_modernas_ngel_J_Cappelletti.pdf",
+      "year": 1998,
+      "category": "teoria"
+    },
+    {
+      "region": "Argentina",
+      "title": "La educación libertaria en la Argentina y en México (1861-1945)",
+      "author": "Martín Acri y María Cácerez",
+      "filename": "anarquismo/f8373584_La_Educacion_Libertaria_en_Mexico_y_Argentina_notas_final_2_indd.pdf",
+      "year": 2011,
+      "category": "historia"
+    },
+    {
+      "region": "Argentina",
+      "title": "Los anarquistas expropiadores",
+      "author": "Osvaldo Bayer",
+      "filename": "anarquismo/f13634080.pdf",
+      "year": 2013,
+      "category": "historia"
+    },
+    {
+      "region": "Argentina",
+      "title": "América, hoy",
+      "author": "Víctor García",
+      "filename": "anarquismo/f13595808_Am_rica_hoy_V_ctor_Garc_a.pdf",
+      "year": 1956,
+      "category": "teoria"
+    },
+    {
+      "region": "Argentina",
+      "title": "Internet, hackers y software libre",
+      "author": "Carlos Gradin (comp.)",
+      "filename": "anarquismo/f120161072_Secci_n_1_Historia_qxd.pdf",
+      "year": 2004,
+      "category": "teoria"
+    },
+    {
+      "region": "Argentina",
+      "title": "La Patagonia Rebelde",
+      "author": "Osvaldo Bayer",
+      "filename": "anarquismo/f14457392_P_gina_366.pdf",
+      "year": 1972,
+      "category": "historia"
+    },
+    {
+      "region": "Argentina",
+      "title": "Anarquismo trashumante. Crónicas de crotos y linyeras",
+      "author": "Osvaldo Baigorria",
+      "filename": "anarquismo/f14456536_Anarquismo_Trashumante_26_Mayo_08_qxp.pdf",
+      "year": 1998,
+      "category": "historia"
+    },
+    {
+      "region": "Argentina",
+      "title": "La primera víctima del movimiento obrero. El discurso anarquista sobre la muerte (Argentina)",
+      "author": "Sebastián Stavisky",
+      "filename": "anarquismo/f43582144.pdf",
+      "year": 2017,
+      "category": "historia"
+    },
+    {
+      "region": "Argentina",
+      "title": "Historia del movimiento obrero revolucionario",
+      "author": "Eduardo Colombo (comp.)",
+      "filename": "anarquismo/f7276944_Historia_del_movimiento_obrero_revolucionario_indd.pdf",
+      "year": 2009,
+      "category": "historia"
+    },
+    {
+      "region": "Argentina",
+      "title": "El sujeto de la acción revolucionaria",
+      "author": "Eduardo Colombo",
+      "filename": "anarquismo/f7926128.pdf",
+      "year": 2010,
+      "category": "teoria"
+    },
+    {
+      "region": "Argentina",
+      "title": "Bitácora de la Utopía: Anarquismo para el Siglo XXI",
+      "author": "Nelson Méndez y Alfredo Vallota",
+      "filename": "anarquismo/f13811208_libro_Bitacora_de_la_utopia.pdf",
+      "year": 2000,
+      "category": "teoria"
+    },
+    {
+      "region": "Argentina",
+      "title": "El lenguaje libertario. Antología del pensamiento anarquista contemporáneo",
+      "author": "Christian Ferrer (comp.)",
+      "filename": "anarquismo/f13826552_Lenguaje_libertario_Tercera.pdf",
+      "year": 2004,
+      "category": "teoria"
+    },
+    {
+      "region": "Argentina",
+      "title": "Una molesta piedra en el camino: educación anarquista",
+      "author": "Ayelén Sardu",
+      "filename": "anarquismo/f15223600.pdf",
+      "year": 2007,
+      "category": "teoria"
+    },
+    {
+      "region": "Argentina",
+      "title": "El pensamiento de Kropotkin: ciencia, ética y anarquía",
+      "author": "Ángel J. Cappelletti",
+      "filename": "anarquismo/f3186656.pdf",
+      "year": 1978,
+      "category": "teoria"
+    },
+    {
+      "region": "Argentina",
+      "title": "Cabezas de tormenta. Ensayos sobre lo ingobernable",
+      "author": "Christian Ferrer",
+      "filename": "anarquismo/f3214160_Cabezas_Segunda_pmd.pdf",
+      "year": 2002,
+      "category": "teoria"
+    },
+    {
+      "region": "Argentina",
+      "title": "Pensadores anarquistas",
+      "author": "Ángel J. Cappelletti",
+      "filename": "anarquismo/f4193960_Cappelletti1.pdf",
+      "year": 2010,
+      "category": "teoria"
+    },
+    {
+      "region": "Argentina",
+      "title": "Contra los jueces. El discurso anarquista en sede judicial",
+      "author": "Aníbal A. D'Auria",
+      "filename": "anarquismo/f7916952_Contra_los_jueces_indd.pdf",
+      "year": 2009,
+      "category": "teoria"
+    },
+    {
+      "region": "Argentina",
+      "title": "Contra la democracia",
+      "author": "Miriam Qarmat",
+      "filename": "anarquismo/f8857768_contra_la_democracia_3_ene_2006_20h00_qxp.pdf",
+      "year": 2006,
+      "category": "teoria"
+    },
+    {
+      "region": "Argentina",
+      "title": "El fusilamiento de Penina",
+      "author": "Aldo Oliva",
+      "filename": "anarquismo/f21307416.pdf",
+      "year": 2012,
+      "category": "represion"
+    },
+    {
+      "region": "Argentina",
+      "title": "Libertarias en América del Sur. De la A a la Z",
+      "author": "Cristina Guzzo",
+      "filename": "anarquismo/f38454624.pdf",
+      "year": 2014,
+      "category": "historia"
+    },
+    {
+      "region": "Argentina",
+      "title": "La voluntad del pueblo. Democracia y anarquía",
+      "author": "Eduardo Colombo",
+      "filename": "anarquismo/f7865192_El_anarquismo_segunda.pdf",
+      "year": 2006,
+      "category": "teoria"
+    },
+    {
+      "region": "Armenia",
+      "title": "Anarquismos no occidentales",
+      "author": "Jason Adams",
+      "filename": "anarquismo/anarquismos-no-occidentales-adams.pdf",
+      "year": 2003,
+      "category": "historia"
+    },
+    {
+      "region": "Bolivia",
+      "title": "La choledad antiestatal. El anarcosindicalismo en el movimiento obrero boliviano (1912-1965)",
+      "author": "Huáscar Rodríguez García",
+      "filename": "anarquismo/f14045120_LA_CHOLEDAD_ANTIESTATAL_El_anarcosindicalismo_en_el_movimiento_obrero_boliviano_indd.pdf",
+      "year": 2010,
+      "category": "historia"
+    },
+    {
+      "region": "Bolivia",
+      "title": "Cocinando la revolución en la ciudad de La Paz (1927-1946)",
+      "author": "Ivanna Margarucci",
+      "filename": "anarquismo/f43835552.pdf",
+      "year": 2010,
+      "category": "historia"
+    },
+    {
+      "region": "Brasil",
+      "title": "El movimiento obrero brasileño",
+      "author": "Ruy Mauro Marini",
+      "filename": "anarquismo/el-movimiento-obrero-brasileno-marini.pdf",
+      "year": 1986,
+      "category": "historia"
+    },
+    {
+      "region": "Brasil",
+      "title": "O Inimigo do Rei, el grito irreverente y osado de la anarquía",
+      "author": "Júlio Antonio Zacouteguy",
+      "filename": "anarquismo/o-inimigo-do-rei-el-grito-de-la-anarquia.pdf",
+      "year": 2012,
+      "category": "periodismo"
+    },
+    {
+      "region": "Brasil",
+      "title": "Repensar el anarquismo en América Latina: historias, epistemes, luchas y otras formas de organización",
+      "author": "Javier Ruiz (coord.)",
+      "filename": "anarquismo/repensar-el-anarquismo-en-america-latina.pdf",
+      "year": 2019,
+      "category": "historia"
+    },
+    {
+      "region": "Chile",
+      "title": "Luis E. Recabarren",
+      "author": "Sergio Grez",
+      "filename": null,
+      "year": 2011,
+      "category": "biografia"
+    },
+    {
+      "region": "Chile",
+      "title": "La propaganda por los hechos en el movimiento anarquista chileno (1890-1910)",
+      "author": "Igor Goicovic Donoso",
+      "filename": "anarquismo/f14021304_Microsoft_Word_La_Propaganda_por_los_Hechos.pdf",
+      "year": 2006,
+      "category": "historia"
+    },
+    {
+      "region": "Chile",
+      "title": "Anarquismo y violencia popular en Chile (1898-1927)",
+      "author": "Equipo Sombraysén",
+      "filename": "anarquismo/f8425832_anarquismo_y_violencia_popular_en_chile.pdf",
+      "year": 2012,
+      "category": "historia"
+    },
+    {
+      "region": "Chile",
+      "title": "Contribución a una historia del anarquismo en América Latina",
+      "author": "Luis Vitale",
+      "filename": "anarquismo/f4692952_LA_INFLUENCIA_DEL_MOVIMIENTO_ANARQUISTA.pdf",
+      "year": 1998,
+      "category": "historia"
+    },
+    {
+      "region": "Chile",
+      "title": "Rebeldía y libertad: José Domingo Gómez Rojas",
+      "author": "Maximiliano Astroza-León",
+      "filename": "anarquismo/f2729984_Biograf_355a_de_J_D_G_363mez_Rojas_parte_I.pdf",
+      "year": 2016,
+      "category": "biografia"
+    },
+    {
+      "region": "Chile",
+      "title": "Wobblie. Hombres, ideas y problemas del anarquismo en los años veinte",
+      "author": "Víctor M. Muñoz C. y Armando Triviño",
+      "filename": "anarquismo/f44132216.pdf",
+      "year": 2009,
+      "category": "historia"
+    },
+    {
+      "region": "Chile",
+      "title": "Destruir para construir: violencia y acción directa en la corriente anarquista chilena (1890-1914)",
+      "author": "Darío Covarrubias Bañados",
+      "filename": "anarquismo/f102167848_destruir_para_construir_indd.pdf",
+      "year": 2013,
+      "category": "historia"
+    },
+    {
+      "region": "Chile",
+      "title": "Cuando la patria mata: la historia del anarquista Julio Rebosio (1914-1920)",
+      "author": "Víctor Muñoz Cortés",
+      "filename": "anarquismo/f13601952_julio_rebosio_indd.pdf",
+      "year": 2011,
+      "category": "biografia"
+    },
+    {
+      "region": "Chile",
+      "title": "Sin Dios ni patrones. Historia del anarquismo en la región chilena (1890-1990)",
+      "author": "Víctor Muñoz Cortés",
+      "filename": "anarquismo/f3175648.pdf",
+      "year": 2013,
+      "category": "historia"
+    },
+    {
+      "region": "Chile",
+      "title": "La masacre de la Escuela Santa María de Iquique",
+      "author": "José Antonio Gutiérrez",
+      "filename": "anarquismo/f4492832.pdf",
+      "year": 2007,
+      "category": "historia"
+    },
+    {
+      "region": "Chile",
+      "title": "Juan Gandulfo: la hoja sanitaria, el policlínico de la IWW y su legado (1923-1942)",
+      "author": "Grupo J.D. Gómez Rojas",
+      "filename": "anarquismo/f38875224.pdf",
+      "year": 2019,
+      "category": "historia"
+    },
+    {
+      "region": "Chile",
+      "title": "Entre el dolor y la ira, la venganza de Ramón Ramón",
+      "author": "Igor Goicovic Donoso",
+      "filename": "anarquismo/f4233096.pdf",
+      "year": 2012,
+      "category": "historia"
+    },
+    {
+      "region": "Chile",
+      "title": "Historia e historiografía del anarquismo en Chile (1980-2015)",
+      "author": "Eduardo A. Godoy Sepúlveda",
+      "filename": "anarquismo/f47799632.pdf",
+      "year": 2016,
+      "category": "historia"
+    },
+    {
+      "region": "Chile",
+      "title": "Represión contra los anarquistas: Voltaire Argandoña y Hortensia Quinio (Santiago, 1913)",
+      "author": "Eduardo A. Godoy Sepúlveda",
+      "filename": "anarquismo/f8110256.pdf",
+      "year": 2007,
+      "category": "represion"
+    },
+    {
+      "region": "Chile",
+      "title": "Flora Sanhueza Rebolledo. Su lucha social en Iquique (1942-1974)",
+      "author": "Gaspar García N. y Leyla Morales M.",
+      "filename": "anarquismo/f92151696.pdf",
+      "year": 2007,
+      "category": "historia"
+    },
+    {
+      "region": "Chile",
+      "title": "Vanguardias silenciadas: tejidos de la memoria",
+      "author": "Marisol Vera y Olga Grau",
+      "filename": "anarquismo/f8107448.pdf",
+      "year": 2010,
+      "category": "historia"
+    },
+    {
+      "region": "Chile",
+      "title": "Tecnología y vigilancia en la Operación Huracán",
+      "author": "Vladimir Garay y Zak Rogoff",
+      "filename": "anarquismo/f14683576.pdf",
+      "year": 2019,
+      "category": "teoria"
+    },
+    {
+      "region": "Chile",
+      "title": "Utopistas, anarquistas y rebeldes",
+      "author": "Rafael Gumucio",
+      "filename": "anarquismo/f27973720.pdf",
+      "year": 2000,
+      "category": "teoria"
+    },
+    {
+      "region": "Chile",
+      "title": "Organización Ácrata. Propuestas y debates",
+      "author": "Varios Autores (grupo La Peste)",
+      "filename": "anarquismo/f39123656.pdf",
+      "year": 2010,
+      "category": "teoria"
+    },
+    {
+      "region": "Chile",
+      "title": "La importancia de la crítica en el desarrollo del movimiento revolucionario",
+      "author": "José Antonio Gutiérrez",
+      "filename": "anarquismo/f4492528.pdf",
+      "year": 2007,
+      "category": "teoria"
+    },
+    {
+      "region": "Chile",
+      "title": "Bioterios y experimentación animal en Chile",
+      "author": "Ediciones Especismo NO!",
+      "filename": "anarquismo/f14222576.pdf",
+      "year": 2000,
+      "category": "teoria"
+    },
+    {
+      "region": "Chile",
+      "title": "¿Qué es la Anarquía? (basado en el ABC del comunismo libertario de Berkman)",
+      "author": "Colectivo Revolución Libertaria",
+      "filename": "anarquismo/f14641760_Qu_es_la_Anarqu_a.pdf",
+      "year": 2011,
+      "category": "teoria"
+    },
+    {
+      "region": "Chile",
+      "title": "La cárcel en Chile. Análisis penal y experiencia carcelaria",
+      "author": "Varios Autores",
+      "filename": "anarquismo/f15084624_EDITORIAL.pdf",
+      "year": 2010,
+      "category": "teoria"
+    },
+    {
+      "region": "Chile",
+      "title": "Lirios y cañonazos: la prosa anarquista de Vicente Huidobro",
+      "author": "Dan Connor",
+      "filename": "anarquismo/f2971440.pdf",
+      "year": 2010,
+      "category": "teoria"
+    },
+    {
+      "region": "Chile",
+      "title": "Hacktivismo, Software Libre y Anarquismo",
+      "author": "Varios Autores",
+      "filename": "anarquismo/f33980976.pdf",
+      "year": 2019,
+      "category": "teoria"
+    },
+    {
+      "region": "Chile",
+      "title": "La síntesis del anarquismo",
+      "author": "Fernando Tarrida Mármol, Sébastien Faure y Volin",
+      "filename": "anarquismo/f39804112.pdf",
+      "year": 2019,
+      "category": "teoria"
+    },
+    {
+      "region": "Chile",
+      "title": "El pensamiento político de Efraín Plaza Olmedo",
+      "author": "Colectivo",
+      "filename": "anarquismo/El_Pensamiento_Politico_de_Efrain_Plaza_Olmedo.pdf",
+      "year": 2010,
+      "category": "teoria"
+    },
+    {
+      "region": "China",
+      "title": "Problemas del anarquismo y la revolución en China",
+      "author": "Ba Jin",
+      "filename": "anarquismo/f33142024.pdf",
+      "year": 2000,
+      "category": "teoria"
+    },
+    {
+      "region": "China",
+      "title": "El anarquismo en China",
+      "author": "AA VV (Albert Meltzer, Stuart Christie, Ba Jin)",
+      "filename": "anarquismo/aa-vv-el-anarquismo-en-china.pdf",
+      "year": 1979,
+      "category": "historia"
+    },
+    {
+      "region": "Colombia",
+      "title": "Los orígenes del anarquismo en Colombia y su relación con el liberalismo",
+      "author": "Diego Paredes Goicochea",
+      "filename": "anarquismo/f33093480.pdf",
+      "year": 2017,
+      "category": "historia"
+    },
+    {
+      "region": "Colombia",
+      "title": "Pasado y presente del anarquismo y del anarcosindicalismo en Colombia",
+      "author": "Centro de Investigación Libertaria y Educación Popular",
+      "filename": "anarquismo/f18422752_Pasado_y_presente_del_anarquismo_en_Colombia_indd.pdf",
+      "year": 2011,
+      "category": "historia"
+    },
+    {
+      "region": "Corea",
+      "title": "Revolución anarquista en Corea: la Comuna de Shinmin (1929-1932)",
+      "author": "Emílio Crisi",
+      "filename": "anarquismo/f17817312_Microsoft_Word_Revoluci_363n_Anarquista_en_Corea_y_otros_textos_sob_re_el_anarquismo_coreano.pdf",
+      "year": 2018,
+      "category": "historia"
+    },
+    {
+      "region": "Cuba",
+      "title": "El anarquismo en Cuba",
+      "author": "Frank Fernández",
+      "filename": "anarquismo/f22091592_P_gina_1.pdf",
+      "year": 2000,
+      "category": "historia"
+    },
+    {
+      "region": "Cuba",
+      "title": "Los anarquistas y la Revolución Cubana: entre el júbilo y el desencanto",
+      "author": "Eduardo Daniel Rodríguez Trejo",
+      "filename": "anarquismo/los-anarquistas-y-la-revolucion-cubana.pdf",
+      "year": 2020,
+      "category": "revolucion"
+    },
+    {
+      "region": "Egipto",
+      "title": "El Anarquismo Descolonizado: una historia de las experiencias antiautoritarias en Egipto (1860-2016)",
+      "author": "Laura Galián Hernández",
+      "filename": "anarquismo/galian-el-anarquismo-descolonizado-tesis.pdf",
+      "year": 2017,
+      "category": "historia"
+    },
+    {
+      "region": "Egipto",
+      "title": "Hacia un estudio decolonial del anarquismo. Egipto y Túnez",
+      "author": "Laura Galián",
+      "filename": "anarquismo/f18324440_REIM_02_18.pdf",
+      "year": 2015,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "La Conquista del Pan",
+      "author": "Piotr Kropotkin",
+      "filename": "anarquismo/f8087024_Conquista_Final_pmd.pdf",
+      "year": 1892,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "Columna Durruti",
+      "author": "Colectivo",
+      "filename": "anarquismo/f14747464_Microsoft_Word_COLUMNA_DURRUTI_EPB.pdf",
+      "year": 1936,
+      "category": "biografia"
+    },
+    {
+      "region": "España",
+      "title": "Mujeres Libres",
+      "author": "Anarcofeminismo",
+      "filename": "anarquismo/f27974312_Las_grandes_olvidadas_Mujeres_Libres_y_el_anarcofeminismo.pdf",
+      "year": 1991,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "Colectividades Libertarias",
+      "author": "Gastón Leval",
+      "filename": "anarquismo/f18376168_Colectividades_libertarias_en_Espa_a_Gast_n_Leval.pdf",
+      "year": 1977,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "Teresa Claramunt, la virgen roja barcelonesa",
+      "author": "María Amalia Pradas Baena",
+      "filename": "anarquismo/f102972768_Teresa_Claramunt.pdf",
+      "year": 2006,
+      "category": "biografia"
+    },
+    {
+      "region": "España",
+      "title": "Los anarquistas en la crisis política española (1869-1939)",
+      "author": "José Peirats",
+      "filename": "anarquismo/f4690656_Anarquistas_en_la_crisis_Tercera_pmd.pdf",
+      "year": 1977,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "Anarcosindicalismo y revolución en España (1930-1937)",
+      "author": "John Brademas",
+      "filename": "anarquismo/f4424000_Anarcosindicalismo_y_revoluci_n_en_Espa_a_1930_1937.pdf",
+      "year": 1953,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "Las colectividades libertarias en España (1936-1938)",
+      "author": "Anastasio Ovejero",
+      "filename": "anarquismo/f3295264_Las_colectividades_libertarias_en_Espa_a_1936_1938.pdf",
+      "year": 2017,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "Francisco Ferrer i Guardia y la Escuela Moderna",
+      "author": "Colectivo",
+      "filename": "anarquismo/f3103048_tapa_ferer.pdf",
+      "year": 1909,
+      "category": "biografia"
+    },
+    {
+      "region": "España",
+      "title": "Actualidad del anarquismo",
+      "author": "Tomás Ibáñez",
+      "filename": "anarquismo/f4238304_Iba_361ez_Segunda_pmd.pdf",
+      "year": 2011,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "Anarquía profesional y desarme teórico",
+      "author": "Miguel Amorós",
+      "filename": "anarquismo/f40154192_Miguel_Amors.pdf",
+      "year": 2009,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "Anarquismo y anarquistas",
+      "author": "Fidel Miró Solanes",
+      "filename": "anarquismo/f7854008_Anarquismo_y_anarquistas_Fidel_Mir_Solanes.pdf",
+      "year": 1996,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "Los Amigos de Durruti",
+      "author": "Grupo Amigos de Durruti",
+      "filename": "anarquismo/f27599656_LosAmigosDeDurruti.pdf",
+      "year": 1937,
+      "category": "revolucion"
+    },
+    {
+      "region": "España",
+      "title": "Lola Iturbe: vida e ideal de una luchadora anarquista",
+      "author": "Sonya Torres y Antonia Fontanillas",
+      "filename": "anarquismo/f2974104_Lola_Iturbe.pdf",
+      "year": 2006,
+      "category": "biografia"
+    },
+    {
+      "region": "España",
+      "title": "El eco de los pasos",
+      "author": "Juan García Oliver",
+      "filename": "anarquismo/f102804128.pdf",
+      "year": 1978,
+      "category": "biografia"
+    },
+    {
+      "region": "España",
+      "title": "Mujeres Libres (1936-1939). Una lectura feminista",
+      "author": "Colectivo",
+      "filename": "anarquismo/f14218520.pdf",
+      "year": 2010,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "Lombroso y los anarquistas",
+      "author": "Ricardo Mella",
+      "filename": "anarquismo/f13583448.pdf",
+      "year": 1896,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "Del amor",
+      "author": "Ricardo Mella",
+      "filename": "anarquismo/f14893352.pdf",
+      "year": 1905,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "El terrorismo anarquista como propaganda por el hecho",
+      "author": "Juan Avilés",
+      "filename": "anarquismo/f13281808.pdf",
+      "year": 2000,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "Ricardo Mella y Francisco Ferrer i Guardia",
+      "author": "Frank Mintz",
+      "filename": "anarquismo/f15194288.pdf",
+      "year": 1980,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "Nueva Utopía",
+      "author": "Ricardo Mella",
+      "filename": "anarquismo/f8215120.pdf",
+      "year": 1890,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "La coacción moral",
+      "author": "Ricardo Mella",
+      "filename": "anarquismo/f8901568.pdf",
+      "year": 1898,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "La Escuela Moderna",
+      "author": "Francisco Ferrer Guardia",
+      "filename": "otros/f13306400.pdf",
+      "year": 1908,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "El corto verano de la anarquía",
+      "author": "Hans Magnus Enzensberger",
+      "filename": "anarquismo/f34085976.pdf",
+      "year": 1972,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "El error político-militar de la República",
+      "author": "Abraham Guillén",
+      "filename": "anarquismo/f27380672.pdf",
+      "year": 1971,
+      "category": "revolucion"
+    },
+    {
+      "region": "España",
+      "title": "El anarquismo como doctrina y movimiento",
+      "author": "Aureliano Yanes Herreros",
+      "filename": "anarquismo/f43612328_El_anarquismo_como_doctrina_y_movimiento.pdf",
+      "year": 1996,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "La miliciana en la Guerra Civil: realidad e imagen",
+      "author": "Colectivo",
+      "filename": "anarquismo/f101321184_La_miliciana_en_la_Guerra_Civil_realidad_e_imagen.pdf",
+      "year": 2010,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "Buenaventura Durruti (antología)",
+      "author": "Luis Olea, Ignacio Iglesias y Emma Goldman",
+      "filename": "anarquismo/f101394304.pdf",
+      "year": 2019,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "Fidel Miró Solanes. Memorias anarquistas de un catalán exiliado",
+      "author": "Fernando Cabrera Parra",
+      "filename": "anarquismo/f102840656.pdf",
+      "year": 2000,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "Durruti y Ascaso. La CNT y la revolución de julio",
+      "author": "S. Cánovas Cervantes",
+      "filename": "anarquismo/f102850088.pdf",
+      "year": 1936,
+      "category": "revolucion"
+    },
+    {
+      "region": "España",
+      "title": "La muerte de Durruti",
+      "author": "Joan Llarch",
+      "filename": "anarquismo/f102954496.pdf",
+      "year": 1973,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "Anarquistas vengadores",
+      "author": "Fernando Barbero Carrasco",
+      "filename": "anarquismo/f13298296.pdf",
+      "year": 2013,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "Los hermanos de la Costa. Piratería libertaria en el Caribe",
+      "author": "Bernardo Fuster",
+      "filename": "anarquismo/f13828072.pdf",
+      "year": 2014,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "Barricadas en Barcelona",
+      "author": "Agustín Guillamón",
+      "filename": "anarquismo/f13844216_untitled.pdf",
+      "year": 2007,
+      "category": "revolucion"
+    },
+    {
+      "region": "España",
+      "title": "La experiencia autogestionaria durante la Guerra Civil española",
+      "author": "Luis Buendía García",
+      "filename": "anarquismo/f14493488_Autogesti_n_PDF.pdf",
+      "year": 2007,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "La Revolución de Barcelona (Semana Trágica, 1909)",
+      "author": "José Comaposada",
+      "filename": "anarquismo/f15223312.pdf",
+      "year": 1909,
+      "category": "revolucion"
+    },
+    {
+      "region": "España",
+      "title": "Juan Peiró, teórico y militante del anarcosindicalismo español",
+      "author": "Ediciones FOIL",
+      "filename": "anarquismo/f16600136.pdf",
+      "year": 1978,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "Mujeres Libres. España 1936-1939",
+      "author": "Mary Nash",
+      "filename": "anarquismo/f22830024.pdf",
+      "year": 1975,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "La búsqueda de la unidad anarquista: la FAI antes de la II República",
+      "author": "Jason Garner",
+      "filename": "anarquismo/f22909624.pdf",
+      "year": 2012,
+      "category": "organizacion"
+    },
+    {
+      "region": "España",
+      "title": "La Revolución de Cataluña",
+      "author": "José Comaposada",
+      "filename": "anarquismo/f23205640.pdf",
+      "year": 1909,
+      "category": "revolucion"
+    },
+    {
+      "region": "España",
+      "title": "Un incontrolado de la Columna de Hierro",
+      "author": "Colectivo",
+      "filename": "anarquismo/f2713264.pdf",
+      "year": 1937,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "Concha Pérez Collado: anarquista, miliciana en la Guerra Civil española",
+      "author": "Sara Moroni",
+      "filename": "anarquismo/f2838032.pdf",
+      "year": 2010,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "Mujeres Libres: emancipación femenina y revolución social",
+      "author": "Helena Andrés Granel",
+      "filename": "anarquismo/f32774648.pdf",
+      "year": 2010,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "El anarquismo individualista en España (1923-1938)",
+      "author": "Xavier Diez",
+      "filename": "anarquismo/f3343648.pdf",
+      "year": 2007,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "El anarcofeminismo en España: las propuestas de Mujeres Libres",
+      "author": "Laura Sánchez Blanco",
+      "filename": "anarquismo/f3999216_45290_FORO_1.pdf",
+      "year": 2010,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "Cronología del anarquismo",
+      "author": "Manel Aisa",
+      "filename": "anarquismo/f4334200_Microsoft_Word_CRONOLOG_A_anarquista.pdf",
+      "year": 1993,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "Pedagogía libertaria española a inicios del siglo XX",
+      "author": "Guillermo Fiscer Lamelas",
+      "filename": "anarquismo/f13746472_Pedagog_a_libertaria_espa_ola_a_inicios_del_siglo_XX.pdf",
+      "year": 2012,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "Las culturas de la libertad en el anarquismo ibérico",
+      "author": "CGT (Federación de Enseñanza)",
+      "filename": "anarquismo/f14177344.pdf",
+      "year": 2013,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "Senderos de libertad",
+      "author": "Félix García Moriyón",
+      "filename": "anarquismo/f14644552_Felix_09_03_09_Para_pdf_qxp.pdf",
+      "year": 2009,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "Anarcosindicalismo en el siglo XXI",
+      "author": "Varios (CNT)",
+      "filename": "anarquismo/f3494520.pdf",
+      "year": 2010,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "La revolución rusa. Una interpretación crítica y libertaria",
+      "author": "Agustín Guillamón",
+      "filename": "anarquismo/f42651648.pdf",
+      "year": 2017,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "Kant y Bakunin",
+      "author": "Elena Sánchez Gómez",
+      "filename": "anarquismo/f13360544.pdf",
+      "year": 2010,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "El anarquismo en la sociedad actual. Entrevistas X Aniversario Portal Libertario OACA",
+      "author": "Varios Autores",
+      "filename": "anarquismo/f13580744.pdf",
+      "year": 2011,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "Sindicalismo en la empresa y el territorio",
+      "author": "CNT (Secretaría de Formación)",
+      "filename": "anarquismo/f13726656.pdf",
+      "year": 2013,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "La revuelta de los Baliusards",
+      "author": "Gavroche",
+      "filename": "anarquismo/f13872336.pdf",
+      "year": 2000,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "Anarcofeminismo e identidad(es)",
+      "author": "Alma Méijome Tejero",
+      "filename": "anarquismo/f14263448_BaseRevistasor8_8_indd.pdf",
+      "year": 2013,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "Anarquismo y educación: la propuesta sociopolítica de la pedagogía libertaria",
+      "author": "Francisco José Cuevas Noa",
+      "filename": "anarquismo/f15021776.pdf",
+      "year": 2003,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "El manifiesto negro",
+      "author": "Grup Anarquista X Llogar-hi Cadires",
+      "filename": "anarquismo/f15107904.pdf",
+      "year": 2013,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "Dinamita cerebral. Colección de cuentos anarquistas",
+      "author": "Varios Autores",
+      "filename": "anarquismo/f15193000.pdf",
+      "year": 2010,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "Anarquismo básico",
+      "author": "Colectivo",
+      "filename": "anarquismo/f15194696.pdf",
+      "year": 2000,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "Las interzonas anarquistas",
+      "author": "Colectivo de Trabajadores Culturales La Felguera",
+      "filename": "anarquismo/f3214656.pdf",
+      "year": 2011,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "La conquista del pan: volviendo a una obra de Kropotkin",
+      "author": "Simón Royo Hernández",
+      "filename": "anarquismo/f32651680.pdf",
+      "year": 2000,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "Podrán detenernos pero no pararnos",
+      "author": "Varios Autores",
+      "filename": "anarquismo/f41632872.pdf",
+      "year": 2010,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "El enigma de la docilidad",
+      "author": "Pedro García Olivo",
+      "filename": "anarquismo/f4214304_El_enigma_de_la_docilidad.pdf",
+      "year": 2005,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "Páginas selectas",
+      "author": "Rudolf Rocker, Max Nettlau y Diego Abad de Santillán",
+      "filename": "anarquismo/f42361312_Microsoft_Word_P_341ginas_selectas_Rocker_Nettlau_y_de_Santill_341n_doc.pdf",
+      "year": 1970,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "El educador mercenario (Escrituras ahuyentables I)",
+      "author": "Pedro García Olivo",
+      "filename": "anarquismo/f4502512_El_educador_mercenario.pdf",
+      "year": 2000,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "Paideia, la escuela de la anarquía. 34 años de educación libertaria",
+      "author": "Adrián Soto Salmerón",
+      "filename": "anarquismo/f4689224.pdf",
+      "year": 2010,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "Anarquismo (individualismo hispano)",
+      "author": "Miguel Giménez Igualada",
+      "filename": "anarquismo/f6904016_Microsoft_Word_Anarquismo_Miguel_Gimenez_Igualada.pdf",
+      "year": 1968,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "En torno a nuestros objetivos libertarios",
+      "author": "Diego Abad de Santillán",
+      "filename": "anarquismo/f7978648.pdf",
+      "year": 1938,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "El anarquismo sin adjetivos: de ayer a hoy",
+      "author": "Floreal Castilla",
+      "filename": "anarquismo/f8609472.pdf",
+      "year": 2006,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "Los anarquistas españoles. Los años heroicos (1868-1936)",
+      "author": "Murray Bookchin",
+      "filename": "anarquismo/f102172832_Datos.pdf",
+      "year": 1977,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "El Internado Durruti",
+      "author": "Cristina Escrivá Moscardó",
+      "filename": "anarquismo/f8782944.pdf",
+      "year": 2011,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "Anarcoveganismo y naturismo libertario",
+      "author": "Roberto X",
+      "filename": "anarquismo/f102189040.pdf",
+      "year": 2009,
+      "category": "teoria"
+    },
+    {
+      "region": "España",
+      "title": "Homenaje a Cataluña",
+      "author": "George Orwell",
+      "filename": "anarquismo/Homenaje_a_cataluña.pdf",
+      "year": 1938,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "El retorno de la Columna Durruti",
+      "author": "Internacional Situacionista / Anónimo",
+      "filename": "anarquismo/El_Retorno_de_la_Columna_Durruti.pdf",
+      "year": 1970,
+      "category": "historia"
+    },
+    {
+      "region": "España",
+      "title": "Gesto i palabra, idea i acción",
+      "author": "Colectivo",
+      "filename": "anarquismo/Jesto_i_Palabra_Idea_i_Accion.pdf",
+      "year": 2000,
+      "category": "otros"
+    },
+    {
+      "region": "España",
+      "title": "Introducción a la guerra civil",
+      "author": "Colectivo",
+      "filename": "anarquismo/Introduccion_a_la_guerra_civil.pdf",
+      "year": 2005,
+      "category": "historia"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "Anarquismo",
+      "author": "Emma Goldman",
+      "filename": "anarquismo/f13514272_goldman_anarquismo.pdf",
+      "year": 1931,
+      "category": "biografia"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "Los Mártires de Chicago",
+      "author": null,
+      "filename": "anarquismo/f_martires_de_chicago.pdf",
+      "year": 1886,
+      "category": "historia"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "La pasión de Sacco y Vanzetti",
+      "author": "Howard Fast",
+      "filename": "anarquismo/f14043016_Microsoft_Word_Fast_Howard_La_Pasi_363n_de_Sacco_y_Vanzetti_doc.pdf",
+      "year": 1953,
+      "category": "historia"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "Fraternalmente, Emma",
+      "author": "Emma Goldman",
+      "filename": "anarquismo/f76295256_Fraternalmente_Emma.pdf",
+      "year": 1920,
+      "category": "biografia"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "¿Anarquismo o barbarie? Historia, civilización y progreso",
+      "author": "Murray Bookchin",
+      "filename": "anarquismo/f8608808_file_F_Ebooks_B_Bookchin_20Murray_Historia_20civilizacion_20y_20progreso_murray01_html.pdf",
+      "year": 1990,
+      "category": "teoria"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "El origen del 1º de Mayo",
+      "author": "Colectivo",
+      "filename": "anarquismo/f4310256_Microsoft_Word_1_de_Mayo.pdf",
+      "year": 1886,
+      "category": "historia"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "Fragmentos de antropología anarquista",
+      "author": "David Graeber",
+      "filename": "anarquismo/f7894704.pdf",
+      "year": 2004,
+      "category": "teoria"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "Una solución anarquista al calentamiento global",
+      "author": "Peter Gelderloos",
+      "filename": "anarquismo/f2741896.pdf",
+      "year": 2010,
+      "category": "teoria"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "Anarquismo social o anarquismo personal",
+      "author": "Murray Bookchin",
+      "filename": "anarquismo/f8231816.pdf",
+      "year": 1995,
+      "category": "teoria"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "Durruti ha muerto, pero está vivo todavía",
+      "author": "Emma Goldman",
+      "filename": "anarquismo/f13514432.pdf",
+      "year": 1936,
+      "category": "biografia"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "Socialismo de Estado y anarquismo",
+      "author": "Benjamin Tucker",
+      "filename": "otros/f7924160.pdf",
+      "year": 1890,
+      "category": "teoria"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "TAZ: Zona Temporalmente Autónoma",
+      "author": "Hakim Bey",
+      "filename": "anarquismo/f13830240_taz.pdf",
+      "year": 1991,
+      "category": "teoria"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "La Anarquía Funciona",
+      "author": "Peter Gelderloos",
+      "filename": "anarquismo/f7526312.pdf",
+      "year": 2010,
+      "category": "teoria"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "Anarquismo: la conexión feminista",
+      "author": "Peggy Kornegger",
+      "filename": "anarquismo/f8380160.pdf",
+      "year": 1975,
+      "category": "teoria"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "Los orígenes libertarios del Primero de Mayo: de Chicago a América Latina (1886-1930)",
+      "author": "José Antonio Gutiérrez D. (comp.)",
+      "filename": "anarquismo/f102774720.pdf",
+      "year": 2010,
+      "category": "historia"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "Sacco y Vanzetti. El enemigo extranjero",
+      "author": "Helmut Ortner",
+      "filename": "anarquismo/f102873744.pdf",
+      "year": 1999,
+      "category": "historia"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "Bartolomeo Vanzetti: historia de la vida de un proletario",
+      "author": "Bartolomeo Vanzetti",
+      "filename": "anarquismo/f17783088.pdf",
+      "year": 1921,
+      "category": "historia"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "Mi mayor desilusión con Rusia",
+      "author": "Emma Goldman",
+      "filename": "anarquismo/f13514968.pdf",
+      "year": 1920,
+      "category": "teoria"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "La historia del cerebro anarquista de Anonymous",
+      "author": "Colectivo",
+      "filename": "anarquismo/f32708944.pdf",
+      "year": 2011,
+      "category": "teoria"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "¡Escucha, marxista!",
+      "author": "Murray Bookchin",
+      "filename": "anarquismo/f14922112.pdf",
+      "year": 1971,
+      "category": "teoria"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "Hacia un nuevo anarquismo",
+      "author": "Andrej Grubacic",
+      "filename": "anarquismo/f16332256.pdf",
+      "year": 2003,
+      "category": "teoria"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "Los veganarquistas",
+      "author": "Varios Autores",
+      "filename": "anarquismo/f17982680.pdf",
+      "year": 2000,
+      "category": "teoria"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "Propiedad intelectual: una crítica libertaria",
+      "author": "Kevin Carson",
+      "filename": "anarquismo/f33941328.pdf",
+      "year": 2010,
+      "category": "teoria"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "Tecnología y anarquismo",
+      "author": "Murray Bookchin",
+      "filename": "anarquismo/f44602488.pdf",
+      "year": 1980,
+      "category": "teoria"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "Grupos de afinidad. Una parte esencial de la organización anarquista",
+      "author": "CrimethInc",
+      "filename": "anarquismo/f47010792.pdf",
+      "year": 2010,
+      "category": "teoria"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "Anarquismos no occidentales. Reflexiones sobre el contexto global",
+      "author": "Jason Adams",
+      "filename": "anarquismo/f14483560.pdf",
+      "year": 2003,
+      "category": "teoria"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "Cómo la no violencia protege al Estado",
+      "author": "Peter Gelderloos",
+      "filename": "anarquismo/Como_la_NoViolencia_Protege_al_Estado_-_Peter_Gelderloos.pdf",
+      "year": 2007,
+      "category": "teoria"
+    },
+    {
+      "region": "Estados Unidos",
+      "title": "La sociedad industrial y su futuro",
+      "author": "Ted Kaczynski",
+      "filename": "anarquismo/La_Sociedad_Industrial_y_Su_Futuro.pdf",
+      "year": 1995,
+      "category": "otros"
+    },
+    {
+      "region": "Francia",
+      "title": "¿Qué es la Propiedad?",
+      "author": "Pierre-Joseph Proudhon",
+      "filename": "anarquismo/f7849880_Propiedad_Final_pmd.pdf",
+      "year": 1840,
+      "category": "teoria"
+    },
+    {
+      "region": "Francia",
+      "title": "El Mundo Nuevo",
+      "author": "Louise Michel",
+      "filename": "anarquismo/f4319816_El_mundo_nuevo_Luisa_Michel.pdf",
+      "year": 1886,
+      "category": "biografia"
+    },
+    {
+      "region": "Francia",
+      "title": "Evolución, revolución y anarquismo",
+      "author": "Élisée Reclus",
+      "filename": "anarquismo/f14490096_Evoluci_n_revoluci_n_y_anarquismo_Eliseo_Reclus.pdf",
+      "year": 1890,
+      "category": "teoria"
+    },
+    {
+      "region": "Francia",
+      "title": "El ideal anarquista",
+      "author": "Élisée Reclus",
+      "filename": "anarquismo/f14893960_EL_IDEAL_ANARQUISTA_EDICIONES_CGTINAS.pdf",
+      "year": 1898,
+      "category": "teoria"
+    },
+    {
+      "region": "Francia",
+      "title": "¡Abajo los jefes!",
+      "author": "Joseph Déjacque",
+      "filename": "anarquismo/f3192328_Abajo_los_jefes.pdf",
+      "year": 1859,
+      "category": "teoria"
+    },
+    {
+      "region": "Francia",
+      "title": "El principio federativo",
+      "author": "Pierre-Joseph Proudhon",
+      "filename": "anarquismo/f7110888_El_primncipio_federativo.pdf",
+      "year": 1863,
+      "category": "teoria"
+    },
+    {
+      "region": "Francia",
+      "title": "Amor y matrimonio",
+      "author": "Pierre-Joseph Proudhon",
+      "filename": "anarquismo/f8718376_Microsoft_Word_Amor_y_matrimonio_Pierre_Joseph_Proudhon.pdf",
+      "year": 1858,
+      "category": "teoria"
+    },
+    {
+      "region": "Francia",
+      "title": "Surrealismo y anarquismo",
+      "author": "Surrealistas en Le Libertaire",
+      "filename": "anarquismo/f8639496_Surrealismo_y_anarquismofinal_ulima_pmd.pdf",
+      "year": 1952,
+      "category": "movimiento"
+    },
+    {
+      "region": "Francia",
+      "title": "Antes del momento",
+      "author": "Carlos Malato",
+      "filename": "anarquismo/f21457808_Antes_del_momento_Carlos_Malato.pdf",
+      "year": 1905,
+      "category": "teoria"
+    },
+    {
+      "region": "Francia",
+      "title": "Marx anarquista",
+      "author": "Maximilien Rubel y Louis Janover",
+      "filename": "anarquismo/f6902816_Microsoft_Word_44_marx_anarquista.pdf",
+      "year": 1994,
+      "category": "teoria"
+    },
+    {
+      "region": "Francia",
+      "title": "La capacidad política de la clase obrera",
+      "author": "Pierre-Joseph Proudhon",
+      "filename": "anarquismo/f23646120.pdf",
+      "year": 1865,
+      "category": "teoria"
+    },
+    {
+      "region": "Francia",
+      "title": "Política unitaria",
+      "author": "Pierre-Joseph Proudhon",
+      "filename": "anarquismo/f8604912_Pol_tica_unitaria_Pierre_Joseph_Proudhon.pdf",
+      "year": 1863,
+      "category": "teoria"
+    },
+    {
+      "region": "Francia",
+      "title": "Anarquismo: de la teoría a la práctica",
+      "author": "Daniel Guérin",
+      "filename": "anarquismo/f7802064.pdf",
+      "year": 1965,
+      "category": "teoria"
+    },
+    {
+      "region": "Francia",
+      "title": "A los jóvenes",
+      "author": "Piotr Kropotkin",
+      "filename": "anarquismo/f8228400.pdf",
+      "year": 1880,
+      "category": "teoria"
+    },
+    {
+      "region": "Francia",
+      "title": "El anarquismo individualista como vida y actividad",
+      "author": "Émile Armand",
+      "filename": "anarquismo/f13508304.pdf",
+      "year": 1907,
+      "category": "teoria"
+    },
+    {
+      "region": "Francia",
+      "title": "El anarquismo individualista. Lo que es, vale y puede",
+      "author": "Émile Armand",
+      "filename": "anarquismo/f13510000.pdf",
+      "year": 1916,
+      "category": "teoria"
+    },
+    {
+      "region": "Francia",
+      "title": "El individualismo anarquista",
+      "author": "Émile Armand",
+      "filename": "anarquismo/f13512816.pdf",
+      "year": 1920,
+      "category": "teoria"
+    },
+    {
+      "region": "Francia",
+      "title": "La conjura de los indomables",
+      "author": "Rodolfo Montes de Oca",
+      "filename": "anarquismo/f21279704.pdf",
+      "year": 2008,
+      "category": "historia"
+    },
+    {
+      "region": "Francia",
+      "title": "La comuna de París (antología)",
+      "author": "Louise Michel, Mijaíl Bakunin y Piotr Kropotkin",
+      "filename": "anarquismo/f101404928.pdf",
+      "year": 2019,
+      "category": "revolucion"
+    },
+    {
+      "region": "Francia",
+      "title": "El movimiento Provo",
+      "author": "Manuel Pérez Ledesma",
+      "filename": "anarquismo/f7518944.pdf",
+      "year": 2014,
+      "category": "movimiento"
+    },
+    {
+      "region": "Francia",
+      "title": "La Comuna de París",
+      "author": "Piotr Kropotkin",
+      "filename": "anarquismo/f8228816.pdf",
+      "year": 1880,
+      "category": "revolucion"
+    },
+    {
+      "region": "Francia",
+      "title": "El mensaje revolucionario de Los Amigos de Durruti",
+      "author": "George Fontenis",
+      "filename": "anarquismo/f18380104.pdf",
+      "year": 1983,
+      "category": "teoria"
+    },
+    {
+      "region": "Francia",
+      "title": "Individualismo anarquista y camaradería amorosa",
+      "author": "Émile Armand",
+      "filename": "anarquismo/f13513248.pdf",
+      "year": 1900,
+      "category": "teoria"
+    },
+    {
+      "region": "Francia",
+      "title": "Educación y pedagogía en la tradición libertaria",
+      "author": "Hugues Lenoir",
+      "filename": "anarquismo/f14048272.pdf",
+      "year": 2010,
+      "category": "teoria"
+    },
+    {
+      "region": "Francia",
+      "title": "Odio las mañanas",
+      "author": "Jean-Marc Rouillan",
+      "filename": "anarquismo/f2866224.pdf",
+      "year": 2010,
+      "category": "represion"
+    },
+    {
+      "region": "Francia",
+      "title": "Reflexiones sobre las causas de la libertad y de la opresión social",
+      "author": "Simone Weil",
+      "filename": "anarquismo/Weil-Reflexiones-sobre-la-libertad-y-la-opresion-social.pdf",
+      "year": 1934,
+      "category": "teoria"
+    },
+    {
+      "region": "Francia",
+      "title": "La persona y lo sagrado",
+      "author": "Simone Weil",
+      "filename": "anarquismo/Weil-La-persona-y-lo-sagrado.pdf",
+      "year": 1942,
+      "category": "teoria"
+    },
+    {
+      "region": "Francia",
+      "title": "Anarquía y cristianismo",
+      "author": "Jacques Ellul",
+      "filename": "anarquismo/Ellul-Anarquia-y-cristianismo.pdf",
+      "year": 1991,
+      "category": "teoria"
+    },
+    {
+      "region": "Grecia",
+      "title": "El anarquismo en la antigua Grecia",
+      "author": "Simón Royo Hernández",
+      "filename": "anarquismo/Royo-El-anarquismo-en-la-antigua-Grecia.pdf",
+      "year": 2023,
+      "category": "historia"
+    },
+    {
+      "region": "Grecia",
+      "title": "A tres años de la revuelta griega",
+      "author": "Colectivo",
+      "filename": "anarquismo/A_tres_años_de_la_revuelta_griega.pdf",
+      "year": 2015,
+      "category": "historia"
+    },
+    {
+      "region": "Grecia",
+      "title": "Reflexiones sobre el movimiento anarquista en Grecia y la solidaridad con los presos políticos",
+      "author": "Anónimo",
+      "filename": "anarquismo/Reflexiones_sobre_el_Movimiento_Anarquista_en_grecia.pdf",
+      "year": 2018,
+      "category": "historia"
+    },
+    {
+      "region": "Inglaterra",
+      "title": "Anarquía y orden",
+      "author": "Herbert Read",
+      "filename": "anarquismo/f4355712_Anarqu_a_y_orden_Herbert_Read.pdf",
+      "year": 1945,
+      "category": "teoria"
+    },
+    {
+      "region": "Inglaterra",
+      "title": "Arte, poesía, anarquismo",
+      "author": "Herbert Read",
+      "filename": "anarquismo/f4465376_Microsoft_Word_Arte_poes_a_anarquismo_Herbert_Read.pdf",
+      "year": 1949,
+      "category": "teoria"
+    },
+    {
+      "region": "Inglaterra",
+      "title": "Anarquismo: argumentos a favor y en contra",
+      "author": "Albert Meltzer",
+      "filename": "anarquismo/f2730496.pdf",
+      "year": 2000,
+      "category": "teoria"
+    },
+    {
+      "region": "Inglaterra",
+      "title": "El anarquismo y el movimiento ambiental",
+      "author": "Andrew Flood",
+      "filename": "anarquismo/f16332536.pdf",
+      "year": 1995,
+      "category": "teoria"
+    },
+    {
+      "region": "Inglaterra",
+      "title": "¿Qué significado tendrá mañana el anarquismo?",
+      "author": "Colin Ward",
+      "filename": "anarquismo/f21458160.pdf",
+      "year": 2008,
+      "category": "teoria"
+    },
+    {
+      "region": "Inglaterra",
+      "title": "Civilización, primitivismo y anarquismo",
+      "author": "Andrew Flood",
+      "filename": "anarquismo/f4295472.pdf",
+      "year": 2004,
+      "category": "teoria"
+    },
+    {
+      "region": "Inglaterra",
+      "title": "Anarquismo, insurrecciones e insurreccionalismo",
+      "author": "Andrew Flood",
+      "filename": "anarquismo/f4697120.pdf",
+      "year": 2006,
+      "category": "teoria"
+    },
+    {
+      "region": "Inglaterra",
+      "title": "Sobre el anarquismo",
+      "author": "Nicolas Walter",
+      "filename": "anarquismo/f15578488.pdf",
+      "year": 2016,
+      "category": "teoria"
+    },
+    {
+      "region": "Inglaterra",
+      "title": "El anarquismo: historia de las ideas y movimientos libertarios",
+      "author": "George Woodcock",
+      "filename": "anarquismo/Woodcock-El-anarquismo-historia-de-las-ideas.pdf",
+      "year": 1962,
+      "category": "historia"
+    },
+    {
+      "region": "Inglaterra",
+      "title": "Nos estamos acercando: La historia de Angry Brigade",
+      "author": "Servando Rocha",
+      "filename": "anarquismo/Nos_Estamos_Acercando_-_La_Historia_de_Angry_Brigade.pdf",
+      "year": 2014,
+      "category": "historia"
+    },
+    {
+      "region": "Italia",
+      "title": "La Anarquía y el Método del Anarquismo",
+      "author": "Errico Malatesta",
+      "filename": "anarquismo/f39014120_La_anarqu_a_y_el_m_todo_del_anarquismo_Errico_Malatesta.pdf",
+      "year": 1891,
+      "category": "teoria"
+    },
+    {
+      "region": "Italia",
+      "title": "En el café",
+      "author": "Errico Malatesta",
+      "filename": "anarquismo/f_malatesta_en_el_cafe.pdf",
+      "year": 1922,
+      "category": "dialogo"
+    },
+    {
+      "region": "Italia",
+      "title": "Crítica revolucionaria",
+      "author": "Luigi Fabbri",
+      "filename": "anarquismo/f3194656_Cr_tica_revolucionaria_Luigi_Fabbri.pdf",
+      "year": 1923,
+      "category": "teoria"
+    },
+    {
+      "region": "Italia",
+      "title": "La Revolución Rusa y el anarquismo",
+      "author": "Luigi Fabbri",
+      "filename": "anarquismo/f2904104_fabbri.pdf",
+      "year": 1922,
+      "category": "teoria"
+    },
+    {
+      "region": "Italia",
+      "title": "Individualismo y Comunismo",
+      "author": "Errico Malatesta",
+      "filename": "anarquismo/f8435008.pdf",
+      "year": 1926,
+      "category": "teoria"
+    },
+    {
+      "region": "Italia",
+      "title": "Influencias burguesas sobre el anarquismo",
+      "author": "Luigi Fabbri",
+      "filename": "anarquismo/f4319216.pdf",
+      "year": 1921,
+      "category": "teoria"
+    },
+    {
+      "region": "Italia",
+      "title": "Un plan de organización anarquista",
+      "author": "Errico Malatesta",
+      "filename": "anarquismo/f7273608.pdf",
+      "year": 1927,
+      "category": "teoria"
+    },
+    {
+      "region": "Italia",
+      "title": "Elecciones y anarquismo",
+      "author": "Errico Malatesta",
+      "filename": "anarquismo/f8673248.pdf",
+      "year": 1897,
+      "category": "teoria"
+    },
+    {
+      "region": "Italia",
+      "title": "Años rojos, años negros. La resistencia anarquista contra el fascismo en Italia",
+      "author": "Colectivo",
+      "filename": "anarquismo/f13239280.pdf",
+      "year": 2010,
+      "category": "historia"
+    },
+    {
+      "region": "Italia",
+      "title": "Ai ferri corti. Romper con esta realidad",
+      "author": "Colectivo",
+      "filename": "anarquismo/f13790784_ai_ferri_corti_indd.pdf",
+      "year": 2000,
+      "category": "teoria"
+    },
+    {
+      "region": "Italia",
+      "title": "Revolución no es dictadura",
+      "author": "Luigi Fabbri",
+      "filename": "anarquismo/f3930104.pdf",
+      "year": 1920,
+      "category": "teoria"
+    },
+    {
+      "region": "Italia",
+      "title": "Hacia la nada creadora. Individuo y revuelta",
+      "author": "Renzo Novatore",
+      "filename": "anarquismo/f15115040.pdf",
+      "year": 1924,
+      "category": "teoria"
+    },
+    {
+      "region": "Italia",
+      "title": "Socialismo y anarquía",
+      "author": "Errico Malatesta",
+      "filename": "anarquismo/f26553776.pdf",
+      "year": 1975,
+      "category": "teoria"
+    },
+    {
+      "region": "Italia",
+      "title": "La evolución del concepto de pedagogía libertaria",
+      "author": "Valeria Giacomoni",
+      "filename": "anarquismo/f4355280.pdf",
+      "year": 2010,
+      "category": "teoria"
+    },
+    {
+      "region": "Italia",
+      "title": "Páginas de lucha cotidiana",
+      "author": "Errico Malatesta",
+      "filename": "anarquismo/f101236736.pdf",
+      "year": 2015,
+      "category": "periodismo"
+    },
+    {
+      "region": "Italia",
+      "title": "Anarquismo y política. El 'programa mínimo' de los libertarios del Tercer Milenio",
+      "author": "Stefano d'Errico",
+      "filename": "anarquismo/f4531080.pdf",
+      "year": 2010,
+      "category": "teoria"
+    },
+    {
+      "region": "Italia",
+      "title": "¿Anarquía?",
+      "author": "Errico Malatesta",
+      "filename": "anarquismo/¿Anarquia_.pdf",
+      "year": 1891,
+      "category": "teoria"
+    },
+    {
+      "region": "Italia",
+      "title": "Anarquía",
+      "author": "Errico Malatesta",
+      "filename": "anarquismo/Anarquia.pdf",
+      "year": 1891,
+      "category": "teoria"
+    },
+    {
+      "region": "Italia",
+      "title": "La Anarquía",
+      "author": "Errico Malatesta",
+      "filename": "anarquismo/La_Anarquia_-_Errico_Malatesta.pdf",
+      "year": 1891,
+      "category": "teoria"
+    },
+    {
+      "region": "Italia",
+      "title": "Autogestión",
+      "author": "Alfredo M. Bonanno",
+      "filename": "anarquismo/Autogestion_-_Bonanno.pdf",
+      "year": 1995,
+      "category": "teoria"
+    },
+    {
+      "region": "Italia",
+      "title": "Errico Malatesta y la violencia revolucionaria",
+      "author": "Colectivo",
+      "filename": "anarquismo/Errico_Malatesta_y_la_violencia_revolucionaria.pdf",
+      "year": 2010,
+      "category": "teoria"
+    },
+    {
+      "region": "Italia",
+      "title": "Cómo y porqué asesiné a la princesa Sissi",
+      "author": "Luigi Lucheni",
+      "filename": "anarquismo/Como_y_Porque_Asesine_a_la_Princesa_Sissi.pdf",
+      "year": 1898,
+      "category": "biografia"
+    },
+    {
+      "region": "Japón",
+      "title": "Los Mártires de Tokio y la Sociedad de la Guillotina",
+      "author": "Li Pei-Kan (Ba Jin)",
+      "filename": "anarquismo/f101423480.pdf",
+      "year": 2019,
+      "category": "historia"
+    },
+    {
+      "region": "Japón",
+      "title": "Kotoku, Osugi, Yamaga: tres anarquistas japoneses",
+      "author": "Víctor García",
+      "filename": "anarquismo/f101402144.pdf",
+      "year": 1975,
+      "category": "historia"
+    },
+    {
+      "region": "Japón",
+      "title": "Contra el Dios Emperador. Juicios de la traición anarquista en Japón",
+      "author": "Stefan Anarkowic",
+      "filename": "anarquismo/f14246256.pdf",
+      "year": 2019,
+      "category": "represion"
+    },
+    {
+      "region": "Japón",
+      "title": "Museihushugi: el anarquismo japonés",
+      "author": "Víctor García",
+      "filename": "anarquismo/f39992400.pdf",
+      "year": 1980,
+      "category": "historia"
+    },
+    {
+      "region": "Japón",
+      "title": "Reflexiones en el camino hacia la horca",
+      "author": "Kanno Sugako",
+      "filename": "anarquismo/f101424272.pdf",
+      "year": 1911,
+      "category": "historia"
+    },
+    {
+      "region": "Macedonia",
+      "title": "La Banda de Chernopeev",
+      "author": "Colectivo anarquista de Macedonia",
+      "filename": "anarquismo/f33455568_La_Banda_de_Chernopeev_1903.pdf",
+      "year": 1903,
+      "category": "historia"
+    },
+    {
+      "region": "Macedonia",
+      "title": "El anarquismo búlgaro en armas",
+      "author": "Michael Schmidt",
+      "filename": "anarquismo/f101395056.pdf",
+      "year": 2019,
+      "category": "historia"
+    },
+    {
+      "region": "México",
+      "title": "Regeneración",
+      "author": "Flores Magón",
+      "filename": null,
+      "year": 1906,
+      "category": "periodismo"
+    },
+    {
+      "region": "México",
+      "title": "Tierra y Libertad",
+      "author": "Ricardo Flores Magón",
+      "filename": "anarquismo/f_flores_magon_tierra_y_libertad.pdf",
+      "year": 1916,
+      "category": "manifiesto"
+    },
+    {
+      "region": "México",
+      "title": "Artículos de combate",
+      "author": "Práxedis G. Guerrero",
+      "filename": "otros/f8896648_Microsoft_Word_Art_culos_de_combate_Pr_xedis_G_Guerrero.pdf",
+      "year": 1910,
+      "category": "periodismo"
+    },
+    {
+      "region": "México",
+      "title": "La anarquía a través de los tiempos",
+      "author": "Max Nettlau",
+      "filename": "anarquismo/f6901576_LA_ANARQU_A_A_TRAVES_DE_LOS_TIEMPOS.pdf",
+      "year": 1970,
+      "category": "historia"
+    },
+    {
+      "region": "México",
+      "title": "La bala y la escuela",
+      "author": "Los Discursos Peligrosos",
+      "filename": "anarquismo/f4209352_bala_y_escuela.pdf",
+      "year": 2009,
+      "category": "historia"
+    },
+    {
+      "region": "México",
+      "title": "Rompamos las cadenas",
+      "author": "Erick Benítez Martínez",
+      "filename": "anarquismo/f8672832_Rompamos_las_cadenas_Erick_Ben_tez_Mart_nez.pdf",
+      "year": 2016,
+      "category": "teoria"
+    },
+    {
+      "region": "México",
+      "title": "La traición de la Hoz y el Martillo",
+      "author": "Erick Benítez Martínez",
+      "filename": "anarquismo/f7572424_La_traici_n_de_la_hoz_y_el_martillo_Erick_Ben_tez_Mart_nez.pdf",
+      "year": 2010,
+      "category": "historia"
+    },
+    {
+      "region": "México",
+      "title": "Revolución en Baja California, México (1911)",
+      "author": "D. L. Nevin",
+      "filename": "anarquismo/f3032944.pdf",
+      "year": 1998,
+      "category": "revolucion"
+    },
+    {
+      "region": "México",
+      "title": "Algunas reflexiones sobre el extravío teórico ideológico en el pensamiento ácrata contemporáneo",
+      "author": "Gustavo Rodríguez",
+      "filename": "anarquismo/f15091048.pdf",
+      "year": 2007,
+      "category": "teoria"
+    },
+    {
+      "region": "México",
+      "title": "Archipiélago. Afinidad, organización informal y proyectos insurreccionales",
+      "author": "Varios (Salto, subversión & anarquía)",
+      "filename": "anarquismo/f18750936.pdf",
+      "year": 2000,
+      "category": "teoria"
+    },
+    {
+      "region": "México",
+      "title": "El altruismo como factor de la evolución",
+      "author": "López Ortiz Geovani",
+      "filename": "anarquismo/f6900376_altruismo_PDF.pdf",
+      "year": 2010,
+      "category": "teoria"
+    },
+    {
+      "region": "Nigeria",
+      "title": "Anarquismo africano",
+      "author": "Sam Mbah e I. E. Igariwey",
+      "filename": "anarquismo/f27953352.pdf",
+      "year": 1997,
+      "category": "historia"
+    },
+    {
+      "region": "Paraguay",
+      "title": "La comuna de Encarnación",
+      "author": "Emilio Crisi",
+      "filename": "anarquismo/f13336448.pdf",
+      "year": 1931,
+      "category": "revolucion"
+    },
+    {
+      "region": "Paraguay",
+      "title": "Barrett",
+      "author": "Vladimiro Muñoz",
+      "filename": "anarquismo/f13590144.pdf",
+      "year": 1994,
+      "category": "historia"
+    },
+    {
+      "region": "Paraguay",
+      "title": "Mi anarquismo y otros escritos",
+      "author": "Rafael Barrett",
+      "filename": "anarquismo/barrett-mi-anarquismo-y-otros-escritos.pdf",
+      "year": 2015,
+      "category": "manifiesto"
+    },
+    {
+      "region": "Perú",
+      "title": "El anarcosindicalismo en el sur andino peruano: Arequipa, Mollendo, Cusco, Puno",
+      "author": "Steven J. Hirsch",
+      "filename": "anarquismo/anarcosindicalismo-en-el-sur-andino-peruano.pdf",
+      "year": 2020,
+      "category": "historia"
+    },
+    {
+      "region": "Perú",
+      "title": "Anarquismo y sindicalismo en el Perú (1904-1929)",
+      "author": "Piedad Pareja",
+      "filename": "anarquismo/anarquismo-y-sindicalismo-en-el-peru-piedad-pareja.pdf",
+      "year": 1978,
+      "category": "historia"
+    },
+    {
+      "region": "Perú",
+      "title": "El anarcosindicalismo en el Perú",
+      "author": "Federación Anarquista del Perú",
+      "filename": "anarquismo/el-anarquismo-en-el-peru.pdf",
+      "year": 1961,
+      "category": "historia"
+    },
+    {
+      "region": "Polonia",
+      "title": "Anarquismo en Polonia (Wojna 1)",
+      "author": "Varios autores (zine)",
+      "filename": "anarquismo/Anarquismo-en-Polonia-zine.pdf",
+      "year": 2022,
+      "category": "historia"
+    },
+    {
+      "region": "Rusia",
+      "title": "El Apoyo Mutuo",
+      "author": "Piotr Kropotkin",
+      "filename": "anarquismo/f7067536_El_Apoyo_Mutuo_1902.pdf",
+      "year": 1902,
+      "category": "teoria"
+    },
+    {
+      "region": "Rusia",
+      "title": "Historia del Movimiento Makhnovista",
+      "author": "Néstor Makhno",
+      "filename": "anarquismo/f7980904_Historia_del_movimiento_Makhnovista_indd.pdf",
+      "year": 1929,
+      "category": "biografia"
+    },
+    {
+      "region": "Rusia",
+      "title": "Dios y el Estado",
+      "author": "Mijaíl Bakunin",
+      "filename": "anarquismo/f7985360_Dios_y_el_Estado_pmd.pdf",
+      "year": 1882,
+      "category": "teoria"
+    },
+    {
+      "region": "Rusia",
+      "title": "Origen y evolución de la moral",
+      "author": "Piotr Kropotkin",
+      "filename": "anarquismo/f13578032_ORIGEN_Y_EVO_LUCION_DE_LA_MO_RAL_PEDRO_KRO_POTKIN.pdf",
+      "year": 1898,
+      "category": "teoria"
+    },
+    {
+      "region": "Rusia",
+      "title": "Campos, fábricas y talleres",
+      "author": "Piotr Kropotkin",
+      "filename": "anarquismo/f8605296_Microsoft_Word_Campos_f_bricas_y_talleres_Piotr_Kropotkin.pdf",
+      "year": 1899,
+      "category": "teoria"
+    },
+    {
+      "region": "Rusia",
+      "title": "Las prisiones",
+      "author": "Piotr Kropotkin",
+      "filename": "anarquismo/f4181504_Las_Prisiones.pdf",
+      "year": 1887,
+      "category": "teoria"
+    },
+    {
+      "region": "Rusia",
+      "title": "El Estado",
+      "author": "Piotr Kropotkin",
+      "filename": "anarquismo/f7804832_EL_ESTADO.pdf",
+      "year": 1900,
+      "category": "teoria"
+    },
+    {
+      "region": "Rusia",
+      "title": "El principio de autoridad",
+      "author": "Mijaíl Bakunin",
+      "filename": "anarquismo/f7069736_El_Principio_de_Autoridad_Miguel_Bakunin.pdf",
+      "year": 1873,
+      "category": "teoria"
+    },
+    {
+      "region": "Rusia",
+      "title": "El principio del Estado",
+      "author": "Mijaíl Bakunin",
+      "filename": "anarquismo/f8607784_el_principio_del_estado.pdf",
+      "year": 1871,
+      "category": "teoria"
+    },
+    {
+      "region": "Rusia",
+      "title": "El patriotismo",
+      "author": "Mijaíl Bakunin",
+      "filename": "anarquismo/f7852032_Microsoft_Word_Bakunin_Mijail_El_Patriotismo_rtf.pdf",
+      "year": 1869,
+      "category": "teoria"
+    },
+    {
+      "region": "Rusia",
+      "title": "Federalismo, socialismo y antiteologismo",
+      "author": "Mijaíl Bakunin",
+      "filename": "anarquismo/f7852856_Federalismo_Socialismo_y_Antiteologismo.pdf",
+      "year": 1867,
+      "category": "teoria"
+    },
+    {
+      "region": "Rusia",
+      "title": "Kronstadt 1921",
+      "author": "Paul Avrich",
+      "filename": "anarquismo/f4327304_Kronstadt_Segunda_pmd.pdf",
+      "year": 1970,
+      "category": "revolucion"
+    },
+    {
+      "region": "Rusia",
+      "title": "¿Qué es el arte?",
+      "author": "León Tolstói",
+      "filename": "anarquismo/f3928840_Qu_es_el_arte.pdf",
+      "year": 1897,
+      "category": "teoria"
+    },
+    {
+      "region": "Rusia",
+      "title": "El Reino de Dios está dentro de vosotros",
+      "author": "León Tolstói",
+      "filename": "anarquismo/Tolstoi-El-Reino-de-Dios-esta-dentro-de-vosotros.pdf",
+      "year": 1894,
+      "category": "teoria"
+    },
+    {
+      "region": "Rusia",
+      "title": "La comuna de Kronstadt",
+      "author": "Stepan Petritchenko, Alexander Berkman y Néstor Makhno",
+      "filename": "anarquismo/f101404144.pdf",
+      "year": 1921,
+      "category": "revolucion"
+    },
+    {
+      "region": "Rusia",
+      "title": "La Makhnovschina. Un movimiento libertario bajo fuego en Ucrania (1918-1921)",
+      "author": "Lorena Paz Paredes",
+      "filename": "anarquismo/f38438312.pdf",
+      "year": 2018,
+      "category": "historia"
+    },
+    {
+      "region": "Rusia",
+      "title": "Consideraciones filosóficas",
+      "author": "Mijaíl Bakunin",
+      "filename": "anarquismo/f7775816.pdf",
+      "year": 1871,
+      "category": "teoria"
+    },
+    {
+      "region": "Rusia",
+      "title": "El anarquismo en el espejo judío",
+      "author": "Yago Mellado López",
+      "filename": "anarquismo/f14265872_El_Anarquismo_en_el_espejo_jud_o.pdf",
+      "year": 2013,
+      "category": "historia"
+    },
+    {
+      "region": "Rusia",
+      "title": "Los anarquistas y los soviets",
+      "author": "Alexandre Skirda",
+      "filename": "anarquismo/f102862616.pdf",
+      "year": 2010,
+      "category": "historia"
+    },
+    {
+      "region": "Rusia",
+      "title": "La revolución desconocida",
+      "author": "Volin",
+      "filename": "anarquismo/f13591720.pdf",
+      "year": 1947,
+      "category": "historia"
+    },
+    {
+      "region": "Rusia",
+      "title": "La ley y la autoridad",
+      "author": "Piotr Kropotkin",
+      "filename": "anarquismo/f8229128.pdf",
+      "year": 1880,
+      "category": "teoria"
+    },
+    {
+      "region": "Rusia",
+      "title": "Catecismo revolucionario",
+      "author": "Mijaíl Bakunin",
+      "filename": "anarquismo/f8607288.pdf",
+      "year": 1866,
+      "category": "teoria"
+    },
+    {
+      "region": "Rusia",
+      "title": "Memorias de un revolucionario",
+      "author": "Piotr Kropotkin",
+      "filename": "anarquismo/f33451600.pdf",
+      "year": 1899,
+      "category": "historia"
+    },
+    {
+      "region": "Rusia",
+      "title": "El programa de la Alianza para la Revolución Internacional",
+      "author": "Mijaíl Bakunin",
+      "filename": "anarquismo/f39186144.pdf",
+      "year": 1871,
+      "category": "teoria"
+    },
+    {
+      "region": "Rusia",
+      "title": "La ciencia y la urgencia de la labor revolucionaria",
+      "author": "Mijaíl Bakunin",
+      "filename": "anarquismo/f82099328.pdf",
+      "year": 1870,
+      "category": "teoria"
+    },
+    {
+      "region": "Rusia",
+      "title": "La organización de la Internacional",
+      "author": "Mijaíl Bakunin",
+      "filename": "anarquismo/f13336184.pdf",
+      "year": 1869,
+      "category": "teoria"
+    },
+    {
+      "region": "Rusia",
+      "title": "El debate sobre La Plataforma",
+      "author": "Néstor Majnó, Dielo Trouda y Errico Malatesta",
+      "filename": "anarquismo/f14303416.pdf",
+      "year": 2019,
+      "category": "teoria"
+    },
+    {
+      "region": "Rusia",
+      "title": "Bakunin y sus persistentes calumniadores",
+      "author": "Frank Mintz",
+      "filename": "anarquismo/f19305432.pdf",
+      "year": 2013,
+      "category": "teoria"
+    },
+    {
+      "region": "Rusia",
+      "title": "Lenin: sepulturero de la revolución rusa",
+      "author": "Gastón Leval",
+      "filename": "anarquismo/f21306920_lenin.pdf",
+      "year": 1921,
+      "category": "teoria"
+    },
+    {
+      "region": "Rusia",
+      "title": "Plataforma organizacional de los comunistas libertarios",
+      "author": "Dielo Truda",
+      "filename": "anarquismo/f40367232.pdf",
+      "year": 1926,
+      "category": "teoria"
+    },
+    {
+      "region": "Rusia",
+      "title": "El sistema capitalista",
+      "author": "Mijaíl Bakunin",
+      "filename": "anarquismo/f8608112.pdf",
+      "year": 1860,
+      "category": "teoria"
+    },
+    {
+      "region": "Rusia",
+      "title": "Chernoe Znamia (anarquistas rusos, 1900s)",
+      "author": "Varios Autores",
+      "filename": "anarquismo/f102178512.pdf",
+      "year": 2010,
+      "category": "historia"
+    },
+    {
+      "region": "Rusia",
+      "title": "Estatismo y anarquía",
+      "author": "Mijaíl Bakunin",
+      "filename": "anarquismo/f7070072_Estatismo_Segunda_pmd.pdf",
+      "year": 1873,
+      "category": "teoria"
+    },
+    {
+      "region": "Siria",
+      "title": "El experimento del Kurdistán oeste (Kurdistán sirio)",
+      "author": "Zaher Baher",
+      "filename": "otros/f38322176.pdf",
+      "year": 2015,
+      "category": "revolucion"
+    },
+    {
+      "region": "Siria",
+      "title": "Confederalismo Democrático",
+      "author": "Abdullah Öcalan",
+      "filename": "anarquismo/f40068336.pdf",
+      "year": 2010,
+      "category": "teoria"
+    },
+    {
+      "region": "Ucrania",
+      "title": "Los anarquistas en la Revolución Rusa: la Makhnovtchina (Ucrania 1919)",
+      "author": "François Hombourger",
+      "filename": "anarquismo/Hombourger-Los-anarquistas-en-la-Revolucion-Rusa.pdf",
+      "year": 1981,
+      "category": "revolucion"
+    },
+    {
+      "region": "Ucrania",
+      "title": "La Revolución Rusa en Ucrania (1918-1921)",
+      "author": "Néstor Majnó",
+      "filename": "anarquismo/Makhno-La-Revolucion-Rusa-en-Ucrania-1918-1921.pdf",
+      "year": 1970,
+      "category": "revolucion"
+    },
+    {
+      "region": "Uruguay",
+      "title": "Fuga (túneles de Punta Carretas)",
+      "author": "Colectivo",
+      "filename": "anarquismo/f13797464_FUGA_R.pdf",
+      "year": 1971,
+      "category": "historia"
+    },
+    {
+      "region": "Uruguay",
+      "title": "Orígenes del movimiento obrero en el Uruguay",
+      "author": "Colectivo",
+      "filename": "anarquismo/f14123392_movob.pdf",
+      "year": 2001,
+      "category": "historia"
+    },
+    {
+      "region": "Uruguay",
+      "title": "La primera huelga general en el Uruguay (23 de mayo de 1911)",
+      "author": "Pascual Muñoz",
+      "filename": "anarquismo/f14710016_Parte_1.pdf",
+      "year": 2011,
+      "category": "historia"
+    },
+    {
+      "region": "Uruguay",
+      "title": "La vida anárquica de Florencio Sánchez",
+      "author": "Pascual Muñoz y Pablo Suárez",
+      "filename": "anarquismo/f7936864_pag_1.pdf",
+      "year": 2010,
+      "category": "historia"
+    },
+    {
+      "region": "Uruguay",
+      "title": "Masacre en Jacinto Vera",
+      "author": "Publicación anarquista Tierra y Tempestad",
+      "filename": "anarquismo/f14997760_Filtro.pdf",
+      "year": 1994,
+      "category": "represion"
+    },
+    {
+      "region": "Uruguay",
+      "title": "La Federación Anarquista Uruguaya",
+      "author": "Guillermo Reigosa Pérez",
+      "filename": "anarquismo/la-federacion-anarquista-uruguaya.pdf",
+      "year": 2010,
+      "category": "organizacion"
+    },
+    {
+      "region": "Uruguay",
+      "title": "Los anarquistas en el Río de la Plata (1880-1910)",
+      "author": "Colectivo",
+      "filename": "anarquismo/los-anarquistas-en-el-rio-de-la-plata.pdf",
+      "year": 2012,
+      "category": "historia"
+    },
+    {
+      "region": "Internacional",
+      "title": "Cómo la no violencia protege al Estado (variante)",
+      "author": "Peter Gelderloos",
+      "filename": "anarquismo/Como_la_NoViolencia_Protege_al_Estado2.pdf",
+      "year": 2007,
+      "category": "teoria"
+    },
+    {
+      "region": "Internacional",
+      "title": "Apuntes sobre revuelta y guerra social",
+      "author": "Colectivo",
+      "filename": "anarquismo/Apuntes_Sobre_Revuelta_y_Guerra_Social.pdf",
+      "year": 2015,
+      "category": "teoria"
+    },
+    {
+      "region": "Internacional",
+      "title": "Autobiografía de un irreductible",
+      "author": "Colectivo",
+      "filename": "anarquismo/Autobiografia_de_un_irreductible.pdf",
+      "year": 2000,
+      "category": "biografia"
+    },
+    {
+      "region": "Internacional",
+      "title": "Banalidades de base",
+      "author": "Colectivo",
+      "filename": "anarquismo/Banalidades_de_Base.pdf",
+      "year": 2010,
+      "category": "teoria"
+    },
+    {
+      "region": "Internacional",
+      "title": "Caos no murió",
+      "author": "Colectivo",
+      "filename": "anarquismo/Caos_No_Murio.pdf",
+      "year": 2012,
+      "category": "otros"
+    },
+    {
+      "region": "Internacional",
+      "title": "Cómo hacer",
+      "author": "Colectivo",
+      "filename": "anarquismo/Como_Hacer.pdf",
+      "year": 2015,
+      "category": "otros"
+    },
+    {
+      "region": "Internacional",
+      "title": "Cuadernos de negación",
+      "author": "Colectivo",
+      "filename": "anarquismo/Cuadernos_de_Negación.pdf",
+      "year": 2018,
+      "category": "teoria"
+    },
+    {
+      "region": "Internacional",
+      "title": "Cuando se señala la luna... A vueltas con el insurreccionalismo",
+      "author": "Anónimo",
+      "filename": "anarquismo/Cuando_se_señala_la_luna.pdf",
+      "year": 2015,
+      "category": "teoria"
+    },
+    {
+      "region": "Internacional",
+      "title": "Días de sueño y de plomo",
+      "author": "Alessandro Stella",
+      "filename": "anarquismo/Dias_de_Sueño_y_de_Pomllo.pdf",
+      "year": 2010,
+      "category": "historia"
+    },
+    {
+      "region": "Internacional",
+      "title": "El Club de la Pelea",
+      "author": "Colectivo",
+      "filename": "anarquismo/El_Club_de_la_Pelea.pdf",
+      "year": 2015,
+      "category": "otros"
+    },
+    {
+      "region": "Internacional",
+      "title": "El Gran Rescate",
+      "author": "Ricardo Palma Salamanca",
+      "filename": "anarquismo/El_Gran_Rescate.pdf",
+      "year": 2010,
+      "category": "historia"
+    },
+    {
+      "region": "Internacional",
+      "title": "El ocaso de la ideología democrática",
+      "author": "Le Brise-Glace",
+      "filename": "anarquismo/El_Ocaso_de_la_Ideologia_Democratica.pdf",
+      "year": 2015,
+      "category": "teoria"
+    },
+    {
+      "region": "Internacional",
+      "title": "Entre la plataforma y el partido",
+      "author": "Colectivo",
+      "filename": "anarquismo/Entre_La_Plataforma_y_El_Partido.pdf",
+      "year": 2010,
+      "category": "organizacion"
+    },
+    {
+      "region": "Internacional",
+      "title": "Jefes, cabecillas, abusones",
+      "author": "Colectivo",
+      "filename": "anarquismo/Jefes_Cabecillas_Abusones.pdf",
+      "year": 2012,
+      "category": "teoria"
+    },
+    {
+      "region": "Internacional",
+      "title": "La insurrección que llega",
+      "author": "Colectivo",
+      "filename": "anarquismo/La_Insurreccion_que_llega.pdf",
+      "year": 2018,
+      "category": "movimiento"
+    },
+    {
+      "region": "Internacional",
+      "title": "La peste, la bestia y el monstruo: Johann Most",
+      "author": "Aníbal D'Auria",
+      "filename": "anarquismo/La_Peste_La_Bestia_y_el_Monstruo.pdf",
+      "year": 2010,
+      "category": "historia"
+    },
+    {
+      "region": "Internacional",
+      "title": "Las 12 pruebas de la inexistencia de Dios",
+      "author": "Colectivo",
+      "filename": "anarquismo/Las_12_Pruebas_De_la_Inexistencia_de_Dios.pdf",
+      "year": 2015,
+      "category": "teoria"
+    },
+    {
+      "region": "Internacional",
+      "title": "Llamamiento",
+      "author": "Colectivo",
+      "filename": "anarquismo/Llamamiento.pdf",
+      "year": 2018,
+      "category": "manifiesto"
+    },
+    {
+      "region": "Internacional",
+      "title": "Los invisibles",
+      "author": "Colectivo",
+      "filename": "anarquismo/Los_Invisibles.pdf",
+      "year": 2015,
+      "category": "otros"
+    },
+    {
+      "region": "Internacional",
+      "title": "Non-Grata",
+      "author": "Colectivo",
+      "filename": "anarquismo/Non-Grata.pdf",
+      "year": 2018,
+      "category": "otros"
+    },
+    {
+      "region": "Internacional",
+      "title": "Por una teoría propia",
+      "author": "Colectivo",
+      "filename": "anarquismo/Por_una_teoria_propia.pdf",
+      "year": 2015,
+      "category": "teoria"
+    },
+    {
+      "region": "Internacional",
+      "title": "Punto de quiebre",
+      "author": "Colectivo",
+      "filename": "anarquismo/Punto_de_Quiebre.pdf",
+      "year": 2018,
+      "category": "otros"
+    }
+  ]
+}

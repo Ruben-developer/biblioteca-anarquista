@@ -146,6 +146,46 @@
 
 > Verificación: `npm run check` (lint 0 errores + **250 tests** + build) verde.
 
+## 2026-08-27 (quinta parte) — Línea/Feed por dispositivo + paneles unificados (develop)
+
+| Hora | Tipo | Commit | Detalle |
+|------|------|--------|---------|
+| — | 🧑 Manual | (pendiente) | En `TimelineView` se elimina el toggle manual Línea/Feed. Ahora la vista se elige por dispositivo: **escritorio → Línea** (horizontal), **móvil → Feed** (vertical) vía `useIsMobile` (nuevo hook `useMediaQuery`/`useIsMobile` en `hooks/index.js`, seguro si `matchMedia` no existe). Ambos paneles (`HorizontalTimeline`/`VerticalTimeline`) comparten el **mismo borde y fondo** (`border-2`, `bg-gray-900/60`/`bg-white/60`, `shadow-lg`), igual que el resto de tarjetas. Se añade una etiqueta no interactiva "Vista: Línea (escritorio) / Feed (móvil)". |
+
+> Verificación: `npm run check` (lint 0 errores + **250 tests** + build) verde. Pendiente de merge de PR #11 (producción) antes de pushear develop.
+
+## 2026-08-27 (sexta parte) — Quitar grises azulados en modo oscuro (develop)
+
+| Hora | Tipo | Commit | Detalle |
+|------|------|--------|---------|
+| — | 🧑 Manual | (pendiente) | `theme-constructivista` ya volvía cálidos la mayoría de `gray-*`, pero filtraban los azulados de Tailwind en modo oscuro: `bg-gray-950`, `bg-gray-900`, `bg-gray-900/50`, `bg-gray-900/40`, `bg-gray-700/50`, `bg-gray-600` y el `from-gray-900` del fade de la línea temporal. Se añaden overrides en `index.css` que los mapean a los mismos cálidos ya usados en el tema (`#0A0909`, `rgba(10,9,9,*)`, `#6F6C68`/`rgba`, `#5A5652`). También se elimina el caption «Vista: …» de `TimelineView`. |
+
+> Verificación: `npm run check` (lint 0 errores + **250 tests** + build) verde.
+
+## 2026-08-27 (séptima parte) — Restos de gris azulado (hover/placeholder) + Mi Biblioteca a la izquierda (develop)
+
+| Hora | Tipo | Commit | Detalle |
+|------|------|--------|---------|
+| — | 🧑 Manual | (pendiente) | Se completa el de-azulado: los overrides previos cubrían las clases base pero no las **variantes** `hover:bg-gray-700/50`, `hover:bg-gray-700`, `hover:bg-gray-600` ni `placeholder-gray-500`, así que el hover del menú de hamburguesa/sus opciones y el placeholder «Buscar autor…» seguían azulados. Se añaden esos overrides en `index.css` (mismos cálidos del tema). En `FavoritesView` el título y los botones Importar/Exportar vuelven a la **izquierda** (se quita `text-center`/`justify-center`). |
+
+> Verificación: `npm run check` (lint 0 errores + **250 tests** + build) verde.
+
+## 2026-08-27 (octava parte) — Auditoría final de grises azulados (develop)
+
+| Hora | Tipo | Commit | Detalle |
+|------|------|--------|---------|
+| — | 🧑 Manual | (pendiente) | Auditoría de todos los `gray-*` (con variantes `hover/focus/placeholder`, degradados y modo claro). Quedaban por cubrir: `hover:text-gray-300`, `hover:text-gray-400` (textos azulados al hover), stops de degradado `to-gray-900`/`from-gray-800`/`via-gray-900`, y tokens base de modo claro `text-gray-900`/`bg-gray-100`/`bg-gray-300`. Se añaden sus overrides cálidos en `index.css`. No se usan otros paletes azulados (`blue/slate/indigo/sky/cyan/zinc`). |
+
+> Verificación: `npm run check` (lint 0 errores + **250 tests** + build) verde.
+
+## 2026-08-28 (novena parte) — Fuente única de color (variables CSS + tokens semánticos)
+
+| Hora | Tipo | Commit | Detalle |
+|------|------|--------|---------|
+| — | 🧑 Manual | (pendiente) | Tras el análisis de color (octava parte) y con ayuda de un modelo local (qwen3/llama3.2), se implementa una **fuente única de color**. En `index.css` se definen variables CSS `--c-*` (rojo bermellón, rojo profundo, tinta, vacío, piedra, crema, etc.) y se sustituyen los literales repetidos (`#D02C26`×12, `#B0241E`×9, grises/cremas) por `var(--c-…)`; un color = una variable. En `tailwind.config.js` se añaden tokens semánticos (`brand`, `action`, `action-hover`) que apuntan a esas vars, y se **desduplican las escalas fragmentadas**: rojos oscuros `red-300/400/500`→un solo rojo y `red-950`→`red-900`; ámbar claro `orange-50`/`yellow-50`→`amber-50`. No se tocaron componentes (las clases existentes resuelven al mismo color), así que tests/snapshots siguen verdes. Pendiente opcional: migrar las clases de componentes a los tokens semánticos (`bg-action` en vez de `bg-red-600`/`bg-amber-700`) y normalizar el border `#872320` a variable. |
+
+> Verificación: `npm run check` (lint 0 errores + **250 tests** + build) verde.
+
 ## Estado actual
 
 - **25+ commits** en `main`, CI de Pages **verde** (lint+tests+audit+build), web **HTTP 200**.
