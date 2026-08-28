@@ -178,6 +178,14 @@
 
 > Verificación: `npm run check` (lint 0 errores + **250 tests** + build) verde.
 
+## 2026-08-28 (novena parte) — Fuente única de color (variables CSS + tokens semánticos)
+
+| Hora | Tipo | Commit | Detalle |
+|------|------|--------|---------|
+| — | 🧑 Manual | (pendiente) | Tras el análisis de color (octava parte) y con ayuda de un modelo local (qwen3/llama3.2), se implementa una **fuente única de color**. En `index.css` se definen variables CSS `--c-*` (rojo bermellón, rojo profundo, tinta, vacío, piedra, crema, etc.) y se sustituyen los literales repetidos (`#D02C26`×12, `#B0241E`×9, grises/cremas) por `var(--c-…)`; un color = una variable. En `tailwind.config.js` se añaden tokens semánticos (`brand`, `action`, `action-hover`) que apuntan a esas vars, y se **desduplican las escalas fragmentadas**: rojos oscuros `red-300/400/500`→un solo rojo y `red-950`→`red-900`; ámbar claro `orange-50`/`yellow-50`→`amber-50`. No se tocaron componentes (las clases existentes resuelven al mismo color), así que tests/snapshots siguen verdes. Pendiente opcional: migrar las clases de componentes a los tokens semánticos (`bg-action` en vez de `bg-red-600`/`bg-amber-700`) y normalizar el border `#872320` a variable. |
+
+> Verificación: `npm run check` (lint 0 errores + **250 tests** + build) verde.
+
 ## Estado actual
 
 - **25+ commits** en `main`, CI de Pages **verde** (lint+tests+audit+build), web **HTTP 200**.

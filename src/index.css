@@ -45,17 +45,17 @@ code {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(160, 36, 26, 0.45);
+  background: rgba(var(--c-red-deep-rgb), 0.45);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(160, 36, 26, 0.65);
+  background: rgba(var(--c-red-deep-rgb), 0.65);
 }
 
 /* Foco visible global: bermellón, visible en ambos temas */
 :focus-visible {
-  outline: 2px solid #A0241A;
+  outline: 2px solid var(--c-red-focus);
   outline-offset: 2px;
 }
 
@@ -73,7 +73,7 @@ code {
 }
 
 .worldmap__country:focus-visible {
-  outline: 2px solid #A0241A;
+  outline: 2px solid var(--c-red-focus);
   outline-offset: 1px;
   filter: brightness(1.35) saturate(1.3);
 }
@@ -107,37 +107,61 @@ code {
 /* ============================================================
    TEMA CONSTRUCTIVISTA (test visual)
    Paleta basada en estética de propaganda:
-   - Rojo bermellón #D02C26 · Negro intenso #1A1818 · Crema #E5DCD0 · Gris semitono #6F6C68
+   - Rojo bermellón var(--c-red) · Negro intenso var(--c-ink) · Crema var(--c-cream) · Gris semitono var(--c-stone-2)
    Se activa poniendo la clase .theme-constructivista en el contenedor raíz.
-   ============================================================ */
+    ============================================================ */
+.theme-constructivista {
+  /* Fuente única de la paleta: un color = una variable */
+  --c-red: #D02C26;
+  --c-red-deep: #B0241E;
+  --c-red-rgb: 208, 44, 38;
+  --c-red-deep-rgb: 160, 36, 26;
+  --c-red-focus: #A0241A;
+  --c-tint: #E9C9C4;
+  --c-ink: #1A1818;
+  --c-void: #0A0909;
+  --c-ink-2: #2A2420;
+  --c-ink-3: #141210;
+  --c-stone: #8C8780;
+  --c-stone-2: #6F6C68;
+  --c-stone-3: #5A5652;
+  --c-stone-4: #4A4642;
+  --c-cream: #E5DCD0;
+  --c-cream-2: #D8CCBD;
+  --c-cream-3: #C9BCA8;
+  --c-parchment: #EDE5D8;
+  --c-void-rgb: 10, 9, 9;
+  --c-ink-rgb: 26, 24, 24;
+  --c-stone-2-rgb: 111, 108, 104;
+}
 /* Reglas de raíz: la clase del tema vive en el MISMO elemento que las clases
    de fondo, así que hace falta selector compuesto (sin espacio) además del
    descendiente para los hijos. */
 .theme-constructivista.bg-gradient-to-br.from-red-950.via-black.to-gray-900,
 .theme-constructivista .bg-gradient-to-br.from-red-950.via-black.to-gray-900 {
-  background-image: linear-gradient(135deg, #0A0909 0%, #1A1818 55%, #2A2420 100%);
+  background-image: linear-gradient(135deg, var(--c-void) 0%, var(--c-ink) 55%, var(--c-ink-2) 100%);
 }
 .theme-constructivista.bg-gradient-to-br.from-amber-50.via-yellow-50.to-orange-50,
 .theme-constructivista .bg-gradient-to-br.from-amber-50.via-yellow-50.to-orange-50 {
-  background-image: linear-gradient(135deg, #E5DCD0 0%, #D8CCBD 60%, #C9BCA8 100%);
+  background-image: linear-gradient(135deg, var(--c-cream) 0%, var(--c-cream-2) 60%, var(--c-cream-3) 100%);
 }
 /* Cabecera y navegación: bloques negros + acentos rojos */
 .theme-constructivista .bg-black\/50 {
-  background-color: #1A1818;
+  background-color: var(--c-ink);
 }
 .theme-constructivista .bg-black\/30 {
-  background-color: #141210;
+  background-color: var(--c-ink-3);
 }
 .theme-constructivista .bg-amber-100\/80,
 .theme-constructivista .bg-amber-100\/60 {
-  background-color: #E5DCD0;
+  background-color: var(--c-cream);
 }
 /* Tarjetas */
 .theme-constructivista .bg-gradient-to-br.from-gray-800\/80.to-gray-900\/80 {
-  background-image: linear-gradient(135deg, #2A2420 0%, #1A1818 100%);
+  background-image: linear-gradient(135deg, var(--c-ink-2) 0%, var(--c-ink) 100%);
 }
 .theme-constructivista .bg-gradient-to-br.from-amber-50.to-orange-50 {
-  background-image: linear-gradient(135deg, #EDE5D8 0%, #D8CCBD 100%);
+  background-image: linear-gradient(135deg, var(--c-parchment) 0%, var(--c-cream-2) 100%);
 }
 .theme-constructivista .bg-white\/60,
 .theme-constructivista .bg-white\/80 {
@@ -145,103 +169,103 @@ code {
 }
 .theme-constructivista .bg-gray-900\/60,
 .theme-constructivista .bg-gray-800\/60 {
-  background-color: rgba(10, 9, 9, 0.72);
+  background-color: rgba(var(--c-void-rgb), 0.72);
 }
 .theme-constructivista .bg-gray-800\/50 {
-  background-color: rgba(26, 24, 24, 0.55);
+  background-color: rgba(var(--c-ink-rgb), 0.55);
 }
 .theme-constructivista .bg-gray-700 {
-  background-color: #6F6C68;
+  background-color: var(--c-stone-2);
 }
 .theme-constructivista .bg-gray-800 {
-  background-color: #1A1818;
+  background-color: var(--c-ink);
 }
 /* Grises azulados restantes (modo oscuro) -> cálidos ya usados en el tema */
 .theme-constructivista .bg-gray-950,
 .theme-constructivista .bg-gray-900 {
-  background-color: #0A0909;
+  background-color: var(--c-void);
 }
 .theme-constructivista .bg-gray-900\/50 {
-  background-color: rgba(10, 9, 9, 0.5);
+  background-color: rgba(var(--c-void-rgb), 0.5);
 }
 .theme-constructivista .bg-gray-900\/40 {
-  background-color: rgba(10, 9, 9, 0.4);
+  background-color: rgba(var(--c-void-rgb), 0.4);
 }
 .theme-constructivista .bg-gray-700\/50 {
-  background-color: rgba(111, 108, 104, 0.5);
+  background-color: rgba(var(--c-stone-2-rgb), 0.5);
 }
 .theme-constructivista .bg-gray-600 {
-  background-color: #5A5652;
+  background-color: var(--c-stone-3);
 }
 .theme-constructivista .from-gray-900 {
-  --tw-gradient-from: #0A0909 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgba(10, 9, 9, 0) var(--tw-gradient-to-position);
+  --tw-gradient-from: var(--c-void) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(var(--c-void-rgb), 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 /* Variantes hover y placeholder grises azulados -> cálidos ya usados en el tema */
 .theme-constructivista .hover\:bg-gray-700\/50:hover {
-  background-color: rgba(111, 108, 104, 0.5);
+  background-color: rgba(var(--c-stone-2-rgb), 0.5);
 }
 .theme-constructivista .hover\:bg-gray-700:hover {
-  background-color: #6F6C68;
+  background-color: var(--c-stone-2);
 }
 .theme-constructivista .hover\:bg-gray-600:hover {
-  background-color: #5A5652;
+  background-color: var(--c-stone-3);
 }
 .theme-constructivista .placeholder-gray-500::placeholder {
-  color: #8C8780;
+  color: var(--c-stone);
 }
 /* Textos en hover que aún filtraban azulado */
 .theme-constructivista .hover\:text-gray-300:hover {
-  color: #C9BCA8;
+  color: var(--c-cream-3);
 }
 .theme-constructivista .hover\:text-gray-400:hover {
-  color: #8C8780;
+  color: var(--c-stone);
 }
 /* Stops de degradado grises -> cálidos (por si algún gradiente no está en la combo cubierta) */
 .theme-constructivista .to-gray-900 {
-  --tw-gradient-to: #0A0909 var(--tw-gradient-to-position);
+  --tw-gradient-to: var(--c-void) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 .theme-constructivista .from-gray-800 {
-  --tw-gradient-from: #1A1818 var(--tw-gradient-from-position);
+  --tw-gradient-from: var(--c-ink) var(--tw-gradient-from-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 .theme-constructivista .via-gray-900 {
-  --tw-gradient-via: #0A0909 var(--tw-gradient-via-position);
+  --tw-gradient-via: var(--c-void) var(--tw-gradient-via-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to);
 }
 /* Base en modo claro para consistencia cálida (casi neutros, sin azul) */
-.theme-constructivista .text-gray-900 { color: #1A1818; }
-.theme-constructivista .bg-gray-100 { background-color: #E5DCD0; }
-.theme-constructivista .bg-gray-300 { background-color: #C9BCA8; }
+.theme-constructivista .text-gray-900 { color: var(--c-ink); }
+.theme-constructivista .bg-gray-100 { background-color: var(--c-cream); }
+.theme-constructivista .bg-gray-300 { background-color: var(--c-cream-3); }
 /* Acentos rojos */
 .theme-constructivista .bg-red-600 {
-  background-color: #D02C26;
+  background-color: var(--c-red);
 }
 .theme-constructivista .bg-red-700 {
-  background-color: #B0241E;
+  background-color: var(--c-red-deep);
 }
 .theme-constructivista .bg-red-900\/30,
 .theme-constructivista .bg-red-900\/40 {
-  background-color: rgba(208, 44, 38, 0.30);
+  background-color: rgba(var(--c-red-rgb), 0.30);
 }
 .theme-constructivista .bg-red-900\/60 {
-  background-color: rgba(208, 44, 38, 0.60);
+  background-color: rgba(var(--c-red-rgb), 0.60);
 }
 .theme-constructivista .bg-red-100,
 .theme-constructivista .bg-red-200 {
-  background-color: #E9C9C4;
+  background-color: var(--c-tint);
 }
 .theme-constructivista .bg-amber-700 {
-  background-color: #D02C26;
+  background-color: var(--c-red);
 }
 .theme-constructivista .bg-amber-800 {
-  background-color: #B0241E;
+  background-color: var(--c-red-deep);
 }
 .theme-constructivista .bg-amber-200,
 .theme-constructivista .bg-amber-200\/50 {
-  background-color: #D8CCBD;
+  background-color: var(--c-cream-2);
 }
 .theme-constructivista .bg-amber-100\/50 {
   background-color: rgba(229, 220, 208, 0.6);
@@ -249,74 +273,74 @@ code {
 /* Bordes */
 .theme-constructivista .border-red-900\/30,
 .theme-constructivista .border-red-900\/50 {
-  border-color: rgba(208, 44, 38, 0.6);
+  border-color: rgba(var(--c-red-rgb), 0.6);
 }
 .theme-constructivista .border-red-900\/20 {
-  border-color: rgba(208, 44, 38, 0.35);
+  border-color: rgba(var(--c-red-rgb), 0.35);
 }
 .theme-constructivista .border-amber-800\/30,
 .theme-constructivista .border-amber-800\/20 {
-  border-color: rgba(160, 36, 26, 0.30);
+  border-color: rgba(var(--c-red-deep-rgb), 0.30);
 }
 .theme-constructivista .border-amber-700 {
-  border-color: #D02C26;
+  border-color: var(--c-red);
 }
 .theme-constructivista .border-amber-300 {
-  border-color: #C9BCA8;
+  border-color: var(--c-cream-3);
 }
 .theme-constructivista .border-amber-400 {
-  border-color: #B0241E;
+  border-color: var(--c-red-deep);
 }
 .theme-constructivista .border-amber-100 {
-  border-color: #E5DCD0;
+  border-color: var(--c-cream);
 }
 .theme-constructivista .border-gray-700,
 .theme-constructivista .border-gray-700\/50 {
-  border-color: #6F6C68;
+  border-color: var(--c-stone-2);
 }
 .theme-constructivista .border-gray-900 {
-  border-color: #0A0909;
+  border-color: var(--c-void);
 }
 /* Textos */
-.theme-constructivista .text-red-950 { color: #D02C26; }
-.theme-constructivista .text-red-900 { color: #D02C26; }
-.theme-constructivista .text-red-800 { color: #D02C26; }
-.theme-constructivista .text-red-700 { color: #B0241E; }
-.theme-constructivista .text-red-600 { color: #D02C26; }
-.theme-constructivista .text-red-500 { color: #D02C26; }
-.theme-constructivista .text-red-400 { color: #D02C26; }
+.theme-constructivista .text-red-950 { color: var(--c-red); }
+.theme-constructivista .text-red-900 { color: var(--c-red); }
+.theme-constructivista .text-red-800 { color: var(--c-red); }
+.theme-constructivista .text-red-700 { color: var(--c-red-deep); }
+.theme-constructivista .text-red-600 { color: var(--c-red); }
+.theme-constructivista .text-red-500 { color: var(--c-red); }
+.theme-constructivista .text-red-400 { color: var(--c-red); }
 .theme-constructivista .text-red-300 { color: #E07A72; }
-.theme-constructivista .text-amber-50 { color: #E5DCD0; }
-.theme-constructivista .text-amber-100 { color: #E5DCD0; }
-.theme-constructivista .text-amber-200 { color: #D8CCBD; }
-.theme-constructivista .text-amber-300 { color: #C9BCA8; }
-.theme-constructivista .text-amber-400 { color: #B0241E; }
-.theme-constructivista .text-amber-500 { color: #D02C26; }
-.theme-constructivista .text-amber-600 { color: #B0241E; }
+.theme-constructivista .text-amber-50 { color: var(--c-cream); }
+.theme-constructivista .text-amber-100 { color: var(--c-cream); }
+.theme-constructivista .text-amber-200 { color: var(--c-cream-2); }
+.theme-constructivista .text-amber-300 { color: var(--c-cream-3); }
+.theme-constructivista .text-amber-400 { color: var(--c-red-deep); }
+.theme-constructivista .text-amber-500 { color: var(--c-red); }
+.theme-constructivista .text-amber-600 { color: var(--c-red-deep); }
 .theme-constructivista .text-amber-700 { color: #A3201A; }
-.theme-constructivista .text-amber-800 { color: #1A1818; }
-.theme-constructivista .text-amber-900 { color: #1A1818; }
-.theme-constructivista .text-gray-100 { color: #E5DCD0; }
-.theme-constructivista .text-gray-200 { color: #D8CCBD; }
-.theme-constructivista .text-gray-300 { color: #C9BCA8; }
-.theme-constructivista .text-gray-400 { color: #8C8780; }
-.theme-constructivista .text-gray-500 { color: #6F6C68; }
-.theme-constructivista .text-gray-600 { color: #5A5652; }
-.theme-constructivista .text-gray-700 { color: #4A4642; }
+.theme-constructivista .text-amber-800 { color: var(--c-ink); }
+.theme-constructivista .text-amber-900 { color: var(--c-ink); }
+.theme-constructivista .text-gray-100 { color: var(--c-cream); }
+.theme-constructivista .text-gray-200 { color: var(--c-cream-2); }
+.theme-constructivista .text-gray-300 { color: var(--c-cream-3); }
+.theme-constructivista .text-gray-400 { color: var(--c-stone); }
+.theme-constructivista .text-gray-500 { color: var(--c-stone-2); }
+.theme-constructivista .text-gray-600 { color: var(--c-stone-3); }
+.theme-constructivista .text-gray-700 { color: var(--c-stone-4); }
 .theme-constructivista.text-gray-800,
-.theme-constructivista .text-gray-800 { color: #1A1818; }
+.theme-constructivista .text-gray-800 { color: var(--c-ink); }
 .theme-constructivista.text-gray-100,
-.theme-constructivista .text-gray-100 { color: #E5DCD0; }
+.theme-constructivista .text-gray-100 { color: var(--c-cream); }
 /* Fondos de tarjeta con opacidad redondeada en listas */
 .theme-constructivista .bg-gray-900\/60 {
-  background-color: rgba(10, 9, 9, 0.72);
+  background-color: rgba(var(--c-void-rgb), 0.72);
 }
 /* Gradientes de la línea temporal */
 .theme-constructivista .bg-gradient-to-r.from-red-600.via-red-500.to-red-800 {
-  background-image: linear-gradient(90deg, #D02C26 0%, #E04A3C 50%, #B0241E 100%);
+  background-image: linear-gradient(90deg, var(--c-red) 0%, #E04A3C 50%, var(--c-red-deep) 100%);
 }
 .theme-constructivista .bg-gradient-to-r.from-amber-600.via-amber-700.to-amber-800 {
-  background-image: linear-gradient(90deg, #D02C26 0%, #B0241E 60%, #8A1813 100%);
+  background-image: linear-gradient(90deg, var(--c-red) 0%, var(--c-red-deep) 60%, #8A1813 100%);
 }
 
 /* ============================================================
@@ -356,7 +380,7 @@ code {
   border-color: #E5D4B0;
 }
 .theme-constructivista.theme-pergamino .border-amber-700 {
-  border-color: #A0241A;
+  border-color: var(--c-red-focus);
 }
 .theme-constructivista.theme-pergamino.text-amber-900,
 .theme-constructivista.theme-pergamino.text-amber-800,
@@ -387,7 +411,7 @@ code {
   background-color: #E4CCC0;
 }
 .theme-constructivista.theme-pergamino .bg-amber-700 {
-  background-color: #A0241A;
+  background-color: var(--c-red-focus);
 }
 .theme-constructivista.theme-pergamino .bg-amber-800 {
   background-color: #8A1E19;
