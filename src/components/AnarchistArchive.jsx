@@ -215,24 +215,9 @@ const AnarchistArchive = () => {
       </main>
 
       <footer className={`border-t-2 shadow-[0_-4px_12px_rgba(0,0,0,0.25)] ${darkMode ? 'border-[#872320]/50 bg-black/30' : 'border-[#B79F6E] bg-amber-100/60'}`}>
-        <div className="container mx-auto px-4 py-8 space-y-4">
-          <div className="text-center">
-            <p className={`font-display uppercase tracking-widest text-sm ${darkMode ? 'text-gray-300' : 'text-amber-900'}`}>
-              La Idea · Archivo Histórico Anarquista
-            </p>
-            <p className={`text-xs mt-1 ${darkMode ? 'text-gray-500' : 'text-amber-700'}`}>
-              1840–1968 · {stats.texts} textos · {stats.regions} regiones · {stats.events} eventos
-            </p>
-          </div>
-          <div className={`flex justify-center items-center gap-4 text-xs flex-wrap ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
-            <button onClick={() => handleViewChange(VIEWS.GLOSSARY)} className="hover:underline">Glosario</button>
-            <span>·</span>
-            <button onClick={() => handleViewChange(VIEWS.CONTACT)} className="hover:underline">Contacto</button>
-            <span>·</span>
-            <a href="mailto:antarquia@riseup.net" className="hover:underline">antarquia@riseup.net</a>
-          </div>
-          <p className={`text-center text-[10px] ${darkMode ? 'text-gray-600' : 'text-amber-500'}`}>
-            Textos de dominio público recopilados para fines de estudio e investigación.
+        <div className="container mx-auto px-4 py-8">
+          <p className={`font-display uppercase tracking-widest text-sm text-center ${darkMode ? 'text-gray-300' : 'text-amber-900'}`}>
+            La Idea · Archivo Histórico Anarquista
           </p>
         </div>
       </footer>
