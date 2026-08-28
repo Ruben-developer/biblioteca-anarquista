@@ -58,7 +58,7 @@ export const timelineEvents = [
     description: "1880–1930 · Argentina y Uruguay",
     region: "Argentina y Uruguay",
     category: "historia",
-    relatedTexts: ["El movimiento anarquista en la Argentina (Desde sus inicios hasta 1910)", "La F. O. R. A. Ideologia y trayectoria del movimiento obrero en la Argentina", "Los anarquistas en el Río de la Plata (1880-1910)", "Los anarquistas expropiadores", "Severino Di Giovanni", "La Patagonia Rebelde", "El fusilamiento de Penina", "La primera víctima del movimiento obrero. El discurso anarquista sobre la muerte (Argentina)", "Orígenes del movimiento obrero en el Uruguay", "La primera huelga general en el Uruguay (23 de mayo de 1911)", "La vida anárquica de Florencio Sánchez", "Anarquismo trashumante. Crónicas de crotos y linyeras", "Juan Lazarte, Militante Social, Medico, Humanista"]
+    relatedTexts: ["El movimiento anarquista en la Argentina (Desde sus inicios hasta 1910)", "La F. O. R. A. Ideologia y trayectoria del movimiento obrero en la Argentina", "Los anarquistas en el Río de la Plata (1880-1910)", "Los anarquistas expropiadores", "Severino Di Giovanni", "La Patagonia Rebelde", "El fusilamiento de Penina", "La primera víctima del movimiento obrero. El discurso anarquista sobre la muerte (Argentina)", "Orígenes del movimiento obrero en el Uruguay", "La primera huelga general en el Uruguay (23 de mayo de 1911)", "La vida anárquica de Florencio Sánchez", "Anarquismo trashumante. Crónicas de crotos y linyeras", "Juan Lazarte, Militante Social, Medico, Humanista", "Historia ArgentinaDesde la aparicion del hombre hasta la obra de M. M. de Guemes", "Historia ArgentinaDesde la liberacion de Chile hasta la constitucion de la Provincia de Bs. As.", "Historia ArgentinaDesde la presidencia de Urquiza a la eleccion de H. Yrigoyen"]
   },
   {
     year: 1890,
@@ -128,7 +128,7 @@ export const timelineEvents = [
     description: "1917–1921 · Rusia y Ucrania",
     region: "Rusia y Ucrania",
     category: "historia",
-    relatedTexts: ["La revolución desconocida", "Los anarquistas en la Revolución Rusa: la Makhnovtchina (Ucrania 1919)", "Historia del Movimiento Makhnovista", "La Revolución Rusa en Ucrania (1918-1921)", "La Makhnovschina. Un movimiento libertario bajo fuego en Ucrania (1918-1921)", "Kronstadt 1921", "La comuna de Kronstadt", "Los anarquistas y los soviets", "Chernoe Znamia (anarquistas rusos, 1900s)"]
+    relatedTexts: ["La revolución desconocida", "Los anarquistas en la Revolución Rusa: la Makhnovtchina (Ucrania 1919)", "Historia del Movimiento Makhnovista", "La Revolución Rusa en Ucrania (1918-1921)", "La Makhnovschina. Un movimiento libertario bajo fuego en Ucrania (1918-1921)", "Kronstadt 1921", "La comuna de Kronstadt", "Los anarquistas y los soviets", "Chernoe Znamia (anarquistas rusos, 1900s)", "La Banda de Chernopeev"]
   },
   {
     year: 1917,
@@ -168,7 +168,7 @@ export const timelineEvents = [
     description: "1936–1939 · España",
     region: "España",
     category: "historia",
-    relatedTexts: ["Los anarquistas en la crisis política española (1869-1939)", "El eco de los pasos", "Homenaje a Cataluña", "El corto verano de la anarquía", "Colectividades Libertarias", "Las colectividades libertarias en España (1936-1938)", "La experiencia autogestionaria durante la Guerra Civil española", "La revolucion traicionada. La verdadera historia de Balius y Los Amigos de Durruti", "Durruti en el laberinto", "La muerte de Durruti", "Buenaventura Durruti (antología)", "Buenaventura Durruti, o el heroнsmo bien entendido", "Durruti ha muerto, pero está vivo todavía", "Fraternalmente, Emma", "Por que perdimos la guerra (1940)", "Los comitиs de defensa confederales", "Milicias anarquistas y anarcosindicalistas en la guerra civil espaola", "Jose Pellicer, el anarquista integro", "Un incontrolado de la Columna de Hierro", "Maroto, el heroe. Una biografia del anarquismo andaluz", "Francisco Carreno y los arduos caminos de la anarquia", "Juan Peiró, teórico y militante del anarcosindicalismo español", "Cipriano Mera", "Catalogo de decisiones y fragilidades", "Anarcosindicalismo y revolución en España (1930-1937)"]
+    relatedTexts: ["Los anarquistas en la crisis política española (1869-1939)", "El eco de los pasos", "Homenaje a Cataluña", "El corto verano de la anarquía", "Colectividades Libertarias", "Las colectividades libertarias en España (1936-1938)", "La experiencia autogestionaria durante la Guerra Civil española", "Barricadas en Barcelona", "La revolucion traicionada. La verdadera historia de Balius y Los Amigos de Durruti", "Durruti en el laberinto", "La muerte de Durruti", "Buenaventura Durruti (antología)", "Buenaventura Durruti, o el heroнsmo bien entendido", "Durruti ha muerto, pero está vivo todavía", "Fraternalmente, Emma", "Por que perdimos la guerra (1940)", "Los comitиs de defensa confederales", "Milicias anarquistas y anarcosindicalistas en la guerra civil espaola", "Jose Pellicer, el anarquista integro", "Un incontrolado de la Columna de Hierro", "Maroto, el heroe. Una biografia del anarquismo andaluz", "Francisco Carreno y los arduos caminos de la anarquia", "Juan Peiró, teórico y militante del anarcosindicalismo español", "Cipriano Mera", "1936. De la revolución española", "Catalogo de decisiones y fragilidades", "Anarcosindicalismo y revolución en España (1930-1937)"]
   },
   {
     year: 1936,
@@ -198,7 +198,7 @@ export const timelineEvents = [
     description: "1965–1980 · Francia, Italia, Reino Unido y Países Bajos",
     region: "Francia, Italia, Reino Unido y Países Bajos",
     category: "historia",
-    relatedTexts: ["1968. El ano sublime de la acracia", "Los situacionistas y la anarquia", "Que fue la autonomia obrera", "El movimiento Provo", "Días de sueño y de plomo", "Nos estamos acercando: La historia de Angry Brigade", "Anarquismo y anarquistas"]
+    relatedTexts: ["1968. El ano sublime de la acracia", "La rebelión de Mayo 68", "Los situacionistas y la anarquia", "Que fue la autonomia obrera", "El movimiento Provo", "Días de sueño y de plomo", "Nos estamos acercando: La historia de Angry Brigade", "La Brigada de la Cólera", "Anarquismo y anarquistas"]
   },
   {
     year: 1975,

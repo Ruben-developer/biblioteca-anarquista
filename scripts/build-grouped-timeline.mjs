@@ -19,9 +19,20 @@ for (const [region, r] of Object.entries(regionData)) {
   }
 }
 
-function resolver(titulo) {
+const OVERRIDES = {
+  'Barricadas en Barcelona (Mayo 1937)': ['Barricadas en Barcelona'],
+  'La Banda de Chernopeev (Levantamiento de Ilinden, 1903)': ['La Banda de Chernopeev'],
+  'Historia Argentina (Tomos I, II y III)': [
+    'Historia ArgentinaDesde la aparicion del hombre hasta la obra de M. M. de Guemes',
+    'Historia ArgentinaDesde la liberacion de Chile hasta la constitucion de la Provincia de Bs. As.',
+    'Historia ArgentinaDesde la presidencia de Urquiza a la eleccion de H. Yrigoyen',
+  ],
+};
+
+function resolverArr(titulo) {
+  if (OVERRIDES[titulo]) return OVERRIDES[titulo].slice();
   const n = norm(titulo);
-  if (libroExacto.has(n)) return libroExacto.get(n);
+  if (libroExacto.has(n)) return [libroExacto.get(n)];
   const tk = toks(titulo);
   let best = null, bestScore = 0;
   for (const c of catalogo) {
@@ -29,7 +40,7 @@ function resolver(titulo) {
     const score = tk.size ? inter / tk.size : 0;
     if (score > bestScore) { bestScore = score; best = c.exact; }
   }
-  return (best && bestScore >= 0.55 && tk.size >= 3) ? best : null;
+  return (best && bestScore >= 0.55 && tk.size >= 3) ? [best] : [];
 }
 
 const SECTIONS = [
@@ -135,8 +146,8 @@ const omitidos = [];
 for (const s of SECTIONS) {
   const linked = [];
   for (const t of s.books) {
-    const ex = resolver(t);
-    if (ex) { if (!linked.includes(ex)) linked.push(ex); }
+    const exs = resolverArr(t);
+    if (exs.length) { for (const ex of exs) if (!linked.includes(ex)) linked.push(ex); }
     else omitidos.push(`${s.title} :: ${t}`);
   }
   totalLinked += linked.length;

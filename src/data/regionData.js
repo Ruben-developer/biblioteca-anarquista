@@ -215,7 +215,7 @@ export const regionData = {
       { title: "Gesto i palabra, idea i acción", author: "Colectivo", year: 2000, category: "otros", rating: 4.3, summary: "Reflexiones sobre la relación entre la práctica y la teoría en el anarquismo catalán: gesto y palabra como instrumentos de transformación.", filename: "Colectivo - Gesto i palabra, idea i accion (2000).pdf" },
       { title: "Introducción a la guerra civil", author: "Colectivo", year: 2005, category: "historia", rating: 4.4, summary: "Panorama introductorio de la Guerra Civil española desde la perspectiva anarquista: los comités, la colectivización y la revolución perdida.", filename: "Colectivo - Introduccion a la guerra civil (2005).pdf" },
       { title: "FAI", author: "19 de julio de 1936. Espana CNT", category: "historia", rating: 4.5, filename: "19 de julio de 1936. Espana CNT - FAI.pdf" },
-      { title: "CNT", author: "1936. De la revolucion espanola MLE", category: "historia", rating: 4.5, filename: "1936. De la revolucion espanola MLE - CNT.pdf" },
+      { title: "1936. De la revolución española", author: "MLE-CNT", category: "historia", rating: 4.5, filename: "1936. De la revolucion espanola MLE - CNT.pdf" },
       { title: "Expediente Picasso", author: "Abad de Santillan, Diego (Prologo, 1976)", year: 1976, category: "historia", rating: 4.5, filename: "Abad de Santillan, Diego (Prologo, 1976) - Expediente Picasso (1976).pdf" },
       { title: "Cipriano Mera", author: "Abad de Santillan, Diego", category: "historia", rating: 4.5, filename: "Abad de Santillan, Diego - Cipriano Mera.pdf" },
       { title: "El anarquismo y la revolucion en Espana", author: "Abad de Santillan, Diego", year: 1976, category: "historia", rating: 4.5, filename: "Abad de Santillan, Diego - El anarquismo y la revolucion en Espana (1976).pdf" },
@@ -327,7 +327,7 @@ export const regionData = {
       { title: "Reflexiones sobre las causas de la libertad y de la opresión social", author: "Simone Weil", year: 1934, category: "teoria", rating: 4.7, summary: "Ensayo de Simone Weil contra el Estado y la burocracia: la opresión como mecanismo de la organización social y la libertad como clave de la vida obrera.", filename: "Simone Weil - Reflexiones sobre las causas de la libertad y de la opresion social (1934).pdf" },
       { title: "La persona y lo sagrado", author: "Simone Weil", year: 1942, category: "teoria", rating: 4.6, summary: "Escrito de Simone Weil sobre la colectividad, la persona y lo impersonal: lo sagrado del ser humano frente a la idolatría del Estado y del derecho.", filename: "Simone Weil - La persona y lo sagrado (1942).pdf" },
       { title: "Anarquía y cristianismo", author: "Jacques Ellul", year: 1991, category: "teoria", rating: 4.6, summary: "El filósofo y teólogo francés Jacques Ellul muestra la afinidad profunda entre el anarquismo y el cristianismo: el Estado como poder satánico frente a la libertad del Evangelio.", filename: "Jacques Ellul - Anarquia y cristianismo (1991).pdf" },
-      { title: "La rebelin de Mayo 68", author: "Alberola, Octavio", category: "historia", rating: 4.5, filename: "Alberola, Octavio - La rebelin de Mayo 68 (Contestacin, anarquismo y revolucin).pdf" },
+      { title: "La rebelión de Mayo 68", author: "Alberola, Octavio", category: "historia", rating: 4.5, filename: "Alberola, Octavio - La rebelin de Mayo 68 (Contestacin, anarquismo y revolucin).pdf" },
       { title: "Elisee Reclus. El geografo acrata y su paisaje de la libertad", author: "Alvarez Escobar, Ivan Dario", category: "historia", rating: 4.5, filename: "Alvarez Escobar, Ivan Dario - Elisee Reclus. El geografo acrata y su paisaje de la libertad.pdf" }
     ]
   },
@@ -352,8 +352,8 @@ export const regionData = {
       { title: "Sobre el anarquismo", author: "Nicolas Walter", year: 2016, category: "teoria", rating: 4.5, summary: "Introducción del militante británico Nicolas Walter al anarquismo —qué creen, quieren y hacen los anarquistas— con prólogo de Colin Ward.", filename: "Nicolas Walter - Sobre el anarquismo (2016).pdf" },
       { title: "El anarquismo: historia de las ideas y movimientos libertarios", author: "George Woodcock", year: 1962, category: "historia", rating: 4.7, summary: "El clásico de George Woodcock sobre la historia del anarquismo como doctrina y movimiento: sus raíces intelectuales (Godwin, Stirner, Proudhon, Bakunin, Kropotkin) y su desarrollo en Francia, Italia, Rusia y España, con capítulo final sobre el anarquismo español escrito por Pere Gabriel.", filename: "George Woodcock - El anarquismo historia de las ideas y movimientos libertarios (1962).pdf" },
       { title: "Nos estamos acercando: La historia de Angry Brigade", author: "Servando Rocha", year: 2014, category: "historia", rating: 4.6, summary: "Historia de la Angry Brigade, grupo insurreccionalista británico de los años 70 que atacó símbolos del poder estatal y capitalista con bombas y atracos.", filename: "Servando Rocha - Nos estamos acercando La historia de Angry Brigade (2014).pdf" },
-      { title: "La Brigada de la Clera", author: "Angry Brigade 1967-1984", category: "historia", rating: 4.5, filename: "Angry Brigade 1967-1984 - La Brigada de la Clera (2).pdf" },
-      { title: "La Brigada de la Clera", author: "Angry Brigade 1967-1984", category: "historia", rating: 4.5, filename: "Angry Brigade 1967-1984 - La Brigada de la Clera.pdf" }
+      { title: "La Brigada de la Cólera", author: "Angry Brigade 1967-1984", category: "historia", rating: 4.5, filename: "Angry Brigade 1967-1984 - La Brigada de la Clera (2).pdf" },
+      { title: "La Brigada de la Cólera", author: "Angry Brigade 1967-1984", category: "historia", rating: 4.5, filename: "Angry Brigade 1967-1984 - La Brigada de la Clera.pdf" }
     ]
   },
   "Italia": {
