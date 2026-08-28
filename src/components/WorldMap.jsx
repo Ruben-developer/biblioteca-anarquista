@@ -125,11 +125,13 @@ const WorldMap = ({
         >
           {frame && (
             <rect
-              x={0}
-              y={0}
-              width="100%"
-              height="100%"
+              x={1}
+              y={1}
+              width={WORLD_WIDTH - 2}
+              height={WORLD_HEIGHT - 2}
+              rx={16}
               stroke={frameColor}
+              strokeWidth={2}
               fill="none"
             />
           )}

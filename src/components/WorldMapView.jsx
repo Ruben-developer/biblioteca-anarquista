@@ -101,6 +101,8 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
         data={mapData}
         backgroundColor="transparent"
         borderColor={darkMode ? '#7f1d1d' : '#A0241A'}
+        frame
+        frameColor={darkMode ? 'rgba(135,35,32,0.5)' : '#B79F6E'}
         onClickFunction={handleCountryClick}
         styleFunction={styleFunction}
         tooltipTextFunction={tooltipTextFunction}

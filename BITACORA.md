@@ -130,6 +130,14 @@
 
 > Verificación: `npm run check` (lint 0 errores + **250 tests** + build) verde. Se dejan a 1px los bordes de controles interactivos (botones, inputs, textarea) por convención de UI.
 
+## 2026-08-27 (tercera parte) — Marco redondeado del mapamundi (sesión manual)
+
+| Hora | Tipo | Commit | Detalle |
+|------|------|--------|---------|
+| — | 🧑 Manual | (pendiente) | Se reañade el marco del propio mapa (`WorldMap` `frame`), que antes era recto y fino y se había eliminado. Ahora usa el **borde unificado**: `strokeWidth=2`, color `rgba(135,35,32,0.5)` (oscuro) / `#B79F6E` (claro) y **esquinas redondeadas** (`rx=16`), igual que el resto de paneles (`rounded-lg`). |
+
+> Verificación: `npm run check` (lint 0 errores + **250 tests** + build) verde.
+
 ## Estado actual
 
 - **25+ commits** en `main`, CI de Pages **verde** (lint+tests+audit+build), web **HTTP 200**.
