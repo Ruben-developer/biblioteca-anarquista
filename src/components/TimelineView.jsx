@@ -206,7 +206,7 @@ const TimelineView = ({
         Línea Temporal
       </h2>
       <p className={`text-sm mb-4 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-        En escritorio se muestra como línea; en móvil como feed.
+        Navega por diferentes contextos históricos.
       </p>
 
       <TimelineFilters
