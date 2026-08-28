@@ -146,6 +146,14 @@
 
 > Verificación: `npm run check` (lint 0 errores + **250 tests** + build) verde.
 
+## 2026-08-27 (quinta parte) — Línea/Feed por dispositivo + paneles unificados (develop)
+
+| Hora | Tipo | Commit | Detalle |
+|------|------|--------|---------|
+| — | 🧑 Manual | (pendiente) | En `TimelineView` se elimina el toggle manual Línea/Feed. Ahora la vista se elige por dispositivo: **escritorio → Línea** (horizontal), **móvil → Feed** (vertical) vía `useIsMobile` (nuevo hook `useMediaQuery`/`useIsMobile` en `hooks/index.js`, seguro si `matchMedia` no existe). Ambos paneles (`HorizontalTimeline`/`VerticalTimeline`) comparten el **mismo borde y fondo** (`border-2`, `bg-gray-900/60`/`bg-white/60`, `shadow-lg`), igual que el resto de tarjetas. Se añade una etiqueta no interactiva "Vista: Línea (escritorio) / Feed (móvil)". |
+
+> Verificación: `npm run check` (lint 0 errores + **250 tests** + build) verde. Pendiente de merge de PR #11 (producción) antes de pushear develop.
+
 ## Estado actual
 
 - **25+ commits** en `main`, CI de Pages **verde** (lint+tests+audit+build), web **HTTP 200**.
