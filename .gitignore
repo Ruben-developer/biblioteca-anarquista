@@ -18,3 +18,5 @@ yarn-error.log*
 *~
 .eslintcache
 .scannerwork/
+pdfs-no-configurados/
+pdfs-descartes/
