@@ -1,0 +1,19 @@
+{
+  "slug": "los-anarquistas-en-el-rio-de-la-plata",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/historia-anarquista/america-latina/uruguay/Los-anarquistas-en-el-Rio-de-la-Plata.pdf",
+  "model": "llama3.2:3b",
+  "ms": 68813,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "historia",
+  "titulo": "Los anarquistas en el Río de la Plata 1880-1910",
+  "autor": "",
+  "anio": "1880-1910",
+  "region": "Uruguay",
+  "contexto": "Movimiento anarquista en Uruguay durante el siglo XIX y principios del XX",
+  "epoca": "Siglo XIX y principios del XX",
+  "corriente": "Anarcosindicalismo",
+  "nota_otro": "",
+  "doubt": "",
+  "err": ""
+}

@@ -1,0 +1,19 @@
+{
+  "slug": "autobiografia-de-un-irreductible",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/libros-crimental-coleccion/Autobiografia de un irreductible.pdf",
+  "model": "llama3.2:3b",
+  "ms": 164158,
+  "es_anarquista": false,
+  "es_espanol": true,
+  "tipo": "historia",
+  "titulo": "Autobiografía de un irreductible",
+  "autor": "Claudio Lavazza",
+  "anio": "2010",
+  "region": "España",
+  "contexto": "Biografía política",
+  "epoca": "Actualidad",
+  "corriente": "Anarquismo",
+  "nota_otro": "",
+  "doubt": "",
+  "err": ""
+}

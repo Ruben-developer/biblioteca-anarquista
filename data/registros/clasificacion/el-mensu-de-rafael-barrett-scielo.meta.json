@@ -1,0 +1,19 @@
+{
+  "slug": "el-mensu-de-rafael-barrett-scielo",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/historia-anarquista/america-latina/paraguay/El-mensu-de-Rafael-Barrett-Scielo.pdf",
+  "model": "llama3.2:3b",
+  "ms": 183140,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "teoria",
+  "titulo": "El mensú de Rafael Barrett vs. pynandí de Juan Natalicio González: La disputa por el pueblo desde las memorias y los olvidos de una historia paraguaya en construcción",
+  "autor": "Gaya Makaran",
+  "anio": "2023",
+  "region": "Paraguay",
+  "contexto": "Historia, teoría, crítica a la historiografía nacionalista",
+  "epoca": "Siglo XX, décadas 30-40",
+  "corriente": "Anarquismo internacionalista, nacionalismo agrarista colorado",
+  "nota_otro": "",
+  "doubt": "",
+  "err": ""
+}

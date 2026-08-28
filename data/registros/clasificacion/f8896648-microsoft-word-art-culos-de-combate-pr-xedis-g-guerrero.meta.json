@@ -1,0 +1,19 @@
+{
+  "slug": "f8896648-microsoft-word-art-culos-de-combate-pr-xedis-g-guerrero",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/otros/f8896648_Microsoft_Word_Art_culos_de_combate_Pr_xedis_G_Guerrero.pdf",
+  "model": "llama3.2:3b",
+  "ms": 179818,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "historia",
+  "titulo": "Artículos de combate de Práxedis Gilberto Guerrero",
+  "autor": "Práxedis Gilberto Guerrero",
+  "anio": "1977",
+  "region": "México",
+  "contexto": "Revolución Mexicana",
+  "epoca": "1910-1920",
+  "corriente": "anarquismo",
+  "nota_otro": "Ediciones Antorcha",
+  "doubt": "",
+  "err": ""
+}

@@ -1,0 +1,19 @@
+{
+  "slug": "caos-no-murio",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/libros-crimental-coleccion/Caos No Murio.pdf",
+  "model": "llama3.2:3b",
+  "ms": 164810,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "teoria",
+  "titulo": "Caos No Murio: Consideraciones para Desmitificar el Concepto e Influencias del Caos",
+  "autor": "Varios/as Autores/as",
+  "anio": "2012",
+  "region": "Chile",
+  "contexto": "Anarquismo, Teoría del Caos",
+  "epoca": "Actualidad",
+  "corriente": "Anarquista",
+  "nota_otro": "",
+  "doubt": "",
+  "err": ""
+}

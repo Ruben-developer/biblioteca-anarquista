@@ -1,0 +1,19 @@
+{
+  "slug": "f13306400",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/otros/f13306400.pdf",
+  "model": "llama3.2:3b",
+  "ms": 181839,
+  "es_anarquista": false,
+  "es_espanol": true,
+  "tipo": "historia",
+  "titulo": "La escuela moderna",
+  "autor": "Francisco Ferrer Guardia",
+  "anio": "n/d",
+  "region": "España",
+  "contexto": "Educación popular y anarquismo en España",
+  "epoca": "Fin del siglo XIX",
+  "corriente": "Anarquismo español",
+  "nota_otro": "",
+  "doubt": "",
+  "err": ""
+}

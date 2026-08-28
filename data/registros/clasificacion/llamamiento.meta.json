@@ -1,0 +1,19 @@
+{
+  "slug": "llamamiento",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/libros-crimental-coleccion/Llamamiento.pdf",
+  "model": "llama3.2:3b",
+  "ms": 170954,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "teoria",
+  "titulo": "Llamado a la destrucción y creación",
+  "autor": "Anonimo/a",
+  "anio": "2007",
+  "region": "Francia",
+  "contexto": "Movimiento anti-globalización",
+  "epoca": "2000-2010",
+  "corriente": "anarquismo",
+  "nota_otro": "Crítica al sistema y llamado a la acción",
+  "doubt": "",
+  "err": ""
+}

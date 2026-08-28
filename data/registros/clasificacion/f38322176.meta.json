@@ -1,0 +1,19 @@
+{
+  "slug": "f38322176",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/otros/f38322176.pdf",
+  "model": "llama3.2:3b",
+  "ms": 222682,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "historia",
+  "titulo": "El experimento del Kurdistán oeste: una experiencia de autogobierno en la región siria",
+  "autor": "Zaher Baher",
+  "anio": "2014",
+  "region": "Kurdistán oeste (Siria)",
+  "contexto": "Guerra civil siria, Levantamiento del Estado Islámico",
+  "epoca": "Primavera Árabe",
+  "corriente": "Anarquismo, Autogobierno",
+  "nota_otro": "La experiencia presentada en el texto es una descripción de la situación en la región siria durante la Primavera Árabe y la implementación del autogobierno en el Kurdistán oeste",
+  "doubt": "",
+  "err": ""
+}

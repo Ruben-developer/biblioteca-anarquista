@@ -1,0 +1,19 @@
+{
+  "slug": "kropotkin-memorias-de-un-revolucionario",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/historia-anarquista/europa/suiza/Kropotkin-Memorias-de-un-revolucionario.pdf",
+  "model": "llama3.2:3b",
+  "ms": 101620,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "historia",
+  "titulo": "Memorias de un revolucionario",
+  "autor": "Piotr Kropotkin",
+  "anio": "1899",
+  "region": "Rusia",
+  "contexto": "Historia del movimiento anarquista",
+  "epoca": "Siglo XIX",
+  "corriente": "Anarquismo",
+  "nota_otro": "",
+  "doubt": "",
+  "err": ""
+}

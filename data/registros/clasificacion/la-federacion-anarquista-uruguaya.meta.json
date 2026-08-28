@@ -1,0 +1,19 @@
+{
+  "slug": "la-federacion-anarquista-uruguaya",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/historia-anarquista/america-latina/uruguay/La-Federacion-Anarquista-Uruguaya.pdf",
+  "model": "llama3.2:3b",
+  "ms": 181667,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "historia",
+  "titulo": "El Anarquismo en Uruguay",
+  "autor": "Guillermo Reigosa Pérez",
+  "anio": "2010",
+  "region": "Uruguay",
+  "contexto": "Historia del anarquismo en Uruguay",
+  "epoca": "Siglo XX",
+  "corriente": "Anarcosindicalismo",
+  "nota_otro": "",
+  "doubt": "",
+  "err": ""
+}

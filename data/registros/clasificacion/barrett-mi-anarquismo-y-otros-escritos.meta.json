@@ -1,0 +1,19 @@
+{
+  "slug": "barrett-mi-anarquismo-y-otros-escritos",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/historia-anarquista/america-latina/paraguay/Barrett-Mi-anarquismo-y-otros-escritos.pdf",
+  "model": "llama3.2:3b",
+  "ms": 174753,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "historia",
+  "titulo": "Mi anarquismo y otros escritos Rafael Barrett",
+  "autor": "Rafael Barrett",
+  "anio": "2015",
+  "region": "Chile",
+  "contexto": "Anarquismo, filosofía, política",
+  "epoca": "Siglo XX",
+  "corriente": "Anarquismo",
+  "nota_otro": "",
+  "doubt": "",
+  "err": ""
+}

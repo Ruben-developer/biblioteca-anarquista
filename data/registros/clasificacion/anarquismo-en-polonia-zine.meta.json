@@ -1,0 +1,19 @@
+{
+  "slug": "anarquismo-en-polonia-zine",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/historia-anarquista/europa/polonia/Anarquismo-en-Polonia-zine.pdf",
+  "model": "llama3.2:3b",
+  "ms": 178774,
+  "es_anarquista": true,
+  "es_espanol": false,
+  "tipo": "historia",
+  "titulo": "El anarquismo polaco en el siglo XX",
+  "autor": "Anónimo",
+  "anio": "1905-1918",
+  "region": "Polonia",
+  "contexto": "Movimiento anarquista en Polonia durante el dominio ruso",
+  "epoca": "Fin del siglo XIX - principios del XX",
+  "corriente": "Anarquismo, Anarcosindicalismo",
+  "nota_otro": "",
+  "doubt": "",
+  "err": ""
+}

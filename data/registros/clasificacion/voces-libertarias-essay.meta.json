@@ -1,0 +1,19 @@
+{
+  "slug": "voces-libertarias-essay",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/historia-anarquista/america-latina/puerto-rico/Voces-libertarias-essay.pdf",
+  "model": "llama3.2:3b",
+  "ms": 43369,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "historia",
+  "titulo": "Voces libertarias: The Economic, Political and Social Discourse of Puerto Rican Anarchism, 1900 – 1917",
+  "autor": "Jorell A. Meléndez Badillo",
+  "anio": "2012",
+  "region": "Puerto Rico",
+  "contexto": "Anarquismo en Puerto Rico",
+  "epoca": "Siglo XX",
+  "corriente": "Anarquismo puertorriqueño",
+  "nota_otro": "",
+  "doubt": "",
+  "err": ""
+}

@@ -1,0 +1,19 @@
+{
+  "slug": "anarquismo-y-sindicalismo-en-el-peru-piedad-pareja",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/historia-anarquista/america-latina/peru/Anarquismo-y-Sindicalismo-en-el-Peru-Piedad-Pareja.pdf",
+  "model": "llama3.2:3b",
+  "ms": 27068,
+  "es_anarquista": true,
+  "es_espanol": false,
+  "tipo": "historia",
+  "titulo": "La Revolución Española de 1936: Un intento de socialismo en un país capitalista",
+  "autor": "Juan López",
+  "anio": "2018",
+  "region": "España",
+  "contexto": "La revolución española de 1936 fue un intento de establecer un gobierno socialista en un país dominado por la burguesía y el fascismo.",
+  "epoca": "Epoca de la Segunda República Española",
+  "corriente": "Anarquismo español",
+  "nota_otro": "La revolución fue liderada por el Partido Obrero Internacional (POI) y el Sindicato General del Trabajo (SGT), con el objetivo de establecer un gobierno socialista y erradicar la pobreza y la desigualdad.",
+  "doubt": "sin texto extraíble (posible escaneo)",
+  "err": ""
+}

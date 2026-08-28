@@ -1,0 +1,19 @@
+{
+  "slug": "adams-anarquismos-no-occidentales",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/historia-anarquista/otros/armenia/Adams-Anarquismos-no-occidentales.pdf",
+  "model": "llama3.2:3b",
+  "ms": 169797,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "historia",
+  "titulo": "Anarquismo no occidental: Reflexiones sobre el contexto global",
+  "autor": "Jason Adams",
+  "anio": "2003",
+  "region": "Sudáfrica",
+  "contexto": "Movimiento anarquista en África y Asia",
+  "epoca": "Siglo XXI",
+  "corriente": "Anarquismo no occidental",
+  "nota_otro": "Reevalúa la historia y la teoría del anarquismo desde una perspectiva global",
+  "doubt": "",
+  "err": ""
+}

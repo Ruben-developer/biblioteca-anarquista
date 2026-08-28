@@ -1,0 +1,19 @@
+{
+  "slug": "cuadernos-de-negacion",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/libros-crimental-coleccion/Cuadernos de Negación.pdf",
+  "model": "llama3.2:3b",
+  "ms": 177745,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "historia",
+  "titulo": "Cuadernos de Negación",
+  "autor": "Ediciones Crimental",
+  "anio": "2009-2011",
+  "region": "Argentina",
+  "contexto": "Anarquismo, crítica al capitalismo y la democracia",
+  "epoca": "Actualidad",
+  "corriente": "Anarquismo libertario",
+  "nota_otro": "Publicación de Ediciones Crimental que critica el capitalismo y la democracia",
+  "doubt": "",
+  "err": ""
+}

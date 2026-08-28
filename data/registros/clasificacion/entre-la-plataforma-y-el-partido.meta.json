@@ -1,0 +1,19 @@
+{
+  "slug": "entre-la-plataforma-y-el-partido",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/libros-crimental-coleccion/Entre La Plataforma y El Partido.pdf",
+  "model": "llama3.2:3b",
+  "ms": 214491,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "teoria",
+  "titulo": "El partido anarquista: una falacia o una necesidad?",
+  "autor": "Patrick Rossineri",
+  "anio": "2008",
+  "region": "Argentina",
+  "contexto": "Análisis del concepto de partido político en el contexto del anarquismo",
+  "epoca": "Siglo XX",
+  "corriente": "anarquista",
+  "nota_otro": "La crítica al partido anarquista y su relación con la vanguardia",
+  "doubt": "",
+  "err": ""
+}

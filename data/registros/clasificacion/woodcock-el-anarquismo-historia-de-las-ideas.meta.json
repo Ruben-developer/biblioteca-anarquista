@@ -1,0 +1,19 @@
+{
+  "slug": "woodcock-el-anarquismo-historia-de-las-ideas",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/historia-anarquista/europa/paises-bajos/Woodcock-El-anarquismo-historia-de-las-ideas.pdf",
+  "model": "llama3.2:3b",
+  "ms": 173597,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "historia",
+  "titulo": "EL ANARQUISMO Historia de las ideas y movimientos libertarios",
+  "autor": "George Woodcock",
+  "anio": "no especificado",
+  "region": "no especificado",
+  "contexto": "Libertaria, anarquismo, pensamiento crítico",
+  "epoca": "Historia del pensamiento anarquista",
+  "corriente": "Anarquismo libertario",
+  "nota_otro": "Trata sobre la historia y el desarrollo del pensamiento anarquista",
+  "doubt": "",
+  "err": ""
+}

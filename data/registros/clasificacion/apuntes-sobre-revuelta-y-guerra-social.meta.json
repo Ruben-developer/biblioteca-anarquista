@@ -1,0 +1,19 @@
+{
+  "slug": "apuntes-sobre-revuelta-y-guerra-social",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/libros-crimental-coleccion/Apuntes Sobre Revuelta y Guerra Social.pdf",
+  "model": "llama3.2:3b",
+  "ms": 162814,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "teoria",
+  "titulo": "23 Tesis en torno a la Revuelta",
+  "autor": "Anonimo/a",
+  "anio": "2010",
+  "region": "Europa",
+  "contexto": "Crítica al capitalismo y la colonización",
+  "epoca": "Edad Contemporánea",
+  "corriente": "Anarquismo",
+  "nota_otro": "Crítica a la producción como instrumento de control",
+  "doubt": "",
+  "err": ""
+}

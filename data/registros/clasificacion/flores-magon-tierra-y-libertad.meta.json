@@ -1,0 +1,19 @@
+{
+  "slug": "flores-magon-tierra-y-libertad",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/Flores_Magon_Tierra_y_Libertad.pdf",
+  "model": "llama3.2:3b",
+  "ms": 171943,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "historia",
+  "titulo": "Tierra y Libertad",
+  "autor": "Ricardo Flores Magón",
+  "anio": "1916-1918",
+  "region": "México",
+  "contexto": "Teatro, movimiento obrero-campesino",
+  "epoca": "Época de la Revolución Mexicana",
+  "corriente": "Anarquismo",
+  "nota_otro": "",
+  "doubt": "",
+  "err": ""
+}

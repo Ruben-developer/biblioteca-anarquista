@@ -1,0 +1,19 @@
+{
+  "slug": "repensar-el-anarquismo-en-america-latina",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/historia-anarquista/america-latina/brasil/Repensar-el-anarquismo-en-America-Latina.pdf",
+  "model": "llama3.2:3b",
+  "ms": 177408,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "historia",
+  "titulo": "Repensar el anarquismo en América Latina: Historias, epistemes, luchas y otras formas de organización",
+  "autor": "Alfredo Gómez Muller",
+  "anio": "no especificado",
+  "region": "América Latina",
+  "contexto": "Historia del anarquismo en América Latina",
+  "epoca": "Siglo XX",
+  "corriente": "Anarquismo latinoamericano",
+  "nota_otro": "Libro colectivo que busca repensar el anarquismo en América Latina desde una perspectiva descolonizadora",
+  "doubt": "",
+  "err": ""
+}

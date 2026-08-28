@@ -1,0 +1,19 @@
+{
+  "slug": "jefes-cabecillas-abusones",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/libros-crimental-coleccion/Jefes, Cabecillas, Abusones.pdf",
+  "model": "llama3.2:3b",
+  "ms": 186759,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "teoria",
+  "titulo": "Jefes, Cabecillas, Abusones: Una crítica al poder y la autoridad",
+  "autor": "Marvin Harris",
+  "anio": "1985",
+  "region": "Estadounidense",
+  "contexto": "Análisis de las sociedades pequeñas y preestatales",
+  "epoca": "Prehistoria",
+  "corriente": "Anarquismo",
+  "nota_otro": "Crítica al poder y la autoridad en las sociedades humanas",
+  "doubt": "",
+  "err": ""
+}

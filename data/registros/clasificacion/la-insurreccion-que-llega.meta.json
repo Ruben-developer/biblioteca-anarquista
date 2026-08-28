@@ -1,0 +1,19 @@
+{
+  "slug": "la-insurreccion-que-llega",
+  "source_pdf": "/home/fdr/Documentos/anarquismo_importado/PDFs/sin_clasificar/libros-crimental-coleccion/La Insurreccion que llega.pdf",
+  "model": "llama3.2:3b",
+  "ms": 160247,
+  "es_anarquista": true,
+  "es_espanol": true,
+  "tipo": "otro",
+  "titulo": "La Insurrección Que Llega",
+  "autor": "Comité Invisible",
+  "anio": "2007",
+  "region": "Europa",
+  "contexto": "movimiento anarquista",
+  "epoca": "actualidad",
+  "corriente": "anarquismo",
+  "nota_otro": "",
+  "doubt": "",
+  "err": ""
+}
