@@ -220,12 +220,6 @@ const TimelineView = ({
         totalEventCount={totalEventCount}
       />
 
-      <div className="flex items-center gap-2 mb-4">
-        <span className={`text-xs ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
-          Vista: {isMobile ? 'Feed (móvil)' : 'Línea (escritorio)'} · {filteredEvents.length} evento{filteredEvents.length === 1 ? '' : 's'}
-        </span>
-      </div>
-
       {layout === 'horizontal' ? (
         <HorizontalTimeline {...timelineProps} />
       ) : (

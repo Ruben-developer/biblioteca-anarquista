@@ -154,6 +154,14 @@
 
 > Verificación: `npm run check` (lint 0 errores + **250 tests** + build) verde. Pendiente de merge de PR #11 (producción) antes de pushear develop.
 
+## 2026-08-27 (sexta parte) — Quitar grises azulados en modo oscuro (develop)
+
+| Hora | Tipo | Commit | Detalle |
+|------|------|--------|---------|
+| — | 🧑 Manual | (pendiente) | `theme-constructivista` ya volvía cálidos la mayoría de `gray-*`, pero filtraban los azulados de Tailwind en modo oscuro: `bg-gray-950`, `bg-gray-900`, `bg-gray-900/50`, `bg-gray-900/40`, `bg-gray-700/50`, `bg-gray-600` y el `from-gray-900` del fade de la línea temporal. Se añaden overrides en `index.css` que los mapean a los mismos cálidos ya usados en el tema (`#0A0909`, `rgba(10,9,9,*)`, `#6F6C68`/`rgba`, `#5A5652`). También se elimina el caption «Vista: …» de `TimelineView`. |
+
+> Verificación: `npm run check` (lint 0 errores + **250 tests** + build) verde.
+
 ## Estado actual
 
 - **25+ commits** en `main`, CI de Pages **verde** (lint+tests+audit+build), web **HTTP 200**.
