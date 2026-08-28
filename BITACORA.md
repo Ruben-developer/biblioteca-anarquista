@@ -162,6 +162,14 @@
 
 > Verificación: `npm run check` (lint 0 errores + **250 tests** + build) verde.
 
+## 2026-08-27 (séptima parte) — Restos de gris azulado (hover/placeholder) + Mi Biblioteca a la izquierda (develop)
+
+| Hora | Tipo | Commit | Detalle |
+|------|------|--------|---------|
+| — | 🧑 Manual | (pendiente) | Se completa el de-azulado: los overrides previos cubrían las clases base pero no las **variantes** `hover:bg-gray-700/50`, `hover:bg-gray-700`, `hover:bg-gray-600` ni `placeholder-gray-500`, así que el hover del menú de hamburguesa/sus opciones y el placeholder «Buscar autor…» seguían azulados. Se añaden esos overrides en `index.css` (mismos cálidos del tema). En `FavoritesView` el título y los botones Importar/Exportar vuelven a la **izquierda** (se quita `text-center`/`justify-center`). |
+
+> Verificación: `npm run check` (lint 0 errores + **250 tests** + build) verde.
+
 ## Estado actual
 
 - **25+ commits** en `main`, CI de Pages **verde** (lint+tests+audit+build), web **HTTP 200**.

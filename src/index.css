@@ -178,6 +178,19 @@ code {
   --tw-gradient-to: rgba(10, 9, 9, 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
+/* Variantes hover y placeholder grises azulados -> cálidos ya usados en el tema */
+.theme-constructivista .hover\:bg-gray-700\/50:hover {
+  background-color: rgba(111, 108, 104, 0.5);
+}
+.theme-constructivista .hover\:bg-gray-700:hover {
+  background-color: #6F6C68;
+}
+.theme-constructivista .hover\:bg-gray-600:hover {
+  background-color: #5A5652;
+}
+.theme-constructivista .placeholder-gray-500::placeholder {
+  color: #8C8780;
+}
 /* Acentos rojos */
 .theme-constructivista .bg-red-600 {
   background-color: #D02C26;
