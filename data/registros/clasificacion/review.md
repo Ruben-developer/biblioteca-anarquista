@@ -1,7 +1,7 @@
 # Clasificación local — llama3.2:3b
 
-Generado: 2026-08-28 03:28
-Total: 71 (OK 3)
+Generado: 2026-08-28 03:36
+Total: 71 (OK 0)
 
 | # | tipo | A | ES | título | autor | año | región | detalle |
 |---|------|---|----|-------|-------|-----|--------|--------|
