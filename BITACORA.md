@@ -170,6 +170,14 @@
 
 > Verificación: `npm run check` (lint 0 errores + **250 tests** + build) verde.
 
+## 2026-08-27 (octava parte) — Auditoría final de grises azulados (develop)
+
+| Hora | Tipo | Commit | Detalle |
+|------|------|--------|---------|
+| — | 🧑 Manual | (pendiente) | Auditoría de todos los `gray-*` (con variantes `hover/focus/placeholder`, degradados y modo claro). Quedaban por cubrir: `hover:text-gray-300`, `hover:text-gray-400` (textos azulados al hover), stops de degradado `to-gray-900`/`from-gray-800`/`via-gray-900`, y tokens base de modo claro `text-gray-900`/`bg-gray-100`/`bg-gray-300`. Se añaden sus overrides cálidos en `index.css`. No se usan otros paletes azulados (`blue/slate/indigo/sky/cyan/zinc`). |
+
+> Verificación: `npm run check` (lint 0 errores + **250 tests** + build) verde.
+
 ## Estado actual
 
 - **25+ commits** en `main`, CI de Pages **verde** (lint+tests+audit+build), web **HTTP 200**.

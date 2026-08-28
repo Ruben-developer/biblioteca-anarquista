@@ -191,6 +191,30 @@ code {
 .theme-constructivista .placeholder-gray-500::placeholder {
   color: #8C8780;
 }
+/* Textos en hover que aún filtraban azulado */
+.theme-constructivista .hover\:text-gray-300:hover {
+  color: #C9BCA8;
+}
+.theme-constructivista .hover\:text-gray-400:hover {
+  color: #8C8780;
+}
+/* Stops de degradado grises -> cálidos (por si algún gradiente no está en la combo cubierta) */
+.theme-constructivista .to-gray-900 {
+  --tw-gradient-to: #0A0909 var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.theme-constructivista .from-gray-800 {
+  --tw-gradient-from: #1A1818 var(--tw-gradient-from-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.theme-constructivista .via-gray-900 {
+  --tw-gradient-via: #0A0909 var(--tw-gradient-via-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to);
+}
+/* Base en modo claro para consistencia cálida (casi neutros, sin azul) */
+.theme-constructivista .text-gray-900 { color: #1A1818; }
+.theme-constructivista .bg-gray-100 { background-color: #E5DCD0; }
+.theme-constructivista .bg-gray-300 { background-color: #C9BCA8; }
 /* Acentos rojos */
 .theme-constructivista .bg-red-600 {
   background-color: #D02C26;
