@@ -20,8 +20,6 @@ const WorldMap = ({
   data,
   backgroundColor = 'transparent',
   borderColor = '#b45309',
-  frame = false,
-  frameColor = '#b45309',
   styleFunction,
   tooltipTextFunction,
   onClickFunction,
@@ -123,18 +121,6 @@ const WorldMap = ({
           viewBox={`0 0 ${WORLD_WIDTH} ${WORLD_HEIGHT}`}
           style={{ width: '100%', height: 'auto' }}
         >
-          {frame && (
-            <rect
-              x={1}
-              y={1}
-              width={WORLD_WIDTH - 2}
-              height={WORLD_HEIGHT - 2}
-              rx={12}
-              stroke={frameColor}
-              strokeWidth={2}
-              fill="none"
-            />
-          )}
           <g transform="translate(0, 240)">{paths}</g>
         </svg>
       </figure>

@@ -138,6 +138,14 @@
 
 > Verificación: `npm run check` (lint 0 errores + **250 tests** + build) verde.
 
+## 2026-08-27 (cuarta parte) — Mapa con la misma curvatura que las tarjetas (sesión manual)
+
+| Hora | Tipo | Commit | Detalle |
+|------|------|--------|---------|
+| — | 🧑 Manual | (pendiente) | El marco del mapa pasa a ser CSS (`rounded-lg border-2` + color por tema) sobre el contenedor del SVG, en vez del `rect` interno del SVG cuyo `rx` escalaba con el ancho y nunca igualaba el `rounded-lg` de las tarjetas. Ahora mapa, tarjetas, secciones y menús comparten la **misma curvatura** (8px). Se elimina el código muerto `frame`/`frameColor` de `WorldMap.jsx`. |
+
+> Verificación: `npm run check` (lint 0 errores + **250 tests** + build) verde.
+
 ## Estado actual
 
 - **25+ commits** en `main`, CI de Pages **verde** (lint+tests+audit+build), web **HTTP 200**.

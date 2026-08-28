@@ -97,17 +97,17 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
         Haz clic en un país destacado para ver sus textos históricos. Cuanto más oscuro el color, más hechos del movimiento registra ese país. Los textos de filosofía e ideas viven en la sección de Autores.
       </p>
 
-      <WorldMap
-        data={mapData}
-        backgroundColor="transparent"
-        borderColor={darkMode ? '#7f1d1d' : '#A0241A'}
-        frame
-        frameColor={darkMode ? 'rgba(135,35,32,0.5)' : '#B79F6E'}
-        onClickFunction={handleCountryClick}
-        styleFunction={styleFunction}
-        tooltipTextFunction={tooltipTextFunction}
-        containerClassName="w-full"
-      />
+      <div className={`rounded-lg border-2 overflow-hidden ${darkMode ? 'border-[#872320]/50' : 'border-[#B79F6E]'}`}>
+        <WorldMap
+          data={mapData}
+          backgroundColor="transparent"
+          borderColor={darkMode ? '#7f1d1d' : '#A0241A'}
+          onClickFunction={handleCountryClick}
+          styleFunction={styleFunction}
+          tooltipTextFunction={tooltipTextFunction}
+          containerClassName="w-full"
+        />
+      </div>
 
       <div className="mt-4 flex items-center gap-3 justify-center">
         <span className={`text-xs ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>Pocos textos</span>
