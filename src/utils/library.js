@@ -76,6 +76,18 @@ export const getHistoricalBooks = (regionData, region) =>
     .filter((b) => isHistoricalBook(b))
     .map((b) => ({ ...b, region }));
 
+// Categorías de "vidas anarquistas" (narraciones de vida): biografías,
+// autobiografías, memorias y epistolarios. NO son históricas (no van al mapa ni
+// a la línea temporal); viven en la sección Vidas anarquistas y en Autores.
+export const LIFE_CATEGORIES = ['biografia', 'autobiografia', 'memorias', 'epistolario'];
+
+// Vidas anarquistas del archivo (cualquiera de LIFE_CATEGORIES): lista plana con
+// su región, ordenada por año (asc) y título. FUENTE ÚNICA para la vista Vidas.
+export const getLifeBooks = (regionData) =>
+  getAllBooks(regionData)
+    .filter((b) => LIFE_CATEGORIES.includes(b.category))
+    .sort((a, b) => (a.year || 0) - (b.year || 0) || String(a.title).localeCompare(String(b.title), 'es'));
+
 // Contador REAL de textos: todos los libros del catálogo (fuente única regionData).
 export const countAllTexts = (regionData) =>
   Object.values(regionData || {}).reduce((sum, region) => sum + (region.books?.length || 0), 0);

@@ -14,6 +14,7 @@ import TimelineView from './TimelineView';
 import WorldMapView from './WorldMapView';
 import AuthorsView from './AuthorsView';
 import InfluencesView from './InfluencesView';
+import VidasAnarquistasView from './VidasAnarquistasView';
 import FavoritesView from './FavoritesView';
 import LibraryView from './LibraryView';
 import TheoriesView from './TheoriesView';
@@ -150,6 +151,14 @@ const AnarchistArchive = () => {
 
           {activeView === VIEWS.INFLUENCES && (
             <InfluencesView
+              darkMode={darkMode}
+              regionData={regionData}
+              onRead={setReadingBook}
+            />
+          )}
+
+          {activeView === VIEWS.BIOGRAPHIES && (
+            <VidasAnarquistasView
               darkMode={darkMode}
               regionData={regionData}
               onRead={setReadingBook}

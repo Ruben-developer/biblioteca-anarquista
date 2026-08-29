@@ -12,6 +12,7 @@ import TheoriesView from './TheoriesView';
 import GlossaryView from './GlossaryView';
 import ReadingPathsView from './ReadingPathsView';
 import InfluencesView from './InfluencesView';
+import VidasAnarquistasView from './VidasAnarquistasView';
 import ReaderOverlay from './ReaderOverlay';
 const catalogTitles = new Set(getAllBooks(regionData).map((b) => b.title));
 
@@ -181,6 +182,34 @@ describe('InfluencesView', () => {
     expect(screen.getByText(/Influye en/)).toBeTruthy();
     expect(screen.getByText(/Obras en el archivo/)).toBeTruthy();
     expect(screen.getByText('La Conquista del Pan')).toBeTruthy();
+  });
+});
+
+describe('VidasAnarquistasView', () => {
+  it('renderiza el título y las vidas del catálogo', () => {
+    const html = renderToStaticMarkup(<VidasAnarquistasView darkMode={false} regionData={regionData} />);
+    expect(html).toContain('Vidas anarquistas');
+    expect(html).toContain('Severino Di Giovanni');
+    expect(html).toContain('Leer');
+  });
+
+  it('filtra las vidas por búsqueda', async () => {
+    // @vitest-environment jsdom
+    const { render, screen, fireEvent } = await import('@testing-library/react');
+    render(<VidasAnarquistasView darkMode regionData={regionData} />);
+    expect(screen.getByText('Severino Di Giovanni')).toBeTruthy();
+    fireEvent.change(screen.getByLabelText('Buscar biografía, autor o tema...'), { target: { value: 'Teresa Claramunt' } });
+    expect(screen.getByText(/Teresa Claramunt/)).toBeTruthy();
+    expect(screen.queryByText('Severino Di Giovanni')).toBeNull();
+  });
+
+  it('filtra por subtipo al pulsar el chip Epistolario', async () => {
+    // @vitest-environment jsdom
+    const { render, screen, fireEvent } = await import('@testing-library/react');
+    render(<VidasAnarquistasView darkMode={false} regionData={regionData} />);
+    fireEvent.click(screen.getByText(/Epistolario/));
+    expect(screen.getByText('Fraternalmente, Emma')).toBeTruthy();
+    expect(screen.queryByText('Severino Di Giovanni')).toBeNull();
   });
 });
 

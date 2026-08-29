@@ -7,6 +7,9 @@ export const CATEGORIES = [
   { id: 'organizacion', name: 'Organización' },
   { id: 'represion', name: 'Represión' },
   { id: 'biografia', name: 'Biografía' },
+  { id: 'autobiografia', name: 'Autobiografía' },
+  { id: 'memorias', name: 'Memorias' },
+  { id: 'epistolario', name: 'Epistolario' },
   { id: 'periodismo', name: 'Periodismo' },
   { id: 'manifiesto', name: 'Manifiesto' },
   { id: 'dialogo', name: 'Diálogo' }
@@ -16,7 +19,7 @@ export const CATEGORIES = [
 // Los de filosofía/ideas (teoria, biografia, dialogo) viven en la sección de Autores.
 // FUENTE ÚNICA definida en utils/library.js — aquí solo se re-exporta.
 export { HISTORICAL_CATEGORIES, isHistoricalCategory } from '../utils/library';
-export const IDEAS_CATEGORIES = ['teoria', 'biografia', 'dialogo'];
+export const IDEAS_CATEGORIES = ['teoria', 'biografia', 'autobiografia', 'memorias', 'epistolario', 'dialogo'];
 
 export const DECADES = ['all', '1700s', '1840s', '1860s', '1870s', '1880s', '1890s', '1900s', '1910s', '1920s', '1930s', '1940s', '1950s', '1960s', '1970s', '1980s', '1990s', '2000s', '2010s'];
 
@@ -34,6 +37,7 @@ export const VIEWS = {
   LIBRARY: 'library',
   THEORIES: 'theories',
   INFLUENCES: 'influences',
+  BIOGRAPHIES: 'biographies',
   PATHS: 'paths',
   GLOSSARY: 'glossary',
   CONTACT: 'contact',
@@ -49,6 +53,7 @@ export const VIEW_LABELS = {
   [VIEWS.LIBRARY]: 'Biblioteca',
   [VIEWS.THEORIES]: 'Teorías',
   [VIEWS.INFLUENCES]: 'Red de Autores',
+  [VIEWS.BIOGRAPHIES]: 'Vidas anarquistas',
   [VIEWS.PATHS]: 'Rutas',
   [VIEWS.GLOSSARY]: 'Glosario',
   [VIEWS.CONTACT]: 'Contacto',
