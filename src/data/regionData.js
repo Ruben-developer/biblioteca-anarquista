@@ -46,12 +46,6 @@ export const regionData = {
       { title: "Juan Lazarte, Militante Social, Medico, Humanista", author: "Diego Abad de Santillan et al.", year: 1964, category: "historia", rating: 4.5, filename: "Abad de Santillan, Diego et al. - Juan Lazarte, Militante Social, Medico, Humanista (1964).pdf" }
     ]
   },
-  "Armenia": {
-    iso: "am",
-    books: [
-      { title: "Anarquismos no occidentales", author: "Jason Adams", year: 2003, category: "historia", rating: 4.5, summary: "Reflexión sobre la historia global del anarquismo fuera de Occidente: Asia (China, Corea, Japón e India), los anarquismos africanos (igbo, Egipto, Libia, Nigeria y Sudáfrica), América Latina (Argentina, Uruguay, Brasil, Chile, México y Cuba) y Oriente Medio (Armenia, Líbano, Turquía y Palestina).", filename: "Jason Adams - Anarquismos no occidentales (2003).pdf" }
-    ]
-  },
   "Bolivia": {
     iso: "bo",
     books: [
@@ -523,6 +517,7 @@ export const regionData = {
   "Internacional": {
     iso: null,
     books: [
+      { title: "Anarquismos no occidentales", author: "Jason Adams", year: 2003, category: "historia", rating: 4.5, summary: "Reflexión sobre la historia global del anarquismo fuera de Occidente: Asia (China, Corea, Japón e India), los anarquismos africanos (igbo, Egipto, Libia, Nigeria y Sudáfrica), América Latina (Argentina, Uruguay, Brasil, Chile, México y Cuba) y Oriente Medio (Armenia, Líbano, Turquía y Palestina).", filename: "Jason Adams - Anarquismos no occidentales (2003).pdf" },
       { title: "Cómo la no violencia protege al Estado (variante)", author: "Peter Gelderloos", year: 2007, category: "teoria", rating: 4.5, summary: "Variante o edición alternativa del ensayo de Gelderloos contra la no violencia como estrategia de cambio social.", filename: "Peter Gelderloos - Como la no violencia protege al Estado (variante) (2007).pdf" },
       { title: "Apuntes sobre revuelta y guerra social", author: "Colectivo", year: 2015, category: "teoria", rating: 4.4, summary: "Apuntes teóricos sobre la insurrección, la guerra social y la estrategia revolucionaria en el anarquismo contemporáneo.", filename: "Colectivo - Apuntes sobre revuelta y guerra social (2015).pdf" },
       { title: "Autobiografía de un irreductible", author: "Claudio Lavazza", year: 2000, category: "acratas", subject: "Claudio Lavazza", rating: 4.3, summary: "Relato autobiográfico de un militante anarquista que se niega a doblegarse ante el sistema: la vida como resistencia.", filename: "Colectivo - Autobiografia de un irreductible (2000).pdf" },
