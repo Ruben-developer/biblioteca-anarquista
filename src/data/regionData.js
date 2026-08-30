@@ -138,7 +138,6 @@ export const regionData = {
     iso: "es",
     books: [
       { title: "La Conquista del Pan", author: "Piotr Kropotkin", year: 1892, category: "teoria", rating: 4.8, filename: "Piotr Kropotkin - La Conquista del Pan (1892).pdf" },
-      { title: "Columna Durruti", author: "Colectivo", year: 1936, category: "historia", rating: 4.9, filename: "Colectivo - Columna Durruti (1936).pdf" },
       { title: "Mujeres Libres", author: "Anarcofeminismo", year: 1991, category: "historia", rating: 4.7, filename: "Anarcofeminismo - Mujeres Libres (1991).pdf" },
       { title: "Colectividades Libertarias", author: "Gastón Leval", year: 1977, category: "historia", rating: 4.9, filename: "Gaston Leval - Colectividades Libertarias (1977).pdf" },
       { title: "Teresa Claramunt, la virgen roja barcelonesa", author: "María Amalia Pradas Baena", year: 2006, category: "acratas", subject: "Teresa Claramunt", rating: 4.7, summary: "Vida y escritos de la anarcosindicalista catalana Teresa Claramunt, pionera del feminismo libertario.", filename: "Maria Amalia Pradas Baena - Teresa Claramunt, la virgen roja barcelonesa (2006).pdf" },
