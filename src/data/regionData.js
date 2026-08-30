@@ -209,12 +209,12 @@ export const regionData = {
       { title: "Introducción a la guerra civil", author: "Colectivo", year: 2005, category: "teoria", rating: 4.4, summary: "Panorama introductorio de la Guerra Civil española desde la perspectiva anarquista: los comités, la colectivización y la revolución perdida.", filename: "Colectivo - Introduccion a la guerra civil (2005).pdf" },
       { title: "FAI", author: "19 de julio de 1936. Espana CNT", category: "historia", rating: 4.5, filename: "19 de julio de 1936. Espana CNT - FAI.pdf" },
       { title: "1936. De la revolución española", author: "MLE-CNT", category: "historia", rating: 4.5, filename: "1936. De la revolucion espanola MLE - CNT.pdf" },
-      { title: "Expediente Picasso", author: "Diego Abad de Santillan (Prologo, 1976)", year: 1976, category: "historia", rating: 4.5, filename: "Abad de Santillan, Diego (Prologo, 1976) - Expediente Picasso (1976).pdf" },
+      { title: "Expediente Picasso", author: "Diego Abad de Santillán (Prólogo, 1976)", year: 1976, category: "historia", rating: 4.5, filename: "Abad de Santillan, Diego (Prologo, 1976) - Expediente Picasso (1976).pdf" },
       { title: "Cipriano Mera", author: "Cipriano Mera", category: "acratas", subject: "Cipriano Mera", rating: 4.5, filename: "Abad de Santillan, Diego - Cipriano Mera.pdf" },
-      { title: "El anarquismo y la revolucion en Espana", author: "Diego Abad de Santillan", year: 1976, category: "historia", rating: 4.5, filename: "Abad de Santillan, Diego - El anarquismo y la revolucion en Espana (1976).pdf" },
+      { title: "El anarquismo y la revolución en España", author: "Diego Abad de Santillán", year: 1976, category: "historia", rating: 4.5, filename: "Abad de Santillan, Diego - El anarquismo y la revolucion en Espana (1976).pdf" },
       { title: "Historia del movimiento obrero espanol I", author: "Diego Abad de Santillan", year: 1970, category: "historia", rating: 4.5, filename: "Abad de Santillan, Diego - Historia del movimiento obrero espanol I (1970).pdf" },
       { title: "Por que perdimos la guerra (1940)", author: "Diego Abad de Santillan", year: 1940, category: "historia", rating: 4.5, filename: "Abad de Santillan, Diego - Por que perdimos la guerra (1940) (2).pdf" },
-      { title: "Por que perdimos la guerra", author: "Diego Abad de Santillan", year: 1940, category: "historia", rating: 4.5, filename: "Abad de Santillan, Diego - Por que perdimos la guerra (1940).pdf" },
+      { title: "Por qué perdimos la guerra", author: "Diego Abad de Santillán", year: 1940, category: "historia", rating: 4.5, filename: "Abad de Santillan, Diego - Por que perdimos la guerra (1940).pdf" },
       { title: "El movimiento obrero en Espana, siglos XIX y XX", author: "Teresa Abello Guell", year: 1997, category: "historia", rating: 4.5, filename: "Abello Guell, Teresa - El movimiento obrero en Espana, siglos XIX y XX (1997).pdf" },
       { title: "Identidad politica y cambio de paradigma estetico en el anarquismo barcelones", author: "Teresa Abello Guell", category: "historia", rating: 4.5, filename: "Abello Guell, Teresa - Identidad politica y cambio de paradigma estetico en el anarquismo barcelones (1917-1923).pdf" },
       { title: "Lideres obreros y vanguardias culturales. La presencia del obrerismo en la Barcelona de la primera posguerra europea", author: "Teresa Abello Guell", category: "historia", rating: 4.5, filename: "Abello Guell, Teresa - Lideres obreros y vanguardias culturales. La presencia del obrerismo en la Barcelona de la primera posguerra europea.pdf" },
@@ -228,7 +228,7 @@ export const regionData = {
       { title: "La resistencia Libertaria contra el Franquismo. El D.I.", author: "Octavio Alberola", category: "historia", rating: 4.5, filename: "Alberola, Octavio - La resistencia Libertaria contra el Franquismo. El D.I. (Defensa Interior).pdf" },
       { title: "Los libertarios y la Memoria histrica", author: "Octavio Alberola", category: "historia", rating: 4.5, filename: "Alberola, Octavio - Los libertarios y la Memoria histrica.pdf" },
       { title: "Pensar la utopía en acción. Trazas de un anarquista heterodoxo", author: "Octavio Alberola", year: 2013, category: "acratas", subject: "Octavio Alberola", rating: 4.5, filename: "Alberola, Octavio - Pensar la utopнa en accin. Trazas de un anarquista heterodoxo (2013).pdf" },
-      { title: "El anarquismo espaol y la acción revolucionaria (1961-1974)", author: "Octavio Alberola y Ariane Gransac", year: 2004, category: "historia", rating: 4.5, filename: "Alberola, Octavio y Gransac, Ariane - El anarquismo espaol y la accin revolucionaria (1961-1974) (2004).pdf" },
+      { title: "El anarquismo español y la acción revolucionaria (1961-1974)", author: "Octavio Alberola y Ariane Gransac", year: 2004, category: "historia", rating: 4.5, filename: "Alberola, Octavio y Gransac, Ariane - El anarquismo espaol y la accin revolucionaria (1961-1974) (2004).pdf" },
       { title: "Los comités de defensa confederales", author: "Juan J. Alcalde", category: "historia", rating: 4.5, filename: "Alcalde, Juan J. - Los comitиs de defensa confederales.pdf" },
       { title: "Los servicios secretos en Espaa. La represin contra el Movimiento Libertario espaol", author: "Juan J. Alcalde", category: "historia", rating: 4.5, filename: "Alcalde, Juan J. - Los servicios secretos en Espaa. La represin contra el Movimiento Libertario espaol (1939-1995).pdf" },
       { title: "Milicias anarquistas y anarcosindicalistas en la guerra civil espaola", author: "Juan J. Alcalde", category: "historia", rating: 4.5, filename: "Alcalde, Juan J. - Milicias anarquistas y anarcosindicalistas en la guerra civil espaola (1936-39).pdf" },
@@ -436,7 +436,7 @@ export const regionData = {
   "Polonia": {
     iso: "pl",
     books: [
-      { title: "Historia del anarquismo polaco", author: "Distro Ingobenables", year: 2022, category: "historia", rating: 4.2, summary: "Fanzine sobre la historia del anarquismo polaco: una breve historia del movimiento, el makhaevismo de Machajski, el anarquismo báltico y polaco a finales del siglo XIX y la participación de la Unión de Sindicalistas Polacos en el alzamiento de Varsovia.", filename: "Varios autores (zine) - Anarquismo en Polonia (Wojna 1) (2022).pdf" }
+      { title: "Historia del anarquismo polaco", author: "Distro Ingobernables", year: 2022, category: "historia", rating: 4.2, summary: "Fanzine sobre la historia del anarquismo polaco: una breve historia del movimiento, el makhaevismo de Machajski, el anarquismo báltico y polaco a finales del siglo XIX y la participación de la Unión de Sindicalistas Polacos en el alzamiento de Varsovia.", filename: "Varios autores (zine) - Anarquismo en Polonia (Wojna 1) (2022).pdf" }
     ]
   },
   "Portugal": {
@@ -543,7 +543,7 @@ export const regionData = {
       { title: "Persona non-grata", author: "Alfredo M. Bonano", year: 2018, category: "acratas", subject: "Alfredo M. Bonano", rating: 4.2, summary: "Experiencias de exclusión y resistencia: ser non-grata en la sociedad y en el propio movimiento.", filename: "Colectivo - Non-Grata (2018).pdf" },
       { title: "Por una teoría propia", author: "Colectivo", year: 2015, category: "teoria", rating: 4.4, summary: "Propuesta de teoría anarquista propia, sin depender de marxismo ni liberalismo: pensar la revolución desde la libertad.", filename: "Colectivo - Por una teoria propia (2015).pdf" },
       { title: "M Agua", author: "15", category: "teoria", rating: 4.5, filename: "15 - M Agua.pdf" },
-      { title: "La Epidemia Terrorista. Declaraciones de Ravachol y de Emile Henry", author: "1892", category: "historia", rating: 4.5, filename: "1892 - 1894. La Epidemia Terrorista. Declaraciones de Ravachol y de Emile Henry.pdf" },
+      { title: "La Epidemia Terrorista. Declaraciones de Ravachol y de Émile Henry", author: "1892", category: "historia", rating: 4.5, filename: "1892 - 1894. La Epidemia Terrorista. Declaraciones de Ravachol y de Emile Henry.pdf" },
       { title: "El pensamiento anarquista - Antologia", author: "AA.VV.", year: 2015, category: "teoria", rating: 4.5, filename: "AA.VV. - El pensamiento anarquista - Antologia (2015).pdf" },
       { title: "Anarquía en la ciudad", author: "APOC", category: "teoria", rating: 4.5, filename: "APOC - Anarquнa en la ciudad.pdf" },
       { title: "Aproximaciones a un mundo mortalmente enfermo", author: "Diego Abad de Santillan", year: 1979, category: "teoria", rating: 4.5, filename: "Abad de Santillan, Diego - Aproximaciones a un mundo mortalmente enfermo (1979).pdf" },
@@ -593,7 +593,7 @@ export const regionData = {
       { title: "El tren de los dirigentes. Conferencia sobre el TAV", author: "Miquel Amoros", category: "teoria", rating: 4.5, filename: "Amoros, Miquel - El tren de los dirigentes. Conferencia sobre el TAV.pdf" },
       { title: "Geografias del combate", author: "Miquel Amoros", year: 2018, category: "teoria", rating: 4.5, filename: "Amoros, Miquel - Geografias del combate (2018).pdf" },
       { title: "Golpes y contragolpes", author: "Miquel Amoros", category: "teoria", rating: 4.5, filename: "Amoros, Miquel - Golpes y contragolpes.pdf" },
-      { title: "La colera del suburbio", author: "Miquel Amoros", category: "historia", rating: 4.5, filename: "Amoros, Miquel - La colera del suburbio.pdf" },
+      { title: "La cólera del suburbio", author: "Miquel Amoros", category: "historia", rating: 4.5, filename: "Amoros, Miquel - La colera del suburbio.pdf" },
       { title: "La critica libertaria a la izquierda del capitalismo", author: "Miquel Amoros", year: 2016, category: "teoria", rating: 4.5, filename: "Amoros, Miquel - La critica libertaria a la izquierda del capitalismo (2016).pdf" },
       { title: "Los situacionistas y la anarquia", author: "Miquel Amoros", year: 2019, category: "historia", rating: 4.5, filename: "Amoros, Miquel - Los situacionistas y la anarquia (2019).pdf" },
       { title: "Perspectivas antidesarrollistas", author: "Miquel Amoros", year: 2012, category: "teoria", rating: 4.5, filename: "Amoros, Miquel - Perspectivas antidesarrollistas (2012).pdf" },
