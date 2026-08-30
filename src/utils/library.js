@@ -84,11 +84,43 @@ export const getHistoricalBooks = (regionData, region) =>
 export const LIFE_CATEGORIES = ['acratas'];
 
 // Vidas anarquistas del archivo (cualquiera de LIFE_CATEGORIES): lista plana con
-// su región, ordenada por año (asc) y título. FUENTE ÚNICA para la vista Acratas.
+// su región, ordenada por año (asc) y título. FUENTE ÚNICA para la vista Vidas.
 export const getLifeBooks = (regionData) =>
   getAllBooks(regionData)
     .filter((b) => LIFE_CATEGORIES.includes(b.category))
     .sort((a, b) => (a.year || 0) - (b.year || 0) || String(a.title).localeCompare(String(b.title), 'es'));
+
+// Personajes de "Acratas": agrupa los textos de categoría 'acratas' por su
+// sujeto (campo `subject` de cada libro; si falta, el título). Cada persona
+// incluye sus textos ordenados por año, el nº de obras, sus regiones y el rango
+// de años. FUENTE ÚNICA para la vista Acratas (tarjeta = personaje, no libro).
+export const getAcratasPersons = (regionData) => {
+  const books = getAllBooks(regionData).filter((b) => b.category === 'acratas');
+  const bySubject = new Map();
+  books.forEach((b) => {
+    const subject = String(b.subject || b.title || 'Desconocido').trim();
+    if (!bySubject.has(subject)) bySubject.set(subject, { subject, books: [] });
+    bySubject.get(subject).books.push(b);
+  });
+  return Array.from(bySubject.values())
+    .map(({ subject, books: sb }) => ({
+      subject,
+      books: sb.sort(
+        (a, b) => (a.year || 0) - (b.year || 0) || String(a.title).localeCompare(String(b.title), 'es')
+      ),
+      bookCount: sb.length,
+      regions: Array.from(new Set(sb.map((b) => b.region))).sort((a, b) => a.localeCompare(b, 'es')),
+      years: sb.reduce((acc, b) => {
+        if (b.year) {
+          acc.min = Math.min(acc.min, b.year);
+          acc.max = Math.max(acc.max, b.year);
+        }
+        return acc;
+      }, { min: Infinity, max: 0 })
+    }))
+    .map((p) => ({ ...p, yearsRange: p.years.max ? `${p.years.min}-${p.years.max}` : '' }))
+    .sort((a, b) => b.bookCount - a.bookCount || a.subject.localeCompare(b.subject, 'es'));
+};
 
 // Contador REAL de textos: todos los libros del catálogo (fuente única regionData).
 export const countAllTexts = (regionData) =>

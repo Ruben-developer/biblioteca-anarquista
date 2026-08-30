@@ -12,7 +12,7 @@ import TheoriesView from './TheoriesView';
 import GlossaryView from './GlossaryView';
 import ReadingPathsView from './ReadingPathsView';
 import InfluencesView from './InfluencesView';
-import VidasAnarquistasView from './VidasAnarquistasView';
+import AcratasView from './AcratasView';
 import ReaderOverlay from './ReaderOverlay';
 const catalogTitles = new Set(getAllBooks(regionData).map((b) => b.title));
 
@@ -185,32 +185,31 @@ describe('InfluencesView', () => {
   });
 });
 
-describe('VidasAnarquistasView', () => {
-  it('renderiza el título y las vidas del catálogo', () => {
-    const html = renderToStaticMarkup(<VidasAnarquistasView darkMode={false} regionData={regionData} />);
+describe('AcratasView', () => {
+  it('renderiza el título y agrupa por personaje', () => {
+    const html = renderToStaticMarkup(<AcratasView darkMode={false} regionData={regionData} />);
     expect(html).toContain('Acratas');
-    expect(html).toContain('Severino Di Giovanni');
-    expect(html).toContain('Leer');
+    expect(html).toContain('Buenaventura Durruti');
+    expect(html).toContain('personas del archivo');
   });
 
-  it('filtra las vidas por búsqueda', async () => {
+  it('filtra las personas por búsqueda', async () => {
     // @vitest-environment jsdom
     const { render, screen, fireEvent } = await import('@testing-library/react');
-    render(<VidasAnarquistasView darkMode regionData={regionData} />);
-    expect(screen.getByText('Severino Di Giovanni')).toBeTruthy();
-    fireEvent.change(screen.getByLabelText('Buscar biografía, autor o tema...'), { target: { value: 'Teresa Claramunt' } });
+    render(<AcratasView darkMode regionData={regionData} />);
+    expect(screen.getByText('Buenaventura Durruti')).toBeTruthy();
+    fireEvent.change(screen.getByLabelText('Buscar persona o texto...'), { target: { value: 'Teresa Claramunt' } });
     expect(screen.getByText(/Teresa Claramunt/)).toBeTruthy();
-    expect(screen.queryByText('Severino Di Giovanni')).toBeNull();
+    expect(screen.queryByText('Buenaventura Durruti')).toBeNull();
   });
 
-  it('muestra el chip de subtipo Acratas y no descarta vidas al pulsarlo', async () => {
+  it('despliega los textos de una persona al hacer clic', async () => {
     // @vitest-environment jsdom
     const { render, screen, fireEvent } = await import('@testing-library/react');
-    render(<VidasAnarquistasView darkMode={false} regionData={regionData} />);
-    const chip = screen.getByRole('button', { name: /Acratas/ });
-    expect(chip).toBeTruthy();
-    fireEvent.click(chip);
-    expect(screen.getByText('Severino Di Giovanni')).toBeTruthy();
+    render(<AcratasView darkMode={false} regionData={regionData} />);
+    fireEvent.click(screen.getByText('Emma Goldman'));
+    expect(screen.getByText('Anarquismo')).toBeTruthy();
+    expect(screen.getByText('Fraternalmente, Emma')).toBeTruthy();
   });
 });
 
