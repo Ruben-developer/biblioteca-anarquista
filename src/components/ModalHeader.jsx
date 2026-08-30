@@ -14,7 +14,7 @@ const ModalHeader = ({ darkMode, title, subtitle, icon: Icon, iconSize = 28, onC
             size={iconSize}
           />
         )}
-        <div className="min-w-0">
+        <div className="min-w-0 text-center flex-1">
           <h2 className={`text-2xl font-bold break-words ${darkMode ? 'text-gray-100' : 'text-amber-50'}`}>
             {title}
           </h2>
