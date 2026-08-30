@@ -104,7 +104,7 @@ export const regionData = {
     iso: "cn",
     books: [
       { title: "Problemas del anarquismo y la revolución en China", author: "Ba Jin", year: 2000, category: "teoria", rating: 4.5, summary: "Ensayos de Ba Jin sobre el anarquismo y la revolución en China.", filename: "Ba Jin - Problemas del anarquismo y la revolucion en China (2000).pdf" },
-      { title: "El anarquismo en China", author: "AA VV (Albert Meltzer, Stuart Christie, Ba Jin)", year: 1979, category: "historia", rating: 4.4, summary: "Historia de la lucha del pueblo chino contra el despotismo y del movimiento anarquista del Imperio Celeste: orígenes y evolución hasta la revolución de 1911 y más allá, con el artículo de Albert Meltzer publicado en Historia Libertaria nº5 (1979), textos de Ba Jin y el prólogo de Stuart Christie.", filename: "AA VV (Albert Meltzer, Stuart Christie, Ba Jin) - El anarquismo en China (1979).pdf" }
+      { title: "El anarquismo en China", author: "Varios autores", year: 1979, category: "historia", rating: 4.4, summary: "Historia de la lucha del pueblo chino contra el despotismo y del movimiento anarquista del Imperio Celeste: orígenes y evolución hasta la revolución de 1911 y más allá, con el artículo de Albert Meltzer publicado en Historia Libertaria nº5 (1979), textos de Ba Jin y el prólogo de Stuart Christie.", filename: "AA VV (Albert Meltzer, Stuart Christie, Ba Jin) - El anarquismo en China (1979).pdf" }
     ]
   },
   "Colombia": {
