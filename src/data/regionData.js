@@ -424,8 +424,8 @@ export const regionData = {
     iso: "py",
     books: [
       { title: "La comuna de Encarnación", author: "Emilio Crisi", year: 1931, category: "historia", rating: 4.6, summary: "Crónica de la toma de Encarnación (Paraguay) el 20 de febrero de 1931, considerada la primera comuna libertaria de América, y de su posterior represión.", filename: "Emilio Crisi - La comuna de Encarnacion (1931).pdf" },
-      { title: "Barrett", author: "Vladimiro Muñoz", year: 1994, category: "historia", rating: 4.6, summary: "Biografía de Rafael Barrett (1876-1910), escritor y anarquista hispano-paraguayo, autor de 'El dolor paraguayo', escrita por Vladimiro Muñoz.", filename: "Vladimiro Munoz - Barrett (1994).pdf" },
-      { title: "Mi anarquismo y otros escritos", author: "Rafael Barrett", year: 2015, category: "historia", rating: 4.5, summary: "Selección de escritos del propio Rafael Barrett, el gran anarquista hispano-paraguayo: 'Mi anarquismo' y otros ensayos donde expone su vitalismo libertario, su crítica del Estado y su compromiso con los oprimidos.", filename: "Rafael Barrett - Mi anarquismo y otros escritos (2015).pdf" }
+      { title: "Barrett", author: "Vladimiro Muñoz", year: 1994, category: "acratas", subject: "Rafael Barrett", rating: 4.6, summary: "Biografía de Rafael Barrett (1876-1910), escritor y anarquista hispano-paraguayo, autor de 'El dolor paraguayo', escrita por Vladimiro Muñoz.", filename: "Vladimiro Munoz - Barrett (1994).pdf" },
+      { title: "Mi anarquismo y otros escritos", author: "Rafael Barrett", year: 2015, category: "teoria", rating: 4.5, summary: "Selección de escritos del propio Rafael Barrett, el gran anarquista hispano-paraguayo: 'Mi anarquismo' y otros ensayos donde expone su vitalismo libertario, su crítica del Estado y su compromiso con los oprimidos.", filename: "Rafael Barrett - Mi anarquismo y otros escritos (2015).pdf" }
     ]
   },
   "Perú": {
