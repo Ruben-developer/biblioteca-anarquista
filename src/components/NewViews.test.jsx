@@ -211,6 +211,16 @@ describe('AcratasView', () => {
     expect(screen.getByText('Anarquismo')).toBeTruthy();
     expect(screen.getByText('Fraternalmente, Emma')).toBeTruthy();
   });
+
+  it('filtra por letra al pulsar el chip E', async () => {
+    // @vitest-environment jsdom
+    const { render, screen, fireEvent } = await import('@testing-library/react');
+    render(<AcratasView darkMode={false} regionData={regionData} />);
+    fireEvent.click(screen.getByText('E'));
+    expect(screen.getByText('Emma Goldman')).toBeTruthy();
+    expect(screen.getByText('Eleuterio Quintanilla')).toBeTruthy();
+    expect(screen.queryByText('Buenaventura Durruti')).toBeNull();
+  });
 });
 
 describe('ReaderOverlay', () => {

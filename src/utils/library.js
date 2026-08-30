@@ -119,7 +119,7 @@ export const getAcratasPersons = (regionData) => {
       }, { min: Infinity, max: 0 })
     }))
     .map((p) => ({ ...p, yearsRange: p.years.max ? `${p.years.min}-${p.years.max}` : '' }))
-    .sort((a, b) => b.bookCount - a.bookCount || a.subject.localeCompare(b.subject, 'es'));
+    .sort((a, b) => a.subject.localeCompare(b.subject, 'es'));
 };
 
 // Contador REAL de textos: todos los libros del catálogo (fuente única regionData).
