@@ -53,6 +53,12 @@ export const regionData = {
       { title: "Cocinando la revolución en la ciudad de La Paz (1927-1946)", author: "Ivanna Margarucci", year: 2010, category: "historia", rating: 4.6, summary: "El activismo de las mujeres de la Federación Obrera Femenina de La Paz y su papel central en el desarrollo del anarquismo boliviano entre 1927 y 1946.", filename: "Ivanna Margarucci - Cocinando la revolucion en la ciudad de La Paz (1927-1946) (2010).pdf" }
     ]
   },
+  "Bulgaria": {
+    iso: "bg",
+    books: [
+      { title: "El anarquismo búlgaro en armas", author: "Michael Schmidt", year: 2019, category: "historia", rating: 4.5, summary: "Historia del anarquismo búlgaro y su lucha armada: la guerrilla contra el golpe fascista de 1923 y el aplastamiento del movimiento libertario por el estalinismo.", filename: "Michael Schmidt - El anarquismo bulgaro en armas (2019).pdf" }
+    ]
+  },
   "Brasil": {
     iso: "br",
     books: [
