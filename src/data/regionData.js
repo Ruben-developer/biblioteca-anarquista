@@ -251,7 +251,7 @@ export const regionData = {
       { title: "Maroto, el heroe. Una biografia del anarquismo andaluz", author: "Miquel Amoros", year: 2011, category: "acratas", subject: "Maroto", rating: 4.5, filename: "Amoros, Miquel - Maroto, el heroe. Una biografia del anarquismo andaluz (2011).pdf" },
       { title: "Puntos de fuga en la cultura obrera", author: "Miquel Amoros", category: "historia", rating: 4.5, filename: "Amoros, Miquel - Puntos de fuga en la cultura obrera.pdf" },
       { title: "Discursos y experiencias femeninas en el anarquismo espanol. Mujeres Libres en la retaguardia oscense", author: "Helena Andres Granel", category: "historia", rating: 4.5, filename: "Andres Granel, Helena - Discursos y experiencias femeninas en el anarquismo espanol. Mujeres Libres en la retaguardia oscense (1936-1938).pdf" },
-      { title: "Okupa Madrid (1985-2011). Memoria, reflexion, debate y autogestion", author: "Anonimx", category: "historia", rating: 4.5, filename: "Anonimx - Okupa Madrid (1985-2011). Memoria, reflexion, debate y autogestion.pdf" }
+      { title: "Okupa Madrid (1985-2011). Memoria, reflexion, debate y autogestion", author: "Anonimo", category: "historia", rating: 4.5, filename: "Anonimo - Okupa Madrid (1985-2011). Memoria, reflexion, debate y autogestion.pdf" }
     ]
   },
   "Estados Unidos": {
@@ -606,29 +606,29 @@ export const regionData = {
       { title: "En contra del Dios-Emperador. Las ejecuciones de anarquistas en el Japn", author: "Stefan Anarkowic", year: 1911, category: "historia", rating: 4.5, filename: "Anarkowic, Stefan - En contra del Dios-Emperador. Las ejecuciones de anarquistas en el Japn (1911).pdf" },
       { title: "Pequeña antología anarcofeminista", author: "Anarquismo en PDF", category: "teoria", rating: 4.5, filename: "Anarquismo en PDF - Pequea antologнa anarcofeminista.pdf" },
       { title: "Anarquismo y sexualidad", author: "Helena Andres Granel", year: 2014, category: "teoria", rating: 4.5, filename: "Andres Granel, Helena - Anarquismo y sexualidad (2014).pdf" },
-      { title: "Agitacion Anarcosindicalista", author: "Anonimx", category: "teoria", rating: 4.5, filename: "Anonimx - Agitacion Anarcosindicalista.pdf" },
-      { title: "Anarcogeografias de las redes sociales. Entre Blade Runner y Mickey Mouse", author: "Anonimx", category: "teoria", rating: 4.5, filename: "Anonimx - Anarcogeografias de las redes sociales. Entre Blade Runner y Mickey Mouse.pdf" },
-      { title: "Anarquia insurreccionalista, organizarse para atacar", author: "Anonimx", category: "teoria", rating: 4.5, filename: "Anonimx - Anarquia insurreccionalista, organizarse para atacar.lt.pdf" },
-      { title: "Comic Dios y El Estado", author: "Anonimx", category: "teoria", rating: 4.5, filename: "Anonimx - Comic Dios y El Estado (ultima version).pdf" },
-      { title: "Cuestiones de organizacion", author: "Anonimx", category: "teoria", rating: 4.5, filename: "Anonimx - Cuestiones de organizacion.pdf" },
-      { title: "Curso de resolucion de conflictos", author: "Anonimx", category: "teoria", rating: 4.5, filename: "Anonimx - Curso de resolucion de conflictos.pdf" },
-      { title: "Encendiendo la llama del ecologismo revolucionario", author: "Anonimx", category: "teoria", rating: 4.5, filename: "Anonimx - Encendiendo la llama del ecologismo revolucionario.pdf" },
-      { title: "Enrabiaos, apuntes sobre la spanishrevolution", author: "Anonimx", category: "historia", rating: 4.5, filename: "Anonimx - Enrabiaos, apuntes sobre la spanishrevolution.pdf" },
-      { title: "La accion sometida a la critica", author: "Anonimx", year: 2007, category: "teoria", rating: 4.5, filename: "Anonimx - La accion sometida a la critica (2007).pdf" },
-      { title: "Liberacion animal mas alla del veganismo", author: "Anonimx", category: "teoria", rating: 4.5, filename: "Anonimx - Liberacion animal mas alla del veganismo.pdf" },
-      { title: "Los papeles de Albert Mason, Volumen I. Accion Directa Economica", author: "Anonimx", year: 2020, category: "teoria", rating: 4.5, filename: "Anonimx - Los papeles de Albert Mason, Volumen I. Accion Directa Economica (2020).pdf" },
-      { title: "Manual de desobediencia economica", author: "Anonimx", category: "teoria", rating: 4.5, filename: "Anonimx - Manual de desobediencia economica.pdf" },
-      { title: "Manual de guerrilla de la comunicacion", author: "Anonimx", category: "teoria", rating: 4.5, filename: "Anonimx - Manual de guerrilla de la comunicacion.pdf" },
-      { title: "Manual del manifestante", author: "Anonimx", category: "teoria", rating: 4.5, filename: "Anonimx - Manual del manifestante.pdf" },
-      { title: "Pornograma libertario", author: "Anonimx", category: "teoria", rating: 4.5, filename: "Anonimx - Pornograma libertario.pdf" },
-      { title: "Preguntas frecuentes sobre el anarquismo", author: "Anonimx", category: "teoria", rating: 4.5, filename: "Anonimx - Preguntas frecuentes sobre el anarquismo.pdf" },
-      { title: "Reflexiones para un mundo libre", author: "Anonimx", category: "teoria", rating: 4.5, filename: "Anonimx - Reflexiones para un mundo libre.pdf" }
+      { title: "Agitacion Anarcosindicalista", author: "Anonimo", category: "teoria", rating: 4.5, filename: "Anonimo - Agitacion Anarcosindicalista.pdf" },
+      { title: "Anarcogeografias de las redes sociales. Entre Blade Runner y Mickey Mouse", author: "Anonimo", category: "teoria", rating: 4.5, filename: "Anonimo - Anarcogeografias de las redes sociales. Entre Blade Runner y Mickey Mouse.pdf" },
+      { title: "Anarquia insurreccionalista, organizarse para atacar", author: "Anonimo", category: "teoria", rating: 4.5, filename: "Anonimo - Anarquia insurreccionalista, organizarse para atacar.lt.pdf" },
+      { title: "Comic Dios y El Estado", author: "Anonimo", category: "teoria", rating: 4.5, filename: "Anonimo - Comic Dios y El Estado (ultima version).pdf" },
+      { title: "Cuestiones de organizacion", author: "Anonimo", category: "teoria", rating: 4.5, filename: "Anonimo - Cuestiones de organizacion.pdf" },
+      { title: "Curso de resolucion de conflictos", author: "Anonimo", category: "teoria", rating: 4.5, filename: "Anonimo - Curso de resolucion de conflictos.pdf" },
+      { title: "Encendiendo la llama del ecologismo revolucionario", author: "Anonimo", category: "teoria", rating: 4.5, filename: "Anonimo - Encendiendo la llama del ecologismo revolucionario.pdf" },
+      { title: "Enrabiaos, apuntes sobre la spanishrevolution", author: "Anonimo", category: "historia", rating: 4.5, filename: "Anonimo - Enrabiaos, apuntes sobre la spanishrevolution.pdf" },
+      { title: "La accion sometida a la critica", author: "Anonimo", year: 2007, category: "teoria", rating: 4.5, filename: "Anonimo - La accion sometida a la critica (2007).pdf" },
+      { title: "Liberacion animal mas alla del veganismo", author: "Anonimo", category: "teoria", rating: 4.5, filename: "Anonimo - Liberacion animal mas alla del veganismo.pdf" },
+      { title: "Los papeles de Albert Mason, Volumen I. Accion Directa Economica", author: "Anonimo", year: 2020, category: "teoria", rating: 4.5, filename: "Anonimo - Los papeles de Albert Mason, Volumen I. Accion Directa Economica (2020).pdf" },
+      { title: "Manual de desobediencia economica", author: "Anonimo", category: "teoria", rating: 4.5, filename: "Anonimo - Manual de desobediencia economica.pdf" },
+      { title: "Manual de guerrilla de la comunicacion", author: "Anonimo", category: "teoria", rating: 4.5, filename: "Anonimo - Manual de guerrilla de la comunicacion.pdf" },
+      { title: "Manual del manifestante", author: "Anonimo", category: "teoria", rating: 4.5, filename: "Anonimo - Manual del manifestante.pdf" },
+      { title: "Pornograma libertario", author: "Anonimo", category: "teoria", rating: 4.5, filename: "Anonimo - Pornograma libertario.pdf" },
+      { title: "Preguntas frecuentes sobre el anarquismo", author: "Anonimo", category: "teoria", rating: 4.5, filename: "Anonimo - Preguntas frecuentes sobre el anarquismo.pdf" },
+      { title: "Reflexiones para un mundo libre", author: "Anonimo", category: "teoria", rating: 4.5, filename: "Anonimo - Reflexiones para un mundo libre.pdf" }
     ]
   },
   "Bélgica": {
     iso: "be",
     books: [
-      { title: "Dentro contra fuera, sobre la agitacion dentro y fuera de las carceles belgas", author: "Anonimx", category: "historia", rating: 4.5, filename: "Anonimx - Dentro contra fuera, sobre la agitacion dentro y fuera de las carceles belgas.pdf" }
+      { title: "Dentro contra fuera, sobre la agitacion dentro y fuera de las carceles belgas", author: "Anonimo", category: "historia", rating: 4.5, filename: "Anonimo - Dentro contra fuera, sobre la agitacion dentro y fuera de las carceles belgas.pdf" }
     ]
   }
 };
