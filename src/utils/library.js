@@ -108,17 +108,8 @@ export const getAcratasPersons = (regionData) => {
       books: sb.sort(
         (a, b) => (a.year || 0) - (b.year || 0) || String(a.title).localeCompare(String(b.title), 'es')
       ),
-      bookCount: sb.length,
-      regions: Array.from(new Set(sb.map((b) => b.region))).sort((a, b) => a.localeCompare(b, 'es')),
-      years: sb.reduce((acc, b) => {
-        if (b.year) {
-          acc.min = Math.min(acc.min, b.year);
-          acc.max = Math.max(acc.max, b.year);
-        }
-        return acc;
-      }, { min: Infinity, max: 0 })
+      bookCount: sb.length
     }))
-    .map((p) => ({ ...p, yearsRange: p.years.max ? `${p.years.min}-${p.years.max}` : '' }))
     .sort((a, b) => a.subject.localeCompare(b.subject, 'es'));
 };
 

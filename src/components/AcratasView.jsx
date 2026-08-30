@@ -164,16 +164,6 @@ const AcratasView = ({
                       <h3 className={`text-xl font-bold ${darkMode ? 'text-gray-100' : 'text-gray-800'} mb-2 text-center`}>
                         {person.subject}
                       </h3>
-                      {person.yearsRange && (
-                        <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-amber-700'} mb-2 text-center`}>
-                          {person.yearsRange}
-                        </p>
-                      )}
-                      {person.regions.length > 0 && (
-                        <p className={`text-xs ${darkMode ? 'text-red-400' : 'text-amber-600'} mb-3 text-center`}>
-                          {person.regions.join(', ')}
-                        </p>
-                      )}
                       <div className={`flex items-center justify-between pt-3 mt-3 border-t ${darkMode ? 'border-[#872320]' : 'border-[#B79F6E]'}`}>
                         <span className="text-sm">
                           <BookOpen size={16} className="inline mr-1" />
