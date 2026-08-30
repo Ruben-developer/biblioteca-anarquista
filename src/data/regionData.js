@@ -3,12 +3,10 @@ export const regionData = {
     iso: "de",
     books: [
       { title: "El único y su propiedad", author: "Max Stirner", year: 1844, category: "teoria", rating: 4.6, summary: "El egoísmo radical de Stirner, precursor del anarquismo individualista: el Yo frente a toda idea sagrada.", filename: "Max Stirner - El unico y su propiedad (1844).pdf" },
-      { title: "Bajo la bandera negra", author: "Justus F. Wittkop", year: 1985, category: "historia", rating: 4.5, summary: "Hechos y figuras del anarquismo en esta historia del movimiento escrita por Wittkop.", filename: "Justus F. Wittkop - Bajo la bandera negra (1985).pdf" },
       { title: "Comunismo autoritario y comunismo libertario", author: "Max Nettlau", year: 1928, category: "teoria", rating: 4.5, summary: "El gran historiador del anarquismo distingue las dos tradiciones comunistas y su relación con la libertad.", filename: "Max Nettlau - Comunismo autoritario y comunismo libertario (1928).pdf" },
       { title: "La lucha contra el Estado", author: "Max Nettlau", year: 1920, category: "teoria", rating: 4.5, summary: "Ensayo de Nettlau sobre la resistencia de la sociedad frente al Estado y la posibilidad de su abolición.", filename: "Max Nettlau - La lucha contra el Estado (1920).pdf" },
       { title: "La responsabilidad y la solidaridad en la lucha obrera", author: "Max Nettlau", year: 1919, category: "teoria", rating: 4.5, summary: "Sobre los límites y las posibilidades de la solidaridad en el movimiento obrero libertario.", filename: "Max Nettlau - La responsabilidad y la solidaridad en la lucha obrera (1919).pdf" },
       { title: "La acción como propaganda", author: "Johann Most", year: 1885, category: "teoria", rating: 4.6, summary: "Texto clásico de la propaganda por el hecho: la acción revolucionaria como agitación que despierta a las masas, más allá de su efecto inmediato.", filename: "Johann Most - La accion como propaganda (1885).pdf" },
-      { title: "La revolución como juego. El movimiento Provo", author: "José Antonio Recio Cuesta", year: 2014, category: "historia", rating: 4.5, summary: "El movimiento Provo de los Países Bajos en los años sesenta: la revolución lúdica, las acciones provocadoras contra la autoridad y su legado contracultural.", filename: "Jose Antonio Recio Cuesta - La revolucion como juego. El movimiento Provo (2014).pdf" },
       { title: "Rudolf Rocker", author: "Rudolf Rocker", year: 1966, category: "acratas", rating: 4.5, filename: "Abad de Santillan, Diego - Rudolf Rocker (1966).pdf" }
     ]
   },
@@ -523,6 +521,7 @@ export const regionData = {
     iso: null,
     books: [
       { title: "Anarquismos no occidentales", author: "Jason Adams", year: 2003, category: "historia", rating: 4.5, summary: "Reflexión sobre la historia global del anarquismo fuera de Occidente: Asia (China, Corea, Japón e India), los anarquismos africanos (igbo, Egipto, Libia, Nigeria y Sudáfrica), América Latina (Argentina, Uruguay, Brasil, Chile, México y Cuba) y Oriente Medio (Armenia, Líbano, Turquía y Palestina).", filename: "Jason Adams - Anarquismos no occidentales (2003).pdf" },
+      { title: "Bajo la bandera negra", author: "Justus F. Wittkop", year: 1985, category: "historia", rating: 4.5, summary: "Hechos y figuras del anarquismo en esta historia del movimiento escrita por Wittkop.", filename: "Justus F. Wittkop - Bajo la bandera negra (1985).pdf" },
       { title: "Cómo la no violencia protege al Estado (variante)", author: "Peter Gelderloos", year: 2007, category: "teoria", rating: 4.5, summary: "Variante o edición alternativa del ensayo de Gelderloos contra la no violencia como estrategia de cambio social.", filename: "Peter Gelderloos - Como la no violencia protege al Estado (variante) (2007).pdf" },
       { title: "Apuntes sobre revuelta y guerra social", author: "Colectivo", year: 2015, category: "teoria", rating: 4.4, summary: "Apuntes teóricos sobre la insurrección, la guerra social y la estrategia revolucionaria en el anarquismo contemporáneo.", filename: "Colectivo - Apuntes sobre revuelta y guerra social (2015).pdf" },
       { title: "Autobiografía de un irreductible", author: "Claudio Lavazza", year: 2000, category: "acratas", subject: "Claudio Lavazza", rating: 4.3, summary: "Relato autobiográfico de un militante anarquista que se niega a doblegarse ante el sistema: la vida como resistencia.", filename: "Colectivo - Autobiografia de un irreductible (2000).pdf" },
@@ -623,6 +622,12 @@ export const regionData = {
       { title: "Pornograma libertario", author: "Anonimo", category: "teoria", rating: 4.5, filename: "Anonimo - Pornograma libertario.pdf" },
       { title: "Preguntas frecuentes sobre el anarquismo", author: "Anonimo", category: "teoria", rating: 4.5, filename: "Anonimo - Preguntas frecuentes sobre el anarquismo.pdf" },
       { title: "Reflexiones para un mundo libre", author: "Anonimo", category: "teoria", rating: 4.5, filename: "Anonimo - Reflexiones para un mundo libre.pdf" }
+    ]
+  },
+  "Países Bajos": {
+    iso: "nl",
+    books: [
+      { title: "La revolución como juego. El movimiento Provo", author: "José Antonio Recio Cuesta", year: 2014, category: "historia", rating: 4.5, summary: "El movimiento Provo de los Países Bajos en los años sesenta: la revolución lúdica, las acciones provocadoras contra la autoridad y su legado contracultural.", filename: "Jose Antonio Recio Cuesta - La revolucion como juego. El movimiento Provo (2014).pdf" }
     ]
   },
   "Bélgica": {
