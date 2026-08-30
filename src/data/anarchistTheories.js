@@ -4,7 +4,7 @@
 export const anarchistTheories = [
   {
     id: 'anarcocomunismo',
-    name: 'Anarco-comunismo',
+    name: 'Anarcomunismo',
     icon: '🌾',
     description: 'La corriente más influyente: abolición del Estado Y de la propiedad privada, producción y reparto según necesidades y capacidades, con los recursos en común.',
     keyIdeas: ['Comunismo libertario', 'De cada cual según sus capacidades, a cada cual según sus necesidades', 'Apoyo mutuo como ley evolutiva', 'Comuna como unidad de base'],
@@ -45,7 +45,7 @@ export const anarchistTheories = [
   },
   {
     id: 'anarcocolectivismo',
-    name: 'Anarco-colectivismo',
+    name: 'Anarcocolectivismo',
     icon: '🤝',
     description: 'La propuesta de Bakunin y la Internacional: socialización de los medios de producción en colectividades de trabajadores, manteniendo el salario por trabajo realizado en la transición.',
     keyIdeas: ['Colectivización de los medios de producción', 'Retribución según el trabajo', 'Rechazo del Estado y de la autoridad', 'Antiautoritarismo frente a Marx'],
@@ -77,7 +77,7 @@ export const anarchistTheories = [
   },
   {
     id: 'anarcoindividualismo',
-    name: 'Anarco-individualismo',
+    name: 'Anarcoindividualismo',
     icon: '⭐',
     description: 'El individuo como fin supremo: autonomía personal frente a toda colectividad, asociación voluntaria y rechazo de la moral impuesta.',
     keyIdeas: ['El único y su propiedad', 'Soberanía del individuo', 'Asociación voluntaria y efímera', 'Egoísmo ético'],
@@ -249,7 +249,8 @@ export const anarchistTheories = [
       'Mi anarquismo y otros escritos',
       'Anarquismo hoy',
       'Curso de teoría política',
-      'Antirracionalismo'
+      'Antirracionalismo',
+      '¡¿Anarquismo?'
     ]
   },
   {
@@ -274,7 +275,7 @@ export const anarchistTheories = [
   },
   {
     id: 'post-izquierda',
-    name: 'Anarquismo post-izquierda, situacionismo y autonomía',
+    name: 'Anarquismo postizquierda, situacionismo y autonomía',
     icon: '🌀',
     description: 'La crítica anarquista a la izquierda tradicional: autonomía obrera, situacionismo, artificialismo y las zonas temporalmente autónomas como espacio de revuelta.',
     keyIdeas: ['Crítica a la izquierda del capitalismo', 'Autonomía obrera y autogestión', 'Situacionismo y construcciones de situaciones', 'TAZ como espacio de libertad temporal'],
@@ -327,6 +328,7 @@ export const anarchistTheories = [
       'La revolución rusa. Una interpretación crítica y libertaria',
       'Mi mayor desilusión con Rusia',
       'La zarpa de Stalin sobre Europa',
+      'Los anarquistas y la reaccion contemporanea',
       'Rompamos las cadenas'
     ]
   },

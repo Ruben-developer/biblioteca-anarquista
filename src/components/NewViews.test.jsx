@@ -55,7 +55,7 @@ describe('TheoriesView', () => {
       <TheoriesView darkMode={false} regionData={regionData} />
     );
     expect(html).toContain('Teorías y corrientes del anarquismo');
-    expect(html).toContain('Anarco-comunismo');
+    expect(html).toContain('Anarcomunismo');
     expect(html).toContain('Anarcosindicalismo');
     expect(html).toContain('Mutualismo');
     expect(html).toContain('Plataformismo y especifismo');
@@ -65,7 +65,7 @@ describe('TheoriesView', () => {
     // @vitest-environment jsdom
     const { render, screen, fireEvent } = await import('@testing-library/react');
     render(<TheoriesView darkMode={false} regionData={regionData} />);
-    fireEvent.click(screen.getByText('Anarco-comunismo'));
+    fireEvent.click(screen.getByText('Anarcomunismo'));
     expect(screen.getByText('Comunismo libertario')).toBeTruthy();
     expect(screen.getByText('Piotr Kropotkin')).toBeTruthy();
     expect(screen.getByText('La Conquista del Pan')).toBeTruthy();
@@ -76,7 +76,7 @@ describe('TheoriesView', () => {
     const { render, screen, fireEvent } = await import('@testing-library/react');
     const onOpenLibrary = vi.fn();
     render(<TheoriesView darkMode={false} regionData={regionData} onOpenLibrary={onOpenLibrary} />);
-    fireEvent.click(screen.getByText('Anarco-comunismo'));
+    fireEvent.click(screen.getByText('Anarcomunismo'));
     fireEvent.click(screen.getAllByTitle(/Ver "La Conquista del Pan" en el catálogo/)[0]);
     expect(onOpenLibrary).toHaveBeenCalledWith({ searchTerm: 'La Conquista del Pan' });
   });
