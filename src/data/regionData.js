@@ -442,7 +442,7 @@ export const regionData = {
   "Polonia": {
     iso: "pl",
     books: [
-      { title: "Anarquismo en Polonia (Wojna 1)", author: "Varios autores (zine)", year: 2022, category: "historia", rating: 4.2, summary: "Fanzine sobre la historia del anarquismo polaco: una breve historia del movimiento, el makhaevismo de Machajski, el anarquismo báltico y polaco a finales del siglo XIX y la participación de la Unión de Sindicalistas Polacos en el alzamiento de Varsovia.", filename: "Varios autores (zine) - Anarquismo en Polonia (Wojna 1) (2022).pdf" }
+      { title: "Historia del anarquismo polaco", author: "Distro Ingobenables", year: 2022, category: "historia", rating: 4.2, summary: "Fanzine sobre la historia del anarquismo polaco: una breve historia del movimiento, el makhaevismo de Machajski, el anarquismo báltico y polaco a finales del siglo XIX y la participación de la Unión de Sindicalistas Polacos en el alzamiento de Varsovia.", filename: "Varios autores (zine) - Anarquismo en Polonia (Wojna 1) (2022).pdf" }
     ]
   },
   "Portugal": {
