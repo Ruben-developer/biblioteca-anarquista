@@ -5,7 +5,7 @@ const regionData = {
   España: {
     books: [
       { title: 'La Conquista del Pan', author: 'Kropotkin', year: 1892, category: 'teoria', rating: 4.8 },
-      { title: 'Columna Durruti', author: 'Colectivo', year: 1936, category: 'biografia', rating: 4.9 }
+      { title: 'Columna Durruti', author: 'Colectivo', year: 1936, category: 'acratas', rating: 4.9 }
     ]
   },
   Francia: {
@@ -317,7 +317,7 @@ describe('getEventRelatedTexts', () => {
       ]
     },
     Siria: {
-      books: [{ title: 'Rojava', author: 'D', year: 2015, category: 'revolucion' }]
+      books: [{ title: 'Rojava', author: 'D', year: 2015, category: 'historia' }]
     }
   };
 
@@ -388,7 +388,7 @@ describe('getDailyFeaturedBook', () => {
     España: {
       books: [
         { title: 'Obra A con resumen', author: 'A', year: 1892, category: 'teoria', rating: 4.8, filename: 'x.pdf', summary: 'Reseña A.' },
-        { title: 'Obra B con resumen', author: 'B', year: 1936, category: 'biografia', rating: 4.9, filename: 'y.pdf', summary: 'Reseña B.' },
+        { title: 'Obra B con resumen', author: 'B', year: 1936, category: 'acratas', rating: 4.9, filename: 'y.pdf', summary: 'Reseña B.' },
         { title: 'Con archivo sin resumen', author: 'C', year: 1900, category: 'historia', filename: 'z.pdf' },
         { title: 'Sin archivo', author: 'D', year: 1910, category: 'historia' }
       ]
@@ -446,13 +446,13 @@ describe('getArchiveStats', () => {
         { title: 'Teoría A', author: 'Autor 1', year: 1892, category: 'teoria', filename: 'a.pdf' },
         { title: 'Historia B', author: 'Autor 2', year: 1937, category: 'historia', filename: 'b.pdf' },
         { title: 'Teoría C', author: 'Autor 1', year: 1910, category: 'teoria', filename: 'c.pdf' },
-        { title: 'Sin año', author: 'Autor 3', category: 'manifiesto' }
+        { title: 'Sin año', author: 'Autor 3', category: 'historia' }
       ]
     },
     Francia: {
       books: [
-        { title: 'Revolución D', author: 'Autor 1', year: 1871, category: 'revolucion', filename: 'd.pdf' },
-        { title: 'Biografía E', author: 'Autor 4', year: 1920, category: 'biografia' }
+        { title: 'Revolución D', author: 'Autor 1', year: 1871, category: 'historia', filename: 'd.pdf' },
+        { title: 'Biografía E', author: 'Autor 4', year: 1920, category: 'acratas' }
       ]
     }
   };
@@ -483,13 +483,13 @@ describe('getArchiveStats', () => {
 
   it('separa históricos (mapa/timeline) vs ideas (autores)', () => {
     const s = getArchiveStats(rd);
-    expect(s.historical).toBe(3); // Historia B + Sin año (manifiesto) + Revolución D
+    expect(s.historical).toBe(3); // Historia B + Sin año + Revolución D
     expect(s.ideas).toBe(3); // Teoría A + Teoría C + Biografía E
   });
 
   it('agrupa por categoría de más a menos obras', () => {
     const s = getArchiveStats(rd);
-    expect(s.categories[0]).toEqual({ category: 'teoria', count: 2 });
+    expect(s.categories[0]).toEqual({ category: 'historia', count: 3 });
     const counts = s.categories.map((c) => c.count);
     expect(counts).toEqual([...counts].sort((a, b) => b - a));
   });

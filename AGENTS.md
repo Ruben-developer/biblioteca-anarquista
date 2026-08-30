@@ -43,7 +43,7 @@ data/registros/   # registro.json (métricas diarias del agente)
 - **Metadatos completos de obra** → legacy en `public/documents/documents.json`. Ya no se consume en la app (el catálogo real es `regionData.js`); no añadir obras nuevas aquí.
 - **Nuevo PDF descargable** → añade `filename` al libro en `regionData.js` (el botón Descargar solo aparece si hay `filename`).
 - **Nuevo país en el mapa** → añade la región a `regionData.js` con su campo `iso` (ej. `"Francia": { iso: "fr", books: [...] }`). El mapa, los filtros y `countryData.js` se actualizan solos. Si un país no tiene `iso`, no se pinta en el mapa pero sí aparece en la lista por región.
-- **Mapa**: un país solo se destaca si tiene AL MENOS 1 texto de categoría histórica (historia/revolucion/movimiento/organizacion/represion/periodismo/manifiesto). Si solo tiene teoría (p. ej. Inglaterra), queda en gris. Los textos históricos se filtran con `getHistoricalBooks(regionData, region)` en `src/utils/library.js`.
+- **Mapa**: un país solo se destaca si tiene AL MENOS 1 texto de categoría histórica (`historia`). Si solo tiene teoría (p. ej. Inglaterra), queda en gris. Los textos históricos se filtran con `getHistoricalBooks(regionData, region)` en `src/utils/library.js`.
   - **Tarjetas "O navega por región"**: se muestran SOLO las regiones con ≥1 texto histórico, ordenadas por número DESC. Una región con 0 históricos ni se pinta ni crea tarjeta.
   - **Invariante**: `textos en línea temporal (vinculados a eventos) = textos del mapa (históricos)`. Todo texto histórico debe estar vinculado a un evento.
 - **Biblioteca (catálogo)** → usa automáticamente todos los libros de `regionData.js` (`getAllBooks` en `src/utils/library.js`). No requiere registro aparte.
@@ -51,10 +51,12 @@ data/registros/   # registro.json (métricas diarias del agente)
 - **Lector embebido** → `src/components/ReaderView.jsx`. PDFs se muestran en iframe; TXT se cargan por fetch. Al abrir un libro desde la Biblioteca o el mapa se lanza `ReaderView`.
 
 ### Content importer — flujo de clasificación por TIPO
-- Las obras se clasifican en 2 grandes tipos (ver `@content-importer`):
-  - **historia** → mapa + línea temporal (categorías: historia, revolucion, movimiento, organizacion, represion, periodismo, manifiesto).
-  - **teoria** → autores (categorías: teoria, biografia, dialogo).
-  - Ambos alimentan la **biblioteca** (`regionData.js`).
+- Las obras se clasifican en 4 categorías (`src/constants/index.js` → `CATEGORIES`):
+  - **historia** → mapa + línea temporal (categoría única `historia`; las antiguas revolucion/movimiento/organizacion/represion/periodismo/manifiesto se colapsaron aquí).
+  - **teoria** → autores (categoría `teoria`; `dialogo` se colapsó aquí).
+  - **acratas** → sección "Acratas" (vidas: biografías, autobiografías, memorias y epistolarios colapsados en `acratas`). NO van al mapa ni a la línea temporal; tampoco a la Biblioteca ni Autores (apartadas).
+  - **otros** → cubo de contabilidad para textos anarquistas aún no publicados. NO se muestra en ninguna vista (ni Biblioteca, ni Autores, ni mapa/timeline); sirve solo para contar.
+- Todas las categorías alimentan el catálogo (`regionData.js`).
 - El material entrante se deja en `PDFs/sin_clasificar/` y al clasificarlo se
   mueve a `PDFs/historia/`, `PDFs/teoria/` o `PDFs/otros2/` en `/home/fdr/Documentos/anarquismo_importado/PDFs/`.
 - Tras importar un texto HISTÓRICO, invoca a `@evento-builder` para garantizar

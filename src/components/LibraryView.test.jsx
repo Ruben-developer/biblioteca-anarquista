@@ -7,7 +7,7 @@ const regionData = {
   España: {
     books: [
       { title: 'La Conquista del Pan', author: 'Kropotkin', year: 1892, category: 'teoria', rating: 4.8, filename: 'anarquismo/a.pdf' },
-      { title: 'Columna Durruti', author: 'Colectivo', year: 1936, category: 'biografia', rating: 4.9, filename: 'anarquismo/b.pdf' }
+      { title: 'Columna Durruti', author: 'Colectivo', year: 1936, category: 'acratas', rating: 4.9, filename: 'anarquismo/b.pdf' }
     ]
   },
   Francia: {
@@ -54,7 +54,7 @@ describe('LibraryView', () => {
     expect(html).toContain('España');
     expect(html).toContain('Francia');
     expect(html).toContain('teoria');
-    expect(html).toContain('biografia');
+    expect(html).toContain('acratas');
   });
 
   it('incluye el control de búsqueda y filtros', () => {
@@ -103,7 +103,7 @@ describe('LibraryView edge cases', () => {
     España: {
       books: [
         { title: 'Obra completa', author: 'Autor A', year: 1892, category: 'teoria', rating: 4.8, summary: 'Resumen de la obra', filename: 'anarquismo/a.pdf' },
-        { title: 'Obra sin año ni rating', author: 'Autor B', category: 'biografia', filename: 'anarquismo/b.pdf' },
+        { title: 'Obra sin año ni rating', author: 'Autor B', category: 'acratas', filename: 'anarquismo/b.pdf' },
         { title: 'Obra sin archivo', author: 'Autor C', year: 1900, category: 'historia', rating: 4.0 }
       ]
     }
@@ -120,7 +120,7 @@ describe('LibraryView edge cases', () => {
   it('muestra guión cuando falta el año y no muestra rating ni resumen si no existen', () => {
     const sinDatos = {
       España: {
-        books: [{ title: 'Obra sin año ni rating', author: 'Autor B', category: 'biografia', filename: 'anarquismo/b.pdf' }]
+        books: [{ title: 'Obra sin año ni rating', author: 'Autor B', category: 'acratas', filename: 'anarquismo/b.pdf' }]
       }
     };
     const html = renderToStaticMarkup(

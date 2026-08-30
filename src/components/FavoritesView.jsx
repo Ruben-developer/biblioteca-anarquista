@@ -3,10 +3,8 @@ import { Heart, BookOpen, X, Download, Upload, StickyNote, Calendar, User, Tag }
 import { THEME } from '../constants';
 
 const CATEGORY_LABELS = {
-  teoria: 'Teoría', historia: 'Historia', biografia: 'Biografía',
-  movimiento: 'Movimiento', organizacion: 'Organización', represion: 'Represión',
-  periodismo: 'Periodismo', revolucion: 'Revolución', manifiesto: 'Manifiesto',
-  dialogo: 'Diálogo'
+  teoria: 'Teoría', historia: 'Historia', acratas: 'Acratas',
+  otros: 'Otros'
 };
 
 const renderNoteSection = (fav, { editingNote, noteText, setNoteText, saveNote, setEditingNote, startEditNote }, darkMode) => {

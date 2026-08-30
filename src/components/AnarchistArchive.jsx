@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { timelineEvents } from '../data/timelineEvents';
 import { regionData } from '../data/regionData';
 import { VIEWS } from '../constants';
@@ -49,7 +49,13 @@ const AnarchistArchive = () => {
   const filteredEvents = filterEvents(timelineEvents, filters);
 
   // Autores derivados del catálogo: agrupados por autoría, de más a menos obras.
-  const dynamicAuthors = getAllAuthors(regionData);
+  // Se excluye 'otros' (cubo de contabilidad: no se publica en ninguna vista).
+  const dynamicAuthors = useMemo(
+    () => getAllAuthors(regionData)
+      .map((a) => ({ ...a, books: a.books.filter((b) => b.category !== 'otros') }))
+      .filter((a) => a.books.length > 0),
+    [regionData]
+  );
 
   // Métricas del archivo (dashboard + header/footer) — fuente única
   // getArchiveStats(regionData, timelineEvents).
@@ -157,7 +163,7 @@ const AnarchistArchive = () => {
             />
           )}
 
-          {activeView === VIEWS.BIOGRAPHIES && (
+          {activeView === VIEWS.ACRATAS && (
             <VidasAnarquistasView
               darkMode={darkMode}
               regionData={regionData}

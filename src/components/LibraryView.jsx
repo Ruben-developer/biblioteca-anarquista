@@ -220,7 +220,10 @@ const LibraryView = ({
     setPage(1)
   }, [initialFilters])
 
-  const allBooks = useMemo(() => getAllBooks(regionData), [regionData])
+  const allBooks = useMemo(
+    () => getAllBooks(regionData).filter((b) => b.category !== 'otros'),
+    [regionData]
+  )
   const featured = useMemo(() => getDailyFeaturedBook(regionData), [regionData])
 
   const availableDecades = useMemo(() => {
@@ -358,7 +361,7 @@ const LibraryView = ({
         <div className="flex flex-wrap gap-3">
           <select value={category} onChange={(e) => setCategory(e.target.value)} className={selectClass} aria-label="Filtrar por categoría">
             <option value="all">Todas las categorías</option>
-            {CATEGORIES.filter((c) => c.id !== 'all').map((c) => (
+            {CATEGORIES.filter((c) => c.id !== 'all' && c.id !== 'otros').map((c) => (
               <option key={c.id} value={c.id}>{c.name}</option>
             ))}
           </select>

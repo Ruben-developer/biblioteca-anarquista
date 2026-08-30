@@ -74,7 +74,8 @@ const StatsPanel = ({ darkMode, stats }) => {
     { label: 'Descargables', value: stats.downloadables },
     { label: 'Sin archivo', value: stats.withoutFile },
     { label: 'Históricos', value: stats.historical },
-    { label: 'Ideas', value: stats.ideas }
+    { label: 'Ideas', value: stats.ideas },
+    { label: 'Pendientes (otros)', value: stats.pending || 0 }
   ]
 
   const maxCategory = Math.max(1, ...(stats.categories || []).map((c) => c.count))

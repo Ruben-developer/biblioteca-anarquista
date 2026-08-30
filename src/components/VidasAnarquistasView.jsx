@@ -5,14 +5,11 @@ import { getLifeBooks, LIFE_CATEGORIES } from '../utils/library';
 
 const PAGE_SIZE = 12;
 
-// Etiquetas legibles de cada subtipo de "vida anarquista" (en el mismo orden
-// que LIFE_CATEGORIES). 'all' es el chip "Todas".
+// Etiquetas legibles de cada subtipo de "vida anarquista". 'all' es el chip
+// "Todas"; 'acratas' agrupa biografías, autobiografías, memorias y epistolarios.
 const SUBTYPE_LABELS = {
   all: 'Todas',
-  biografia: 'Biografías',
-  autobiografia: 'Autobiografías',
-  memorias: 'Memorias',
-  epistolario: 'Epistolario'
+  acratas: 'Acratas'
 };
 
 const getStars = (rating = 0) => Math.max(0, Math.min(5, Math.round(Number(rating) || 0)));
@@ -65,11 +62,11 @@ const VidasAnarquistasView = ({
   return (
     <div className={`${darkMode ? 'bg-gray-900/60 border-[#872320]/50' : 'bg-white/60 border-[#B79F6E]'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
-        Vidas anarquistas
+        Acratas
       </h2>
 
       <p className={`text-sm mb-4 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-        {lives.length} biografías, autobiografías, memorias y epistolarios del archivo, ordenados de más antiguo a más reciente.
+        {lives.length} vidas anarquistas (biografías, autobiografías, memorias y epistolarios) del archivo, ordenadas de más antiguo a más reciente.
       </p>
 
       <div className="flex flex-wrap gap-1 mb-5">

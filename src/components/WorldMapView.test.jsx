@@ -115,7 +115,7 @@ describe('WorldMapView — países con 0 textos históricos no se marcan en el m
         iso: 'fi',
         books: [
           { title: 'Idea A', author: 'Autor', year: 1900, category: 'teoria' },
-          { title: 'Idea B', author: 'Autor', year: 1910, category: 'dialogo' }
+          { title: 'Idea B', author: 'Autor', year: 1910, category: 'teoria' }
         ]
       }
     };

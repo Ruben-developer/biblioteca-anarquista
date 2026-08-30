@@ -188,7 +188,7 @@ describe('InfluencesView', () => {
 describe('VidasAnarquistasView', () => {
   it('renderiza el título y las vidas del catálogo', () => {
     const html = renderToStaticMarkup(<VidasAnarquistasView darkMode={false} regionData={regionData} />);
-    expect(html).toContain('Vidas anarquistas');
+    expect(html).toContain('Acratas');
     expect(html).toContain('Severino Di Giovanni');
     expect(html).toContain('Leer');
   });
@@ -203,13 +203,14 @@ describe('VidasAnarquistasView', () => {
     expect(screen.queryByText('Severino Di Giovanni')).toBeNull();
   });
 
-  it('filtra por subtipo al pulsar el chip Epistolario', async () => {
+  it('muestra el chip de subtipo Acratas y no descarta vidas al pulsarlo', async () => {
     // @vitest-environment jsdom
     const { render, screen, fireEvent } = await import('@testing-library/react');
     render(<VidasAnarquistasView darkMode={false} regionData={regionData} />);
-    fireEvent.click(screen.getByText(/Epistolario/));
-    expect(screen.getByText('Fraternalmente, Emma')).toBeTruthy();
-    expect(screen.queryByText('Severino Di Giovanni')).toBeNull();
+    const chip = screen.getByRole('button', { name: /Acratas/ });
+    expect(chip).toBeTruthy();
+    fireEvent.click(chip);
+    expect(screen.getByText('Severino Di Giovanni')).toBeTruthy();
   });
 });
 

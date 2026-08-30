@@ -1,25 +1,17 @@
 export const CATEGORIES = [
   { id: 'all', name: 'Todas' },
-  { id: 'teoria', name: 'Teoría' },
   { id: 'historia', name: 'Historia' },
-  { id: 'revolucion', name: 'Revolución' },
-  { id: 'movimiento', name: 'Movimiento' },
-  { id: 'organizacion', name: 'Organización' },
-  { id: 'represion', name: 'Represión' },
-  { id: 'biografia', name: 'Biografía' },
-  { id: 'autobiografia', name: 'Autobiografía' },
-  { id: 'memorias', name: 'Memorias' },
-  { id: 'epistolario', name: 'Epistolario' },
-  { id: 'periodismo', name: 'Periodismo' },
-  { id: 'manifiesto', name: 'Manifiesto' },
-  { id: 'dialogo', name: 'Diálogo' }
+  { id: 'teoria', name: 'Teoría' },
+  { id: 'acratas', name: 'Acratas' },
+  { id: 'otros', name: 'Otros' }
 ];
 
 // Textos "históricos": hechos del movimiento (mapa y línea temporal).
-// Los de filosofía/ideas (teoria, biografia, dialogo) viven en la sección de Autores.
+// Los de filosofía/ideas (teoria) y las vidas (acratas) viven en Autores / Acratas.
+// 'otros' es un cubo de contabilidad: no se muestra en ninguna vista.
 // FUENTE ÚNICA definida en utils/library.js — aquí solo se re-exporta.
 export { HISTORICAL_CATEGORIES, isHistoricalCategory } from '../utils/library';
-export const IDEAS_CATEGORIES = ['teoria', 'biografia', 'autobiografia', 'memorias', 'epistolario', 'dialogo'];
+export const IDEAS_CATEGORIES = ['teoria', 'acratas'];
 
 export const DECADES = ['all', '1700s', '1840s', '1860s', '1870s', '1880s', '1890s', '1900s', '1910s', '1920s', '1930s', '1940s', '1950s', '1960s', '1970s', '1980s', '1990s', '2000s', '2010s'];
 
@@ -37,7 +29,7 @@ export const VIEWS = {
   LIBRARY: 'library',
   THEORIES: 'theories',
   INFLUENCES: 'influences',
-  BIOGRAPHIES: 'biographies',
+  ACRATAS: 'acratas',
   PATHS: 'paths',
   GLOSSARY: 'glossary',
   CONTACT: 'contact',
@@ -53,7 +45,7 @@ export const VIEW_LABELS = {
   [VIEWS.LIBRARY]: 'Biblioteca',
   [VIEWS.THEORIES]: 'Teorías',
   [VIEWS.INFLUENCES]: 'Red de Autores',
-  [VIEWS.BIOGRAPHIES]: 'Vidas anarquistas',
+  [VIEWS.ACRATAS]: 'Acratas',
   [VIEWS.PATHS]: 'Rutas',
   [VIEWS.GLOSSARY]: 'Glosario',
   [VIEWS.CONTACT]: 'Contacto',

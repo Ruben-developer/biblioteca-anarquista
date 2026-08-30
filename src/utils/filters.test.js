@@ -22,7 +22,7 @@ const events = [
     title: 'Colectividades',
     description: 'Experiencias en España.',
     region: 'España',
-    category: 'revolucion'
+    category: 'historia'
   }
 ];
 

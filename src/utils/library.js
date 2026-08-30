@@ -63,9 +63,11 @@ export const sortBooks = (books, sort = 'rating') => {
 };
 
 // Categorías históricas del movimiento (las que van al mapa y la línea temporal).
-// Los textos de filosofía/ideas (teoria, biografia, dialogo) viven en Autores.
-// FUENTE ÚNICA: también se re-exporta desde constants para que nadie la duplique.
-export const HISTORICAL_CATEGORIES = ['historia', 'revolucion', 'movimiento', 'organizacion', 'represion', 'periodismo', 'manifiesto'];
+// Solo 'historia' (las antiguas revolucion/movimiento/organizacion/represion/
+// periodismo/manifiesto se colapsaron aquí). Los textos de ideas (teoria) y las
+// vidas (acratas) viven en Autores / Acratas. FUENTE ÚNICA: se re-exporta desde
+// constants para que nadie la duplique.
+export const HISTORICAL_CATEGORIES = ['historia'];
 const HISTORICAL_SET = new Set(HISTORICAL_CATEGORIES);
 export const isHistoricalBook = (book) => HISTORICAL_SET.has(book?.category);
 export const isHistoricalCategory = (category) => HISTORICAL_SET.has(category);
@@ -76,13 +78,13 @@ export const getHistoricalBooks = (regionData, region) =>
     .filter((b) => isHistoricalBook(b))
     .map((b) => ({ ...b, region }));
 
-// Categorías de "vidas anarquistas" (narraciones de vida): biografías,
-// autobiografías, memorias y epistolarios. NO son históricas (no van al mapa ni
-// a la línea temporal); viven en la sección Vidas anarquistas y en Autores.
-export const LIFE_CATEGORIES = ['biografia', 'autobiografia', 'memorias', 'epistolario'];
+// Categorías de "acratas" (narraciones de vida): biografías, autobiografías,
+// memorias y epistolarios colapsados en 'acratas'. NO son históricas (no van al
+// mapa ni a la línea temporal); viven en la sección Acratas y en Autores.
+export const LIFE_CATEGORIES = ['acratas'];
 
 // Vidas anarquistas del archivo (cualquiera de LIFE_CATEGORIES): lista plana con
-// su región, ordenada por año (asc) y título. FUENTE ÚNICA para la vista Vidas.
+// su región, ordenada por año (asc) y título. FUENTE ÚNICA para la vista Acratas.
 export const getLifeBooks = (regionData) =>
   getAllBooks(regionData)
     .filter((b) => LIFE_CATEGORIES.includes(b.category))
@@ -255,17 +257,28 @@ export const getDailyFeaturedBook = (regionData, date = new Date()) => {
 // Header/footer usen exactamente los mismos números.
 export const getArchiveStats = (regionData, timelineEvents = []) => {
   const books = regionData ? getAllBooks(regionData) : [];
-  const texts = books.length;
+  // 'otros' es un cubo de contabilidad (textos aún no publicados): NO entra en
+  // el total ni en la distribución por categoría; se reporta aparte como 'pending'.
+  const published = books.filter((b) => b.category !== 'otros');
+  const texts = published.length;
+  const pending = books.length - texts;
   const events = Array.isArray(timelineEvents) ? timelineEvents.length : 0;
   const regions = Object.keys(regionData || {}).length;
-  const authors = getAllAuthors(regionData);
+  // Autores/topAutores también excluyen 'otros' (igual que la vista Autores).
+  const publishedRegionData = Object.fromEntries(
+    Object.entries(regionData || {}).map(([r, d]) => [
+      r,
+      { ...d, books: (d.books || []).filter((b) => b.category !== 'otros') }
+    ])
+  );
+  const authors = getAllAuthors(publishedRegionData);
 
-  const downloadables = books.filter((b) => b.filename).length;
-  const historical = books.filter((b) => isHistoricalBook(b)).length;
+  const downloadables = published.filter((b) => b.filename).length;
+  const historical = published.filter((b) => isHistoricalBook(b)).length;
 
-  // Distribución por categoría (todas las presentes, ordenadas de más a menos).
+  // Distribución por categoría (solo publicadas, ordenadas de más a menos).
   const catCounts = new Map();
-  books.forEach((b) => {
+  published.forEach((b) => {
     const cat = b.category || 'sin categoría';
     catCounts.set(cat, (catCounts.get(cat) || 0) + 1);
   });
@@ -300,6 +313,7 @@ export const getArchiveStats = (regionData, timelineEvents = []) => {
 
   return {
     texts,
+    pending,
     events,
     regions,
     authors: authors.length,
