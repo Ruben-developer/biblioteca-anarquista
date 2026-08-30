@@ -268,7 +268,7 @@ export const regionData = {
     iso: "us",
     books: [
       { title: "Anarquismo", author: "Emma Goldman", year: 1931, category: "acratas", subject: "Emma Goldman", rating: 4.9, filename: "Emma Goldman - Anarquismo (1931).pdf" },
-      { title: "Los Mártires de Chicago", year: 1886, category: "historia", rating: 4.8, filename: "None - Los Martires de Chicago (1886).pdf" },
+      { title: "Los Mártires de Chicago", year: 1886, category: "otros", rating: 4.8, filename: "None - Los Martires de Chicago (1886).pdf" },
       { title: "La pasión de Sacco y Vanzetti", author: "Howard Fast", year: 1953, category: "historia", rating: 4.7, summary: "Reconstrucción novelada del célebre caso judicial de los anarquistas italianos ejecutados en 1927.", filename: "Howard Fast - La pasion de Sacco y Vanzetti (1953).pdf" },
       { title: "Fraternalmente, Emma", author: "Emma Goldman", year: 1920, category: "acratas", subject: "Emma Goldman", rating: 4.6, summary: "Cartas y escritos de Emma Goldman que retratan su activismo, exilio y pensamiento libertario.", filename: "Emma Goldman - Fraternalmente, Emma (1920).pdf" },
       { title: "¿Anarquismo o barbarie? Historia, civilización y progreso", author: "Murray Bookchin", year: 1990, category: "teoria", rating: 4.6, summary: "El fundador del municipalismo libertario examina el desarrollo técnico y las ideologías en crisis.", filename: "Murray Bookchin - Anarquismo o barbarie Historia, civilizacion y progreso (1990).pdf" },
@@ -561,8 +561,6 @@ export const regionData = {
       { title: "Por una teoría propia", author: "Colectivo", year: 2015, category: "teoria", rating: 4.4, summary: "Propuesta de teoría anarquista propia, sin depender de marxismo ni liberalismo: pensar la revolución desde la libertad.", filename: "Colectivo - Por una teoria propia (2015).pdf" },
       { title: "M Agua", author: "15", category: "teoria", rating: 4.5, filename: "15 - M Agua.pdf" },
       { title: "1894. La Epidemia Terrorista. Declaraciones de Ravachol y de Emile Henry", author: "1892", category: "historia", rating: 4.5, filename: "1892 - 1894. La Epidemia Terrorista. Declaraciones de Ravachol y de Emile Henry.pdf" },
-      { title: "2_i_3_Theodore_Kaczynski_Manifiesto_de_Unabomber", category: "teoria", rating: 4.5, filename: "2_i_3_Theodore_Kaczynski_Manifiesto_de_Unabomber.pdf" },
-      { title: "50-maneras-para-prepararse-para-la-revolucion", category: "teoria", rating: 4.5, filename: "50-maneras-para-prepararse-para-la-revolucion.pdf" },
       { title: "El pensamiento anarquista - Antologia", author: "AA.VV.", year: 2015, category: "teoria", rating: 4.5, filename: "AA.VV. - El pensamiento anarquista - Antologia (2015).pdf" },
       { title: "Anarquнa en la ciudad", author: "APOC", category: "teoria", rating: 4.5, filename: "APOC - Anarquнa en la ciudad.pdf" },
       { title: "Aproximaciones a un mundo mortalmente enfermo", author: "Abad de Santillan, Diego", year: 1979, category: "teoria", rating: 4.5, filename: "Abad de Santillan, Diego - Aproximaciones a un mundo mortalmente enfermo (1979).pdf" },
