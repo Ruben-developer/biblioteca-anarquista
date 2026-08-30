@@ -107,7 +107,8 @@ export const anarchistTheories = [
     books: [
       'Anarquismo: la conexión feminista',
       'Anarcofeminismo e identidad(es)',
-      'Anarquismo y sexualidad'
+      'Anarquismo y sexualidad',
+      'De la anarquia academicista a la realidad socioterritorial'
     ]
   },
   {
