@@ -9,7 +9,7 @@ export const regionData = {
       { title: "La responsabilidad y la solidaridad en la lucha obrera", author: "Max Nettlau", year: 1919, category: "teoria", rating: 4.5, summary: "Sobre los límites y las posibilidades de la solidaridad en el movimiento obrero libertario.", filename: "Max Nettlau - La responsabilidad y la solidaridad en la lucha obrera (1919).pdf" },
       { title: "La acción como propaganda", author: "Johann Most", year: 1885, category: "teoria", rating: 4.6, summary: "Texto clásico de la propaganda por el hecho: la acción revolucionaria como agitación que despierta a las masas, más allá de su efecto inmediato.", filename: "Johann Most - La accion como propaganda (1885).pdf" },
       { title: "La revolución como juego. El movimiento Provo", author: "José Antonio Recio Cuesta", year: 2014, category: "historia", rating: 4.5, summary: "El movimiento Provo de los Países Bajos en los años sesenta: la revolución lúdica, las acciones provocadoras contra la autoridad y su legado contracultural.", filename: "Jose Antonio Recio Cuesta - La revolucion como juego. El movimiento Provo (2014).pdf" },
-      { title: "Rudolf Rocker", author: "Abad de Santillan, Diego", year: 1966, category: "historia", rating: 4.5, filename: "Abad de Santillan, Diego - Rudolf Rocker (1966).pdf" }
+      { title: "Rudolf Rocker", author: "Rocker, Rudolf", year: 1966, category: "acratas", rating: 4.5, filename: "Abad de Santillan, Diego - Rudolf Rocker (1966).pdf" }
     ]
   },
   "Argentina": {
