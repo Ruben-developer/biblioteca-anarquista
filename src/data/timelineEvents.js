@@ -18,7 +18,7 @@ export const timelineEvents = [
     description: "1800 a.C. – 1780 d.C. · Mediterráneo y Caribe",
     region: "Mediterráneo y Caribe",
     category: "historia",
-    relatedTexts: ["Utopías antiguas y modernas", "El anarquismo en la antigua Grecia", "Los hermanos de la Costa. Piratería libertaria en el Caribe"]
+    relatedTexts: ["Utopías antiguas y modernas", "El anarquismo en la antigua Grecia"]
   },
   {
     year: 1868,
@@ -28,7 +28,7 @@ export const timelineEvents = [
     description: "1868–1877 · Europa (Francia, Suiza, España)",
     region: "Europa (Francia, Suiza, España)",
     category: "historia",
-    relatedTexts: ["La Comuna de París", "La comuna de París (antología)", "Bakunin-Netchaiev. El Catecismo Revolucionario", "Prologo a Anselmo Lorenzo El Proletariado Militante", "Elisee Reclus. El geografo acrata y su paisaje de la libertad", "Memorias de un revolucionario"]
+    relatedTexts: ["La Comuna de París", "La comuna de París (antología)", "Bakunin-Netchaiev. El Catecismo Revolucionario", "Elisee Reclus. El geografo acrata y su paisaje de la libertad", "Memorias de un revolucionario"]
   },
   {
     year: 1886,
@@ -48,7 +48,7 @@ export const timelineEvents = [
     description: "1880–1914 · Europa (Francia, Suiza, España, Guayana)",
     region: "Europa (Francia, Suiza, España, Guayana)",
     category: "historia",
-    relatedTexts: ["El terrorismo anarquista como propaganda por el hecho", "Anarquistas vengadores", "1894. La Epidemia Terrorista. Declaraciones de Ravachol y de Emile Henry", "Cómo y porqué asesiné a la princesa Sissi", "La peste, la bestia y el monstruo: Johann Most", "La conjura de los indomables"]
+    relatedTexts: ["El terrorismo anarquista como propaganda por el hecho", "1894. La Epidemia Terrorista. Declaraciones de Ravachol y de Emile Henry", "Cómo y porqué asesiné a la princesa Sissi", "La peste, la bestia y el monstruo: Johann Most", "La conjura de los indomables"]
   },
   {
     year: 1880,
@@ -138,7 +138,7 @@ export const timelineEvents = [
     description: "1917–1931 · España",
     region: "España",
     category: "historia",
-    relatedTexts: ["Los anarquistas españoles. Los años heroicos (1868-1936)", "Historia del movimiento obrero espanol I", "El movimiento obrero en Espana, siglos XIX y XX", "Identidad politica y cambio de paradigma estetico en el anarquismo barcelones", "Lideres obreros y vanguardias culturales. La presencia del obrerismo en la Barcelona de la primera posguerra europea", "Topicos, utilizacion y revision historiografica en torno a una figura carismatica. El ejemplo de Salvador Segui", "Tiempos de plomo. Grupos de Accin y Defensa Confederal", "Tras las huellas de una vida generosa. Aurelio Fernandez Sanchez y Los Solidarios", "La búsqueda de la unidad anarquista: la FAI antes de la II República", "El anarquismo individualista en España (1923-1938)", "La huelga de alquileres y el comite de defensa economica", "La revuelta de las mujeres", "Eleuterio Quintanilla. Vida y obra del maestro", "Antonia Maymon. Anarquista, maestra, naturista.", "Puntos de fuga en la cultura obrera"]
+    relatedTexts: ["Los anarquistas españoles. Los años heroicos (1868-1936)", "Historia del movimiento obrero espanol I", "El movimiento obrero en Espana, siglos XIX y XX", "Identidad politica y cambio de paradigma estetico en el anarquismo barcelones", "Lideres obreros y vanguardias culturales. La presencia del obrerismo en la Barcelona de la primera posguerra europea", "Tiempos de plomo. Grupos de Accin y Defensa Confederal", "La búsqueda de la unidad anarquista: la FAI antes de la II República", "El anarquismo individualista en España (1923-1938)", "La huelga de alquileres y el comite de defensa economica", "La revuelta de las mujeres", "Eleuterio Quintanilla. Vida y obra del maestro", "Antonia Maymon. Anarquista, maestra, naturista.", "Puntos de fuga en la cultura obrera"]
   },
   {
     year: 1920,
@@ -168,7 +168,7 @@ export const timelineEvents = [
     description: "1936–1939 · España",
     region: "España",
     category: "historia",
-    relatedTexts: ["Los anarquistas en la crisis política española (1869-1939)", "El eco de los pasos", "Homenaje a Cataluña", "El corto verano de la anarquía", "Colectividades Libertarias", "Las colectividades libertarias en España (1936-1938)", "La experiencia autogestionaria durante la Guerra Civil española", "Barricadas en Barcelona", "La revolucion traicionada. La verdadera historia de Balius y Los Amigos de Durruti", "Durruti en el laberinto", "La muerte de Durruti", "Buenaventura Durruti (antología)", "Buenaventura Durruti, o el heroнsmo bien entendido", "Durruti ha muerto, pero está vivo todavía", "Fraternalmente, Emma", "Por que perdimos la guerra (1940)", "Los comitиs de defensa confederales", "Milicias anarquistas y anarcosindicalistas en la guerra civil espaola", "Jose Pellicer, el anarquista integro", "Un incontrolado de la Columna de Hierro", "Maroto, el heroe. Una biografia del anarquismo andaluz", "Francisco Carreno y los arduos caminos de la anarquia", "Juan Peiró, teórico y militante del anarcosindicalismo español", "Cipriano Mera", "Vida y muerte de Ramón Acín", "1936. De la revolución española", "Catalogo de decisiones y fragilidades", "Anarcosindicalismo y revolución en España (1930-1937)"]
+    relatedTexts: ["Los anarquistas en la crisis política española (1869-1939)", "El eco de los pasos", "Homenaje a Cataluña", "Colectividades Libertarias", "Las colectividades libertarias en España (1936-1938)", "La experiencia autogestionaria durante la Guerra Civil española", "Barricadas en Barcelona", "Durruti en el laberinto", "La muerte de Durruti", "Buenaventura Durruti (antología)", "Durruti ha muerto, pero está vivo todavía", "Fraternalmente, Emma", "Por que perdimos la guerra (1940)", "Los comitиs de defensa confederales", "Milicias anarquistas y anarcosindicalistas en la guerra civil espaola", "Jose Pellicer, el anarquista integro", "Un incontrolado de la Columna de Hierro", "Maroto, el heroe. Una biografia del anarquismo andaluz", "Francisco Carreno y los arduos caminos de la anarquia", "Juan Peiró, teórico y militante del anarcosindicalismo español", "Cipriano Mera", "Vida y muerte de Ramón Acín", "1936. De la revolución española", "Catalogo de decisiones y fragilidades", "Anarcosindicalismo y revolución en España (1930-1937)"]
   },
   {
     year: 1936,
@@ -188,7 +188,7 @@ export const timelineEvents = [
     description: "1939–1975 · España, Francia e Italia",
     region: "España, Francia e Italia",
     category: "historia",
-    relatedTexts: ["El anarquismo espaol y la accin revolucionaria (1961-1974)", "La resistencia Libertaria contra el Franquismo. El D.I.", "Los servicios secretos en Espaa. La represin contra el Movimiento Libertario espaol", "Fidel Miró Solanes. Memorias anarquistas de un catalán exiliado", "El Internado Durruti", "Años rojos, años negros. La resistencia anarquista contra el fascismo en Italia", "Pensar la utopнa en accin. Trazas de un anarquista heterodoxo", "Los libertarios y la Memoria histrica"]
+    relatedTexts: ["El anarquismo espaol y la accin revolucionaria (1961-1974)", "La resistencia Libertaria contra el Franquismo. El D.I.", "Los servicios secretos en Espaa. La represin contra el Movimiento Libertario espaol", "El Internado Durruti", "Años rojos, años negros. La resistencia anarquista contra el fascismo en Italia", "Los libertarios y la Memoria histrica"]
   },
   {
     year: 1965,
@@ -198,7 +198,7 @@ export const timelineEvents = [
     description: "1965–1980 · Francia, Italia, Reino Unido y Países Bajos",
     region: "Francia, Italia, Reino Unido y Países Bajos",
     category: "historia",
-    relatedTexts: ["1968. El ano sublime de la acracia", "La rebelión de Mayo 68", "Los situacionistas y la anarquia", "Que fue la autonomia obrera", "El movimiento Provo", "Días de sueño y de plomo", "Nos estamos acercando: La historia de Angry Brigade", "La Brigada de la Cólera", "Anarquismo y anarquistas"]
+    relatedTexts: ["1968. El ano sublime de la acracia", "La rebelión de Mayo 68", "Los situacionistas y la anarquia", "Que fue la autonomia obrera", "El movimiento Provo", "Días de sueño y de plomo", "Nos estamos acercando: La historia de Angry Brigade", "La Brigada de la Cólera"]
   },
   {
     year: 1975,
@@ -218,7 +218,7 @@ export const timelineEvents = [
     description: "2000–2010 · Francia y Grecia",
     region: "Francia y Grecia",
     category: "historia",
-    relatedTexts: ["La revuelta de los Banlieusards", "A tres años de la revuelta griega", "Reflexiones sobre el movimiento anarquista en Grecia y la solidaridad con los presos políticos"]
+    relatedTexts: ["A tres años de la revuelta griega", "Reflexiones sobre el movimiento anarquista en Grecia y la solidaridad con los presos políticos"]
   },
   {
     year: 2011,

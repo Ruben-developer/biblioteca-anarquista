@@ -207,6 +207,7 @@ describe('AcratasView', () => {
     // @vitest-environment jsdom
     const { render, screen, fireEvent } = await import('@testing-library/react');
     render(<AcratasView darkMode={false} regionData={regionData} />);
+    fireEvent.change(screen.getByLabelText('Buscar persona o texto...'), { target: { value: 'Emma Goldman' } });
     fireEvent.click(screen.getByText('Emma Goldman'));
     expect(screen.getByText('Anarquismo')).toBeTruthy();
     expect(screen.getByText('Fraternalmente, Emma')).toBeTruthy();
