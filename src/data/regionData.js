@@ -131,7 +131,7 @@ export const regionData = {
     iso: "eg",
     books: [
       { title: "El Anarquismo Descolonizado: una historia de las experiencias antiautoritarias en Egipto (1860-2016)", author: "Laura Galián Hernández", year: 2017, category: "historia", rating: 4.6, summary: "Tesis doctoral (UAM, 2017) que reconstruye la historia de las experiencias antiautoritarias en Egipto entre 1860 y 2016, descolonizando el canon anarquista y analizando las sucesivas olas del anarquismo egipcio desde una perspectiva decolonial.", filename: "Laura Galian Hernandez - El Anarquismo Descolonizado una historia de las experiencias antiautoritarias en Egipto (1860-2016) (2017).pdf" },
-      { title: "Hacia un estudio decolonial del anarquismo. Egipto y Túnez", author: "Laura Galián", year: 2015, category: "historia", rating: 4.5, summary: "Estudio comparado del anarquismo decolonial en Egipto y Túnez a partir de los movimientos 'Asian (Desobediencia) y el Movimiento Libertario Socialista.", filename: "Laura Galian - Hacia un estudio decolonial del anarquismo. Egipto y Tunez (2015).pdf" }
+      { title: "Hacia un estudio decolonial del anarquismo. Egipto y Túnez", author: "Laura Galián Hernández", year: 2015, category: "historia", rating: 4.5, summary: "Estudio comparado del anarquismo decolonial en Egipto y Túnez a partir de los movimientos 'Asian (Desobediencia) y el Movimiento Libertario Socialista.", filename: "Laura Galian - Hacia un estudio decolonial del anarquismo. Egipto y Tunez (2015).pdf" }
     ]
   },
   "España": {
