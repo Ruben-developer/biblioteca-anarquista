@@ -41,7 +41,7 @@ export const regionData = {
       { title: "Historia ArgentinaDesde la liberacion de Chile hasta la constitucion de la Provincia de Bs. As.", author: "Diego Abad de Santillan", year: 1965, category: "historia", rating: 4.5, filename: "Abad de Santillan, Diego - Historia ArgentinaDesde la liberacion de Chile hasta la constitucion de la Provincia de Bs. As. (1965).pdf" },
       { title: "Historia ArgentinaDesde la presidencia de Urquiza a la eleccion de H. Yrigoyen", author: "Diego Abad de Santillan", year: 1965, category: "historia", rating: 4.5, filename: "Abad de Santillan, Diego - Historia ArgentinaDesde la presidencia de Urquiza a la eleccion de H. Yrigoyen (1965).pdf" },
       { title: "La F. O. R. A. Ideologia y trayectoria del movimiento obrero en la Argentina", author: "Diego Abad de Santillan", category: "historia", rating: 4.5, filename: "Abad de Santillan, Diego - La F. O. R. A. Ideologia y trayectoria del movimiento obrero en la Argentina (2).pdf" },
-      { title: "Juan Lazarte, Militante Social, Medico, Humanista", author: "Diego Abad de Santillan et al.", year: 1964, category: "historia", rating: 4.5, filename: "Abad de Santillan, Diego et al. - Juan Lazarte, Militante Social, Medico, Humanista (1964).pdf" }
+      { title: "Juan Lazarte, Militante Social, Medico, Humanista", author: "Diego Abad de Santillan et al.", year: 1964, category: "acratas", subject: "Juan Lazarte", rating: 4.5, filename: "Abad de Santillan, Diego et al. - Juan Lazarte, Militante Social, Medico, Humanista (1964).pdf" }
     ]
   },
   "Bolivia": {
