@@ -3,6 +3,9 @@ import { THEME } from '../constants'
 import { useIsMobile } from '../hooks'
 import TimelineFilters from './TimelineFilters'
 
+const formatYear = (year) => (year === -1800 ? 'A.A.' : year)
+const formatDecade = (decade) => (decade === '-1800s' ? 'A.A.' : decade.replace('s', ''))
+
 const HorizontalTimeline = ({
   sortedDecades,
   groupedByDecade,
@@ -23,7 +26,7 @@ const HorizontalTimeline = ({
             <div key={decade} className="flex flex-col" style={{ minWidth: `${groupedByDecade[decade].length * 220 + 60}px` }}>
               <div className="flex items-center gap-3 mb-4 flex-shrink-0">
                 <div className={`flex-shrink-0 w-14 h-14 ${decadeBg} rounded-full border-4 flex items-center justify-center shadow-lg`}>
-                  <span className="text-base font-display text-white">{decade.replace('s', '')}</span>
+                  <span className="text-base font-display text-white">{formatDecade(decade)}</span>
                 </div>
                 <div className={`flex-1 h-px ${lineColor}`}></div>
                 <span className={`text-xs font-display uppercase tracking-wider flex-shrink-0 ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
@@ -44,7 +47,7 @@ const HorizontalTimeline = ({
                         <div className="flex items-center justify-between gap-2 mb-1.5">
                           <div className="flex items-center gap-1.5">
                             <span className={`text-lg font-display ${darkMode ? 'text-gray-300' : 'text-amber-800'}`}>
-                              {event.year}
+                              {formatYear(event.year)}
                             </span>
                           </div>
                           <span className={`text-[10px] px-2 py-0.5 rounded-full flex-shrink-0 ${darkMode ? 'bg-gray-800 text-gray-400' : 'bg-amber-200 text-amber-800'}`}>
@@ -89,7 +92,7 @@ const VerticalTimeline = ({
       <div key={decade}>
         <div className="flex items-center gap-4 mb-4">
           <div className={`flex-shrink-0 w-16 h-16 ${decadeBg} rounded-full border-4 flex items-center justify-center shadow-lg`}>
-            <span className="text-lg font-display text-white">{decade.replace('s', '')}</span>
+            <span className="text-lg font-display text-white">{formatDecade(decade)}</span>
           </div>
           <div className={`flex-1 h-px ${lineColor}`}></div>
           <span className={`text-xs font-display uppercase tracking-wider ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
@@ -109,7 +112,7 @@ const VerticalTimeline = ({
                 <div className="flex items-start justify-between gap-3 mb-2">
                   <div className="flex items-center gap-2">
                     <span className={`text-2xl font-display ${darkMode ? 'text-gray-300' : 'text-amber-800'}`}>
-                      {event.year}
+                      {formatYear(event.year)}
                     </span>
                   </div>
                   <span className={`text-xs px-3 py-1 rounded-full flex-shrink-0 ${darkMode ? 'bg-gray-800 text-gray-400' : 'bg-amber-200 text-amber-800'}`}>

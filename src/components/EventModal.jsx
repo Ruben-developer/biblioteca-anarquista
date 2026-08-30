@@ -5,6 +5,8 @@ import { getEventRelatedTexts } from '../utils/library';
 import { useModalFocus } from '../hooks';
 import ModalHeader from './ModalHeader';
 
+const formatYear = (year) => (year === -1800 ? 'A.A.' : year);
+
 const EventModal = ({ darkMode, event, regionData, onClose, onRead = () => {} }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
   const dialogRef = useModalFocus(onClose);
@@ -25,7 +27,7 @@ const EventModal = ({ darkMode, event, regionData, onClose, onRead = () => {} })
       aria-label={event.title}
     >
       <div className={`${cardClass} rounded-lg max-w-2xl w-full overflow-hidden`}>
-        <ModalHeader darkMode={darkMode} title={event.title} subtitle={event.year} onClose={onClose} />
+        <ModalHeader darkMode={darkMode} title={event.title} subtitle={formatYear(event.year)} onClose={onClose} />
 
         <div className="p-6 overflow-y-auto max-h-96">
           <p className={`${darkMode ? 'text-gray-300' : 'text-gray-700'} leading-relaxed mb-4`}>
