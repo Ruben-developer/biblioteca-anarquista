@@ -17,7 +17,7 @@ export const influenceNodes = [
   { id: 'tolstoi', name: 'Tolstói', years: '1828–1910', region: 'Rusia', authorKey: 'León Tolstói', x: 25, y: 49, bio: 'Anarquista cristiano: la no resistencia al mal y el pacifismo como revolución.' },
   // ── 1830s: geografía + comuna ──
   { id: 'reclus', name: 'Reclus', years: '1830–1905', region: 'Francia', authorKey: 'Élisée Reclus', x: 35, y: 48, bio: 'Geógrafo anarquista: la naturaleza y la sociedad se transforman juntas.' },
-  { id: 'michel', name: 'Louise Michel', years: '1830–1905', region: 'Francia', authorKey: 'Louise Michel', x: 55, y: 48, bio: 'La "virgen roja" de la Comuna de París, poeta y militante incansable.' },
+  { id: 'michel', name: 'Louise Michel', years: '1830–1905', region: 'Francia', x: 55, y: 48, bio: 'La "virgen roja" de la Comuna de París, poeta y militante incansable.' },
   // ── 1840s: comunismo ──
   { id: 'kropotkin', name: 'Kropotkin', years: '1842–1921', region: 'Rusia', authorKey: 'Piotr Kropotkin', x: 50, y: 41, bio: 'Teórico del anarco-comunismo: apoyo mutuo, comunas libres y federación.' },
   // ── 1850s: colectivismo + individualismo + pedagogía ──
@@ -31,7 +31,7 @@ export const influenceNodes = [
   // ── 1870s: individualismo + sindicalismo + Latam ──
   { id: 'armand', name: 'Armand', years: '1872–1962', region: 'Francia', authorKey: 'Émile Armand', x: 30, y: 22, bio: 'Anarquista individualista: camaradería amorosa y vida no convencional.' },
   { id: 'rocker', name: 'Rocker', years: '1873–1958', region: 'Alemania', x: 75, y: 21, bio: 'Teórico del anarcosindicalismo: "anarcosindicalismo: teoría y práctica".' },
-  { id: 'floresmagon', name: 'Flores Magón', years: '1874–1922', region: 'México', authorKey: 'Ricardo Flores Magón', x: 82, y: 20, bio: 'El alma del anarquismo mexicano: Tierra y Libertad y la revolución magonista.' },
+  { id: 'floresmagon', name: 'Flores Magón', years: '1874–1922', region: 'México', x: 82, y: 20, bio: 'El alma del anarquismo mexicano: Tierra y Libertad y la revolución magonista.' },
   { id: 'fabbri', name: 'Fabbri', years: '1877–1935', region: 'Italia', authorKey: 'Luigi Fabbri', x: 50, y: 18, bio: 'Discípulo de Malatesta y crítico del bolchevismo desde el anarquismo.' },
   // ── 1880s: insurrección + Latam ──
   { id: 'guerrero', name: 'Práxedis Guerrero', years: '1882–1910', region: 'México', authorKey: 'Práxedis G. Guerrero', x: 92, y: 15, bio: 'Periodista y guerrillero magonista: propaganda por el hecho en la frontera.' },

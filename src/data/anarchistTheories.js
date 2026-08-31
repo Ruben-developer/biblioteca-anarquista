@@ -26,7 +26,6 @@ export const anarchistTheories = [
       'Comunismo autoritario y comunismo libertario',
       'La lucha contra el Estado',
       'La responsabilidad y la solidaridad en la lucha obrera',
-      'El Mundo Nuevo'
     ]
   },
   {
@@ -167,7 +166,6 @@ export const anarchistTheories = [
     books: [
       'Autogestión',
       'La insurrección que llega',
-      'Los invisibles',
       'Introducción a la guerra civil',
       'Archipiélago. Afinidad, organización informal y proyectos insurreccionales',
       'Cuando se señala la luna... A vueltas con el insurreccionalismo',
@@ -267,8 +265,6 @@ export const anarchistTheories = [
       'Contra los jueces. El discurso anarquista en sede judicial',
       'El ocaso de la ideología democrática',
       'Las cargas tributarias',
-      'Banalidades de base',
-      'Jefes, cabecillas, abusones',
       'Las 12 pruebas de la inexistencia de Dios',
       'La Semana Santa. Los atentados',
       'Los males de la guerra'
@@ -343,7 +339,6 @@ export const anarchistTheories = [
     books: [
       'Arte, poesía, anarquismo',
       'Anarquía y orden',
-      'Dinamita cerebral. Colección de cuentos anarquistas',
       'Lirios y cañonazos: la prosa anarquista de Vicente Huidobro',
       'Utopistas, anarquistas y rebeldes'
     ]
@@ -375,7 +370,6 @@ export const anarchistTheories = [
       'El Reino de Dios está dentro de vosotros',
       '¿Qué es el arte?',
       'Reflexiones sobre las causas de la libertad y de la opresión social',
-      'La persona y lo sagrado',
       'Anarquía y cristianismo'
     ]
   }

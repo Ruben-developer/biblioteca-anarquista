@@ -1,0 +1,44 @@
+# Libros de HISTORIA del catálogo NO enlazados en la línea temporal (para revisar)
+
+Total historia-catálogo no enlazado: 40  |  por categoría: historia: 28 · revolucion: 3 · movimiento: 3 · manifiesto: 3 · periodismo: 2 · organizacion: 1
+
+- Artículos de combate · Práxedis G. Guerrero  _(periodismo, México)_
+- Bajo la bandera negra · Justus F. Wittkop  _(historia, Alemania)_
+- Cronología del anarquismo · Manel Aisa  _(historia, España)_
+- Durruti y Ascaso. La CNT y la revolución de julio · S. Cánovas Cervantes  _(revolucion, España)_
+- El anarquismo búlgaro en armas · Michael Schmidt  _(historia, Macedonia)_
+- El anarquismo y la revolucion en Espana · Abad de Santillan, Diego  _(historia, España)_
+- El anarquismo: historia de las ideas y movimientos libertarios · George Woodcock  _(historia, Inglaterra)_
+- El error político-militar de la República · Abraham Guillén  _(revolucion, España)_
+- El Gran Rescate · Ricardo Palma Salamanca  _(historia, Internacional)_
+- El retorno de la Columna Durruti · Internacional Situacionista / Anónimo  _(historia, España)_
+- En contra del Dios-Emperador. Las ejecuciones de anarquistas en el Japn · Anarkowic, Stefan  _(historia, Internacional)_
+- Entre la plataforma y el partido · Colectivo  _(organizacion, Internacional)_
+- Expediente Picasso · Abad de Santillan, Diego (Prologo, 1976)  _(historia, España)_
+- FAI · 19 de julio de 1936. Espana CNT  _(historia, España)_
+- Hacia una nueva revolucin · Amigos de Durruti  _(historia, España)_
+- Historia del movimiento obrero revolucionario · Eduardo Colombo (comp.)  _(historia, Argentina)_
+- Introducción a la guerra civil · Colectivo  _(historia, España)_
+- La anarquía a través de los tiempos · Max Nettlau  _(historia, México)_
+- La bala y la escuela · Los Discursos Peligrosos  _(historia, México)_
+- La colera del suburbio · Amoros, Miquel  _(historia, Internacional)_
+- La FORA · Diego Abad de Santillán  _(historia, Argentina)_
+- La insurrección que llega · Colectivo  _(movimiento, Internacional)_
+- La revolución como juego. El movimiento Provo · José Antonio Recio Cuesta  _(movimiento, Alemania)_
+- La traición de la Hoz y el Martillo · Erick Benítez Martínez  _(historia, México)_
+- Las culturas de la libertad en el anarquismo ibérico · CGT (Federación de Enseñanza)  _(historia, España)_
+- Llamamiento · Colectivo  _(manifiesto, Internacional)_
+- Los Amigos de Durruti · Grupo Amigos de Durruti  _(revolucion, España)_
+- Mi anarquismo y otros escritos · Rafael Barrett  _(manifiesto, Paraguay)_
+- Páginas de lucha cotidiana · Errico Malatesta  _(periodismo, Italia)_
+- Por que perdimos la guerra · Abad de Santillan, Diego  _(historia, España)_
+- Por que perdimos la guerra · Abad de Santillan, Diego  _(historia, España)_
+- Por que perdimos la guerra · Abad de Santillan, Diego  _(historia, España)_
+- Por que perdimos la guerra · Abad de Santillan, Diego  _(historia, España)_
+- Por que perdimos la guerra.lt · Abad de Santillan, Diego  _(historia, España)_
+- Ricardo Flores Magon, el apostol de la revolucion · Abad de Santillan, Diego  _(historia, México)_
+- Ricardo Flores Magon, el apostol de la revolucion social mexicana.lt · Abad de Santillan, Diego  _(historia, México)_
+- Rudolf Rocker · Abad de Santillan, Diego  _(historia, Alemania)_
+- Surrealismo y anarquismo · Surrealistas en Le Libertaire  _(movimiento, Francia)_
+- Tierra y Libertad · Ricardo Flores Magón  _(manifiesto, México)_
+- Vida y muerte de Ramn Acнn · Alaiz, Felipe  _(historia, España)_

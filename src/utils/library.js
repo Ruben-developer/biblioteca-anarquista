@@ -12,10 +12,12 @@ export const getDecadeFromYear = (year) => {
 // filename, summary) y se le añade `region`.
 export const getAllBooks = (regionData) => {
   return Object.entries(regionData).flatMap(([region, data]) =>
-    (data.books || []).map((book) => ({
-      ...book,
-      region
-    }))
+    (data.books || [])
+      .filter((book) => book.visible !== false)
+      .map((book) => ({
+        ...book,
+        region
+      }))
   );
 };
 
@@ -75,7 +77,7 @@ export const isHistoricalCategory = (category) => HISTORICAL_SET.has(category);
 // Textos históricos de una región (los de filosofía/ideas no van al mapa ni timeline).
 export const getHistoricalBooks = (regionData, region) =>
   (regionData?.[region]?.books || [])
-    .filter((b) => isHistoricalBook(b))
+    .filter((b) => isHistoricalBook(b) && b.visible !== false)
     .map((b) => ({ ...b, region }));
 
 // Categorías de "acratas" (narraciones de vida): biografías, autobiografías,
@@ -115,10 +117,12 @@ export const getAcratasPersons = (regionData) => {
 
 // Contador REAL de textos: todos los libros del catálogo (fuente única regionData).
 export const countAllTexts = (regionData) =>
-  Object.values(regionData || {}).reduce((sum, region) => sum + (region.books?.length || 0), 0);
+  Object.values(regionData || {}).reduce((sum, region) =>
+    sum + (region.books?.filter((b) => b.visible !== false).length || 0), 0);
 
 // Conteo de textos por región (todos los del catálogo, no solo históricos).
-export const countRegionTexts = (regionData, region) => regionData?.[region]?.books?.length || 0;
+export const countRegionTexts = (regionData, region) =>
+  regionData?.[region]?.books?.filter((b) => b.visible !== false).length || 0;
 
 // Textos relacionados con un evento CON TEXTO (type 'con_texto').
 // FUENTE ÚNICA de la relación: el propio evento declara `relatedTexts` con los
@@ -131,7 +135,7 @@ export const getEventRelatedTexts = (regionData, event) => {
   const wanted = new Set(event.relatedTexts.map((t) => String(t).trim().toLowerCase()))
   const allBooks = []
   Object.entries(regionData).forEach(([region, data]) =>
-    (data.books || []).forEach((b) => allBooks.push({ ...b, region }))
+    (data.books || []).filter((b) => b.visible !== false).forEach((b) => allBooks.push({ ...b, region }))
   )
   return allBooks
     .filter((b) => wanted.has(String(b.title).trim().toLowerCase()))
@@ -203,7 +207,7 @@ export const findBookByTitle = (regionData, title) => {
   const wanted = String(title).trim().toLowerCase();
   for (const [region, data] of Object.entries(regionData)) {
     const found = (data.books || []).find(
-      (b) => String(b.title || '').trim().toLowerCase() === wanted
+      (b) => String(b.title || '').trim().toLowerCase() === wanted && b.visible !== false
     );
     if (found) return { ...found, region };
   }
@@ -282,6 +286,7 @@ export const getArchiveStats = (regionData, timelineEvents = []) => {
   const books = regionData ? getAllBooks(regionData) : [];
   // 'otros' es un cubo de contabilidad (textos aún no publicados): NO entra en
   // el total ni en la distribución por categoría; se reporta aparte como 'pending'.
+  // visible: false tampoco entra (libros pendientes de importar).
   const published = books.filter((b) => b.category !== 'otros');
   const texts = published.length;
   const pending = books.length - texts;

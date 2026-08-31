@@ -1,0 +1,161 @@
+- 1892 - La Epidemia Terrorista. Declaraciones de Ravachol y de Emile Henry
+- 19 de julio de 1936. Espana CNT - FAI
+- Abraham Guillén - El error político-militar de la República
+- Agrupacion Tiempos Nuevos - 1º de mayo. Su origen y significado
+- Agustín Guillamón - Barricadas en Barcelona
+- Aldo Oliva - El fusilamiento de Penina
+- Alessandro Stella - Días de sueño y de plomo
+- Alexandre Skirda - Los anarquistas y los soviets
+- Anarcofeminismo - Mujeres Libres
+- Anastasio Ovejero - Las colectividades libertarias en España (1936-1938)
+- Ángel J. Cappelletti - Utopías antiguas y modernas
+- Angry Brigade 1967-1984 - La Brigada de la Cólera
+- Anonimo - Dentro contra fuera, sobre la agitacion dentro y fuera de las carceles belgas
+- Anonimo - Enrabiaos, apuntes sobre la spanishrevolution
+- Anonimo - Okupa Madrid (1985-2011). Memoria, reflexion, debate y autogestion
+- Anónimo - Reflexiones sobre el movimiento anarquista en Grecia y la solidaridad con los presos políticos
+- Aurora Monica Alcayaga Sasso - El papel revolucionario de la prensa en el movimiento obrero anarquista mexicano
+- Aurora Monica Alcayaga Sasso y Ruben Trejo Munoz - El correo de la revolucion magonista. Espias y revoltosos
+- Bernardo Fuster - Los hermanos de la Costa. Piratería libertaria en el Caribe
+- Centro de Investigación Libertaria y Educación Popular - Pasado y presente del anarquismo y del anarcosindicalismo en Colombia
+- CGT (Federación de Enseñanza) - Las culturas de la libertad en el anarquismo ibérico
+- Colectivo - A tres años de la revuelta griega
+- Colectivo - Años rojos, años negros. La resistencia anarquista contra el fascismo en Italia
+- Colectivo - El origen del 1º de Mayo
+- Colectivo - La miliciana en la Guerra Civil: realidad e imagen
+- Colectivo - Mujeres Libres (1936-1939). Una lectura feminista
+- Colectivo - Orígenes del movimiento obrero en el Uruguay
+- Colectivo - Un incontrolado de la Columna de Hierro
+- Colectivo anarquista de Macedonia - La Banda de Chernopeev
+- Cristina Escrivá Moscardó - El Internado Durruti
+- Cristina Guzzo - Libertarias en América del Sur. De la A a la Z
+- D. L. Nevin - Revolución en Baja California, México (1911)
+- Darío Covarrubias Bañados - Destruir para construir: violencia y acción directa en la corriente anarquista chilena (1890-1914)
+- Diego Abad de Santillan - El anarquismo y la revolucion en Espana
+- Diego Abad de Santillan - El movimiento anarquista en la Argentina (Desde sus inicios hasta 1910)
+- Diego Abad de Santillan - Historia ArgentinaDesde la aparicion del hombre hasta la obra de M. M. de Guemes
+- Diego Abad de Santillan - Historia ArgentinaDesde la liberacion de Chile hasta la constitucion de la Provincia de Bs. As.
+- Diego Abad de Santillan - Historia ArgentinaDesde la presidencia de Urquiza a la eleccion de H. Yrigoyen
+- Diego Abad de Santillan - Historia de la Revolucion Mexicana
+- Diego Abad de Santillan - Historia del movimiento obrero espanol I
+- Diego Abad de Santillan - La F. O. R. A. Ideologia y trayectoria del movimiento obrero en la Argentina
+- Diego Abad de Santillan - Por que perdimos la guerra
+- Diego Abad de Santillan - Por que perdimos la guerra (1940)
+- Diego Abad de Santillán - La FORA
+- Diego Abad de Santillan (Prologo, 1976) - Expediente Picasso
+- Diego Paredes Goicochea - Los orígenes del anarquismo en Colombia y su relación con el liberalismo
+- Distro Ingobenables - Historia del anarquismo polaco
+- Eduardo A. Godoy Sepúlveda - Historia e historiografía del anarquismo en Chile (1980-2015)
+- Eduardo A. Godoy Sepúlveda - Represión contra los anarquistas: Voltaire Argandoña y Hortensia Quinio (Santiago, 1913)
+- Eduardo Colombo (comp.) - Historia del movimiento obrero revolucionario
+- Eduardo Daniel Rodríguez Trejo - Los anarquistas y la Revolución Cubana: entre el júbilo y el desencanto
+- Emilio Crisi - La comuna de Encarnación
+- Emílio Crisi - Revolución anarquista en Corea: la Comuna de Shinmin (1929-1932)
+- Enrique Aldrete - Baja California heroica
+- Equipo Sombraysén - Anarquismo y violencia popular en Chile (1898-1927)
+- Federación Anarquista del Perú - El anarcosindicalismo en el Perú
+- Fernando Barbero Carrasco - Anarquistas vengadores
+- François Hombourger - Los anarquistas en la Revolución Rusa: la Makhnovtchina (Ucrania 1919)
+- Frank Fernández - El anarquismo en Cuba
+- Gaspar García N. y Leyla Morales M. - Flora Sanhueza Rebolledo. Su lucha social en Iquique (1942-1974)
+- Gastón Leval - Colectividades Libertarias
+- Gavroche - La revuelta de los Banlieusards
+- George Orwell - Homenaje a Cataluña
+- George Woodcock - El anarquismo: historia de las ideas y movimientos libertarios
+- Grupo Amigos de Durruti - Los Amigos de Durruti
+- Grupo J.D. Gómez Rojas - Juan Gandulfo: la hoja sanitaria, el policlínico de la IWW y su legado (1923-1942)
+- Guillermo Fiscer Lamelas - Pedagogía libertaria española a inicios del siglo XX
+- Guillermo Reigosa Pérez - La Federación Anarquista Uruguaya
+- Helena Andres Granel - Discursos y experiencias femeninas en el anarquismo espanol. Mujeres Libres en la retaguardia oscense
+- Helena Andrés Granel - Mujeres Libres: emancipación femenina y revolución social
+- Huáscar Rodríguez García - La choledad antiestatal. El anarcosindicalismo en el movimiento obrero boliviano (1912-1965)
+- Igor Goicovic Donoso - Entre el dolor y la ira, la venganza de Ramón Ramón
+- Igor Goicovic Donoso - La propaganda por los hechos en el movimiento anarquista chileno (1890-1910)
+- Internacional Situacionista / Anónimo - El retorno de la Columna Durruti
+- Ivanna Margarucci - Cocinando la revolución en la ciudad de La Paz (1927-1946)
+- Jason Adams - Anarquismos no occidentales
+- Jason Garner - La búsqueda de la unidad anarquista: la FAI antes de la II República
+- Javier Ruiz (coord.) - Repensar el anarquismo en América Latina: historias, epistemes, luchas y otras formas de organización
+- John Brademas - Anarcosindicalismo y revolución en España (1930-1937)
+- José Antonio Gutiérrez - La masacre de la Escuela Santa María de Iquique
+- José Antonio Gutiérrez D. (comp.) - Los orígenes libertarios del Primero de Mayo: de Chicago a América Latina (1886-1930)
+- José Antonio Recio Cuesta - La revolución como juego. El movimiento Provo
+- José Comaposada - La Revolución de Barcelona (Semana Trágica, 1909)
+- José Comaposada - La Revolución de Cataluña
+- José Peirats - Los anarquistas en la crisis política española (1869-1939)
+- Juan Avilés - El terrorismo anarquista como propaganda por el hecho
+- Juan J. Alcalde - Bakunin-Netchaiev. El Catecismo Revolucionario
+- Juan J. Alcalde - Los comités de defensa confederales
+- Juan J. Alcalde - Los servicios secretos en Espaa. La represin contra el Movimiento Libertario espaol
+- Juan J. Alcalde - Milicias anarquistas y anarcosindicalistas en la guerra civil espaola
+- Juan J. Alcalde - Tiempos de plomo. Grupos de Accin y Defensa Confederal
+- Júlio Antonio Zacouteguy - O Inimigo do Rei, el grito irreverente y osado de la anarquía
+- Justus F. Wittkop - Bajo la bandera negra
+- Kanno Sugako - Reflexiones en el camino hacia la horca
+- Laura Galián Hernández - El Anarquismo Descolonizado: una historia de las experiencias antiautoritarias en Egipto (1860-2016)
+- Laura Galián Hernández - Hacia un estudio decolonial del anarquismo. Egipto y Túnez
+- Laura Sánchez Blanco - El anarcofeminismo en España: las propuestas de Mujeres Libres
+- Li Pei-Kan (Ba Jin) - Los Mártires de Tokio y la Sociedad de la Guillotina
+- Lorena Paz Paredes - La Makhnovschina. Un movimiento libertario bajo fuego en Ucrania (1918-1921)
+- Los Discursos Peligrosos - La bala y la escuela
+- Louise Michel, Mijaíl Bakunin y Piotr Kropotkin - La comuna de París (antología)
+- Luis Buendía García - La experiencia autogestionaria durante la Guerra Civil española
+- Luis Vitale - Contribución a una historia del anarquismo en América Latina
+- Manel Aisa - Cronología del anarquismo
+- Manel Aisa Pampols - La huelga de alquileres y el comite de defensa economica
+- Manuel Pérez Ledesma - El movimiento Provo
+- Marisol Vera y Olga Grau - Vanguardias silenciadas: tejidos de la memoria
+- Martín Acri y María Cácerez - La educación libertaria en la Argentina y en México (1861-1945)
+- Mary Nash - Mujeres Libres. España 1936-1939
+- Max Nettlau - La anarquía a través de los tiempos
+- Michael Schmidt - El anarquismo búlgaro en armas
+- Miquel Amoros - 1968. El año sublime de la acracia
+- Miquel Amoros - Francisco Carreno y los arduos caminos de la anarquia
+- Miquel Amoros - La colera del suburbio
+- Miquel Amoros - Los situacionistas y la anarquia
+- Miquel Amoros - Puntos de fuga en la cultura obrera
+- MLE-CNT - 1936. De la revolución española
+- Murray Bookchin - Los anarquistas españoles. Los años heroicos (1868-1936)
+- Néstor Majnó - La Revolución Rusa en Ucrania (1918-1921)
+- Octavio Alberola - La rebelión de Mayo 68
+- Octavio Alberola - La resistencia Libertaria contra el Franquismo. El D.I.
+- Octavio Alberola - Los libertarios y la Memoria histrica
+- Octavio Alberola y Ariane Gransac - El anarquismo espaol y la acción revolucionaria (1961-1974)
+- Osvaldo Baigorria - Anarquismo trashumante. Crónicas de crotos y linyeras
+- Osvaldo Bayer - La Patagonia Rebelde
+- Osvaldo Bayer - Los anarquistas expropiadores
+- Pascual Muñoz - La primera huelga general en el Uruguay (23 de mayo de 1911)
+- Paul Avrich - Kronstadt 1921
+- Piedad Pareja - Anarquismo y sindicalismo en el Perú (1904-1929)
+- Piotr Kropotkin - La Comuna de París
+- Publicación anarquista Tierra y Tempestad - Masacre en Jacinto Vera
+- Ricardo Palma Salamanca - El Gran Rescate
+- Rodolfo Montes de Oca - La conjura de los indomables
+- Ruy Mauro Marini - El movimiento obrero brasileño
+- S. Cánovas Cervantes - Durruti y Ascaso. La CNT y la revolución de julio
+- Sam Mbah e I. E. Igariwey - Anarquismo africano
+- Sebastián Stavisky - La primera víctima del movimiento obrero. El discurso anarquista sobre la muerte (Argentina)
+- Servando Rocha - Nos estamos acercando: La historia de Angry Brigade
+- Simón Royo Hernández - El anarquismo en la antigua Grecia
+- Stefan Anarkowic - Contra el Dios Emperador. Juicios de la traición anarquista en Japón
+- Stefan Anarkowic - En contra del Dios-Emperador
+- Stepan Petritchenko, Alexander Berkman y Néstor Makhno - La comuna de Kronstadt
+- Steven J. Hirsch - El anarcosindicalismo en el sur andino peruano: Arequipa, Mollendo, Cusco, Puno
+- Surrealistas en Le Libertaire - Surrealismo y anarquismo
+- Teresa Abello Guell - El movimiento obrero en Espana, siglos XIX y XX
+- Teresa Abello Guell - Identidad politica y cambio de paradigma estetico en el anarquismo barcelones
+- Teresa Abello Guell - Lideres obreros y vanguardias culturales. La presencia del obrerismo en la Barcelona de la primera posguerra europea
+- Toni Alvaro - Catalogo de decisiones y fragilidades
+- Toni Alvaro - La revuelta de las mujeres
+- Varios autores - El anarquismo en China
+- Varios autores - Punto de Quiebre: Memorias De Lucha Desde La Región Chilena
+- Varios Autores - Chernoe Znamia (anarquistas rusos, 1900s)
+- Varios Autores - Fuga del penal de Punta Carretas
+- Víctor García - Kotoku, Osugi, Yamaga: tres anarquistas japoneses
+- Víctor García - Museihushugi: el anarquismo japonés
+- Víctor M. Muñoz C. y Armando Triviño - Wobblie. Hombres, ideas y problemas del anarquismo en los años veinte
+- Víctor Muñoz Cortés - Sin Dios ni patrones. Historia del anarquismo en la región chilena (1890-1990)
+- Volin - La revolución desconocida
+- Xavier Diez - El anarquismo individualista en España (1923-1938)
+- Yago Mellado López - El anarquismo en el espejo judío
+- Zaher Baher - El experimento del Kurdistán oeste (Kurdistán sirio)

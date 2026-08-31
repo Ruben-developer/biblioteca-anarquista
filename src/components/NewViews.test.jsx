@@ -15,12 +15,17 @@ import InfluencesView from './InfluencesView';
 import AcratasView from './AcratasView';
 import ReaderOverlay from './ReaderOverlay';
 const catalogTitles = new Set(getAllBooks(regionData).map((b) => b.title));
+const visibleTitles = new Set(
+  Object.values(regionData).flatMap((r) => r.books || [])
+    .filter((b) => b.visible !== false)
+    .map((b) => b.title)
+);
 
 afterEach(cleanup);
 
 describe('Datos de las nuevas secciones', () => {
   it('todas las obras referenciadas por las teorías existen en el catálogo', () => {
-    const missing = anarchistTheories.flatMap((t) => t.books).filter((title) => !catalogTitles.has(title));
+    const missing = anarchistTheories.flatMap((t) => t.books).filter((title) => !visibleTitles.has(title));
     expect(missing).toEqual([]);
   });
 
@@ -30,7 +35,7 @@ describe('Datos de las nuevas secciones', () => {
   });
 
   it('todas las obras de las rutas de lectura existen en el catálogo', () => {
-    const missing = readingPaths.flatMap((p) => p.books).filter((title) => !catalogTitles.has(title));
+    const missing = readingPaths.flatMap((p) => p.books).filter((title) => !visibleTitles.has(title));
     expect(missing).toEqual([]);
   });
 
@@ -41,7 +46,7 @@ describe('Datos de las nuevas secciones', () => {
   });
 
   it('todos los nodos de influencia con authorKey coinciden con un autor del catálogo', () => {
-    const authorNames = new Set(getAllBooks(regionData).map((b) => b.author));
+    const authorNames = new Set(getAllBooks(regionData).filter((b) => b.visible !== false).map((b) => b.author));
     const unmatched = influenceNodes.filter(
       (n) => n.authorKey && !authorNames.has(n.authorKey)
     );

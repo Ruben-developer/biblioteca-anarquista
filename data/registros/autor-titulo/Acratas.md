@@ -1,0 +1,55 @@
+- Alfredo M. Bonano - Persona non-grata
+- Aníbal D'Auria - La peste, la bestia y el monstruo: Johann Most
+- Aurora Monica Alcayaga Sasso - Lazos indisolubles de una amistad revolucionaria. Librado Rivera y Ricardo Flores Magon
+- Aurora Monica Alcayaga Sasso - Librado Rivera en el movimiento anarquista mexicano
+- Aurora Monica Alcayaga Sasso - Librado Rivera y los hermanos rojos en el movimiento social y cultural anarquista en Villa Cecilia y Tampico, Tamaulipas, 1915-1930
+- Aurora Monica Alcayaga Sasso - Librado Rivera. El indomable magonero
+- Bartolomeo Vanzetti - Bartolomeo Vanzetti: historia de la vida de un proletario
+- Bob Black - ¿Anarquía?
+- Cipriano Mera - Cipriano Mera
+- Claudio Lavazza - Autobiografía de un irreductible
+- Colectivo - Francisco Ferrer i Guardia y la Escuela Moderna
+- Diego Abad de Santillan - Ricardo Flores Magon, el apostol de la revolucion
+- Diego Abad de Santillan - Ricardo Flores Magon, el apostol de la revolucion social mexicana
+- Diego Abad de Santillan et al. - Juan Lazarte, Militante Social, Medico, Humanista
+- Ediciones FOIL - Juan Peiró, teórico y militante del anarcosindicalismo español
+- Emma Goldman - Anarquismo
+- Emma Goldman - Durruti ha muerto, pero está vivo todavía
+- Emma Goldman - Fraternalmente, Emma
+- Felipe Alaiz - Buenaventura Durruti, o el heroísmo bien entendido
+- Felipe Alaiz - Vida y muerte de Ramón Acín
+- Fernando Cabrera Parra - Fidel Miró Solanes. Memorias anarquistas de un catalán exiliado
+- Fidel Miró Solanes - Anarquismo y anarquistas
+- Hans Magnus Enzensberger - El corto verano de la anarquía
+- Helmut Ortner - Sacco y Vanzetti. El enemigo extranjero
+- Howard Fast - La pasión de Sacco y Vanzetti
+- Ivan Dario Alvarez Escobar - Elisee Reclus. El geografo acrata y su paisaje de la libertad
+- Jean-Marc Rouillan - Odio las mañanas
+- Jenaro Amezcua - Quién es Flores Magón y cuál su obra
+- Joan Llarch - La muerte de Durruti
+- Jose Alvarez Junco - Prologo a Anselmo Lorenzo El Proletariado Militante
+- Juan García Oliver - El eco de los pasos
+- Luigi Lucheni - Cómo y porqué asesiné a la princesa Sissi
+- Luis Olea, Ignacio Iglesias y Emma Goldman - Buenaventura Durruti (antología)
+- Mª del Pilar Carmen Agullo Diaz y Molina Beneyto - Antonia Maymon. Anarquista, maestra, naturista.
+- Manel Aisa Pampols - Ada Marti Vall. El sueno de la conciencia libre
+- Manel Aisa Pampols - Tras las huellas de una vida generosa. Aurelio Fernandez Sanchez y Los Solidarios
+- María Amalia Pradas Baena - Teresa Claramunt, la virgen roja barcelonesa
+- Maximiliano Astroza-León - Rebeldía y libertad: José Domingo Gómez Rojas
+- Miquel Amoros - Durruti en el laberinto
+- Miquel Amoros - Jose Pellicer, el anarquista integro
+- Miquel Amoros - La revolucion traicionada. La verdadera historia de Balius y Los Amigos de Durruti
+- Miquel Amoros - Maroto, el heroe. Una biografia del anarquismo andaluz
+- Néstor Makhno - Historia del Movimiento Makhnovista
+- Octavio Alberola - Pensar la utopía en acción. Trazas de un anarquista heterodoxo
+- Osvaldo Bayer - Severino Di Giovanni
+- Pascual Muñoz y Pablo Suárez - La vida anárquica de Florencio Sánchez
+- Piotr Kropotkin - Memorias de un revolucionario
+- Ramon Alvarez - Eleuterio Quintanilla. Vida y obra del maestro
+- Rudolf Rocker - Rudolf Rocker
+- Sara Moroni - Concha Pérez Collado: anarquista, miliciana en la Guerra Civil española
+- Sonya Torres y Antonia Fontanillas - Lola Iturbe: vida e ideal de una luchadora anarquista
+- Teresa Abello Guell - Topicos, utilizacion y revision historiografica en torno a una figura carismatica. El ejemplo de Salvador Segui
+- Varios autores - JESTO i PALABRA, IDEA i ACCIÓN: El Pensamiento Político De Efraín Plaza Olmedo
+- Víctor Muñoz Cortés - Cuando la patria mata: la historia del anarquista Julio Rebosio (1914-1920)
+- Vladimiro Muñoz - Barrett

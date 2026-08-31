@@ -77,7 +77,7 @@ export const readingPaths = [
     title: 'Anarquismo cristiano',
     icon: 'church',
     description: 'De la no resistencia de Tolstói a lo impersonal de Weil y el Estado como poder de Ellul: el Evangelio como subversión radical.',
-    books: ['El Reino de Dios está dentro de vosotros', '¿Qué es el arte?', 'Reflexiones sobre las causas de la libertad y de la opresión social', 'La persona y lo sagrado', 'Anarquía y cristianismo']
+    books: ['El Reino de Dios está dentro de vosotros', '¿Qué es el arte?', 'Reflexiones sobre las causas de la libertad y de la opresión social', 'Anarquía y cristianismo']
   },
   {
     id: 'chile',
