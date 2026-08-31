@@ -224,6 +224,17 @@ describe('AcratasView', () => {
     expect(screen.getByText('Eleuterio Quintanilla')).toBeTruthy();
     expect(screen.queryByText('Buenaventura Durruti')).toBeNull();
   });
+
+  it('abre la biografía al hacer clic en su título', async () => {
+    // @vitest-environment jsdom
+    const { render, screen, fireEvent } = await import('@testing-library/react');
+    const onRead = vi.fn();
+    render(<AcratasView darkMode={false} regionData={regionData} onRead={onRead} />);
+    fireEvent.change(screen.getByLabelText('Buscar persona o texto...'), { target: { value: 'Emma Goldman' } });
+    fireEvent.click(screen.getByText('Emma Goldman'));
+    fireEvent.click(screen.getByText('Fraternalmente, Emma'));
+    expect(onRead).toHaveBeenCalledWith(expect.objectContaining({ title: 'Fraternalmente, Emma' }));
+  });
 });
 
 describe('ReaderOverlay', () => {
