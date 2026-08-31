@@ -32,19 +32,30 @@ export const influenceNodes = [
   { id: 'armand', name: 'Armand', years: '1872–1962', region: 'Francia', authorKey: 'Émile Armand', x: 30, y: 22, bio: 'Anarquista individualista: camaradería amorosa y vida no convencional.' },
   { id: 'rocker', name: 'Rocker', years: '1873–1958', region: 'Alemania', x: 75, y: 21, bio: 'Teórico del anarcosindicalismo: "anarcosindicalismo: teoría y práctica".' },
   { id: 'floresmagon', name: 'Flores Magón', years: '1874–1922', region: 'México', x: 82, y: 20, bio: 'El alma del anarquismo mexicano: Tierra y Libertad y la revolución magonista.' },
+  { id: 'kotoku', name: 'Kōtoku Shūsui', years: '1871–1911', region: 'Japón', x: 45, y: 22, bio: 'Padre del anarquismo japonés; ejecutado por el incidente de alta traición de 1911.' },
   { id: 'fabbri', name: 'Fabbri', years: '1877–1935', region: 'Italia', authorKey: 'Luigi Fabbri', x: 50, y: 18, bio: 'Discípulo de Malatesta y crítico del bolchevismo desde el anarquismo.' },
+  { id: 'rivera', name: 'Librado Rivera', years: '1864–1932', region: 'México', x: 88, y: 26, bio: 'Magonista y educador: compañero de Flores Magón en la prisión y el exilio.' },
+  { id: 'claramunt', name: 'Teresa Claramunt', years: '1846–1921', region: 'España', x: 62, y: 38, bio: 'La "virgen roja" de Barcelona: pionera del anarcosindicalismo y la lucha obrera.' },
   // ── 1880s: insurrección + Latam ──
   { id: 'guerrero', name: 'Práxedis Guerrero', years: '1882–1910', region: 'México', authorKey: 'Práxedis G. Guerrero', x: 92, y: 15, bio: 'Periodista y guerrillero magonista: propaganda por el hecho en la frontera.' },
+  { id: 'seguí', name: 'Salvador Seguí', years: '1879–1923', region: 'España', x: 68, y: 17, bio: 'Líder del anarcosindicalismo catalán; "el noi del sucre" del movimiento obrero.' },
+  { id: 'sugae', name: 'Ōsugi Sakae', years: '1885–1923', region: 'Japón', x: 55, y: 13, bio: 'Anarquista japonés: individualismo, free love y represión del Estado post-terremoto de Kantō.' },
   { id: 'makhno', name: 'Makhno', years: '1888–1934', region: 'Ucrania', authorKey: 'Néstor Makhno', x: 70, y: 11, bio: 'El ejército insurrecto de Ucrania; origen del plataformismo.' },
-  // ── 1890s: estética + Latam ──
+  // ── 1890s: estética + Latam + guerra civil ──
+  { id: 'mera', name: 'Cipriano Mera', years: '1897–1975', region: 'España', authorKey: 'Cipriano Mera', x: 80, y: 6, bio: 'Anarcosindicalista y general de milicias: la columna de hierro en la guerra civil.' },
   { id: 'read', name: 'Herbert Read', years: '1893–1968', region: 'Inglaterra', authorKey: 'Herbert Read', x: 78, y: 8, bio: 'Crítico de arte anarquista: la estética como política de la libertad.' },
   { id: 'abad', name: 'Abad de Santillán', years: '1897–1983', region: 'Argentina', authorKey: 'Diego Abad de Santillán', x: 92, y: 5, bio: 'Militante y editor: la FORA, Bakunin en español y el anarquismo organizado latinoamericano.' },
-  // ── 1900s: autogestión + cristiandad ──
+  { id: 'digiovanni', name: 'Severino Di Giovanni', years: '1901–1931', region: 'Argentina', x: 95, y: 3, bio: 'Expropiador y propagandista: la acción directa en el anarquismo argentino.' },
+  { id: 'garcia_oliver', name: 'Juan García Oliver', years: '1901–1980', region: 'España', authorKey: 'Juan García Oliver', x: 85, y: 3, bio: 'Ministro anarquista y fundador de la Columna de Hierro; del atentado al gobierno revolucionario.' },
+  // ── 1900s: autogestión + Asia + cristiandad ──
   { id: 'guerin', name: 'Guérin', years: '1904–1988', region: 'Francia', authorKey: 'Daniel Guérin', x: 70, y: 1, bio: 'Anarquista y escritor que unió anarquismo, autogestión y liberación sexual.' },
+  { id: 'bajin', name: 'Ba Jin', years: '1904–2005', region: 'China', authorKey: 'Ba Jin', x: 55, y: 1, bio: 'Escritor y anarquista chino: "La familia" y la influencia del anarquismo en Asia.' },
   { id: 'weil', name: 'Weil', years: '1909–1943', region: 'Francia', authorKey: 'Simone Weil', x: 35, y: -2, bio: 'Filósofa y mística: lo impersonal frente a la idolatría del Estado, la opresión como mecanismo de toda organización social.' },
   { id: 'ellul', name: 'Ellul', years: '1912–1994', region: 'Francia', authorKey: 'Jacques Ellul', x: 42, y: -4, bio: 'Teólogo y anarquista cristiano: el Estado como poder satánico y el cristianismo como subversión de toda autoridad.' },
   // ── 1920s: ecología social ──
   { id: 'bookchin', name: 'Bookchin', years: '1921–2006', region: 'EE. UU.', authorKey: 'Murray Bookchin', x: 82, y: -10, bio: 'Ecología social y municipalismo libertario: la crisis ecológica como crisis social.' },
+  // ── 1940s: confederalismo ──
+  { id: 'ocalan', name: 'Öcalan', years: '1948–', region: 'Kurdistán', authorKey: 'Abdullah Öcalan', x: 60, y: -12, bio: 'Confederalismo democrático: inspirado en Bookchin, aplicado al Kurdistán.' },
   // ── 1960s-80s: hoy ──
   { id: 'graeber', name: 'Graeber', years: '1961–2020', region: 'EE. UU.', authorKey: 'David Graeber', x: 82, y: -17, bio: 'Antropólogo anarquista: la etnografía como inspiración de organización libre.' },
   { id: 'gelderloos', name: 'Gelderloos', years: '1982–', region: 'EE. UU.', authorKey: 'Peter Gelderloos', x: 92, y: -20, bio: 'Autor contemporáneo sobre anarquismo, ecología y acción directa.' },
@@ -89,5 +100,20 @@ export const influenceEdges = [
   ['kropotkin', 'read'],
   ['kropotkin', 'floresmagon'],
   ['floresmagon', 'guerrero'],
+  ['floresmagon', 'rivera'],
+  ['malatesta', 'claramunt'],
+  ['malatesta', 'seguí'],
+  ['kropotkin', 'kotoku'],
+  ['bakunin', 'kotoku'],
+  ['goldman', 'sugae'],
+  ['kropotkin', 'sugae'],
+  ['rocker', 'seguí'],
+  ['abad', 'digiovanni'],
+  ['makhno', 'garcia_oliver'],
+  ['abad', 'mera'],
+  ['abad', 'garcia_oliver'],
+  ['kropotkin', 'bajin'],
+  ['bookchin', 'ocalan'],
+  ['graeber', 'gelderloos'],
   ['proudhon', 'guerin']
 ];
