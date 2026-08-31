@@ -52,18 +52,18 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
   return (
     <div className={`${darkMode ? 'bg-gray-900/60 border-[#872320]/50' : 'bg-white/60 border-[#B79F6E]'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
-        Red de Autores
+        Red de Influencias
       </h2>
       <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-        {influenceNodes.length} pensadores y {influenceEdges.length} relaciones de influencia. Pasa el cursor para seguir las conexiones; haz clic para ver quién influyó en quién y sus obras.
+        {influenceNodes.length} pensadores y {influenceEdges.length} relaciones de influencia. Pasa el cursor para seguir las conexiones; haz clic en un nodo para ver quién influyó en quién y sus obras.
       </p>
 
       <div className={`${cardClass} border-2 rounded-lg p-4 shadow-md overflow-x-auto`}>
         <svg
-          viewBox="0 -14 100 56"
-          className="w-full min-w-[640px]"
+          viewBox="-5 -14 115 56"
+          className="w-full min-w-[700px]"
           role="img"
-          aria-label="Grafo de influencias entre autores anarquistas"
+          aria-label="Grafo de influencias entre pensadores anarquistas"
         >
           {influenceEdges.map(([from, to]) => {
             const active = isActiveEdge(from, to);
@@ -87,7 +87,6 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
               <g
                 key={node.id}
                 transform={`translate(${node.x}, ${y})`}
-                style={{ cursor: 'pointer' }}
                 onMouseEnter={() => setHoveredId(node.id)}
                 onMouseLeave={() => setHoveredId(null)}
                 onClick={() => setSelectedId((prev) => (prev === node.id ? null : node.id))}
@@ -96,12 +95,14 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
                   r={active ? NODE_R_ACTIVE : NODE_R}
                   fill={dimmed ? nodeDim : nodeFill}
                   opacity={dimmed ? 0.35 : 1}
+                  style={{ cursor: 'pointer' }}
                 />
                 <text
                   textAnchor="middle"
                   y={NODE_R_ACTIVE + 2}
                   fontSize={node.name.length > 10 ? 1.9 : 2.2}
                   fill={labelColor}
+                  pointerEvents="none"
                 >
                   {node.name}
                 </text>
@@ -208,12 +209,11 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
         </div>
       ) : (
         <p className={`text-sm mt-4 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-          Haz clic en cualquier autor del grafo para ver sus conexiones y obras.
+          Haz clic en cualquier nodo del grafo para ver sus conexiones y obras.
         </p>
       )}
     </div>
   );
 };
-
 
 export default InfluencesView;

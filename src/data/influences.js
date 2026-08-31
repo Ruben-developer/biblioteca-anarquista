@@ -1,4 +1,4 @@
-// Red de influencias entre pensadores (menú "Red de Autores").
+// Red de influencias entre pensadores (menú "Red de Influencias").
 // Nodos con posiciones relativas (0-100) en un lienzo SVG y aristas de
 // influencia. Los libros de cada autor se resuelven contra regionData.js
 // por nombre de autor (getAllAuthors).

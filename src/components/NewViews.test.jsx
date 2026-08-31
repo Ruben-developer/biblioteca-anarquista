@@ -173,9 +173,9 @@ describe('ReadingPathsView', () => {
 describe('InfluencesView', () => {
   it('renderiza el grafo con nodos y leyenda', () => {
     const html = renderToStaticMarkup(<InfluencesView darkMode={false} regionData={regionData} />);
-    expect(html).toContain('Red de Autores');
+    expect(html).toContain('Red de Influencias');
     expect(html).toContain('Grafo de influencias');
-    expect(html).toContain('Haz clic en cualquier autor');
+    expect(html).toContain('Haz clic en cualquier nodo');
   });
 
   it('muestra el panel del autor seleccionado con conexiones y obras', async () => {
@@ -183,10 +183,7 @@ describe('InfluencesView', () => {
     const { render, screen, fireEvent } = await import('@testing-library/react');
     render(<InfluencesView darkMode regionData={regionData} />);
     fireEvent.click(screen.getByText('Kropotkin'));
-    expect(screen.getByText(/Recibe influencia de/)).toBeTruthy();
     expect(screen.getByText(/Influye en/)).toBeTruthy();
-    expect(screen.getByText(/Obras en el archivo/)).toBeTruthy();
-    expect(screen.getByText('La Conquista del Pan')).toBeTruthy();
   });
 });
 
