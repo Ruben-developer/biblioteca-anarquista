@@ -276,8 +276,20 @@ code {
 .theme-constructivista .bg-amber-300 {
   background-color: var(--c-cream-3);
 }
+.theme-constructivista .hover\:bg-amber-100:hover {
+  background-color: var(--c-cream-2);
+}
+.theme-constructivista .hover\:bg-amber-200:hover {
+  background-color: var(--c-cream-3);
+}
 .theme-constructivista .hover\:bg-amber-300:hover {
   background-color: var(--c-cream-3);
+}
+.theme-constructivista .hover\:bg-amber-800:hover {
+  background-color: var(--c-red-deep);
+}
+.theme-constructivista .hover\:bg-amber-900:hover {
+  background-color: #8A1813;
 }
 /* Bordes */
 .theme-constructivista .border-red-900\/30,
@@ -385,8 +397,20 @@ code {
 .theme-constructivista.theme-pergamino .bg-amber-300 {
   background-color: #CBB788;
 }
+.theme-constructivista.theme-pergamino .hover\:bg-amber-100:hover {
+  background-color: #D8C49A;
+}
+.theme-constructivista.theme-pergamino .hover\:bg-amber-200:hover {
+  background-color: #CBB788;
+}
 .theme-constructivista.theme-pergamino .hover\:bg-amber-300:hover {
   background-color: #CBB788;
+}
+.theme-constructivista.theme-pergamino .hover\:bg-amber-800:hover {
+  background-color: #8A1E19;
+}
+.theme-constructivista.theme-pergamino .hover\:bg-amber-900:hover {
+  background-color: #6E1713;
 }
 .theme-constructivista.theme-pergamino .border-amber-300 {
   border-color: #CBB788;
