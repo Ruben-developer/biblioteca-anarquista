@@ -14,7 +14,7 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
   const [hoveredId, setHoveredId] = useState(null);
 
   const nodeById = Object.fromEntries(influenceNodes.map((n) => [n.id, n]));
-  const toSvgY = (y) => y * 0.6;
+  const toSvgY = (y) => y;
 
   const edgePath = (fromId, toId) => {
     const a = nodeById[fromId];
@@ -61,7 +61,7 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
 
       <div className={`${cardClass} border-2 rounded-lg p-4 shadow-md overflow-x-auto`}>
         <svg
-          viewBox="-5 -14 115 56"
+          viewBox="-12 -8 135 218"
           className="w-full min-w-[700px]"
           role="img"
           aria-label="Grafo de influencias entre pensadores anarquistas"

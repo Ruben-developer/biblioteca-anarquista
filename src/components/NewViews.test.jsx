@@ -6,7 +6,7 @@ import { regionData } from '../data/regionData';
 import { anarchistTheories } from '../data/anarchistTheories';
 import { glossaryTerms } from '../data/glossary';
 import { readingPaths } from '../data/readingPaths';
-import { influenceNodes, influenceEdges } from '../data/influences';
+import { influenceNodes, influenceEdges, influenceBox } from '../data/influences';
 import { findBookByTitle, getAllBooks } from '../utils/library';
 import TheoriesView from './TheoriesView';
 import GlossaryView from './GlossaryView';
@@ -45,17 +45,20 @@ describe('Datos de las nuevas secciones', () => {
     expect(invalid).toEqual([]);
   });
 
-  it('el layout respeta el flujo (nadie a la izquierda de quien lo influyó) y no solapa nodos', () => {
+  it('el layout respeta el flujo (nadie a la izquierda de quien lo influyó) y no solapa nodos ni etiquetas', () => {
     const byId = Object.fromEntries(influenceNodes.map((n) => [n.id, n]));
     influenceEdges.forEach(([from, to]) => {
       expect(byId[to].x).toBeGreaterThan(byId[from].x);
     });
+    const { halfW, halfH, gap } = influenceBox;
+    const collides = (a, b) =>
+      Math.abs(a.x - b.x) < halfW(a.name) + halfW(b.name) + gap &&
+      Math.abs(a.y - b.y) < halfH + halfH + gap;
     for (let i = 0; i < influenceNodes.length; i++) {
       for (let j = i + 1; j < influenceNodes.length; j++) {
         const a = influenceNodes[i];
         const b = influenceNodes[j];
-        const sameSpot = Math.abs(a.x - b.x) < 0.0001 && Math.abs(a.y - b.y) < 2.5;
-        expect(sameSpot).toBe(false);
+        expect(collides(a, b)).toBe(false);
       }
     }
   });
