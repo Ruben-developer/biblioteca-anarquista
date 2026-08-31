@@ -45,6 +45,21 @@ describe('Datos de las nuevas secciones', () => {
     expect(invalid).toEqual([]);
   });
 
+  it('el layout respeta el flujo (nadie a la izquierda de quien lo influyó) y no solapa nodos', () => {
+    const byId = Object.fromEntries(influenceNodes.map((n) => [n.id, n]));
+    influenceEdges.forEach(([from, to]) => {
+      expect(byId[to].x).toBeGreaterThan(byId[from].x);
+    });
+    for (let i = 0; i < influenceNodes.length; i++) {
+      for (let j = i + 1; j < influenceNodes.length; j++) {
+        const a = influenceNodes[i];
+        const b = influenceNodes[j];
+        const sameSpot = Math.abs(a.x - b.x) < 0.0001 && Math.abs(a.y - b.y) < 2.5;
+        expect(sameSpot).toBe(false);
+      }
+    }
+  });
+
   it('todos los nodos de influencia con authorKey coinciden con un autor del catálogo', () => {
     const authorNames = new Set(getAllBooks(regionData).filter((b) => b.visible !== false).map((b) => b.author));
     const unmatched = influenceNodes.filter(

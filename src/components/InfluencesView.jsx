@@ -6,6 +6,7 @@ import { getAllAuthors } from '../utils/library';
 
 const NODE_R = 1.1;
 const NODE_R_ACTIVE = 1.7;
+const NODE_HIT_R = NODE_R_ACTIVE * 2; // zona de clic invisible (el doble del nodo activo)
 
 const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
@@ -92,10 +93,16 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
                 onClick={() => setSelectedId((prev) => (prev === node.id ? null : node.id))}
               >
                 <circle
+                  r={NODE_HIT_R}
+                  fill="transparent"
+                  stroke="none"
+                  style={{ cursor: 'pointer' }}
+                />
+                <circle
                   r={active ? NODE_R_ACTIVE : NODE_R}
                   fill={dimmed ? nodeDim : nodeFill}
                   opacity={dimmed ? 0.35 : 1}
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: 'pointer', pointerEvents: 'none' }}
                 />
                 <text
                   textAnchor="middle"

@@ -6,7 +6,7 @@
 // Layout direccional: X = flujo de influencia (izq = influyó en otros,
 // der = fue influido). Y = año de nacimiento (arriba = más antiguo,
 // abajo = más reciente). Las aristas siempre van de izq → der.
-export const influenceNodes = [
+const _rawInfluenceNodes = [
   // ── 1800s: fundadores ──
   { id: 'stirner', name: 'Stirner', years: '1806–1856', region: 'Alemania', authorKey: 'Max Stirner', x: 10, y: 63, bio: 'Autor de "El único y su propiedad": el egoísmo como base del individualismo radical.' },
   { id: 'proudhon', name: 'Proudhon', years: '1809–1865', region: 'Francia', authorKey: 'Pierre-Joseph Proudhon', x: 20, y: 61, bio: 'Padre del mutualismo y primer autoproclamado anarquista. Su pregunta "¿qué es la propiedad?" abre la tradición.' },
@@ -117,3 +117,57 @@ export const influenceEdges = [
   ['graeber', 'gelderloos'],
   ['proudhon', 'guerin']
 ];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Layout automático de la red.
+//
+// Elimina las coordenadas escritas a mano (que provocaban solapes y que a veces
+// dejaban a un nodo a la IZQUIERDA de quien lo influyó). Ahora se calculan:
+//   • Columna (eje X) = camino de influencia más largo desde una fuente → el
+//     flujo SIEMPRE va de izquierda a derecha y nadie queda a la izquierda de
+//     quien influyó en él.
+//   • Fila (eje Y) = año de nacimiento, ordenado dentro de cada columna
+//     (arriba = más antiguo, abajo = más reciente). Al repartir los nodos por
+//     columna con Y distinto, se evitan los solapes.
+// Las coordenadas «x»/«y» se emiten en el espacio del data (el viewBox los
+// escala; la vista usa toSvgY = y * 0.6 para el eje vertical).
+// ─────────────────────────────────────────────────────────────────────────────
+const birthYear = (node) => {
+  const m = String(node.years || '').match(/(\d{4})/);
+  return m ? Number(m[1]) : 0;
+};
+
+const buildInfluenceLayout = (rawNodes, edges) => {
+  const col = {};
+  const longestPath = (id) => {
+    if (col[id] !== undefined) return col[id];
+    const incoming = edges.filter(([, to]) => to === id).map(([from]) => from);
+    if (incoming.length === 0) { col[id] = 0; return 0; }
+    col[id] = Math.max(...incoming.map(longestPath)) + 1;
+    return col[id];
+  };
+  rawNodes.forEach((n) => longestPath(n.id));
+
+  const maxCol = Math.max(...rawNodes.map((n) => col[n.id]));
+  const svgX = (c) => (maxCol === 0 ? 52 : 10 + (c / maxCol) * 82);
+
+  const groups = {};
+  rawNodes.forEach((n) => {
+    (groups[col[n.id]] ??= []).push(n);
+  });
+
+  return rawNodes.map((n) => {
+    const c = col[n.id];
+    const group = groups[c].slice().sort((a, b) => birthYear(a) - birthYear(b));
+    const idx = group.indexOf(n);
+    const count = group.length;
+    const svgY = count === 1 ? 14 : -8 + (idx / (count - 1)) * 44;
+    return {
+      ...n,
+      x: Math.round(svgX(c) * 10) / 10,
+      y: Math.round((svgY / 0.6) * 10) / 10,
+    };
+  });
+};
+
+export const influenceNodes = buildInfluenceLayout(_rawInfluenceNodes, influenceEdges);
