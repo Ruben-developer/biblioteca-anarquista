@@ -124,7 +124,7 @@ export const anarchistTheories = [
       '¡Escucha, marxista!',
       'Tecnología y anarquismo',
       'El anarquismo y el movimiento ambiental',
-      'Contra la nocividad. anarquismo, antidesarrollismo, revolucion',
+      'Contra la nocividad. Anarquismo, antidesarrollismo, revolución',
       'Perspectivas antidesarrollistas',
       'Fuck Green New Deal. Colapso y alternativas',
       'El tren de los dirigentes. Conferencia sobre el TAV',
@@ -217,7 +217,7 @@ export const anarchistTheories = [
     id: 'sin-adjetivos',
     name: 'Anarquismo sin adjetivos, síntesis y filosofía general',
     icon: '🔮',
-    description: 'El anarquismo como doctrina unitaria que trasciende las corrientes: síntesis de las不同的 tendencias, reflexión filosófica y debate sobre la identidad libertaria.',
+    description: 'El anarquismo como doctrina unitaria que trasciende las corrientes: síntesis de las diferentes tendencias, reflexión filosófica y debate sobre la identidad libertaria.',
     keyIdeas: ['Síntesis de las corrientes anarquistas', 'Anarquismo sin adjetivos', 'Filosofía general de la anarquía', 'Debate identitario libertario'],
     keyAuthors: ['Fernando Tarrida Mármol', 'Sébastien Faure', 'Volin', 'Daniel Guérin', 'Diego Abad de Santillán', 'Tomás Ibáñez', 'Peter Gelderloos', 'Colin Ward', 'Michael Albert'],
     books: [

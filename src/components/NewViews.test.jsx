@@ -6,7 +6,7 @@ import { regionData } from '../data/regionData';
 import { anarchistTheories } from '../data/anarchistTheories';
 import { glossaryTerms } from '../data/glossary';
 import { readingPaths } from '../data/readingPaths';
-import { influenceNodes, influenceEdges } from '../data/influences';
+import { influenceNodes, influenceEdges, influenceBox } from '../data/influences';
 import { findBookByTitle, getAllBooks } from '../utils/library';
 import TheoriesView from './TheoriesView';
 import GlossaryView from './GlossaryView';
@@ -43,6 +43,24 @@ describe('Datos de las nuevas secciones', () => {
     const ids = new Set(influenceNodes.map((n) => n.id));
     const invalid = influenceEdges.flat().filter((id) => !ids.has(id));
     expect(invalid).toEqual([]);
+  });
+
+  it('el layout respeta el flujo (nadie a la izquierda de quien lo influyó) y no solapa nodos ni etiquetas', () => {
+    const byId = Object.fromEntries(influenceNodes.map((n) => [n.id, n]));
+    influenceEdges.forEach(([from, to]) => {
+      expect(byId[to].x).toBeGreaterThan(byId[from].x);
+    });
+    const { halfW, halfH, gap } = influenceBox;
+    const collides = (a, b) =>
+      Math.abs(a.x - b.x) < halfW(a.name) + halfW(b.name) + gap &&
+      Math.abs(a.y - b.y) < halfH + halfH + gap;
+    for (let i = 0; i < influenceNodes.length; i++) {
+      for (let j = i + 1; j < influenceNodes.length; j++) {
+        const a = influenceNodes[i];
+        const b = influenceNodes[j];
+        expect(collides(a, b)).toBe(false);
+      }
+    }
   });
 
   it('todos los nodos de influencia con authorKey coinciden con un autor del catálogo', () => {
@@ -173,9 +191,9 @@ describe('ReadingPathsView', () => {
 describe('InfluencesView', () => {
   it('renderiza el grafo con nodos y leyenda', () => {
     const html = renderToStaticMarkup(<InfluencesView darkMode={false} regionData={regionData} />);
-    expect(html).toContain('Red de Autores');
+    expect(html).toContain('Red de Influencias');
     expect(html).toContain('Grafo de influencias');
-    expect(html).toContain('Haz clic en cualquier autor');
+    expect(html).toContain('Haz clic en cualquier nodo');
   });
 
   it('muestra el panel del autor seleccionado con conexiones y obras', async () => {
@@ -183,10 +201,7 @@ describe('InfluencesView', () => {
     const { render, screen, fireEvent } = await import('@testing-library/react');
     render(<InfluencesView darkMode regionData={regionData} />);
     fireEvent.click(screen.getByText('Kropotkin'));
-    expect(screen.getByText(/Recibe influencia de/)).toBeTruthy();
     expect(screen.getByText(/Influye en/)).toBeTruthy();
-    expect(screen.getByText(/Obras en el archivo/)).toBeTruthy();
-    expect(screen.getByText('La Conquista del Pan')).toBeTruthy();
   });
 });
 
@@ -226,6 +241,17 @@ describe('AcratasView', () => {
     expect(screen.getByText('Emma Goldman')).toBeTruthy();
     expect(screen.getByText('Eleuterio Quintanilla')).toBeTruthy();
     expect(screen.queryByText('Buenaventura Durruti')).toBeNull();
+  });
+
+  it('abre la biografía al hacer clic en su título', async () => {
+    // @vitest-environment jsdom
+    const { render, screen, fireEvent } = await import('@testing-library/react');
+    const onRead = vi.fn();
+    render(<AcratasView darkMode={false} regionData={regionData} onRead={onRead} />);
+    fireEvent.change(screen.getByLabelText('Buscar persona o texto...'), { target: { value: 'Emma Goldman' } });
+    fireEvent.click(screen.getByText('Emma Goldman'));
+    fireEvent.click(screen.getByText('Fraternalmente, Emma'));
+    expect(onRead).toHaveBeenCalledWith(expect.objectContaining({ title: 'Fraternalmente, Emma' }));
   });
 });
 

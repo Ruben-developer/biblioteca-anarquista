@@ -1,4 +1,4 @@
-// Red de influencias entre pensadores (menú "Red de Autores").
+// Red de influencias entre pensadores (menú "Red de Influencias").
 // Nodos con posiciones relativas (0-100) en un lienzo SVG y aristas de
 // influencia. Los libros de cada autor se resuelven contra regionData.js
 // por nombre de autor (getAllAuthors).
@@ -6,7 +6,7 @@
 // Layout direccional: X = flujo de influencia (izq = influyó en otros,
 // der = fue influido). Y = año de nacimiento (arriba = más antiguo,
 // abajo = más reciente). Las aristas siempre van de izq → der.
-export const influenceNodes = [
+const _rawInfluenceNodes = [
   // ── 1800s: fundadores ──
   { id: 'stirner', name: 'Stirner', years: '1806–1856', region: 'Alemania', authorKey: 'Max Stirner', x: 10, y: 63, bio: 'Autor de "El único y su propiedad": el egoísmo como base del individualismo radical.' },
   { id: 'proudhon', name: 'Proudhon', years: '1809–1865', region: 'Francia', authorKey: 'Pierre-Joseph Proudhon', x: 20, y: 61, bio: 'Padre del mutualismo y primer autoproclamado anarquista. Su pregunta "¿qué es la propiedad?" abre la tradición.' },
@@ -117,3 +117,175 @@ export const influenceEdges = [
   ['graeber', 'gelderloos'],
   ['proudhon', 'guerin']
 ];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Layout orgánico de la red (force-directed «relajado»).
+//
+// Sustituye las coordenadas manuales (solapes y nodos a la izquierda de quien
+// los influyó) por un layout calculado que combina tres deseos:
+//   • ANTIGÜEDAD: el eje Y se ordena por año de nacimiento (arriba = más
+//     antiguo, abajo = más reciente). No es un orden rígido por filas: cada
+//     nodo conserva libertad horizontal y cierto juego vertical.
+//   • FLUJO: cada nodo influido queda SIEMPRE a la derecha de quien lo influyó
+//     (X = flujo izq → der), sin columnas forzadas.
+//   • SIN SOLAPES: repulsión entre nodos que tiene en cuenta el RADIO de cada
+//     uno INCLUIDA SU ETIQUETA (mitad del ancho del nombre y mitad de la altura
+//     círculo+nombre), de modo que ni los nodos ni sus nombres se tocan.
+//
+// Es un pequeño simulador de fuerzas determinista (las posiciones iniciales son
+// los objetivos, sin aleatoriedad) que itera hasta llegar a una disposición
+// estable. Las coordenadas «x»/«y» se emiten ya en el espacio alto del lienzo
+// (la vista usa el mismo espacio en su viewBox).
+// ─────────────────────────────────────────────────────────────────────────────
+const birthYear = (node) => {
+  const m = String(node.years || '').match(/(\d{4})/);
+  return m ? Number(m[1]) : 0;
+};
+
+// Lienzo (espacio svg): ANCHO, la red crece hacia la derecha siguiendo el flujo
+// de influencia (con scroll horizontal), y compacto en vertical (antigüedad).
+const LX0 = -10, LX1 = 360, LY0 = -14, LY1 = 52;
+
+const halfW = (name) => Math.max(3.2, String(name).length * 0.62);
+const halfH = 3.8; // círculo + etiqueta (radio de no-solape que incluye el nombre)
+const GAP = 2.6;
+
+const buildInfluenceLayout = (rawNodes, edges) => {
+  // X objetivo: flujo de influencia (camino más largo), como base horizontal.
+  const col = {};
+  const longestPath = (id) => {
+    if (col[id] !== undefined) return col[id];
+    const incoming = edges.filter(([, to]) => to === id).map(([from]) => from);
+    if (incoming.length === 0) { col[id] = 0; return 0; }
+    col[id] = Math.max(...incoming.map(longestPath)) + 1;
+    return col[id];
+  };
+  rawNodes.forEach((n) => longestPath(n.id));
+  const maxCol = Math.max(...rawNodes.map((n) => col[n.id]));
+  const targetX = (n) => LX0 + 12 + (col[n.id] / (maxCol || 1)) * (LX1 - LX0 - 24);
+
+  // Y objetivo: antigüedad (año de nacimiento, arriba más antiguo).
+  const byYear = rawNodes.slice().sort((a, b) => birthYear(a) - birthYear(b));
+  const rank = {};
+  byYear.forEach((n, i) => { rank[n.id] = i; });
+  const targetY = (n) => LY0 + 6 + (rank[n.id] / (rawNodes.length - 1)) * (LY1 - LY0 - 12);
+
+  // Posiciones iniciales = objetivos (sin aleatoriedad → determinista).
+  const pos = {};
+  rawNodes.forEach((n) => { pos[n.id] = { x: targetX(n), y: targetY(n) }; });
+
+  const minBox = (a, b) => ({
+    minX: halfW(a.name) + halfW(b.name) + GAP,
+    minY: halfH + halfH + GAP,
+  });
+  const overlap = (a, b) => {
+    const dx = pos[a.id].x - pos[b.id].x;
+    const dy = pos[a.id].y - pos[b.id].y;
+    const { minX, minY } = minBox(a, b);
+    const ox = minX - Math.abs(dx);
+    const oy = minY - Math.abs(dy);
+    return ox > 0 && oy > 0 ? { ox, oy, dx, dy } : null;
+  };
+
+  // Simulación de fuerzas: repulsión (incluye etiqueta) + flujo + antigüedad.
+  for (let iter = 0; iter < 3000; iter++) {
+    for (let i = 0; i < rawNodes.length; i++) {
+      for (let j = i + 1; j < rawNodes.length; j++) {
+        const a = rawNodes[i], b = rawNodes[j];
+        const c = overlap(a, b);
+        if (!c) continue;
+        if (c.dx >= 0) { pos[a.id].x += c.ox * 0.5; pos[b.id].x -= c.ox * 0.5; }
+        else { pos[a.id].x -= c.ox * 0.5; pos[b.id].x += c.ox * 0.5; }
+        if (c.dy >= 0) { pos[a.id].y += c.oy * 0.5; pos[b.id].y -= c.oy * 0.5; }
+        else { pos[a.id].y -= c.oy * 0.5; pos[b.id].y += c.oy * 0.5; }
+      }
+    }
+    for (const [from, to] of edges) {
+      const want = Math.max(9, halfW(rawNodes.find((n) => n.id === from).name) + halfW(rawNodes.find((n) => n.id === to).name) + 4);
+      const dx = pos[to].x - pos[from].x;
+      if (dx < want) { const d = (want - dx) * 0.2; pos[to].x += d; pos[from].x -= d * 0.4; }
+    }
+    for (const n of rawNodes) {
+      pos[n.id].x += (targetX(n) - pos[n.id].x) * 0.04;
+      pos[n.id].y += (targetY(n) - pos[n.id].y) * 0.12;
+    }
+    for (let k = 0; k < 3; k++) {
+      for (const [from, to] of edges) {
+        const req = halfW(rawNodes.find((n) => n.id === from).name) + halfW(rawNodes.find((n) => n.id === to).name) + 1;
+        if (pos[to].x < pos[from].x + req) pos[to].x = pos[from].x + req;
+      }
+    }
+    for (const n of rawNodes) {
+      pos[n.id].x = Math.max(LX0 + 3, Math.min(LX1 - 3, pos[n.id].x));
+      pos[n.id].y = Math.max(LY0 + 2, Math.min(LY1 - 2, pos[n.id].y));
+    }
+  }
+
+  // Desenredo final: elimina cualquier solape residual RESPETANDO el flujo
+  // (nadie a la izquierda de quien lo influyó). Al empujar un nodo hacia la
+  // derecha no puede pasar a quienes influye; hacia la izquierda no puede
+  // quedar a la izquierda de quienes lo influyen.
+  const edgeReqs = (id) => {
+    let minRight = null; // límite derecho impuesto por las aristas salientes
+    let maxLeft = null;  // límite izquierdo impuesto por las aristas entrantes
+    for (const [from, to] of edges) {
+      const req = halfW(rawNodes.find((n) => n.id === from).name) + halfW(rawNodes.find((n) => n.id === to).name) + 1;
+      if (to === id) maxLeft = Math.max(maxLeft ?? -Infinity, pos[from].x + req);
+      if (from === id) minRight = Math.min(minRight ?? Infinity, pos[to].x - req);
+    }
+    return { minRight, maxLeft };
+  };
+  for (let guard = 0; guard < 6000; guard++) {
+    let any = false;
+    for (let i = 0; i < rawNodes.length; i++) {
+      for (let j = i + 1; j < rawNodes.length; j++) {
+        const a = rawNodes[i], b = rawNodes[j];
+        const c = overlap(a, b);
+        if (!c) continue;
+        any = true;
+        if (Math.abs(pos[a.id].y - pos[b.id].y) < halfH + halfH + 2) {
+          // misma fila → separar horizontalmente, respetando el flujo
+          const { minRight: mrA, maxLeft: mlA } = edgeReqs(a.id);
+          const { minRight: mrB, maxLeft: mlB } = edgeReqs(b.id);
+          let da, db;
+          if (pos[a.id].x <= pos[b.id].x) { da = -0.1; db = c.ox + 0.2; }
+          else { da = c.ox + 0.2; db = -0.1; }
+          let na = pos[a.id].x + da, nb = pos[b.id].x + db;
+          if (da < 0 && mlA != null) na = Math.max(na, mlA);
+          if (da > 0 && mrA != null) na = Math.min(na, mrA);
+          if (db < 0 && mlB != null) nb = Math.max(nb, mlB);
+          if (db > 0 && mrB != null) nb = Math.min(nb, mrB);
+          if (na !== pos[a.id].x && na >= pos[a.id].x + da - 0.001) pos[a.id].x = na;
+          else pos[a.id].x += da;
+          if (nb !== pos[b.id].x && nb >= pos[b.id].x + db - 0.001) pos[b.id].x = nb;
+          else pos[b.id].x += db;
+        } else {
+          // filas distintas → separar verticalmente (no afecta al flujo)
+          if (pos[a.id].y <= pos[b.id].y) { pos[b.id].y += c.oy; pos[a.id].y -= 0.1; }
+          else { pos[a.id].y += c.oy; pos[b.id].y -= 0.1; }
+        }
+      }
+    }
+    if (!any) break;
+    // refuerzo de flujo (empuja al influido a la derecha del influyente)
+    for (const [from, to] of edges) {
+      const req = halfW(rawNodes.find((n) => n.id === from).name) + halfW(rawNodes.find((n) => n.id === to).name) + 1;
+      if (pos[to].x < pos[from].x + req) pos[to].x = pos[from].x + req;
+    }
+    for (const n of rawNodes) {
+      pos[n.id].x = Math.max(LX0 + 2, Math.min(LX1 - 2, pos[n.id].x));
+      pos[n.id].y = Math.max(LY0 + 2, Math.min(LY1 - 2, pos[n.id].y));
+    }
+  }
+
+  return rawNodes.map((n) => ({
+    ...n,
+    x: Math.round(pos[n.id].x * 100) / 100,
+    y: Math.round(pos[n.id].y * 100) / 100,
+  }));
+};
+
+export const influenceNodes = buildInfluenceLayout(_rawInfluenceNodes, influenceEdges);
+
+// Radio de «no toparse» que incluye la etiqueta (usado por testes y la vista).
+export const influenceBox = { halfW, halfH, gap: GAP };

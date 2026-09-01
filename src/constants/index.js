@@ -44,7 +44,7 @@ export const VIEW_LABELS = {
   [VIEWS.FAVORITES]: 'Mi Biblioteca',
   [VIEWS.LIBRARY]: 'Biblioteca',
   [VIEWS.THEORIES]: 'Teorías',
-  [VIEWS.INFLUENCES]: 'Red de Autores',
+  [VIEWS.INFLUENCES]: 'Red de Influencias',
   [VIEWS.ACRATAS]: 'Acratas',
   [VIEWS.PATHS]: 'Rutas',
   [VIEWS.GLOSSARY]: 'Glosario',

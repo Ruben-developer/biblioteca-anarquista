@@ -27,7 +27,7 @@ console.log(`Verificando ${unique.length} descargas contra ${BASE}\n`);
 
 const broken = [];
 const checked = await Promise.all(unique.map(async (file) => {
-  const url = BASE + file;
+  const url = BASE + file.split('/').map(encodeURIComponent).join('/');
   try {
     const res = await fetch(url, { method: 'HEAD' });
     const ok = res.status === 200;

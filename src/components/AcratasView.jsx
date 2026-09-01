@@ -186,9 +186,19 @@ const AcratasView = ({
                             >
                               <div className="flex justify-between items-start gap-2">
                                 <div className="flex-1">
-                                  <p className={`text-sm font-medium ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
-                                    {book.title}
-                                  </p>
+                                  {book.filename ? (
+                                    <button
+                                      onClick={() => onRead(book)}
+                                      className={`text-sm font-medium text-left ${darkMode ? 'text-gray-200 hover:text-red-400' : 'text-gray-800 hover:text-amber-700'}`}
+                                      title={`Abrir ${book.title}`}
+                                    >
+                                      {book.title}
+                                    </button>
+                                  ) : (
+                                    <p className={`text-sm font-medium ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
+                                      {book.title}
+                                    </p>
+                                  )}
                                   <div className="flex items-center gap-2 mt-1 flex-wrap">
                                     {book.author && (
                                       <span className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
