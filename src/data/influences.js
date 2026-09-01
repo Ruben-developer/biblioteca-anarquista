@@ -142,8 +142,9 @@ const birthYear = (node) => {
   return m ? Number(m[1]) : 0;
 };
 
-// Lienzo (espacio svg) — alto para que quepan todas las etiquetas.
-const LX0 = -8, LX1 = 112, LY0 = -6, LY1 = 208;
+// Lienzo (espacio svg): ANCHO, la red crece hacia la derecha siguiendo el flujo
+// de influencia (con scroll horizontal), y compacto en vertical (antigüedad).
+const LX0 = -10, LX1 = 360, LY0 = -14, LY1 = 52;
 
 const halfW = (name) => Math.max(3.2, String(name).length * 0.62);
 const halfH = 3.8; // círculo + etiqueta (radio de no-solape que incluye el nombre)
@@ -187,7 +188,7 @@ const buildInfluenceLayout = (rawNodes, edges) => {
   };
 
   // Simulación de fuerzas: repulsión (incluye etiqueta) + flujo + antigüedad.
-  for (let iter = 0; iter < 2000; iter++) {
+  for (let iter = 0; iter < 3000; iter++) {
     for (let i = 0; i < rawNodes.length; i++) {
       for (let j = i + 1; j < rawNodes.length; j++) {
         const a = rawNodes[i], b = rawNodes[j];
@@ -220,10 +221,21 @@ const buildInfluenceLayout = (rawNodes, edges) => {
     }
   }
 
-  // Desenredo final: elimina cualquier solape residual, dando prioridad a
-  // separar horizontalmente (los nombres anchos en la misma fila) y, si no
-  // comparten fila, separando verticalmente.
-  for (let guard = 0; guard < 4000; guard++) {
+  // Desenredo final: elimina cualquier solape residual RESPETANDO el flujo
+  // (nadie a la izquierda de quien lo influyó). Al empujar un nodo hacia la
+  // derecha no puede pasar a quienes influye; hacia la izquierda no puede
+  // quedar a la izquierda de quienes lo influyen.
+  const edgeReqs = (id) => {
+    let minRight = null; // límite derecho impuesto por las aristas salientes
+    let maxLeft = null;  // límite izquierdo impuesto por las aristas entrantes
+    for (const [from, to] of edges) {
+      const req = halfW(rawNodes.find((n) => n.id === from).name) + halfW(rawNodes.find((n) => n.id === to).name) + 1;
+      if (to === id) maxLeft = Math.max(maxLeft ?? -Infinity, pos[from].x + req);
+      if (from === id) minRight = Math.min(minRight ?? Infinity, pos[to].x - req);
+    }
+    return { minRight, maxLeft };
+  };
+  for (let guard = 0; guard < 6000; guard++) {
     let any = false;
     for (let i = 0; i < rawNodes.length; i++) {
       for (let j = i + 1; j < rawNodes.length; j++) {
@@ -232,15 +244,34 @@ const buildInfluenceLayout = (rawNodes, edges) => {
         if (!c) continue;
         any = true;
         if (Math.abs(pos[a.id].y - pos[b.id].y) < halfH + halfH + 2) {
-          if (pos[a.id].x <= pos[b.id].x) { pos[b.id].x += c.ox + 0.2; pos[a.id].x -= 0.1; }
-          else { pos[a.id].x += c.ox + 0.2; pos[b.id].x -= 0.1; }
+          // misma fila → separar horizontalmente, respetando el flujo
+          const { minRight: mrA, maxLeft: mlA } = edgeReqs(a.id);
+          const { minRight: mrB, maxLeft: mlB } = edgeReqs(b.id);
+          let da, db;
+          if (pos[a.id].x <= pos[b.id].x) { da = -0.1; db = c.ox + 0.2; }
+          else { da = c.ox + 0.2; db = -0.1; }
+          let na = pos[a.id].x + da, nb = pos[b.id].x + db;
+          if (da < 0 && mlA != null) na = Math.max(na, mlA);
+          if (da > 0 && mrA != null) na = Math.min(na, mrA);
+          if (db < 0 && mlB != null) nb = Math.max(nb, mlB);
+          if (db > 0 && mrB != null) nb = Math.min(nb, mrB);
+          if (na !== pos[a.id].x && na >= pos[a.id].x + da - 0.001) pos[a.id].x = na;
+          else pos[a.id].x += da;
+          if (nb !== pos[b.id].x && nb >= pos[b.id].x + db - 0.001) pos[b.id].x = nb;
+          else pos[b.id].x += db;
         } else {
+          // filas distintas → separar verticalmente (no afecta al flujo)
           if (pos[a.id].y <= pos[b.id].y) { pos[b.id].y += c.oy; pos[a.id].y -= 0.1; }
           else { pos[a.id].y += c.oy; pos[b.id].y -= 0.1; }
         }
       }
     }
     if (!any) break;
+    // refuerzo de flujo (empuja al influido a la derecha del influyente)
+    for (const [from, to] of edges) {
+      const req = halfW(rawNodes.find((n) => n.id === from).name) + halfW(rawNodes.find((n) => n.id === to).name) + 1;
+      if (pos[to].x < pos[from].x + req) pos[to].x = pos[from].x + req;
+    }
     for (const n of rawNodes) {
       pos[n.id].x = Math.max(LX0 + 2, Math.min(LX1 - 2, pos[n.id].x));
       pos[n.id].y = Math.max(LY0 + 2, Math.min(LY1 - 2, pos[n.id].y));

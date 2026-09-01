@@ -61,7 +61,7 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
 
       <div className={`${cardClass} border-2 rounded-lg p-4 shadow-md overflow-x-auto`}>
         <svg
-          viewBox="-12 -8 135 218"
+          viewBox="-18 -16 384 72"
           className="w-full min-w-[700px]"
           role="img"
           aria-label="Grafo de influencias entre pensadores anarquistas"
