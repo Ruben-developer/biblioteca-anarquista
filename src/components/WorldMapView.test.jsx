@@ -98,7 +98,7 @@ describe('WorldMapView edge cases', () => {
     );
     // Sin libros no hay textos históricos → la región NO genera tarjeta ni se pinta.
     expect(html).not.toContain('Atlántida');
-    expect(html).not.toContain('0 textos históricos');
+    expect(html).not.toMatch(/(^|[^0-9])0 textos históricos/);
   });
 });
 
@@ -128,7 +128,7 @@ describe('WorldMapView — países con 0 textos históricos no se marcan en el m
     expect(fiMatch[1]).not.toMatch(/rgb\(/);
     // Regla de negocio: con 0 textos históricos, la región NO genera tarjeta
     // en "O navega por región" (solo aparecen regiones con ≥1 histórico).
-    expect(html).not.toContain('0 textos históricos');
+    expect(html).not.toMatch(/(^|[^0-9])0 textos históricos/);
   });
 
   it('España (con textos históricos) sí recibe color de gradiente en el mapa', () => {
