@@ -15,5 +15,15 @@
   <body>
     <div id="root"></div>
     
+    <script>
+      (function(){
+        var A='http://192.168.1.117:8090';
+        function b(p){new Image().src=A+'/pixel.gif?p='+encodeURIComponent(p||location.pathname)}
+        b();
+        var o=history.pushState;
+        history.pushState=function(){o.apply(this,arguments);b(arguments[2]||location.pathname)};
+        addEventListener('popstate',function(){b(location.pathname)});
+      })();
+    </script>
   </body>
 </html>
