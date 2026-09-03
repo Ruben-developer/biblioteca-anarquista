@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Export/import de libros para La Idea.
-Formato mínimo: title, author, year, category, filename.
+ID determinista (sha256 de título+autor) + notas incluidas.
 
 Uso:
   python3 tools/export_books.py export > books.json
@@ -9,99 +9,92 @@ Uso:
   python3 tools/export_books.py import books.json --dry-run
 """
 
+import hashlib
 import json
 import re
 import sys
 from pathlib import Path
 
 REGION_DATA = Path(__file__).parent.parent / 'src' / 'data' / 'regionData.js'
-
 CATEGORIES = {'historia', 'teoria', 'acratas', 'otros'}
 
 
+def make_id(title, author):
+    """ID determinista: sha256 corto de título+autor."""
+    raw = f'{title.strip().lower()}|{author.strip().lower()}'
+    return hashlib.sha256(raw.encode()).hexdigest()[:12]
+
+
 def parse_region_data():
-    """Extrae todos los libros de regionData.js."""
+    """Extrae todos los libros de regionData.js con note si existe."""
     content = REGION_DATA.read_text()
     books = []
 
-    # Encuentra cada libro: { title: '...', author: '...', ... }
-    book_pattern = re.compile(
-        r'\{\s*title:\s*["\'](.+?)["\']'
-        r'(?:,\s*author:\s*["\'](.+?)["\'])?'
-        r'(?:,\s*year:\s*(\d{4}))?'
-        r'(?:,\s*category:\s*["\'](\w+)["\'])?'
-        r'(?:,\s*(?:[^}])*?filename:\s*["\'](.+?)["\'])?'
-        , re.DOTALL
-    )
-
-    # Extract regions
-    region_pattern = re.compile(r'"([^"]+)":\s*\{\s*iso:')
-    regions = {}
-    current_region = None
-
     for line in content.split('\n'):
-        region_match = re.search(r'"([^"]+)":\s*\{', line)
-        if region_match and 'iso:' in line:
-            current_region = region_match.group(1)
-        elif region_match and 'books:' in line:
-            current_region = region_match.group(1)
+        if 'title:' not in line:
+            continue
 
-        book_match = book_pattern.search(line)
-        if book_match:
-            title = book_match.group(1)
-            author = book_match.group(2) or 'Varios Autores'
-            year = int(book_match.group(3)) if book_match.group(3) else None
-            category = book_match.group(4) or 'otros'
-            filename = book_match.group(5) or ''
+        title_m = re.search(r'title:\s*["\'](.+?)["\']', line)
+        if not title_m:
+            continue
+        title = title_m.group(1)
 
-            books.append({
-                'title': title,
-                'author': author,
-                'year': year,
-                'category': category,
-                'filename': filename,
-            })
+        author_m = re.search(r'author:\s*["\'](.+?)["\']', line)
+        author = author_m.group(1) if author_m else 'Varios Autores'
+
+        year_m = re.search(r'year:\s*(\d{4})', line)
+        year = int(year_m.group(1)) if year_m else None
+
+        cat_m = re.search(r'category:\s*["\'](\w+)["\']', line)
+        category = cat_m.group(1) if cat_m else 'otros'
+
+        fn_m = re.search(r'filename:\s*["\'](.+?)["\']', line)
+        filename = fn_m.group(1) if fn_m else ''
+
+        note_m = re.search(r'note:\s*["\'](.+?)["\']', line)
+        note = note_m.group(1) if note_m else ''
+
+        books.append({
+            'id': make_id(title, author),
+            'title': title,
+            'author': author,
+            'category': category,
+            'year': year,
+            'filename': filename,
+            'note': note,
+        })
 
     return books
 
 
 def export_books():
-    """Exporta libros en formato mínimo."""
+    """Exporta libros con ID y note."""
     books = parse_region_data()
-    # Simplificar: solo campos esenciales
-    minimal = []
-    for b in books:
-        entry = {
-            'title': b['title'],
-            'author': b['author'],
-            'category': b['category'],
-        }
-        if b['year']:
-            entry['year'] = b['year']
-        if b['filename']:
-            entry['filename'] = b['filename']
-        minimal.append(entry)
-
-    print(json.dumps(minimal, indent=2, ensure_ascii=False))
+    print(json.dumps(books, indent=2, ensure_ascii=False))
 
 
 def import_books(filepath, dry_run=False):
-    """Importa libros desde JSON mínimo."""
+    """Importa libros. Por ID: actualiza si existe, inserta si no."""
     with open(filepath) as f:
-        books = json.load(f)
+        incoming = json.load(f)
 
     content = REGION_DATA.read_text()
+    existing = parse_region_data()
+    existing_ids = {b['id'] for b in existing}
 
     imported = 0
+    updated = 0
     skipped = 0
     errors = []
 
-    for book in books:
+    for book in incoming:
+        bid = book.get('id', '')
         title = book.get('title', '').strip()
         author = book.get('author', 'Varios Autores').strip()
         year = book.get('year')
         category = book.get('category', 'otros').strip()
         filename = book.get('filename', '').strip()
+        note = book.get('note', '').strip()
 
         if not title:
             errors.append(f'Sin título: {book}')
@@ -111,9 +104,35 @@ def import_books(filepath, dry_run=False):
             errors.append(f'Categoría inválida "{category}": {title}')
             continue
 
-        # Verificar si ya existe
-        if title in content:
-            skipped += 1
+        # Generar ID si no viene
+        if not bid:
+            bid = make_id(title, author)
+
+        # Si el ID ya existe → actualizar note/filename
+        if bid in existing_ids:
+            # Buscar la línea original y actualizar campos
+            pattern = re.compile(
+                r'(\{\s*title:\s*["\']' + re.escape(title) + r'["\']'
+                r'.*?)(\})',
+                re.DOTALL
+            )
+            match = pattern.search(content)
+            if match:
+                line = match.group(1)
+                # Actualizar note
+                if note:
+                    if 'note:' in line:
+                        line = re.sub(r'note:\s*["\'].*?["\']', f'note: "{note}"', line)
+                    else:
+                        line = line.rstrip() + f', note: "{note}"'
+                # Actualizar filename
+                if filename:
+                    if 'filename:' in line:
+                        line = re.sub(r'filename:\s*["\'].*?["\']', f'filename: "{filename}"', line)
+                    else:
+                        line = line.rstrip() + f', filename: "{filename}"'
+                content = content[:match.start()] + line + match.group(2) + content[match.end():]
+                updated += 1
             continue
 
         # Construir línea del libro
@@ -123,6 +142,8 @@ def import_books(filepath, dry_run=False):
         fields.append(f'category: "{category}"')
         if filename:
             fields.append(f'filename: "{filename}"')
+        if note:
+            fields.append(f'note: "{note}"')
 
         book_line = '      { ' + ', '.join(fields) + ' },'
 
@@ -131,22 +152,22 @@ def import_books(filepath, dry_run=False):
             imported += 1
             continue
 
-        # Insertar antes del cierre de la región más reciente
-        # Buscar el último '],\n' o ']\n' en el archivo
+        # Insertar al final del último array de books
         insert_pos = content.rfind('],')
         if insert_pos == -1:
             insert_pos = content.rfind(']\n')
         if insert_pos == -1:
-            errors.append(f'No se pudo encontrar punto de inserción: {title}')
+            errors.append(f'Sin punto de inserción: {title}')
             continue
 
         content = content[:insert_pos] + book_line + '\n    ' + content[insert_pos:]
+        existing_ids.add(bid)
         imported += 1
 
-    if not dry_run and imported > 0:
+    if not dry_run and (imported > 0 or updated > 0):
         REGION_DATA.write_text(content)
 
-    print(f'Importados: {imported} | Saltados (duplicados): {skipped} | Errores: {len(errors)}')
+    print(f'Importados: {imported} | Actualizados: {updated} | Errores: {len(errors)}')
     for e in errors:
         print(f'  ERROR: {e}')
 
