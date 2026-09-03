@@ -1,8 +1,10 @@
-import React, { useEffect, useMemo, useState } from 'react'
-import { Search, BookOpen, Heart, X, CalendarClock, Users, MapPin, ChevronLeft, ChevronRight } from 'lucide-react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
+import { Search, BookOpen, Heart, X, CalendarClock, Users, MapPin, ChevronLeft, ChevronRight, StickyNote, Download, Upload } from 'lucide-react'
 import { THEME, CATEGORIES } from '../constants'
 import { getAllBooks, filterBooks, sortBooks, getDecadeFromYear, getDailyFeaturedBook, getBookEvents, groupBooksByAuthor, groupBooksByRegion } from '../utils/library'
 import FeaturedBook from './FeaturedBook'
+import BookDetailModal from './BookDetailModal'
+import { useNotes } from '../hooks/useNotes'
 
 const DEFAULT_FILTERS = {
   searchTerm: '',
@@ -93,10 +95,17 @@ const BookMeta = ({ book, darkMode }) => (
   </div>
 )
 
-const BookCardInGroup = ({ book, favorites, onToggleFavorite, onRead, onOpenEvent, timelineEvents, darkMode }) => {
+const BookCardInGroup = ({ book, favorites, onToggleFavorite, onRead, onOpenEvent, onOpenBook, timelineEvents, darkMode, notesCount = 0 }) => {
   const isFav = favorites.some((f) => f.title === book.title)
     return (
-      <div className={`rounded-lg p-4 ${darkMode ? 'bg-gray-900/50 border-2 border-[#872320]/50' : 'bg-white/50 border-2 border-[#B79F6E]'}`}>
+      <div
+        className={`rounded-lg p-4 cursor-pointer transition-colors hover:shadow-md ${darkMode ? 'bg-gray-900/50 border-2 border-[#872320]/50' : 'bg-white/50 border-2 border-[#B79F6E]'}`}
+        onClick={() => onOpenBook(book)}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onOpenBook(book) } }}
+        aria-label={`Ver detalle: ${book.title}`}
+      >
         <div className="flex items-start justify-between gap-2 mb-1">
         <div>
           <h4 className={`font-semibold ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
@@ -104,17 +113,25 @@ const BookCardInGroup = ({ book, favorites, onToggleFavorite, onRead, onOpenEven
           </h4>
           <BookMeta book={book} darkMode={darkMode} />
         </div>
-        <FavoriteButton book={book} isFavorite={isFav} onToggleFavorite={onToggleFavorite} darkMode={darkMode} size={18} />
+        <div className="flex items-center gap-2">
+          {notesCount > 0 && (
+            <span className={`flex items-center gap-1 text-xs ${darkMode ? 'text-gray-500' : 'text-amber-600'}`} title={`${notesCount} nota(s)`}>
+              <StickyNote size={12} />
+              {notesCount}
+            </span>
+          )}
+          <FavoriteButton book={book} isFavorite={isFav} onToggleFavorite={onToggleFavorite} darkMode={darkMode} size={18} />
+        </div>
       </div>
       <BookEventLink book={book} timelineEvents={timelineEvents} onOpenEvent={onOpenEvent} darkMode={darkMode} />
-      <div className="flex items-center gap-3 mt-3">
+      <div className="flex items-center gap-3 mt-3" onClick={(e) => e.stopPropagation()}>
         <LeerButton book={book} onRead={onRead} darkMode={darkMode} />
       </div>
     </div>
   )
 }
 
-const GroupSection = ({ group, cardClass, darkMode, favorites, onToggleFavorite, onRead, onOpenEvent, timelineEvents, icon: Icon }) => (
+const GroupSection = ({ group, cardClass, darkMode, favorites, onToggleFavorite, onRead, onOpenEvent, onOpenBook, timelineEvents, icon: Icon, getNotes }) => (
   <div key={group.name} className={`${cardClass} border-2 rounded-lg p-5`}>
     <div className="flex items-center justify-between gap-2 mb-4">
       <h3 className={`font-bold text-lg flex items-center gap-2 ${darkMode ? 'text-gray-100' : 'text-gray-800'}`}>
@@ -134,24 +151,43 @@ const GroupSection = ({ group, cardClass, darkMode, favorites, onToggleFavorite,
           onToggleFavorite={onToggleFavorite}
           onRead={onRead}
           onOpenEvent={onOpenEvent}
+          onOpenBook={onOpenBook}
           timelineEvents={timelineEvents}
           darkMode={darkMode}
+          notesCount={getNotes(book).length}
         />
       ))}
     </div>
   </div>
 )
 
-const GridCard = ({ book, idx, favorites, onToggleFavorite, onRead, onOpenEvent, timelineEvents, darkMode, cardClass }) => {
+const GridCard = ({ book, idx, favorites, onToggleFavorite, onRead, onOpenEvent, onOpenBook, timelineEvents, darkMode, cardClass, notesCount = 0 }) => {
   const isFav = favorites.some((f) => f.title === book.title)
   const bookEvents = getBookEvents(timelineEvents, book)
   return (
-    <div key={`${book.region}-${book.title}`} className={`${cardClass} border-2 rounded-lg p-5 hover:shadow-lg transition-all flex flex-col card-appear`} style={{ animationDelay: `${Math.min(idx, 8) * 40}ms` }}>
+    <div
+      key={`${book.region}-${book.title}`}
+      className={`${cardClass} border-2 rounded-lg p-5 hover:shadow-lg transition-all flex flex-col card-appear cursor-pointer`}
+      style={{ animationDelay: `${Math.min(idx, 8) * 40}ms` }}
+      onClick={() => onOpenBook(book)}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onOpenBook(book) } }}
+      aria-label={`Ver detalle: ${book.title}`}
+    >
       <div className="flex items-start justify-between gap-2 mb-2">
         <span className={`text-xs px-2 py-1 rounded-full ${darkMode ? 'bg-gray-700 text-gray-300' : 'bg-amber-200 text-amber-900'}`}>
           {book.region}
         </span>
-        <FavoriteButton book={book} isFavorite={isFav} onToggleFavorite={onToggleFavorite} darkMode={darkMode} />
+        <div className="flex items-center gap-2">
+          {notesCount > 0 && (
+            <span className={`flex items-center gap-1 text-xs ${darkMode ? 'text-gray-500' : 'text-amber-600'}`} title={`${notesCount} nota(s)`}>
+              <StickyNote size={12} />
+              {notesCount}
+            </span>
+          )}
+          <FavoriteButton book={book} isFavorite={isFav} onToggleFavorite={onToggleFavorite} darkMode={darkMode} />
+        </div>
       </div>
       <h3 className={`font-bold ${darkMode ? 'text-gray-100' : 'text-gray-800'} mb-1`}>
         {book.title}
@@ -171,7 +207,7 @@ const GridCard = ({ book, idx, favorites, onToggleFavorite, onRead, onOpenEvent,
       )}
       {bookEvents.length > 0 && (
         <button
-          onClick={() => onOpenEvent(bookEvents[0])}
+          onClick={(e) => { e.stopPropagation(); onOpenEvent(bookEvents[0]) }}
           className={`mb-3 flex items-center gap-1.5 text-xs font-medium transition-colors ${
             darkMode ? 'text-red-400 hover:text-red-300' : 'text-amber-700 hover:text-amber-900'
           } hover:underline`}
@@ -181,7 +217,7 @@ const GridCard = ({ book, idx, favorites, onToggleFavorite, onRead, onOpenEvent,
           Ver en la línea temporal: {bookEvents[0].title} ({bookEvents[0].year})
         </button>
       )}
-      <div className="flex items-center gap-3 mt-auto">
+      <div className="flex items-center gap-3 mt-auto" onClick={(e) => e.stopPropagation()}>
         <LeerButton book={book} onRead={onRead} darkMode={darkMode} />
       </div>
     </div>
@@ -200,6 +236,7 @@ const LibraryView = ({
 }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card
   const seed = { ...DEFAULT_FILTERS, ...initialFilters }
+  const importRef = useRef(null)
 
   const [searchTerm, setSearchTerm] = useState(seed.searchTerm)
   const [category, setCategory] = useState(seed.category)
@@ -210,6 +247,9 @@ const LibraryView = ({
   const [groupByAuthor, setGroupByAuthor] = useState(false)
   const [groupByRegion, setGroupByRegion] = useState(false)
   const [page, setPage] = useState(1)
+  const [selectedBook, setSelectedBook] = useState(null)
+
+  const { getNotes, addNote, deleteNote, exportNotes, importNotes } = useNotes()
 
   useEffect(() => {
     setSearchTerm(initialFilters?.searchTerm ?? DEFAULT_FILTERS.searchTerm)
@@ -272,6 +312,17 @@ const LibraryView = ({
     darkMode ? 'bg-gray-800 border-[#872320] text-gray-200 placeholder-gray-500' : 'bg-white border-[#B79F6E] text-gray-800 placeholder-amber-700'
   }`
 
+  const handleImport = async (e) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+    try {
+      await importNotes(file)
+    } catch (err) {
+      alert('Error al importar: ' + err.message)
+    }
+    e.target.value = ''
+  }
+
   const renderContent = () => {
     if (filtered.length === 0) {
       return (
@@ -284,7 +335,7 @@ const LibraryView = ({
       return (
         <div className="flex flex-col gap-4">
           {groupedByRegion.map((group) => (
-            <GroupSection key={group.name} group={group} cardClass={cardClass} darkMode={darkMode} favorites={favorites} onToggleFavorite={onToggleFavorite} onRead={onRead} onOpenEvent={onOpenEvent} timelineEvents={timelineEvents} icon={MapPin} />
+            <GroupSection key={group.name} group={group} cardClass={cardClass} darkMode={darkMode} favorites={favorites} onToggleFavorite={onToggleFavorite} onRead={onRead} onOpenEvent={onOpenEvent} onOpenBook={setSelectedBook} timelineEvents={timelineEvents} icon={MapPin} getNotes={getNotes} />
           ))}
         </div>
       )
@@ -293,7 +344,7 @@ const LibraryView = ({
       return (
         <div className="flex flex-col gap-4">
           {groupedBooks.map((group) => (
-            <GroupSection key={group.name} group={group} cardClass={cardClass} darkMode={darkMode} favorites={favorites} onToggleFavorite={onToggleFavorite} onRead={onRead} onOpenEvent={onOpenEvent} timelineEvents={timelineEvents} icon={Users} />
+            <GroupSection key={group.name} group={group} cardClass={cardClass} darkMode={darkMode} favorites={favorites} onToggleFavorite={onToggleFavorite} onRead={onRead} onOpenEvent={onOpenEvent} onOpenBook={setSelectedBook} timelineEvents={timelineEvents} icon={Users} getNotes={getNotes} />
           ))}
         </div>
       )
@@ -304,7 +355,7 @@ const LibraryView = ({
       <>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {paged.map((book, idx) => (
-            <GridCard key={`${book.region}-${book.title}`} book={book} idx={idx} favorites={favorites} onToggleFavorite={onToggleFavorite} onRead={onRead} onOpenEvent={onOpenEvent} timelineEvents={timelineEvents} darkMode={darkMode} cardClass={cardClass} />
+            <GridCard key={`${book.region}-${book.title}`} book={book} idx={idx} favorites={favorites} onToggleFavorite={onToggleFavorite} onRead={onRead} onOpenEvent={onOpenEvent} onOpenBook={setSelectedBook} timelineEvents={timelineEvents} darkMode={darkMode} cardClass={cardClass} notesCount={getNotes(book).length} />
           ))}
         </div>
         {totalPages > 1 && (
@@ -422,10 +473,39 @@ const LibraryView = ({
               <X size={14} /> Limpiar filtros
             </button>
           )}
+
+          <button
+            onClick={exportNotes}
+            className={`px-3 py-2 rounded-lg text-sm flex items-center gap-1.5 transition-colors ${darkMode ? 'bg-gray-800 border border-[#872320] text-gray-300 hover:bg-gray-700' : 'bg-white border border-[#B79F6E] text-gray-700 hover:bg-amber-100'}`}
+            title="Exportar notas a JSON"
+          >
+            <Download size={14} /> Exportar notas
+          </button>
+
+          <button
+            onClick={() => importRef.current?.click()}
+            className={`px-3 py-2 rounded-lg text-sm flex items-center gap-1.5 transition-colors ${darkMode ? 'bg-gray-800 border border-[#872320] text-gray-300 hover:bg-gray-700' : 'bg-white border border-[#B79F6E] text-gray-700 hover:bg-amber-100'}`}
+            title="Importar notas desde JSON"
+          >
+            <Upload size={14} /> Importar notas
+          </button>
+          <input ref={importRef} type="file" accept=".json" onChange={handleImport} className="hidden" />
         </div>
       </div>
 
       {renderContent()}
+
+      {selectedBook && (
+        <BookDetailModal
+          darkMode={darkMode}
+          book={selectedBook}
+          notes={getNotes(selectedBook)}
+          onAddNote={addNote}
+          onDeleteNote={deleteNote}
+          onRead={onRead}
+          onClose={() => setSelectedBook(null)}
+        />
+      )}
     </div>
   )
 }
