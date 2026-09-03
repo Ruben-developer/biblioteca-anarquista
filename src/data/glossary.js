@@ -16,7 +16,7 @@ export const glossaryTerms = [
   {
     term: 'Autogestión',
     definition: 'Gestión directa de la producción y la vida social por sus propios protagonistas, sin patronos ni gerentes: la fábrica y la comuna se gobiernan desde abajo.',
-    books: ['Las colectividades libertarias en España (1936-1938)', 'Colectividades Libertarias']
+    books: ['Las colectividades libertarias en España (1936-1938)', 'Colectividades libertarias en España (2)']
   },
   {
     term: 'Anarco-comunismo',
