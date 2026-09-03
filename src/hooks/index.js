@@ -118,8 +118,8 @@ export const useFavorites = () => {
 
   const isFavorite = (title) => favorites.some(f => f.title === title);
 
-  // Exporta solo id, title, author, notes (formato mínimo reimportable)
-  const exportFavorites = () => JSON.stringify(favorites.map(f => ({ id: f.id || makeId(f.title, f.author), title: f.title, author: f.author || '', notes: f.notes || [] })), null, 2);
+  // Exporta id, title, author, filename, notes (preserva Leer)
+  const exportFavorites = () => JSON.stringify(favorites.map(f => ({ id: f.id || makeId(f.title, f.author), title: f.title, author: f.author || '', year: f.year ?? null, filename: f.filename || '', category: f.category || '', notes: f.notes || [] })), null, 2);
 
   const importFavorites = (jsonString) => {
     try {
