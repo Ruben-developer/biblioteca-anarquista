@@ -280,7 +280,7 @@ export const regionData = {
         "author": "Zulema Lehm A. y Silvia Rivera C.",
         "category": "historia",
         "rating": 4.5,
-        "filename": "Lehm A., Zulema y Rivera C., Silvia - Los artesanos libertarios y la иtica del trabajo.pdf"
+        "filename": "Zulema Lehm A. y Silvia Rivera C. - Los artesanos libertarios y la ética del trabajo.pdf"
       }
     ]
   },
@@ -539,7 +539,7 @@ export const regionData = {
         "year": 2013,
         "category": "historia",
         "rating": 4.5,
-        "filename": "Lagos Mieres, Manuel - Experiencias educativas y prбcticas culturales anarquistas en Chile, 1890-1927 (2013).pdf"
+        "filename": "Manuel Lagos Mieres - Experiencias educativas y prácticas culturales anarquistas en Chile, 1890-1927 (2013).pdf"
       },
       {
         "title": "1º de Mayo de 1899. Los anarquistas y el origen del día del trabajador en la región chilena",
@@ -673,7 +673,7 @@ export const regionData = {
         "author": "Jacinto Barrera y Alejandro De la Torre",
         "category": "historia",
         "rating": 4.5,
-        "filename": "Barrera, Jacinto y De la Torre, Alejandro - Los rebeldes de la bandera roja (Textos del peridico anarquista бTierra, de La Habana, sobre la Revolucin mexicana).pdf"
+        "filename": "Jacinto Barrera y Alejandro De la Torre - Los rebeldes de la bandera roja (Textos del periódico anarquista ¡Tierra!, de La Habana, sobre la Revolución mexicana).pdf"
       },
       {
         "title": "Cuba, el socialismo y la libertad. Una visión desde el anarquismo",
@@ -1170,7 +1170,7 @@ export const regionData = {
         "year": 2010,
         "category": "historia",
         "rating": 4.5,
-        "filename": "Christie, Stuart - бNosotros los anarquistas Un estudio de la Federacin Anarquista Ibиrica (FAI) (2010).pdf"
+        "filename": "Stuart Christie - ¡Nosotros los anarquistas! Un estudio de la Federación Anarquista Ibérica (FAI) (2010).pdf"
       },
       {
         "title": "La CNT ante el golpe del 23F",
@@ -1185,7 +1185,7 @@ export const regionData = {
         "year": 1976,
         "category": "historia",
         "rating": 4.5,
-        "filename": "Cuadrat, Xavier - Socialismo y anarquismo en Catalua (1899-1911). Los orнgenes de la CNT (1976).pdf"
+        "filename": "Xavier Cuadrat - Socialismo y anarquismo en Cataluña (1899-1911). Los orígenes de la CNT (1976).pdf"
       },
       {
         "title": "El arraigo territorial de la Idea. El caso de los anarquistas de Igualada",
@@ -1288,7 +1288,7 @@ export const regionData = {
         "author": "Chris Ealham",
         "category": "historia",
         "rating": 4.5,
-        "filename": "Ealham, Chris - De la unidad antifascista a la desunin libertaria. Los comitиs superiores del movimiento libertario contra los quijotes anarquistas en el marco del Frente Popular.pdf"
+        "filename": "Chris Ealham - De la unidad antifascista a la desunión libertaria. Los comités superiores del movimiento libertario contra los quijotes anarquistas en el marco del Frente Popular.pdf"
       },
       {
         "title": "La calle como memoria y conflicto (Barcelona, 1914-1923)",
@@ -1302,7 +1302,7 @@ export const regionData = {
         "author": "Chris Ealham",
         "category": "historia",
         "rating": 4.5,
-        "filename": "Ealham, Chris - La historiografнa reciente sobre la guerra civil. El rigor histrico contra el rigor mortis.pdf"
+        "filename": "Chris Ealham - La historiografía reciente sobre la guerra civil. El rigor histórico contra el rigor mortis.pdf"
       },
       {
         "title": "Una revolución a medias. Los orígenes de los hechos de mayo y la crisis del anarquismo",
@@ -1310,7 +1310,7 @@ export const regionData = {
         "year": 2007,
         "category": "historia",
         "rating": 4.5,
-        "filename": "Ealham, Chris - Una revolucin a medias. Los orнgenes de los hechos de mayo y la crisis del anarquismo (2007).pdf"
+        "filename": "Chris Ealham - Una revolución a medias. Los orígenes de los hechos de mayo y la crisis del anarquismo (2007).pdf"
       },
       {
         "title": "Una geografía imaginada. Ideología, espacio urbano y protesta en la creación del Barrio chino de Barcelona, c. 1835-1936",
@@ -1318,7 +1318,7 @@ export const regionData = {
         "year": 2007,
         "category": "historia",
         "rating": 4.5,
-        "filename": "Ealham, Chris y Ansn, Beatriz - Una geografнa imaginada. Ideologнa, espacio urbano y protesta en la creacin del Barrio chino de Barcelona, c. 1835-1936 (2007).pdf"
+        "filename": "Chris Ealham y Beatriz Ansón - Una geografía imaginada. Ideología, espacio urbano y protesta en la creación del Barrio chino de Barcelona, c. 1835-1936 (2007).pdf"
       },
       {
         "title": "Las mujeres en el anarquismo español (1869-1939)",
@@ -1350,14 +1350,14 @@ export const regionData = {
         "year": 1988,
         "category": "historia",
         "rating": 4.5,
-        "filename": "Gabriel, Pere - Historiografнa reciente sobre el anarquismo y el sindicalismo en Espaa (1870-1923) (1988).pdf"
+        "filename": "Pere Gabriel - Historiografía reciente sobre el anarquismo y el sindicalismo en España (1870-1923) (1988).pdf"
       },
       {
         "title": "Propagandistas confederales entre el sindicato y el anarquismo. La construcción barcelonesa de la CNT en Cataluña, Aragón, País Valenciano y Baleares",
         "author": "Pere Gabriel",
         "category": "historia",
         "rating": 4.5,
-        "filename": "Gabriel, Pere - Propagandistas confederales entre el sindicato y el anarquismo. La construccin barcelonesa de la CNT en Catalua, Aragn, Paнs Valenciano y Baleares.pdf"
+        "filename": "Pere Gabriel - Propagandistas confederales entre el sindicato y el anarquismo. La construcción barcelonesa de la CNT en Cataluña, Aragón, País Valenciano y Baleares.pdf"
       },
       {
         "title": "Diario de una ciudad libertaria. Zaragoza, 1871-1936",
@@ -1628,7 +1628,7 @@ export const regionData = {
         "author": "Clara E. Lida",
         "category": "historia",
         "rating": 4.5,
-        "filename": "Lida, Clara E. - La Mano Negra. Anarquismo agrario en Andalucнa.pdf"
+        "filename": "Clara E. Lida - La Mano Negra. Anarquismo agrario en Andalucía.pdf"
       },
       {
         "title": "Los discursos de la clandestinidad en el anarquismo del XIX",
@@ -1642,7 +1642,7 @@ export const regionData = {
         "author": "Clara E. Lida",
         "category": "historia",
         "rating": 4.5,
-        "filename": "Lida, Clara E. - Organizacin, cultura y prбcticas polнticas del anarquismo espaol en la clandestinidad, 1873-1881.pdf"
+        "filename": "Clara E. Lida - Organización, cultura y prácticas políticas del anarquismo español en la clandestinidad, 1873-1881.pdf"
       },
       {
         "title": "Para repensar la Mano Negra. El anarquismo español durante la clandestinidad",
@@ -1691,7 +1691,7 @@ export const regionData = {
         "author": "Alejandro Lora Medina",
         "category": "historia",
         "rating": 4.5,
-        "filename": "Lora Medina, Alejandro - La visin ontolgica de la mujer y el hombre en el anarquismo espaol de los aos treinta. Identidad y gиnero a debate.pdf"
+        "filename": "Alejandro Lora Medina - La visión ontológica de la mujer y el hombre en el anarquismo español de los años treinta. Identidad y género a debate.pdf"
       },
       {
         "title": "La vivencia del ideal anarquista en la España de los años treinta",
@@ -1749,7 +1749,7 @@ export const regionData = {
         "author": "Francisco Madrid Santos y Claudio Venza",
         "category": "historia",
         "rating": 4.5,
-        "filename": "Madrid Santos, Francisco y Venza, Claudio - Antologнa Documental del anarquismo espaol I. Organizacin y revolucin. De la Primera Internacional al Proceso de Montjuic (1868-1896).pdf"
+        "filename": "Francisco Madrid Santos y Claudio Venza - Antología Documental del anarquismo español I. Organización y revolución. De la Primera Internacional al Proceso de Montjuïc (1868-1896).pdf"
       },
       {
         "title": "Ministros anarquistas. La CNT en el gobierno de la II República (1936-1939)",
@@ -1772,7 +1772,7 @@ export const regionData = {
         "author": "Eduard Masjuan Bracons",
         "category": "historia",
         "rating": 4.5,
-        "filename": "Masjuan Bracons, Eduard - El pensamiento demogrбfico anarquista. Fecundidad y emigracin a Amиrica Latina (1900-1914).pdf"
+        "filename": "Eduard Masjuan Bracons - El pensamiento demográfico anarquista. Fecundidad y emigración a América Latina (1900-1914).pdf"
       },
       {
         "title": "Procreación consciente y discurso ambientalista. Anarquismo y neomalthusianismo en España e Italia, 1900-1936",
@@ -1795,7 +1795,7 @@ export const regionData = {
         "year": 1897,
         "category": "historia",
         "rating": 4.5,
-        "filename": "Mella Cea, Ricardo y Prat Acabo, Josи - Barbarie gubernamental en Espea (1897).pdf"
+        "filename": "Ricardo Mella Cea y José Prat Acabo - Barbarie gubernamental en España (1897).pdf"
       },
       {
         "title": "Autogestión y anarcosindicalismo en la España revolucionaria (2)",
@@ -1862,21 +1862,21 @@ export const regionData = {
         "author": "Javier Paniagua Fuentes",
         "category": "historia",
         "rating": 4.5,
-        "filename": "Paniagua Fuentes, Javier - La ideologнa econmica de los anarquistas en Catalua y el Paнs Valenciano.pdf"
+        "filename": "Javier Paniagua Fuentes - La ideología económica de los anarquistas en Cataluña y el País Valenciano.pdf"
       },
       {
         "title": "Otra vuelta de tuerca. Las interpretaciones del arraigo del anarquismo en España. Sigue la polémica",
         "author": "Javier Paniagua Fuentes",
         "category": "historia",
         "rating": 4.5,
-        "filename": "Paniagua Fuentes, Javier - Otra vuelta de tuerca. Las interpretaciones del arraigo del anarquismo en Espaa. Sigue la polиmica.pdf"
+        "filename": "Javier Paniagua Fuentes - Otra vuelta de tuerca. Las interpretaciones del arraigo del anarquismo en España. Sigue la polémica.pdf"
       },
       {
         "title": "Una gran pregunta y varias respuestas. El anarquismo español. Desde la política a la historiografía",
         "author": "Javier Paniagua Fuentes",
         "category": "historia",
         "rating": 4.5,
-        "filename": "Paniagua Fuentes, Javier - Una gran pregunta y varias respuestas. El anarquismo espaol. Desde la polнtica a la historiografнa.pdf"
+        "filename": "Javier Paniagua Fuentes - Una gran pregunta y varias respuestas. El anarquismo español. Desde la política a la historiografía.pdf"
       },
       {
         "title": "El anarquismo contra el estado franquista. CNT 1939-1951",
@@ -2252,7 +2252,7 @@ export const regionData = {
         "author": "Paul Buhle y Nicole Schulman",
         "category": "historia",
         "rating": 4.5,
-        "filename": "Buhle, Paul y Schulman, Nicole - Wobblies Una historia grбfica de los IWW.pdf"
+        "filename": "Paul Buhle y Nicole Schulman - Wobblies. Una historia gráfica de los IWW.pdf"
       },
       {
         "title": "La tragedia de Chicago",
@@ -2311,7 +2311,7 @@ export const regionData = {
         "category": "historia",
         "rating": 4.5,
         "summary": "Crónica de la insurrección de las banlieues francesas de 2005 y la contestación anarquista.",
-        "filename": "Gavroche - La revuelta de los Baliusards (2000).pdf"
+        "filename": "Gavroche - La revuelta de los Banlieusards (2005).pdf"
       },
       {
         "title": "La conjura de los indomables",
@@ -2459,7 +2459,7 @@ export const regionData = {
         "year": 2005,
         "category": "historia",
         "rating": 4.5,
-        "filename": "Bonanno, Alfredo M. - No podrиis pararnos. La lucha anarquista en Italia (2005).pdf"
+        "filename": "Alfredo M. Bonanno - No podréis pararnos. La lucha anarquista en Italia (2005).pdf"
       },
       {
         "title": "Camisas Negras",
@@ -2649,7 +2649,7 @@ export const regionData = {
         "author": "John M. Hart",
         "category": "historia",
         "rating": 4.5,
-        "filename": "Hart, John M. - Los orнgenes anarquistas y los valores polнticos de la clase trabajadora mexicana y los movimientos campesinos.pdf"
+        "filename": "John M. Hart - Los orígenes anarquistas y los valores políticos de la clase trabajadora mexicana y los movimientos campesinos.pdf"
       },
       {
         "title": "El Magonismo. Historia de una pasión libertaria 1900-1922",
@@ -2664,7 +2664,7 @@ export const regionData = {
         "author": "Clara E. e Illades Carlos Lida",
         "category": "historia",
         "rating": 4.5,
-        "filename": "Lida, Clara E. e Illades, Carlos - El anarquismo europeo y sus primeras influencias en Mиxico despuиs de la Comuna de Parнs. 1871-1881.pdf"
+        "filename": "Clara E. e Illades Carlos Lida - El anarquismo europeo y sus primeras influencias en México después de la Comuna de París. 1871-1881.pdf"
       },
       {
         "title": "Aprender escuchando. Autonomía, educación y guerrilla en Chiapas y Kurdistán",
@@ -2915,7 +2915,7 @@ export const regionData = {
         "year": 2001,
         "category": "historia",
         "rating": 4.5,
-        "filename": "Berkman, Alexander - Kronstadt. Petritchenco, Stиpan - La verdad sobre Kronstadt (2001).pdf"
+        "filename": "Varios autores - La verdad sobre Kronstadt (2001).pdf"
       },
       {
         "title": "Escritos V (Revolución Rusa)",
@@ -4776,7 +4776,7 @@ export const regionData = {
         "author": "Pere Gabriel",
         "category": "teoria",
         "rating": 4.5,
-        "filename": "Gabriel, Pere - Sindicalismo y huelga. Sindicalismo revolucionбrio francиs e italiano. Su introduccin en Espaa.pdf"
+        "filename": "Pere Gabriel - Sindicalismo y huelga. Sindicalismo revolucionario francés e italiano. Su introducción en España.pdf"
       },
       {
         "title": "Anarquía y orden",
