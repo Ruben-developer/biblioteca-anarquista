@@ -1935,8 +1935,7 @@ export const regionData = {
         "author": "Carlos M. Rama",
         "year": 1976,
         "category": "historia",
-        "rating": 4.5,
-        "filename": "Abad de Santillan, Diego - El anarquismo y la revolucion en Espana (1976).pdf"
+        "rating": 4.5
       },
       {
         "title": "Historia negra de una crisis libertaria",
