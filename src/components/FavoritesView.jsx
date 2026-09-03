@@ -27,14 +27,18 @@ const FavoritesView = ({
 
   const handleImportFile = (e) => {
     const file = e.target.files?.[0];
-    e.target.value = '';
     if (!file) return;
     const reader = new FileReader();
-    reader.onload = () => {
-      const res = onImport(reader.result);
+    reader.onload = (ev) => {
+      const text = ev.target?.result ?? reader.result;
+      const res = onImport(text);
       setImportMsg(res.ok ? `Importados ${res.count} texto(s).` : res.error);
+      e.target.value = '';
     };
-    reader.onerror = () => setImportMsg('No se pudo leer el archivo.');
+    reader.onerror = () => {
+      setImportMsg('No se pudo leer el archivo.');
+      e.target.value = '';
+    };
     reader.readAsText(file);
   };
 
