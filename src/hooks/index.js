@@ -47,10 +47,18 @@ export const useDarkMode = () => {
   return { darkMode, toggleDarkMode };
 };
 
+function makeId(title, author) {
+  const raw = `${(title || '').trim().toLowerCase()}|${(author || '').trim().toLowerCase()}`;
+  let h = 0;
+  for (let i = 0; i < raw.length; i++) { h = ((h << 5) - h + raw.charCodeAt(i)) | 0; }
+  return Math.abs(h).toString(36).padStart(8, '0').slice(0, 12);
+}
+function makeNoteId() { return 'n' + Math.random().toString(36).slice(2, 10); }
+
 /**
  * Hook personalizado para manejar favoritos
- * Soporta dos formatos: strings legacy (títulos) y objetos enriquecidos:
- * { title, author, year, filename, category, note, addedAt }
+ * Formato: { id, title, author, year, filename, category, notes: [{id,text,ts}], addedAt }
+ * Migra automáticamente `note` (string legacy) → `notes[]`
  */
 export const useFavorites = () => {
   const [favorites, setFavorites] = useState([]);
@@ -59,85 +67,93 @@ export const useFavorites = () => {
     const saved = localStorage.getItem('favorites');
     if (saved) {
       const parsed = JSON.parse(saved);
-      // Migrar strings legacy a objetos enriquecidos
-      const migrated = parsed.map((f) =>
-        typeof f === 'string' ? { title: f, note: '', addedAt: Date.now() } : f
-      );
+      const migrated = parsed.map((f) => {
+        if (typeof f === 'string') return { id: makeId(f, ''), title: f, author: '', year: null, filename: '', category: '', notes: [], addedAt: Date.now() };
+        const notes = Array.isArray(f.notes) ? f.notes : (f.note ? [{ id: makeNoteId(), text: f.note, ts: new Date().toISOString() }] : []);
+        return { id: f.id || makeId(f.title, f.author || ''), title: f.title, author: f.author || '', year: f.year ?? null, filename: f.filename || '', category: f.category || '', notes, addedAt: f.addedAt || Date.now() };
+      });
       setFavorites(migrated);
     }
   }, []);
 
-  // Toggle: si el título ya está, lo quita; si no, lo agrega con metadata vacía
+  const persist = (next) => localStorage.setItem('favorites', JSON.stringify(next));
+
   const toggleFavorite = (title, bookMeta = {}) => {
     setFavorites(prev => {
       const exists = prev.find(f => f.title === title);
-      const newFavorites = exists
+      const next = exists
         ? prev.filter(f => f.title !== title)
-        : [...prev, {
-            title,
-            author: bookMeta.author || '',
-            year: bookMeta.year || null,
-            filename: bookMeta.filename || '',
-            category: bookMeta.category || '',
-            note: '',
-            addedAt: Date.now()
-          }];
-      localStorage.setItem('favorites', JSON.stringify(newFavorites));
-      return newFavorites;
+        : [...prev, { id: makeId(title, bookMeta.author || ''), title, author: bookMeta.author || '', year: bookMeta.year || null, filename: bookMeta.filename || '', category: bookMeta.category || '', notes: [], addedAt: Date.now() }];
+      persist(next);
+      return next;
     });
   };
 
-  // Actualizar la nota personal de un favorito
+  const addFavoriteNote = (title, text) => {
+    const t = text.trim();
+    if (!t) return;
+    setFavorites(prev => {
+      const next = prev.map(f => f.title === title ? { ...f, notes: [...(f.notes || []), { id: makeNoteId(), text: t, ts: new Date().toISOString() }] } : f);
+      persist(next);
+      return next;
+    });
+  };
+
+  const deleteFavoriteNote = (title, noteId) => {
+    setFavorites(prev => {
+      const next = prev.map(f => f.title === title ? { ...f, notes: (f.notes || []).filter(n => n.id !== noteId) } : f);
+      persist(next);
+      return next;
+    });
+  };
+
+  // Compat: mantiene updateFavoriteNote para tests viejos
   const updateFavoriteNote = (title, note) => {
     setFavorites(prev => {
-      const updated = prev.map(f =>
-        f.title === title ? { ...f, note } : f
-      );
-      localStorage.setItem('favorites', JSON.stringify(updated));
-      return updated;
+      const next = prev.map(f => f.title === title ? { ...f, notes: note ? [{ id: makeNoteId(), text: note, ts: new Date().toISOString() }] : [] } : f);
+      persist(next);
+      return next;
     });
   };
 
-  // Verificar si un título es favorito
   const isFavorite = (title) => favorites.some(f => f.title === title);
 
-  // Exportar favoritos como JSON (incluye notas y metadata, reimportable)
-  const exportFavorites = () => {
-    return JSON.stringify(favorites, null, 2);
-  };
+  // Exporta solo id, title, author, notes (formato mínimo reimportable)
+  const exportFavorites = () => JSON.stringify(favorites.map(f => ({ id: f.id || makeId(f.title, f.author), title: f.title, author: f.author || '', notes: f.notes || [] })), null, 2);
 
-  // Importar favoritos desde un JSON (array de objetos o strings legados).
-  // Reemplaza la lista actual y preserva las notas. Devuelve { ok, count?, error? }.
   const importFavorites = (jsonString) => {
     try {
       const parsed = JSON.parse(jsonString);
-      if (!Array.isArray(parsed)) {
-        return { ok: false, error: 'El archivo no es una lista válida.' };
-      }
-      const cleaned = parsed
-        .filter((f) => f && (typeof f === 'string' || f.title))
-        .map((f) =>
-          typeof f === 'string'
-            ? { title: f, author: '', year: null, filename: '', category: '', note: '', addedAt: Date.now() }
-            : {
-                title: f.title,
-                author: f.author || '',
-                year: f.year ?? null,
-                filename: f.filename || '',
-                category: f.category || '',
-                note: f.note || '',
-                addedAt: f.addedAt || Date.now()
-              }
-        );
-      setFavorites(cleaned);
-      localStorage.setItem('favorites', JSON.stringify(cleaned));
+      if (!Array.isArray(parsed)) return { ok: false, error: 'El archivo no es una lista válida.' };
+      const cleaned = parsed.filter(f => f && (typeof f === 'string' || f.title)).map(f => {
+        if (typeof f === 'string') return { id: makeId(f, ''), title: f, author: '', year: null, filename: '', category: '', notes: [], addedAt: Date.now() };
+        const notes = Array.isArray(f.notes) ? f.notes : (f.note ? [{ id: makeNoteId(), text: f.note, ts: new Date().toISOString() }] : []);
+        return { id: f.id || makeId(f.title, f.author || ''), title: f.title, author: f.author || '', year: f.year ?? null, filename: f.filename || '', category: f.category || '', notes, addedAt: f.addedAt || Date.now() };
+      });
+      // Merge: si el título ya existe, fusiona notas por id; si no, agrega
+      setFavorites(prev => {
+        const map = new Map(prev.map(f => [f.title, f]));
+        for (const c of cleaned) {
+          if (map.has(c.title)) {
+            const existing = map.get(c.title);
+            const ids = new Set((existing.notes || []).map(n => n.id));
+            const newNotes = (c.notes || []).filter(n => !ids.has(n.id));
+            map.set(c.title, { ...existing, notes: [...(existing.notes || []), ...newNotes] });
+          } else {
+            map.set(c.title, c);
+          }
+        }
+        const next = [...map.values()];
+        persist(next);
+        return next;
+      });
       return { ok: true, count: cleaned.length };
-    } catch (e) {
+    } catch {
       return { ok: false, error: 'No se pudo leer el archivo.' };
     }
   };
 
-  return { favorites, toggleFavorite, updateFavoriteNote, isFavorite, exportFavorites, importFavorites };
+  return { favorites, toggleFavorite, addFavoriteNote, deleteFavoriteNote, updateFavoriteNote, isFavorite, exportFavorites, importFavorites };
 };
 
 /**
