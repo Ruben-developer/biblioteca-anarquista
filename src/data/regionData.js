@@ -5831,7 +5831,7 @@ export const regionData = {
         "author": "Michael Albert",
         "category": "teoria",
         "rating": 4.5,
-        "filename": "Albert, Michael - ¿Anarquismo? Ed. Biblioteca anarquista.a4.pdf"
+        "filename": "Albert, Michael - Anarquismo Ed. Biblioteca anarquista.a4.pdf"
       },
       {
         "title": "El Manifiesto Antiadultista",
