@@ -29,7 +29,7 @@ const Header = ({
             className={`[grid-area:menu] justify-self-start flex items-center gap-2 px-3 py-2 rounded-lg transition-all active:scale-95 ${
               darkMode
                 ? 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
-                : 'bg-amber-800/50 text-amber-50 hover:bg-amber-800'
+                : 'bg-amber-200/50 text-amber-900 hover:bg-amber-200'
             }`}
           >
             <Menu size={20} />

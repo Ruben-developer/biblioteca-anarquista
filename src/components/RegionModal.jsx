@@ -57,8 +57,14 @@ const RegionModal = ({
                     por {book.author}
                   </p>
                   <div className="flex items-center gap-3 text-sm flex-wrap">
-                    <span className={`px-2 py-1 rounded text-xs ${darkMode ? 'bg-gray-700' : 'bg-amber-800'}`}>
+                    <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>
+                      {book.year}
+                    </span>
+                    <span className={`px-2 py-1 rounded text-xs ${darkMode ? 'bg-gray-700' : 'bg-amber-200'}`}>
                       {book.category}
+                    </span>
+                    <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>
+                      {book.rating}
                     </span>
                   </div>
                   {book.summary && (
@@ -81,7 +87,7 @@ const RegionModal = ({
                   </div>
                 </div>
                 <button
-                  onClick={() => onToggleFavorite(book.title, { author: book.author, year: book.pubYear, filename: book.filename, category: book.category })}
+                  onClick={() => onToggleFavorite(book.title, { author: book.author, year: book.year, filename: book.filename, category: book.category })}
                   className="flex-shrink-0 transition-transform hover:scale-110"
                   title={favorites.some((f) => f.title === book.title) ? 'Remover de favoritos' : 'Agregar a favoritos'}
                 >

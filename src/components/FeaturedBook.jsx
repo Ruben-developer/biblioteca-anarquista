@@ -32,9 +32,15 @@ const FeaturedBook = ({ darkMode, book, onRead = () => {} }) => {
             </p>
           )}
           <div className="flex flex-wrap items-center gap-3 text-xs mb-3">
-            <span className={`font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800 text-gray-300' : 'bg-amber-800 text-amber-50'}`}>
+            <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>
+              {book.year || '—'}
+            </span>
+            <span className={`font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800 text-gray-300' : 'bg-amber-200 text-amber-900'}`}>
               {book.region} · {book.category}
             </span>
+            {book.rating && (
+              <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{book.rating}</span>
+            )}
           </div>
           {book.summary && (
             <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-700'} mb-4`}>

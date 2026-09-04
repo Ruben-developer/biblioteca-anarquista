@@ -50,7 +50,7 @@ const HorizontalTimeline = ({
                               {formatYear(event.year)}
                             </span>
                           </div>
-                          <span className={`text-[10px] px-2 py-0.5 rounded-full min-w-0 text-right leading-tight ${darkMode ? 'bg-gray-800 text-gray-400' : 'bg-amber-800 text-amber-50'}`}>
+                          <span className={`text-[10px] px-2 py-0.5 rounded-full min-w-0 text-right leading-tight ${darkMode ? 'bg-gray-800 text-gray-400' : 'bg-amber-200 text-amber-800'}`}>
                             {event.region}
                           </span>
                         </div>
@@ -115,7 +115,7 @@ const VerticalTimeline = ({
                       {formatYear(event.year)}
                     </span>
                   </div>
-                  <span className={`text-xs px-3 py-1 rounded-full min-w-0 text-right leading-tight ${darkMode ? 'bg-gray-800 text-gray-400' : 'bg-amber-800 text-amber-50'}`}>
+                  <span className={`text-xs px-3 py-1 rounded-full min-w-0 text-right leading-tight ${darkMode ? 'bg-gray-800 text-gray-400' : 'bg-amber-200 text-amber-800'}`}>
                     {event.region}
                   </span>
                 </div>

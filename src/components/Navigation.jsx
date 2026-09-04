@@ -66,7 +66,7 @@ const Navigation = ({
                 className={`p-2 rounded-lg transition-colors ${
                   darkMode
                     ? 'text-gray-300 hover:bg-gray-700/50'
-                    : 'text-amber-900 hover:bg-amber-800'
+                    : 'text-amber-900 hover:bg-amber-200'
                 }`}
               >
                 <X size={20} />
@@ -85,7 +85,7 @@ const Navigation = ({
                         : 'bg-amber-800 text-amber-50'
                       : darkMode
                         ? 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
-                        : 'bg-amber-800/50 text-amber-50 hover:bg-amber-800'
+                        : 'bg-amber-200/50 text-amber-900 hover:bg-amber-200'
                   }`}
                 >
                   <Icon size={18} />

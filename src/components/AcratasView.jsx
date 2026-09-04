@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Search, BookOpen, MapPin, ChevronDown, ChevronUp, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Search, BookOpen, MapPin, Star, ChevronDown, ChevronUp, ChevronLeft, ChevronRight } from 'lucide-react';
 import { THEME } from '../constants';
 import { getAcratasPersons } from '../utils/library';
 
@@ -11,7 +11,7 @@ const getTodosButtonClass = (darkMode, activeLetter, search) => {
   if (isActive) {
     return darkMode ? 'bg-red-600 text-white' : 'bg-amber-800 text-amber-50';
   }
-  return darkMode ? 'bg-gray-800 text-gray-400 hover:bg-gray-700' : 'bg-amber-800 text-amber-50 hover:bg-amber-800';
+  return darkMode ? 'bg-gray-800 text-gray-400 hover:bg-gray-700' : 'bg-amber-100 text-amber-700 hover:bg-amber-200';
 };
 
 const getLetterButtonClass = (darkMode, activeLetter, letter, letterCount) => {
@@ -19,7 +19,7 @@ const getLetterButtonClass = (darkMode, activeLetter, letter, letterCount) => {
     return darkMode ? 'bg-red-600 text-white' : 'bg-amber-800 text-amber-50';
   }
   if (letterCount) {
-    return darkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-amber-800 text-amber-50 hover:bg-amber-800';
+    return darkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-amber-100 text-amber-800 hover:bg-amber-200';
   }
   return darkMode ? 'bg-gray-900 text-gray-600 cursor-default' : 'bg-gray-100 text-gray-400 cursor-default';
 };
@@ -31,6 +31,7 @@ const getLetterCountClass = (darkMode, activeLetter, letter) => {
   return darkMode ? 'text-gray-500' : 'text-amber-600';
 };
 
+const getStars = (rating = 0) => Math.max(0, Math.min(5, Math.round(Number(rating) || 0)));
 
 const AcratasView = ({
   darkMode,
@@ -177,6 +178,7 @@ const AcratasView = ({
                     {isOpen && (
                       <div className="mt-4 space-y-2">
                         {person.books.map((book, idx) => {
+                          const stars = getStars(book.rating)
                           return (
                             <div
                               key={`${book.region}-${book.title}-${idx}`}
@@ -203,12 +205,24 @@ const AcratasView = ({
                                         {book.author}
                                       </span>
                                     )}
+                                    {book.year && (
+                                      <span className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                                        {book.year}
+                                      </span>
+                                    )}
                                     {book.region && (
                                       <span className={`text-xs ${darkMode ? 'text-red-400' : 'text-amber-600'} flex items-center gap-1`}>
                                         <MapPin size={12} /> {book.region}
                                       </span>
                                     )}
                                   </div>
+                                  {stars > 0 && (
+                                    <div className={`flex items-center gap-0.5 mt-1 ${darkMode ? 'text-red-400' : 'text-amber-700'}`} aria-label={`Valoración ${stars} de 5`}>
+                                      {Array.from({ length: 5 }).map((_, i) => (
+                                        <Star key={i} size={12} className={i < stars ? 'fill-current' : 'opacity-30'} />
+                                      ))}
+                                    </div>
+                                  )}
                                 </div>
                                 {book.filename ? (
                                   <button
@@ -240,7 +254,7 @@ const AcratasView = ({
                 <button
                   onClick={() => setPage((p) => Math.max(1, p - 1))}
                   disabled={page === 1}
-                  className={`p-2 rounded-lg transition-colors ${page === 1 ? 'opacity-30 cursor-default' : darkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-amber-800 text-amber-50 hover:bg-amber-800'}`}
+                  className={`p-2 rounded-lg transition-colors ${page === 1 ? 'opacity-30 cursor-default' : darkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-amber-100 text-amber-800 hover:bg-amber-200'}`}
                   aria-label="Página anterior"
                 >
                   <ChevronLeft size={18} />
@@ -251,7 +265,7 @@ const AcratasView = ({
                 <button
                   onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
                   disabled={page === totalPages}
-                  className={`p-2 rounded-lg transition-colors ${page === totalPages ? 'opacity-30 cursor-default' : darkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-amber-800 text-amber-50 hover:bg-amber-800'}`}
+                  className={`p-2 rounded-lg transition-colors ${page === totalPages ? 'opacity-30 cursor-default' : darkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-amber-100 text-amber-800 hover:bg-amber-200'}`}
                   aria-label="Página siguiente"
                 >
                   <ChevronRight size={18} />
