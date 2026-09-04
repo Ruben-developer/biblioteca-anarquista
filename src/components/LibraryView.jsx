@@ -87,9 +87,7 @@ const BookMeta = ({ book, darkMode }) => (
     <span className={`font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800 text-gray-300' : 'bg-amber-800 text-amber-50'}`}>
       {book.region || book.author}
     </span>
-        <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{book.pubYear || '—'}</span>
     <span className={`font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800' : 'bg-amber-800'}`}>{book.category}</span>
-        {book.rating && <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{book.rating}</span>}
   </div>
 )
 
@@ -160,9 +158,7 @@ const GridCard = ({ book, idx, favorites, onToggleFavorite, onRead, onOpenEvent,
         por {book.author}
       </p>
       <div className="flex items-center gap-3 text-xs flex-wrap mb-3">
-    <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{book.pubYear || '—'}</span>
         <span className={`font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800' : 'bg-amber-800'}`}>{book.category}</span>
-        {book.rating && <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{book.rating}</span>}
       </div>
       {book.summary && (
         <p className={`text-xs ${darkMode ? 'text-gray-500' : 'text-gray-600'} mb-4 line-clamp-2 flex-1`}>
@@ -206,7 +202,7 @@ const LibraryView = ({
   const [decade, setDecade] = useState(seed.decade)
   const [type, setType] = useState(seed.type)
   const [favoritesOnly, setFavoritesOnly] = useState(seed.favoritesOnly)
-  const [sort, setSort] = useState('rating')
+  const [sort, setSort] = useState('title')
   const [groupByAuthor, setGroupByAuthor] = useState(false)
   const [groupByRegion, setGroupByRegion] = useState(false)
   const [page, setPage] = useState(1)
@@ -385,7 +381,6 @@ const LibraryView = ({
           </select>
 
           <select value={sort} onChange={(e) => setSort(e.target.value)} className={selectClass} aria-label="Ordenar por">
-            <option value="rating">Mejor valoradas</option>
             <option value="year">Por año (antiguo → reciente)</option>
             <option value="title">Por título</option>
           </select>

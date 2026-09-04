@@ -152,11 +152,6 @@ const AuthorsView = ({
                   <h3 className={`text-xl font-bold ${darkMode ? 'text-gray-100' : 'text-gray-800'} mb-2 text-center`}>
                     {author.name}
                   </h3>
-                  {author.yearsRange && (
-                    <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-amber-700'} mb-2 text-center`}>
-                      {author.yearsRange} (años de sus obras)
-                    </p>
-                  )}
                   {primaryRegion && (
                     <p className={`text-xs ${darkMode ? 'text-red-400' : 'text-amber-600'} mb-3 text-center`}>
                       {author.regions.join(', ')}
@@ -175,32 +170,6 @@ const AuthorsView = ({
 
                 {isOpen && (
                   <div className="mt-4 space-y-2">
-                    {author.books.filter((b) => b.pubYear).length > 1 && (
-                      <div className={`rounded-lg border-2 p-3 ${darkMode ? 'bg-gray-800/60 border-[#872320]/50' : 'bg-white/80 border-[#B79F6E]'}`}>
-                        <p className={`text-xs uppercase tracking-wide mb-2 ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
-                          Línea de tiempo de su obra
-                        </p>
-                        <div className="flex items-center gap-0 overflow-x-auto pb-1">
-                          {author.books
-                            .filter((b) => b.pubYear)
-                            .sort((a, b) => a.pubYear - b.pubYear)
-                            .map((b, i, arr) => (
-                              <div key={`${b.title}-${i}`} className="flex items-center">
-                                <div className="flex flex-col items-center min-w-[64px]">
-                                  <span className={`text-[10px] ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>{b.pubYear}</span>
-                                  <span className={`w-3 h-3 rounded-full mt-1 ${darkMode ? 'bg-red-600' : 'bg-amber-700'}`} />
-                                  <span className={`text-[10px] text-center leading-tight mt-1 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                                    {b.title.length > 22 ? `${b.title.slice(0, 22)}…` : b.title}
-                                  </span>
-                                </div>
-                                {i < arr.length - 1 && (
-                                  <span className={`h-0.5 w-4 ${darkMode ? 'bg-gray-600' : 'bg-amber-800'}`} />
-                                )}
-                              </div>
-                            ))}
-                        </div>
-                      </div>
-                    )}
                     {author.books.map((book, idx) => (
                       <div
                         key={`${book.region}-${book.title}-${idx}`}
@@ -218,11 +187,6 @@ const AuthorsView = ({
                               <span className={`px-2 py-0.5 rounded text-xs ${darkMode ? 'bg-gray-700' : 'bg-amber-800'}`}>
                                 {book.category}
                               </span>
-                              {book.pubYear && (
-                                <span className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                                  {book.pubYear}
-                                </span>
-                              )}
                             </div>
                           </div>
                           {book.filename && (

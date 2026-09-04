@@ -59,7 +59,6 @@ const EventModal = ({ darkMode, event, regionData, onClose, onRead = () => {} })
                     </p>
                     <div className="flex items-center gap-3 text-sm flex-wrap">
                       <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>por {book.author}</span>
-                      <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{book.pubYear}</span>
                     </div>
                     <div className="flex gap-3 mt-2 flex-wrap">
                       {book.filename && (

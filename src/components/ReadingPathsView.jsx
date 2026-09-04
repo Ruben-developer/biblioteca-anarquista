@@ -66,7 +66,7 @@ const ReadingPathsView = ({ darkMode, regionData, onRead = () => {}, onOpenLibra
                               {book.title}
                             </p>
                             <p className={`text-xs mb-2 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                              {book.author} · {book.pubYear || '—'}
+                              {book.author}
                             </p>
                             <div className="flex items-center gap-1.5">
                               {book.filename && (

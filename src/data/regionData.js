@@ -17,7 +17,7 @@ export const regionData = {
       {
         "title": "La FORA",
         "author": "Diego Abad de Santillán",
-        "year": 1933,
+        "pubYear": 1933,
         "category": "historia",
         "rating": 4.6,
         "filename": "Diego Abad de Santillán - La FORA.pdf"
@@ -25,7 +25,7 @@ export const regionData = {
       {
         "title": "Utopías antiguas y modernas",
         "author": "Ángel J. Cappelletti",
-        "year": 1998,
+        "pubYear": 1998,
         "category": "historia",
         "rating": 4.6,
         "summary": "El filósofo argentino recorre las utopías de occidente y su vínculo con el pensamiento libertario.",
@@ -34,7 +34,7 @@ export const regionData = {
       {
         "title": "La educación libertaria en la Argentina y en México (1861-1945)",
         "author": "Martín Acri y María Cácerez",
-        "year": 2011,
+        "pubYear": 2011,
         "category": "historia",
         "rating": 4.5,
         "summary": "Estudio comparado de las experiencias de escuela moderna racionalista en Argentina y México.",
@@ -43,7 +43,7 @@ export const regionData = {
       {
         "title": "Los anarquistas expropiadores",
         "author": "Osvaldo Bayer",
-        "year": 2013,
+        "pubYear": 2013,
         "category": "historia",
         "rating": 4.6,
         "summary": "Simón Radowitzky y otros ensayos sobre la violencia expropiadora del anarquismo en la Argentina.",
@@ -52,7 +52,7 @@ export const regionData = {
       {
         "title": "La Patagonia Rebelde",
         "author": "Osvaldo Bayer",
-        "year": 1972,
+        "pubYear": 1972,
         "category": "historia",
         "rating": 4.8,
         "summary": "Síntesis de Los vengadores de la Patagonia trágica: la huelga rural más extensa de la historia sudamericana y las masacres de peones anarcosindicalistas de 1921-22.",
@@ -61,7 +61,7 @@ export const regionData = {
       {
         "title": "Anarquismo trashumante. Crónicas de crotos y linyeras",
         "author": "Osvaldo Baigorria",
-        "year": 1998,
+        "pubYear": 1998,
         "category": "historia",
         "rating": 4.5,
         "summary": "Crónicas de crotos y linyeras, los trabajadores trashumantes argentinos: la cultura del viaje, la vagancia y la resistencia popular narradas por Osvaldo Baigorria.",
@@ -70,7 +70,7 @@ export const regionData = {
       {
         "title": "La primera víctima del movimiento obrero. El discurso anarquista sobre la muerte (Argentina)",
         "author": "Sebastián Stavisky",
-        "year": 2017,
+        "pubYear": 2017,
         "category": "historia",
         "rating": 4.5,
         "summary": "Análisis del discurso anarquista argentino en torno a la muerte de Cosme Budislavich (1901), considerada la primera víctima del movimiento obrero del país.",
@@ -79,7 +79,7 @@ export const regionData = {
       {
         "title": "Historia del movimiento obrero revolucionario",
         "author": "Eduardo Colombo",
-        "year": 2009,
+        "pubYear": 2009,
         "category": "historia",
         "rating": 4.6,
         "summary": "Historia del movimiento obrero libertario compilada por Eduardo Colombo, con textos sobre sindicalismo, anarquismo y revolución.",
@@ -88,7 +88,7 @@ export const regionData = {
       {
         "title": "El fusilamiento de Penina",
         "author": "Aldo Oliva",
-        "year": 2012,
+        "pubYear": 2012,
         "category": "historia",
         "rating": 4.6,
         "summary": "Reconstrucción del fusilamiento del anarquista Joaquín Penina por la policía en Rosario (1930) y de la lucha del movimiento libertario argentino, por el escritor Aldo Oliva.",
@@ -97,7 +97,7 @@ export const regionData = {
       {
         "title": "Libertarias en América del Sur. De la A a la Z",
         "author": "Cristina Guzzo",
-        "year": 2014,
+        "pubYear": 2014,
         "category": "historia",
         "rating": 4.6,
         "summary": "Diccionario biográfico de mujeres libertarias de América del Sur, de la A a la Z: la presencia y las luchas de las anarquistas en el continente.",
@@ -106,7 +106,7 @@ export const regionData = {
       {
         "title": "El movimiento anarquista en la Argentina (Desde sus inicios hasta 1910)",
         "author": "Diego Abad de Santillán",
-        "year": 1930,
+        "pubYear": 1930,
         "category": "historia",
         "rating": 4.5,
         "filename": "Diego Abad de Santillán - El movimiento anarquista en la Argentina (Desde sus inicios hasta 1910).pdf"
@@ -114,7 +114,7 @@ export const regionData = {
       {
         "title": "Anarquismo, educación y costumbres en la Argentina de principios del siglo XX",
         "author": "Dora Barrancos",
-        "year": 1990,
+        "pubYear": 1990,
         "category": "historia",
         "rating": 4.5,
         "filename": "Dora Barrancos - Anarquismo, educación y costumbres en la Argentina de principios del siglo XX.pdf"
@@ -129,7 +129,7 @@ export const regionData = {
       {
         "title": "La FORA y el movimiento obrero (Tomos I y II)",
         "author": "Edgardo J. Bilsky",
-        "year": 1985,
+        "pubYear": 1985,
         "category": "historia",
         "rating": 4.5,
         "filename": "Edgardo J. Bilsky - La FORA y el movimiento obrero (Tomos I y II).pdf"
@@ -137,7 +137,7 @@ export const regionData = {
       {
         "title": "Pampa Libre. Anarquistas en la pampa argentina",
         "author": "Jorge Etchenique",
-        "year": 2000,
+        "pubYear": 2000,
         "category": "historia",
         "rating": 4.5,
         "filename": "Jorge Etchenique - Pampa Libre. Anarquistas en la pampa argentina.pdf"
@@ -166,7 +166,7 @@ export const regionData = {
       {
         "title": "Queremos emanciparos. Anarquismo y mujer en Buenos Aires de fines del XIX",
         "author": "Laura Fernández Cordero",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "historia",
         "rating": 4.5,
         "filename": "Laura Fernández Cordero - Queremos emanciparos. Anarquismo y mujer en Buenos Aires de fines del XIX.pdf"
@@ -202,7 +202,7 @@ export const regionData = {
       {
         "title": "El anarquismo y el movimiento obrero en Argentina (1978) (2)",
         "author": "Iaacov Oved",
-        "year": 1978,
+        "pubYear": 1978,
         "category": "historia",
         "rating": 4.5,
         "filename": "Iaacov Oved - El anarquismo y el movimiento obrero en Argentina (1978) (2).pdf"
@@ -210,7 +210,7 @@ export const regionData = {
       {
         "title": "Anarquistas. Cultura y política libertaria en Buenos Aires, 1890-1910",
         "author": "Juan Suriano",
-        "year": 2004,
+        "pubYear": 2004,
         "category": "historia",
         "rating": 4.5,
         "filename": "Juan Suriano - Anarquistas. Cultura y política libertaria en Buenos Aires, 1890-1910.pdf"
@@ -218,7 +218,7 @@ export const regionData = {
       {
         "title": "Auge y caída del anarquismo (Argentina 1880-1930)",
         "author": "Juan Suriano",
-        "year": 2005,
+        "pubYear": 2005,
         "category": "historia",
         "rating": 4.5,
         "filename": "Juan Suriano - Auge y caída del anarquismo (Argentina 1880-1930).pdf"
@@ -247,7 +247,7 @@ export const regionData = {
       {
         "title": "Anarquismo argentino (1876-1902)",
         "author": "Gonzalo Zaragoza",
-        "year": 1996,
+        "pubYear": 1996,
         "category": "historia",
         "rating": 4.5,
         "filename": "Gonzalo Zaragoza - Anarquismo argentino (1876-1902).pdf"
@@ -260,7 +260,7 @@ export const regionData = {
       {
         "title": "La choledad antiestatal. El anarcosindicalismo en el movimiento obrero boliviano (1912-1965)",
         "author": "Huáscar Rodríguez García",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "historia",
         "rating": 4.7,
         "summary": "Historia del anarcosindicalismo boliviano y del papel de los cholos en el movimiento obrero andino.",
@@ -269,7 +269,7 @@ export const regionData = {
       {
         "title": "Cocinando la revolución en la ciudad de La Paz (1927-1946)",
         "author": "Ivanna Margarucci",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "historia",
         "rating": 4.6,
         "summary": "El activismo de las mujeres de la Federación Obrera Femenina de La Paz y su papel central en el desarrollo del anarquismo boliviano entre 1927 y 1946.",
@@ -290,7 +290,7 @@ export const regionData = {
       {
         "title": "El anarquismo búlgaro en armas",
         "author": "Michael Schmidt",
-        "year": 2019,
+        "pubYear": 2019,
         "category": "historia",
         "rating": 4.5,
         "summary": "Historia del anarquismo búlgaro y su lucha armada: la guerrilla contra el golpe fascista de 1923 y el aplastamiento del movimiento libertario por el estalinismo.",
@@ -304,7 +304,7 @@ export const regionData = {
       {
         "title": "El movimiento obrero brasileño",
         "author": "Ruy Mauro Marini",
-        "year": 1986,
+        "pubYear": 1986,
         "category": "historia",
         "rating": 4.5,
         "summary": "Del anarcosindicalismo al corporativismo: estudio de Ruy Mauro Marini sobre la evolución del movimiento obrero brasileño, desde su formación con la influencia de los inmigrantes europeos hasta su encuadramiento estatal corporativista bajo el Estado Novo.",
@@ -313,7 +313,7 @@ export const regionData = {
       {
         "title": "O Inimigo do Rei, el grito irreverente y osado de la anarquía",
         "author": "Júlio Antonio Zacouteguy",
-        "year": 2012,
+        "pubYear": 2012,
         "category": "historia",
         "rating": 4.4,
         "summary": "Historia del periódico anarquista brasileño O Inimigo do Rei (1977-1988), que bajo la dictadura militar difundió las ideas libertarias y aglutinó a los grupos anarquistas de todo el país.",
@@ -322,7 +322,7 @@ export const regionData = {
       {
         "title": "Repensar el anarquismo en América Latina: historias, epistemes, luchas y otras formas de organización",
         "author": "Javier Ruiz (coord.)",
-        "year": 2019,
+        "pubYear": 2019,
         "category": "historia",
         "rating": 4.5,
         "summary": "Obra colectiva coordinada por Javier Ruiz que repiensa el anarquismo en América Latina desde sus historias, epistemes y luchas, con contribuciones sobre Mesoamérica, México y otras regiones del continente.",
@@ -331,7 +331,7 @@ export const regionData = {
       {
         "title": "Por sólo 20 centavos. La lucha contra el aumento del transporte en Brasil",
         "author": "Varios autores",
-        "year": 2015,
+        "pubYear": 2015,
         "category": "historia",
         "rating": 4.5,
         "filename": "Varios autores - Por sólo 20 centavos. La lucha contra el aumento del transporte en Brasil.pdf"
@@ -344,7 +344,7 @@ export const regionData = {
       {
         "title": "La propaganda por los hechos en el movimiento anarquista chileno (1890-1910)",
         "author": "Igor Goicovic Donoso",
-        "year": 2006,
+        "pubYear": 2006,
         "category": "historia",
         "rating": 4.6,
         "summary": "Sociedad y violencia en el discurso anarquista: la 'propaganda por el hecho' en el Chile de entresiglos.",
@@ -353,7 +353,7 @@ export const regionData = {
       {
         "title": "Anarquismo y violencia popular en Chile (1898-1927)",
         "author": "Equipo Sombraysén",
-        "year": 2012,
+        "pubYear": 2012,
         "category": "historia",
         "rating": 4.5,
         "summary": "Los anarquistas en la primera mitad del siglo XX chileno: huelgas, represión y cultura obrera.",
@@ -362,7 +362,7 @@ export const regionData = {
       {
         "title": "Contribución a una historia del anarquismo en América Latina",
         "author": "Luis Vitale",
-        "year": 1998,
+        "pubYear": 1998,
         "category": "historia",
         "rating": 4.6,
         "summary": "El historiador chileno traza los antecedentes y experiencias del anarquismo en Nuestra América.",
@@ -371,7 +371,7 @@ export const regionData = {
       {
         "title": "Wobblie. Hombres, ideas y problemas del anarquismo en los años veinte",
         "author": "Víctor M. Muñoz C. y Armando Triviño",
-        "year": 2009,
+        "pubYear": 2009,
         "category": "historia",
         "rating": 4.5,
         "summary": "El anarquismo chileno de los años veinte y su vínculo con la IWW en este ensayo histórico.",
@@ -380,7 +380,7 @@ export const regionData = {
       {
         "title": "Destruir para construir: violencia y acción directa en la corriente anarquista chilena (1890-1914)",
         "author": "Darío Covarrubias Bañados",
-        "year": 2013,
+        "pubYear": 2013,
         "category": "historia",
         "rating": 4.6,
         "summary": "Estudio de la violencia y la acción directa en la corriente anarquista chilena de entresiglos, publicado por Ediciones Acéfalo.",
@@ -389,7 +389,7 @@ export const regionData = {
       {
         "title": "Sin Dios ni patrones. Historia del anarquismo en la región chilena (1890-1990)",
         "author": "Víctor Muñoz Cortés",
-        "year": 2013,
+        "pubYear": 2013,
         "category": "historia",
         "rating": 4.7,
         "summary": "Historia general del anarquismo en la región chilena: diversidad, organizaciones y conflictos del movimiento libertario a lo largo de un siglo, de la propaganda por el hecho al anarcosindicalismo.",
@@ -398,7 +398,7 @@ export const regionData = {
       {
         "title": "La masacre de la Escuela Santa María de Iquique",
         "author": "José Antonio Gutiérrez",
-        "year": 2007,
+        "pubYear": 2007,
         "category": "historia",
         "rating": 4.6,
         "summary": "Análisis de la huelga del salitre de 1907 y de la masacre de más de dos mil obreros en la Escuela Santa María de Iquique, con sus lecciones para el movimiento libertario.",
@@ -407,7 +407,7 @@ export const regionData = {
       {
         "title": "Juan Gandulfo: la hoja sanitaria, el policlínico de la IWW y su legado (1923-1942)",
         "author": "Grupo J.D. Gómez Rojas",
-        "year": 2019,
+        "pubYear": 2019,
         "category": "historia",
         "rating": 4.5,
         "summary": "La labor del médico y anarquista Juan Gandulfo en la hoja sanitaria y el policlínico de la IWW en Chile (1923-1942): medicina popular, salud obrera y su legado.",
@@ -416,7 +416,7 @@ export const regionData = {
       {
         "title": "Entre el dolor y la ira, la venganza de Ramón Ramón",
         "author": "Igor Goicovic Donoso",
-        "year": 2012,
+        "pubYear": 2012,
         "category": "historia",
         "rating": 4.6,
         "summary": "Estudio sobre el anarquista chileno Ramón Ramón y su venganza, en el cruce entre memoria, justicia y reparación del movimiento obrero.",
@@ -425,7 +425,7 @@ export const regionData = {
       {
         "title": "Historia e historiografía del anarquismo en Chile (1980-2015)",
         "author": "Eduardo A. Godoy Sepúlveda",
-        "year": 2016,
+        "pubYear": 2016,
         "category": "historia",
         "rating": 4.5,
         "summary": "Balance historiográfico de la producción académica sobre el anarquismo chileno entre 1980 y 2015, con sus nuevas metodologías y enfoques.",
@@ -434,7 +434,7 @@ export const regionData = {
       {
         "title": "Represión contra los anarquistas: Voltaire Argandoña y Hortensia Quinio (Santiago, 1913)",
         "author": "Eduardo A. Godoy Sepúlveda",
-        "year": 2007,
+        "pubYear": 2007,
         "category": "historia",
         "rating": 4.6,
         "summary": "La represión policial contra los anarquistas Voltaire Argandoña y Hortensia Quinio en Santiago de Chile en 1913.",
@@ -443,7 +443,7 @@ export const regionData = {
       {
         "title": "Flora Sanhueza Rebolledo. Su lucha social en Iquique (1942-1974)",
         "author": "Gaspar García N. y Leyla Morales M.",
-        "year": 2007,
+        "pubYear": 2007,
         "category": "historia",
         "rating": 4.5,
         "summary": "Historia de vida de Flora Sanhueza Rebolledo, su lucha social en Iquique (1942-1974) y las escuelas libertarias.",
@@ -452,7 +452,7 @@ export const regionData = {
       {
         "title": "Vanguardias silenciadas: tejidos de la memoria",
         "author": "Marisol Vera y Olga Grau",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "historia",
         "rating": 4.5,
         "summary": "Mujeres escritoras anarquistas chilenas —Rosario Orrego, Rosa Rubí y otras— recuperadas por la memoria crítica.",
@@ -461,7 +461,7 @@ export const regionData = {
       {
         "title": "Punto de Quiebre: Memorias De Lucha Desde La Región Chilena",
         "author": "Varios autores",
-        "year": 2018,
+        "pubYear": 2018,
         "category": "historia",
         "rating": 4.3,
         "summary": "Momentos de quiebre en la historia del anarquismo: cuando la teoría choca con la práctica y todo se reinventa.",
@@ -484,7 +484,7 @@ export const regionData = {
       {
         "title": "La Huelga del Mono",
         "author": "Eduardo A. Godoy Sepúlveda",
-        "year": 2014,
+        "pubYear": 2014,
         "category": "historia",
         "rating": 4.5,
         "filename": "Eduardo A. Godoy Sepúlveda - La Huelga del Mono.pdf"
@@ -520,7 +520,7 @@ export const regionData = {
       {
         "title": "Los anarquistas y el movimiento obrero. La alborada de la Idea en Chile (1893-1915)",
         "author": "Sergio Grez Toso",
-        "year": 2012,
+        "pubYear": 2012,
         "category": "historia",
         "rating": 4.5,
         "filename": "Sergio Grez Toso - Los anarquistas y el movimiento obrero. La alborada de la Idea en Chile (1893-1915).pdf"
@@ -528,7 +528,7 @@ export const regionData = {
       {
         "title": "El anarquismo en Chile (1897-1931)",
         "author": "Luis Heredia M.",
-        "year": 1981,
+        "pubYear": 1981,
         "category": "historia",
         "rating": 4.5,
         "filename": "Luis Heredia M. - El anarquismo en Chile (1897-1931).pdf"
@@ -536,7 +536,7 @@ export const regionData = {
       {
         "title": "Experiencias educativas y prácticas culturales anarquistas en Chile, 1890-1927",
         "author": "Manuel Lagos Mieres",
-        "year": 2013,
+        "pubYear": 2013,
         "category": "historia",
         "rating": 4.5,
         "filename": "Manuel Lagos Mieres - Experiencias educativas y prácticas culturales anarquistas en Chile, 1890-1927.pdf"
@@ -558,7 +558,7 @@ export const regionData = {
       {
         "title": "Cuando las bombas son de papel. Los trabajadores, el Estado y la propaganda anarquista impresa (Región chilena, 1915-1927)",
         "author": "Víctor Muñoz Cortés",
-        "year": 2013,
+        "pubYear": 2013,
         "category": "historia",
         "rating": 4.5,
         "filename": "Víctor Muñoz Cortés - Cuando las bombas son de papel. Los trabajadores, el Estado y la propaganda anarquista impresa (Región chilena, 1915-1927).pdf"
@@ -566,7 +566,7 @@ export const regionData = {
       {
         "title": "El anarquismo y los orígenes del movimiento sindical campesino en Osorno (1930-1940)",
         "author": "Víctor Muñoz Cortés",
-        "year": 2014,
+        "pubYear": 2014,
         "category": "historia",
         "rating": 4.5,
         "filename": "Víctor Muñoz Cortés - El anarquismo y los orígenes del movimiento sindical campesino en Osorno (1930-1940).pdf"
@@ -579,7 +579,7 @@ export const regionData = {
       {
         "title": "El anarquismo en China",
         "author": "Varios autores",
-        "year": 1979,
+        "pubYear": 1979,
         "category": "historia",
         "rating": 4.4,
         "summary": "Historia de la lucha del pueblo chino contra el despotismo y del movimiento anarquista del Imperio Celeste: orígenes y evolución hasta la revolución de 1911 y más allá, con el artículo de Albert Meltzer publicado en Historia Libertaria nº5 (1979), textos de Ba Jin y el prólogo de Stuart Christie.",
@@ -588,7 +588,7 @@ export const regionData = {
       {
         "title": "Revolución anarquista en Manchuria (1929-1932)",
         "author": "Emilio Crisi",
-        "year": 2015,
+        "pubYear": 2015,
         "category": "historia",
         "rating": 4.5,
         "filename": "Emilio Crisi - Revolución anarquista en Manchuria (1929-1932).pdf"
@@ -603,7 +603,7 @@ export const regionData = {
       {
         "title": "El movimiento anarquista en China",
         "author": "Robert A. Scalapino y George T. Yu",
-        "year": 1975,
+        "pubYear": 1975,
         "category": "historia",
         "rating": 4.5,
         "filename": "Robert A. Scalapino y George T. Yu - El movimiento anarquista en China.pdf"
@@ -616,7 +616,7 @@ export const regionData = {
       {
         "title": "Los orígenes del anarquismo en Colombia y su relación con el liberalismo",
         "author": "Diego Paredes Goicochea",
-        "year": 2017,
+        "pubYear": 2017,
         "category": "historia",
         "rating": 4.6,
         "summary": "Estudio académico sobre la llegada del anarquismo a Colombia y su vínculo con el liberalismo radical.",
@@ -625,7 +625,7 @@ export const regionData = {
       {
         "title": "Pasado y presente del anarquismo y del anarcosindicalismo en Colombia",
         "author": "Centro de Investigación Libertaria y Educación Popular",
-        "year": 2011,
+        "pubYear": 2011,
         "category": "historia",
         "rating": 4.7,
         "summary": "Historia y actualidad del anarquismo y el anarcosindicalismo colombiano, editada por el CIL.",
@@ -639,7 +639,7 @@ export const regionData = {
       {
         "title": "Revolución anarquista en Corea: la Comuna de Shinmin (1929-1932)",
         "author": "Emilio Crisi",
-        "year": 2018,
+        "pubYear": 2018,
         "category": "historia",
         "rating": 4.5,
         "summary": "La experiencia de autogestión de los anarquistas coreanos en Manchuria, con textos de Shin Chae-ho.",
@@ -653,7 +653,7 @@ export const regionData = {
       {
         "title": "El anarquismo en Cuba",
         "author": "Frank Fernández",
-        "year": 2000,
+        "pubYear": 2000,
         "category": "historia",
         "rating": 4.6,
         "summary": "Historia del anarquismo cubano en los siglos XIX y XX, desde sus orígenes hasta su declive, con prólogo de Lily Litvak.",
@@ -662,7 +662,7 @@ export const regionData = {
       {
         "title": "Los anarquistas y la Revolución Cubana: entre el júbilo y el desencanto",
         "author": "Eduardo Daniel Rodríguez Trejo",
-        "year": 2020,
+        "pubYear": 2020,
         "category": "historia",
         "rating": 4.4,
         "summary": "Análisis de la postura de los anarquistas latinoamericanos ante la Revolución Cubana: de la solidaridad y el júbilo inicial al desencanto, examinando los debates internos del movimiento libertario continental.",
@@ -704,7 +704,7 @@ export const regionData = {
       {
         "title": "El Anarquismo Descolonizado: una historia de las experiencias antiautoritarias en Egipto (1860-2016)",
         "author": "Laura Galián Hernández",
-        "year": 2017,
+        "pubYear": 2017,
         "category": "historia",
         "rating": 4.6,
         "summary": "Tesis doctoral (UAM, 2017) que reconstruye la historia de las experiencias antiautoritarias en Egipto entre 1860 y 2016, descolonizando el canon anarquista y analizando las sucesivas olas del anarquismo egipcio desde una perspectiva decolonial.",
@@ -713,7 +713,7 @@ export const regionData = {
       {
         "title": "Hacia un estudio decolonial del anarquismo. Egipto y Túnez",
         "author": "Laura Galián Hernández",
-        "year": 2015,
+        "pubYear": 2015,
         "category": "historia",
         "rating": 4.5,
         "summary": "Estudio comparado del anarquismo decolonial en Egipto y Túnez a partir de los movimientos 'Asian (Desobediencia) y el Movimiento Libertario Socialista.",
@@ -727,7 +727,7 @@ export const regionData = {
       {
         "title": "Mujeres Libres",
         "author": "Anarcofeminismo",
-        "year": 1991,
+        "pubYear": 1991,
         "category": "historia",
         "rating": 4.7,
         "filename": "Anarcofeminismo - Mujeres Libres.pdf"
@@ -735,7 +735,7 @@ export const regionData = {
       {
         "title": "Los anarquistas en la crisis política española (1869-1939)",
         "author": "José Peirats",
-        "year": 1977,
+        "pubYear": 1977,
         "category": "historia",
         "rating": 4.8,
         "summary": "Análisis clásico del papel del anarquismo y la CNT en la política española, desde los inicios hasta la derrota de 1939.",
@@ -744,7 +744,7 @@ export const regionData = {
       {
         "title": "Anarcosindicalismo y revolución en España (1930-1937)",
         "author": "John Brademas",
-        "year": 1953,
+        "pubYear": 1953,
         "category": "historia",
         "rating": 4.6,
         "summary": "Estudio del movimiento anarcosindicalista español durante la Segunda República y la Guerra Civil.",
@@ -753,7 +753,7 @@ export const regionData = {
       {
         "title": "Las colectividades libertarias en España (1936-1938)",
         "author": "Anastasio Ovejero",
-        "year": 2017,
+        "pubYear": 2017,
         "category": "historia",
         "rating": 4.6,
         "summary": "Caso único de autogestión obrera en la historia moderna: la colectivización de tierras y fábricas durante la revolución.",
@@ -762,7 +762,7 @@ export const regionData = {
       {
         "title": "Los Amigos de Durruti",
         "author": "Amigos de Durruti",
-        "year": 1937,
+        "pubYear": 1937,
         "category": "historia",
         "rating": 4.5,
         "summary": "Textos del grupo heterodoxo de la CNT que denunció la contrarrevolución durante la Guerra Civil.",
@@ -771,7 +771,7 @@ export const regionData = {
       {
         "title": "Mujeres Libres (1936-1939). Una lectura feminista",
         "author": "Anónimo",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "historia",
         "rating": 4.7,
         "summary": "Análisis de la organización Mujeres Libres y su apuesta por la emancipación integral de la mujer.",
@@ -780,7 +780,7 @@ export const regionData = {
       {
         "title": "El terrorismo anarquista como propaganda por el hecho",
         "author": "Juan Avilés",
-        "year": 2000,
+        "pubYear": 2000,
         "category": "historia",
         "rating": 4.5,
         "summary": "Estudio académico sobre la propaganda por el hecho y los atentados anarquistas de fines del XIX.",
@@ -789,7 +789,7 @@ export const regionData = {
       {
         "title": "El error político-militar de la República",
         "author": "Abraham Guillén",
-        "year": 1971,
+        "pubYear": 1971,
         "category": "historia",
         "rating": 4.6,
         "summary": "Análisis de Abraham Guillén sobre los errores estratégicos de la República y la revolución durante la Guerra Civil.",
@@ -798,7 +798,7 @@ export const regionData = {
       {
         "title": "La miliciana en la Guerra Civil: realidad e imagen",
         "author": "Anónimo",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "historia",
         "rating": 4.5,
         "summary": "Trabajo fin de máster sobre las milicianas del bando republicano durante la Guerra Civil: su papel real en las milicias populares (CNT/POUM), su perfil social y su reflejo en la propaganda y el cine español.",
@@ -807,7 +807,7 @@ export const regionData = {
       {
         "title": "Durruti y Ascaso. La CNT y la revolución de julio",
         "author": "S. Cánovas Cervantes",
-        "year": 1936,
+        "pubYear": 1936,
         "category": "historia",
         "rating": 4.6,
         "summary": "Crónica de la CNT y la revolución de julio de 1936: la insurrección de Barcelona con Durruti y Ascaso en primera línea, en reedición de Páginas Libres (CGT).",
@@ -816,7 +816,7 @@ export const regionData = {
       {
         "title": "Barricadas en Barcelona",
         "author": "Agustín Guillamón",
-        "year": 2007,
+        "pubYear": 2007,
         "category": "historia",
         "rating": 4.7,
         "summary": "Historia de la CNT de Barcelona desde la victoria de julio de 1936 hasta la derrota de mayo de 1937, por el historiador Agustín Guillamón.",
@@ -825,7 +825,7 @@ export const regionData = {
       {
         "title": "La experiencia autogestionaria durante la Guerra Civil española",
         "author": "Luis Buendía García",
-        "year": 2007,
+        "pubYear": 2007,
         "category": "historia",
         "rating": 4.6,
         "summary": "Las colectivizaciones y la autogestión obrera y campesina durante la Guerra Civil española (1936-1939): fábricas, campos y servicios gestionados directamente por los trabajadores.",
@@ -834,7 +834,7 @@ export const regionData = {
       {
         "title": "La Revolución de Barcelona (Semana Trágica, 1909)",
         "author": "José Comaposada",
-        "year": 1909,
+        "pubYear": 1909,
         "category": "historia",
         "rating": 4.6,
         "summary": "Crónica de la Semana Trágica de Barcelona de julio de 1909: la revuelta popular contra la guerra de Marruecos y su sangrienta represión.",
@@ -843,7 +843,7 @@ export const regionData = {
       {
         "title": "Mujeres Libres. España 1936-1939",
         "author": "Mary Nash",
-        "year": 1975,
+        "pubYear": 1975,
         "category": "historia",
         "rating": 4.7,
         "summary": "Estudio clásico de Mary Nash sobre la organización Mujeres Libres: su doble lucha por la emancipación femenina y la revolución social durante la Guerra Civil española.",
@@ -852,7 +852,7 @@ export const regionData = {
       {
         "title": "La búsqueda de la unidad anarquista: la FAI antes de la II República",
         "author": "Jason Garner",
-        "year": 2012,
+        "pubYear": 2012,
         "category": "historia",
         "rating": 4.6,
         "summary": "Historia de la Federación Anarquista Ibérica (FAI) antes de la II República: la búsqueda de unidad y reorganización del anarquismo español entre 1927 y 1931.",
@@ -861,7 +861,7 @@ export const regionData = {
       {
         "title": "La Revolución de Cataluña",
         "author": "José Comaposada",
-        "year": 1909,
+        "pubYear": 1909,
         "category": "historia",
         "rating": 4.6,
         "summary": "Segunda parte de 'La Revolución de Barcelona': la insurrección de julio de 1909 en Cataluña y la Semana Trágica narradas por José Comaposada.",
@@ -870,7 +870,7 @@ export const regionData = {
       {
         "title": "Un incontrolado de la Columna de Hierro",
         "author": "Anónimo",
-        "year": 1937,
+        "pubYear": 1937,
         "category": "historia",
         "rating": 4.5,
         "summary": "Testimonio anónimo de un preso libertario fugado que se une a la Columna de Hierro en el frente de Levante durante la Guerra Civil española.",
@@ -879,7 +879,7 @@ export const regionData = {
       {
         "title": "Mujeres Libres: emancipación femenina y revolución social",
         "author": "Helena Andrés Granel",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "historia",
         "rating": 4.6,
         "summary": "Análisis de la organización Mujeres Libres y su proyecto de emancipación femenina y revolución social, por Helena Andrés Granel.",
@@ -888,7 +888,7 @@ export const regionData = {
       {
         "title": "El anarquismo individualista en España (1923-1938)",
         "author": "Xavier Diez",
-        "year": 2007,
+        "pubYear": 2007,
         "category": "historia",
         "rating": 4.6,
         "summary": "Historia del anarquismo individualista español entre 1923 y 1938: sus ideas, publicaciones y militantes, por Xavier Díez.",
@@ -897,7 +897,7 @@ export const regionData = {
       {
         "title": "El anarcofeminismo en España: las propuestas de Mujeres Libres",
         "author": "Laura Sánchez Blanco",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "historia",
         "rating": 4.5,
         "summary": "Artículo académico sobre las propuestas de Mujeres Libres para conseguir la igualdad de género: el anarcofeminismo en España.",
@@ -906,7 +906,7 @@ export const regionData = {
       {
         "title": "Pedagogía libertaria española a inicios del siglo XX",
         "author": "Guillermo Fiscer Lamelas",
-        "year": 2012,
+        "pubYear": 2012,
         "category": "historia",
         "rating": 4.5,
         "summary": "La formación de la conciencia racionalista mediante la enseñanza en la España del siglo XX, de los inicios a la Guerra Civil.",
@@ -915,7 +915,7 @@ export const regionData = {
       {
         "title": "Las culturas de la libertad en el anarquismo ibérico",
         "author": "CGT (Federación de Enseñanza)",
-        "year": 2013,
+        "pubYear": 2013,
         "category": "historia",
         "rating": 4.5,
         "summary": "Catálogo de la exposición de CGT sobre las pedagogías libertarias ibéricas: de la Escuela Moderna al CENU.",
@@ -924,7 +924,7 @@ export const regionData = {
       {
         "title": "Los anarquistas españoles. Los años heroicos (1868-1936)",
         "author": "Murray Bookchin",
-        "year": 1977,
+        "pubYear": 1977,
         "category": "historia",
         "rating": 4.8,
         "summary": "Historia clásica de Murray Bookchin sobre el anarquismo español, de la Primera Internacional a la revolución de 1936: los años heroicos del movimiento libertario.",
@@ -933,7 +933,7 @@ export const regionData = {
       {
         "title": "El Internado Durruti",
         "author": "Cristina Escrivá Moscardó",
-        "year": 2011,
+        "pubYear": 2011,
         "category": "historia",
         "rating": 4.6,
         "summary": "Historia del Internado Durruti de Valencia: la experiencia de educación libertaria y autogestión de los hijos de los milicianos durante la Guerra Civil española.",
@@ -942,7 +942,7 @@ export const regionData = {
       {
         "title": "Homenaje a Cataluña",
         "author": "George Orwell",
-        "year": 1938,
+        "pubYear": 1938,
         "category": "historia",
         "rating": 4.8,
         "summary": "Memorias de George Orwell sobre su experiencia en la Guerra Civil española, luchando con el POUM en el frente de Aragón y viviendo la revolución en Barcelona.",
@@ -951,7 +951,7 @@ export const regionData = {
       {
         "title": "El retorno de la Columna Durruti",
         "author": "Internacional Situacionista / Anónimo",
-        "year": 1970,
+        "pubYear": 1970,
         "category": "historia",
         "rating": 4.5,
         "summary": "Texto de la Internacional Situacionista sobre el mito y la realidad de la Columna Durruti y su legado en el imaginario revolucionario.",
@@ -974,7 +974,7 @@ export const regionData = {
       {
         "title": "El anarquismo y la revolución en España",
         "author": "Diego Abad de Santillán",
-        "year": 1976,
+        "pubYear": 1976,
         "category": "historia",
         "rating": 4.5,
         "filename": "Diego Abad de Santillán - El anarquismo y la revolución en España.pdf"
@@ -982,7 +982,7 @@ export const regionData = {
       {
         "title": "Historia del movimiento obrero español I",
         "author": "Diego Abad de Santillán",
-        "year": 1970,
+        "pubYear": 1970,
         "category": "historia",
         "rating": 4.5,
         "filename": "Diego Abad de Santillán - Historia del movimiento obrero español I.pdf"
@@ -990,7 +990,7 @@ export const regionData = {
       {
         "title": "Por qué perdimos la guerra",
         "author": "Diego Abad de Santillán",
-        "year": 1940,
+        "pubYear": 1940,
         "category": "historia",
         "rating": 4.5,
         "filename": "Diego Abad de Santillán - Por qué perdimos la guerra.pdf"
@@ -998,7 +998,7 @@ export const regionData = {
       {
         "title": "El movimiento obrero en Espana, siglos XIX y XX",
         "author": "Teresa Abelló Güell",
-        "year": 1997,
+        "pubYear": 1997,
         "category": "historia",
         "rating": 4.5,
         "filename": "Teresa Abelló Güell - El movimiento obrero en Espana, siglos XIX y XX.pdf"
@@ -1020,7 +1020,7 @@ export const regionData = {
       {
         "title": "La huelga de alquileres y el comité de defensa económica",
         "author": "Manel Aisa",
-        "year": 2019,
+        "pubYear": 2019,
         "category": "historia",
         "rating": 4.5,
         "filename": "Manel Aisa - La huelga de alquileres y el comité de defensa económica.pdf"
@@ -1042,7 +1042,7 @@ export const regionData = {
       {
         "title": "El anarquismo español y la acción revolucionaria (1961-1974)",
         "author": "Octavio Alberola",
-        "year": 2004,
+        "pubYear": 2004,
         "category": "historia",
         "rating": 4.5,
         "filename": "Octavio Alberola - El anarquismo español y la acción revolucionaria (1961-1974).pdf"
@@ -1071,7 +1071,7 @@ export const regionData = {
       {
         "title": "Tiempos de plomo. Grupos de Acción y Defensa Confederal",
         "author": "Juan J. Alcalde",
-        "year": 2013,
+        "pubYear": 2013,
         "category": "historia",
         "rating": 4.5,
         "filename": "Juan J. Alcalde - Tiempos de plomo. Grupos de Acción y Defensa Confederal.pdf"
@@ -1079,7 +1079,7 @@ export const regionData = {
       {
         "title": "Catálogo de decisiones y fragilidades",
         "author": "Toni Álvaro",
-        "year": 2016,
+        "pubYear": 2016,
         "category": "historia",
         "rating": 4.5,
         "filename": "Toni Álvaro - Catálogo de decisiones y fragilidades.pdf"
@@ -1087,7 +1087,7 @@ export const regionData = {
       {
         "title": "La revuelta de las mujeres",
         "author": "Toni Álvaro",
-        "year": 2019,
+        "pubYear": 2019,
         "category": "historia",
         "rating": 4.5,
         "filename": "Toni Álvaro - La revuelta de las mujeres.pdf"
@@ -1095,7 +1095,7 @@ export const regionData = {
       {
         "title": "Francisco Carreño y los arduos caminos de la anarquía",
         "author": "Miquel Amorós",
-        "year": 2012,
+        "pubYear": 2012,
         "category": "historia",
         "rating": 4.5,
         "filename": "Miquel Amorós - Francisco Carreño y los arduos caminos de la anarquía.pdf"
@@ -1138,7 +1138,7 @@ export const regionData = {
       {
         "title": "El arraigo del anarquismo en Cataluña",
         "author": "Albert Balcells",
-        "year": 1973,
+        "pubYear": 1973,
         "category": "historia",
         "rating": 4.5,
         "filename": "Albert Balcells - El arraigo del anarquismo en Cataluña.pdf"
@@ -1167,7 +1167,7 @@ export const regionData = {
       {
         "title": "¡Nosotros los anarquistas! Un estudio de la Federación Anarquista Ibérica (FAI)",
         "author": "Stuart Christie",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "historia",
         "rating": 4.5,
         "filename": "Stuart Christie - ¡Nosotros los anarquistas! Un estudio de la Federación Anarquista Ibérica (FAI).pdf"
@@ -1182,7 +1182,7 @@ export const regionData = {
       {
         "title": "Socialismo y anarquismo en Cataluña (1899-1911). Los orígenes de la CNT",
         "author": "Xavier Cuadrat",
-        "year": 1976,
+        "pubYear": 1976,
         "category": "historia",
         "rating": 4.5,
         "filename": "Xavier Cuadrat - Socialismo y anarquismo en Cataluña (1899-1911). Los orígenes de la CNT.pdf"
@@ -1218,7 +1218,7 @@ export const regionData = {
       {
         "title": "L'anarquisme, fet diferencial català. Influència i llegat de l'anarquisme en la història i la societat catalana contemporània",
         "author": "Xavier Diez i Rodríguez",
-        "year": 2013,
+        "pubYear": 2013,
         "category": "historia",
         "rating": 4.5,
         "filename": "Xavier Diez i Rodríguez - L'anarquisme, fet diferencial català. Influència i llegat de l'anarquisme en la història i la societat catalana contemporània.pdf"
@@ -1233,7 +1233,7 @@ export const regionData = {
       {
         "title": "La insumisión voluntaria. El anarquismo individualista español durante la Dictadura y la Segunda República (1923-1938)",
         "author": "Xavier Diez i Rodríguez",
-        "year": 2006,
+        "pubYear": 2006,
         "category": "historia",
         "rating": 4.5,
         "filename": "Xavier Diez i Rodríguez - La insumisión voluntaria. El anarquismo individualista español durante la Dictadura y la Segunda República (1923-1938).pdf"
@@ -1248,7 +1248,7 @@ export const regionData = {
       {
         "title": "Trabajan para la eternidad. Colectividades de trabajo y ayuda mutua durante la Guerra Civil en Aragón",
         "author": "Alejandro Ramón Díez Torre",
-        "year": 2009,
+        "pubYear": 2009,
         "category": "historia",
         "rating": 4.5,
         "filename": "Alejandro Ramón Díez Torre - Trabajan para la eternidad. Colectividades de trabajo y ayuda mutua durante la Guerra Civil en Aragón.pdf"
@@ -1270,7 +1270,7 @@ export const regionData = {
       {
         "title": "De la cima al abismo. Las contradicciones entre el individualismo y el colectivismo en el anarquismo español",
         "author": "Chris Ealham",
-        "year": 1999,
+        "pubYear": 1999,
         "category": "historia",
         "rating": 4.5,
         "filename": "Chris Ealham - De la cima al abismo. Las contradicciones entre el individualismo y el colectivismo en el anarquismo español.pdf"
@@ -1278,7 +1278,7 @@ export const regionData = {
       {
         "title": "La lucha por la calle. La venta ambulante, la cultura de protesta y la represión en Barcelona (c. 1930-36)",
         "author": "Chris Ealham",
-        "year": 2011,
+        "pubYear": 2011,
         "category": "historia",
         "rating": 4.5,
         "filename": "Chris Ealham - La lucha por la calle. La venta ambulante, la cultura de protesta y la represión en Barcelona (c. 1930-36).pdf"
@@ -1307,7 +1307,7 @@ export const regionData = {
       {
         "title": "Una revolución a medias. Los orígenes de los hechos de mayo y la crisis del anarquismo",
         "author": "Chris Ealham",
-        "year": 2007,
+        "pubYear": 2007,
         "category": "historia",
         "rating": 4.5,
         "filename": "Chris Ealham - Una revolución a medias. Los orígenes de los hechos de mayo y la crisis del anarquismo.pdf"
@@ -1315,7 +1315,7 @@ export const regionData = {
       {
         "title": "Una geografía imaginada. Ideología, espacio urbano y protesta en la creación del Barrio chino de Barcelona, c. 1835-1936",
         "author": "Chris Ealham y Beatriz Ansón",
-        "year": 2007,
+        "pubYear": 2007,
         "category": "historia",
         "rating": 4.5,
         "filename": "Chris Ealham y Beatriz Ansón - Una geografía imaginada. Ideología, espacio urbano y protesta en la creación del Barrio chino de Barcelona, c. 1835-1936.pdf"
@@ -1323,7 +1323,7 @@ export const regionData = {
       {
         "title": "Las mujeres en el anarquismo español (1869-1939)",
         "author": "Gloria Espigado",
-        "year": 2015,
+        "pubYear": 2015,
         "category": "historia",
         "rating": 4.5,
         "filename": "Gloria Espigado - Las mujeres en el anarquismo español (1869-1939).pdf"
@@ -1331,7 +1331,7 @@ export const regionData = {
       {
         "title": "La resistencia anarquista en el Albaicín (julio de 1936). Los inicios de la Guerra Civil en Granada",
         "author": "Francisco José Fernández Andújar",
-        "year": 2019,
+        "pubYear": 2019,
         "category": "historia",
         "rating": 4.5,
         "filename": "Francisco José Fernández Andújar - La resistencia anarquista en el Albaicín (julio de 1936). Los inicios de la Guerra Civil en Granada.pdf"
@@ -1339,7 +1339,7 @@ export const regionData = {
       {
         "title": "Kyklos Alpha. Historia del movimiento libertario español durante la dictadura",
         "author": "Kostas Floros",
-        "year": 2014,
+        "pubYear": 2014,
         "category": "historia",
         "rating": 4.5,
         "filename": "Kostas Floros - Kyklos Alpha. Historia del movimiento libertario español durante la dictadura.pdf"
@@ -1347,7 +1347,7 @@ export const regionData = {
       {
         "title": "Historiografía reciente sobre el anarquismo y el sindicalismo en España (1870-1923)",
         "author": "Pere Gabriel",
-        "year": 1988,
+        "pubYear": 1988,
         "category": "historia",
         "rating": 4.5,
         "filename": "Pere Gabriel - Historiografía reciente sobre el anarquismo y el sindicalismo en España (1870-1923).pdf"
@@ -1362,7 +1362,7 @@ export const regionData = {
       {
         "title": "Diario de una ciudad libertaria. Zaragoza, 1871-1936",
         "author": "Kike García Francés",
-        "year": 2014,
+        "pubYear": 2014,
         "category": "historia",
         "rating": 4.5,
         "filename": "Kike García Francés - Diario de una ciudad libertaria. Zaragoza, 1871-1936.pdf"
@@ -1370,7 +1370,7 @@ export const regionData = {
       {
         "title": "Los incontrolados de la FAI (2022) (2)",
         "author": "Luis Miguel García González",
-        "year": 2022,
+        "pubYear": 2022,
         "category": "historia",
         "rating": 4.5,
         "filename": "Luis Miguel García González - Los incontrolados de la FAI (2022) (2).pdf"
@@ -1392,7 +1392,7 @@ export const regionData = {
       {
         "title": "La traición de Stalin. Cómo terminó la guerra de España",
         "author": "José García Pradas",
-        "year": 1939,
+        "pubYear": 1939,
         "category": "historia",
         "rating": 4.5,
         "filename": "José García Pradas - La traición de Stalin. Cómo terminó la guerra de España.pdf"
@@ -1400,7 +1400,7 @@ export const regionData = {
       {
         "title": "Teníamos que perder",
         "author": "José García Pradas",
-        "year": 1974,
+        "pubYear": 1974,
         "category": "historia",
         "rating": 4.5,
         "filename": "José García Pradas - Teníamos que perder.pdf"
@@ -1464,7 +1464,7 @@ export const regionData = {
       {
         "title": "Historia de la FAI",
         "author": "Juan Gómez Casas",
-        "year": 2002,
+        "pubYear": 2002,
         "category": "historia",
         "rating": 4.5,
         "filename": "Juan Gómez Casas - Historia de la FAI.pdf"
@@ -1472,7 +1472,7 @@ export const regionData = {
       {
         "title": "Historia del anarcosindicalismo español (1968) (2)",
         "author": "Juan Gómez Casas",
-        "year": 1968,
+        "pubYear": 1968,
         "category": "historia",
         "rating": 4.5,
         "filename": "Juan Gómez Casas - Historia del anarcosindicalismo español (1968) (2).pdf"
@@ -1494,7 +1494,7 @@ export const regionData = {
       {
         "title": "El nazismo al desnudo. Su intervención y ayuda a los facciosos españoles puesta al descubierto por sus propios documentos",
         "author": "Grupo D.A.S. (Deutschen Anarcho-Syndikalisten). Comité Nacional de la CNT",
-        "year": 1938,
+        "pubYear": 1938,
         "category": "historia",
         "rating": 4.5,
         "filename": "Grupo D.A.S. (Deutschen Anarcho-Syndikalisten). Comité Nacional de la CNT - El nazismo al desnudo. Su intervención y ayuda a los facciosos españoles puesta al descubierto por sus propios documentos.pdf"
@@ -1502,7 +1502,7 @@ export const regionData = {
       {
         "title": "A través de la metralla. Escenas vividas en los frentes y en la retaguardia",
         "author": "Armand Guerra",
-        "year": 1937,
+        "pubYear": 1937,
         "category": "historia",
         "rating": 4.5,
         "filename": "Armand Guerra - A través de la metralla. Escenas vividas en los frentes y en la retaguardia.pdf"
@@ -1524,7 +1524,7 @@ export const regionData = {
       {
         "title": "Colectividades libertarias en Castilla",
         "author": "José Luis Gutiérrez Molina",
-        "year": 1977,
+        "pubYear": 1977,
         "category": "historia",
         "rating": 4.5,
         "filename": "José Luis Gutiérrez Molina - Colectividades libertarias en Castilla.pdf"
@@ -1539,7 +1539,7 @@ export const regionData = {
       {
         "title": "Sobre el intento de exterminio del anarcosindicalismo gaditano por los sediciosos de julio de 1936",
         "author": "José Luis Gutiérrez Molina",
-        "year": 2012,
+        "pubYear": 2012,
         "category": "historia",
         "rating": 4.5,
         "filename": "José Luis Gutiérrez Molina - Sobre el intento de exterminio del anarcosindicalismo gaditano por los sediciosos de julio de 1936.pdf"
@@ -1589,7 +1589,7 @@ export const regionData = {
       {
         "title": "La mujer en la lucha social y en la guerra civil de España",
         "author": "Lola Iturbe",
-        "year": 2012,
+        "pubYear": 2012,
         "category": "historia",
         "rating": 4.5,
         "filename": "Lola Iturbe - La mujer en la lucha social y en la guerra civil de España.pdf"
@@ -1597,7 +1597,7 @@ export const regionData = {
       {
         "title": "Colectividades libertarias en España (2)",
         "author": "Gastón Leval",
-        "year": 1977,
+        "pubYear": 1977,
         "category": "historia",
         "rating": 4.5,
         "filename": "Gastón Leval - Colectividades libertarias en España (2).pdf"
@@ -1710,7 +1710,7 @@ export const regionData = {
       {
         "title": "Cárceles en llamas",
         "author": "César Lorenzo Rubio",
-        "year": 2013,
+        "pubYear": 2013,
         "category": "historia",
         "rating": 4.5,
         "filename": "César Lorenzo Rubio - Cárceles en llamas.pdf"
@@ -1718,7 +1718,7 @@ export const regionData = {
       {
         "title": "El proletariado militante",
         "author": "Anselmo Lorenzo",
-        "year": 2013,
+        "pubYear": 2013,
         "category": "historia",
         "rating": 4.5,
         "filename": "Anselmo Lorenzo - El proletariado militante.pdf"
@@ -1754,7 +1754,7 @@ export const regionData = {
       {
         "title": "Ministros anarquistas. La CNT en el gobierno de la II República (1936-1939)",
         "author": "Dolors Marín",
-        "year": 2005,
+        "pubYear": 2005,
         "category": "historia",
         "rating": 4.5,
         "filename": "Dolors Marín - Ministros anarquistas. La CNT en el gobierno de la II República (1936-1939).pdf"
@@ -1762,7 +1762,7 @@ export const regionData = {
       {
         "title": "Grandezas y miserias de la revolución social española",
         "author": "Félix Martí Ibáñez",
-        "year": 1937,
+        "pubYear": 1937,
         "category": "historia",
         "rating": 4.5,
         "filename": "Félix Martí Ibáñez - Grandezas y miserias de la revolución social española.pdf"
@@ -1784,7 +1784,7 @@ export const regionData = {
       {
         "title": "El anarquismo en el campo andaluz. Una interpretación",
         "author": "Jacques Maurice",
-        "year": 1989,
+        "pubYear": 1989,
         "category": "historia",
         "rating": 4.5,
         "filename": "Jacques Maurice - El anarquismo en el campo andaluz. Una interpretación.pdf"
@@ -1792,7 +1792,7 @@ export const regionData = {
       {
         "title": "Barbarie gubernamental en España",
         "author": "Ricardo Mella Cea y José Prat Acabo",
-        "year": 1897,
+        "pubYear": 1897,
         "category": "historia",
         "rating": 4.5,
         "filename": "Ricardo Mella Cea y José Prat Acabo - Barbarie gubernamental en España.pdf"
@@ -1807,7 +1807,7 @@ export const regionData = {
       {
         "title": "Los Amigos de Durruti, los trotsquistas y los sucesos de Mayo",
         "author": "Frank Mintz y Miguel Peciña",
-        "year": 1978,
+        "pubYear": 1978,
         "category": "historia",
         "rating": 4.5,
         "filename": "Frank Mintz y Miguel Peciña - Los Amigos de Durruti, los trotsquistas y los sucesos de Mayo.pdf"
@@ -1815,7 +1815,7 @@ export const regionData = {
       {
         "title": "Impresiones de un viaje por Galicia",
         "author": "Federica Montseny",
-        "year": 1999,
+        "pubYear": 1999,
         "category": "historia",
         "rating": 4.5,
         "filename": "Federica Montseny - Impresiones de un viaje por Galicia.pdf"
@@ -1823,7 +1823,7 @@ export const regionData = {
       {
         "title": "Impresiones sobre el socialismo en España",
         "author": "Max Nettlau",
-        "year": 1971,
+        "pubYear": 1971,
         "category": "historia",
         "rating": 4.5,
         "filename": "Max Nettlau - Impresiones sobre el socialismo en España.pdf"
@@ -1838,7 +1838,7 @@ export const regionData = {
       {
         "title": "El anarquismo extremeño frente al poder. Estudio de un periódico libertario. El Amigo del Pueblo 1930-1933",
         "author": "Ángel Olmedo Alonso",
-        "year": 1997,
+        "pubYear": 1997,
         "category": "historia",
         "rating": 4.5,
         "filename": "Ángel Olmedo Alonso - El anarquismo extremeño frente al poder. Estudio de un periódico libertario. El Amigo del Pueblo 1930-1933.pdf"
@@ -1881,7 +1881,7 @@ export const regionData = {
       {
         "title": "El anarquismo contra el estado franquista. CNT 1939-1951",
         "author": "Abel Paz",
-        "year": 2001,
+        "pubYear": 2001,
         "category": "historia",
         "rating": 4.5,
         "filename": "Abel Paz - El anarquismo contra el estado franquista. CNT 1939-1951.pdf"
@@ -1896,7 +1896,7 @@ export const regionData = {
       {
         "title": "Trayectoria de la CNT. Sindicalismo y anarquismo (1979) (2)",
         "author": "Juan Peiró",
-        "year": 1979,
+        "pubYear": 1979,
         "category": "historia",
         "rating": 4.5,
         "filename": "Juan Peiró - Trayectoria de la CNT. Sindicalismo y anarquismo (1979) (2).pdf"
@@ -1904,7 +1904,7 @@ export const regionData = {
       {
         "title": "Por qué se constituyó el Partido Sindicalista",
         "author": "Ángel Pestaña",
-        "year": 1969,
+        "pubYear": 1969,
         "category": "historia",
         "rating": 4.5,
         "filename": "Ángel Pestaña - Por qué se constituyó el Partido Sindicalista.pdf"
@@ -1933,7 +1933,7 @@ export const regionData = {
       {
         "title": "Fascismo y anarquismo en la España contemporánea",
         "author": "Carlos M. Rama",
-        "year": 1976,
+        "pubYear": 1976,
         "category": "historia",
         "rating": 4.5
       },
@@ -1996,7 +1996,7 @@ export const regionData = {
       {
         "title": "Los anarcosindicalistas tarrasaenses en el exilio",
         "author": "Francisco Sabat",
-        "year": 1979,
+        "pubYear": 1979,
         "category": "historia",
         "rating": 4.5,
         "filename": "Francisco Sabat - Los anarcosindicalistas tarrasaenses en el exilio.pdf"
@@ -2004,7 +2004,7 @@ export const regionData = {
       {
         "title": "La cuerda de deportados",
         "author": "Ángel Samblancat",
-        "year": 1922,
+        "pubYear": 1922,
         "category": "historia",
         "rating": 4.5,
         "filename": "Ángel Samblancat - La cuerda de deportados.pdf"
@@ -2012,7 +2012,7 @@ export const regionData = {
       {
         "title": "El sindicalismo y la política. Los Solidarios y Nosotros (1966) (2)",
         "author": "Ricardo Sanz García",
-        "year": 1966,
+        "pubYear": 1966,
         "category": "historia",
         "rating": 4.5,
         "filename": "Ricardo Sanz García - El sindicalismo y la política. Los Solidarios y Nosotros (1966) (2).pdf"
@@ -2020,7 +2020,7 @@ export const regionData = {
       {
         "title": "Los hijos del trabajo. El sindicalismo español antes de la Guerra Civil",
         "author": "Ricardo Sanz García",
-        "year": 2015,
+        "pubYear": 2015,
         "category": "historia",
         "rating": 4.5,
         "filename": "Ricardo Sanz García - Los hijos del trabajo. El sindicalismo español antes de la Guerra Civil.pdf"
@@ -2035,7 +2035,7 @@ export const regionData = {
       {
         "title": "Entre los campesinos de Aragón. El comunismo libertario en las comarcas liberadas (1977) (2)",
         "author": "Augustin Souchy",
-        "year": 1977,
+        "pubYear": 1977,
         "category": "historia",
         "rating": 4.5,
         "filename": "Augustin Souchy - Entre los campesinos de Aragón. El comunismo libertario en las comarcas liberadas (1977) (2).pdf"
@@ -2113,7 +2113,7 @@ export const regionData = {
       {
         "title": "Actividad política de la izquierda libertaria en la Comarca del Vallès Occidental durante la Guerra Civil",
         "author": "Matías Vargas Puga",
-        "year": 2001,
+        "pubYear": 2001,
         "category": "historia",
         "rating": 4.5,
         "filename": "Matías Vargas Puga - Actividad política de la izquierda libertaria en la Comarca del Vallès Occidental durante la Guerra Civil.pdf"
@@ -2135,7 +2135,7 @@ export const regionData = {
       {
         "title": "El anarquismo en Burgos",
         "author": "Varios autores",
-        "year": 2015,
+        "pubYear": 2015,
         "category": "historia",
         "rating": 4.5,
         "filename": "Varios autores - El anarquismo en Burgos.pdf"
@@ -2143,7 +2143,7 @@ export const regionData = {
       {
         "title": "En relación con el Caso Scala. Nueva ofensiva policial contra la CNT y el MLE",
         "author": "Varios autores",
-        "year": 1980,
+        "pubYear": 1980,
         "category": "historia",
         "rating": 4.5,
         "filename": "Varios autores - En relación con el Caso Scala. Nueva ofensiva policial contra la CNT y el MLE.pdf"
@@ -2151,7 +2151,7 @@ export const regionData = {
       {
         "title": "Entre la revolución y la tragedia. Fotografías, documentos y miradas sobre la Semana Trágica",
         "author": "Varios autores",
-        "year": 2020,
+        "pubYear": 2020,
         "category": "historia",
         "rating": 4.5,
         "filename": "Varios autores - Entre la revolución y la tragedia. Fotografías, documentos y miradas sobre la Semana Trágica.pdf"
@@ -2166,7 +2166,7 @@ export const regionData = {
       {
         "title": "Historia de diez años",
         "author": "Varios autores",
-        "year": 2005,
+        "pubYear": 2005,
         "category": "historia",
         "rating": 4.5,
         "filename": "Varios autores - Historia de diez años.pdf"
@@ -2181,7 +2181,7 @@ export const regionData = {
       {
         "title": "Federaciones Regionales Anarquistas en España (1912-1919)",
         "author": "Joan Zambrana",
-        "year": 2023,
+        "pubYear": 2023,
         "category": "historia",
         "rating": 4.5,
         "filename": "Joan Zambrana - Federaciones Regionales Anarquistas en España (1912-1919).pdf"
@@ -2189,7 +2189,7 @@ export const regionData = {
       {
         "title": "La gesta traicionada. Los anarquistas vascos y la Guerra Civil en Euskal Herriak (Julio 1936 - Junio 1937)",
         "author": "Alfredo Velasco Núñez",
-        "year": 1937,
+        "pubYear": 1937,
         "category": "historia",
         "rating": 4.5,
         "filename": "Alfredo Velasco Núñez - La gesta traicionada. Los anarquistas vascos y la Guerra Civil en Euskal Herriak (Julio 1936 - Junio 1937).pdf"
@@ -2216,7 +2216,7 @@ export const regionData = {
       {
         "title": "El origen del 1º de Mayo",
         "author": "Anónimo",
-        "year": 1886,
+        "pubYear": 1886,
         "category": "historia",
         "rating": 4.6,
         "summary": "La revuelta de Haymarket en Chicago y el nacimiento de la jornada internacional de los trabajadores.",
@@ -2225,7 +2225,7 @@ export const regionData = {
       {
         "title": "Los orígenes libertarios del Primero de Mayo: de Chicago a América Latina (1886-1930)",
         "author": "José Antonio Gutiérrez D. (comp.)",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "historia",
         "rating": 4.6,
         "summary": "Historia del Primero de Mayo libertario, de la revuelta de Haymarket en Chicago (1886) a su expansión por América Latina (1886-1930), con textos de José Antonio Gutiérrez y otros autores.",
@@ -2234,7 +2234,7 @@ export const regionData = {
       {
         "title": "1º de mayo. Su origen y significado",
         "author": "Agrupacion Tiempos Nuevos",
-        "year": 1912,
+        "pubYear": 1912,
         "category": "historia",
         "rating": 4.5,
         "filename": "Agrupacion Tiempos Nuevos - 1º de mayo. Su origen y significado.pdf"
@@ -2242,7 +2242,7 @@ export const regionData = {
       {
         "title": "Voces anarquistas. Historia oral del anarquismo en Estados Unidos",
         "author": "Paul Avrich",
-        "year": 2004,
+        "pubYear": 2004,
         "category": "historia",
         "rating": 4.5,
         "filename": "Paul Avrich - Voces anarquistas. Historia oral del anarquismo en Estados Unidos.pdf"
@@ -2257,7 +2257,7 @@ export const regionData = {
       {
         "title": "La tragedia de Chicago",
         "author": "Ricardo Mella Cea",
-        "year": 2018,
+        "pubYear": 2018,
         "category": "historia",
         "rating": 4.5,
         "filename": "Ricardo Mella Cea - La tragedia de Chicago.pdf"
@@ -2272,7 +2272,7 @@ export const regionData = {
       {
         "title": "El martirio de los anarquistas de Chicago",
         "author": "Augustin Souchy",
-        "year": 1937,
+        "pubYear": 1937,
         "category": "historia",
         "rating": 4.5,
         "filename": "Augustin Souchy - El martirio de los anarquistas de Chicago.pdf"
@@ -2299,7 +2299,7 @@ export const regionData = {
       {
         "title": "1968. El año sublime de la acracia",
         "author": "Miquel Amorós",
-        "year": 2014,
+        "pubYear": 2014,
         "category": "historia",
         "rating": 4.5,
         "filename": "Miquel Amorós - 1968. El año sublime de la acracia.pdf"
@@ -2307,7 +2307,7 @@ export const regionData = {
       {
         "title": "La revuelta de los Banlieusards",
         "author": "Gavroche",
-        "year": 2005,
+        "pubYear": 2005,
         "category": "historia",
         "rating": 4.5,
         "summary": "Crónica de la insurrección de las banlieues francesas de 2005 y la contestación anarquista.",
@@ -2316,7 +2316,7 @@ export const regionData = {
       {
         "title": "La conjura de los indomables",
         "author": "Rodolfo Montes de Oca",
-        "year": 2008,
+        "pubYear": 2008,
         "category": "historia",
         "rating": 4.6,
         "summary": "Motín y evasión anarquista en la colonia penitenciaria de la Guayana francesa.",
@@ -2325,7 +2325,7 @@ export const regionData = {
       {
         "title": "La comuna de París (antología)",
         "author": "Mijaíl Bakunin Louise Michel y Piotr Kropotkin",
-        "year": 2019,
+        "pubYear": 2019,
         "category": "historia",
         "rating": 4.7,
         "summary": "Antología sobre la Comuna de París de 1871 con textos de Louise Michel, Mijaíl Bakunin y Piotr Kropotkin: la primera revolución proletaria y su significado fundacional para el anarquismo.",
@@ -2334,7 +2334,7 @@ export const regionData = {
       {
         "title": "La Comuna de París",
         "author": "Piotr Kropotkin",
-        "year": 1880,
+        "pubYear": 1880,
         "category": "historia",
         "rating": 4.6,
         "summary": "Texto de Kropotkin sobre la Comuna de París de 1871: el pueblo de París sublevado contra el poder central.",
@@ -2357,7 +2357,7 @@ export const regionData = {
       {
         "title": "La Gran Revolución (1789-1793) (Vol. I)",
         "author": "Piotr Kropotkin",
-        "year": 2018,
+        "pubYear": 2018,
         "category": "historia",
         "rating": 4.5,
         "filename": "Piotr Kropotkin - La Gran Revolución (1789-1793) (Vol. I).pdf"
@@ -2377,7 +2377,7 @@ export const regionData = {
       {
         "title": "El anarquismo en la antigua Grecia",
         "author": "Simón Royo Hernández",
-        "year": 2023,
+        "pubYear": 2023,
         "category": "historia",
         "rating": 4.4,
         "summary": "Ensayo de Simón Royo Hernández que rastrea las menciones de la «anarquía» en la Grecia antigua y clásica, mostrando la raíz etimológica (an-arché) y los destellos del pensamiento libertario en el núcleo de la cultura grecolatina.",
@@ -2386,7 +2386,7 @@ export const regionData = {
       {
         "title": "A tres años de la revuelta griega",
         "author": "Anónimo",
-        "year": 2015,
+        "pubYear": 2015,
         "category": "historia",
         "rating": 4.5,
         "summary": "Balance a tres años de la revuelta griega de 2010-2012: las ocupaciones, los movimientos sociales y la resistencia anarquista contra la austeridad.",
@@ -2395,7 +2395,7 @@ export const regionData = {
       {
         "title": "Reflexiones sobre el movimiento anarquista en Grecia y la solidaridad con los presos políticos",
         "author": "Anónimo",
-        "year": 2018,
+        "pubYear": 2018,
         "category": "historia",
         "rating": 4.4,
         "summary": "Reflexiones sobre el estado del anarquismo en Grecia y la campaña de solidaridad con los presos políticos anarquistas del Estado griego.",
@@ -2404,7 +2404,7 @@ export const regionData = {
       {
         "title": "Maderos, cerdos asesinos. Crónica del diciembre griego",
         "author": "Varios autores",
-        "year": 2012,
+        "pubYear": 2012,
         "category": "historia",
         "rating": 4.5,
         "filename": "Varios autores - Maderos, cerdos asesinos. Crónica del diciembre griego.pdf"
@@ -2417,7 +2417,7 @@ export const regionData = {
       {
         "title": "El anarquismo: historia de las ideas y movimientos libertarios",
         "author": "George Woodcock",
-        "year": 1962,
+        "pubYear": 1962,
         "category": "historia",
         "rating": 4.7,
         "summary": "El clásico de George Woodcock sobre la historia del anarquismo como doctrina y movimiento: sus raíces intelectuales (Godwin, Stirner, Proudhon, Bakunin, Kropotkin) y su desarrollo en Francia, Italia, Rusia y España, con capítulo final sobre el anarquismo español escrito por Pere Gabriel.",
@@ -2426,7 +2426,7 @@ export const regionData = {
       {
         "title": "Nos estamos acercando: La historia de Angry Brigade",
         "author": "Servando Rocha",
-        "year": 2014,
+        "pubYear": 2014,
         "category": "historia",
         "rating": 4.6,
         "summary": "Historia de la Angry Brigade, grupo insurreccionalista británico de los años 70 que atacó símbolos del poder estatal y capitalista con bombas y atracos.",
@@ -2447,7 +2447,7 @@ export const regionData = {
       {
         "title": "Años rojos, años negros. La resistencia anarquista contra el fascismo en Italia",
         "author": "Anónimo",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "historia",
         "rating": 4.6,
         "summary": "La resistencia anarquista italiana contra el fascismo (1922-1945): de las escuadras Arditi del Popolo y los años rojos a la guerrilla de la Resistencia, editado por A Rivista Anarchica y Aldarull.",
@@ -2456,7 +2456,7 @@ export const regionData = {
       {
         "title": "No podréis pararnos. La lucha anarquista en Italia",
         "author": "Alfredo M. Bonanno",
-        "year": 2005,
+        "pubYear": 2005,
         "category": "historia",
         "rating": 4.5,
         "filename": "Alfredo M. Bonanno - No podréis pararnos. La lucha anarquista en Italia.pdf"
@@ -2464,7 +2464,7 @@ export const regionData = {
       {
         "title": "Camisas Negras",
         "author": "Luce Fabbri",
-        "year": 1935,
+        "pubYear": 1935,
         "category": "historia",
         "rating": 4.5,
         "filename": "Luce Fabbri - Camisas Negras.pdf"
@@ -2472,7 +2472,7 @@ export const regionData = {
       {
         "title": "El fascismo, definición e Historia",
         "author": "Luce Fabbri",
-        "year": 1963,
+        "pubYear": 1963,
         "category": "historia",
         "rating": 4.5,
         "filename": "Luce Fabbri - El fascismo, definición e Historia.pdf"
@@ -2492,7 +2492,7 @@ export const regionData = {
       {
         "title": "Los Mártires de Tokio y la Sociedad de la Guillotina",
         "author": "Ba Jin",
-        "year": 2019,
+        "pubYear": 2019,
         "category": "historia",
         "rating": 4.6,
         "summary": "Crónica de los anarquistas japoneses ejecutados en 1911 y del movimiento de Kōtoku Shūsui.",
@@ -2501,7 +2501,7 @@ export const regionData = {
       {
         "title": "Kotoku, Osugi, Yamaga: tres anarquistas japoneses",
         "author": "Víctor García",
-        "year": 1975,
+        "pubYear": 1975,
         "category": "historia",
         "rating": 4.6,
         "summary": "Biografías de tres anarquistas japoneses —Kōtoku Shūsui, Ōsugi Sakae y Yamaga Taiji—, víctimas de la represión del Estado japonés entre el incidente Taigyaku Jiken (1911) y la masacre del gran terremoto de Kantō (1923).",
@@ -2510,7 +2510,7 @@ export const regionData = {
       {
         "title": "Contra el Dios Emperador. Juicios de la traición anarquista en Japón",
         "author": "Stefan Anarkowic",
-        "year": 2019,
+        "pubYear": 2019,
         "category": "historia",
         "rating": 4.6,
         "summary": "Los juicios por traición contra los anarquistas japoneses del incidente Taigyaku Jiken (1911): el mito del emperador y la represión judicial del anarquismo en Japón.",
@@ -2519,7 +2519,7 @@ export const regionData = {
       {
         "title": "Museihushugi: el anarquismo japonés",
         "author": "Víctor García",
-        "year": 1980,
+        "pubYear": 1980,
         "category": "historia",
         "rating": 4.6,
         "summary": "Historia del anarquismo japonés (museihushugi) escrita por Víctor García: del incidente de alta traición de 1911 a la reconstrucción del movimiento libertario nipón.",
@@ -2528,7 +2528,7 @@ export const regionData = {
       {
         "title": "Reflexiones en el camino hacia la horca",
         "author": "Kanno Sugako",
-        "year": 1911,
+        "pubYear": 1911,
         "category": "historia",
         "rating": 4.7,
         "summary": "Testimonio escrito desde la celda por Kanno Sugako, anarquista japonesa ejecutada en 1911 en el proceso Taigyaku Jiken.",
@@ -2556,7 +2556,7 @@ export const regionData = {
       {
         "title": "La Banda de Chernopeev",
         "author": "Colectivo anarquista de Macedonia",
-        "year": 1903,
+        "pubYear": 1903,
         "category": "historia",
         "rating": 4.5,
         "summary": "Los levantamientos de 1903 en Macedonia y Tracia: la insurrección popular contra el Imperio Otomano y la federación balcánica.",
@@ -2570,7 +2570,7 @@ export const regionData = {
       {
         "title": "Revolución en Baja California, México (1911)",
         "author": "D. L. Nevin",
-        "year": 1998,
+        "pubYear": 1998,
         "category": "historia",
         "rating": 4.6,
         "summary": "La insurrección magonista de 1911 en Baja California, desde la junta de Los Ángeles.",
@@ -2579,7 +2579,7 @@ export const regionData = {
       {
         "title": "Historia de la Revolucion Mexicana",
         "author": "Diego Abad de Santillán",
-        "year": 1992,
+        "pubYear": 1992,
         "category": "historia",
         "rating": 4.5,
         "filename": "Diego Abad de Santillán - Historia de la Revolucion Mexicana.pdf"
@@ -2601,7 +2601,7 @@ export const regionData = {
       {
         "title": "Baja California heroica",
         "author": "Enrique Aldrete",
-        "year": 1958,
+        "pubYear": 1958,
         "category": "historia",
         "rating": 4.5,
         "filename": "Enrique Aldrete - Baja California heroica.pdf"
@@ -2609,7 +2609,7 @@ export const regionData = {
       {
         "title": "El anarquismo en México",
         "author": "Olivia Domínguez Prieto (coord.)",
-        "year": 2015,
+        "pubYear": 2015,
         "category": "historia",
         "rating": 4.5,
         "filename": "Olivia Domínguez Prieto (coord.) - El anarquismo en México.pdf"
@@ -2631,7 +2631,7 @@ export const regionData = {
       {
         "title": "El anarquismo y la clase obrera mexicana (1860-1931)",
         "author": "John M. Hart",
-        "year": 1984,
+        "pubYear": 1984,
         "category": "historia",
         "rating": 4.5,
         "filename": "John M. Hart - El anarquismo y la clase obrera mexicana (1860-1931).pdf"
@@ -2639,7 +2639,7 @@ export const regionData = {
       {
         "title": "Los anarquistas mexicanos, 1860-1900",
         "author": "John M. Hart",
-        "year": 1974,
+        "pubYear": 1974,
         "category": "historia",
         "rating": 4.5,
         "filename": "John M. Hart - Los anarquistas mexicanos, 1860-1900.pdf"
@@ -2654,7 +2654,7 @@ export const regionData = {
       {
         "title": "El Magonismo. Historia de una pasión libertaria 1900-1922",
         "author": "Salvador Hernández Padilla",
-        "year": 1999,
+        "pubYear": 1999,
         "category": "historia",
         "rating": 4.5,
         "filename": "Salvador Hernández Padilla - El Magonismo. Historia de una pasión libertaria 1900-1922.pdf"
@@ -2669,7 +2669,7 @@ export const regionData = {
       {
         "title": "Aprender escuchando. Autonomía, educación y guerrilla en Chiapas y Kurdistán",
         "author": "Varios autores",
-        "year": 2015,
+        "pubYear": 2015,
         "category": "historia",
         "rating": 4.5,
         "filename": "Varios autores - Aprender escuchando. Autonomía, educación y guerrilla en Chiapas y Kurdistán.pdf"
@@ -2682,7 +2682,7 @@ export const regionData = {
       {
         "title": "Anarquismo africano",
         "author": "Sam Mbah e I. E. Igariwey",
-        "year": 1997,
+        "pubYear": 1997,
         "category": "historia",
         "rating": 4.5,
         "summary": "El anarquismo en África, desde las sociedades comunitarias hasta la Awareness League nigeriana.",
@@ -2696,7 +2696,7 @@ export const regionData = {
       {
         "title": "La comuna de Encarnación",
         "author": "Varios autores",
-        "year": 1931,
+        "pubYear": 1931,
         "category": "historia",
         "rating": 4.6,
         "summary": "Crónica de la toma de Encarnación (Paraguay) el 20 de febrero de 1931, considerada la primera comuna libertaria de América, y de su posterior represión.",
@@ -2710,7 +2710,7 @@ export const regionData = {
       {
         "title": "El anarcosindicalismo en el sur andino peruano: Arequipa, Mollendo, Cusco, Puno",
         "author": "Steven J. Hirsch",
-        "year": 2020,
+        "pubYear": 2020,
         "category": "historia",
         "rating": 4.5,
         "summary": "Fragmento del ensayo de Steven J. Hirsch sobre el anarcosindicalismo en el sur andino peruano: la influencia libertaria en la clase obrera y campesina de Arequipa, Mollendo, Cusco y Puno, más allá de la Lima obrera.",
@@ -2719,7 +2719,7 @@ export const regionData = {
       {
         "title": "Anarquismo y sindicalismo en el Perú (1904-1929)",
         "author": "Piedad Pareja",
-        "year": 1978,
+        "pubYear": 1978,
         "category": "historia",
         "rating": 4.5,
         "summary": "Estudio pionero de Piedad Pareja sobre los orígenes del movimiento obrero peruano y el anarcosindicalismo (1904-1929): la polémica entre anarquismo y socialismo, con la emergencia del marxismo de Mariátegui y Haya de la Torre.",
@@ -2728,7 +2728,7 @@ export const regionData = {
       {
         "title": "El anarcosindicalismo en el Perú",
         "author": "Federación Anarquista del Perú",
-        "year": 1961,
+        "pubYear": 1961,
         "category": "historia",
         "rating": 4.4,
         "summary": "Folleto de la Federación Anarquista del Perú (Ediciones Tierra y Libertad, México) que reivindica las jornadas iniciales del movimiento obrero peruano: las huelgas, los sindicatos y las luchas libertarias de inicios del siglo XX.",
@@ -2751,7 +2751,7 @@ export const regionData = {
       {
         "title": "El anarcosindicalismo en el sur andino peruano",
         "author": "Steven J. Hirsch",
-        "year": 2020,
+        "pubYear": 2020,
         "category": "historia",
         "rating": 4.5,
         "filename": "Steven J. Hirsch - El anarcosindicalismo en el sur andino peruano.pdf"
@@ -2759,7 +2759,7 @@ export const regionData = {
       {
         "title": "Sindicalismo y milenarismo en la región andina del Perú, 1920-1931",
         "author": "Ricardo Melgar Bao",
-        "year": 1988,
+        "pubYear": 1988,
         "category": "historia",
         "rating": 4.5,
         "filename": "Ricardo Melgar Bao - Sindicalismo y milenarismo en la región andina del Perú, 1920-1931.pdf"
@@ -2774,7 +2774,7 @@ export const regionData = {
       {
         "title": "La cuestión del pan. El anarcosindicalismo en el Perú",
         "author": "Luis Tejada",
-        "year": 1988,
+        "pubYear": 1988,
         "category": "historia",
         "rating": 4.5,
         "filename": "Luis Tejada - La cuestión del pan. El anarcosindicalismo en el Perú.pdf"
@@ -2782,7 +2782,7 @@ export const regionData = {
       {
         "title": "La utopía libertaria en el Perú",
         "author": "Luis Tejada y César Lévano (comps.)",
-        "year": 2006,
+        "pubYear": 2006,
         "category": "historia",
         "rating": 4.5,
         "filename": "Luis Tejada y César Lévano (comps.) - La utopía libertaria en el Perú.pdf"
@@ -2790,7 +2790,7 @@ export const regionData = {
       {
         "title": "Anarquismo y anarcosindicalismo en el Perú. Testimonios",
         "author": "Varios autores",
-        "year": 1996,
+        "pubYear": 1996,
         "category": "historia",
         "rating": 4.5,
         "filename": "Varios autores - Anarquismo y anarcosindicalismo en el Perú. Testimonios.pdf"
@@ -2803,7 +2803,7 @@ export const regionData = {
       {
         "title": "Historia del anarquismo polaco",
         "author": "Distro Ingobernables",
-        "year": 2022,
+        "pubYear": 2022,
         "category": "historia",
         "rating": 4.2,
         "summary": "Fanzine sobre la historia del anarquismo polaco: una breve historia del movimiento, el makhaevismo de Machajski, el anarquismo báltico y polaco a finales del siglo XIX y la participación de la Unión de Sindicalistas Polacos en el alzamiento de Varsovia.",
@@ -2812,7 +2812,7 @@ export const regionData = {
       {
         "title": "Anarquistas de Bialystok 1903-1908",
         "author": "Varios autores",
-        "year": 2009,
+        "pubYear": 2009,
         "category": "historia",
         "rating": 4.5,
         "filename": "Varios autores - Anarquistas de Bialystok 1903-1908.pdf"
@@ -2825,7 +2825,7 @@ export const regionData = {
       {
         "title": "Kronstadt 1921",
         "author": "Paul Avrich",
-        "year": 1970,
+        "pubYear": 1970,
         "category": "historia",
         "rating": 4.6,
         "summary": "La rebelión de los marineros de Kronstadt contra el bolchevismo, aplastada por el Estado soviético.",
@@ -2834,7 +2834,7 @@ export const regionData = {
       {
         "title": "La comuna de Kronstadt",
         "author": "Alexander Berkman Stepan Petritchenko y Néstor Makhno",
-        "year": 1921,
+        "pubYear": 1921,
         "category": "historia",
         "rating": 4.7,
         "summary": "Testimonios y análisis de la rebelión de los marineros de Kronstadt contra el bolchevismo.",
@@ -2843,7 +2843,7 @@ export const regionData = {
       {
         "title": "La Makhnovschina. Un movimiento libertario bajo fuego en Ucrania (1918-1921)",
         "author": "Lorena Paz Paredes",
-        "year": 2018,
+        "pubYear": 2018,
         "category": "historia",
         "rating": 4.7,
         "summary": "Estudio del movimiento campesino libertario ucraniano de Néstor Makhno durante la guerra civil rusa.",
@@ -2852,7 +2852,7 @@ export const regionData = {
       {
         "title": "El anarquismo en el espejo judío",
         "author": "Yago Mellado López",
-        "year": 2013,
+        "pubYear": 2013,
         "category": "historia",
         "rating": 4.4,
         "summary": "Tesis doctoral sobre el anarquismo judío: la presencia de militantes y pensadores judíos en el movimiento libertario.",
@@ -2861,7 +2861,7 @@ export const regionData = {
       {
         "title": "Los anarquistas y los soviets",
         "author": "Alexandre Skirda",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "historia",
         "rating": 4.6,
         "summary": "Análisis de la relación de los anarquistas con los soviets durante la revolución rusa (1917-21): la autonomía obrera y su aplastamiento por el bolchevismo.",
@@ -2870,7 +2870,7 @@ export const regionData = {
       {
         "title": "La revolución desconocida",
         "author": "Volin",
-        "year": 1947,
+        "pubYear": 1947,
         "category": "historia",
         "rating": 4.8,
         "summary": "Historia de la revolución rusa de 1917 y de la Makhnovschina ucraniana escrita por Volin, testigo y protagonista del movimiento libertario.",
@@ -2879,7 +2879,7 @@ export const regionData = {
       {
         "title": "Chernoe Znamia (anarquistas rusos, 1900s)",
         "author": "Varios autores",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "historia",
         "rating": 4.6,
         "summary": "Historia de los grupos anarquistas rusos Chernoe Znamia ('Bandera Negra') de Bialystok, Minsk y otras ciudades entre 1906 y 1907: terrorismo, huelgas y organización en el Imperio ruso.",
@@ -2888,7 +2888,7 @@ export const regionData = {
       {
         "title": "Bakunin-Netchaiev. El Catecismo Revolucionario",
         "author": "Juan J. Alcalde",
-        "year": 1869,
+        "pubYear": 1869,
         "category": "historia",
         "rating": 4.5,
         "filename": "Juan J. Alcalde - Bakunin-Netchaiev. El Catecismo Revolucionario.pdf"
@@ -2896,7 +2896,7 @@ export const regionData = {
       {
         "title": "Los anarquistas rusos",
         "author": "Paul Avrich",
-        "year": 1974,
+        "pubYear": 1974,
         "category": "historia",
         "rating": 4.5,
         "filename": "Paul Avrich - Los anarquistas rusos.pdf"
@@ -2904,7 +2904,7 @@ export const regionData = {
       {
         "title": "El mito bolchevique",
         "author": "Alexander Berkman",
-        "year": 2013,
+        "pubYear": 2013,
         "category": "historia",
         "rating": 4.5,
         "filename": "Alexander Berkman - El mito bolchevique.pdf"
@@ -2912,7 +2912,7 @@ export const regionData = {
       {
         "title": "La verdad sobre Kronstadt",
         "author": "Varios autores",
-        "year": 2001,
+        "pubYear": 2001,
         "category": "historia",
         "rating": 4.5,
         "filename": "Varios autores - La verdad sobre Kronstadt.pdf"
@@ -2955,7 +2955,7 @@ export const regionData = {
       {
         "title": "El anarquismo y la revolución rusa",
         "author": "Anatol Gorélik",
-        "year": 2007,
+        "pubYear": 2007,
         "category": "historia",
         "rating": 4.5,
         "filename": "Anatol Gorélik - El anarquismo y la revolución rusa.pdf"
@@ -2977,7 +2977,7 @@ export const regionData = {
       {
         "title": "A cien años de la revolución rusa",
         "author": "Frank Mintz",
-        "year": 2017,
+        "pubYear": 2017,
         "category": "historia",
         "rating": 4.5,
         "filename": "Frank Mintz - A cien años de la revolución rusa.pdf"
@@ -2985,7 +2985,7 @@ export const regionData = {
       {
         "title": "Informe de mi estancia en la URSS (Documento para la historia obrera)",
         "author": "Ángel Pestaña",
-        "year": 1968,
+        "pubYear": 1968,
         "category": "historia",
         "rating": 4.5,
         "filename": "Ángel Pestaña - Informe de mi estancia en la URSS (Documento para la historia obrera).pdf"
@@ -2993,7 +2993,7 @@ export const regionData = {
       {
         "title": "Setenta días en Rusia. Lo que yo vi",
         "author": "Ángel Pestaña",
-        "year": 1924,
+        "pubYear": 1924,
         "category": "historia",
         "rating": 4.5,
         "filename": "Ángel Pestaña - Setenta días en Rusia. Lo que yo vi.pdf"
@@ -3013,7 +3013,7 @@ export const regionData = {
       {
         "title": "El experimento del Kurdistán oeste (Kurdistán sirio)",
         "author": "Zaher Baher",
-        "year": 2015,
+        "pubYear": 2015,
         "category": "historia",
         "rating": 4.5,
         "summary": "La autoadministración democrática de Rojava y el papel de las mujeres en la revolución kurda.",
@@ -3022,7 +3022,7 @@ export const regionData = {
       {
         "title": "La revolución ignorada. Liberación de la mujer, democracia directa y pluralismo radical en Oriente Medio",
         "author": "Varios autores",
-        "year": 2014,
+        "pubYear": 2014,
         "category": "historia",
         "rating": 4.5,
         "filename": "Varios autores - La revolución ignorada. Liberación de la mujer, democracia directa y pluralismo radical en Oriente Medio.pdf"
@@ -3030,7 +3030,7 @@ export const regionData = {
       {
         "title": "Revolución en Rojava. Liberación de la mujer y comunalismo entre la guerra y el embargo",
         "author": "Varios autores",
-        "year": 2017,
+        "pubYear": 2017,
         "category": "historia",
         "rating": 4.5,
         "filename": "Varios autores - Revolución en Rojava. Liberación de la mujer y comunalismo entre la guerra y el embargo.pdf"
@@ -3043,7 +3043,7 @@ export const regionData = {
       {
         "title": "Los anarquistas en la Revolución Rusa: la Makhnovtchina (Ucrania 1919)",
         "author": "François Hombourger",
-        "year": 1981,
+        "pubYear": 1981,
         "category": "historia",
         "rating": 4.5,
         "summary": "Cómic histórico de François Hombourger que, a través de Jürgen, un espartaquista alemán que tras la revolución consejista de Berlín se traslada a Rusia, narra el extraordinario movimiento social de Néstor Makhno y sus seguidores en la Ucrania revolucionaria de 1919.",
@@ -3052,7 +3052,7 @@ export const regionData = {
       {
         "title": "La Revolución Rusa en Ucrania (1918-1921)",
         "author": "Néstor Makhno",
-        "year": 1970,
+        "pubYear": 1970,
         "category": "historia",
         "rating": 4.7,
         "summary": "Memoria de Néstor Makhno sobre la revolución en Ucrania: el movimiento campesino anarquista de Gulai-Polé, sus soviets libres, la guerra contra blancos, verdes y bolcheviques y la defensa de la Makhnovschina entre 1918 y 1921.",
@@ -3061,7 +3061,7 @@ export const regionData = {
       {
         "title": "Historia del Movimiento Makhnovista (1918-1921)",
         "author": "Piotr Archinov",
-        "year": 2008,
+        "pubYear": 2008,
         "category": "historia",
         "rating": 4.5,
         "filename": "Piotr Archinov - Historia del Movimiento Makhnovista (1918-1921).pdf"
@@ -3081,7 +3081,7 @@ export const regionData = {
       {
         "title": "Fuga del penal de Punta Carretas",
         "author": "Varios autores",
-        "year": 1971,
+        "pubYear": 1971,
         "category": "historia",
         "rating": 4.5,
         "summary": "Relato de la fuga de presos anarquistas de la cárcel de Punta Carretas (Montevideo) a través de un túnel excavado desde una carbonería vecina en 1971.",
@@ -3090,7 +3090,7 @@ export const regionData = {
       {
         "title": "Orígenes del movimiento obrero en el Uruguay",
         "author": "Anónimo",
-        "year": 2001,
+        "pubYear": 2001,
         "category": "historia",
         "rating": 4.5,
         "summary": "Dos textos sobre los orígenes del movimiento obrero uruguayo en el siglo XIX, con la influencia del bakuninismo y de los primeros militantes anarquistas montevideanos.",
@@ -3099,7 +3099,7 @@ export const regionData = {
       {
         "title": "La primera huelga general en el Uruguay (23 de mayo de 1911)",
         "author": "Pascual Muñoz",
-        "year": 2011,
+        "pubYear": 2011,
         "category": "historia",
         "rating": 4.5,
         "summary": "Estudio de la primera huelga general de Uruguay, convocada el 23 de mayo de 1911, y su significado en la historia del movimiento obrero rioplatense.",
@@ -3108,7 +3108,7 @@ export const regionData = {
       {
         "title": "Masacre en Jacinto Vera",
         "author": "Publicación anarquista Tierra y Tempestad",
-        "year": 1994,
+        "pubYear": 1994,
         "category": "historia",
         "rating": 4.5,
         "summary": "La represión policial del 24 de agosto de 1994 contra la vigilia solidaria en el hospital Filtro de Montevideo, que dejó varios muertos y heridos.",
@@ -3117,7 +3117,7 @@ export const regionData = {
       {
         "title": "La Federación Anarquista Uruguaya",
         "author": "Guillermo Reigosa Pérez",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "historia",
         "rating": 4.4,
         "summary": "Estudio de Guillermo Reigosa Pérez sobre la historia de la Federación Anarquista Uruguaya: nacimiento y evolución del anarquismo uruguayo, la FAU, la escisión de 1964 y la resistencia contra la dictadura.",
@@ -3133,7 +3133,7 @@ export const regionData = {
       {
         "title": "Papeles de plomo. Los voluntarios uruguayos en la guerra de España",
         "author": "Varios autores",
-        "year": 2017,
+        "pubYear": 2017,
         "category": "historia",
         "rating": 4.5,
         "filename": "Varios autores - Papeles de plomo. Los voluntarios uruguayos en la guerra de España.pdf"
@@ -3145,7 +3145,7 @@ export const regionData = {
       {
         "title": "Anarquismos no occidentales",
         "author": "Jason Adams",
-        "year": 2003,
+        "pubYear": 2003,
         "category": "historia",
         "rating": 4.5,
         "summary": "Reflexión sobre la historia global del anarquismo fuera de Occidente: Asia (China, Corea, Japón e India), los anarquismos africanos (igbo, Egipto, Libia, Nigeria y Sudáfrica), América Latina (Argentina, Uruguay, Brasil, Chile, México y Cuba) y Oriente Medio (Armenia, Líbano, Turquía y Palestina).",
@@ -3154,7 +3154,7 @@ export const regionData = {
       {
         "title": "Los hermanos de la Costa. Piratería libertaria en el Caribe",
         "author": "Bernardo Fuster",
-        "year": 2014,
+        "pubYear": 2014,
         "category": "historia",
         "rating": 4.5,
         "summary": "Historia de la piratería en el Caribe leída en clave libertaria: los hermanos de la Costa y las repúblicas de piratas como experiencias de autonomía radical.",
@@ -3163,7 +3163,7 @@ export const regionData = {
       {
         "title": "Cronología del anarquismo",
         "author": "Manel Aisa",
-        "year": 1993,
+        "pubYear": 1993,
         "category": "historia",
         "rating": 4.7,
         "summary": "Cronología del anarquismo desde 1756 hasta la actualidad, elaborada por Manel Aisa como guía de la exposición 'Presencia Internacional del Anarquismo' (Barcelona, 1993).",
@@ -3172,7 +3172,7 @@ export const regionData = {
       {
         "title": "Anarquistas vengadores",
         "author": "Fernando Barbero Carrasco",
-        "year": 2013,
+        "pubYear": 2013,
         "category": "historia",
         "rating": 4.5,
         "summary": "Relato de los grandes atentados anarquistas de la propaganda por el hecho (1894-1921): Carnot, Cánovas, Humberto I y Dato, con las peripecias vitales de sus ejecutores.",
@@ -3181,7 +3181,7 @@ export const regionData = {
       {
         "title": "Bajo la bandera negra",
         "author": "Justus F. Wittkop",
-        "year": 1985,
+        "pubYear": 1985,
         "category": "historia",
         "rating": 4.5,
         "summary": "Hechos y figuras del anarquismo en esta historia del movimiento escrita por Wittkop.",
@@ -3190,7 +3190,7 @@ export const regionData = {
       {
         "title": "La anarquía a través de los tiempos",
         "author": "Max Nettlau",
-        "year": 1970,
+        "pubYear": 1970,
         "category": "historia",
         "rating": 4.6,
         "summary": "Panorama histórico del anarquismo mundial por el gran historiador del movimiento, editado en México.",
@@ -3199,7 +3199,7 @@ export const regionData = {
       {
         "title": "Días de sueño y de plomo",
         "author": "Alessandro Stella",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "historia",
         "rating": 4.5,
         "summary": "Crónica de Alessandro Stella sobre los años de plomo del anarquismo italiano: sueños rotos y resistencia.",
@@ -3222,7 +3222,7 @@ export const regionData = {
       {
         "title": "Los situacionistas y la anarquía",
         "author": "Miquel Amorós",
-        "year": 2019,
+        "pubYear": 2019,
         "category": "historia",
         "rating": 4.5,
         "filename": "Miquel Amorós - Los situacionistas y la anarquía.pdf"
@@ -3237,7 +3237,7 @@ export const regionData = {
       {
         "title": "Bajo tres banderas. Anarquismo e imaginación anticolonial",
         "author": "Benedict Anderson",
-        "year": 2008,
+        "pubYear": 2008,
         "category": "historia",
         "rating": 4.5,
         "filename": "Benedict Anderson - Bajo tres banderas. Anarquismo e imaginación anticolonial.pdf"
@@ -3245,7 +3245,7 @@ export const regionData = {
       {
         "title": "Fuego a la pólvora. Guerra y guerrilla en Irak",
         "author": "Anónimo",
-        "year": 2009,
+        "pubYear": 2009,
         "category": "historia",
         "rating": 4.5,
         "filename": "Anónimo - Fuego a la pólvora. Guerra y guerrilla en Irak.pdf"
@@ -3260,7 +3260,7 @@ export const regionData = {
       {
         "title": "El anarcosindicalismo en la sociedad del bienestar",
         "author": "Evert Arvidsson",
-        "year": 1961,
+        "pubYear": 1961,
         "category": "historia",
         "rating": 4.5,
         "filename": "Evert Arvidsson - El anarcosindicalismo en la sociedad del bienestar.pdf"
@@ -3282,7 +3282,7 @@ export const regionData = {
       {
         "title": "Apogeo y decadencia del primero de mayo",
         "author": "Ángel J. Cappelletti",
-        "year": 2014,
+        "pubYear": 2014,
         "category": "historia",
         "rating": 4.5,
         "filename": "Ángel J. Cappelletti - Apogeo y decadencia del primero de mayo.pdf"
@@ -3290,7 +3290,7 @@ export const regionData = {
       {
         "title": "Hechos y figuras del anarquismo hispanoamericano",
         "author": "Ángel J. Cappelletti",
-        "year": 1990,
+        "pubYear": 1990,
         "category": "historia",
         "rating": 4.5,
         "filename": "Ángel J. Cappelletti - Hechos y figuras del anarquismo hispanoamericano.pdf"
@@ -3298,7 +3298,7 @@ export const regionData = {
       {
         "title": "La idea de la libertad en el Renacimiento",
         "author": "Ángel J. Cappelletti",
-        "year": 1986,
+        "pubYear": 1986,
         "category": "historia",
         "rating": 4.5,
         "filename": "Ángel J. Cappelletti - La idea de la libertad en el Renacimiento.pdf"
@@ -3320,7 +3320,7 @@ export const regionData = {
       {
         "title": "Del socialismo utópico al anarquismo",
         "author": "Félix García Moriyón",
-        "year": 2008,
+        "pubYear": 2008,
         "category": "historia",
         "rating": 4.5,
         "filename": "Félix García Moriyón - Del socialismo utópico al anarquismo.pdf"
@@ -3335,7 +3335,7 @@ export const regionData = {
       {
         "title": "Anarquismo y Anarcosindicalismo en América Latina",
         "author": "Alfredo Gómez-Muller",
-        "year": 2009,
+        "pubYear": 2009,
         "category": "historia",
         "rating": 4.5,
         "filename": "Alfredo Gómez-Muller - Anarquismo y Anarcosindicalismo en América Latina.pdf"
@@ -3343,7 +3343,7 @@ export const regionData = {
       {
         "title": "El nacimiento del terrorismo en Occidente. Anarquía, nihilismo y violencia revolucionaria",
         "author": "Ángel Herrerín López y Juan Avilés Farré (eds.)",
-        "year": 2008,
+        "pubYear": 2008,
         "category": "historia",
         "rating": 4.5,
         "filename": "Ángel Herrerín López y Juan Avilés Farré (eds.) - El nacimiento del terrorismo en Occidente. Anarquía, nihilismo y violencia revolucionaria.pdf"
@@ -3365,7 +3365,7 @@ export const regionData = {
       {
         "title": "Ante la guerra. El movimiento anarquista y la matanza mundial de 1914-1918",
         "author": "Piotr et al. Kropotkin",
-        "year": 2015,
+        "pubYear": 2015,
         "category": "historia",
         "rating": 4.5,
         "filename": "Piotr et al. Kropotkin - Ante la guerra. El movimiento anarquista y la matanza mundial de 1914-1918.pdf"
@@ -3373,7 +3373,7 @@ export const regionData = {
       {
         "title": "Anarquismo en América Latina. Consideraciones en torno a su historia, rasgos y perspectivas",
         "author": "Nelson Méndez",
-        "year": 2012,
+        "pubYear": 2012,
         "category": "historia",
         "rating": 4.5,
         "filename": "Nelson Méndez - Anarquismo en América Latina. Consideraciones en torno a su historia, rasgos y perspectivas.pdf"
@@ -3388,7 +3388,7 @@ export const regionData = {
       {
         "title": "Anarquistas de ultramar. Anarquismo, indigenismo, descolonización",
         "author": "Carlos Taibo",
-        "year": 2018,
+        "pubYear": 2018,
         "category": "historia",
         "rating": 4.5,
         "filename": "Carlos Taibo - Anarquistas de ultramar. Anarquismo, indigenismo, descolonización.pdf"
@@ -3396,7 +3396,7 @@ export const regionData = {
       {
         "title": "Las otras Europas",
         "author": "Carlos Taibo",
-        "year": 1998,
+        "pubYear": 1998,
         "category": "historia",
         "rating": 4.5,
         "filename": "Carlos Taibo - Las otras Europas.pdf"
@@ -3418,7 +3418,7 @@ export const regionData = {
       {
         "title": "Anarquistas en América Latina",
         "author": "David Viñas",
-        "year": 1983,
+        "pubYear": 1983,
         "category": "historia",
         "rating": 4.5,
         "filename": "David Viñas - Anarquistas en América Latina.pdf"
@@ -3426,7 +3426,7 @@ export const regionData = {
       {
         "title": "El Congreso Revolucionario Internacional de París",
         "author": "Varios autores",
-        "year": 1902,
+        "pubYear": 1902,
         "category": "historia",
         "rating": 4.5,
         "filename": "Varios autores - El Congreso Revolucionario Internacional de París.pdf"
@@ -3434,7 +3434,7 @@ export const regionData = {
       {
         "title": "Una realización colectivista en Palestina",
         "author": "Varios autores",
-        "year": 1946,
+        "pubYear": 1946,
         "category": "historia",
         "rating": 4.5,
         "filename": "Varios autores - Una realización colectivista en Palestina.pdf"
@@ -3447,7 +3447,7 @@ export const regionData = {
       {
         "title": "La revolución como juego. El movimiento Provo",
         "author": "José Antonio Recio Cuesta",
-        "year": 2014,
+        "pubYear": 2014,
         "category": "historia",
         "rating": 4.5,
         "summary": "El movimiento Provo de los Países Bajos en los años sesenta: la revolución lúdica, las acciones provocadoras contra la autoridad y su legado contracultural.",
@@ -3456,7 +3456,7 @@ export const regionData = {
       {
         "title": "El movimiento Provo",
         "author": "Manuel Pérez Ledesma",
-        "year": 2014,
+        "pubYear": 2014,
         "category": "historia",
         "rating": 4.5,
         "summary": "Estudio del movimiento Provo neerlandés (1965-67) y su lugar en la tradición utópica y libertaria, por el historiador Manuel Pérez Ledesma.",
@@ -3481,7 +3481,7 @@ export const regionData = {
       {
         "title": "El único y su propiedad",
         "author": "Max Stirner",
-        "year": 1844,
+        "pubYear": 1844,
         "category": "teoria",
         "rating": 4.6,
         "summary": "El egoísmo radical de Stirner, precursor del anarquismo individualista: el Yo frente a toda idea sagrada.",
@@ -3490,7 +3490,7 @@ export const regionData = {
       {
         "title": "Comunismo autoritario y comunismo libertario",
         "author": "Max Nettlau",
-        "year": 1928,
+        "pubYear": 1928,
         "category": "teoria",
         "rating": 4.5,
         "summary": "El gran historiador del anarquismo distingue las dos tradiciones comunistas y su relación con la libertad.",
@@ -3499,7 +3499,7 @@ export const regionData = {
       {
         "title": "La lucha contra el Estado",
         "author": "Max Nettlau",
-        "year": 1920,
+        "pubYear": 1920,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Ensayo de Nettlau sobre la resistencia de la sociedad frente al Estado y la posibilidad de su abolición.",
@@ -3508,7 +3508,7 @@ export const regionData = {
       {
         "title": "La responsabilidad y la solidaridad en la lucha obrera",
         "author": "Max Nettlau",
-        "year": 1919,
+        "pubYear": 1919,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Sobre los límites y las posibilidades de la solidaridad en el movimiento obrero libertario.",
@@ -3517,7 +3517,7 @@ export const regionData = {
       {
         "title": "La acción como propaganda",
         "author": "Johann Most",
-        "year": 1885,
+        "pubYear": 1885,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Texto clásico de la propaganda por el hecho: la acción revolucionaria como agitación que despierta a las masas, más allá de su efecto inmediato.",
@@ -3526,7 +3526,7 @@ export const regionData = {
       {
         "title": "Rudolf Rocker",
         "author": "Rudolf Rocker",
-        "year": 1966,
+        "pubYear": 1966,
         "category": "acratas",
         "rating": 4.5,
         "filename": "Rudolf Rocker - Rudolf Rocker.pdf"
@@ -3534,7 +3534,7 @@ export const regionData = {
       {
         "title": "Severino Di Giovanni",
         "author": "Osvaldo Bayer",
-        "year": 1970,
+        "pubYear": 1970,
         "category": "acratas",
         "rating": 4.8,
         "filename": "Osvaldo Bayer - Severino Di Giovanni.pdf",
@@ -3543,7 +3543,7 @@ export const regionData = {
       {
         "title": "América, hoy",
         "author": "Víctor García",
-        "year": 1956,
+        "pubYear": 1956,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Ensayos e interpretaciones del anarquista español exiliado Víctor García sobre la geografía, la historia y las luchas del continente americano, con prólogo de José Peirats.",
@@ -3552,7 +3552,7 @@ export const regionData = {
       {
         "title": "Internet, hackers y software libre",
         "author": "Carlos Gradin (comp.)",
-        "year": 2004,
+        "pubYear": 2004,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Antología de la editorial anarquista Editora Fantasma sobre cultura hacker, software libre, criptografía y hacktivismo: de la historia de Internet a la autonomía tecnológica.",
@@ -3561,7 +3561,7 @@ export const regionData = {
       {
         "title": "El sujeto de la acción revolucionaria",
         "author": "Eduardo Colombo",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Reflexión de Eduardo Colombo sobre el agente capaz de transformar la sociedad: la voluntad humana como sujeto de la revolución.",
@@ -3570,7 +3570,7 @@ export const regionData = {
       {
         "title": "Bitácora de la Utopía: Anarquismo para el Siglo XXI",
         "author": "Nelson Méndez y Alfredo Vallota",
-        "year": 2000,
+        "pubYear": 2000,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Manual de anarquismo para el siglo XXI escrito por los pensadores venezolanos Nelson Méndez y Alfredo Vallota.",
@@ -3579,7 +3579,7 @@ export const regionData = {
       {
         "title": "El lenguaje libertario. Antología del pensamiento anarquista contemporáneo",
         "author": "Christian Ferrer",
-        "year": 2004,
+        "pubYear": 2004,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Antología del pensamiento anarquista contemporáneo compilada por el ensayista argentino Christian Ferrer.",
@@ -3588,7 +3588,7 @@ export const regionData = {
       {
         "title": "Una molesta piedra en el camino: educación anarquista",
         "author": "Ayelén Sardu",
-        "year": 2007,
+        "pubYear": 2007,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Análisis de las configuraciones educativas anarquistas en Argentina a fines del siglo XIX y principios del XX.",
@@ -3597,7 +3597,7 @@ export const regionData = {
       {
         "title": "El pensamiento de Kropotkin: ciencia, ética y anarquía",
         "author": "Ángel J. Cappelletti",
-        "year": 1978,
+        "pubYear": 1978,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Ángel J. Cappelletti estudia el pensamiento de Kropotkin: los fundamentos de la moral, la ética de la expansión vital y el comunismo sin Estado.",
@@ -3606,7 +3606,7 @@ export const regionData = {
       {
         "title": "Cabezas de tormenta. Ensayos sobre lo ingobernable",
         "author": "Christian Ferrer",
-        "year": 2002,
+        "pubYear": 2002,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Ensayos de Christian Ferrer sobre lo ingobernable y el anarquismo, publicados por Editorial Anarres.",
@@ -3615,7 +3615,7 @@ export const regionData = {
       {
         "title": "Pensadores anarquistas",
         "author": "Ángel J. Cappelletti",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Reseña de Ángel J. Cappelletti sobre la vida y las ideas de los principales ideólogos del anarquismo, de Godwin y Stirner a Proudhon, Bakunin, Kropotkin y Malatesta.",
@@ -3624,7 +3624,7 @@ export const regionData = {
       {
         "title": "Contra los jueces. El discurso anarquista en sede judicial",
         "author": "Aníbal D'Auria",
-        "year": 2009,
+        "pubYear": 2009,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Análisis de los discursos que los anarquistas pronunciaron ante los tribunales: la defensa como tribuna de propaganda del ideal libertario frente a la justicia de clase.",
@@ -3633,7 +3633,7 @@ export const regionData = {
       {
         "title": "Contra la democracia",
         "author": "Miriam Qarmat",
-        "year": 2006,
+        "pubYear": 2006,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Crítica radical del funcionamiento orgánico del capital y de la democracia como forma política: libertad, derechos y democracia puestos en cuestión desde el anarquismo.",
@@ -3642,7 +3642,7 @@ export const regionData = {
       {
         "title": "La voluntad del pueblo. Democracia y anarquía",
         "author": "Eduardo Colombo",
-        "year": 2006,
+        "pubYear": 2006,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Eduardo Colombo confronta democracia y anarquía: la voluntad del pueblo frente a la representación y al Estado, en diálogo con la tradición libertaria.",
@@ -3651,7 +3651,7 @@ export const regionData = {
       {
         "title": "Juan Lazarte, Militante Social, Medico, Humanista",
         "author": "Diego Abad de Santillán",
-        "year": 1964,
+        "pubYear": 1964,
         "category": "acratas",
         "rating": 4.5,
         "filename": "Diego Abad de Santillán - Juan Lazarte, Militante Social, Medico, Humanista.pdf",
@@ -3660,7 +3660,7 @@ export const regionData = {
       {
         "title": "Rebeldía y libertad: José Domingo Gómez Rojas",
         "author": "Maximiliano Astroza-León",
-        "year": 2016,
+        "pubYear": 2016,
         "category": "acratas",
         "rating": 4.5,
         "summary": "Vida del poeta anarquista chileno José Domingo Gómez Rojas, perseguido y muerto en 1920.",
@@ -3670,7 +3670,7 @@ export const regionData = {
       {
         "title": "Cuando la patria mata: la historia del anarquista Julio Rebosio (1914-1920)",
         "author": "Víctor Muñoz Cortés",
-        "year": 2011,
+        "pubYear": 2011,
         "category": "acratas",
         "rating": 4.7,
         "summary": "Biografía social del anarquista chileno Julio Rebosio, activo propagandista revolucionario de la década de 1910, muerto en 1920.",
@@ -3680,7 +3680,7 @@ export const regionData = {
       {
         "title": "Tecnología y vigilancia en la Operación Huracán",
         "author": "Vladimir Garay y Zak Rogoff",
-        "year": 2019,
+        "pubYear": 2019,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Análisis de la vigilancia policial y la tecnología usadas en la Operación Huracán (Chile, 2018), desde el hacktivismo y la seguridad informática.",
@@ -3689,7 +3689,7 @@ export const regionData = {
       {
         "title": "Utopistas, anarquistas y rebeldes",
         "author": "Rafael Gumucio",
-        "year": 2000,
+        "pubYear": 2000,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Reflexión sobre el resurgir del utopismo, el anarquismo y la rebeldía en los movimientos contra el capitalismo globalizado.",
@@ -3698,7 +3698,7 @@ export const regionData = {
       {
         "title": "Organización Ácrata. Propuestas y debates",
         "author": "Varios autores (grupo La Peste)",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Debate libertario sobre la organización y la coordinación de grupos e individualidades, con propuestas de línea táctica común.",
@@ -3707,7 +3707,7 @@ export const regionData = {
       {
         "title": "La importancia de la crítica en el desarrollo del movimiento revolucionario",
         "author": "José Antonio Gutiérrez",
-        "year": 2007,
+        "pubYear": 2007,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Ensayo sobre el papel de la crítica interna en el desarrollo del movimiento revolucionario y libertario.",
@@ -3716,7 +3716,7 @@ export const regionData = {
       {
         "title": "Bioterios y experimentación animal en Chile",
         "author": "Ediciones Especismo NO!",
-        "year": 2000,
+        "pubYear": 2000,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Crítica antiespecista a los bioterios y a la experimentación animal en Chile, como aporte a la lucha contra el especismo.",
@@ -3725,7 +3725,7 @@ export const regionData = {
       {
         "title": "¿Qué es la Anarquía? (basado en el ABC del comunismo libertario de Berkman)",
         "author": "Colectivo Revolución Libertaria",
-        "year": 2011,
+        "pubYear": 2011,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Fanzine de divulgación anarquista del Colectivo Revolución Libertaria inspirado en el ABC del comunismo libertario de Alexander Berkman.",
@@ -3734,7 +3734,7 @@ export const regionData = {
       {
         "title": "La cárcel en Chile. Análisis penal y experiencia carcelaria",
         "author": "Varios autores",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Análisis penal y de la experiencia carcelaria en Chile desde una perspectiva abolicionista y anarquista.",
@@ -3743,7 +3743,7 @@ export const regionData = {
       {
         "title": "Lirios y cañonazos: la prosa anarquista de Vicente Huidobro",
         "author": "Dan Connor",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Estudio de la prosa anarquista de Vicente Huidobro y de su relación con el individualismo, el anticomunismo y la revuelta.",
@@ -3752,7 +3752,7 @@ export const regionData = {
       {
         "title": "Hacktivismo, Software Libre y Anarquismo",
         "author": "Varios autores",
-        "year": 2019,
+        "pubYear": 2019,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Antología de Editorial Gato Negro (región chilena, 2019) que vincula el hacktivismo y el software libre con la práctica anarquista: la tecnología como herramienta de autonomía y resistencia frente al capital.",
@@ -3761,7 +3761,7 @@ export const regionData = {
       {
         "title": "La síntesis del anarquismo",
         "author": "Sébastien Faure Fernando Tarrida Mármol y Volin",
-        "year": 2019,
+        "pubYear": 2019,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Textos fundacionales del anarquismo sin adjetivos y de la síntesis anarquista: Tarrida del Mármol, Sébastien Faure y Volin reivindican la unión de las tendencias libertarias sin dogmatismo.",
@@ -3770,7 +3770,7 @@ export const regionData = {
       {
         "title": "El pensamiento político de Efraín Plaza Olmedo",
         "author": "Anónimo",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "teoria",
         "rating": 4.4,
         "summary": "Análisis del pensamiento político de Efraín Plaza Olmedo, intelectual anarquista chileno: su visión sobre la organización, la educación y la revolución social.",
@@ -3779,7 +3779,7 @@ export const regionData = {
       {
         "title": "Problemas del anarquismo y la revolución en China",
         "author": "Ba Jin",
-        "year": 2000,
+        "pubYear": 2000,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Ensayos de Ba Jin sobre el anarquismo y la revolución en China.",
@@ -3788,7 +3788,7 @@ export const regionData = {
       {
         "title": "La Conquista del Pan",
         "author": "Piotr Kropotkin",
-        "year": 1892,
+        "pubYear": 1892,
         "category": "teoria",
         "rating": 4.8,
         "filename": "Piotr Kropotkin - La Conquista del Pan.pdf"
@@ -3796,7 +3796,7 @@ export const regionData = {
       {
         "title": "Teresa Claramunt, la virgen roja barcelonesa",
         "author": "María Amalia Pradas Baena",
-        "year": 2006,
+        "pubYear": 2006,
         "category": "acratas",
         "rating": 4.7,
         "summary": "Vida y escritos de la anarcosindicalista catalana Teresa Claramunt, pionera del feminismo libertario.",
@@ -3806,7 +3806,7 @@ export const regionData = {
       {
         "title": "Francisco Ferrer i Guardia y la Escuela Moderna",
         "author": "Anónimo",
-        "year": 1909,
+        "pubYear": 1909,
         "category": "acratas",
         "rating": 4.7,
         "summary": "La pedagogía racionalista de Ferrer i Guardia, fusilado por sus ideas anarquistas en 1909.",
@@ -3816,7 +3816,7 @@ export const regionData = {
       {
         "title": "Actualidad del anarquismo",
         "author": "Tomás Ibáñez",
-        "year": 2011,
+        "pubYear": 2011,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Reflexión del pensador libertario catalán sobre la vigencia y las tensiones del anarquismo contemporáneo.",
@@ -3825,7 +3825,7 @@ export const regionData = {
       {
         "title": "Anarquía profesional y desarme teórico",
         "author": "Miguel Amorós",
-        "year": 2009,
+        "pubYear": 2009,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Ensayo crítico sobre el insurreccionalismo y la deriva profesional del activismo libertario.",
@@ -3834,7 +3834,7 @@ export const regionData = {
       {
         "title": "Anarquismo y anarquistas",
         "author": "Fidel Miró Solanes",
-        "year": 1996,
+        "pubYear": 1996,
         "category": "acratas",
         "rating": 4.6,
         "summary": "Memoria y testimonio de un veterano militante libertario español, documento clave de la literatura ácrata.",
@@ -3844,7 +3844,7 @@ export const regionData = {
       {
         "title": "Lola Iturbe: vida e ideal de una luchadora anarquista",
         "author": "Sonya Torres y Antonia Fontanillas",
-        "year": 2006,
+        "pubYear": 2006,
         "category": "acratas",
         "rating": 4.7,
         "summary": "Biografía de Lola Iturbe, militante de CNT y Mujeres Libres, exiliada tras la Guerra Civil.",
@@ -3854,7 +3854,7 @@ export const regionData = {
       {
         "title": "El eco de los pasos",
         "author": "Juan García Oliver",
-        "year": 1978,
+        "pubYear": 1978,
         "category": "acratas",
         "rating": 4.8,
         "summary": "Memorias del dirigente anarquista y cenetista Juan García Oliver, figura clave de la CNT en la Guerra Civil.",
@@ -3864,7 +3864,7 @@ export const regionData = {
       {
         "title": "Lombroso y los anarquistas",
         "author": "Ricardo Mella",
-        "year": 1896,
+        "pubYear": 1896,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Respuesta del pensador gallego a las teorías positivistas que criminalizaban al anarquismo.",
@@ -3873,7 +3873,7 @@ export const regionData = {
       {
         "title": "Del amor",
         "author": "Ricardo Mella",
-        "year": 1905,
+        "pubYear": 1905,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Reflexión del anarquista gallego sobre el amor libre, la moral y las relaciones humanas.",
@@ -3882,7 +3882,7 @@ export const regionData = {
       {
         "title": "Ricardo Mella y Francisco Ferrer i Guardia",
         "author": "Frank Mintz",
-        "year": 1980,
+        "pubYear": 1980,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Estudio de Frank Mintz sobre el pensamiento de Ricardo Mella y la pedagogía de Ferrer i Guardia.",
@@ -3891,7 +3891,7 @@ export const regionData = {
       {
         "title": "Nueva Utopía",
         "author": "Ricardo Mella",
-        "year": 1890,
+        "pubYear": 1890,
         "category": "teoria",
         "rating": 4.6,
         "summary": "La visión de la sociedad futura de Ricardo Mella: la utopía anarquista como horizonte realizable.",
@@ -3900,7 +3900,7 @@ export const regionData = {
       {
         "title": "La coacción moral",
         "author": "Ricardo Mella",
-        "year": 1898,
+        "pubYear": 1898,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Análisis de Mella sobre la coacción moral como freno social frente a la libertad individual.",
@@ -3909,7 +3909,7 @@ export const regionData = {
       {
         "title": "La Escuela Moderna",
         "author": "Francisco Ferrer Guardia",
-        "year": 1908,
+        "pubYear": 1908,
         "category": "teoria",
         "rating": 4.7,
         "summary": "El texto fundacional de la pedagogía racionalista de Ferrer i Guardia, base del movimiento de escuelas modernas.",
@@ -3918,7 +3918,7 @@ export const regionData = {
       {
         "title": "El corto verano de la anarquía",
         "author": "Hans Magnus Enzensberger",
-        "year": 1972,
+        "pubYear": 1972,
         "category": "acratas",
         "rating": 4.8,
         "summary": "Crónica literaria del escritor alemán sobre Buenaventura Durruti y la revolución española.",
@@ -3928,7 +3928,7 @@ export const regionData = {
       {
         "title": "El anarquismo como doctrina y movimiento",
         "author": "Aureliano Yanes Herreros",
-        "year": 1996,
+        "pubYear": 1996,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Panorama doctrinal del anarquismo por el historiador español Aureliano Yanes Herreros.",
@@ -3937,7 +3937,7 @@ export const regionData = {
       {
         "title": "Buenaventura Durruti (antología)",
         "author": "Ignacio Iglesias Luis Olea y Emma Goldman",
-        "year": 2019,
+        "pubYear": 2019,
         "category": "acratas",
         "rating": 4.7,
         "summary": "Antología de la Editorial Gato Negro sobre Buenaventura Durruti, mito del anarcosindicalismo ibérico: textos de Luis Olea, Ignacio Iglesias y Emma Goldman sobre su figura, acción y legado durante la revolución de 1936.",
@@ -3947,7 +3947,7 @@ export const regionData = {
       {
         "title": "Fidel Miró Solanes. Memorias anarquistas de un catalán exiliado",
         "author": "Fernando Cabrera Parra",
-        "year": 2000,
+        "pubYear": 2000,
         "category": "acratas",
         "rating": 4.5,
         "summary": "Biografía de Fidel Miró Solanes, anarquista catalán exiliado, a partir de sus memorias: militancia cenetista, prisión y exilio tras la Guerra Civil.",
@@ -3957,7 +3957,7 @@ export const regionData = {
       {
         "title": "La muerte de Durruti",
         "author": "Joan Llarch",
-        "year": 1973,
+        "pubYear": 1973,
         "category": "acratas",
         "rating": 4.6,
         "summary": "Reconstrucción de las circunstancias de la muerte de Buenaventura Durruti en el frente de Madrid en noviembre de 1936, entre el mito, la polémica y la crónica histórica.",
@@ -3967,7 +3967,7 @@ export const regionData = {
       {
         "title": "Juan Peiró, teórico y militante del anarcosindicalismo español",
         "author": "Ediciones FOIL",
-        "year": 1978,
+        "pubYear": 1978,
         "category": "acratas",
         "rating": 4.5,
         "summary": "Vida y pensamiento de Juan Peiró, teórico y militante del anarcosindicalismo español, ministro de la CNT durante la Guerra Civil y fusilado por el franquismo.",
@@ -3977,7 +3977,7 @@ export const regionData = {
       {
         "title": "Concha Pérez Collado: anarquista, miliciana en la Guerra Civil española",
         "author": "Sara Moroni",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "acratas",
         "rating": 4.5,
         "summary": "Biografía de Concha Pérez Collado, miliciana anarquista de la Guerra Civil española, vinculada a Mujeres Libres y a la CNT.",
@@ -3987,7 +3987,7 @@ export const regionData = {
       {
         "title": "Senderos de libertad",
         "author": "Félix García Moriyón",
-        "year": 2009,
+        "pubYear": 2009,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Acción social, sindical y educación desde la perspectiva libertaria, por el filósofo español Félix García Moriyón.",
@@ -3996,7 +3996,7 @@ export const regionData = {
       {
         "title": "Anarcosindicalismo en el siglo XXI",
         "author": "Varios (CNT)",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Ponencias de las Jornadas del Centenario de la CNT (Córdoba, 2010) sobre el debate anarcosindicalista actual.",
@@ -4005,7 +4005,7 @@ export const regionData = {
       {
         "title": "La revolución rusa. Una interpretación crítica y libertaria",
         "author": "Agustín Guillamón",
-        "year": 2017,
+        "pubYear": 2017,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Interpretación crítica y libertaria de la Revolución Rusa, de 1905 a la guerra civil, por Agustín Guillamón.",
@@ -4014,7 +4014,7 @@ export const regionData = {
       {
         "title": "Kant y Bakunin",
         "author": "Elena Sánchez Gómez",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Comunicación que relaciona el pensamiento de Bakunin con la filosofía de la época y su llegada al anarquismo español a través de Giuseppe Fanelli.",
@@ -4023,7 +4023,7 @@ export const regionData = {
       {
         "title": "El anarquismo en la sociedad actual. Entrevistas X Aniversario Portal Libertario OACA",
         "author": "Varios autores",
-        "year": 2011,
+        "pubYear": 2011,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Entrevistas a anarquistas contemporáneos recogidas con motivo del X aniversario del Portal Libertario OACA.",
@@ -4032,7 +4032,7 @@ export const regionData = {
       {
         "title": "Sindicalismo en la empresa y el territorio",
         "author": "CNT (Secretaría de Formación)",
-        "year": 2013,
+        "pubYear": 2013,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Perspectiva anarcosindicalista e interdisciplinar sobre la organización sindical en la empresa y el territorio, editada por la Secretaría de Formación de la CNT.",
@@ -4041,7 +4041,7 @@ export const regionData = {
       {
         "title": "Anarcofeminismo e identidad(es)",
         "author": "Alma Méijome Tejero",
-        "year": 2013,
+        "pubYear": 2013,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Artículo académico sobre la historia del anarcofeminismo en el Estado español y su relación con las identidades.",
@@ -4050,7 +4050,7 @@ export const regionData = {
       {
         "title": "Anarquismo y educación: la propuesta sociopolítica de la pedagogía libertaria",
         "author": "Francisco José Cuevas Noa",
-        "year": 2003,
+        "pubYear": 2003,
         "category": "teoria",
         "rating": 4.5,
         "summary": "La propuesta sociopolítica de la pedagogía libertaria, publicada por la Fundación Anselmo Lorenzo.",
@@ -4059,7 +4059,7 @@ export const regionData = {
       {
         "title": "El manifiesto negro",
         "author": "Grup Anarquista X Llogar-hi Cadires",
-        "year": 2013,
+        "pubYear": 2013,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Manifiesto anarquista del Grup Anarquista X Llogar-hi Cadires sobre la defensa de los servicios públicos, una economía más racional y la autogestión.",
@@ -4068,7 +4068,7 @@ export const regionData = {
       {
         "title": "Anarquismo básico",
         "author": "Anónimo",
-        "year": 2000,
+        "pubYear": 2000,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Texto de divulgación que explica el poder, la autoridad y la vida sin Estado.",
@@ -4077,7 +4077,7 @@ export const regionData = {
       {
         "title": "Las interzonas anarquistas",
         "author": "Colectivo de Trabajadores Culturales La Felguera",
-        "year": 2011,
+        "pubYear": 2011,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Los grupos de afinidad, la interzona como mapa de subversión y el desarrollo de nuevas habilidades, por el Colectivo La Felguera.",
@@ -4086,7 +4086,7 @@ export const regionData = {
       {
         "title": "La conquista del pan: volviendo a una obra de Kropotkin",
         "author": "Simón Royo Hernández",
-        "year": 2000,
+        "pubYear": 2000,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Relectura comentada de La conquista del pan de Kropotkin por el filósofo Simón Royo Hernández, distinta de la obra original ya catalogada.",
@@ -4095,7 +4095,7 @@ export const regionData = {
       {
         "title": "Podrán detenernos pero no pararnos",
         "author": "Varios autores",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Monográfico sobre la represión al anarquismo en el Estado español, con el caso de los presos anarquistas Mónica y Francisco como hilo conductor de solidaridad y resistencia.",
@@ -4104,7 +4104,7 @@ export const regionData = {
       {
         "title": "El enigma de la docilidad",
         "author": "Pedro García Olivo",
-        "year": 2005,
+        "pubYear": 2005,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Crítica radical de Pedro García Olivo a la escuela como fábrica de obediencia: el sistema educativo como dispositivo que produce sujetos dóciles para el capital.",
@@ -4113,7 +4113,7 @@ export const regionData = {
       {
         "title": "Páginas selectas",
         "author": "Max Nettlau Rudolf Rocker y Diego Abad de Santillán",
-        "year": 1970,
+        "pubYear": 1970,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Antología de Ediciones Tierra y Libertad que reúne trabajos de tres clásicos del anarquismo: Rudolf Rocker, Max Nettlau y Diego Abad de Santillán.",
@@ -4122,7 +4122,7 @@ export const regionData = {
       {
         "title": "El educador mercenario (Escrituras ahuyentables I)",
         "author": "Pedro García Olivo",
-        "year": 2000,
+        "pubYear": 2000,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Crítica radical de Pedro García Olivo a las escuelas de la democracia: el educador como mercenario al servicio del sistema de dominación y de la reproducción social.",
@@ -4131,7 +4131,7 @@ export const regionData = {
       {
         "title": "Paideia, la escuela de la anarquía. 34 años de educación libertaria",
         "author": "Adrián Soto Salmerón",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Historia y balance de la Escuela Libre Paideia de Mérida: 34 años de educación libertaria, autogestionada y antiautoritaria, contados por uno de sus impulsores.",
@@ -4140,7 +4140,7 @@ export const regionData = {
       {
         "title": "Anarquismo (individualismo hispano)",
         "author": "Miguel Giménez Igualada",
-        "year": 1968,
+        "pubYear": 1968,
         "category": "teoria",
         "rating": 4.7,
         "summary": "Obra clásica del individualismo anarquista español: Miguel Giménez Igualada expone su concepción de la libertad, la propiedad y la abolición del Estado.",
@@ -4149,7 +4149,7 @@ export const regionData = {
       {
         "title": "En torno a nuestros objetivos libertarios",
         "author": "Diego Abad de Santillán",
-        "year": 1938,
+        "pubYear": 1938,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Diego Abad de Santillán define los objetivos del anarquismo frente al fascismo y a la revolución en curso, escrito en plena Guerra Civil española.",
@@ -4158,7 +4158,7 @@ export const regionData = {
       {
         "title": "El anarquismo sin adjetivos: de ayer a hoy",
         "author": "Floreal Castilla",
-        "year": 2006,
+        "pubYear": 2006,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Historia del anarquismo sin adjetivos desde la propuesta de Fernando Tarrida del Mármol hasta su vigencia en el movimiento libertario contemporáneo.",
@@ -4167,7 +4167,7 @@ export const regionData = {
       {
         "title": "Anarcoveganismo y naturismo libertario",
         "author": "Roberto X",
-        "year": 2009,
+        "pubYear": 2009,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Texto de El Grillo Libertario (SKP) sobre el anarcoveganismo y el naturismo libertario: la relación entre anarquismo, alimentación y respeto a los animales.",
@@ -4176,7 +4176,7 @@ export const regionData = {
       {
         "title": "JESTO i PALABRA, IDEA i ACCIÓN: El Pensamiento Político De Efraín Plaza Olmedo",
         "author": "Varios autores",
-        "year": 2000,
+        "pubYear": 2000,
         "category": "acratas",
         "rating": 4.3,
         "summary": "Reflexiones sobre la relación entre la práctica y la teoría en el anarquismo catalán: gesto y palabra como instrumentos de transformación.",
@@ -4186,7 +4186,7 @@ export const regionData = {
       {
         "title": "Introducción a la guerra civil",
         "author": "Anónimo",
-        "year": 2005,
+        "pubYear": 2005,
         "category": "teoria",
         "rating": 4.4,
         "summary": "Panorama introductorio de la Guerra Civil española desde la perspectiva anarquista: los comités, la colectivización y la revolución perdida.",
@@ -4211,7 +4211,7 @@ export const regionData = {
       {
         "title": "Antonia Maymon. Anarquista, maestra, naturista.",
         "author": "Mª del Pilar Carmen Agullo Diaz y Molina Beneyto",
-        "year": 2014,
+        "pubYear": 2014,
         "category": "acratas",
         "rating": 4.5,
         "filename": "Mª del Pilar Carmen Agullo Diaz y Molina Beneyto - Antonia Maymon. Anarquista, maestra, naturista..pdf",
@@ -4220,7 +4220,7 @@ export const regionData = {
       {
         "title": "Ada Marti Vall. El sueno de la conciencia libre",
         "author": "Manel Aisa",
-        "year": 2019,
+        "pubYear": 2019,
         "category": "acratas",
         "rating": 4.5,
         "filename": "Manel Aisa - Ada Marti Vall. El sueno de la conciencia libre.pdf",
@@ -4237,7 +4237,7 @@ export const regionData = {
       {
         "title": "Buenaventura Durruti, o el heroísmo bien entendido",
         "author": "Felipe Alaiz",
-        "year": 1945,
+        "pubYear": 1945,
         "category": "acratas",
         "rating": 4.5,
         "filename": "Felipe Alaiz - Buenaventura Durruti, o el heroísmo bien entendido.pdf",
@@ -4254,7 +4254,7 @@ export const regionData = {
       {
         "title": "Pensar la utopía en acción. Trazas de un anarquista heterodoxo",
         "author": "Octavio Alberola",
-        "year": 2013,
+        "pubYear": 2013,
         "category": "acratas",
         "rating": 4.5,
         "filename": "Octavio Alberola - Pensar la utopía en acción. Trazas de un anarquista heterodoxo.pdf",
@@ -4279,7 +4279,7 @@ export const regionData = {
       {
         "title": "Hacia una nueva revolucin",
         "author": "Amigos de Durruti",
-        "year": 1997,
+        "pubYear": 1997,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Amigos de Durruti - Hacia una nueva revolucin.pdf"
@@ -4287,7 +4287,7 @@ export const regionData = {
       {
         "title": "Durruti en el laberinto",
         "author": "Miquel Amorós",
-        "year": 2006,
+        "pubYear": 2006,
         "category": "acratas",
         "rating": 4.5,
         "filename": "Miquel Amorós - Durruti en el laberinto.pdf",
@@ -4296,7 +4296,7 @@ export const regionData = {
       {
         "title": "Jose Pellicer, el anarquista integro",
         "author": "Miquel Amorós",
-        "year": 2009,
+        "pubYear": 2009,
         "category": "acratas",
         "rating": 4.5,
         "filename": "Miquel Amorós - Jose Pellicer, el anarquista integro.pdf",
@@ -4305,7 +4305,7 @@ export const regionData = {
       {
         "title": "La revolucion traicionada. La verdadera historia de Balius y Los Amigos de Durruti",
         "author": "Miquel Amorós",
-        "year": 2003,
+        "pubYear": 2003,
         "category": "acratas",
         "rating": 4.5,
         "filename": "Miquel Amorós - La revolucion traicionada. La verdadera historia de Balius y Los Amigos de Durruti.pdf",
@@ -4314,7 +4314,7 @@ export const regionData = {
       {
         "title": "Maroto, el heroe. Una biografia del anarquismo andaluz",
         "author": "Miquel Amorós",
-        "year": 2011,
+        "pubYear": 2011,
         "category": "acratas",
         "rating": 4.5,
         "filename": "Miquel Amorós - Maroto, el heroe. Una biografia del anarquismo andaluz.pdf",
@@ -4330,7 +4330,7 @@ export const regionData = {
       {
         "title": "Anarquismo",
         "author": "Emma Goldman",
-        "year": 1931,
+        "pubYear": 1931,
         "category": "acratas",
         "rating": 4.9,
         "filename": "Emma Goldman - Anarquismo.pdf",
@@ -4339,7 +4339,7 @@ export const regionData = {
       {
         "title": "Los Mártires de Chicago",
         "author": "Varios autores",
-        "year": 1886,
+        "pubYear": 1886,
         "category": "otros",
         "rating": 4.8,
         "filename": "Varios autores - Los Mártires de Chicago.pdf"
@@ -4347,7 +4347,7 @@ export const regionData = {
       {
         "title": "La pasión de Sacco y Vanzetti",
         "author": "Howard Fast",
-        "year": 1953,
+        "pubYear": 1953,
         "category": "acratas",
         "rating": 4.7,
         "summary": "Reconstrucción novelada del célebre caso judicial de los anarquistas italianos ejecutados en 1927.",
@@ -4357,7 +4357,7 @@ export const regionData = {
       {
         "title": "Fraternalmente, Emma",
         "author": "Emma Goldman",
-        "year": 1920,
+        "pubYear": 1920,
         "category": "acratas",
         "rating": 4.6,
         "summary": "Cartas y escritos de Emma Goldman que retratan su activismo, exilio y pensamiento libertario.",
@@ -4367,7 +4367,7 @@ export const regionData = {
       {
         "title": "¿Anarquismo o barbarie? Historia, civilización y progreso",
         "author": "Murray Bookchin",
-        "year": 1990,
+        "pubYear": 1990,
         "category": "teoria",
         "rating": 4.6,
         "summary": "El fundador del municipalismo libertario examina el desarrollo técnico y las ideologías en crisis.",
@@ -4376,7 +4376,7 @@ export const regionData = {
       {
         "title": "Fragmentos de antropología anarquista",
         "author": "David Graeber",
-        "year": 2004,
+        "pubYear": 2004,
         "category": "teoria",
         "rating": 4.7,
         "summary": "El antropólogo anarquista propone leer la etnografía como inspiración para formas de organización libres.",
@@ -4385,7 +4385,7 @@ export const regionData = {
       {
         "title": "Una solución anarquista al calentamiento global",
         "author": "Peter Gelderloos",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "teoria",
         "rating": 4.4,
         "summary": "Crítica de la geoingeniería capitalista y propuesta ecológica desde la autogestión y la descentralización.",
@@ -4394,7 +4394,7 @@ export const regionData = {
       {
         "title": "Anarquismo social o anarquismo personal",
         "author": "Murray Bookchin",
-        "year": 1995,
+        "pubYear": 1995,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Polémica de Bookchin contra el anarquismo individualista y su defensa del anarquismo social y ecológico.",
@@ -4403,7 +4403,7 @@ export const regionData = {
       {
         "title": "Durruti ha muerto, pero está vivo todavía",
         "author": "Emma Goldman",
-        "year": 1936,
+        "pubYear": 1936,
         "category": "acratas",
         "rating": 4.7,
         "summary": "Elogio fúnebre de Emma Goldman a Buenaventura Durruti, retrato del revolucionario español.",
@@ -4413,7 +4413,7 @@ export const regionData = {
       {
         "title": "Socialismo de Estado y anarquismo",
         "author": "Benjamin Tucker",
-        "year": 1890,
+        "pubYear": 1890,
         "category": "teoria",
         "rating": 4.6,
         "summary": "El anarquismo individualista de Benjamin Tucker confrontado con el socialismo de Estado.",
@@ -4422,7 +4422,7 @@ export const regionData = {
       {
         "title": "TAZ: Zona Temporalmente Autónoma",
         "author": "Hakim Bey",
-        "year": 1991,
+        "pubYear": 1991,
         "category": "teoria",
         "rating": 4.7,
         "summary": "El texto clásico de Hakim Bey sobre las Zonas Temporalmente Autónomas: utopías piratas y tácticas de autonomía efímera frente al Estado y al capital.",
@@ -4431,7 +4431,7 @@ export const regionData = {
       {
         "title": "La Anarquía Funciona",
         "author": "Peter Gelderloos",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Defensa del anarquismo frente a los tópicos: naturaleza humana, toma de decisiones y resolución de conflictos sin Estado, con ejemplos históricos y etnográficos.",
@@ -4440,7 +4440,7 @@ export const regionData = {
       {
         "title": "Anarquismo: la conexión feminista",
         "author": "Peggy Kornegger",
-        "year": 1975,
+        "pubYear": 1975,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Ensayo fundacional del anarcofeminismo: la convergencia entre anarquismo y movimiento de mujeres, de las colectividades españolas al 68 francés.",
@@ -4449,7 +4449,7 @@ export const regionData = {
       {
         "title": "Sacco y Vanzetti. El enemigo extranjero",
         "author": "Helmut Ortner",
-        "year": 1999,
+        "pubYear": 1999,
         "category": "acratas",
         "rating": 4.6,
         "summary": "Historia del caso Sacco y Vanzetti: el proceso judicial contra los dos anarquistas italianos, condenados y ejecutados en Estados Unidos en 1927, símbolo de la represión del 'enemigo extranjero'.",
@@ -4459,7 +4459,7 @@ export const regionData = {
       {
         "title": "Bartolomeo Vanzetti: historia de la vida de un proletario",
         "author": "Bartolomeo Vanzetti",
-        "year": 1921,
+        "pubYear": 1921,
         "category": "acratas",
         "rating": 4.6,
         "summary": "Autobiografía de Bartolomeo Vanzetti, escrita en prisión en 1921: la vida de un proletario italiano emigrado que sería ejecutado en 1927 junto a Sacco.",
@@ -4469,7 +4469,7 @@ export const regionData = {
       {
         "title": "Mi mayor desilusión con Rusia",
         "author": "Emma Goldman",
-        "year": 1920,
+        "pubYear": 1920,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Ensayo de Emma Goldman sobre el Estado y la Revolución Rusa: la bancarrota del principio autoritario frente a la fluidez de la revolución.",
@@ -4478,7 +4478,7 @@ export const regionData = {
       {
         "title": "La historia del cerebro anarquista de Anonymous",
         "author": "Anónimo",
-        "year": 2011,
+        "pubYear": 2011,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Crónica del hacktivismo de Anonymous: el caso de Jeremy Hammond y el ataque a Stratfor desde una perspectiva anarquista.",
@@ -4487,7 +4487,7 @@ export const regionData = {
       {
         "title": "¡Escucha, marxista!",
         "author": "Murray Bookchin",
-        "year": 1971,
+        "pubYear": 1971,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Crítica libertaria de Murray Bookchin a los límites históricos del marxismo, al mito del proletariado y al del partido.",
@@ -4496,7 +4496,7 @@ export const regionData = {
       {
         "title": "Hacia un nuevo anarquismo",
         "author": "Andrej Grubacic",
-        "year": 2003,
+        "pubYear": 2003,
         "category": "teoria",
         "rating": 4.5,
         "summary": "El anarquismo frente al movimiento de movimientos y a las nuevas formas de organización global, por Andrej Grubacic.",
@@ -4505,7 +4505,7 @@ export const regionData = {
       {
         "title": "Los veganarquistas",
         "author": "Varios autores",
-        "year": 2000,
+        "pubYear": 2000,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Recopilación de textos que vinculan la liberación animal y el anarquismo, con el clásico de Brian A. Dominik sobre el veganarquismo.",
@@ -4514,7 +4514,7 @@ export const regionData = {
       {
         "title": "Propiedad intelectual: una crítica libertaria",
         "author": "Kevin Carson",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Crítica libertaria de Kevin Carson a la propiedad intelectual desde el mutualismo y el Center for a Stateless Society.",
@@ -4523,7 +4523,7 @@ export const regionData = {
       {
         "title": "Tecnología y anarquismo",
         "author": "Murray Bookchin",
-        "year": 1980,
+        "pubYear": 1980,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Murray Bookchin defiende una tecnología liberadora y ecológica: la técnica al servicio de la vida, la autogestión y la escala humana, frente a la dominación tecnocrática del capital.",
@@ -4532,7 +4532,7 @@ export const regionData = {
       {
         "title": "Grupos de afinidad. Una parte esencial de la organización anarquista",
         "author": "CrimethInc",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Guía del colectivo CrimethInc sobre los grupos de afinidad como unidad básica de la organización anarquista y de la acción directa.",
@@ -4541,7 +4541,7 @@ export const regionData = {
       {
         "title": "Anarquismos no occidentales. Reflexiones sobre el contexto global",
         "author": "Jason Adams",
-        "year": 2003,
+        "pubYear": 2003,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Ensayo de Jason Adams sobre las expresiones del anarquismo en Asia, África, América Latina y Oriente Medio: repensar el anarquismo en el contexto global no occidental.",
@@ -4550,7 +4550,7 @@ export const regionData = {
       {
         "title": "Cómo la no violencia protege al Estado",
         "author": "Peter Gelderloos",
-        "year": 2007,
+        "pubYear": 2007,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Crítica radical de Peter Gelderloos a la no violencia como estrategia de cambio social: argumenta que la no violencia protege al Estado y al capital.",
@@ -4559,7 +4559,7 @@ export const regionData = {
       {
         "title": "La sociedad industrial y su futuro",
         "author": "Ted Kaczynski",
-        "year": 1995,
+        "pubYear": 1995,
         "category": "teoria",
         "rating": 4.2,
         "summary": "El manifiesto de Ted Kaczynski contra la sociedad industrial y la tecnología: una crítica extrema al sistema tecnológico y su impacto en la libertad humana.",
@@ -4568,7 +4568,7 @@ export const regionData = {
       {
         "title": "¿Qué es la Propiedad?",
         "author": "Pierre-Joseph Proudhon",
-        "year": 1840,
+        "pubYear": 1840,
         "category": "teoria",
         "rating": 4.9,
         "filename": "Pierre-Joseph Proudhon - ¿Qué es la Propiedad?.pdf"
@@ -4576,7 +4576,7 @@ export const regionData = {
       {
         "title": "Evolución, revolución y anarquismo",
         "author": "Élisée Reclus",
-        "year": 1890,
+        "pubYear": 1890,
         "category": "teoria",
         "rating": 4.7,
         "summary": "El geógrafo anarquista Reclus vincula la evolución natural con la revolución social como necesidad histórica.",
@@ -4585,7 +4585,7 @@ export const regionData = {
       {
         "title": "El ideal anarquista",
         "author": "Élisée Reclus",
-        "year": 1898,
+        "pubYear": 1898,
         "category": "teoria",
         "rating": 4.6,
         "summary": "La obra política y filosófica de Reclus, más allá del geógrafo: el ideal anarquista como horizonte ético.",
@@ -4594,7 +4594,7 @@ export const regionData = {
       {
         "title": "¡Abajo los jefes!",
         "author": "Joseph Déjacque",
-        "year": 1859,
+        "pubYear": 1859,
         "category": "teoria",
         "rating": 4.7,
         "summary": "Textos del anarquista comunista Déjacque, primer autoproclamado libertario, contra toda forma de autoridad.",
@@ -4603,7 +4603,7 @@ export const regionData = {
       {
         "title": "El principio federativo",
         "author": "Pierre-Joseph Proudhon",
-        "year": 1863,
+        "pubYear": 1863,
         "category": "teoria",
         "rating": 4.6,
         "summary": "El federalismo como forma política que garantiza la libertad frente a la centralización estatal.",
@@ -4612,7 +4612,7 @@ export const regionData = {
       {
         "title": "Amor y matrimonio",
         "author": "Pierre-Joseph Proudhon",
-        "year": 1858,
+        "pubYear": 1858,
         "category": "teoria",
         "rating": 4.4,
         "summary": "El filósofo del mutualismo reflexiona sobre las relaciones afectivas, el amor libre y la institución matrimonial.",
@@ -4621,7 +4621,7 @@ export const regionData = {
       {
         "title": "Surrealismo y anarquismo",
         "author": "Surrealistas en Le Libertaire",
-        "year": 1952,
+        "pubYear": 1952,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Proclamas surrealistas publicadas en el periódico libertario Le Libertaire: arte y revolución.",
@@ -4630,7 +4630,7 @@ export const regionData = {
       {
         "title": "Antes del momento",
         "author": "Carlos Malato",
-        "year": 1905,
+        "pubYear": 1905,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Novela y análisis social del escritor anarquista Carlos Malato sobre el fin de siglo francés.",
@@ -4639,7 +4639,7 @@ export const regionData = {
       {
         "title": "Marx anarquista",
         "author": "Maximilien Rubel y Louis Janover",
-        "year": 1994,
+        "pubYear": 1994,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Lectura que considera a Marx teórico del anarquismo por su concepción de la extinción del Estado.",
@@ -4648,7 +4648,7 @@ export const regionData = {
       {
         "title": "La capacidad política de la clase obrera",
         "author": "Pierre-Joseph Proudhon",
-        "year": 1865,
+        "pubYear": 1865,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Última obra de Proudhon: la clase obrera como sujeto político capaz de federarse sin Estado.",
@@ -4657,7 +4657,7 @@ export const regionData = {
       {
         "title": "Política unitaria",
         "author": "Pierre-Joseph Proudhon",
-        "year": 1863,
+        "pubYear": 1863,
         "category": "teoria",
         "rating": 4.4,
         "summary": "Textos de Proudhon contra la centralización jacobina y a favor del federalismo como organización libre.",
@@ -4666,7 +4666,7 @@ export const regionData = {
       {
         "title": "Anarquismo: de la teoría a la práctica",
         "author": "Daniel Guérin",
-        "year": 1965,
+        "pubYear": 1965,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Panorama del anarquismo de la mano del militante e historiador francés Daniel Guérin.",
@@ -4675,7 +4675,7 @@ export const regionData = {
       {
         "title": "A los jóvenes",
         "author": "Piotr Kropotkin",
-        "year": 1880,
+        "pubYear": 1880,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Llamamiento de Kropotkin a la juventud para poner la ciencia y el saber al servicio de la revolución.",
@@ -4684,7 +4684,7 @@ export const regionData = {
       {
         "title": "El anarquismo individualista como vida y actividad",
         "author": "Émile Armand",
-        "year": 1907,
+        "pubYear": 1907,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Manifiesto del individualismo anarquista de Émile Armand: el anarquismo como forma de vida.",
@@ -4693,7 +4693,7 @@ export const regionData = {
       {
         "title": "El anarquismo individualista. Lo que es, vale y puede",
         "author": "Émile Armand",
-        "year": 1916,
+        "pubYear": 1916,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Defensa y delimitación del individualismo anarquista por uno de sus principales teóricos franceses.",
@@ -4702,7 +4702,7 @@ export const regionData = {
       {
         "title": "El individualismo anarquista",
         "author": "Émile Armand",
-        "year": 1920,
+        "pubYear": 1920,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Síntesis del pensamiento de Émile Armand sobre la vida individual sin Estado ni autoridad.",
@@ -4711,7 +4711,7 @@ export const regionData = {
       {
         "title": "El mensaje revolucionario de Los Amigos de Durruti",
         "author": "George Fontenis",
-        "year": 1983,
+        "pubYear": 1983,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Estudio de George Fontenis sobre el grupo Amigos de Durruti y el comunismo libertario en la Revolución Española de 1936-37.",
@@ -4720,7 +4720,7 @@ export const regionData = {
       {
         "title": "Individualismo anarquista y camaradería amorosa",
         "author": "Émile Armand",
-        "year": 1900,
+        "pubYear": 1900,
         "category": "teoria",
         "rating": 4.6,
         "summary": "El individualismo anarquista de Émile Armand aplicado a la camaradería amorosa y a las relaciones libres, obra distinta de sus tres títulos ya catalogados.",
@@ -4729,7 +4729,7 @@ export const regionData = {
       {
         "title": "Educación y pedagogía en la tradición libertaria",
         "author": "Hugues Lenoir",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "teoria",
         "rating": 4.5,
         "summary": "La educación integral y la pedagogía libertaria desde Proudhon hasta la tradición anarquista, por el profesor francés Hugues Lenoir.",
@@ -4738,7 +4738,7 @@ export const regionData = {
       {
         "title": "Odio las mañanas",
         "author": "Jean-Marc Rouillan",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "acratas",
         "rating": 4.5,
         "summary": "Escritos carcelarios de Jean-Marc Rouillan, militante de Acción Directa: la resistencia cotidiana contra el Estado, la prisión y la vida reclusa.",
@@ -4748,7 +4748,7 @@ export const regionData = {
       {
         "title": "Reflexiones sobre las causas de la libertad y de la opresión social",
         "author": "Simone Weil",
-        "year": 1934,
+        "pubYear": 1934,
         "category": "teoria",
         "rating": 4.7,
         "summary": "Ensayo de Simone Weil contra el Estado y la burocracia: la opresión como mecanismo de la organización social y la libertad como clave de la vida obrera.",
@@ -4757,7 +4757,7 @@ export const regionData = {
       {
         "title": "Anarquía y cristianismo",
         "author": "Jacques Ellul",
-        "year": 1991,
+        "pubYear": 1991,
         "category": "teoria",
         "rating": 4.6,
         "summary": "El filósofo y teólogo francés Jacques Ellul muestra la afinidad profunda entre el anarquismo y el cristianismo: el Estado como poder satánico frente a la libertad del Evangelio.",
@@ -4781,7 +4781,7 @@ export const regionData = {
       {
         "title": "Anarquía y orden",
         "author": "Herbert Read",
-        "year": 1945,
+        "pubYear": 1945,
         "category": "teoria",
         "rating": 4.7,
         "summary": "Ensayos sobre política del poeta y crítico británico: anarquismo como principio de orden natural.",
@@ -4790,7 +4790,7 @@ export const regionData = {
       {
         "title": "Arte, poesía, anarquismo",
         "author": "Herbert Read",
-        "year": 1949,
+        "pubYear": 1949,
         "category": "teoria",
         "rating": 4.6,
         "summary": "La creación artística como expresión de la libertad frente a toda forma de autoridad.",
@@ -4799,7 +4799,7 @@ export const regionData = {
       {
         "title": "Anarquismo: argumentos a favor y en contra",
         "author": "Albert Meltzer",
-        "year": 2000,
+        "pubYear": 2000,
         "category": "teoria",
         "rating": 4.5,
         "summary": "El militante británico Albert Meltzer expone las razones históricas y morales del anarquismo.",
@@ -4808,7 +4808,7 @@ export const regionData = {
       {
         "title": "El anarquismo y el movimiento ambiental",
         "author": "Andrew Flood",
-        "year": 1995,
+        "pubYear": 1995,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Relación entre anarquismo y ecologismo: qué teoría y acción ambiental deben favorecer los anarquistas frente al 'movimiento verde'.",
@@ -4817,7 +4817,7 @@ export const regionData = {
       {
         "title": "¿Qué significado tendrá mañana el anarquismo?",
         "author": "Colin Ward",
-        "year": 2008,
+        "pubYear": 2008,
         "category": "teoria",
         "rating": 4.5,
         "summary": "El pensador británico Colin Ward reflexiona sobre el porvenir del anarquismo y sus lecciones para el siglo XXI.",
@@ -4826,7 +4826,7 @@ export const regionData = {
       {
         "title": "Civilización, primitivismo y anarquismo",
         "author": "Andrew Flood",
-        "year": 2004,
+        "pubYear": 2004,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Respuesta libertaria del militante Andrew Flood al primitivismo: crítica de la tecnología y la civilización desde el anarquismo social y la organización de la clase trabajadora.",
@@ -4835,7 +4835,7 @@ export const regionData = {
       {
         "title": "Anarquismo, insurrecciones e insurreccionalismo",
         "author": "Andrew Flood",
-        "year": 2006,
+        "pubYear": 2006,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Análisis de Andrew Flood sobre el insurreccionalismo y el lugar del levantamiento armado en el corazón del anarquismo, de Bakunin a las prácticas contemporáneas.",
@@ -4844,7 +4844,7 @@ export const regionData = {
       {
         "title": "Sobre el anarquismo",
         "author": "Nicolas Walter",
-        "year": 2016,
+        "pubYear": 2016,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Introducción del militante británico Nicolas Walter al anarquismo —qué creen, quieren y hacen los anarquistas— con prólogo de Colin Ward.",
@@ -4853,7 +4853,7 @@ export const regionData = {
       {
         "title": "La Anarquía y el Método del Anarquismo",
         "author": "Errico Malatesta",
-        "year": 1891,
+        "pubYear": 1891,
         "category": "teoria",
         "rating": 4.9,
         "filename": "Errico Malatesta - La Anarquía y el Método del Anarquismo.pdf"
@@ -4861,7 +4861,7 @@ export const regionData = {
       {
         "title": "En el café",
         "author": "Errico Malatesta",
-        "year": 1922,
+        "pubYear": 1922,
         "category": "teoria",
         "rating": 4.8,
         "filename": "Errico Malatesta - En el café.pdf"
@@ -4869,7 +4869,7 @@ export const regionData = {
       {
         "title": "Crítica revolucionaria",
         "author": "Luigi Fabbri",
-        "year": 1923,
+        "pubYear": 1923,
         "category": "teoria",
         "rating": 4.6,
         "summary": "El teórico anarquista italiano analiza la revolución rusa, el bolchevismo y el porvenir del anarquismo.",
@@ -4878,7 +4878,7 @@ export const regionData = {
       {
         "title": "La Revolución Rusa y el anarquismo",
         "author": "Luigi Fabbri",
-        "year": 1922,
+        "pubYear": 1922,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Respuesta de Fabbri al texto de Bujarín sobre la postura oficial del bolchevismo hacia el anarquismo.",
@@ -4887,7 +4887,7 @@ export const regionData = {
       {
         "title": "Individualismo y Comunismo",
         "author": "Errico Malatesta",
-        "year": 1926,
+        "pubYear": 1926,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Malatesta reconcilia las corrientes individualista y comunista del anarquismo en este texto clásico.",
@@ -4896,7 +4896,7 @@ export const regionData = {
       {
         "title": "Influencias burguesas sobre el anarquismo",
         "author": "Luigi Fabbri",
-        "year": 1921,
+        "pubYear": 1921,
         "category": "teoria",
         "rating": 4.4,
         "summary": "Análisis de Fabbri sobre los elementos burgueses que contaminan el ideal anarquista.",
@@ -4905,7 +4905,7 @@ export const regionData = {
       {
         "title": "Un plan de organización anarquista",
         "author": "Errico Malatesta",
-        "year": 1927,
+        "pubYear": 1927,
         "category": "teoria",
         "rating": 4.7,
         "summary": "La respuesta de Malatesta a la Plataforma de Arshínov: organización, pero sin autoridad ni partido.",
@@ -4914,7 +4914,7 @@ export const regionData = {
       {
         "title": "Elecciones y anarquismo",
         "author": "Errico Malatesta",
-        "year": 1897,
+        "pubYear": 1897,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Escritos de Malatesta contra la participación electoral y en defensa de la acción directa.",
@@ -4923,7 +4923,7 @@ export const regionData = {
       {
         "title": "Ai ferri corti. Romper con esta realidad",
         "author": "Anónimo",
-        "year": 2000,
+        "pubYear": 2000,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Manifiesto insurreccionalista italiano que propone romper con esta realidad, sus defensores y sus falsos críticos.",
@@ -4932,7 +4932,7 @@ export const regionData = {
       {
         "title": "Revolución no es dictadura",
         "author": "Luigi Fabbri",
-        "year": 1920,
+        "pubYear": 1920,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Fabbri defiende la gestión directa de las bases en el socialismo frente a toda dictadura, con una concepción anarquista de la revolución.",
@@ -4941,7 +4941,7 @@ export const regionData = {
       {
         "title": "Hacia la nada creadora. Individuo y revuelta",
         "author": "Renzo Novatore",
-        "year": 1924,
+        "pubYear": 1924,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Escritos del individualista italiano Renzo Novatore sobre el individuo y la revuelta.",
@@ -4950,7 +4950,7 @@ export const regionData = {
       {
         "title": "Socialismo y anarquía",
         "author": "Errico Malatesta",
-        "year": 1975,
+        "pubYear": 1975,
         "category": "teoria",
         "rating": 4.7,
         "summary": "Recopilación de escritos de Errico Malatesta con prólogo de Max Nettlau, obra distinta de los textos de Malatesta ya catalogados.",
@@ -4959,7 +4959,7 @@ export const regionData = {
       {
         "title": "La evolución del concepto de pedagogía libertaria",
         "author": "Valeria Giacomoni",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Recorrido histórico del concepto de pedagogía libertaria, de la teoría a la práctica: desde las escuelas racionalistas hasta las experiencias educativas contemporáneas.",
@@ -4968,7 +4968,7 @@ export const regionData = {
       {
         "title": "Páginas de lucha cotidiana",
         "author": "Errico Malatesta",
-        "year": 2015,
+        "pubYear": 2015,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Recopilación de artículos de Errico Malatesta, publicada por Editorial Eleuterio: la lucha cotidiana del anarquismo contra el Estado y el capital, con la claridad del maestro italiano.",
@@ -4977,7 +4977,7 @@ export const regionData = {
       {
         "title": "Anarquismo y política. El 'programa mínimo' de los libertarios del Tercer Milenio",
         "author": "Stefano d'Errico",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Relectura antológica y biográfica de Camillo Berneri a cargo de Stefano d'Errico: la política libertaria y el 'programa mínimo' de los libertarios del Tercer Milenio.",
@@ -4986,7 +4986,7 @@ export const regionData = {
       {
         "title": "¿Anarquía?",
         "author": "Bob Black",
-        "year": 1986,
+        "pubYear": 1986,
         "category": "acratas",
         "rating": 4.7,
         "summary": "Ensayo de Bob Black que cuestiona los supuestos del anarquismo tradicional y critica la moral del trabajo y la utopía, proponiendo una anarquía del disfrute.",
@@ -4995,7 +4995,7 @@ export const regionData = {
       {
         "title": "Anarquía",
         "author": "Errico Malatesta",
-        "year": 1891,
+        "pubYear": 1891,
         "category": "teoria",
         "rating": 4.7,
         "summary": "Versión del célebre texto de Malatesta sobre el ideal anarquista, su viabilidad y los medios para alcanzarlo.",
@@ -5004,7 +5004,7 @@ export const regionData = {
       {
         "title": "La Anarquía",
         "author": "Errico Malatesta",
-        "year": 1891,
+        "pubYear": 1891,
         "category": "teoria",
         "rating": 4.7,
         "summary": "El clásico de Malatesta: exposición clara y directa de lo que es la anarquía, respondiendo a las objeciones más comunes.",
@@ -5013,7 +5013,7 @@ export const regionData = {
       {
         "title": "Autogestión",
         "author": "Alfredo M. Bonanno",
-        "year": 1995,
+        "pubYear": 1995,
         "category": "teoria",
         "rating": 4.4,
         "summary": "Ensayo de Bonanno sobre la autogestión como práctica anarquista: la ocupación de fábricas y la gestión directa de los trabajadores.",
@@ -5022,7 +5022,7 @@ export const regionData = {
       {
         "title": "Errico Malatesta y la violencia revolucionaria",
         "author": "Anónimo",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Análisis del pensamiento de Malatesta sobre la violencia revolucionaria y su papel en la transformación social.",
@@ -5031,7 +5031,7 @@ export const regionData = {
       {
         "title": "Cómo y porqué asesiné a la princesa Sissi",
         "author": "Luigi Lucheni",
-        "year": 1898,
+        "pubYear": 1898,
         "category": "acratas",
         "rating": 4.3,
         "summary": "Memorias del anarquista italiano Luigi Lucheni, asesino de la emperatriz Isabel de Austria (Sissi), con su justificación del regicidio como acto de propaganda por la acción.",
@@ -5041,7 +5041,7 @@ export const regionData = {
       {
         "title": "Artículos de combate",
         "author": "Práxedis G. Guerrero",
-        "year": 1910,
+        "pubYear": 1910,
         "category": "teoria",
         "rating": 4.7,
         "summary": "Escritos del periodista y organizador magonista Práxedis Guerrero, muerto en combate en 1910.",
@@ -5050,7 +5050,7 @@ export const regionData = {
       {
         "title": "La bala y la escuela",
         "author": "Los Discursos Peligrosos",
-        "year": 2009,
+        "pubYear": 2009,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Ensayo sobre cómo la educación oficial complementa la represión en los pueblos indígenas de México.",
@@ -5059,7 +5059,7 @@ export const regionData = {
       {
         "title": "Rompamos las cadenas",
         "author": "Erick Benítez Martínez",
-        "year": 2016,
+        "pubYear": 2016,
         "category": "teoria",
         "rating": 4.4,
         "summary": "Manifiesto antiautoritario del activista mexicano Erick Benítez contra Estado, religión y capitalismo.",
@@ -5068,7 +5068,7 @@ export const regionData = {
       {
         "title": "Algunas reflexiones sobre el extravío teórico ideológico en el pensamiento ácrata contemporáneo",
         "author": "Gustavo Rodríguez",
-        "year": 2007,
+        "pubYear": 2007,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Crítica al rumbo del pensamiento ácrata contemporáneo escrita por Gustavo Rodríguez en la Sierra Norte de Puebla y publicada por Ediciones Crimental.",
@@ -5077,7 +5077,7 @@ export const regionData = {
       {
         "title": "Archipiélago. Afinidad, organización informal y proyectos insurreccionales",
         "author": "Varios (Salto, subversión & anarquía)",
-        "year": 2000,
+        "pubYear": 2000,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Ensayos sobre la afinidad, la organización informal y los proyectos insurreccionales, editados por Sin Retorno Ediciones de México.",
@@ -5086,7 +5086,7 @@ export const regionData = {
       {
         "title": "El altruismo como factor de la evolución",
         "author": "López Ortiz Geovani",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Ensayo de biología evolutiva (UAM-Iztapalapa) sobre la cooperación y el altruismo como ventajas evolutivas frente al darwinismo social, en línea con el apoyo mutuo de Kropotkin.",
@@ -5095,7 +5095,7 @@ export const regionData = {
       {
         "title": "Ricardo Flores Magon, el apostol de la revolucion",
         "author": "Diego Abad de Santillán",
-        "year": 2011,
+        "pubYear": 2011,
         "category": "acratas",
         "rating": 4.5,
         "filename": "Diego Abad de Santillán - Ricardo Flores Magon, el apostol de la revolucion.pdf",
@@ -5104,7 +5104,7 @@ export const regionData = {
       {
         "title": "Ricardo Flores Magon, el apostol de la revolucion social mexicana",
         "author": "Diego Abad de Santillán",
-        "year": 1925,
+        "pubYear": 1925,
         "category": "acratas",
         "rating": 4.5,
         "filename": "Diego Abad de Santillán - Ricardo Flores Magon, el apostol de la revolucion social mexicana.pdf",
@@ -5145,7 +5145,7 @@ export const regionData = {
       {
         "title": "Quién es Flores Magón y cuál su obra",
         "author": "Jenaro Amezcua",
-        "year": 1943,
+        "pubYear": 1943,
         "category": "acratas",
         "rating": 4.5,
         "filename": "Jenaro Amezcua - Quién es Flores Magón y cuál su obra.pdf",
@@ -5154,7 +5154,7 @@ export const regionData = {
       {
         "title": "Barrett",
         "author": "Vladimiro Muñoz",
-        "year": 1994,
+        "pubYear": 1994,
         "category": "acratas",
         "rating": 4.6,
         "summary": "Biografía de Rafael Barrett (1876-1910), escritor y anarquista hispano-paraguayo, autor de 'El dolor paraguayo', escrita por Vladimiro Muñoz.",
@@ -5164,7 +5164,7 @@ export const regionData = {
       {
         "title": "Mi anarquismo y otros escritos",
         "author": "Rafael Barrett",
-        "year": 2015,
+        "pubYear": 2015,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Selección de escritos del propio Rafael Barrett, el gran anarquista hispano-paraguayo: 'Mi anarquismo' y otros ensayos donde expone su vitalismo libertario, su crítica del Estado y su compromiso con los oprimidos.",
@@ -5173,7 +5173,7 @@ export const regionData = {
       {
         "title": "El Apoyo Mutuo",
         "author": "Piotr Kropotkin",
-        "year": 1902,
+        "pubYear": 1902,
         "category": "teoria",
         "rating": 5,
         "filename": "Piotr Kropotkin - El Apoyo Mutuo.pdf"
@@ -5181,7 +5181,7 @@ export const regionData = {
       {
         "title": "Historia del Movimiento Makhnovista",
         "author": "Néstor Makhno",
-        "year": 1929,
+        "pubYear": 1929,
         "category": "acratas",
         "rating": 4.7,
         "filename": "Néstor Makhno - Historia del Movimiento Makhnovista.pdf",
@@ -5190,7 +5190,7 @@ export const regionData = {
       {
         "title": "Dios y el Estado",
         "author": "Mijaíl Bakunin",
-        "year": 1882,
+        "pubYear": 1882,
         "category": "teoria",
         "rating": 4.8,
         "filename": "Mijaíl Bakunin - Dios y el Estado.pdf"
@@ -5198,7 +5198,7 @@ export const regionData = {
       {
         "title": "Origen y evolución de la moral",
         "author": "Piotr Kropotkin",
-        "year": 1898,
+        "pubYear": 1898,
         "category": "teoria",
         "rating": 4.7,
         "summary": "Kropotkin indaga el origen biológico y social de las ideas morales desde la perspectiva anarquista.",
@@ -5207,7 +5207,7 @@ export const regionData = {
       {
         "title": "Campos, fábricas y talleres",
         "author": "Piotr Kropotkin",
-        "year": 1899,
+        "pubYear": 1899,
         "category": "teoria",
         "rating": 4.7,
         "summary": "Propuesta de una economía integrada de agricultura e industria descentralizada, base del anarcocomunismo.",
@@ -5216,7 +5216,7 @@ export const regionData = {
       {
         "title": "Las prisiones",
         "author": "Piotr Kropotkin",
-        "year": 1887,
+        "pubYear": 1887,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Crítica radical del sistema penitenciario desde la propia experiencia carcelaria de Kropotkin.",
@@ -5225,7 +5225,7 @@ export const regionData = {
       {
         "title": "El Estado",
         "author": "Piotr Kropotkin",
-        "year": 1900,
+        "pubYear": 1900,
         "category": "teoria",
         "rating": 4.6,
         "summary": "El origen histórico del Estado y su función como instrumento de dominación de clases.",
@@ -5234,7 +5234,7 @@ export const regionData = {
       {
         "title": "El principio de autoridad",
         "author": "Mijaíl Bakunin",
-        "year": 1873,
+        "pubYear": 1873,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Idealistas y materialistas: la ciencia contra la autoridad como fundamento de la libertad.",
@@ -5243,7 +5243,7 @@ export const regionData = {
       {
         "title": "El principio del Estado",
         "author": "Mijaíl Bakunin",
-        "year": 1871,
+        "pubYear": 1871,
         "category": "teoria",
         "rating": 4.6,
         "summary": "La conquista como origen y fin supremo de todos los Estados, grandes o pequeños, liberales o despóticos.",
@@ -5252,7 +5252,7 @@ export const regionData = {
       {
         "title": "El patriotismo",
         "author": "Mijaíl Bakunin",
-        "year": 1869,
+        "pubYear": 1869,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Crítica al patriotismo como ideología de la dominación estatal frente al internacionalismo obrero.",
@@ -5261,7 +5261,7 @@ export const regionData = {
       {
         "title": "Federalismo, socialismo y antiteologismo",
         "author": "Mijaíl Bakunin",
-        "year": 1867,
+        "pubYear": 1867,
         "category": "teoria",
         "rating": 4.7,
         "summary": "Texto fundacional del anarquismo: la libertad organizada federalmente y la crítica a Dios y al Estado.",
@@ -5270,7 +5270,7 @@ export const regionData = {
       {
         "title": "¿Qué es el arte?",
         "author": "León Tolstói",
-        "year": 1897,
+        "pubYear": 1897,
         "category": "teoria",
         "rating": 4.5,
         "summary": "El escritor ruso, cercano al anarquismo cristiano, expone su estética de la autenticidad y la comunión.",
@@ -5279,7 +5279,7 @@ export const regionData = {
       {
         "title": "El Reino de Dios está dentro de vosotros",
         "author": "León Tolstói",
-        "year": 1894,
+        "pubYear": 1894,
         "category": "teoria",
         "rating": 4.7,
         "summary": "La obra maestra del anarquismo cristiano de Tolstói: la no resistencia al mal y el pacifismo radical como única revolución verdadera.",
@@ -5288,7 +5288,7 @@ export const regionData = {
       {
         "title": "Consideraciones filosóficas",
         "author": "Mijaíl Bakunin",
-        "year": 1871,
+        "pubYear": 1871,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Textos filosóficos de Bakunin (1870-71) sobre el sistema del mundo, la materia y la libertad.",
@@ -5297,7 +5297,7 @@ export const regionData = {
       {
         "title": "La ley y la autoridad",
         "author": "Piotr Kropotkin",
-        "year": 1880,
+        "pubYear": 1880,
         "category": "teoria",
         "rating": 4.7,
         "summary": "Crítica clásica de Kropotkin a la ley como instrumento de dominación de clase y a toda autoridad, en defensa de la revolución social frente a la legislación.",
@@ -5306,7 +5306,7 @@ export const regionData = {
       {
         "title": "Catecismo revolucionario",
         "author": "Mijaíl Bakunin",
-        "year": 1866,
+        "pubYear": 1866,
         "category": "teoria",
         "rating": 4.7,
         "summary": "Texto programático de la Fraternidad Internacional, fundada por Bakunin en 1864: los principios organizativos del anarquismo revolucionario.",
@@ -5315,7 +5315,7 @@ export const regionData = {
       {
         "title": "Memorias de un revolucionario",
         "author": "Piotr Kropotkin",
-        "year": 1899,
+        "pubYear": 1899,
         "category": "acratas",
         "rating": 4.8,
         "summary": "Autobiografía de Piotr Kropotkin: su infancia aristocrática, la exploración de Siberia y su conversión al anarquismo revolucionario.",
@@ -5325,7 +5325,7 @@ export const regionData = {
       {
         "title": "El programa de la Alianza para la Revolución Internacional",
         "author": "Mijaíl Bakunin",
-        "year": 1871,
+        "pubYear": 1871,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Texto programático de Bakunin: la negación de Dios y de toda tutela del hombre sobre el hombre.",
@@ -5334,7 +5334,7 @@ export const regionData = {
       {
         "title": "La ciencia y la urgencia de la labor revolucionaria",
         "author": "Mijaíl Bakunin",
-        "year": 1870,
+        "pubYear": 1870,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Texto de Bakunin sobre el problema económico como base de todos los problemas históricos y la urgencia de la labor revolucionaria.",
@@ -5343,7 +5343,7 @@ export const regionData = {
       {
         "title": "La organización de la Internacional",
         "author": "Mijaíl Bakunin",
-        "year": 1869,
+        "pubYear": 1869,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Texto de Bakunin sobre la Asociación Internacional de los Trabajadores: la emancipación completa del trabajo popular del yugo del capital.",
@@ -5352,7 +5352,7 @@ export const regionData = {
       {
         "title": "El debate sobre La Plataforma",
         "author": "Dielo Trouda Néstor Makhno y Errico Malatesta",
-        "year": 2019,
+        "pubYear": 2019,
         "category": "teoria",
         "rating": 4.7,
         "summary": "El debate entre plataformismo y síntesis (1925-1930): los textos fundacionales de Dielo Trouda, Néstor Makhno y la respuesta de Errico Malatesta.",
@@ -5361,7 +5361,7 @@ export const regionData = {
       {
         "title": "Bakunin y sus persistentes calumniadores",
         "author": "Frank Mintz",
-        "year": 2013,
+        "pubYear": 2013,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Frank Mintz desmonta las calumnias históricas contra Bakunin, desde la asimilación a Necháyev hasta su caracterización como traidor o pensador remoto.",
@@ -5370,7 +5370,7 @@ export const regionData = {
       {
         "title": "Lenin: sepulturero de la revolución rusa",
         "author": "Gastón Leval",
-        "year": 1921,
+        "pubYear": 1921,
         "category": "teoria",
         "rating": 4.6,
         "summary": "Crítica libertaria de Gastón Leval a Lenin y al Estado bolchevique, escrita a partir de su experiencia como delegado de la CNT en la Rusia de 1921.",
@@ -5379,7 +5379,7 @@ export const regionData = {
       {
         "title": "Plataforma organizacional de los comunistas libertarios",
         "author": "Dielo Truda",
-        "year": 1926,
+        "pubYear": 1926,
         "category": "teoria",
         "rating": 4.6,
         "summary": "El texto fundacional del plataformismo: la propuesta organizativa de Dielo Truda, grupo de exiliados makhnovistas, que abrió el gran debate sobre la unidad orgánica del anarquismo.",
@@ -5388,7 +5388,7 @@ export const regionData = {
       {
         "title": "El sistema capitalista",
         "author": "Mijaíl Bakunin",
-        "year": 1860,
+        "pubYear": 1860,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Fragmento de Bakunin sobre el capital y la propiedad: la crítica del sistema capitalista como poder garantizado y protegido por el Estado.",
@@ -5397,7 +5397,7 @@ export const regionData = {
       {
         "title": "Estatismo y anarquía",
         "author": "Mijaíl Bakunin",
-        "year": 1873,
+        "pubYear": 1873,
         "category": "teoria",
         "rating": 4.8,
         "summary": "La obra mayor de Bakunin: análisis de la lucha entre el estatismo y la revolución social, con su crítica del marxismo y su visión de la sociedad federada.",
@@ -5406,7 +5406,7 @@ export const regionData = {
       {
         "title": "Confederalismo Democrático",
         "author": "Abdullah Öcalan",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "teoria",
         "rating": 4.6,
         "summary": "El modelo del confederalismo democrático de Abdullah Öcalan: democracia directa, comunalismo y autoadministración sin Estado, aplicado en la experiencia de Rojava (Kurdistán sirio).",
@@ -5415,7 +5415,7 @@ export const regionData = {
       {
         "title": "La vida anárquica de Florencio Sánchez",
         "author": "Pascual Muñoz y Pablo Suárez",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "acratas",
         "rating": 4.5,
         "summary": "La vida anarquista del dramaturgo Florencio Sánchez y el teatro como moral de los oprimidos en el Río de la Plata.",
@@ -5425,7 +5425,7 @@ export const regionData = {
       {
         "title": "Cómo la no violencia protege al Estado",
         "author": "Peter Gelderloos",
-        "year": 2007,
+        "pubYear": 2007,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Ensayo de Gelderloos contra la no violencia como estrategia de cambio social.",
@@ -5434,7 +5434,7 @@ export const regionData = {
       {
         "title": "Apuntes sobre revuelta y guerra social",
         "author": "Anónimo",
-        "year": 2015,
+        "pubYear": 2015,
         "category": "teoria",
         "rating": 4.4,
         "summary": "Apuntes teóricos sobre la insurrección, la guerra social y la estrategia revolucionaria en el anarquismo contemporáneo.",
@@ -5443,7 +5443,7 @@ export const regionData = {
       {
         "title": "Autobiografía de un irreductible",
         "author": "Claudio Lavazza",
-        "year": 2000,
+        "pubYear": 2000,
         "category": "acratas",
         "rating": 4.3,
         "summary": "Relato autobiográfico de un militante anarquista que se niega a doblegarse ante el sistema: la vida como resistencia.",
@@ -5453,7 +5453,7 @@ export const regionData = {
       {
         "title": "CAOS NO MURIO: Consideraciones para Desmitificar el Concepto e Influencias del Caos",
         "author": "Varios autores",
-        "year": 2012,
+        "pubYear": 2012,
         "category": "teoria",
         "rating": 4.3,
         "summary": "Balance del movimiento anarquista después del ciclo de acción directa: caos no murió, se transformó.",
@@ -5462,7 +5462,7 @@ export const regionData = {
       {
         "title": "Cómo hacer",
         "author": "Tiqqun",
-        "year": 2015,
+        "pubYear": 2015,
         "category": "teoria",
         "rating": 4.2,
         "summary": "Guía práctica de acción directa y organización horizontal: cómo hacer cosas sin mandos ni jerarquías.",
@@ -5471,7 +5471,7 @@ export const regionData = {
       {
         "title": "Cuadernos de negación",
         "author": "Anónimo",
-        "year": 2018,
+        "pubYear": 2018,
         "category": "teoria",
         "rating": 4.4,
         "summary": "Serie de cuadernos de negación radical: contra el sistema, contra la izquierda, contra toda dominación.",
@@ -5480,7 +5480,7 @@ export const regionData = {
       {
         "title": "Cuando se señala la luna... A vueltas con el insurreccionalismo",
         "author": "Anónimo",
-        "year": 2015,
+        "pubYear": 2015,
         "category": "teoria",
         "rating": 4.4,
         "summary": "Reflexión sobre el insurreccionalismo y sus límites: cuando se señala la luna, el necio mira el dedo.",
@@ -5489,7 +5489,7 @@ export const regionData = {
       {
         "title": "El ocaso de la ideología democrática",
         "author": "Le Brise-Glace",
-        "year": 2015,
+        "pubYear": 2015,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Ensayo sobre el declive de la ideología democrática y la crisis de representación en el capitalismo tardío.",
@@ -5498,7 +5498,7 @@ export const regionData = {
       {
         "title": "Entre la plataforma y el partido",
         "author": "Patrick Rossineri",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "teoria",
         "rating": 4.3,
         "summary": "Debate sobre la organización anarquista: entre la plataforma organizacional y la deformación partidista.",
@@ -5507,7 +5507,7 @@ export const regionData = {
       {
         "title": "La insurrección que llega",
         "author": "Comité Invisible",
-        "year": 2018,
+        "pubYear": 2018,
         "category": "teoria",
         "rating": 4.5,
         "summary": "Manifiesto sobre la insurrección como proceso inevitable: la revolución no es un evento, es un flujo.",
@@ -5516,7 +5516,7 @@ export const regionData = {
       {
         "title": "La peste, la bestia y el monstruo: Johann Most",
         "author": "Aníbal D'Auria",
-        "year": 2010,
+        "pubYear": 2010,
         "category": "acratas",
         "rating": 4.4,
         "summary": "Estudio biográfico de Johann Most, el anarquista alemán de la propaganda por el hecho y la prensa radical.",
@@ -5526,7 +5526,7 @@ export const regionData = {
       {
         "title": "Las 12 pruebas de la inexistencia de Dios",
         "author": "Anónimo",
-        "year": 2015,
+        "pubYear": 2015,
         "category": "teoria",
         "rating": 4.3,
         "summary": "Argumentos ateos y antirreligiosos desde la perspectiva anarquista: contra Dios y contra el Estado.",
@@ -5535,7 +5535,7 @@ export const regionData = {
       {
         "title": "Llamamiento",
         "author": "Tiqqun",
-        "year": 2018,
+        "pubYear": 2018,
         "category": "teoria",
         "rating": 4.3,
         "summary": "Manifiesto de llamamiento a la acción directa y la solidaridad entre los pueblos oprimidos.",
@@ -5544,7 +5544,7 @@ export const regionData = {
       {
         "title": "Persona non-grata",
         "author": "Alfredo M. Bonano",
-        "year": 2018,
+        "pubYear": 2018,
         "category": "acratas",
         "rating": 4.2,
         "summary": "Experiencias de exclusión y resistencia: ser non-grata en la sociedad y en el propio movimiento.",
@@ -5554,7 +5554,7 @@ export const regionData = {
       {
         "title": "Por una teoría propia",
         "author": "Anónimo",
-        "year": 2015,
+        "pubYear": 2015,
         "category": "teoria",
         "rating": 4.4,
         "summary": "Propuesta de teoría anarquista propia, sin depender de marxismo ni liberalismo: pensar la revolución desde la libertad.",
@@ -5570,7 +5570,7 @@ export const regionData = {
       {
         "title": "El pensamiento anarquista - Antologia",
         "author": "Varios autores",
-        "year": 2015,
+        "pubYear": 2015,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Varios autores - El pensamiento anarquista - Antologia.pdf"
@@ -5585,7 +5585,7 @@ export const regionData = {
       {
         "title": "Aproximaciones a un mundo mortalmente enfermo",
         "author": "Diego Abad de Santillán",
-        "year": 1979,
+        "pubYear": 1979,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Diego Abad de Santillán - Aproximaciones a un mundo mortalmente enfermo.pdf"
@@ -5593,7 +5593,7 @@ export const regionData = {
       {
         "title": "Ayer, hoy, manana",
         "author": "Diego Abad de Santillán",
-        "year": 1974,
+        "pubYear": 1974,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Diego Abad de Santillán - Ayer, hoy, manana.pdf"
@@ -5601,7 +5601,7 @@ export const regionData = {
       {
         "title": "El organismo economico de la revolucion (1978)",
         "author": "Diego Abad de Santillán",
-        "year": 1978,
+        "pubYear": 1978,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Diego Abad de Santillán - El organismo economico de la revolucion (1978).pdf"
@@ -5609,7 +5609,7 @@ export const regionData = {
       {
         "title": "El organismo economico de la revolucion",
         "author": "Diego Abad de Santillán",
-        "year": 1978,
+        "pubYear": 1978,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Diego Abad de Santillán - El organismo economico de la revolucion.pdf"
@@ -5617,7 +5617,7 @@ export const regionData = {
       {
         "title": "El principio moral de la Anarquia",
         "author": "Diego Abad de Santillán",
-        "year": 1922,
+        "pubYear": 1922,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Diego Abad de Santillán - El principio moral de la Anarquia.pdf"
@@ -5625,7 +5625,7 @@ export const regionData = {
       {
         "title": "En torno a nuestros objetivos libertarios (1938) (2013)",
         "author": "Diego Abad de Santillán",
-        "year": 1938,
+        "pubYear": 1938,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Diego Abad de Santillán - En torno a nuestros objetivos libertarios (1938) (2013).pdf"
@@ -5633,7 +5633,7 @@ export const regionData = {
       {
         "title": "Las cargas tributarias",
         "author": "Diego Abad de Santillán",
-        "year": 1934,
+        "pubYear": 1934,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Diego Abad de Santillán - Las cargas tributarias.pdf"
@@ -5641,7 +5641,7 @@ export const regionData = {
       {
         "title": "Los anarquistas y la reaccion contemporanea",
         "author": "Diego Abad de Santillán",
-        "year": 1925,
+        "pubYear": 1925,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Diego Abad de Santillán - Los anarquistas y la reaccion contemporanea.pdf"
@@ -5649,7 +5649,7 @@ export const regionData = {
       {
         "title": "Psicologia del pueblo espanol",
         "author": "Diego Abad de Santillán",
-        "year": 1917,
+        "pubYear": 1917,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Diego Abad de Santillán - Psicologia del pueblo espanol.pdf"
@@ -5664,7 +5664,7 @@ export const regionData = {
       {
         "title": "El anarquismo en el movimiento obrero",
         "author": "Diego Abad de Santillán",
-        "year": 2014,
+        "pubYear": 2014,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Diego Abad de Santillán - El anarquismo en el movimiento obrero.pdf"
@@ -5686,7 +5686,7 @@ export const regionData = {
       {
         "title": "movimiento real",
         "author": "Agitación armada",
-        "year": 1973,
+        "pubYear": 1973,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Agitación armada - movimiento real.pdf"
@@ -5694,7 +5694,7 @@ export const regionData = {
       {
         "title": "La Semana Santa. Los atentados",
         "author": "Agrupacion Tiempos Nuevos",
-        "year": 1912,
+        "pubYear": 1912,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Agrupacion Tiempos Nuevos - La Semana Santa. Los atentados.pdf"
@@ -5702,7 +5702,7 @@ export const regionData = {
       {
         "title": "Los males de la guerra",
         "author": "Agrupacion Tiempos Nuevos",
-        "year": 1912,
+        "pubYear": 1912,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Agrupacion Tiempos Nuevos - Los males de la guerra.pdf"
@@ -5710,7 +5710,7 @@ export const regionData = {
       {
         "title": "La plaga de nuestro tiempo",
         "author": "Juanma Agulles",
-        "year": 2021,
+        "pubYear": 2021,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Juanma Agulles - La plaga de nuestro tiempo.pdf"
@@ -5718,7 +5718,7 @@ export const regionData = {
       {
         "title": "La vida administrada. Sobre el naufragio social",
         "author": "Juanma Agulles",
-        "year": 2017,
+        "pubYear": 2017,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Juanma Agulles - La vida administrada. Sobre el naufragio social.pdf"
@@ -5733,7 +5733,7 @@ export const regionData = {
       {
         "title": "Hacia una federación de autónomas ibéricas (F.A.I.)",
         "author": "Felipe Alaiz",
-        "year": 1993,
+        "pubYear": 1993,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Felipe Alaiz - Hacia una federación de autónomas ibéricas (F.A.I.).pdf"
@@ -5748,7 +5748,7 @@ export const regionData = {
       {
         "title": "La zarpa de Stalin sobre Europa",
         "author": "Felipe Alaiz",
-        "year": 1948,
+        "pubYear": 1948,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Felipe Alaiz - La zarpa de Stalin sobre Europa.pdf"
@@ -5763,7 +5763,7 @@ export const regionData = {
       {
         "title": "Interpretacion anarquista de la revolucion",
         "author": "Octavio Alberola",
-        "year": 1937,
+        "pubYear": 1937,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Octavio Alberola - Interpretacion anarquista de la revolucion.pdf"
@@ -5771,7 +5771,7 @@ export const regionData = {
       {
         "title": "El problema de la libertad",
         "author": "Octavio Alberola",
-        "year": 1950,
+        "pubYear": 1950,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Octavio Alberola - El problema de la libertad.pdf"
@@ -5786,7 +5786,7 @@ export const regionData = {
       {
         "title": "La revolucin. Entre el azar y la necesidad",
         "author": "Octavio Alberola",
-        "year": 2017,
+        "pubYear": 2017,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Octavio Alberola - La revolucin. Entre el azar y la necesidad.pdf"
@@ -5857,7 +5857,7 @@ export const regionData = {
       {
         "title": "La anarquia nuestra de cada dia",
         "author": "Ivan Dario Álvarez Escobar",
-        "year": 1992,
+        "pubYear": 1992,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Ivan Dario Álvarez Escobar - La anarquia nuestra de cada dia.pdf"
@@ -5879,7 +5879,7 @@ export const regionData = {
       {
         "title": "Nuestra Mision. Prosas de una mujer insurgente",
         "author": "Maria Álvarez",
-        "year": 2018,
+        "pubYear": 2018,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Maria Álvarez - Nuestra Mision. Prosas de una mujer insurgente.pdf"
@@ -5908,7 +5908,7 @@ export const regionData = {
       {
         "title": "Contra la nocividad. Anarquismo, antidesarrollismo, revolución",
         "author": "Miquel Amorós",
-        "year": 2017,
+        "pubYear": 2017,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Miquel Amorós - Contra la nocividad. Anarquismo, antidesarrollismo, revolución.pdf"
@@ -5923,7 +5923,7 @@ export const regionData = {
       {
         "title": "Geografias del combate",
         "author": "Miquel Amorós",
-        "year": 2018,
+        "pubYear": 2018,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Miquel Amorós - Geografias del combate.pdf"
@@ -5938,7 +5938,7 @@ export const regionData = {
       {
         "title": "La critica libertaria a la izquierda del capitalismo",
         "author": "Miquel Amorós",
-        "year": 2016,
+        "pubYear": 2016,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Miquel Amorós - La critica libertaria a la izquierda del capitalismo.pdf"
@@ -5946,7 +5946,7 @@ export const regionData = {
       {
         "title": "Perspectivas antidesarrollistas",
         "author": "Miquel Amorós",
-        "year": 2012,
+        "pubYear": 2012,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Miquel Amorós - Perspectivas antidesarrollistas.pdf"
@@ -5954,7 +5954,7 @@ export const regionData = {
       {
         "title": "Que fue la autonomia obrera",
         "author": "Miquel Amorós",
-        "year": 2013,
+        "pubYear": 2013,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Miquel Amorós - Que fue la autonomia obrera.pdf"
@@ -5962,7 +5962,7 @@ export const regionData = {
       {
         "title": "Fuck Green New Deal. Colapso y alternativas",
         "author": "Miquel Amorós",
-        "year": 2021,
+        "pubYear": 2021,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Miquel Amorós - Fuck Green New Deal. Colapso y alternativas.pdf"
@@ -5984,7 +5984,7 @@ export const regionData = {
       {
         "title": "Anarquismo y sexualidad",
         "author": "Helena Andrés Granel",
-        "year": 2014,
+        "pubYear": 2014,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Helena Andrés Granel - Anarquismo y sexualidad.pdf"
@@ -6041,7 +6041,7 @@ export const regionData = {
       {
         "title": "La accion sometida a la critica",
         "author": "Anónimo",
-        "year": 2007,
+        "pubYear": 2007,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Anónimo - La accion sometida a la critica.pdf"
@@ -6056,7 +6056,7 @@ export const regionData = {
       {
         "title": "Los papeles de Albert Mason, Volumen I. Accion Directa Economica",
         "author": "Anónimo",
-        "year": 2020,
+        "pubYear": 2020,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Anónimo - Los papeles de Albert Mason, Volumen I. Accion Directa Economica.pdf"
@@ -6106,7 +6106,7 @@ export const regionData = {
       {
         "title": "Etapas del pensamiento socialista",
         "author": "Ángel J. Cappelletti",
-        "year": 2007,
+        "pubYear": 2007,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Ángel J. Cappelletti - Etapas del pensamiento socialista.pdf"
@@ -6114,7 +6114,7 @@ export const regionData = {
       {
         "title": "Prehistoria del anarquismo",
         "author": "Ángel J. Cappelletti",
-        "year": 1983,
+        "pubYear": 1983,
         "category": "teoria",
         "rating": 4.5,
         "filename": "Ángel J. Cappelletti - Prehistoria del anarquismo.pdf"

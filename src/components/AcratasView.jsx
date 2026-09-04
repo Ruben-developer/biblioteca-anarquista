@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Search, BookOpen, MapPin, Star, ChevronDown, ChevronUp, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Search, BookOpen, MapPin, ChevronDown, ChevronUp, ChevronLeft, ChevronRight } from 'lucide-react';
 import { THEME } from '../constants';
 import { getAcratasPersons } from '../utils/library';
 
@@ -31,7 +31,6 @@ const getLetterCountClass = (darkMode, activeLetter, letter) => {
   return darkMode ? 'text-gray-500' : 'text-amber-600';
 };
 
-const getStars = (rating = 0) => Math.max(0, Math.min(5, Math.round(Number(rating) || 0)));
 
 const AcratasView = ({
   darkMode,
@@ -178,7 +177,6 @@ const AcratasView = ({
                     {isOpen && (
                       <div className="mt-4 space-y-2">
                         {person.books.map((book, idx) => {
-                          const stars = getStars(book.rating)
                           return (
                             <div
                               key={`${book.region}-${book.title}-${idx}`}
@@ -205,24 +203,12 @@ const AcratasView = ({
                                         {book.author}
                                       </span>
                                     )}
-                                    {book.pubYear && (
-                                      <span className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                                        {book.pubYear}
-                                      </span>
-                                    )}
                                     {book.region && (
                                       <span className={`text-xs ${darkMode ? 'text-red-400' : 'text-amber-600'} flex items-center gap-1`}>
                                         <MapPin size={12} /> {book.region}
                                       </span>
                                     )}
                                   </div>
-                                  {stars > 0 && (
-                                    <div className={`flex items-center gap-0.5 mt-1 ${darkMode ? 'text-red-400' : 'text-amber-700'}`} aria-label={`Valoración ${stars} de 5`}>
-                                      {Array.from({ length: 5 }).map((_, i) => (
-                                        <Star key={i} size={12} className={i < stars ? 'fill-current' : 'opacity-30'} />
-                                      ))}
-                                    </div>
-                                  )}
                                 </div>
                                 {book.filename ? (
                                   <button
