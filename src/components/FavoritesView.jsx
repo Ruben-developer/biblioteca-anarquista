@@ -93,7 +93,7 @@ const FavoritesView = ({
           <p className={`text-xl ${darkMode ? 'text-gray-400' : 'text-amber-800'}`}>
             Tu biblioteca personal está vacía
           </p>
-          <p className={`text-sm ${darkMode ? 'text-gray-500' : 'text-amber-600'} mt-2`}>
+          <p className={`text-sm ${darkMode ? 'text-gray-500' : 'text-amber-800'} mt-2`}>
             Guarda textos desde la Biblioteca o el Mapa para construir tu colección
           </p>
         </div>
@@ -171,7 +171,7 @@ const FavoritesView = ({
                 </button>
               </div>
 
-              <div className={`flex flex-wrap gap-2 mb-3 text-xs ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
+              <div className={`flex flex-wrap gap-2 mb-3 text-xs ${darkMode ? 'text-gray-500' : 'text-amber-800'}`}>
                 {fav.category && (
                   <span className="flex items-center gap-1">
                     <Tag size={12} />
@@ -180,10 +180,10 @@ const FavoritesView = ({
                 )}
               </div>
 
-              <div className={`border-t ${darkMode ? 'border-gray-700' : 'border-amber-200'} pt-3 mt-1 flex-1`}>
+              <div className={`border-t ${darkMode ? 'border-gray-700' : 'border-[#B79F6E]'} pt-3 mt-1 flex-1`}>
                 <h4 className={`flex items-center gap-1.5 text-xs font-semibold mb-2 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                   <StickyNote size={12} />
-                  Notas {notes.length > 0 && <span className={`px-1.5 py-0.5 rounded-full text-[10px] ${darkMode ? 'bg-gray-700 text-gray-400' : 'bg-amber-200 text-amber-800'}`}>{notes.length}</span>}
+                  Notas {notes.length > 0 && <span className={`px-1.5 py-0.5 rounded-full text-[10px] ${darkMode ? 'bg-gray-700 text-gray-400' : 'bg-amber-800 text-amber-50'}`}>{notes.length}</span>}
                 </h4>
 
                 {notes.length > 0 && (
@@ -211,7 +211,7 @@ const FavoritesView = ({
                     onKeyDown={(e) => { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) handleAdd(fav.title); }}
                     placeholder="Escribe una nota..."
                     rows={2}
-                    className={`flex-1 px-3 py-2 rounded-lg border text-sm resize-none ${darkMode ? 'bg-gray-800 border-[#872320] text-gray-200 placeholder-gray-500' : 'bg-white border-[#B79F6E] text-gray-800 placeholder-amber-600'}`}
+                    className={`flex-1 px-3 py-2 rounded-lg border text-sm resize-none ${darkMode ? 'bg-gray-800 border-[#872320] text-gray-200 placeholder-gray-500' : 'bg-white border-[#B79F6E] text-gray-800 placeholder-amber-800'}`}
                   />
                   <button
                     onClick={() => handleAdd(fav.title)}
