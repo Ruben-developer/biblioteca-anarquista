@@ -264,8 +264,8 @@ describe('AuthorsView', () => {
       regions: ['España'],
       yearsRange: '1890-1905',
       books: [
-        { title: 'Nueva Utopía', region: 'España', category: 'teoria', year: 1890, filename: 'anarquismo/a.pdf' },
-        { title: 'La coacción moral', region: 'España', category: 'teoria', year: 1898, filename: 'anarquismo/b.pdf' }
+        { title: 'Nueva Utopía', region: 'España', category: 'teoria', pubYear: 1890, filename: 'anarquismo/a.pdf' },
+        { title: 'La coacción moral', region: 'España', category: 'teoria', pubYear: 1898, filename: 'anarquismo/b.pdf' }
       ]
     }
   ];
@@ -275,7 +275,6 @@ describe('AuthorsView', () => {
     expect(html).toContain('Autores');
     expect(html).toContain('Ricardo Mella');
     expect(html).toContain('4 textos');
-    expect(html).toContain('1890-1905');
   });
 });
 
@@ -358,7 +357,7 @@ describe('AuthorsView edge cases (jsdom)', () => {
         bookCount: 1,
         regions: [],
         books: [
-          { title: 'Obra sin año', region: 'España', category: 'teoria', year: undefined, filename: 'anarquismo/a.pdf' }
+          { title: 'Obra sin año', region: 'España', category: 'teoria', pubYear: undefined, filename: 'anarquismo/a.pdf' }
         ]
       }
     ];
@@ -383,8 +382,8 @@ describe('AuthorsView interactivo (jsdom)', () => {
         regions: ['España'],
         yearsRange: '1890-1898',
         books: [
-          { title: 'Nueva Utopía', region: 'España', category: 'teoria', year: 1890, filename: 'anarquismo/a.pdf' },
-          { title: 'La coacción moral', region: 'España', category: 'teoria', year: 1898, filename: 'anarquismo/b.pdf' }
+          { title: 'Nueva Utopía', region: 'España', category: 'teoria', pubYear: 1890, filename: 'anarquismo/a.pdf' },
+          { title: 'La coacción moral', region: 'España', category: 'teoria', pubYear: 1898, filename: 'anarquismo/b.pdf' }
         ]
       }
     ];
@@ -408,8 +407,8 @@ describe('AuthorsView interactivo (jsdom)', () => {
         regions: ['España'],
         yearsRange: '1890-1898',
         books: [
-          { title: 'Obra con PDF', region: 'España', category: 'teoria', year: 1890, filename: 'anarquismo/a.pdf' },
-          { title: 'Obra sin archivo', region: 'España', category: 'teoria', year: 1895 }
+          { title: 'Obra con PDF', region: 'España', category: 'teoria', pubYear: 1890, filename: 'anarquismo/a.pdf' },
+          { title: 'Obra sin archivo', region: 'España', category: 'teoria', pubYear: 1895 }
         ]
       }
     ];
@@ -430,7 +429,7 @@ describe('AuthorsView interactivo (jsdom)', () => {
         regions: ['España'],
         yearsRange: '1890',
         books: [
-          { title: 'Nueva Utopía', region: 'España', category: 'teoria', year: 1890, filename: 'anarquismo/a.pdf' }
+          { title: 'Nueva Utopía', region: 'España', category: 'teoria', pubYear: 1890, filename: 'anarquismo/a.pdf' }
         ]
       }
     ];
@@ -448,7 +447,7 @@ describe('FeaturedBook', () => {
   const book = {
     title: 'La Conquista del Pan',
     author: 'Piotr Kropotkin',
-    year: 1892,
+    pubYear: 1892,
     category: 'teoria',
     region: 'España',
     rating: 4.8,

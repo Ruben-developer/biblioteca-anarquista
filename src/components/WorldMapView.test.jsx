@@ -76,7 +76,7 @@ describe('WorldMapView edge cases', () => {
     const dataConRegionSinISO = {
       ...regionData,
       'Tierra de Nadie': {
-        books: [{ title: 'Obra X', author: 'Autor', year: 1900, category: 'historia' }]
+        books: [{ title: 'Obra X', author: 'Autor', pubYear: 1900, category: 'historia' }]
       }
     };
     const html = renderToStaticMarkup(
@@ -114,8 +114,8 @@ describe('WorldMapView — países con 0 textos históricos no se marcan en el m
       Finlandia: {
         iso: 'fi',
         books: [
-          { title: 'Idea A', author: 'Autor', year: 1900, category: 'teoria' },
-          { title: 'Idea B', author: 'Autor', year: 1910, category: 'teoria' }
+          { title: 'Idea A', author: 'Autor', pubYear: 1900, category: 'teoria' },
+          { title: 'Idea B', author: 'Autor', pubYear: 1910, category: 'teoria' }
         ]
       }
     };

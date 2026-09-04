@@ -34,8 +34,8 @@ describe('EventModal', () => {
     const regionData = {
       'Estados Unidos': {
         books: [
-          { title: 'Los Mártires de Chicago', author: 'Colectivo', year: 1886, category: 'historia', filename: 'a.pdf' },
-          { title: 'El origen del 1º de Mayo', author: 'Colectivo', year: 1886, category: 'historia', filename: 'b.pdf' }
+          { title: 'Los Mártires de Chicago', author: 'Colectivo', pubYear: 1886, category: 'historia', filename: 'a.pdf' },
+          { title: 'El origen del 1º de Mayo', author: 'Colectivo', pubYear: 1886, category: 'historia', filename: 'b.pdf' }
         ]
       }
     };
@@ -54,7 +54,7 @@ describe('EventModal', () => {
     const regionData = {
       'Estados Unidos': {
         books: [
-          { title: 'Los Mártires de Chicago', author: 'Colectivo', year: 1886, category: 'historia', filename: 'a.pdf' }
+          { title: 'Los Mártires de Chicago', author: 'Colectivo', pubYear: 1886, category: 'historia', filename: 'a.pdf' }
         ]
       }
     };
@@ -119,7 +119,7 @@ describe('RegionModal', () => {
   it('muestra el resumen de la obra y marca el corazón cuando está en favoritos', () => {
     const dataConResumen = {
       España: {
-        books: [{ title: 'Obra A', author: 'Autor A', filename: 'a.pdf', category: 'historia', year: 1900, rating: 4.5, summary: 'Resumen de la obra A' }]
+        books: [{ title: 'Obra A', author: 'Autor A', filename: 'a.pdf', category: 'historia', pubYear: 1900, rating: 4.5, summary: 'Resumen de la obra A' }]
       }
     };
     const html = renderToStaticMarkup(

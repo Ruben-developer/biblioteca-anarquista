@@ -4,13 +4,13 @@ import { getDecadeFromYear, getAllBooks, getAllAuthors, getEventRelatedTexts, ge
 const regionData = {
   España: {
     books: [
-      { title: 'La Conquista del Pan', author: 'Kropotkin', year: 1892, category: 'teoria', rating: 4.8 },
-      { title: 'Columna Durruti', author: 'Colectivo', year: 1936, category: 'acratas', rating: 4.9 }
+      { title: 'La Conquista del Pan', author: 'Kropotkin', pubYear: 1892, category: 'teoria', rating: 4.8 },
+      { title: 'Columna Durruti', author: 'Colectivo', pubYear: 1936, category: 'acratas', rating: 4.9 }
     ]
   },
   Francia: {
     books: [
-      { title: '¿Qué es la Propiedad?', author: 'Proudhon', year: 1840, category: 'teoria', rating: 4.9 }
+      { title: '¿Qué es la Propiedad?', author: 'Proudhon', pubYear: 1840, category: 'teoria', rating: 4.9 }
     ]
   }
 };
@@ -267,8 +267,8 @@ describe('sortBooks', () => {
 
   it('ordena por año ascendente', () => {
     const sorted = sortBooks(books, 'year');
-    expect(sorted[0].year).toBe(1840);
-    expect(sorted[2].year).toBe(1936);
+    expect(sorted[0].pubYear).toBe(1840);
+    expect(sorted[2].pubYear).toBe(1936);
   });
 
   it('ordena por título alfabéticamente', () => {
@@ -279,7 +279,7 @@ describe('sortBooks', () => {
   it('no muta la lista original', () => {
     const original = [...books];
     sortBooks(books, 'year');
-    expect(books[0].year).toBe(original[0].year);
+    expect(books[0].pubYear).toBe(original[0].pubYear);
   });
 
   it('devuelve la lista sin cambios con un criterio de orden no soportado', () => {
@@ -291,8 +291,8 @@ describe('sortBooks', () => {
   it('no falla con libros sin rating, año o título', () => {
     const incompletos = [
       { title: 'Sin año', author: 'A', category: 'teoria' },
-      { title: undefined, author: 'B', year: 1900, rating: 3 },
-      { title: 'Sin rating', author: 'C', year: 1850 }
+      { title: undefined, author: 'B', pubYear: 1900, rating: 3 },
+      { title: 'Sin rating', author: 'C', pubYear: 1850 }
     ];
     expect(sortBooks(incompletos, 'rating').length).toBe(3);
     expect(sortBooks(incompletos, 'year').length).toBe(3);
@@ -311,13 +311,13 @@ describe('getEventRelatedTexts', () => {
   const rd = {
     España: {
       books: [
-        { title: 'Historia 1936', author: 'A', year: 1936, category: 'historia', rating: 4.0 },
-        { title: 'Guerra Civil 1977', author: 'C', year: 1977, category: 'historia', rating: 5.0 },
-        { title: 'Teoría 1890', author: 'B', year: 1890, category: 'teoria' }
+        { title: 'Historia 1936', author: 'A', pubYear: 1936, category: 'historia', rating: 4.0 },
+        { title: 'Guerra Civil 1977', author: 'C', pubYear: 1977, category: 'historia', rating: 5.0 },
+        { title: 'Teoría 1890', author: 'B', pubYear: 1890, category: 'teoria' }
       ]
     },
     Siria: {
-      books: [{ title: 'Rojava', author: 'D', year: 2015, category: 'historia' }]
+      books: [{ title: 'Rojava', author: 'D', pubYear: 2015, category: 'historia' }]
     }
   };
 
@@ -387,10 +387,10 @@ describe('getDailyFeaturedBook', () => {
   const rd = {
     España: {
       books: [
-        { title: 'Obra A con resumen', author: 'A', year: 1892, category: 'teoria', rating: 4.8, filename: 'x.pdf', summary: 'Reseña A.' },
-        { title: 'Obra B con resumen', author: 'B', year: 1936, category: 'acratas', rating: 4.9, filename: 'y.pdf', summary: 'Reseña B.' },
-        { title: 'Con archivo sin resumen', author: 'C', year: 1900, category: 'historia', filename: 'z.pdf' },
-        { title: 'Sin archivo', author: 'D', year: 1910, category: 'historia' }
+        { title: 'Obra A con resumen', author: 'A', pubYear: 1892, category: 'teoria', rating: 4.8, filename: 'x.pdf', summary: 'Reseña A.' },
+        { title: 'Obra B con resumen', author: 'B', pubYear: 1936, category: 'acratas', rating: 4.9, filename: 'y.pdf', summary: 'Reseña B.' },
+        { title: 'Con archivo sin resumen', author: 'C', pubYear: 1900, category: 'historia', filename: 'z.pdf' },
+        { title: 'Sin archivo', author: 'D', pubYear: 1910, category: 'historia' }
       ]
     }
   };
@@ -428,7 +428,7 @@ describe('getDailyFeaturedBook', () => {
   });
 
   it('cae a libros sin archivo si no hay ninguno legible', () => {
-    const soloFicha = { España: { books: [{ title: 'Solo ficha', author: 'X', year: 1900, category: 'historia' }] } };
+    const soloFicha = { España: { books: [{ title: 'Solo ficha', author: 'X', pubYear: 1900, category: 'historia' }] } };
     expect(getDailyFeaturedBook(soloFicha, new Date('2026-08-12'))).toMatchObject({ title: 'Solo ficha' });
   });
 
@@ -443,16 +443,16 @@ describe('getArchiveStats', () => {
   const rd = {
     España: {
       books: [
-        { title: 'Teoría A', author: 'Autor 1', year: 1892, category: 'teoria', filename: 'a.pdf' },
-        { title: 'Historia B', author: 'Autor 2', year: 1937, category: 'historia', filename: 'b.pdf' },
-        { title: 'Teoría C', author: 'Autor 1', year: 1910, category: 'teoria', filename: 'c.pdf' },
+        { title: 'Teoría A', author: 'Autor 1', pubYear: 1892, category: 'teoria', filename: 'a.pdf' },
+        { title: 'Historia B', author: 'Autor 2', pubYear: 1937, category: 'historia', filename: 'b.pdf' },
+        { title: 'Teoría C', author: 'Autor 1', pubYear: 1910, category: 'teoria', filename: 'c.pdf' },
         { title: 'Sin año', author: 'Autor 3', category: 'historia' }
       ]
     },
     Francia: {
       books: [
-        { title: 'Revolución D', author: 'Autor 1', year: 1871, category: 'historia', filename: 'd.pdf' },
-        { title: 'Biografía E', author: 'Autor 4', year: 1920, category: 'acratas' }
+        { title: 'Revolución D', author: 'Autor 1', pubYear: 1871, category: 'historia', filename: 'd.pdf' },
+        { title: 'Biografía E', author: 'Autor 4', pubYear: 1920, category: 'acratas' }
       ]
     }
   };
@@ -516,7 +516,7 @@ describe('getArchiveStats', () => {
 describe('findBookByTitle', () => {
   const rd = {
     España: {
-      books: [{ title: 'La Conquista del Pan', author: 'Kropotkin', year: 1892, filename: 'a.pdf' }]
+      books: [{ title: 'La Conquista del Pan', author: 'Kropotkin', pubYear: 1892, filename: 'a.pdf' }]
     },
     Francia: {
       books: [{ title: '¿Qué es la Propiedad?', author: 'Proudhon', filename: 'b.pdf' }]

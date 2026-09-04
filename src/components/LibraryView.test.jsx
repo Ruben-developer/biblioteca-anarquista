@@ -6,13 +6,13 @@ import LibraryView from './LibraryView';
 const regionData = {
   España: {
     books: [
-      { title: 'La Conquista del Pan', author: 'Kropotkin', year: 1892, category: 'teoria', rating: 4.8, filename: 'anarquismo/a.pdf' },
-      { title: 'Columna Durruti', author: 'Colectivo', year: 1936, category: 'acratas', rating: 4.9, filename: 'anarquismo/b.pdf' }
+      { title: 'La Conquista del Pan', author: 'Kropotkin', pubYear: 1892, category: 'teoria', rating: 4.8, filename: 'anarquismo/a.pdf' },
+      { title: 'Columna Durruti', author: 'Colectivo', pubYear: 1936, category: 'acratas', rating: 4.9, filename: 'anarquismo/b.pdf' }
     ]
   },
   Francia: {
     books: [
-      { title: '¿Qué es la Propiedad?', author: 'Proudhon', year: 1840, category: 'teoria', rating: 4.9, filename: 'anarquismo/c.pdf' }
+      { title: '¿Qué es la Propiedad?', author: 'Proudhon', pubYear: 1840, category: 'teoria', rating: 4.9, filename: 'anarquismo/c.pdf' }
     ]
   }
 };
@@ -102,9 +102,9 @@ describe('LibraryView edge cases', () => {
   const regionDataEdge = {
     España: {
       books: [
-        { title: 'Obra completa', author: 'Autor A', year: 1892, category: 'teoria', rating: 4.8, summary: 'Resumen de la obra', filename: 'anarquismo/a.pdf' },
+        { title: 'Obra completa', author: 'Autor A', pubYear: 1892, category: 'teoria', rating: 4.8, summary: 'Resumen de la obra', filename: 'anarquismo/a.pdf' },
         { title: 'Obra sin año ni rating', author: 'Autor B', category: 'acratas', filename: 'anarquismo/b.pdf' },
-        { title: 'Obra sin archivo', author: 'Autor C', year: 1900, category: 'historia', rating: 4.0 }
+        { title: 'Obra sin archivo', author: 'Autor C', pubYear: 1900, category: 'historia', rating: 4.0 }
       ]
     }
   };
@@ -127,7 +127,9 @@ describe('LibraryView edge cases', () => {
       <LibraryView darkMode={false} regionData={sinDatos} favorites={[]} onToggleFavorite={noop} />
     );
     expect(html).toContain('Obra sin año ni rating');
-    expect(html).toContain('—');
+    // El año ya NO se muestra en la ficha de la obra (renombrado a pubYear y
+    // su display se quitó de la UI). Por tanto el guión '—' tampoco aparece.
+    expect(html).not.toContain('—');
     expect(html).not.toContain('Resumen de la obra');
   });
 
@@ -201,8 +203,8 @@ describe('LibraryView referencias cruzadas (texto → evento)', () => {
   const regionDataHist = {
     España: {
       books: [
-        { title: 'Historia 1936', author: 'Autor A', year: 1936, category: 'historia', filename: 'anarquismo/a.pdf' },
-        { title: 'Teoría 1890', author: 'Autor B', year: 1890, category: 'teoria', filename: 'anarquismo/b.pdf' }
+        { title: 'Historia 1936', author: 'Autor A', pubYear: 1936, category: 'historia', filename: 'anarquismo/a.pdf' },
+        { title: 'Teoría 1890', author: 'Autor B', pubYear: 1890, category: 'teoria', filename: 'anarquismo/b.pdf' }
       ]
     }
   };

@@ -163,8 +163,8 @@ describe('RegionModal interactivo', () => {
   const regionData = {
     España: {
       books: [
-        { title: 'La Columna', author: 'Autor', year: 1936, category: 'historia', filename: 'a.pdf', rating: 4 },
-        { title: 'Un ensayo', author: 'Otro', year: 1890, category: 'teoria', filename: 'b.pdf', rating: 3 }
+        { title: 'La Columna', author: 'Autor', pubYear: 1936, category: 'historia', filename: 'a.pdf', rating: 4 },
+        { title: 'Un ensayo', author: 'Otro', pubYear: 1890, category: 'teoria', filename: 'b.pdf', rating: 3 }
       ]
     }
   };
@@ -218,7 +218,7 @@ describe('Modales — focus trap', () => {
   const regionData = {
     España: {
       books: [
-        { title: 'Obra A', author: 'Autor', year: 1936, category: 'historia', filename: 'a.pdf' }
+        { title: 'Obra A', author: 'Autor', pubYear: 1936, category: 'historia', filename: 'a.pdf' }
       ]
     }
   };
@@ -266,16 +266,21 @@ describe('Modales — focus trap', () => {
 });
 
 describe('LibraryView interactivo', () => {
+  // Los libros del mock llevan `pubYear` (campo del catálogo) y también `year`
+  // porque el filtro por década (filterBooks en utils/library.js) todavía lee
+  // book.year, mientras que el desplegable de décadas (LibraryView) deriva sus
+  // opciones de book.pubYear. Ambos son necesarios para que el test de década
+  // refleje el comportamiento actual de la app.
   const regionData = {
     España: {
       books: [
-        { title: 'La Conquista del Pan', author: 'Kropotkin', year: 1892, category: 'teoria', rating: 4.8, filename: 'anarquismo/a.pdf' },
-        { title: 'Columna Durruti', author: 'Colectivo', year: 1936, category: 'historia', rating: 4.9, filename: 'anarquismo/b.pdf' }
+        { title: 'La Conquista del Pan', author: 'Kropotkin', year: 1892, pubYear: 1892, category: 'teoria', rating: 4.8, filename: 'anarquismo/a.pdf' },
+        { title: 'Columna Durruti', author: 'Colectivo', year: 1936, pubYear: 1936, category: 'historia', rating: 4.9, filename: 'anarquismo/b.pdf' }
       ]
     },
     Francia: {
       books: [
-        { title: '¿Qué es la Propiedad?', author: 'Proudhon', year: 1840, category: 'teoria', rating: 4.9, filename: 'anarquismo/c.pdf' }
+        { title: '¿Qué es la Propiedad?', author: 'Proudhon', year: 1840, pubYear: 1840, category: 'teoria', rating: 4.9, filename: 'anarquismo/c.pdf' }
       ]
     }
   };
@@ -297,6 +302,8 @@ describe('LibraryView interactivo', () => {
     const { container } = render(<LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />);
     const grid = container.querySelector('div.grid');
     fireEvent.change(screen.getByLabelText('Filtrar por década'), { target: { value: '1890s' } });
+    // 1890s → solo La Conquista del Pan (1892). El desplegable deriva sus
+    // opciones de pubYear (disponible en el mock), y el filtro cuenta 1 de 3.
     expect(screen.getByText('1 de 3 obras del archivo. Busca y filtra por categoría, década, tipo o favoritos.')).toBeTruthy();
     fireEvent.change(screen.getByLabelText('Filtrar por categoría'), { target: { value: 'teoria' } });
     // Sigue quedando La Conquista del Pan (1892, teoría); Columna Durruti (1936) queda fuera por década.
