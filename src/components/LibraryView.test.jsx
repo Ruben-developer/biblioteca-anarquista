@@ -47,12 +47,10 @@ describe('LibraryView', () => {
     expect(html).toContain('Leer esta obra');
   });
 
-  it('muestra la región y categoría de cada obra', () => {
+  it('muestra la categoría de cada obra (región oculta, solo para mapa)', () => {
     const html = renderToStaticMarkup(
       <LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />
     );
-    expect(html).toContain('España');
-    expect(html).toContain('Francia');
     expect(html).toContain('teoria');
     expect(html).toContain('acratas');
   });

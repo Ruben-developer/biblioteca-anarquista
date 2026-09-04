@@ -84,12 +84,7 @@ const FavoriteButton = ({ book, isFavorite, onToggleFavorite, darkMode, size = 1
 
 const BookMeta = ({ book, darkMode }) => (
   <div className="flex items-center gap-3 text-xs flex-wrap mt-1">
-    <span className={`font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800 text-gray-300' : 'bg-amber-200 text-amber-900'}`}>
-      {book.region || book.author}
-    </span>
-    <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{book.year || '—'}</span>
     <span className={`font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800' : 'bg-amber-200'}`}>{book.category}</span>
-        {book.rating && <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{book.rating}</span>}
   </div>
 )
 
@@ -147,10 +142,7 @@ const GridCard = ({ book, idx, favorites, onToggleFavorite, onRead, onOpenEvent,
   const bookEvents = getBookEvents(timelineEvents, book)
   return (
     <div key={`${book.region}-${book.title}`} className={`${cardClass} border-2 rounded-lg p-5 hover:shadow-lg transition-all flex flex-col card-appear`} style={{ animationDelay: `${Math.min(idx, 8) * 40}ms` }}>
-      <div className="flex items-start justify-between gap-2 mb-2">
-        <span className={`text-xs px-2 py-1 rounded-full ${darkMode ? 'bg-gray-700 text-gray-300' : 'bg-amber-200 text-amber-900'}`}>
-          {book.region}
-        </span>
+      <div className="flex items-start justify-end gap-2 mb-2">
         <FavoriteButton book={book} isFavorite={isFav} onToggleFavorite={onToggleFavorite} darkMode={darkMode} />
       </div>
       <h3 className={`font-bold ${darkMode ? 'text-gray-100' : 'text-gray-800'} mb-1`}>
@@ -160,9 +152,7 @@ const GridCard = ({ book, idx, favorites, onToggleFavorite, onRead, onOpenEvent,
         por {book.author}
       </p>
       <div className="flex items-center gap-3 text-xs flex-wrap mb-3">
-        <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{book.year || '—'}</span>
         <span className={`font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 rounded ${darkMode ? 'bg-gray-800' : 'bg-amber-200'}`}>{book.category}</span>
-        {book.rating && <span className={darkMode ? 'text-gray-400' : 'text-gray-600'}>{book.rating}</span>}
       </div>
       {book.summary && (
         <p className={`text-xs ${darkMode ? 'text-gray-500' : 'text-gray-600'} mb-4 line-clamp-2 flex-1`}>

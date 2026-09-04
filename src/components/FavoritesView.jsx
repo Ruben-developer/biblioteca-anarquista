@@ -172,12 +172,6 @@ const FavoritesView = ({
               </div>
 
               <div className={`flex flex-wrap gap-2 mb-3 text-xs ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
-                {fav.year && (
-                  <span className="flex items-center gap-1">
-                    <Calendar size={12} />
-                    {fav.year}
-                  </span>
-                )}
                 {fav.category && (
                   <span className="flex items-center gap-1">
                     <Tag size={12} />
