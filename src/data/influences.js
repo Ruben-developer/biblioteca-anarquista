@@ -54,8 +54,6 @@ const _rawInfluenceNodes = [
   { id: 'ellul', name: 'Ellul', years: '1912–1994', region: 'Francia', authorKey: 'Jacques Ellul', x: 42, y: -4, bio: 'Teólogo y anarquista cristiano: el Estado como poder satánico y el cristianismo como subversión de toda autoridad.' },
   // ── 1920s: ecología social ──
   { id: 'bookchin', name: 'Bookchin', years: '1921–2006', region: 'EE. UU.', authorKey: 'Murray Bookchin', x: 82, y: -10, bio: 'Ecología social y municipalismo libertario: la crisis ecológica como crisis social.' },
-  // ── 1940s: confederalismo ──
-  { id: 'ocalan', name: 'Öcalan', years: '1948–', region: 'Kurdistán', authorKey: 'Abdullah Öcalan', x: 60, y: -12, bio: 'Confederalismo democrático: inspirado en Bookchin, aplicado al Kurdistán.' },
   // ── 1960s-80s: hoy ──
   { id: 'graeber', name: 'Graeber', years: '1961–2020', region: 'EE. UU.', authorKey: 'David Graeber', x: 82, y: -17, bio: 'Antropólogo anarquista: la etnografía como inspiración de organización libre.' },
   { id: 'gelderloos', name: 'Gelderloos', years: '1982–', region: 'EE. UU.', authorKey: 'Peter Gelderloos', x: 92, y: -20, bio: 'Autor contemporáneo sobre anarquismo, ecología y acción directa.' },
@@ -113,7 +111,6 @@ export const influenceEdges = [
   ['abad', 'mera'],
   ['abad', 'garcia_oliver'],
   ['kropotkin', 'bajin'],
-  ['bookchin', 'ocalan'],
   ['graeber', 'gelderloos'],
   ['proudhon', 'guerin']
 ];

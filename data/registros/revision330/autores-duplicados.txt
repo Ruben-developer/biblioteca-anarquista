@@ -1,0 +1,10 @@
+=== AUTORES CON MULTIPLES FORMATOS (posibles duplicados) ===
+
+CLAVE: "varios autores"  (total 32 libros)
+    - Varios autores
+    - Varios autores (grupo La Peste)
+
+CLAVE: "varios"  (total 2 libros)
+    - Varios (CNT)
+    - Varios (Salto, subversión & anarquía)
+

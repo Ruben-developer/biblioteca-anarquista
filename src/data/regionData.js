@@ -4556,15 +4556,7 @@ export const regionData = {
         "summary": "Crítica radical de Peter Gelderloos a la no violencia como estrategia de cambio social: argumenta que la no violencia protege al Estado y al capital.",
         "filename": "Peter Gelderloos - Cómo la no violencia protege al Estado.pdf"
       },
-      {
-        "title": "La sociedad industrial y su futuro",
-        "author": "Ted Kaczynski",
-        "pubYear": 1995,
-        "category": "teoria",
-        "rating": 4.2,
-        "summary": "El manifiesto de Ted Kaczynski contra la sociedad industrial y la tecnología: una crítica extrema al sistema tecnológico y su impacto en la libertad humana.",
-        "filename": "Ted Kaczynski - La sociedad industrial y su futuro.pdf"
-      },
+
       {
         "title": "¿Qué es la Propiedad?",
         "author": "Pierre-Joseph Proudhon",
@@ -5403,15 +5395,7 @@ export const regionData = {
         "summary": "La obra mayor de Bakunin: análisis de la lucha entre el estatismo y la revolución social, con su crítica del marxismo y su visión de la sociedad federada.",
         "filename": "Mijaíl Bakunin - Estatismo y anarquía.pdf"
       },
-      {
-        "title": "Confederalismo Democrático",
-        "author": "Abdullah Öcalan",
-        "pubYear": 2010,
-        "category": "teoria",
-        "rating": 4.6,
-        "summary": "El modelo del confederalismo democrático de Abdullah Öcalan: democracia directa, comunalismo y autoadministración sin Estado, aplicado en la experiencia de Rojava (Kurdistán sirio).",
-        "filename": "Abdullah Öcalan - Confederalismo Democrático.pdf"
-      },
+
       {
         "title": "La vida anárquica de Florencio Sánchez",
         "author": "Pascual Muñoz y Pablo Suárez",
@@ -5421,15 +5405,6 @@ export const regionData = {
         "summary": "La vida anarquista del dramaturgo Florencio Sánchez y el teatro como moral de los oprimidos en el Río de la Plata.",
         "filename": "Pascual Muñoz y Pablo Suárez - La vida anárquica de Florencio Sánchez.pdf",
         "subject": "Florencio Sánchez"
-      },
-      {
-        "title": "Cómo la no violencia protege al Estado",
-        "author": "Peter Gelderloos",
-        "pubYear": 2007,
-        "category": "teoria",
-        "rating": 4.5,
-        "summary": "Ensayo de Gelderloos contra la no violencia como estrategia de cambio social.",
-        "filename": "Peter Gelderloos - Cómo la no violencia protege al Estado.pdf"
       },
       {
         "title": "Apuntes sobre revuelta y guerra social",
@@ -5459,15 +5434,7 @@ export const regionData = {
         "summary": "Balance del movimiento anarquista después del ciclo de acción directa: caos no murió, se transformó.",
         "filename": "Varios autores - CAOS NO MURIO: Consideraciones para Desmitificar el Concepto e Influencias del Caos.pdf"
       },
-      {
-        "title": "Cómo hacer",
-        "author": "Tiqqun",
-        "pubYear": 2015,
-        "category": "teoria",
-        "rating": 4.2,
-        "summary": "Guía práctica de acción directa y organización horizontal: cómo hacer cosas sin mandos ni jerarquías.",
-        "filename": "Tiqqun - Cómo hacer.pdf"
-      },
+
       {
         "title": "Cuadernos de negación",
         "author": "Anónimo",
@@ -5504,15 +5471,7 @@ export const regionData = {
         "summary": "Debate sobre la organización anarquista: entre la plataforma organizacional y la deformación partidista.",
         "filename": "Patrick Rossineri - Entre la plataforma y el partido.pdf"
       },
-      {
-        "title": "La insurrección que llega",
-        "author": "Comité Invisible",
-        "pubYear": 2018,
-        "category": "teoria",
-        "rating": 4.5,
-        "summary": "Manifiesto sobre la insurrección como proceso inevitable: la revolución no es un evento, es un flujo.",
-        "filename": "Comité Invisible - La insurrección que llega.pdf"
-      },
+
       {
         "title": "La peste, la bestia y el monstruo: Johann Most",
         "author": "Aníbal D'Auria",
@@ -5532,15 +5491,7 @@ export const regionData = {
         "summary": "Argumentos ateos y antirreligiosos desde la perspectiva anarquista: contra Dios y contra el Estado.",
         "filename": "Anónimo - Las 12 pruebas de la inexistencia de Dios.pdf"
       },
-      {
-        "title": "Llamamiento",
-        "author": "Tiqqun",
-        "pubYear": 2018,
-        "category": "teoria",
-        "rating": 4.3,
-        "summary": "Manifiesto de llamamiento a la acción directa y la solidaridad entre los pueblos oprimidos.",
-        "filename": "Tiqqun - Llamamiento.pdf"
-      },
+
       {
         "title": "Persona non-grata",
         "author": "Alfredo M. Bonano",
@@ -5683,14 +5634,7 @@ export const regionData = {
         "rating": 4.5,
         "filename": "Ramon Acin - Tres articulos.pdf"
       },
-      {
-        "title": "movimiento real",
-        "author": "Agitación armada",
-        "pubYear": 1973,
-        "category": "teoria",
-        "rating": 4.5,
-        "filename": "Agitación armada - movimiento real.pdf"
-      },
+
       {
         "title": "La Semana Santa. Los atentados",
         "author": "Agrupacion Tiempos Nuevos",
