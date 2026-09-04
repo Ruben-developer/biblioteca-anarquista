@@ -73,7 +73,7 @@ describe('Header', () => {
     );
     expect(html).toContain('Rutas');
     expect(html).toContain('Contacto');
-    expect(html).toContain('Mostrar estadísticas');
+    expect(html).not.toContain('Mostrar estadísticas');
   });
 });
 

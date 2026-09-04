@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react'
-import { BookOpen, Heart, CalendarClock, ChevronLeft, ChevronRight } from 'lucide-react'
+import { BookOpen, Heart, CalendarClock, Search, ChevronLeft, ChevronRight } from 'lucide-react'
 import { THEME } from '../constants'
 import { getAllBooks, getDailyFeaturedBook, getBookEvents } from '../utils/library'
 import FeaturedBook from './FeaturedBook'
@@ -116,9 +116,11 @@ const LibraryView = ({
   timelineEvents = [],
   onOpenEvent = () => {},
   onRead = () => {},
+  initialFilters = null,
 }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card
   const [page, setPage] = useState(1)
+  const [searchTerm, setSearchTerm] = useState(initialFilters?.searchTerm || '')
 
   const allBooks = useMemo(
     () => getAllBooks(regionData).filter((b) => b.category !== 'otros'),
@@ -126,25 +128,47 @@ const LibraryView = ({
   )
   const featured = useMemo(() => getDailyFeaturedBook(regionData), [regionData])
 
-  const totalPages = Math.ceil(allBooks.length / PAGE_SIZE)
-  const paged = allBooks.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
+  const filtered = useMemo(() => {
+    if (!searchTerm.trim()) return allBooks
+    const term = searchTerm.toLowerCase()
+    return allBooks.filter((b) => `${b.title} ${b.author} ${b.category} ${b.summary || ''}`.toLowerCase().includes(term))
+  }, [allBooks, searchTerm])
+
+  const totalPages = Math.ceil(filtered.length / PAGE_SIZE)
+  const paged = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
 
   return (
     <div className={`${darkMode ? 'bg-gray-900/60 border-[#872320]/50' : 'bg-white/60 border-[#B79F6E]'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         Biblioteca
       </h2>
-      <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-        {allBooks.length} obras del archivo.
+      <p className={`text-sm mb-4 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
+        {filtered.length} de {allBooks.length} obras del archivo.
       </p>
+
+      <div className="relative mb-6">
+        <Search className={`absolute left-3 top-1/2 -translate-y-1/2 ${darkMode ? 'text-gray-500' : 'text-amber-500'}`} size={18} />
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={(e) => { setSearchTerm(e.target.value); setPage(1) }}
+          placeholder="Buscar por palabras clave..."
+          className={`w-full px-4 py-2 rounded-lg border text-sm pl-10 ${darkMode ? 'bg-gray-800 border-[#872320] text-gray-200 placeholder-gray-500' : 'bg-white border-[#B79F6E] text-gray-800 placeholder-amber-700'}`}
+          aria-label="Buscar por palabras clave"
+        />
+      </div>
 
       <FeaturedBook darkMode={darkMode} book={featured} onRead={onRead} />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {paged.map((book, idx) => (
-          <GridCard key={`${book.region}-${book.title}`} book={book} idx={idx} favorites={favorites} onToggleFavorite={onToggleFavorite} onRead={onRead} onOpenEvent={onOpenEvent} timelineEvents={timelineEvents} darkMode={darkMode} cardClass={cardClass} />
-        ))}
-      </div>
+      {filtered.length === 0 ? (
+        <p className={`text-center py-12 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>No hay obras que coincidan con la búsqueda.</p>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {paged.map((book, idx) => (
+            <GridCard key={`${book.region}-${book.title}`} book={book} idx={idx} favorites={favorites} onToggleFavorite={onToggleFavorite} onRead={onRead} onOpenEvent={onOpenEvent} timelineEvents={timelineEvents} darkMode={darkMode} cardClass={cardClass} />
+          ))}
+        </div>
+      )}
       {totalPages > 1 && (
         <div className={`flex items-center justify-center gap-3 mt-6 pt-4 border-t ${darkMode ? 'border-[#872320]' : 'border-[#B79F6E]'}`}>
           <button
