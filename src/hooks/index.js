@@ -130,8 +130,25 @@ export const useFavorites = () => {
         const notes = Array.isArray(f.notes) ? f.notes : (f.note ? [{ id: makeNoteId(), text: f.note, ts: new Date().toISOString() }] : []);
         return { id: f.id || makeId(f.title, f.author || ''), title: f.title, author: f.author || '', year: f.year ?? null, filename: f.filename || '', category: f.category || '', notes, addedAt: f.addedAt || Date.now() };
       });
-      persist(cleaned);
-      setFavorites(cleaned);
+      // Merge: preserva filename si el import no lo trae, y fusiona notas
+      let next;
+      setFavorites(prev => {
+        const map = new Map(prev.map(f => [f.title, f]));
+        for (const c of cleaned) {
+          const existing = map.get(c.title);
+          if (existing) {
+            const ids = new Set((existing.notes || []).map(n => n.id));
+            const newNotes = (c.notes || []).filter(n => !ids.has(n.id));
+            const filename = c.filename || existing.filename || '';
+            map.set(c.title, { ...existing, ...c, filename, notes: [...(existing.notes || []), ...newNotes] });
+          } else {
+            map.set(c.title, c);
+          }
+        }
+        next = [...map.values()];
+        persist(next);
+        return next;
+      });
       return { ok: true, count: cleaned.length };
     } catch {
       return { ok: false, error: 'No se pudo leer el archivo.' };
