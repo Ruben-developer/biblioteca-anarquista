@@ -17,9 +17,10 @@ describe('AnarchistArchive', () => {
     expect(html).not.toContain('Línea Temporal');
   });
 
-  it('muestra la biblioteca con su buscador en la vista inicial', () => {
+  it('muestra la biblioteca en la vista inicial', () => {
     const html = renderToStaticMarkup(<AnarchistArchive />);
-    expect(html).toContain('Buscar obra');
+    expect(html).toContain('Biblioteca');
+    expect(html).toContain('obras del archivo');
   });
 });
 
