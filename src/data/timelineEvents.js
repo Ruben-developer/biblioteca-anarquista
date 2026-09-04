@@ -20,7 +20,7 @@ export const timelineEvents = [
     description: "1800 a.C. – 1780 d.C. · Mediterráneo y Caribe",
     region: "Mediterráneo y Caribe",
     category: "historia",
-    relatedTexts: ["Utopías antiguas y modernas","El anarquismo en la antigua Grecia","Los hermanos de la Costa. Piratería libertaria en el Caribe"]
+    relatedTexts: ["Utopías antiguas y modernas", "El anarquismo en la antigua Grecia", "Los hermanos de la Costa. Piratería libertaria en el Caribe", "Colón y la civilización occidental", "La Gran Revolución (1789-1793) (Vol. I)"]
   },
   {
     year: 1868,
@@ -32,7 +32,7 @@ export const timelineEvents = [
     description: "1868–1877 · Europa (Francia, Suiza, España)",
     region: "Europa (Francia, Suiza, España)",
     category: "historia",
-    relatedTexts: ["La Comuna de París","La comuna de París (antología)","Bakunin-Netchaiev. El Catecismo Revolucionario"]
+    relatedTexts: ["La Comuna de París", "La comuna de París (antología)", "Bakunin-Netchaiev. El Catecismo Revolucionario", "Bakunin y la guerra franco-prusiana"]
   },
   {
     year: 1886,
@@ -44,7 +44,7 @@ export const timelineEvents = [
     description: "1886 · Estados Unidos e Internacional",
     region: "Estados Unidos e Internacional",
     category: "historia",
-    relatedTexts: ["El origen del 1º de Mayo","1º de mayo. Su origen y significado","Los orígenes libertarios del Primero de Mayo: de Chicago a América Latina (1886-1930)"]
+    relatedTexts: ["El origen del 1º de Mayo", "1º de mayo. Su origen y significado", "Los orígenes libertarios del Primero de Mayo: de Chicago a América Latina (1886-1930)", "Voces anarquistas. Historia oral del anarquismo en Estados Unidos", "Wobblies. Una historia gráfica de los IWW", "La tragedia de Chicago", "Breve historia del movimiento anarquista en EE.UU", "El martirio de los anarquistas de Chicago", "La IWW. Sus cien primeros años"]
   },
   {
     year: 1880,
@@ -56,7 +56,7 @@ export const timelineEvents = [
     description: "1880–1914 · Europa (Francia, Suiza, España, Guayana)",
     region: "Europa (Francia, Suiza, España, Guayana)",
     category: "historia",
-    relatedTexts: ["El terrorismo anarquista como propaganda por el hecho","La conjura de los indomables","La Epidemia Terrorista. Declaraciones de Ravachol y de Émile Henry","Anarquistas vengadores"]
+    relatedTexts: ["El terrorismo anarquista como propaganda por el hecho", "La conjura de los indomables", "La Epidemia Terrorista. Declaraciones de Ravachol y de Émile Henry", "Anarquistas vengadores", "Chernoe Znamia (anarquistas rusos, 1900s)"]
   },
   {
     year: 1880,
@@ -68,7 +68,7 @@ export const timelineEvents = [
     description: "1880–1930 · Argentina y Uruguay",
     region: "Argentina y Uruguay",
     category: "historia",
-    relatedTexts: ["El movimiento anarquista en la Argentina (Desde sus inicios hasta 1910)","La F. O. R. A. Ideologia y trayectoria del movimiento obrero en la Argentina","Los anarquistas expropiadores","La Patagonia Rebelde","El fusilamiento de Penina","La primera víctima del movimiento obrero. El discurso anarquista sobre la muerte (Argentina)","Orígenes del movimiento obrero en el Uruguay","La primera huelga general en el Uruguay (23 de mayo de 1911)","Anarquismo trashumante. Crónicas de crotos y linyeras","Historia ArgentinaDesde la aparicion del hombre hasta la obra de M. M. de Guemes","Historia ArgentinaDesde la liberacion de Chile hasta la constitucion de la Provincia de Bs. As.","Historia ArgentinaDesde la presidencia de Urquiza a la eleccion de H. Yrigoyen","La FORA","Fuga del penal de Punta Carretas"]
+    relatedTexts: ["El movimiento anarquista en la Argentina (Desde sus inicios hasta 1910)", "Los anarquistas expropiadores", "La Patagonia Rebelde", "El fusilamiento de Penina", "La primera víctima del movimiento obrero. El discurso anarquista sobre la muerte (Argentina)", "Orígenes del movimiento obrero en el Uruguay", "La primera huelga general en el Uruguay (23 de mayo de 1911)", "Anarquismo trashumante. Crónicas de crotos y linyeras", "La FORA", "La comuna de Encarnación", "Fuga del penal de Punta Carretas", "Anarquismo, educación y costumbres en la Argentina de principios del siglo XX", "El terrorismo de Estado en la Argentina", "La FORA y el movimiento obrero (Tomos I y II)", "Pampa Libre. Anarquistas en la pampa argentina", "Anarquismo y cuestión sexual en el periódico Acción libertaria (Argentina, 1933-1955)", "El periódico anarquista Nuestra Tribuna. Un diálogo transnacional en América Latina", "Historiografía del anarquismo en Argentina. Notas para debatir una nueva lectura", "Queremos emanciparos. Anarquismo y mujer en Buenos Aires de fines del XIX", "Un ejercicio de lectura sobre el concierto de la prensa anarquista a partir de Mijaíl Bajtín (Argentina, 1895-1925)", "Hechos y comentarios y otros escritos. El Anarquismo en Buenos Aires (1890-1915)", "Discurso y práctica sobre la violencia en el anarquismo argentino a comienzos del siglo XX (La venganza de Radowitzky y Wilckens)", "La FORA. El Anarquismo en el Movimiento Obrero Argentino", "El anarquismo y el movimiento obrero en Argentina (1978) (2)", "Anarquistas. Cultura y política libertaria en Buenos Aires, 1890-1910", "Auge y caída del anarquismo (Argentina 1880-1930)", "En defensa de los oprimidos. El anarquismo y la formación de una cultura de izquierda en la Argentina", "La interpelación anarquista. Tensiones entre el discurso y las prácticas libertarias en Argentina, 1890-1916", "Las prácticas culturales del anarquismo argentino", "Anarquismo argentino (1876-1902)", "Influencia del anarquismo español sobre la formación del anarquismo argentino", "El anarquismo en el Uruguay hasta 1900"]
   },
   {
     year: 1890,
@@ -80,7 +80,7 @@ export const timelineEvents = [
     description: "1890–1940 · Chile",
     region: "Chile",
     category: "historia",
-    relatedTexts: ["Sin Dios ni patrones. Historia del anarquismo en la región chilena (1890-1990)","Destruir para construir: violencia y acción directa en la corriente anarquista chilena (1890-1914)","La propaganda por los hechos en el movimiento anarquista chileno (1890-1910)","Anarquismo y violencia popular en Chile (1898-1927)","La masacre de la Escuela Santa María de Iquique","Entre el dolor y la ira, la venganza de Ramón Ramón","Represión contra los anarquistas: Voltaire Argandoña y Hortensia Quinio (Santiago, 1913)","Juan Gandulfo: la hoja sanitaria, el policlínico de la IWW y su legado (1923-1942)","Wobblie. Hombres, ideas y problemas del anarquismo en los años veinte","Flora Sanhueza Rebolledo. Su lucha social en Iquique (1942-1974)","Historia e historiografía del anarquismo en Chile (1980-2015)","Punto de Quiebre: Memorias De Lucha Desde La Región Chilena"]
+    relatedTexts: ["Sin Dios ni patrones. Historia del anarquismo en la región chilena (1890-1990)", "Destruir para construir: violencia y acción directa en la corriente anarquista chilena (1890-1914)", "La propaganda por los hechos en el movimiento anarquista chileno (1890-1910)", "Anarquismo y violencia popular en Chile (1898-1927)", "La masacre de la Escuela Santa María de Iquique", "Entre el dolor y la ira, la venganza de Ramón Ramón", "Represión contra los anarquistas: Voltaire Argandoña y Hortensia Quinio (Santiago, 1913)", "Juan Gandulfo: la hoja sanitaria, el policlínico de la IWW y su legado (1923-1942)", "Wobblie. Hombres, ideas y problemas del anarquismo en los años veinte", "Flora Sanhueza Rebolledo. Su lucha social en Iquique (1942-1974)", "Historia e historiografía del anarquismo en Chile (1980-2015)", "Punto de Quiebre: Memorias De Lucha Desde La Región Chilena", "1907 (Iquique) y 1913 (Valparaíso). Debacle y rearticulación. Dos hitos en la historia del movimiento obrero-popular chileno", "1º de mayo de 1973. Los anarquistas y el gobierno de la Unidad Popular", "La Huelga del Mono", "Las luchas internas de la Central Única de Trabajadores (CUT) y el paro del 7 de julio de 1955. Dos tradiciones obreras en pugna", "Lucha temperante y amor libre. Entre lo prometeico y lo dionisíaco. El discurso moral de los anarquistas chilenos al despuntar el siglo XX", "Caminos de ida y vuelta. Anarquismo e internacionalismo proletario en América del Sur. Chile y Bolivia en las primeras décadas del siglo XX", "Por la Vida Nueva. La familia en la batalla cultural entre el anarquismo, la Iglesia católica y el Estado (Región chilena, 1893-1940)", "Los anarquistas y el movimiento obrero. La alborada de la Idea en Chile (1893-1915)", "El anarquismo en Chile (1897-1931)", "Experiencias educativas y prácticas culturales anarquistas en Chile, 1890-1927", "1º de Mayo de 1899. Los anarquistas y el origen del día del trabajador en la región chilena", "Anarquismo en Chile. Una síntesis histórica desde 1890 hasta nuestros días (2)", "Cuando las bombas son de papel. Los trabajadores, el Estado y la propaganda anarquista impresa (Región chilena, 1915-1927)", "El anarquismo y los orígenes del movimiento sindical campesino en Osorno (1930-1940)"]
   },
   {
     year: 1898,
@@ -92,7 +92,7 @@ export const timelineEvents = [
     description: "1898–1945 · Perú, Bolivia, Colombia y Paraguay",
     region: "Perú, Bolivia, Colombia y Paraguay",
     category: "historia",
-    relatedTexts: ["Anarquismo y sindicalismo en el Perú (1904-1929)","El anarcosindicalismo en el Perú","El anarcosindicalismo en el sur andino peruano: Arequipa, Mollendo, Cusco, Puno","La choledad antiestatal. El anarcosindicalismo en el movimiento obrero boliviano (1912-1965)","Cocinando la revolución en la ciudad de La Paz (1927-1946)","Los orígenes del anarquismo en Colombia y su relación con el liberalismo","Pasado y presente del anarquismo y del anarcosindicalismo en Colombia","La comuna de Encarnación"]
+    relatedTexts: ["Anarquismo y sindicalismo en el Perú (1904-1929)", "El anarcosindicalismo en el Perú", "El anarcosindicalismo en el sur andino peruano: Arequipa, Mollendo, Cusco, Puno", "La choledad antiestatal. El anarcosindicalismo en el movimiento obrero boliviano (1912-1965)", "Cocinando la revolución en la ciudad de La Paz (1927-1946)", "Los orígenes del anarquismo en Colombia y su relación con el liberalismo", "Pasado y presente del anarquismo y del anarcosindicalismo en Colombia", "Gloria a los vencidos. La construcción del martirologio anarquista peruano (1904-1925)", "El movimiento obrero anarquista en el Perú (1890-1930)", "El anarcosindicalismo en el sur andino peruano", "Sindicalismo y milenarismo en la región andina del Perú, 1920-1931", "El anarquismo en el Perú y el problema indígena", "La cuestión del pan. El anarcosindicalismo en el Perú", "La utopía libertaria en el Perú", "Anarquismo y anarcosindicalismo en el Perú. Testimonios", "Los artesanos libertarios y la ética del trabajo"]
   },
   {
     year: 1890,
@@ -104,7 +104,7 @@ export const timelineEvents = [
     description: "1890–1940 · Brasil, Cuba y América Latina",
     region: "Brasil, Cuba y América Latina",
     category: "historia",
-    relatedTexts: ["El movimiento obrero brasileño","El anarquismo en Cuba","Libertarias en América del Sur. De la A a la Z","Contribución a una historia del anarquismo en América Latina","Repensar el anarquismo en América Latina: historias, epistemes, luchas y otras formas de organización","Vanguardias silenciadas: tejidos de la memoria","La educación libertaria en la Argentina y en México (1861-1945)"]
+    relatedTexts: ["El movimiento obrero brasileño", "El anarquismo en Cuba", "Libertarias en América del Sur. De la A a la Z", "Contribución a una historia del anarquismo en América Latina", "Repensar el anarquismo en América Latina: historias, epistemes, luchas y otras formas de organización", "Vanguardias silenciadas: tejidos de la memoria", "La educación libertaria en la Argentina y en México (1861-1945)", "Los rebeldes de la bandera roja (Textos del periódico anarquista ¡Tierra!, de La Habana, sobre la Revolución mexicana)", "Cuba, el socialismo y la libertad. Una visión desde el anarquismo", "La leyenda negra de los anarquistas cubanos", "Los anarquistas cubanos a fines del siglo XIX. Los libertarios y la guerra del 95", "Los anarquistas y la Revolución Cubana: entre el júbilo y el desencanto"]
   },
   {
     year: 1900,
@@ -116,7 +116,7 @@ export const timelineEvents = [
     description: "1900–1925 · México y Sur de EE.UU.",
     region: "México y Sur de EE.UU.",
     category: "historia",
-    relatedTexts: ["Historia de la Revolucion Mexicana","Revolución en Baja California, México (1911)","Baja California heroica","El correo de la revolucion magonista. Espias y revoltosos","El papel revolucionario de la prensa en el movimiento obrero anarquista mexicano"]
+    relatedTexts: ["Historia de la Revolucion Mexicana", "Revolución en Baja California, México (1911)", "Baja California heroica", "El correo de la revolucion magonista. Espias y revoltosos", "El papel revolucionario de la prensa en el movimiento obrero anarquista mexicano", "El anarquismo en México", "El anarquismo en la Revolución mexicana", "La revolución empieza por la educación. México y La Escuela Moderna de Francisco Ferrer i Guardia", "El anarquismo y la clase obrera mexicana (1860-1931)", "Los anarquistas mexicanos, 1860-1900", "Los orígenes anarquistas y los valores políticos de la clase trabajadora mexicana y los movimientos campesinos", "El Magonismo. Historia de una pasión libertaria 1900-1922", "El anarquismo europeo y sus primeras influencias en México después de la Comuna de París. 1871-1881"]
   },
   {
     year: 1901,
@@ -128,7 +128,7 @@ export const timelineEvents = [
     description: "1901–1909 · España (Cataluña)",
     region: "España (Cataluña)",
     category: "historia",
-    relatedTexts: ["La Revolución de Barcelona (Semana Trágica, 1909)","La Revolución de Cataluña","Pedagogía libertaria española a inicios del siglo XX","Las culturas de la libertad en el anarquismo ibérico"]
+    relatedTexts: ["La Revolución de Barcelona (Semana Trágica, 1909)", "La Revolución de Cataluña", "Pedagogía libertaria española a inicios del siglo XX", "Las culturas de la libertad en el anarquismo ibérico", "Entre la revolución y la tragedia. Fotografías, documentos y miradas sobre la Semana Trágica"]
   },
   {
     year: 1910,
@@ -140,7 +140,7 @@ export const timelineEvents = [
     description: "1910–1911 · Japón",
     region: "Japón",
     category: "historia",
-    relatedTexts: ["Contra el Dios Emperador. Juicios de la traición anarquista en Japón","Kotoku, Osugi, Yamaga: tres anarquistas japoneses","Museihushugi: el anarquismo japonés","Reflexiones en el camino hacia la horca","Los Mártires de Tokio y la Sociedad de la Guillotina","En contra del Dios-Emperador"]
+    relatedTexts: ["Contra el Dios Emperador. Juicios de la traición anarquista en Japón", "Kotoku, Osugi, Yamaga: tres anarquistas japoneses", "Museihushugi: el anarquismo japonés", "Reflexiones en el camino hacia la horca", "Los Mártires de Tokio y la Sociedad de la Guillotina", "El anarquismo en Japón", "El anarco-sindicalismo en Japón desde 1911 hasta 1934"]
   },
   {
     year: 1917,
@@ -152,7 +152,7 @@ export const timelineEvents = [
     description: "1917–1921 · Rusia y Ucrania",
     region: "Rusia y Ucrania",
     category: "historia",
-    relatedTexts: ["La revolución desconocida","Los anarquistas en la Revolución Rusa: la Makhnovtchina (Ucrania 1919)","La Revolución Rusa en Ucrania (1918-1921)","La Makhnovschina. Un movimiento libertario bajo fuego en Ucrania (1918-1921)","Kronstadt 1921","La comuna de Kronstadt","Los anarquistas y los soviets","Chernoe Znamia (anarquistas rusos, 1900s)","La Banda de Chernopeev"]
+    relatedTexts: ["La revolución desconocida", "Los anarquistas en la Revolución Rusa: la Makhnovtchina (Ucrania 1919)", "La Revolución Rusa en Ucrania (1918-1921)", "La Makhnovschina. Un movimiento libertario bajo fuego en Ucrania (1918-1921)", "Kronstadt 1921", "La comuna de Kronstadt", "Los anarquistas y los soviets", "Historia del Movimiento Makhnovista (1918-1921)", "El Gran Octubre en Ucrania", "Los anarquistas rusos", "El mito bolchevique", "La verdad sobre Kronstadt", "Escritos V (Revolución Rusa)", "Mirando hacia atrás sin ira (una mirada libertaria al proceso soviético)", "Apreciaciones sobre la revolución rusa", "Mi decepción con Rusia", "Recuerdos de Kronstadt", "El anarquismo y la revolución rusa", "En recuerdo del levantamiento de Kronstadt", "Los anarcosindicalistas en la revolución rusa", "A cien años de la revolución rusa", "Informe de mi estancia en la URSS (Documento para la historia obrera)", "Setenta días en Rusia. Lo que yo vi", "Los anarquistas rusos en el movimiento obrero a principios del siglo XX"]
   },
   {
     year: 1917,
@@ -164,7 +164,7 @@ export const timelineEvents = [
     description: "1917–1931 · España",
     region: "España",
     category: "historia",
-    relatedTexts: ["Los anarquistas españoles. Los años heroicos (1868-1936)","Historia del movimiento obrero espanol I","El movimiento obrero en Espana, siglos XIX y XX","Identidad politica y cambio de paradigma estetico en el anarquismo barcelones","Lideres obreros y vanguardias culturales. La presencia del obrerismo en la Barcelona de la primera posguerra europea","Tiempos de plomo. Grupos de Accin y Defensa Confederal","La búsqueda de la unidad anarquista: la FAI antes de la II República","El anarquismo individualista en España (1923-1938)","La huelga de alquileres y el comite de defensa economica","La revuelta de las mujeres","Puntos de fuga en la cultura obrera","Expediente Picasso","Los comités de defensa confederales"]
+    relatedTexts: ["Los anarquistas españoles. Los años heroicos (1868-1936)", "Historia del movimiento obrero español I", "El movimiento obrero en Espana, siglos XIX y XX", "Identidad politica y cambio de paradigma estetico en el anarquismo barcelones", "Lideres obreros y vanguardias culturales. La presencia del obrerismo en la Barcelona de la primera posguerra europea", "Tiempos de plomo. Grupos de Acción y Defensa Confederal", "La búsqueda de la unidad anarquista: la FAI antes de la II República", "El anarquismo individualista en España (1923-1938)", "La huelga de alquileres y el comité de defensa económica", "La revuelta de las mujeres", "Puntos de fuga en la cultura obrera", "Los comités de defensa confederales", "El anarquismo en el Madrid de la Segunda República. Perfil social, estrategias y tácticas", "El anarquismo madrileño en el contexto político de la Segunda República"]
   },
   {
     year: 1935,
@@ -176,19 +176,19 @@ export const timelineEvents = [
     description: "1930 · Global / Internacional (Europa y América)",
     region: "Global / Internacional",
     category: "historia",
-    relatedTexts: ["La anarquía a través de los tiempos","El anarquismo: historia de las ideas y movimientos libertarios","Bajo la bandera negra","Historia del movimiento obrero revolucionario","Cronología del anarquismo"]
+    relatedTexts: ["La anarquía a través de los tiempos", "El anarquismo: historia de las ideas y movimientos libertarios", "Bajo la bandera negra", "Historia del movimiento obrero revolucionario", "Cronología del anarquismo", "El nacimiento del anarquismo", "El anarcosindicalismo en la sociedad del bienestar", "Un punto de inflexión en la historia del anarquismo, el congreso revolucionario de Londres de 1881", "El mapa del despertar anarquista en América Latina", "Apogeo y decadencia del primero de mayo", "Hechos y figuras del anarquismo hispanoamericano", "La idea de la libertad en el Renacimiento", "Mujeres de las Revoluciones", "Hacia una historiografía anarquista", "Del socialismo utópico al anarquismo", "El anarquista. La construcción social del enemigo de la sociedad, al hilo del siglo XIX", "Anarquismo y Anarcosindicalismo en América Latina", "El nacimiento del terrorismo en Occidente. Anarquía, nihilismo y violencia revolucionaria", "Los anarquistas", "Anarquismo en América Latina. Consideraciones en torno a su historia, rasgos y perspectivas", "El anarquismo, de Proudhon a Cohn-Bendit", "Anarquistas de ultramar. Anarquismo, indigenismo, descolonización", "Las otras Europas", "A 150 años... Reflexiones alrededor de la historia del anarquismo", "Anarquistas en América Latina", "El Congreso Revolucionario Internacional de París", "Una revolución viva. El anarquismo en el movimiento de los kibutz", "Ante la guerra. El movimiento anarquista y la matanza mundial de 1914-1918", "Los anarquistas españoles y el poder (1868-1969)", "La historiografía reciente sobre la guerra civil. El rigor histórico contra el rigor mortis"]
   },
   {
     year: 1919,
     decade: "1920s",
     type: "con_texto",
-    title: "Resistencia Libertaria y Guerrilla en Europa del Este: Polonia y Bulgaria",
+    title: "Resistencia Libertaria y Guerrilla en los Balcanes y Europa del Este: Polonia y Bulgaria",
     quote: "Este fue por encima de todo un movimiento social, pero uno que tenía una claridad ideológica suficiente para resistir el encanto del bolchevismo, uno que estaba bien organizado, y que era capaz de defenderse por la fuerza de las armas.",
     author: "Michael Schmidt",
-    description: "1919–1948 · Europa del Este (Bulgaria y Polonia)",
+    description: "1919–1948 · Balcanes y Europa del Este (Bulgaria, Polonia y Macedonia)",
     region: "Europa del Este",
     category: "historia",
-    relatedTexts: ["El anarquismo búlgaro en armas","Historia del anarquismo polaco"]
+    relatedTexts: ["El anarquismo búlgaro en armas", "Historia del anarquismo polaco", "Anarquistas de Bialystok 1903-1908", "La Banda de Chernopeev"]
   },
   {
     year: 1890,
@@ -200,19 +200,43 @@ export const timelineEvents = [
     description: "1890–1950 · Internacional (Corea, China, Filipinas, África)",
     region: "Internacional (Corea, China, Filipinas, África)",
     category: "historia",
-    relatedTexts: ["Revolución anarquista en Corea: la Comuna de Shinmin (1929-1932)","El anarquismo en China","Anarquismos no occidentales","Anarquismo africano","El anarquismo en el espejo judío"]
+    relatedTexts: ["Revolución anarquista en Corea: la Comuna de Shinmin (1929-1932)", "Anarquismos no occidentales", "Anarquismo africano", "El anarquismo en el espejo judío", "Bajo tres banderas. Anarquismo e imaginación anticolonial", "Una realización colectivista en Palestina"]
+  },
+  {
+    year: 1911,
+    decade: "1910s",
+    type: "con_texto",
+    title: "El Anarquismo en China: de la Escuela del Sol a la resistencia",
+    quote: "El anarquismo penetró en China en los albores del siglo XX, entrelazado con el antimanchurismo y la búsqueda de una modernidad que no pasara por el Estado ni por el capital.",
+    author: "Varios Autores (Albert Meltzer, Stuart Christie, Ba Jin)",
+    description: "1905–1949 · China",
+    region: "China",
+    category: "historia",
+    relatedTexts: ["El anarquismo en China", "Revolución anarquista en Manchuria (1929-1932)", "Historia del movimiento anarquista en China (2)", "El movimiento anarquista en China"]
+  },
+  {
+    year: 1922,
+    decade: "1920s",
+    type: "con_texto",
+    title: "El Anarquismo y el Fascismo en Italia",
+    quote: "Contra la reacción negra, los anarquistas italianos levantaron la insurgencia primero y la resistencia armada después: años rojos y años negros.",
+    author: "Colectivo",
+    description: "1920–1945 · Italia",
+    region: "Italia",
+    category: "historia",
+    relatedTexts: ["Años rojos, años negros. La resistencia anarquista contra el fascismo en Italia", "No podréis pararnos. La lucha anarquista en Italia", "Camisas Negras", "El fascismo, definición e Historia", "Sobre el fascismo al poder (1922, 1923)"]
   },
   {
     year: 1936,
     decade: "1930s",
     type: "con_texto",
-    title: "La Revolución Española y la Guerra Civil",
+    title: "1936 – Revolución Social y Guerra Civil en España",
     quote: "Cataluña, por sus condiciones especiales, y por la participación que en los hechos habían tenido los anarquistas, permite estudiar los acontecimientos revolucionarios constructivos mejor que otra región. El movimiento popular había tomado allí carácter de revolución social.",
-    author: "José Peirats",
+    author: "José Peirats y Diversos autores",
     description: "1936–1939 · España",
     region: "España",
     category: "historia",
-    relatedTexts: ["Los anarquistas en la crisis política española (1869-1939)","Homenaje a Cataluña","Colectividades Libertarias","Las colectividades libertarias en España (1936-1938)","La experiencia autogestionaria durante la Guerra Civil española","Barricadas en Barcelona","Por que perdimos la guerra (1940)","Milicias anarquistas y anarcosindicalistas en la guerra civil espaola","Un incontrolado de la Columna de Hierro","Francisco Carreno y los arduos caminos de la anarquia","1936. De la revolución española","Catalogo de decisiones y fragilidades","Anarcosindicalismo y revolución en España (1930-1937)","Los Amigos de Durruti","El error político-militar de la República","Durruti y Ascaso. La CNT y la revolución de julio","FAI","El anarquismo y la revolución en España","Por qué perdimos la guerra"]
+    relatedTexts: ["Los anarquistas en la crisis política española (1869-1939)", "Homenaje a Cataluña", "La CNT en la revolución española (Vol. I)", "Las colectividades libertarias en España (1936-1938)", "La experiencia autogestionaria durante la Guerra Civil española", "Barricadas en Barcelona", "Milicias anarquistas y anarcosindicalistas en la guerra civil española", "Un incontrolado de la Columna de Hierro", "Francisco Carreño y los arduos caminos de la anarquía", "1936. De la revolución española", "Catálogo de decisiones y fragilidades", "Anarcosindicalismo y revolución en España (1930-1937)", "Los Amigos de Durruti", "Una revolución a medias. Los orígenes de los hechos de mayo y la crisis del anarquismo", "El error político-militar de la República", "Durruti y Ascaso. La CNT y la revolución de julio", "19 de julio de 1936. España", "El anarquismo y la revolución en España", "Por qué perdimos la guerra", "La sociedad rural anarquista durante la guerra civil española", "Trabajan para la eternidad. Colectividades de trabajo y ayuda mutua durante la Guerra Civil en Aragón", "Anarquismo y lucha antialcohólica en la guerra civil española", "Un breve recorrido sobre el anarquismo en la guerra civil", "El comunismo libertario en la práctica. La autogestión en España (1936-1939)", "La revolución de los comités. Hambre y violencia en la Barcelona revolucionaria. De junio a diciembre de 1936", "A través de la metralla. Escenas vividas en los frentes y en la retaguardia", "Colectividades libertarias en Castilla", "Colectividades libertarias en España (2)", "Cuando Fígols proclamó el Comunismo Libertario", "Grandezas y miserias de la revolución social española", "Ministros anarquistas. La CNT en el gobierno de la II República (1936-1939)", "El nazismo al desnudo. Su intervención y ayuda a los facciosos españoles puesta al descubierto por sus propios documentos", "La traición de Stalin. Cómo terminó la guerra de España", "Teníamos que perder", "El misterioso proceso del POUM", "Los Amigos de Durruti, los trotsquistas y los sucesos de Mayo", "Autogestión y anarcosindicalismo en la España revolucionaria (2)", "Sobre el intento de exterminio del anarcosindicalismo gaditano por los sediciosos de julio de 1936", "Periódicos clandestinos anarquistas en 1937-1938. Las voces de la base militante", "Guerra Civil", "En pie contra el fascismo. La prensa anarquista ante el golpe del 18 de julio de 1936", "La resistencia anarquista en el Albaicín (julio de 1936). Los inicios de la Guerra Civil en Granada", "La gesta traicionada. Los anarquistas vascos y la Guerra Civil en Euskal Herriak (Julio 1936 - Junio 1937)", "Visión en llamas. Emma Goldman sobre la Revolución española", "Escritos II (Revolución Española)", "Los anarquistas internacionales en la Revolución española", "Fascismo y anarquismo en la España contemporánea", "La Commune de Paris y la Revolución Española. El anarquismo militante y la realidad española", "La revuelta permanente", "Entre los campesinos de Aragón. El comunismo libertario en las comarcas liberadas (1977) (2)", "Actividad política de la izquierda libertaria en la Comarca del Vallès Occidental durante la Guerra Civil", "El poder político anarcosindicalista en los ayuntamientos del Vallès occidental (1936-1939)", "Entre el pacto y la revolución. El movimiento libertario en la primavera de 1936", "La diversidad y el conflicto. Las disputas del bando republicano durante la guerra civil", "Papeles de plomo. Los voluntarios uruguayos en la guerra de España", "Desarrollo y debates en los grupos anarquistas de la FAI en el Madrid republicano", "El Internado Durruti"]
   },
   {
     year: 1936,
@@ -224,7 +248,7 @@ export const timelineEvents = [
     description: "1936–1939 · España",
     region: "España",
     category: "historia",
-    relatedTexts: ["Mujeres Libres. España 1936-1939","Mujeres Libres: emancipación femenina y revolución social","El anarcofeminismo en España: las propuestas de Mujeres Libres","Mujeres Libres (1936-1939). Una lectura feminista","Mujeres Libres","Discursos y experiencias femeninas en el anarquismo espanol. Mujeres Libres en la retaguardia oscense","La miliciana en la Guerra Civil: realidad e imagen"]
+    relatedTexts: ["Mujeres Libres. España 1936-1939", "Mujeres Libres: emancipación femenina y revolución social", "El anarcofeminismo en España: las propuestas de Mujeres Libres", "Mujeres Libres (1936-1939). Una lectura feminista", "Mujeres Libres", "Discursos y experiencias femeninas en el anarquismo español. Mujeres Libres en la retaguardia oscense", "La miliciana en la Guerra Civil: realidad e imagen", "La mujer en la lucha social y en la guerra civil de España"]
   },
   {
     year: 1939,
@@ -236,7 +260,7 @@ export const timelineEvents = [
     description: "1939–1975 · España, Francia e Italia",
     region: "España, Francia e Italia",
     category: "historia",
-    relatedTexts: ["La resistencia Libertaria contra el Franquismo. El D.I.","Los servicios secretos en Espaa. La represin contra el Movimiento Libertario espaol","El Internado Durruti","Años rojos, años negros. La resistencia anarquista contra el fascismo en Italia","Los libertarios y la Memoria histrica","Surrealismo y anarquismo","El anarquismo español y la acción revolucionaria (1961-1974)"]
+    relatedTexts: ["La resistencia Libertaria contra el Franquismo. El D.I.", "Los servicios secretos en España. La represión contra el Movimiento Libertario español", "Los libertarios y la Memoria histórica", "El anarquismo español y la acción revolucionaria (1961-1974)", "La resistencia anarquista a la Alemania nazi", "Kyklos Alpha. Historia del movimiento libertario español durante la dictadura", "La prensa anarquista y el mito franquista de la reconciliación nacional", "Mujeres Libres Barcelona, Mujeres Libertarias Madrid", "La CNT durante el franquismo", "La CNT y el Sindicato Vertical. La quimera de la libertad sindical con Franco", "La CNT y las alianzas sindicales durante la dictadura de Franco", "Insurgencia libertaria (Las Juventudes Libertarias en la lucha contra el franquismo)", "Cárceles en llamas", "El anarquismo contra el estado franquista. CNT 1939-1951", "Trayectoria de la CNT. Sindicalismo y anarquismo (1979) (2)", "Historia negra de una crisis libertaria", "Los anarcosindicalistas tarrasaenses en el exilio", "El sindicalismo y la política. Los Solidarios y Nosotros (1966) (2)", "Historia de un atentado aéreo contra el general Franco", "La lucha del movimiento libertario contra el franquismo", "El anarquismo y anarcosindicalismo en la España de la Transición", "Comandos Autónomos, un anticapitalismo iconoclasta", "En relación con el Caso Scala. Nueva ofensiva policial contra la CNT y el MLE", "Guerrilla anarquista leonesa", "Historia de diez años"]
   },
   {
     year: 1965,
@@ -248,7 +272,7 @@ export const timelineEvents = [
     description: "1965–1980 · Francia, Italia, Reino Unido y Países Bajos",
     region: "Francia, Italia, Reino Unido y Países Bajos",
     category: "historia",
-    relatedTexts: ["La rebelión de Mayo 68","Los situacionistas y la anarquia","El movimiento Provo","Días de sueño y de plomo","Nos estamos acercando: La historia de Angry Brigade","La Brigada de la Cólera","El retorno de la Columna Durruti","1968. El año sublime de la acracia","La revolución como juego. El movimiento Provo"]
+    relatedTexts: ["La rebelión de Mayo 68", "Los situacionistas y la anarquía", "El movimiento Provo", "Días de sueño y de plomo", "Nos estamos acercando: La historia de Angry Brigade", "La Brigada de la Cólera", "El retorno de la Columna Durruti", "1968. El año sublime de la acracia", "La revolución como juego. El movimiento Provo"]
   },
   {
     year: 1975,
@@ -260,7 +284,7 @@ export const timelineEvents = [
     description: "1975–2000 · Francia, Bélgica, Uruguay y España",
     region: "Francia, Bélgica, Uruguay y España",
     category: "historia",
-    relatedTexts: ["Dentro contra fuera, sobre la agitacion dentro y fuera de las carceles belgas","O Inimigo do Rei, el grito irreverente y osado de la anarquía","La Federación Anarquista Uruguaya","Masacre en Jacinto Vera","Okupa Madrid (1985-2011). Memoria, reflexion, debate y autogestion","El Gran Rescate"]
+    relatedTexts: ["Dentro contra fuera, sobre la agitacion dentro y fuera de las carceles belgas", "O Inimigo do Rei, el grito irreverente y osado de la anarquía", "La Federación Anarquista Uruguaya", "Masacre en Jacinto Vera", "Okupa Madrid (1985-2011). Memoria, reflexion, debate y autogestion", "La CNT ante el golpe del 23F"]
   },
   {
     year: 2000,
@@ -272,7 +296,7 @@ export const timelineEvents = [
     description: "2000–2010 · Francia y Grecia",
     region: "Francia y Grecia",
     category: "historia",
-    relatedTexts: ["A tres años de la revuelta griega","Reflexiones sobre el movimiento anarquista en Grecia y la solidaridad con los presos políticos","La revuelta de los Banlieusards","La cólera del suburbio"]
+    relatedTexts: ["A tres años de la revuelta griega", "Reflexiones sobre el movimiento anarquista en Grecia y la solidaridad con los presos políticos", "La revuelta de los Banlieusards", "La cólera del suburbio", "Maderos, cerdos asesinos. Crónica del diciembre griego"]
   },
   {
     year: 2011,
@@ -284,6 +308,43 @@ export const timelineEvents = [
     description: "2011–Presente · Siria (Rojava), Egipto y España",
     region: "Siria (Rojava), Egipto y España",
     category: "historia",
-    relatedTexts: ["El experimento del Kurdistán oeste (Kurdistán sirio)","El Anarquismo Descolonizado: una historia de las experiencias antiautoritarias en Egipto (1860-2016)","Hacia un estudio decolonial del anarquismo. Egipto y Túnez","Los anarquistas y la Revolución Cubana: entre el júbilo y el desencanto","Enrabiaos, apuntes sobre la spanishrevolution","La bala y la escuela"]
+    relatedTexts: ["El experimento del Kurdistán oeste (Kurdistán sirio)", "El Anarquismo Descolonizado: una historia de las experiencias antiautoritarias en Egipto (1860-2016)", "Hacia un estudio decolonial del anarquismo. Egipto y Túnez", "Enrabiaos, apuntes sobre la Spanish Revolution", "Aprender escuchando. Autonomía, educación y guerrilla en Chiapas y Kurdistán", "Fuego a la pólvora. Guerra y guerrilla en Irak", "Por sólo 20 centavos. La lucha contra el aumento del transporte en Brasil", "La revolución ignorada. Liberación de la mujer, democracia directa y pluralismo radical en Oriente Medio", "Revolución en Rojava. Liberación de la mujer y comunalismo entre la guerra y el embargo"]
+  },
+  {
+    year: 1874,
+    decade: "1870s",
+    type: "con_texto",
+    title: "Clandestinidad, Mano Negra y los orígenes del movimiento obrero andaluz",
+    quote: "La clandestinidad forjó la resiliencia del anarquismo español en Andalucía, pero también sembró los mitos que sus enemigos explotaron para perseguirlo.",
+    author: "Clara E. Lida",
+    description: "1873–1900 · Andalucía y España",
+    region: "España",
+    category: "historia",
+    relatedTexts: ["La Mano Negra. Anarquismo agrario en Andalucía", "Los discursos de la clandestinidad en el anarquismo del XIX", "Organización, cultura y prácticas políticas del anarquismo español en la clandestinidad, 1873-1881", "Para repensar la Mano Negra. El anarquismo español durante la clandestinidad", "Pluralidad de oficios e integración cultural. El anarquismo gaditano en tiempos de la Mano Negra", "Sobrevivir en secreto. Las conferencias comarcales y la reorganización anarquista clandestina (1874-1881)", "Del reparto agrario a la huelga anarquista de 1883", "Educación anarquista en la España del ochocientos", "Andalucía y el anarquismo (1868-1936)", "El anarquismo en el campo andaluz. Una interpretación", "Barbarie gubernamental en España", "Miguel Bakunin, La Internacional y la Alianza en España (1868-1873)", "Antología Documental del anarquismo español I. Organización y revolución. De la Primera Internacional al Proceso de Montjuïc (1868-1896)", "El proletariado militante"]
+  },
+  {
+    year: 1910,
+    decade: "1910s",
+    type: "con_texto",
+    title: "Anarquismo español en el primer tercio del siglo XX: sindicalismo, cultura y pensamiento",
+    quote: "Entre pistoletazos y sindicatos, el anarquismo español vivió su momento de máxima efervescencia: cultura, violencia y organización se entrelazaron en las ciudades industriales.",
+    author: "Diversos autores",
+    description: "1900–1931 · España",
+    region: "España",
+    category: "historia",
+    relatedTexts: ["El arraigo del anarquismo en Cataluña", "Historiografía reciente sobre el anarquismo y el sindicalismo en España (1870-1923)", "Propagandistas confederales entre el sindicato y el anarquismo. La construcción barcelonesa de la CNT en Cataluña, Aragón, País Valenciano y Baleares", "Diario de una ciudad libertaria. Zaragoza, 1871-1936", "Socialismo y anarquismo en Cataluña (1899-1911). Los orígenes de la CNT", "El auge anarcosindicalista. El congreso de Sants y los Sindicatos Únicos", "La calle como memoria y conflicto (Barcelona, 1914-1923)", "La ruptura de la ciudad obrera y popular. Espacio urbano, inmigración y anarquismo en la Barcelona de entreguerras (1914-1936)", "La lucha por la calle. La venta ambulante, la cultura de protesta y la represión en Barcelona (c. 1930-36)", "Una geografía imaginada. Ideología, espacio urbano y protesta en la creación del Barrio chino de Barcelona, c. 1835-1936", "De la cima al abismo. Las contradicciones entre el individualismo y el colectivismo en el anarquismo español", "Las mujeres anarquistas y la represión de fines del siglo XIX en Barcelona (1893-1900)", "La ideología económica de los anarquistas en Cataluña y el País Valenciano", "Propaganda por el hecho y propaganda por la represión. Anarquismo y violencia en España a fines del XIX (2)", "Racionalismo pedagógico y movimiento obrero en España. Ferrer Guardia y La Huelga General", "La insumisión voluntaria. El anarquismo individualista español durante la Dictadura y la Segunda República (1923-1938)", "De la unidad antifascista a la desunión libertaria. Los comités superiores del movimiento libertario contra los quijotes anarquistas en el marco del Frente Popular", "El pensamiento demográfico anarquista. Fecundidad y emigración a América Latina (1900-1914)", "Procreación consciente y discurso ambientalista. Anarquismo y neomalthusianismo en España e Italia, 1900-1936", "Los anarquistas españoles y la criminología de Cesare Lombroso (1890-1914)", "Del anarquismo al librepensamiento. Una propuesta de aproximación al proceso de apropiación del darwinismo en la Cataluña de fines del XIX", "Eugenesia y anarquismo en el primer neomalthusianismo libertario barcelonés, 1896-1915", "Evolucionismo y anarquismo. La incorporación del vocabulario en el anarquismo español, 1882-1914", "Hacer tabla rasa de la historia. La analogía entre herencia fisiológica y memoria en el anarquismo español (1870-1914)", "La economía moral de la naturaleza. Darwinismo y lucha por la existencia en el anarquismo español (1882-1914)", "Metáforas finiseculares del declive biológico. Degeneración y evolución en el anarquismo español (1872-1914)", "Impresiones sobre el socialismo en España", "El anarquismo en Burgos", "Algunas notas sobre el anarquismo en Extremadura. Desde sus Inicios hasta el establecimiento de la II República", "El anarquismo extremeño frente al poder. Estudio de un periódico libertario. El Amigo del Pueblo 1930-1933", "El arraigo territorial de la Idea. El caso de los anarquistas de Igualada", "Sindicalismo Libertario en Cataluña", "Por qué se constituyó el Partido Sindicalista", "Viva la naturaleza. Escritos libertarios contra la civilización, el progreso y la ciencia (1894-1930)", "El naturismo libertario en la Península Ibérica (1890-1939)", "El amor libre y las relaciones sentimentales en el anarquismo español (1930-1939)", "El anarquismo español ante el debate sanitario en España. Salud, enfermedad y medicina (1930-1939)", "El poder de la lectura como herramienta revolucionaria. El caso del anarquismo español de los años treinta", "La visión ontológica de la mujer y el hombre en el anarquismo español de los años treinta. Identidad y género a debate", "La vivencia del ideal anarquista en la España de los años treinta", "Sexualidad, desnudismo y moralidad en el anarquismo español de los años treinta", "Las mujeres en el anarquismo español (1869-1939)", "La cuerda de deportados", "Impresiones de un viaje por Galicia", "La prensa anarquista y anarcosindicalista desde la I Internacional hasta el final de la Guerra Civil", "Prólogo a Anselmo Lorenzo El Proletariado Militante", "Historia de la FAI", "Historia del anarcosindicalismo español (1968) (2)", "¡Nosotros los anarquistas! Un estudio de la Federación Anarquista Ibérica (FAI)", "Los incontrolados de la FAI (2022) (2)", "La F. A. I., Macià, la revolución y la C. N. T", "Federaciones Regionales Anarquistas en España (1912-1919)", "El anarquismo organizado en los orígenes de la CNT. Tierra y Libertad 1910-1919", "El movimiento obrero en Alcalá de Henares (1868-1939)", "Los obreros zapateros de Barcelona. Una historia sindical (Vol. I)", "Cultura sindical y movimiento obrero en Andalucía", "Dos décadas de publicaciones sobre el anarquismo español. 1990-2011", "L'anarquisme, fet diferencial català. Influència i llegat de l'anarquisme en la història i la societat catalana contemporània", "La historiografía anarquista en Cataluña y el País Valenciano. Una larga tradición entre el desconocimiento y la vitalidad", "Otra vuelta de tuerca. Las interpretaciones del arraigo del anarquismo en España. Sigue la polémica", "Una gran pregunta y varias respuestas. El anarquismo español. Desde la política a la historiografía", "El Movimiento Libertario Español. Pasado, presente y futuro", "Conferencia. El anarquismo en Andalucía hasta hoy", "Guerra a la guerra. El movimiento obrero frente la guerra (1898-1918)", "Los hijos del trabajo. El sindicalismo español antes de la Guerra Civil"]
+  },
+
+  {
+    year: 2000,
+    decade: "2000s",
+    type: "con_texto",
+    title: "Movimientos sociales y sindicalismo en la España contemporánea",
+    quote: "El sindicalismo libertario contemporáneo se reinventa entre la precariedad, la okupación y la lucha callejera.",
+    author: "Diversos autores",
+    description: "1990–Presente · España",
+    region: "España",
+    category: "historia",
+    relatedTexts: ["Movilizando a los precarios. El anarcosindicalismo español contemporáneo ante el capitalismo flexible", "De la tierra a los supermercados. El SAT como ejemplo de particularismo militante y de renovación sindical", "Narrativas de la reconversión. Historias de vida, memoria social y acción colectiva en el astillero de Puerto Real", "Iluminando el futuro. Experiencias de creatividad libertaria en la España de la crisis", "La epidemia de rabia en España (1996-2007)"]
   }
 ];

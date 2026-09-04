@@ -76,7 +76,7 @@ describe('WorldMapView edge cases', () => {
     const dataConRegionSinISO = {
       ...regionData,
       'Tierra de Nadie': {
-        books: [{ title: 'Obra X', author: 'Autor', year: 1900, category: 'historia' }]
+        books: [{ title: 'Obra X', author: 'Autor', pubYear: 1900, category: 'historia' }]
       }
     };
     const html = renderToStaticMarkup(
@@ -98,7 +98,7 @@ describe('WorldMapView edge cases', () => {
     );
     // Sin libros no hay textos históricos → la región NO genera tarjeta ni se pinta.
     expect(html).not.toContain('Atlántida');
-    expect(html).not.toContain('0 textos históricos');
+    expect(html).not.toMatch(/(^|[^0-9])0 textos históricos/);
   });
 });
 
@@ -114,8 +114,8 @@ describe('WorldMapView — países con 0 textos históricos no se marcan en el m
       Finlandia: {
         iso: 'fi',
         books: [
-          { title: 'Idea A', author: 'Autor', year: 1900, category: 'teoria' },
-          { title: 'Idea B', author: 'Autor', year: 1910, category: 'teoria' }
+          { title: 'Idea A', author: 'Autor', pubYear: 1900, category: 'teoria' },
+          { title: 'Idea B', author: 'Autor', pubYear: 1910, category: 'teoria' }
         ]
       }
     };
@@ -128,7 +128,7 @@ describe('WorldMapView — países con 0 textos históricos no se marcan en el m
     expect(fiMatch[1]).not.toMatch(/rgb\(/);
     // Regla de negocio: con 0 textos históricos, la región NO genera tarjeta
     // en "O navega por región" (solo aparecen regiones con ≥1 histórico).
-    expect(html).not.toContain('0 textos históricos');
+    expect(html).not.toMatch(/(^|[^0-9])0 textos históricos/);
   });
 
   it('España (con textos históricos) sí recibe color de gradiente en el mapa', () => {

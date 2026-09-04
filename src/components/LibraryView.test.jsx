@@ -6,13 +6,13 @@ import LibraryView from './LibraryView';
 const regionData = {
   España: {
     books: [
-      { title: 'La Conquista del Pan', author: 'Kropotkin', year: 1892, category: 'teoria', rating: 4.8, filename: 'anarquismo/a.pdf' },
-      { title: 'Columna Durruti', author: 'Colectivo', year: 1936, category: 'acratas', rating: 4.9, filename: 'anarquismo/b.pdf' }
+      { title: 'La Conquista del Pan', author: 'Kropotkin', pubYear: 1892, category: 'teoria', rating: 4.8, filename: 'anarquismo/a.pdf' },
+      { title: 'Columna Durruti', author: 'Colectivo', pubYear: 1936, category: 'acratas', rating: 4.9, filename: 'anarquismo/b.pdf' }
     ]
   },
   Francia: {
     books: [
-      { title: '¿Qué es la Propiedad?', author: 'Proudhon', year: 1840, category: 'teoria', rating: 4.9, filename: 'anarquismo/c.pdf' }
+      { title: '¿Qué es la Propiedad?', author: 'Proudhon', pubYear: 1840, category: 'teoria', rating: 4.9, filename: 'anarquismo/c.pdf' }
     ]
   }
 };
@@ -25,7 +25,7 @@ describe('LibraryView', () => {
       <LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />
     );
     expect(html).toContain('Biblioteca');
-    expect(html).toContain('3 de 3 obras');
+    expect(html).toContain('3 obras del archivo');
   });
 
   it('renderiza un botón Leer por cada obra con archivo', () => {
@@ -47,52 +47,21 @@ describe('LibraryView', () => {
     expect(html).toContain('Leer esta obra');
   });
 
-  it('muestra la región y categoría de cada obra', () => {
+  it('muestra la categoría de cada obra (región oculta, solo para mapa)', () => {
     const html = renderToStaticMarkup(
       <LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />
     );
-    expect(html).toContain('España');
-    expect(html).toContain('Francia');
     expect(html).toContain('teoria');
     expect(html).toContain('acratas');
   });
 
-  it('incluye el control de búsqueda y filtros', () => {
+  it('no incluye filtros (solo grilla y paginación)', () => {
     const html = renderToStaticMarkup(
       <LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />
     );
-    expect(html).toContain('Buscar por título o autor');
-    expect(html).toContain('Todas las categorías');
-    expect(html).toContain('Todas las décadas');
-  });
-
-  it('incluye los controles de búsqueda avanzada (tipo y favoritos)', () => {
-    const html = renderToStaticMarkup(
-      <LibraryView darkMode={false} regionData={regionData} favorites={['La Conquista del Pan']} onToggleFavorite={noop} />
-    );
-    expect(html).toContain('Todos los tipos');
-    expect(html).toContain('Solo históricos');
-    expect(html).toContain('Solo ideas');
-    expect(html).toContain('Todas las obras');
-    expect(html).toContain('Solo favoritas');
-    expect(html).toContain('Busca y filtra por categoría, década, tipo o favoritos.');
-  });
-
-  it('incluye el botón para agrupar por autor', () => {
-    const html = renderToStaticMarkup(
-      <LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />
-    );
-    expect(html).toContain('Agrupar por autor');
-    expect(html).toContain('aria-pressed="false"');
-  });
-
-  it('incluye el botón para agrupar por región', () => {
-    const html = renderToStaticMarkup(
-      <LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />
-    );
-    expect(html).toContain('Agrupar por región');
-    // El botón de agrupación por región también nace desactivado.
-    expect((html.match(/aria-pressed="false"/g) || []).length).toBeGreaterThanOrEqual(2);
+    expect(html).not.toContain('Buscar por título o autor');
+    expect(html).not.toContain('Todas las categorías');
+    expect(html).toContain('3 obras del archivo');
   });
 });
 
@@ -102,9 +71,9 @@ describe('LibraryView edge cases', () => {
   const regionDataEdge = {
     España: {
       books: [
-        { title: 'Obra completa', author: 'Autor A', year: 1892, category: 'teoria', rating: 4.8, summary: 'Resumen de la obra', filename: 'anarquismo/a.pdf' },
+        { title: 'Obra completa', author: 'Autor A', pubYear: 1892, category: 'teoria', rating: 4.8, summary: 'Resumen de la obra', filename: 'anarquismo/a.pdf' },
         { title: 'Obra sin año ni rating', author: 'Autor B', category: 'acratas', filename: 'anarquismo/b.pdf' },
-        { title: 'Obra sin archivo', author: 'Autor C', year: 1900, category: 'historia', rating: 4.0 }
+        { title: 'Obra sin archivo', author: 'Autor C', pubYear: 1900, category: 'historia', rating: 4.0 }
       ]
     }
   };
@@ -114,10 +83,10 @@ describe('LibraryView edge cases', () => {
       <LibraryView darkMode regionData={regionDataEdge} favorites={[]} onToggleFavorite={noop} />
     );
     expect(html).toContain('text-red-400');
-    expect(html).toContain('3 de 3 obras');
+    expect(html).toContain('3 obras del archivo');
   });
 
-  it('muestra guión cuando falta el año y no muestra rating ni resumen si no existen', () => {
+  it('no muestra año/rating y solo categoría cuando faltan datos', () => {
     const sinDatos = {
       España: {
         books: [{ title: 'Obra sin año ni rating', author: 'Autor B', category: 'acratas', filename: 'anarquismo/b.pdf' }]
@@ -127,7 +96,7 @@ describe('LibraryView edge cases', () => {
       <LibraryView darkMode={false} regionData={sinDatos} favorites={[]} onToggleFavorite={noop} />
     );
     expect(html).toContain('Obra sin año ni rating');
-    expect(html).toContain('—');
+    expect(html).not.toContain('—');
     expect(html).not.toContain('Resumen de la obra');
   });
 
@@ -148,7 +117,7 @@ describe('LibraryView edge cases', () => {
     expect(html).toContain('fill-red-500 text-red-500');
   });
 
-  it('precarga filtros desde initialFilters (cross-links de Teorías/Rutas/Glosario)', () => {
+  it('ignora initialFilters (filtros eliminados, muestra catálogo completo)', () => {
     const html = renderToStaticMarkup(
       <LibraryView
         darkMode={false}
@@ -158,17 +127,11 @@ describe('LibraryView edge cases', () => {
         initialFilters={{ searchTerm: 'Propiedad' }}
       />
     );
-    // El buscador nace con el término precargado y el grid filtrado.
-    expect(html).toContain('value="Propiedad"');
-    expect(html).toContain('1 de 3 obras');
+    expect(html).toContain('3 obras del archivo');
     expect(html).toContain('¿Qué es la Propiedad?');
-    // El widget "Obra del día" es global, pero el grid solo contiene la obra filtrada
-    const gridStart = html.indexOf('grid grid-cols-1');
-    const gridHtml = gridStart >= 0 ? html.slice(gridStart) : html;
-    expect(gridHtml).toContain('¿Qué es la Propiedad?');
   });
 
-  it('precarga el tipo de obra (histórico/ideas) desde initialFilters', () => {
+  it('ignora el tipo de obra desde initialFilters (filtros eliminados)', () => {
     const html = renderToStaticMarkup(
       <LibraryView
         darkMode={false}
@@ -178,20 +141,17 @@ describe('LibraryView edge cases', () => {
         initialFilters={{ type: 'historical' }}
       />
     );
-    // regionDataEdge: 1 obra de historia (Obra sin archivo), 2 de ideas.
-    expect(html).toContain('1 de 3 obras');
-    // El widget "Obra del día" es global e independiente de filtros: se aserta
-    // solo sobre el grid de tarjetas (a partir del marcador de grid).
+    expect(html).toContain('3 obras del archivo');
     const gridHtml = html.slice(html.indexOf('grid grid-cols-1'));
     expect(gridHtml).toContain('Obra sin archivo');
-    expect(gridHtml).not.toContain('Obra completa');
+    expect(gridHtml).toContain('Obra completa');
   });
 
   it('sin initialFilters muestra el catálogo completo', () => {
     const html = renderToStaticMarkup(
       <LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />
     );
-    expect(html).toContain('3 de 3 obras');
+    expect(html).toContain('3 obras del archivo');
   });
 });
 
@@ -201,8 +161,8 @@ describe('LibraryView referencias cruzadas (texto → evento)', () => {
   const regionDataHist = {
     España: {
       books: [
-        { title: 'Historia 1936', author: 'Autor A', year: 1936, category: 'historia', filename: 'anarquismo/a.pdf' },
-        { title: 'Teoría 1890', author: 'Autor B', year: 1890, category: 'teoria', filename: 'anarquismo/b.pdf' }
+        { title: 'Historia 1936', author: 'Autor A', pubYear: 1936, category: 'historia', filename: 'anarquismo/a.pdf' },
+        { title: 'Teoría 1890', author: 'Autor B', pubYear: 1890, category: 'teoria', filename: 'anarquismo/b.pdf' }
       ]
     }
   };

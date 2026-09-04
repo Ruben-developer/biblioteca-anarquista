@@ -90,8 +90,10 @@ describe('TheoriesView', () => {
     render(<TheoriesView darkMode={false} regionData={regionData} />);
     fireEvent.click(screen.getByText('Anarcomunismo'));
     expect(screen.getByText('Comunismo libertario')).toBeTruthy();
-    expect(screen.getByText('Piotr Kropotkin')).toBeTruthy();
-    expect(screen.getByText('La Conquista del Pan')).toBeTruthy();
+    // "Piotr Kropotkin" puede aparecer en varias secciones de la tarjeta abierta
+    // (autores relacionados y/o obras), por lo que usamos getAllByText.
+    expect(screen.getAllByText('Piotr Kropotkin').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('La Conquista del Pan').length).toBeGreaterThanOrEqual(1);
   });
 
   it('llama onOpenLibrary con el título al pulsar "En el catálogo" de una obra', async () => {

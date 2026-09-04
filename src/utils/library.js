@@ -31,7 +31,7 @@ const matchesFilter = (book, { term, category, region, decade, author, availabil
   if (term && !`${book.title} ${book.author}`.toLowerCase().includes(term)) return false
   if (category !== 'all' && book.category !== category) return false
   if (region !== 'all' && book.region !== region) return false
-  if (decade !== 'all' && getDecadeFromYear(book.year) !== decade) return false
+  if (decade !== 'all' && getDecadeFromYear(book.pubYear) !== decade) return false
   if (author !== 'all' && String(book.author || '').trim().toLowerCase() !== String(author).trim().toLowerCase()) return false
   if (availability === 'withFile' && !book.filename) return false
   if (availability === 'withoutFile' && book.filename) return false
@@ -56,7 +56,7 @@ export const sortBooks = (books, sort = 'rating') => {
     return sorted.sort((a, b) => (b.rating || 0) - (a.rating || 0));
   }
   if (sort === 'year') {
-    return sorted.sort((a, b) => (a.year || 0) - (b.year || 0));
+    return sorted.sort((a, b) => (a.pubYear || 0) - (b.pubYear || 0));
   }
   if (sort === 'title') {
     return sorted.sort((a, b) => (a.title || '').localeCompare(b.title || '', 'es'));
@@ -90,7 +90,7 @@ export const LIFE_CATEGORIES = ['acratas'];
 export const getLifeBooks = (regionData) =>
   getAllBooks(regionData)
     .filter((b) => LIFE_CATEGORIES.includes(b.category))
-    .sort((a, b) => (a.year || 0) - (b.year || 0) || String(a.title).localeCompare(String(b.title), 'es'));
+    .sort((a, b) => (a.pubYear || 0) - (b.pubYear || 0) || String(a.title).localeCompare(String(b.title), 'es'));
 
 // Personajes de "Acratas": agrupa los textos de categoría 'acratas' por su
 // sujeto (campo `subject` de cada libro; si falta, el título). Cada persona
@@ -108,7 +108,7 @@ export const getAcratasPersons = (regionData) => {
     .map(({ subject, books: sb }) => ({
       subject,
       books: sb.sort(
-        (a, b) => (a.year || 0) - (b.year || 0) || String(a.title).localeCompare(String(b.title), 'es')
+        (a, b) => (a.pubYear || 0) - (b.pubYear || 0) || String(a.title).localeCompare(String(b.title), 'es')
       ),
       bookCount: sb.length
     }))
@@ -139,7 +139,7 @@ export const getEventRelatedTexts = (regionData, event) => {
   )
   return allBooks
     .filter((b) => wanted.has(String(b.title).trim().toLowerCase()))
-    .sort((a, b) => (b.year || 0) - (a.year || 0))
+    .sort((a, b) => (b.pubYear || 0) - (a.pubYear || 0))
 };
 
 // Eventos de la línea temporal que agrupan un libro (inversa de
@@ -184,9 +184,9 @@ export const getAllAuthors = (regionData) => {
       bookCount: authorBooks.length,
       regions: Array.from(new Set(authorBooks.map((b) => b.region))).sort((a, b) => a.localeCompare(b, 'es')),
       years: authorBooks.reduce((acc, b) => {
-        if (b.year) {
-          acc.min = Math.min(acc.min, b.year);
-          acc.max = Math.max(acc.max, b.year);
+        if (b.pubYear) {
+          acc.min = Math.min(acc.min, b.pubYear);
+          acc.max = Math.max(acc.max, b.pubYear);
         }
         return acc;
       }, { min: Infinity, max: 0 })
@@ -330,7 +330,7 @@ export const getArchiveStats = (regionData, timelineEvents = []) => {
   // Textos por década (solo años conocidos, orden cronológico).
   const decadeCounts = new Map();
   books.forEach((b) => {
-    const decade = getDecadeFromYear(b.year);
+    const decade = getDecadeFromYear(b.pubYear);
     if (decade && decade !== 'all') {
       decadeCounts.set(decade, (decadeCounts.get(decade) || 0) + 1);
     }

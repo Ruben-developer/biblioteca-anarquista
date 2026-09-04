@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Heart, BookOpen, X, Download, Upload, StickyNote, Calendar, User, Tag } from 'lucide-react';
+import { Heart, BookOpen, X, Download, Upload, StickyNote, Calendar, User, Tag, Trash2 } from 'lucide-react';
 import { THEME } from '../constants';
 
 const CATEGORY_LABELS = {
@@ -7,76 +7,19 @@ const CATEGORY_LABELS = {
   otros: 'Otros'
 };
 
-const renderNoteSection = (fav, { editingNote, noteText, setNoteText, saveNote, setEditingNote, startEditNote }, darkMode) => {
-  if (editingNote === fav.title) {
-    return (
-      <div className="mb-3">
-        <textarea
-          value={noteText}
-          onChange={(e) => setNoteText(e.target.value)}
-          placeholder="Escribe una nota personal sobre este texto..."
-          className={`w-full text-sm rounded-lg border p-2.5 resize-none ${
-            darkMode
-              ? 'bg-gray-800 border-[#872320] text-gray-200 placeholder-gray-500'
-              : 'bg-white border-[#B79F6E] text-gray-800 placeholder-amber-600'
-          }`}
-          rows={3}
-          autoFocus
-        />
-        <div className="flex gap-2 mt-2">
-          <button
-            onClick={saveNote}
-            className={`px-3 py-1 rounded text-xs font-medium ${
-              darkMode ? 'bg-red-600 text-white' : 'bg-amber-700 text-amber-50'
-            }`}
-          >
-            Guardar
-          </button>
-          <button
-            onClick={() => setEditingNote(null)}
-            className={`px-3 py-1 rounded text-xs ${
-              darkMode ? 'text-gray-400 hover:text-gray-300' : 'text-amber-600 hover:text-amber-700'
-            }`}
-          >
-            Cancelar
-          </button>
-        </div>
-      </div>
-    );
-  }
-
-  if (fav.note) {
-    return (
-      <button
-        className={`mb-3 p-2.5 rounded-lg text-sm cursor-pointer text-left w-full ${
-          darkMode ? 'bg-gray-800/60 text-gray-300' : 'bg-amber-50 text-amber-800'
-        }`}
-        onClick={() => startEditNote(fav)}
-      >
-        <div className="flex items-center gap-1.5 mb-1">
-          <StickyNote size={12} className={darkMode ? 'text-amber-400' : 'text-amber-600'} />
-          <span className={`text-xs font-medium ${darkMode ? 'text-amber-400' : 'text-amber-600'}`}>Mi nota</span>
-        </div>
-        {fav.note}
-      </button>
-    );
-  }
-
-  return null;
-};
-
 const FavoritesView = ({
   darkMode,
   favorites,
   onToggleFavorite,
+  onAddNote,
+  onDeleteNote,
   onUpdateNote,
   onExport,
   onImport,
   onRead
 }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
-  const [editingNote, setEditingNote] = useState(null);
-  const [noteText, setNoteText] = useState('');
+  const [drafts, setDrafts] = useState({});
   const [importMsg, setImportMsg] = useState(null);
   const fileInputRef = useRef(null);
 
@@ -84,28 +27,27 @@ const FavoritesView = ({
 
   const handleImportFile = (e) => {
     const file = e.target.files?.[0];
-    e.target.value = '';
     if (!file) return;
     const reader = new FileReader();
-    reader.onload = () => {
-      const res = onImport(reader.result);
+    reader.onload = (ev) => {
+      const text = ev.target?.result ?? reader.result;
+      const res = onImport(text);
       setImportMsg(res.ok ? `Importados ${res.count} texto(s).` : res.error);
+      e.target.value = '';
     };
-    reader.onerror = () => setImportMsg('No se pudo leer el archivo.');
+    reader.onerror = () => {
+      setImportMsg('No se pudo leer el archivo.');
+      e.target.value = '';
+    };
     reader.readAsText(file);
   };
 
-  const startEditNote = (fav) => {
-    setEditingNote(fav.title);
-    setNoteText(fav.note || '');
-  };
-
-  const saveNote = () => {
-    if (editingNote) {
-      onUpdateNote(editingNote, noteText);
-      setEditingNote(null);
-      setNoteText('');
-    }
+  const handleAdd = (title) => {
+    const text = (drafts[title] || '').trim();
+    if (!text) return;
+    if (onAddNote) onAddNote(title, text);
+    else if (onUpdateNote) onUpdateNote(title, text);
+    setDrafts((prev) => ({ ...prev, [title]: '' }));
   };
 
   const handleExport = () => {
@@ -151,7 +93,7 @@ const FavoritesView = ({
           <p className={`text-xl ${darkMode ? 'text-gray-400' : 'text-amber-800'}`}>
             Tu biblioteca personal está vacía
           </p>
-          <p className={`text-sm ${darkMode ? 'text-gray-500' : 'text-amber-600'} mt-2`}>
+          <p className={`text-sm ${darkMode ? 'text-gray-500' : 'text-amber-800'} mt-2`}>
             Guarda textos desde la Biblioteca o el Mapa para construir tu colección
           </p>
         </div>
@@ -201,77 +143,104 @@ const FavoritesView = ({
       )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-        {[...favorites].reverse().map((fav) => (
-          <div
-            key={fav.title}
-            className={`${cardClass} border-2 rounded-lg p-5 shadow-md hover:shadow-lg transition-all group`}
-          >
-            <div className="flex items-start justify-between gap-3 mb-3">
-              <div className="flex-1 min-w-0">
-                <h3 className={`text-lg font-semibold ${darkMode ? 'text-gray-100' : 'text-gray-800'} leading-tight`}>
-                  {fav.title}
-                </h3>
-                {fav.author && (
-                  <div className={`flex items-center gap-1.5 mt-1.5 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-                    <User size={13} />
-                    <span className="text-sm">{fav.author}</span>
-                  </div>
+        {[...favorites].reverse().map((fav) => {
+          const notes = fav.notes || [];
+          return (
+            <div
+              key={fav.title}
+              className={`${cardClass} border-2 rounded-lg p-5 shadow-md hover:shadow-lg transition-all group flex flex-col`}
+            >
+              <div className="flex items-start justify-between gap-3 mb-3">
+                <div className="flex-1 min-w-0">
+                  <h3 className={`text-lg font-semibold ${darkMode ? 'text-gray-100' : 'text-gray-800'} leading-tight`}>
+                    {fav.title}
+                  </h3>
+                  {fav.author && (
+                    <div className={`flex items-center gap-1.5 mt-1.5 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
+                      <User size={13} />
+                      <span className="text-sm">{fav.author}</span>
+                    </div>
+                  )}
+                </div>
+                <button
+                  onClick={() => onToggleFavorite(fav.title)}
+                  className={`${darkMode ? 'text-red-400 hover:text-red-500' : 'text-red-500 hover:text-red-600'} transition-colors flex-shrink-0`}
+                  title="Quitar de favoritos"
+                >
+                  <X size={20} />
+                </button>
+              </div>
+
+              <div className={`flex flex-wrap gap-2 mb-3 text-xs ${darkMode ? 'text-gray-500' : 'text-amber-800'}`}>
+                {fav.category && (
+                  <span className="flex items-center gap-1">
+                    <Tag size={12} />
+                    {CATEGORY_LABELS[fav.category] || fav.category}
+                  </span>
                 )}
               </div>
-              <button
-                onClick={() => onToggleFavorite(fav.title)}
-                className={`${darkMode ? 'text-red-400 hover:text-red-500' : 'text-red-500 hover:text-red-600'} transition-colors flex-shrink-0`}
-                title="Quitar de favoritos"
-              >
-                <X size={20} />
-              </button>
-            </div>
 
-            <div className={`flex flex-wrap gap-2 mb-3 text-xs ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
-              {fav.year && (
-                <span className="flex items-center gap-1">
-                  <Calendar size={12} />
-                  {fav.year}
-                </span>
-              )}
-              {fav.category && (
-                <span className="flex items-center gap-1">
-                  <Tag size={12} />
-                  {CATEGORY_LABELS[fav.category] || fav.category}
-                </span>
-              )}
-            </div>
+              <div className={`border-t ${darkMode ? 'border-gray-700' : 'border-[#B79F6E]'} pt-3 mt-1 flex-1`}>
+                <h4 className={`flex items-center gap-1.5 text-xs font-semibold mb-2 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                  <StickyNote size={12} />
+                  Notas {notes.length > 0 && <span className={`px-1.5 py-0.5 rounded-full text-[10px] ${darkMode ? 'bg-gray-700 text-gray-400' : 'bg-amber-800 text-amber-50'}`}>{notes.length}</span>}
+                </h4>
 
-            {renderNoteSection(fav, { editingNote, noteText, setNoteText, saveNote, setEditingNote, startEditNote }, darkMode)}
+                {notes.length > 0 && (
+                  <div className="space-y-2 mb-3">
+                    {notes.map((n) => (
+                      <div key={n.id} className={`flex items-start gap-2 p-2 rounded text-sm ${darkMode ? 'bg-gray-800/60 text-gray-300' : 'bg-amber-50 text-amber-800'}`}>
+                        <span className="flex-1 break-words">{n.text}</span>
+                        <button
+                          onClick={() => onDeleteNote ? onDeleteNote(fav.title, n.id) : null}
+                          className={`shrink-0 p-1 rounded ${darkMode ? 'text-gray-500 hover:text-red-400 hover:bg-gray-700' : 'text-gray-400 hover:text-red-600 hover:bg-red-50'}`}
+                          title="Eliminar nota"
+                          aria-label={`Eliminar nota: ${n.text}`}
+                        >
+                          <Trash2 size={14} />
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                )}
 
-            <div className="flex items-center gap-2 mt-auto">
+                <div className="flex gap-2">
+                  <textarea
+                    value={drafts[fav.title] || ''}
+                    onChange={(e) => setDrafts((prev) => ({ ...prev, [fav.title]: e.target.value }))}
+                    onKeyDown={(e) => { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) handleAdd(fav.title); }}
+                    placeholder="Escribe una nota..."
+                    rows={2}
+                    className={`flex-1 px-3 py-2 rounded-lg border text-sm resize-none ${darkMode ? 'bg-gray-800 border-[#872320] text-gray-200 placeholder-gray-500' : 'bg-white border-[#B79F6E] text-gray-800 placeholder-amber-800'}`}
+                  />
+                  <button
+                    onClick={() => handleAdd(fav.title)}
+                    disabled={!(drafts[fav.title] || '').trim()}
+                    className={`self-end px-3 py-2 rounded-lg text-xs font-medium transition-colors ${ (drafts[fav.title] || '').trim() ? (darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800') : (darkMode ? 'bg-gray-700 text-gray-500 cursor-not-allowed' : 'bg-amber-200 text-amber-500 cursor-not-allowed')}`}
+                  >
+                    Agregar
+                  </button>
+                </div>
+              </div>
+
               {fav.filename && (
-                <button
-                  onClick={() => onRead({ title: fav.title, author: fav.author, filename: fav.filename })}
-                  className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-colors ${
-                    darkMode
-                      ? 'bg-red-600 text-white hover:bg-red-700'
-                      : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
-                  }`}
-                >
-                  <BookOpen size={12} />
-                  Leer
-                </button>
+                <div className="flex items-center gap-2 mt-3">
+                  <button
+                    onClick={() => onRead({ title: fav.title, author: fav.author, filename: fav.filename })}
+                    className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-colors ${
+                      darkMode
+                        ? 'bg-red-600 text-white hover:bg-red-700'
+                        : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
+                    }`}
+                  >
+                    <BookOpen size={12} />
+                    Leer
+                  </button>
+                </div>
               )}
-              <button
-                onClick={() => startEditNote(fav)}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs transition-colors ${
-                  darkMode
-                    ? 'bg-gray-800 text-gray-400 hover:text-gray-300 hover:bg-gray-700'
-                    : 'bg-amber-100 text-amber-700 hover:bg-amber-200'
-                }`}
-              >
-                <StickyNote size={13} />
-                {fav.note ? 'Editar nota' : 'Añadir nota'}
-              </button>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

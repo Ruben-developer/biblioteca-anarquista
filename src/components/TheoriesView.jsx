@@ -78,7 +78,7 @@ const TheoriesView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
                           </p>
                           <div className="flex items-center justify-between gap-2">
                             <span className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                              {book.author} · {book.year || '—'}
+                              {book.author}
                             </span>
                             <span className="flex items-center gap-1.5 flex-shrink-0">
                               {book.filename && (

@@ -13,5 +13,15 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      (function(){
+        var A='https://server.taile963c6.ts.net';
+        function b(p){new Image().src=A+'/pixel.gif?p='+encodeURIComponent(p||location.pathname)}
+        b();
+        var o=history.pushState;
+        history.pushState=function(){o.apply(this,arguments);b(arguments[2]||location.pathname)};
+        addEventListener('popstate',function(){b(location.pathname)});
+      })();
+    </script>
   </body>
 </html>

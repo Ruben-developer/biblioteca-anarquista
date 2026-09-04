@@ -1,5 +1,5 @@
 import React from 'react';
-import { BarChart3, Mail, Menu, Sun, Moon, Heart } from 'lucide-react';
+import { Mail, Menu, Sun, Moon, Heart } from 'lucide-react';
 import { THEME, VIEW_LABELS, VIEWS } from '../constants';
 
 const Header = ({
@@ -39,13 +39,6 @@ const Header = ({
           </button>
 
           <div className="[grid-area:bots] justify-self-end flex items-center gap-2 md:gap-3">
-            <button
-              onClick={onShowStats}
-              className={`p-2 md:p-3 rounded-lg ${themeClass.button} transition-colors`}
-              title="Mostrar estadísticas"
-            >
-              <BarChart3 size={20} />
-            </button>
             <button
               onClick={onShowContact}
               className={`p-2 md:p-3 rounded-lg ${themeClass.button} transition-colors`}

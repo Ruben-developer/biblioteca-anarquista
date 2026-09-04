@@ -28,7 +28,7 @@ import ScrollTopButton from './ScrollTopButton';
 
 const AnarchistArchive = () => {
   const { darkMode, toggleDarkMode } = useDarkMode();
-  const { favorites, toggleFavorite, updateFavoriteNote, exportFavorites, importFavorites } = useFavorites();
+  const { favorites, toggleFavorite, updateFavoriteNote, addFavoriteNote, deleteFavoriteNote, exportFavorites, importFavorites } = useFavorites();
   const { showScrollTop, scrollToTop } = useScrollTop();
 
   const [activeView, setActiveView] = useState(VIEWS.LIBRARY);
@@ -189,6 +189,8 @@ const AnarchistArchive = () => {
               darkMode={darkMode}
               favorites={favorites}
               onToggleFavorite={toggleFavorite}
+              onAddNote={addFavoriteNote}
+              onDeleteNote={deleteFavoriteNote}
               onUpdateNote={updateFavoriteNote}
               onExport={exportFavorites}
               onImport={importFavorites}
