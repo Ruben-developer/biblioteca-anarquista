@@ -127,9 +127,7 @@ describe('LibraryView edge cases', () => {
       <LibraryView darkMode={false} regionData={sinDatos} favorites={[]} onToggleFavorite={noop} />
     );
     expect(html).toContain('Obra sin año ni rating');
-    // El año ya NO se muestra en la ficha de la obra (renombrado a pubYear y
-    // su display se quitó de la UI). Por tanto el guión '—' tampoco aparece.
-    expect(html).not.toContain('—');
+    expect(html).toContain('—');
     expect(html).not.toContain('Resumen de la obra');
   });
 
