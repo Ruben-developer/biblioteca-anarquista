@@ -68,14 +68,14 @@ export const THEME = {
     button: 'bg-black/60 hover:bg-black/80'
   },
   light: {
-    bg: 'bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 text-gray-800',
-    header: 'bg-amber-100/60 border-b-2 border-[#B79F6E]',
-    nav: 'bg-amber-100/60 border-2 border-[#B79F6E]',
-    card: 'bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-[#B79F6E]',
+    bg: 'bg-gradient-to-br from-amber-50 via-amber-100 to-amber-100 text-gray-800',
+    header: 'bg-amber-800/60 border-b-2 border-[#B79F6E]',
+    nav: 'bg-amber-800/60 border-2 border-[#B79F6E]',
+    card: 'bg-gradient-to-br from-amber-50 to-amber-100 border-2 border-[#B79F6E]',
     border: 'border-2 border-[#B79F6E]',
     accentText: 'text-amber-800',
     accentBg: 'bg-amber-700',
     accentBgHover: 'hover:bg-amber-800',
-    button: 'bg-amber-200 hover:bg-amber-300'
+    button: 'bg-amber-800 hover:bg-amber-700'
   }
 };

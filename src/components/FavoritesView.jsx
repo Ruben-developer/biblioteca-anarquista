@@ -74,7 +74,7 @@ const FavoritesView = ({
               className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                 darkMode
                   ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-[#872320]'
-                  : 'bg-amber-100 text-amber-800 hover:bg-amber-200 border border-[#B79F6E]'
+                  : 'bg-amber-800 text-amber-50 hover:bg-amber-800 border border-[#B79F6E]'
               }`}
             >
               <Upload size={16} />
@@ -116,7 +116,7 @@ const FavoritesView = ({
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               darkMode
                 ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-[#872320]'
-                : 'bg-amber-100 text-amber-800 hover:bg-amber-200 border border-[#B79F6E]'
+                : 'bg-amber-800 text-amber-50 hover:bg-amber-800 border border-[#B79F6E]'
             }`}
           >
             <Upload size={16} />
@@ -127,7 +127,7 @@ const FavoritesView = ({
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               darkMode
                 ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-[#872320]'
-                : 'bg-amber-100 text-amber-800 hover:bg-amber-200 border border-[#B79F6E]'
+                : 'bg-amber-800 text-amber-50 hover:bg-amber-800 border border-[#B79F6E]'
             }`}
           >
             <Download size={16} />
@@ -189,7 +189,7 @@ const FavoritesView = ({
               <div className={`border-t ${darkMode ? 'border-gray-700' : 'border-amber-200'} pt-3 mt-1 flex-1`}>
                 <h4 className={`flex items-center gap-1.5 text-xs font-semibold mb-2 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                   <StickyNote size={12} />
-                  Notas {notes.length > 0 && <span className={`px-1.5 py-0.5 rounded-full text-[10px] ${darkMode ? 'bg-gray-700 text-gray-400' : 'bg-amber-200 text-amber-800'}`}>{notes.length}</span>}
+                  Notas {notes.length > 0 && <span className={`px-1.5 py-0.5 rounded-full text-[10px] ${darkMode ? 'bg-gray-700 text-gray-400' : 'bg-amber-800 text-amber-50'}`}>{notes.length}</span>}
                 </h4>
 
                 {notes.length > 0 && (
@@ -222,7 +222,7 @@ const FavoritesView = ({
                   <button
                     onClick={() => handleAdd(fav.title)}
                     disabled={!(drafts[fav.title] || '').trim()}
-                    className={`self-end px-3 py-2 rounded-lg text-xs font-medium transition-colors ${ (drafts[fav.title] || '').trim() ? (darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800') : (darkMode ? 'bg-gray-700 text-gray-500 cursor-not-allowed' : 'bg-amber-200 text-amber-500 cursor-not-allowed')}`}
+                    className={`self-end px-3 py-2 rounded-lg text-xs font-medium transition-colors ${ (drafts[fav.title] || '').trim() ? (darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800') : (darkMode ? 'bg-gray-700 text-gray-500 cursor-not-allowed' : 'bg-amber-800 text-amber-500 cursor-not-allowed')}`}
                   >
                     Agregar
                   </button>

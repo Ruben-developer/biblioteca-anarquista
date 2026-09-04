@@ -151,7 +151,7 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
                       key={n.id}
                       onClick={() => setSelectedId(n.id)}
                       className={`text-xs px-2 py-1 rounded-full transition-colors ${
-                        darkMode ? 'bg-gray-700 text-gray-200 hover:bg-gray-600' : 'bg-amber-200 text-amber-900 hover:bg-amber-300'
+                        darkMode ? 'bg-gray-700 text-gray-200 hover:bg-gray-600' : 'bg-amber-800 text-amber-50 hover:bg-amber-700'
                       }`}
                     >
                       {n.name}
@@ -171,7 +171,7 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
                       key={n.id}
                       onClick={() => setSelectedId(n.id)}
                       className={`text-xs px-2 py-1 rounded-full transition-colors ${
-                        darkMode ? 'bg-gray-700 text-gray-200 hover:bg-gray-600' : 'bg-amber-200 text-amber-900 hover:bg-amber-300'
+                        darkMode ? 'bg-gray-700 text-gray-200 hover:bg-gray-600' : 'bg-amber-800 text-amber-50 hover:bg-amber-700'
                       }`}
                     >
                       {n.name}

@@ -92,7 +92,7 @@ const GlossaryView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
                             <button
                               onClick={() => onOpenLibrary({ searchTerm: book.title })}
                               className={`flex-shrink-0 flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium transition-colors ${
-                                darkMode ? 'bg-gray-700 text-gray-200 hover:bg-gray-600' : 'bg-white border border-[#B79F6E] text-amber-800 hover:bg-amber-100'
+                                darkMode ? 'bg-gray-700 text-gray-200 hover:bg-gray-600' : 'bg-white border border-[#B79F6E] text-amber-800 hover:bg-amber-800'
                               }`}
                               title={`Ver "${book.title}" en el catálogo`}
                             >
@@ -115,7 +115,7 @@ const GlossaryView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
         type="button"
         onClick={() => onOpenLibrary({})}
         className={`mt-4 flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-          darkMode ? 'bg-gray-800 border border-[#872320] text-gray-200 hover:bg-gray-700' : 'bg-white border border-[#B79F6E] text-amber-800 hover:bg-amber-100'
+          darkMode ? 'bg-gray-800 border border-[#872320] text-gray-200 hover:bg-gray-700' : 'bg-white border border-[#B79F6E] text-amber-800 hover:bg-amber-800'
         }`}
       >
         <Library size={16} />

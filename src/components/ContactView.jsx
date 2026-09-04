@@ -14,7 +14,7 @@ const SuccessView = ({ email, darkMode, resetForm, cardClass }) => (
     <button
       type="button"
       onClick={resetForm}
-      className={`inline-flex items-center gap-2 px-4 py-3 rounded-lg font-display uppercase tracking-wider text-sm transition-all ${darkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-amber-200 text-amber-900 hover:bg-amber-300'}`}
+      className={`inline-flex items-center gap-2 px-4 py-3 rounded-lg font-display uppercase tracking-wider text-sm transition-all ${darkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-amber-800 text-amber-50 hover:bg-amber-700'}`}
     >
       <RotateCcw size={16} />
       Enviar otro mensaje
@@ -31,7 +31,7 @@ const ErrorView = ({ darkMode, resetForm, cardClass }) => (
     <button
       type="button"
       onClick={resetForm}
-      className={`inline-flex items-center gap-2 px-4 py-3 rounded-lg font-display uppercase tracking-wider text-sm transition-all ${darkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-amber-200 text-amber-900 hover:bg-amber-300'}`}
+      className={`inline-flex items-center gap-2 px-4 py-3 rounded-lg font-display uppercase tracking-wider text-sm transition-all ${darkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-amber-800 text-amber-50 hover:bg-amber-700'}`}
     >
       <RotateCcw size={16} />
       Reintentar

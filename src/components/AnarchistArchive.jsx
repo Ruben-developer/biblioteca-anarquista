@@ -93,7 +93,7 @@ const AnarchistArchive = () => {
 
   const bgClass = darkMode
     ? 'bg-gradient-to-br from-red-950 via-black to-gray-900 text-gray-100'
-    : 'bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 text-gray-800';
+    : 'bg-gradient-to-br from-amber-50 via-amber-100 to-amber-100 text-gray-800';
 
   return (
     <div className={`min-h-screen ${bgClass} transition-colors duration-500 theme-constructivista theme-pergamino`}>
@@ -231,7 +231,7 @@ const AnarchistArchive = () => {
         </div>
       </main>
 
-      <footer className={`border-t-2 shadow-[0_-4px_12px_rgba(0,0,0,0.25)] ${darkMode ? 'border-[#872320]/50 bg-black/30' : 'border-[#B79F6E] bg-amber-100/60'}`}>
+      <footer className={`border-t-2 shadow-[0_-4px_12px_rgba(0,0,0,0.25)] ${darkMode ? 'border-[#872320]/50 bg-black/30' : 'border-[#B79F6E] bg-amber-800/60'}`}>
         <div className="container mx-auto px-4 py-8">
           <p className={`font-display uppercase tracking-widest text-sm text-center ${darkMode ? 'text-gray-300' : 'text-amber-900'}`}>
             La Idea · Archivo Histórico Anarquista

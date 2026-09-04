@@ -63,7 +63,7 @@ const TheoriesView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
 
                   <div className="flex flex-wrap gap-1.5">
                     {theory.keyAuthors.map((author) => (
-                      <span key={author} className={`text-xs px-2 py-1 rounded-full ${darkMode ? 'bg-gray-700 text-gray-300' : 'bg-amber-200 text-amber-900'}`}>
+                      <span key={author} className={`text-xs px-2 py-1 rounded-full ${darkMode ? 'bg-gray-700 text-gray-300' : 'bg-amber-800 text-amber-50'}`}>
                         {author}
                       </span>
                     ))}
@@ -78,7 +78,7 @@ const TheoriesView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
                           </p>
                           <div className="flex items-center justify-between gap-2">
                             <span className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                              {book.author} · {book.year || '—'}
+                              {book.author} · {book.pubYear || '—'}
                             </span>
                             <span className="flex items-center gap-1.5 flex-shrink-0">
                               {book.filename && (
@@ -95,7 +95,7 @@ const TheoriesView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
                               <button
                                 onClick={() => onOpenLibrary({ searchTerm: book.title })}
                                 className={`flex items-center gap-1 px-2 py-1 rounded text-xs font-medium transition-colors ${
-                                  darkMode ? 'bg-gray-700 text-gray-200 hover:bg-gray-600' : 'bg-white border border-[#B79F6E] text-amber-800 hover:bg-amber-100'
+                                  darkMode ? 'bg-gray-700 text-gray-200 hover:bg-gray-600' : 'bg-white border border-[#B79F6E] text-amber-800 hover:bg-amber-800'
                                 }`}
                                 title={`Ver "${book.title}" en el catálogo`}
                               >
@@ -126,7 +126,7 @@ const TheoriesView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
         type="button"
         onClick={() => onOpenLibrary({})}
         className={`mt-4 flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-          darkMode ? 'bg-gray-800 border border-[#872320] text-gray-200 hover:bg-gray-700' : 'bg-white border border-[#B79F6E] text-amber-800 hover:bg-amber-100'
+          darkMode ? 'bg-gray-800 border border-[#872320] text-gray-200 hover:bg-gray-700' : 'bg-white border border-[#B79F6E] text-amber-800 hover:bg-amber-800'
         }`}
       >
         <Library size={16} />

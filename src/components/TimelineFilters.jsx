@@ -79,7 +79,7 @@ const TimelineFilters = ({
                   className={`px-3 py-1 rounded text-sm ${
                     filters.decade === decade
                       ? darkMode ? 'bg-red-600 text-white' : 'bg-amber-700 text-white'
-                      : darkMode ? 'bg-gray-800 text-gray-300' : 'bg-amber-200 text-amber-900'
+                      : darkMode ? 'bg-gray-800 text-gray-300' : 'bg-amber-800 text-amber-50'
                   }`}
                 >
                   {decade === 'all' ? 'Todas' : decade}
@@ -101,7 +101,7 @@ const TimelineFilters = ({
                   className={`px-3 py-1 rounded text-sm ${
                     filters.category === cat.id
                       ? darkMode ? 'bg-red-600 text-white' : 'bg-amber-700 text-white'
-                      : darkMode ? 'bg-gray-800 text-gray-300' : 'bg-amber-200 text-amber-900'
+                      : darkMode ? 'bg-gray-800 text-gray-300' : 'bg-amber-800 text-amber-50'
                   }`}
                 >
                   {cat.name}
@@ -123,7 +123,7 @@ const TimelineFilters = ({
                   className={`px-3 py-1 rounded text-sm ${
                     filters.region === region
                       ? darkMode ? 'bg-red-600 text-white' : 'bg-amber-700 text-white'
-                      : darkMode ? 'bg-gray-800 text-gray-300' : 'bg-amber-200 text-amber-900'
+                      : darkMode ? 'bg-gray-800 text-gray-300' : 'bg-amber-800 text-amber-50'
                   }`}
                 >
                   {region === 'all' ? 'Todas' : region}
