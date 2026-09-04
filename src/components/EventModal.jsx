@@ -27,7 +27,7 @@ const EventModal = ({ darkMode, event, regionData, onClose, onRead = () => {} })
       aria-label={event.title}
     >
       <div className={`${cardClass} rounded-lg max-w-2xl w-full p-6`}>
-        <ModalHeader darkMode={darkMode} title={`📅 ${event.title}`} icon={Calendar} subtitle={formatYear(event.year)} onClose={onClose} />
+        <ModalHeader darkMode={darkMode} title={event.title} icon={Calendar} subtitle={formatYear(event.year)} onClose={onClose} />
 
         <div className="overflow-y-auto max-h-96">
           <p className={`${darkMode ? 'text-gray-300' : 'text-gray-700'} leading-relaxed mb-4`}>
