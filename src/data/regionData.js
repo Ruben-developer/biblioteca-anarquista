@@ -1624,6 +1624,13 @@ export const regionData = {
         "filename": "Lida, Clara E. - Estudio preliminar a Max Nettlau - Miguel Bakunin, La Internacional y la Alianza en España (1868-1873).pdf"
       },
       {
+        "title": "Mijaíl Bakunin, la Internacional y la Alianza en España (1868-1873)",
+        "author": "Max Nettlau",
+        "category": "historia",
+        "rating": 4.5,
+        "filename": "Max Nettlau - Mijaíl Bakunin, la Internacional y la Alianza en España (1868-1873).pdf"
+      },
+      {
         "title": "La Mano Negra. Anarquismo agrario en Andalucía",
         "author": "Clara E. Lida",
         "category": "historia",
@@ -2124,6 +2131,13 @@ export const regionData = {
         "category": "historia",
         "rating": 4.5,
         "filename": "Matías Vargas Puga - El poder político anarcosindicalista en los ayuntamientos del Vallès occidental (1936-1939).pdf"
+      },
+      {
+        "title": "El protagonismo político de la CNT en los ayuntamientos catalanes (1936-1939). El Vallés Occidental",
+        "author": "Matías Vargas Puga",
+        "category": "historia",
+        "rating": 4.5,
+        "filename": "Matías Vargas Puga - El protagonismo político de la CNT en los ayuntamientos catalanes (1936-1939). El Vallés Occidental.pdf"
       },
       {
         "title": "Comandos Autónomos, un anticapitalismo iconoclasta",
@@ -6059,7 +6073,7 @@ export const regionData = {
         "title": "Prehistoria del anarquismo",
         "author": "Ángel J. Cappelletti",
         "pubYear": 1983,
-        "category": "teoria",
+        "category": "historia",
         "rating": 4.5,
         "filename": "Ángel J. Cappelletti - Prehistoria del anarquismo.pdf"
       },
