@@ -105,6 +105,6 @@ export const readingPaths = [
     title: 'Insurreccionalismo',
     icon: 'flame',
     description: 'La organización informal, la afinidad y la guerra social: del Matese de Malatesta a las prácticas contemporáneas.',
-    books: ['La insurrección que llega', 'Anarquismo, insurrecciones e insurreccionalismo', 'Ai ferri corti. Romper con esta realidad', 'Archipiélago. Afinidad, organización informal y proyectos insurreccionales', 'Apuntes sobre revuelta y guerra social', 'Cuando se señala la luna... A vueltas con el insurreccionalismo', 'Nos estamos acercando: La historia de Angry Brigade']
+    books: ['Anarquismo, insurrecciones e insurreccionalismo', 'Ai ferri corti. Romper con esta realidad', 'Archipiélago. Afinidad, organización informal y proyectos insurreccionales', 'Apuntes sobre revuelta y guerra social', 'Cuando se señala la luna... A vueltas con el insurreccionalismo', 'Nos estamos acercando: La historia de Angry Brigade']
   }
 ];

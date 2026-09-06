@@ -76,7 +76,7 @@ export const glossaryTerms = [
   {
     term: 'Insurreccionalismo',
     definition: 'Tendencia del anarquismo que prioriza la insurrección armada, la organización informal por grupos de afinidad y la guerra social como medio de transformación revolucionaria.',
-    books: ['Anarquismo, insurrecciones e insurreccionalismo', 'Ai ferri corti. Romper con esta realidad', 'Archipiélago. Afinidad, organización informal y proyectos insurreccionales', 'La insurrección que llega']
+    books: ['Anarquismo, insurrecciones e insurreccionalismo', 'Ai ferri corti. Romper con esta realidad', 'Archipiélago. Afinidad, organización informal y proyectos insurreccionales']
   },
   {
     term: 'Plataforma organizacional',
