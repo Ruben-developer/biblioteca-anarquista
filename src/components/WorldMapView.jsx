@@ -128,8 +128,10 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {Object.entries(regionData)
-          .map(([region]) => ({ region, count: getHistoricalBooks(regionData, region).length }))
-          .filter(({ count }) => count > 0)
+          .map(([region, data]) => ({ region, iso: data?.iso, count: getHistoricalBooks(regionData, region).length }))
+          // Solo países (con ISO)… salvo "Internacional": guarda la historia sin
+          // región determinada y es la única tarjeta sin país que debe aparecer.
+          .filter(({ region, count, iso }) => count > 0 && (iso || region === 'Internacional'))
           .sort((a, b) => b.count - a.count)
           .map(({ region, count }) => (
           <button

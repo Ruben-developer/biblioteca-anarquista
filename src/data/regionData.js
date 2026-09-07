@@ -570,6 +570,14 @@ export const regionData = {
         "category": "historia",
         "rating": 4.5,
         "filename": "Víctor Muñoz Cortés - El anarquismo y los orígenes del movimiento sindical campesino en Osorno (1930-1940).pdf"
+      },
+      {
+        "filename": "Rojas, Manuel Y Gonzalez Vera, Jose Santos - Letras anarquistas. Articulos politicos y otros escritos ineditos.pdf",
+        "category": "historia",
+        "author": "Rojas, Manuel Y Gonzalez Vera, Jose Santos",
+        "title": "Letras anarquistas. Articulos politicos y otros escritos ineditos",
+        "year": null,
+        "rating": null
       }
     ]
   },
@@ -2221,6 +2229,38 @@ export const regionData = {
         "category": "historia",
         "rating": 4.5,
         "filename": "Francisco Madrid Santos - Los anarquistas internacionales en la Revolución española.pdf"
+      },
+      {
+        "filename": "Clara E. Lida - Discurso e imaginario en la cultura anarquista.pdf",
+        "category": "historia",
+        "author": "Clara E. Lida",
+        "title": "Discurso e imaginario en la cultura anarquista",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - Prólogo de Camille Pert En Anarquoa.pdf",
+        "category": "historia",
+        "author": "Anselmo Lorenzo",
+        "title": "Prólogo de Camille Pert En Anarquoa",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - Prólogo de Jean Grave Tierra Libre.pdf",
+        "category": "historia",
+        "author": "Anselmo Lorenzo",
+        "title": "Prólogo de Jean Grave Tierra Libre",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - Prólogo de Kropotkin La Gran Revolución.pdf",
+        "category": "historia",
+        "author": "Anselmo Lorenzo",
+        "title": "Prólogo de Kropotkin La Gran Revolución",
+        "year": null,
+        "rating": null
       }
     ]
   },
@@ -2382,6 +2422,14 @@ export const regionData = {
         "category": "historia",
         "rating": 4.5,
         "filename": "Federica Montseny - La Commune de Paris y la Revolución Española. El anarquismo militante y la realidad española.pdf"
+      },
+      {
+        "filename": "Oyon, Jose Luis Y Serra, Marta - Las casas de Reclus. Hacia la fusion naturaleza-ciudad, 1830-1871.pdf",
+        "category": "historia",
+        "author": "Oyon, Jose Luis Y Serra, Marta",
+        "title": "Las casas de Reclus. Hacia la fusion naturaleza-ciudad, 1830-1871",
+        "year": null,
+        "rating": null
       }
     ]
   },
@@ -2497,6 +2545,22 @@ export const regionData = {
         "category": "historia",
         "rating": 4.5,
         "filename": "Errico Malatesta - Sobre el fascismo al poder (1922, 1923).pdf"
+      },
+      {
+        "filename": "Camillo Berneri - Escritos VII (Antifascismo).pdf",
+        "category": "teoria",
+        "author": "Camillo Berneri",
+        "title": "Escritos VII (Antifascismo)",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Luce Fabbri - Garibaldi y el socialismo de su tiempo.pdf",
+        "category": "historia",
+        "author": "Luce Fabbri",
+        "title": "Garibaldi y el socialismo de su tiempo",
+        "year": null,
+        "rating": null
       }
     ]
   },
@@ -3452,6 +3516,22 @@ export const regionData = {
         "category": "historia",
         "rating": 4.5,
         "filename": "Varios autores - Una realización colectivista en Palestina.pdf"
+      },
+      {
+        "title": "Prehistoria del anarquismo",
+        "author": "Ángel J. Cappelletti",
+        "pubYear": 1983,
+        "category": "historia",
+        "rating": 4.5,
+        "filename": "Ángel J. Cappelletti - Prehistoria del anarquismo.pdf"
+      },
+      {
+        "filename": "Max Nettlau - Esbozo de historia de las utopoas.pdf",
+        "category": "historia",
+        "author": "Max Nettlau",
+        "title": "Esbozo de historia de las utopoas",
+        "year": null,
+        "rating": null
       }
     ]
   },
@@ -4291,12 +4371,12 @@ export const regionData = {
         "subject": "Eleuterio Quintanilla"
       },
       {
-        "title": "Hacia una nueva revolucin",
+        "title": "Hacia una nueva revolución",
         "author": "Amigos de Durruti",
         "pubYear": 1997,
         "category": "teoria",
         "rating": 4.5,
-        "filename": "Amigos de Durruti - Hacia una nueva revolucin.pdf"
+        "filename": "Amigos de Durruti - Hacia una nueva revolución.pdf"
       },
       {
         "title": "Durruti en el laberinto",
@@ -4570,7 +4650,6 @@ export const regionData = {
         "summary": "Crítica radical de Peter Gelderloos a la no violencia como estrategia de cambio social: argumenta que la no violencia protege al Estado y al capital.",
         "filename": "Peter Gelderloos - Cómo la no violencia protege al Estado.pdf"
       },
-
       {
         "title": "¿Qué es la Propiedad?",
         "author": "Pierre-Joseph Proudhon",
@@ -5409,7 +5488,6 @@ export const regionData = {
         "summary": "La obra mayor de Bakunin: análisis de la lucha entre el estatismo y la revolución social, con su crítica del marxismo y su visión de la sociedad federada.",
         "filename": "Mijaíl Bakunin - Estatismo y anarquía.pdf"
       },
-
       {
         "title": "La vida anárquica de Florencio Sánchez",
         "author": "Pascual Muñoz y Pablo Suárez",
@@ -5448,7 +5526,6 @@ export const regionData = {
         "summary": "Balance del movimiento anarquista después del ciclo de acción directa: caos no murió, se transformó.",
         "filename": "Varios autores - CAOS NO MURIO: Consideraciones para Desmitificar el Concepto e Influencias del Caos.pdf"
       },
-
       {
         "title": "Cuadernos de negación",
         "author": "Anónimo",
@@ -5485,7 +5562,6 @@ export const regionData = {
         "summary": "Debate sobre la organización anarquista: entre la plataforma organizacional y la deformación partidista.",
         "filename": "Patrick Rossineri - Entre la plataforma y el partido.pdf"
       },
-
       {
         "title": "La peste, la bestia y el monstruo: Johann Most",
         "author": "Aníbal D'Auria",
@@ -5505,7 +5581,6 @@ export const regionData = {
         "summary": "Argumentos ateos y antirreligiosos desde la perspectiva anarquista: contra Dios y contra el Estado.",
         "filename": "Anónimo - Las 12 pruebas de la inexistencia de Dios.pdf"
       },
-
       {
         "title": "Persona non-grata",
         "author": "Alfredo M. Bonano",
@@ -5648,7 +5723,6 @@ export const regionData = {
         "rating": 4.5,
         "filename": "Ramon Acin - Tres articulos.pdf"
       },
-
       {
         "title": "La Semana Santa. Los atentados",
         "author": "Agrupacion Tiempos Nuevos",
@@ -5742,12 +5816,12 @@ export const regionData = {
         "filename": "Octavio Alberola - La emancipacin social.pdf"
       },
       {
-        "title": "La revolucin. Entre el azar y la necesidad",
+        "title": "La revolución. Entre el azar y la necesidad",
         "author": "Octavio Alberola",
         "pubYear": 2017,
         "category": "teoria",
         "rating": 4.5,
-        "filename": "Octavio Alberola - La revolucin. Entre el azar y la necesidad.pdf"
+        "filename": "Octavio Alberola - La revolución. Entre el azar y la necesidad.pdf"
       },
       {
         "title": "La transformacin social y el progreso",
@@ -6070,14 +6144,6 @@ export const regionData = {
         "filename": "Ángel J. Cappelletti - Etapas del pensamiento socialista.pdf"
       },
       {
-        "title": "Prehistoria del anarquismo",
-        "author": "Ángel J. Cappelletti",
-        "pubYear": 1983,
-        "category": "historia",
-        "rating": 4.5,
-        "filename": "Ángel J. Cappelletti - Prehistoria del anarquismo.pdf"
-      },
-      {
         "title": "Sentido del positivismo latinoamericano",
         "author": "Ángel J. Cappelletti",
         "category": "teoria",
@@ -6090,6 +6156,3532 @@ export const regionData = {
         "category": "teoria",
         "rating": 4.5,
         "filename": "Ángel J. Cappelletti - Socialismo utópico y anarquía.pdf"
+      }
+    ]
+  },
+  "Abraham Guillen": {
+    "books": [
+      {
+        "filename": "Abraham Guillen - Economia libertaria (Alternativa para un mundo en crisis).pdf",
+        "category": "teoria",
+        "author": "Abraham Guillen",
+        "title": "Economia libertaria (Alternativa para un mundo en crisis)",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Abraham Guillen - Socialismo libertario (Ni capitalismo de monopolio, ni comunismo de Estado).pdf",
+        "category": "teoria",
+        "author": "Abraham Guillen",
+        "title": "Socialismo libertario (Ni capitalismo de monopolio, ni comunismo de Estado)",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Agustin Garcia Calvo": {
+    "books": [
+      {
+        "filename": "Agustin Garcia Calvo - Apuntes para la conferencia DEMOCRACIA.pdf",
+        "category": "teoria",
+        "author": "Agustin Garcia Calvo",
+        "title": "Apuntes para la conferencia DEMOCRACIA",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Albert Libertad": {
+    "books": [
+      {
+        "filename": "Albert Libertad - El trabajo antisocial y los movimientos inutiles.pdf",
+        "category": "teoria",
+        "author": "Albert Libertad",
+        "title": "El trabajo antisocial y los movimientos inutiles",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Alfredo M. Bonanno": {
+    "books": [
+      {
+        "filename": "Alfredo M. Bonanno - Analisis de un periodo de cambio.pdf",
+        "category": "teoria",
+        "author": "Alfredo M. Bonanno",
+        "title": "Analisis de un periodo de cambio",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Alfredo M. Bonanno - Compilacin de escritos.pdf",
+        "category": "teoria",
+        "author": "Alfredo M. Bonanno",
+        "title": "Compilacin de escritos",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Alfredo M. Bonanno - Contra la amnistoa. Encerrados bajo llave.pdf",
+        "category": "teoria",
+        "author": "Alfredo M. Bonanno",
+        "title": "Contra la amnistoa. Encerrados bajo llave",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Alfredo M. Bonanno - Después de Marx, autonomía.pdf",
+        "category": "teoria",
+        "author": "Alfredo M. Bonanno",
+        "title": "Después de Marx, autonomía",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Alfredo M. Bonanno - El abstencionismo anarquista.pdf",
+        "category": "teoria",
+        "author": "Alfredo M. Bonanno",
+        "title": "El abstencionismo anarquista",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Alfredo M. Bonanno - Enfermedad y capital.pdf",
+        "category": "teoria",
+        "author": "Alfredo M. Bonanno",
+        "title": "Enfermedad y capital",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Alfredo M. Bonanno - La tensin anarquista.pdf",
+        "category": "teoria",
+        "author": "Alfredo M. Bonanno",
+        "title": "La tensin anarquista",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Alfredo M. Bonanno - Nueva vuelta de tuerca del capitalismo.pdf",
+        "category": "teoria",
+        "author": "Alfredo M. Bonanno",
+        "title": "Nueva vuelta de tuerca del capitalismo",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Alfredo M. Bonanno - Tesis de Cosenza. El problema del empleo. Por una critica libertaria de la perspectiva anarco-sindicalista.pdf",
+        "category": "teoria",
+        "author": "Alfredo M. Bonanno",
+        "title": "Tesis de Cosenza. El problema del empleo. Por una critica libertaria de la perspectiva anarco-sindicalista",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Amparo Poch Y Gascon": {
+    "books": [
+      {
+        "filename": "Amparo Poch Y Gascon - La vida sexual de la mujer.pdf",
+        "category": "teoria",
+        "author": "Amparo Poch Y Gascon",
+        "title": "La vida sexual de la mujer",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Amparo Poch Y Gascon - Sanatorio de optimismo.pdf",
+        "category": "teoria",
+        "author": "Amparo Poch Y Gascon",
+        "title": "Sanatorio de optimismo",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Angel J. Cappelletti": {
+    "books": [
+      {
+        "filename": "Angel J. Cappelletti - La ideologia anarquista.pdf",
+        "category": "teoria",
+        "author": "Angel J. Cappelletti",
+        "title": "La ideologia anarquista",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Angel Pestana": {
+    "books": [
+      {
+        "filename": "Angel Pestana - Donde cree usted que va el mundo.pdf",
+        "category": "teoria",
+        "author": "Angel Pestana",
+        "title": "Donde cree usted que va el mundo",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Anibal Dauria": {
+    "books": [
+      {
+        "filename": "Anibal Dauria - Feligreses, ciudadanos, compañeros.pdf",
+        "category": "teoria",
+        "author": "Anibal Dauria",
+        "title": "Feligreses, ciudadanos, compañeros",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anibal Dauria - La filosofia de Max Stirner o la propiedad de si mismo.pdf",
+        "category": "teoria",
+        "author": "Anibal Dauria",
+        "title": "La filosofia de Max Stirner o la propiedad de si mismo",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Anónimo": {
+    "books": [
+      {
+        "filename": "Anónimo - V de Veganismo.pdf",
+        "category": "teoria",
+        "author": "Anónimo",
+        "title": "V de Veganismo",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Anselme Bellegarrigue": {
+    "books": [
+      {
+        "filename": "Anselme Bellegarrigue - Manifiesto de la anarquía.pdf",
+        "category": "teoria",
+        "author": "Anselme Bellegarrigue",
+        "title": "Manifiesto de la anarquía",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Anselmo Lorenzo": {
+    "books": [
+      {
+        "filename": "Anselmo Lorenzo - Acracia o República.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "Acracia o República",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - Artoculos para Ciencia Social.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "Artoculos para Ciencia Social",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - Artoculos para La Idea Libre.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "Artoculos para La Idea Libre",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - Ascendencia y trascendencia del sindicalismo.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "Ascendencia y trascendencia del sindicalismo",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - Capacidad revolucionaria del proletariado (II Certamen Socialista).pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "Capacidad revolucionaria del proletariado (II Certamen Socialista)",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - Contra la ignorancia.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "Contra la ignorancia",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - El banquete de la vida.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "El banquete de la vida",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - El criterio libertario.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "El criterio libertario",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - El derecho a la evolución.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "El derecho a la evolución",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - El derecho a la salud.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "El derecho a la salud",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - El hombre y la sociedad.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "El hombre y la sociedad",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - El obrero moderno.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "El obrero moderno",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - El patrimonio universal.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "El patrimonio universal",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - El poseedor romano (Conferencia sociolgica).pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "El poseedor romano (Conferencia sociolgica)",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - El proletariado emancipador.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "El proletariado emancipador",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - El proletariado en marcha.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "El proletariado en marcha",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - Evolucin proletaria.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "Evolucin proletaria",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - Fuera polotica.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "Fuera polotica",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - Generalidades sociales.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "Generalidades sociales",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - Igualdad, libertad y fraternidad.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "Igualdad, libertad y fraternidad",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - La anarquía triunfante.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "La anarquía triunfante",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - La ganancia.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "La ganancia",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - La justicia en el evangelio (La revolución intelectual. El derecho a la vida).pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "La justicia en el evangelio (La revolución intelectual. El derecho a la vida)",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - La procreacin humana (II Certamen Socialista).pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "La procreacin humana (II Certamen Socialista)",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - La revolución es la paz (II Certamen Socialista).pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "La revolución es la paz (II Certamen Socialista)",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - Las olimpiadas de la paz.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "Las olimpiadas de la paz",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - Previsin de un juicio futuro (II Certamen Socialista).pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "Previsin de un juicio futuro (II Certamen Socialista)",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - Prólogo de Francisco Ferrer Ferrer y La Huelga General.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "Prólogo de Francisco Ferrer Ferrer y La Huelga General",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - Prólogo de Jean Grave Las aventuras de Nono.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "Prólogo de Jean Grave Las aventuras de Nono",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - Prólogo de Josi Lpez Montenegro El botn de fuego.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "Prólogo de Josi Lpez Montenegro El botn de fuego",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - Prólogo de Paul Robin Generacin voluntaria.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "Prólogo de Paul Robin Generacin voluntaria",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - Rimora societaria.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "Rimora societaria",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - Traduccin de Eliseo Reclus El Hombre y La Tierra.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "Traduccin de Eliseo Reclus El Hombre y La Tierra",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - Tres Textos.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "Tres Textos",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - Voa libre. El trabajador. Su ideal emancipador.pdf",
+        "category": "teoria",
+        "author": "Anselmo Lorenzo",
+        "title": "Voa libre. El trabajador. Su ideal emancipador",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Armando Trivino": {
+    "books": [
+      {
+        "filename": "Armando Trivino - La IWW en la teoria y en la practica.pdf",
+        "category": "teoria",
+        "author": "Armando Trivino",
+        "title": "La IWW en la teoria y en la practica",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Arturo Parera": {
+    "books": [
+      {
+        "filename": "Arturo Parera - Los jovenes anarquistas.pdf",
+        "category": "teoria",
+        "author": "Arturo Parera",
+        "title": "Los jovenes anarquistas",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Augustin Souchy": {
+    "books": [
+      {
+        "filename": "Augustin Souchy - Capitalismo, democracia y socialismo libertario.pdf",
+        "category": "teoria",
+        "author": "Augustin Souchy",
+        "title": "Capitalismo, democracia y socialismo libertario",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Beltran Et Al. Roca Martinez": {
+    "books": [
+      {
+        "filename": "Beltran Et Al. Roca Martinez - Del 15M al giro electoralista. Proyectos espaciales y fetiches politicos en las estrategias de accion colectiva.pdf",
+        "category": "teoria",
+        "author": "Beltran Et Al. Roca Martinez",
+        "title": "Del 15M al giro electoralista. Proyectos espaciales y fetiches politicos en las estrategias de accion colectiva",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Beltran Roca Martinez": {
+    "books": [
+      {
+        "filename": "Beltran Roca Martinez - Entre la competencia y la cooperacion. La construccion de redes entre las Organizaciones No Gubernamentales de Desarrollo en Andalucia.pdf",
+        "category": "teoria",
+        "author": "Beltran Roca Martinez",
+        "title": "Entre la competencia y la cooperacion. La construccion de redes entre las Organizaciones No Gubernamentales de Desarrollo en Andalucia",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Beltran Roca Martinez - La antropologia anarquista que se esta empezando a fraguar.pdf",
+        "category": "teoria",
+        "author": "Beltran Roca Martinez",
+        "title": "La antropologia anarquista que se esta empezando a fraguar",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Beltran Roca Martinez - La financiacion de las ONGD desde la perspectiva de redes.pdf",
+        "category": "teoria",
+        "author": "Beltran Roca Martinez",
+        "title": "La financiacion de las ONGD desde la perspectiva de redes",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Beltran Y Diaz Roca Martinez": {
+    "books": [
+      {
+        "filename": "Beltran Y Diaz Roca Martinez - Parra, Iban - Un pie en la calle y otro en la institucion. Analisis socioespacial de una iniciativa municipalista.pdf",
+        "category": "teoria",
+        "author": "Beltran Y Diaz Roca Martinez",
+        "title": "Parra, Iban - Un pie en la calle y otro en la institucion. Analisis socioespacial de una iniciativa municipalista",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Benjamin Cano Ruiz": {
+    "books": [
+      {
+        "filename": "Benjamin Cano Ruiz - Concepcion anarquista del derecho natural.pdf",
+        "category": "teoria",
+        "author": "Benjamin Cano Ruiz",
+        "title": "Concepcion anarquista del derecho natural",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Biehl, Janet Y Bookchin, Murray": {
+    "books": [
+      {
+        "filename": "Biehl, Janet Y Bookchin, Murray - Las poloticas de la ecologoa social. Municipalismo libertario.pdf",
+        "category": "teoria",
+        "author": "Biehl, Janet Y Bookchin, Murray",
+        "title": "Las poloticas de la ecologoa social. Municipalismo libertario",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Camille Pert": {
+    "books": [
+      {
+        "filename": "Camille Pert - En anarquía.pdf",
+        "category": "teoria",
+        "author": "Camille Pert",
+        "title": "En anarquía",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Camillo Berneri": {
+    "books": [
+      {
+        "filename": "Camillo Berneri - Escritos I (Estudios Sociales).pdf",
+        "category": "teoria",
+        "author": "Camillo Berneri",
+        "title": "Escritos I (Estudios Sociales)",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Camillo Berneri - Escritos III (Anticlericalismo).pdf",
+        "category": "teoria",
+        "author": "Camillo Berneri",
+        "title": "Escritos III (Anticlericalismo)",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Camillo Berneri - Por un programa de accin comunalista.pdf",
+        "category": "teoria",
+        "author": "Camillo Berneri",
+        "title": "Por un programa de accin comunalista",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Cano Ruiz, Benjamin Y Peirats, Jose": {
+    "books": [
+      {
+        "filename": "Cano Ruiz, Benjamin Y Peirats, Jose - Determinismo y voluntarismo (Polemica).pdf",
+        "category": "teoria",
+        "author": "Cano Ruiz, Benjamin Y Peirats, Jose",
+        "title": "Determinismo y voluntarismo (Polemica)",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Carlo Cafiero": {
+    "books": [
+      {
+        "filename": "Carlo Cafiero - El Capital al alcance de todos.pdf",
+        "category": "teoria",
+        "author": "Carlo Cafiero",
+        "title": "El Capital al alcance de todos",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Carlos Diaz": {
+    "books": [
+      {
+        "filename": "Carlos Diaz - Manifiesto libertario de la enseñanza.pdf",
+        "category": "teoria",
+        "author": "Carlos Diaz",
+        "title": "Manifiesto libertario de la enseñanza",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Carlos Taibo": {
+    "books": [
+      {
+        "filename": "Carlos Taibo - Colapso. Capitalismo terminal, transicion ecosocial, ecofascismo.pdf",
+        "category": "teoria",
+        "author": "Carlos Taibo",
+        "title": "Colapso. Capitalismo terminal, transicion ecosocial, ecofascismo",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Carlos Taibo - Dos diagnosticos sobre la crisis.pdf",
+        "category": "teoria",
+        "author": "Carlos Taibo",
+        "title": "Dos diagnosticos sobre la crisis",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Carlos Taibo - El decrecimiento explicado con sencillez.pdf",
+        "category": "teoria",
+        "author": "Carlos Taibo",
+        "title": "El decrecimiento explicado con sencillez",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Carlos Taibo - La globalizacion y sus consecuencias.pdf",
+        "category": "otros",
+        "author": "Carlos Taibo",
+        "title": "La globalizacion y sus consecuencias",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Carlos Taibo - La globalizacion.pdf",
+        "category": "otros",
+        "author": "Carlos Taibo",
+        "title": "La globalizacion",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Carlos Taibo - Tenemos que buscar una salida al capitalismo.pdf",
+        "category": "teoria",
+        "author": "Carlos Taibo",
+        "title": "Tenemos que buscar una salida al capitalismo",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Carlos Taibo - Un vampiro de nuestros dias. La globalizacion capitalista.pdf",
+        "category": "otros",
+        "author": "Carlos Taibo",
+        "title": "Un vampiro de nuestros dias. La globalizacion capitalista",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Clara E. Lida": {
+    "books": []
+  },
+  "CNT": {
+    "books": [
+      {
+        "filename": "CNT - Informe del Sindicato de Ensenanza de CNT en 1977.pdf",
+        "category": "teoria",
+        "author": "CNT",
+        "title": "Informe del Sindicato de Ensenanza de CNT en 1977",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Colin Ward": {
+    "books": [
+      {
+        "filename": "Colin Ward - La libertad de circular. Despues de la era del motor.pdf",
+        "category": "teoria",
+        "author": "Colin Ward",
+        "title": "La libertad de circular. Despues de la era del motor",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Conspiracion De Celulas Del Fuego": {
+    "books": [
+      {
+        "filename": "Conspiracion De Celulas Del Fuego - La Nueva Guerrilla Urbana Anarquista.pdf",
+        "category": "teoria",
+        "author": "Conspiracion De Celulas Del Fuego",
+        "title": "La Nueva Guerrilla Urbana Anarquista",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Conspiracion De Celulas Del Fuego - Una conversacion entre anarquistas.pdf",
+        "category": "teoria",
+        "author": "Conspiracion De Celulas Del Fuego",
+        "title": "Una conversacion entre anarquistas",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Crimethinc": {
+    "books": [
+      {
+        "filename": "Crimethinc - A qui se refieren cuando hablan de paz.pdf",
+        "category": "teoria",
+        "author": "Crimethinc",
+        "title": "A qui se refieren cuando hablan de paz",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Crimethinc - No habra muro que nos pare. Una guoa de las fronteras y la migracin a travis de Norteamirica.pdf",
+        "category": "teoria",
+        "author": "Crimethinc",
+        "title": "No habra muro que nos pare. Una guoa de las fronteras y la migracin a travis de Norteamirica",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Crimethinc.": {
+    "books": [
+      {
+        "filename": "Crimethinc. - Domesticacin.pdf",
+        "category": "teoria",
+        "author": "Crimethinc.",
+        "title": "Domesticacin",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "CrimethInc.": {
+    "books": [
+      {
+        "filename": "CrimethInc. - Luchando en el nuevo terreno. Qui ha cambiado desde el siglo XX.pdf",
+        "category": "teoria",
+        "author": "CrimethInc.",
+        "title": "Luchando en el nuevo terreno. Qui ha cambiado desde el siglo XX",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "CrimethInc. - Ocho sencillos pasos hacia la revolución.pdf",
+        "category": "teoria",
+        "author": "CrimethInc.",
+        "title": "Ocho sencillos pasos hacia la revolución",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Daniel Barret": {
+    "books": [
+      {
+        "filename": "Daniel Barret - Reflexiones libertarias.pdf",
+        "category": "teoria",
+        "author": "Daniel Barret",
+        "title": "Reflexiones libertarias",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Daniel Colson": {
+    "books": [
+      {
+        "filename": "Daniel Colson - Lecturas anarquistas de Spinoza.pdf",
+        "category": "teoria",
+        "author": "Daniel Colson",
+        "title": "Lecturas anarquistas de Spinoza",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "David Graeber": {
+    "books": [
+      {
+        "filename": "David Graeber - Dandole la vuelta a los modos de produccin o por qui el capitalismo es una transformacin de la esclavitud.pdf",
+        "category": "teoria",
+        "author": "David Graeber",
+        "title": "Dandole la vuelta a los modos de produccin o por qui el capitalismo es una transformacin de la esclavitud",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "David Graeber - El fenmeno de los curros intiles.pdf",
+        "category": "teoria",
+        "author": "David Graeber",
+        "title": "El fenmeno de los curros intiles",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "David Graeber - Eres anarquista aLa respuesta te podroa sorprender.pdf",
+        "category": "teoria",
+        "author": "David Graeber",
+        "title": "Eres anarquista aLa respuesta te podroa sorprender",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "David Graeber - Guoa practico-utpica del inminente colapso.pdf",
+        "category": "teoria",
+        "author": "David Graeber",
+        "title": "Guoa practico-utpica del inminente colapso",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "David Graeber - La deuda. Los primeros cinco mil aos.pdf",
+        "category": "otros",
+        "author": "David Graeber",
+        "title": "La deuda. Los primeros cinco mil aos",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "David Graeber - Los nuevos anarquistas.pdf",
+        "category": "teoria",
+        "author": "David Graeber",
+        "title": "Los nuevos anarquistas",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "David Graeber - Occupy, la deuda y los lomites histricos del capitalismo. Entrevista.pdf",
+        "category": "teoria",
+        "author": "David Graeber",
+        "title": "Occupy, la deuda y los lomites histricos del capitalismo. Entrevista",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "David Graeber - Preocuparse demasiado por los demas. La maldicin de los pobres.pdf",
+        "category": "teoria",
+        "author": "David Graeber",
+        "title": "Preocuparse demasiado por los demas. La maldicin de los pobres",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "David Graeber - Sobre los autos voladores y la tasa decreciente de ganancia.pdf",
+        "category": "teoria",
+        "author": "David Graeber",
+        "title": "Sobre los autos voladores y la tasa decreciente de ganancia",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "David Graeber - Somos El 99 - Una Historia, una crisis, un movimiento.pdf",
+        "category": "teoria",
+        "author": "David Graeber",
+        "title": "Somos El 99 - Una Historia, una crisis, un movimiento",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Distribuidora Peligrosidad Social": {
+    "books": [
+      {
+        "filename": "Distribuidora Peligrosidad Social - AnarQueer 2.pdf",
+        "category": "teoria",
+        "author": "Distribuidora Peligrosidad Social",
+        "title": "AnarQueer 2",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Distribuidora Peligrosidad Social - AnarQueer 3.pdf",
+        "category": "teoria",
+        "author": "Distribuidora Peligrosidad Social",
+        "title": "AnarQueer 3",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Distribuidora Peligrosidad Social - AnarQueer 4.pdf",
+        "category": "teoria",
+        "author": "Distribuidora Peligrosidad Social",
+        "title": "AnarQueer 4",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Distribuidora Peligrosidad Social - AnarQueer 5.pdf",
+        "category": "teoria",
+        "author": "Distribuidora Peligrosidad Social",
+        "title": "AnarQueer 5",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Distribuidora Peligrosidad Social - AnarQueer 6.pdf",
+        "category": "teoria",
+        "author": "Distribuidora Peligrosidad Social",
+        "title": "AnarQueer 6",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Distribuidora Peligrosidad Social - AnarQueer 7.pdf",
+        "category": "teoria",
+        "author": "Distribuidora Peligrosidad Social",
+        "title": "AnarQueer 7",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Distribuidora Peligrosidad Social - AnarQueer 8.pdf",
+        "category": "teoria",
+        "author": "Distribuidora Peligrosidad Social",
+        "title": "AnarQueer 8",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Distribuidora Peligrosidad Social - AnarQueer.pdf",
+        "category": "teoria",
+        "author": "Distribuidora Peligrosidad Social",
+        "title": "AnarQueer",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Distribuidora Peligrosidad Social - Queer explicado para anarquistas.pdf",
+        "category": "teoria",
+        "author": "Distribuidora Peligrosidad Social",
+        "title": "Queer explicado para anarquistas",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Distribuidora Peligrosidad Social - Ética amatoria del deseo libertario y las afectaciones libres y alegres y las afectaciones libres y alegres.pdf",
+        "category": "teoria",
+        "author": "Distribuidora Peligrosidad Social",
+        "title": "Ética amatoria del deseo libertario y las afectaciones libres y alegres y las afectaciones libres y alegres",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Edgar Emilio Rodriguez": {
+    "books": [
+      {
+        "filename": "Edgar Emilio Rodriguez - La herejia del materialismo historico.pdf",
+        "category": "teoria",
+        "author": "Edgar Emilio Rodriguez",
+        "title": "La herejia del materialismo historico",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Eduardo Colombo": {
+    "books": [
+      {
+        "filename": "Eduardo Colombo - El anarqusimo ante la crisis de las ideologoas.pdf",
+        "category": "teoria",
+        "author": "Eduardo Colombo",
+        "title": "El anarqusimo ante la crisis de las ideologoas",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Eduardo De Guzman": {
+    "books": [
+      {
+        "filename": "Eduardo De Guzman - Sin rodeos ni medias tintas. El patrimonio sindical pertenece exclusivamente a los trabajadores.pdf",
+        "category": "teoria",
+        "author": "Eduardo De Guzman",
+        "title": "Sin rodeos ni medias tintas. El patrimonio sindical pertenece exclusivamente a los trabajadores",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "EMile Armand": {
+    "books": [
+      {
+        "filename": "EMile Armand - Arte y ciencia.pdf",
+        "category": "teoria",
+        "author": "EMile Armand",
+        "title": "Arte y ciencia",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "EMile Armand - El amor entre anarcoindividualistas.pdf",
+        "category": "teoria",
+        "author": "EMile Armand",
+        "title": "El amor entre anarcoindividualistas",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "EMile Armand - Formas de vida en comn sin Estado ni Autoridad (Las experiencias econmicas y sexulaes a travis de la historia).pdf",
+        "category": "teoria",
+        "author": "EMile Armand",
+        "title": "Formas de vida en comn sin Estado ni Autoridad (Las experiencias econmicas y sexulaes a travis de la historia)",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Emile Pouget": {
+    "books": [
+      {
+        "filename": "Emile Pouget - La Confederacion General del Trabajo.pdf",
+        "category": "teoria",
+        "author": "Emile Pouget",
+        "title": "La Confederacion General del Trabajo",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Emile Pouget - Las bases del sindicalismo.pdf",
+        "category": "teoria",
+        "author": "Emile Pouget",
+        "title": "Las bases del sindicalismo",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Emile Pouget - Variaciones guesdistas.pdf",
+        "category": "teoria",
+        "author": "Emile Pouget",
+        "title": "Variaciones guesdistas",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Emma Goldman": {
+    "books": [
+      {
+        "filename": "Emma Goldman - Anarquoa y la cuestión sexual.pdf",
+        "category": "teoria",
+        "author": "Emma Goldman",
+        "title": "Anarquoa y la cuestión sexual",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Emma Goldman - La hipocresoa del puritanismo y otros ensayos.pdf",
+        "category": "teoria",
+        "author": "Emma Goldman",
+        "title": "La hipocresoa del puritanismo y otros ensayos",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Emma Goldman - La hipocresoa del puritanismo.pdf",
+        "category": "teoria",
+        "author": "Emma Goldman",
+        "title": "La hipocresoa del puritanismo",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Emma Goldman - La mujer libre.pdf",
+        "category": "teoria",
+        "author": "Emma Goldman",
+        "title": "La mujer libre",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Emma Goldman - La palabra como arma.pdf",
+        "category": "teoria",
+        "author": "Emma Goldman",
+        "title": "La palabra como arma",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Emma Goldman - La psicologoa de la violencia polotica.pdf",
+        "category": "teoria",
+        "author": "Emma Goldman",
+        "title": "La psicologoa de la violencia polotica",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Emma Goldman - Recopilatorio de escritos.pdf",
+        "category": "teoria",
+        "author": "Emma Goldman",
+        "title": "Recopilatorio de escritos",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Emma Goldman - Situacin social de la mujer.pdf",
+        "category": "teoria",
+        "author": "Emma Goldman",
+        "title": "Situacin social de la mujer",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Errico Malatesta": {
+    "books": [
+      {
+        "filename": "Errico Malatesta - Acerca de mi juicio Lucha de clases u odio de clases.pdf",
+        "category": "teoria",
+        "author": "Errico Malatesta",
+        "title": "Acerca de mi juicio Lucha de clases u odio de clases",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Errico Malatesta - Algunos pensamientos sobre el sistema de propiedad post-revolucionario.pdf",
+        "category": "teoria",
+        "author": "Errico Malatesta",
+        "title": "Algunos pensamientos sobre el sistema de propiedad post-revolucionario",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Errico Malatesta - Anarquistas eleccionistas.pdf",
+        "category": "teoria",
+        "author": "Errico Malatesta",
+        "title": "Anarquistas eleccionistas",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Errico Malatesta - Anarquistas progubernamentales.pdf",
+        "category": "teoria",
+        "author": "Errico Malatesta",
+        "title": "Anarquistas progubernamentales",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Errico Malatesta - Anarquoa y sindicalismo.pdf",
+        "category": "teoria",
+        "author": "Errico Malatesta",
+        "title": "Anarquoa y sindicalismo",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Errico Malatesta - Compilacin de escritos.pdf",
+        "category": "teoria",
+        "author": "Errico Malatesta",
+        "title": "Compilacin de escritos",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Errico Malatesta - Entre campesinos.pdf",
+        "category": "teoria",
+        "author": "Errico Malatesta",
+        "title": "Entre campesinos",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Errico Malatesta - Estrategia y tacticas en la practica anarquista.pdf",
+        "category": "teoria",
+        "author": "Errico Malatesta",
+        "title": "Estrategia y tacticas en la practica anarquista",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Errico Malatesta - Gobierno y anarquía.pdf",
+        "category": "teoria",
+        "author": "Errico Malatesta",
+        "title": "Gobierno y anarquía",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Errico Malatesta - Ni demcratas, ni dictadores. Anarquistas.pdf",
+        "category": "teoria",
+        "author": "Errico Malatesta",
+        "title": "Ni demcratas, ni dictadores. Anarquistas",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Errico Malatesta - Nuestro ideario.pdf",
+        "category": "teoria",
+        "author": "Errico Malatesta",
+        "title": "Nuestro ideario",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Fai": {
+    "books": [
+      {
+        "filename": "Fai - Companero campesino, escucha.pdf",
+        "category": "teoria",
+        "author": "Fai",
+        "title": "Companero campesino, escucha",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Federacion Anarquista Uruguaya": {
+    "books": [
+      {
+        "filename": "Federacion Anarquista Uruguaya - Huerta grande. Material de difusion interna sobre tematica teorica de 1972.pdf",
+        "category": "teoria",
+        "author": "Federacion Anarquista Uruguaya",
+        "title": "Huerta grande. Material de difusion interna sobre tematica teorica de 1972",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Federica Montseny": {
+    "books": [
+      {
+        "filename": "Federica Montseny - La mujer, problema del hombre.pdf",
+        "category": "teoria",
+        "author": "Federica Montseny",
+        "title": "La mujer, problema del hombre",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Federica Montseny - Las lecciones de una experiencia historica.pdf",
+        "category": "teoria",
+        "author": "Federica Montseny",
+        "title": "Las lecciones de una experiencia historica",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Felix (Ed.) Garcia Moriyon": {
+    "books": [
+      {
+        "filename": "Felix (Ed.) Garcia Moriyon - Escritos anarquistas sobre educacion.pdf",
+        "category": "teoria",
+        "author": "Felix (Ed.) Garcia Moriyon",
+        "title": "Escritos anarquistas sobre educacion",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Felix Garcia Moriyon": {
+    "books": [
+      {
+        "filename": "Felix Garcia Moriyon - Alternativas pedagogicas libertarias en la escuela hoy.pdf",
+        "category": "teoria",
+        "author": "Felix Garcia Moriyon",
+        "title": "Alternativas pedagogicas libertarias en la escuela hoy",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Fernand Pelloutier": {
+    "books": [
+      {
+        "filename": "Fernand Pelloutier - Organización corporativa y anarquía.pdf",
+        "category": "teoria",
+        "author": "Fernand Pelloutier",
+        "title": "Organización corporativa y anarquía",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Fernandez Cordero, Laura Y Bacci, Claudia": {
+    "books": [
+      {
+        "filename": "Fernandez Cordero, Laura Y Bacci, Claudia - Feroces de lengua y pluma. Sobre algunas escrituras de mujeres anarquistas.pdf",
+        "category": "teoria",
+        "author": "Fernandez Cordero, Laura Y Bacci, Claudia",
+        "title": "Feroces de lengua y pluma. Sobre algunas escrituras de mujeres anarquistas",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Fernando Tarrida Del Marmol": {
+    "books": [
+      {
+        "filename": "Fernando Tarrida Del Marmol - Concepcion del Ideal Libertario.pdf",
+        "category": "teoria",
+        "author": "Fernando Tarrida Del Marmol",
+        "title": "Concepcion del Ideal Libertario",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Fernando Y Astru Astur Solano Palacio": {
+    "books": [
+      {
+        "filename": "Fernando Y Astru Astur Solano Palacio - Jardin de acracia.pdf",
+        "category": "teoria",
+        "author": "Fernando Y Astru Astur Solano Palacio",
+        "title": "Jardin de acracia",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Francesco Saverio Merlino": {
+    "books": [
+      {
+        "filename": "Francesco Saverio Merlino - Por qui somos anarquistas.pdf",
+        "category": "teoria",
+        "author": "Francesco Saverio Merlino",
+        "title": "Por qui somos anarquistas",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Francisco Ferrer Guardia": {
+    "books": [
+      {
+        "filename": "Francisco Ferrer Guardia - Carta contra las corridas de toros y la explotacin humana.pdf",
+        "category": "teoria",
+        "author": "Francisco Ferrer Guardia",
+        "title": "Carta contra las corridas de toros y la explotacin humana",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Francisco Ferrer Guardia - Principios de moral cientofica.pdf",
+        "category": "teoria",
+        "author": "Francisco Ferrer Guardia",
+        "title": "Principios de moral cientofica",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Frank Mintz": {
+    "books": [
+      {
+        "filename": "Frank Mintz - Apuntes largos sobre la ciencia.pdf",
+        "category": "teoria",
+        "author": "Frank Mintz",
+        "title": "Apuntes largos sobre la ciencia",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Georges Fontenis": {
+    "books": [
+      {
+        "filename": "Georges Fontenis - Manifiesto comunista libertario.pdf",
+        "category": "teoria",
+        "author": "Georges Fontenis",
+        "title": "Manifiesto comunista libertario",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Gilimon, Eduardo G., Et Al.": {
+    "books": [
+      {
+        "filename": "Gilimon, Eduardo G., Et Al. - La idea anarquista.pdf",
+        "category": "teoria",
+        "author": "Gilimon, Eduardo G., Et Al.",
+        "title": "La idea anarquista",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Gilles Tiqqun Y Deleuze": {
+    "books": [
+      {
+        "filename": "Gilles Tiqqun Y Deleuze - Contribucion a la guerra en curso.pdf",
+        "category": "otros",
+        "author": "Gilles Tiqqun Y Deleuze",
+        "title": "Contribucion a la guerra en curso",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Gustavo Rodriguez": {
+    "books": [
+      {
+        "filename": "Gustavo Rodriguez - Dialogos anarquistas, un coloquio sobre teoria y practica.pdf",
+        "category": "teoria",
+        "author": "Gustavo Rodriguez",
+        "title": "Dialogos anarquistas, un coloquio sobre teoria y practica",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Han Ryner": {
+    "books": [
+      {
+        "filename": "Han Ryner - Pequeno manual individualista.pdf",
+        "category": "teoria",
+        "author": "Han Ryner",
+        "title": "Pequeno manual individualista",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Harold B. Barclay": {
+    "books": [
+      {
+        "filename": "Harold B. Barclay - Gente sin gobierno. Una antropología de la anarquía.pdf",
+        "category": "teoria",
+        "author": "Harold B. Barclay",
+        "title": "Gente sin gobierno. Una antropología de la anarquía",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "He Zhen": {
+    "books": [
+      {
+        "filename": "He Zhen - Yin - Lo que las mujeres debiesen saber sobre el comunismo.pdf",
+        "category": "teoria",
+        "author": "He Zhen",
+        "title": "Yin - Lo que las mujeres debiesen saber sobre el comunismo",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Henry David Thoreau": {
+    "books": [
+      {
+        "filename": "Henry David Thoreau - El espiritu comercial de los tiempos modernos.pdf",
+        "category": "teoria",
+        "author": "Henry David Thoreau",
+        "title": "El espiritu comercial de los tiempos modernos",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Higinio Noja Ruiz": {
+    "books": [
+      {
+        "filename": "Higinio Noja Ruiz - El arte en la revolución.pdf",
+        "category": "teoria",
+        "author": "Higinio Noja Ruiz",
+        "title": "El arte en la revolución",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Isaac Puente": {
+    "books": [
+      {
+        "filename": "Isaac Puente - La sociedad del porvenir. El comunismo anarquico.pdf",
+        "category": "teoria",
+        "author": "Isaac Puente",
+        "title": "La sociedad del porvenir. El comunismo anarquico",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "James C. Scott": {
+    "books": [
+      {
+        "filename": "James C. Scott - La utilidad del caos y del carisma, una perspectiva anarquista.pdf",
+        "category": "teoria",
+        "author": "James C. Scott",
+        "title": "La utilidad del caos y del carisma, una perspectiva anarquista",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Jason McQuinn": {
+    "books": [
+      {
+        "filename": "Jason McQuinn - Desmoralizando el moralismo. La futilidad de los valores fetichizados.pdf",
+        "category": "teoria",
+        "author": "Jason McQuinn",
+        "title": "Desmoralizando el moralismo. La futilidad de los valores fetichizados",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Jaume Balius Mir": {
+    "books": [
+      {
+        "filename": "Jaume Balius Mir - Por los fueros de la verdad. No somos agentes provocadores.pdf",
+        "category": "teoria",
+        "author": "Jaume Balius Mir",
+        "title": "Por los fueros de la verdad. No somos agentes provocadores",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Jean Grave": {
+    "books": [
+      {
+        "filename": "Jean Grave - Educacin burguesa y educacin libertaria.pdf",
+        "category": "teoria",
+        "author": "Jean Grave",
+        "title": "Educacin burguesa y educacin libertaria",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Jean Grave - La sociedad moribunda y la Anarquía.pdf",
+        "category": "teoria",
+        "author": "Jean Grave",
+        "title": "La sociedad moribunda y la Anarquía",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Jesus Lizano": {
+    "books": [
+      {
+        "filename": "Jesus Lizano - Hola, compañeros (Manifiesto anarquista).pdf",
+        "category": "teoria",
+        "author": "Jesus Lizano",
+        "title": "Hola, compañeros (Manifiesto anarquista)",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Joan Zambrana": {
+    "books": [
+      {
+        "filename": "Joan Zambrana - La alternativa libertaria.pdf",
+        "category": "teoria",
+        "author": "Joan Zambrana",
+        "title": "La alternativa libertaria",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Joel Delhom": {
+    "books": [
+      {
+        "filename": "Joel Delhom - Aproximacion a las fuentes de Prada sobre la cuestion religiosa.pdf",
+        "category": "teoria",
+        "author": "Joel Delhom",
+        "title": "Aproximacion a las fuentes de Prada sobre la cuestion religiosa",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Joel Delhom - Identidad y socializacion anarquistas en las memorias de mujeres. Un despertar a la reivindicacion de genero.pdf",
+        "category": "teoria",
+        "author": "Joel Delhom",
+        "title": "Identidad y socializacion anarquistas en las memorias de mujeres. Un despertar a la reivindicacion de genero",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Joel Delhom - Lo intimo en algunas memorias de anarquistas espanoles.pdf",
+        "category": "teoria",
+        "author": "Joel Delhom",
+        "title": "Lo intimo en algunas memorias de anarquistas espanoles",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Johann Most": {
+    "books": [
+      {
+        "filename": "Johann Most - Anarquoa defendida por anarquistas.pdf",
+        "category": "teoria",
+        "author": "Johann Most",
+        "title": "Anarquoa defendida por anarquistas",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Johann Most - Cuando se halla el pueblo preparado para la libertad.pdf",
+        "category": "teoria",
+        "author": "Johann Most",
+        "title": "Cuando se halla el pueblo preparado para la libertad",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Johann Most - El ataque es la mejor forma de defensa.pdf",
+        "category": "teoria",
+        "author": "Johann Most",
+        "title": "El ataque es la mejor forma de defensa",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Johann Most - El comunismo anarquista.pdf",
+        "category": "teoria",
+        "author": "Johann Most",
+        "title": "El comunismo anarquista",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Jose Antonio Gutierrez": {
+    "books": [
+      {
+        "filename": "Jose Antonio Gutierrez - El anarcocomunismo ante las elecciones.pdf",
+        "category": "teoria",
+        "author": "Jose Antonio Gutierrez",
+        "title": "El anarcocomunismo ante las elecciones",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Jose (Azorin) Martinez Ruiz": {
+    "books": [
+      {
+        "filename": "Jose (Azorin) Martinez Ruiz - El socialismo anarquista.pdf",
+        "category": "teoria",
+        "author": "Jose (Azorin) Martinez Ruiz",
+        "title": "El socialismo anarquista",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Jose Garcia Pradas": {
+    "books": [
+      {
+        "filename": "Jose Garcia Pradas - Origen, esencia y fin de la sociedad de clases.pdf",
+        "category": "teoria",
+        "author": "Jose Garcia Pradas",
+        "title": "Origen, esencia y fin de la sociedad de clases",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Jose Garcia Pradas - Revolucion proletaria.pdf",
+        "category": "teoria",
+        "author": "Jose Garcia Pradas",
+        "title": "Revolucion proletaria",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Jose Peirats": {
+    "books": [
+      {
+        "filename": "Jose Peirats - Articulos en Frente libertario (1970-1977).pdf",
+        "category": "teoria",
+        "author": "Jose Peirats",
+        "title": "Articulos en Frente libertario (1970-1977)",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Jose Peirats - Mecanismo organico de la Confederacion Nacional del Trabajo.pdf",
+        "category": "teoria",
+        "author": "Jose Peirats",
+        "title": "Mecanismo organico de la Confederacion Nacional del Trabajo",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Jose Peirats - Razones y sinrazones de la participacion libertaria en el gobierno.pdf",
+        "category": "teoria",
+        "author": "Jose Peirats",
+        "title": "Razones y sinrazones de la participacion libertaria en el gobierno",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Jose Sanchez Rosa": {
+    "books": [
+      {
+        "filename": "Jose Sanchez Rosa - Discordancias de bronce. Nuestra opinion sobre el sindicalismo.pdf",
+        "category": "teoria",
+        "author": "Jose Sanchez Rosa",
+        "title": "Discordancias de bronce. Nuestra opinion sobre el sindicalismo",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Juan Et Al. Peiro": {
+    "books": [
+      {
+        "filename": "Juan Et Al. Peiro - Manifiesto de los treinta.pdf",
+        "category": "teoria",
+        "author": "Juan Et Al. Peiro",
+        "title": "Manifiesto de los treinta",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Juan Manuel Molina": {
+    "books": [
+      {
+        "filename": "Juan Manuel Molina - El comunismo totalitario.pdf",
+        "category": "teoria",
+        "author": "Juan Manuel Molina",
+        "title": "El comunismo totalitario",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Juan Montseny": {
+    "books": [
+      {
+        "filename": "Juan Montseny - La religion y la cuestion social.pdf",
+        "category": "teoria",
+        "author": "Juan Montseny",
+        "title": "La religion y la cuestion social",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Juan Peiro": {
+    "books": [
+      {
+        "filename": "Juan Peiro - Problemas y cintarazos.pdf",
+        "category": "teoria",
+        "author": "Juan Peiro",
+        "title": "Problemas y cintarazos",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Kang, Xi Y Xingjian, Bao": {
+    "books": [
+      {
+        "filename": "Kang, Xi Y Xingjian, Bao - Elogio de la anarquía por dos excéntricos chinos del siglo III.pdf",
+        "category": "teoria",
+        "author": "Kang, Xi Y Xingjian, Bao",
+        "title": "Elogio de la anarquía por dos excéntricos chinos del siglo III",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Kasimere Bran": {
+    "books": [
+      {
+        "filename": "Kasimere Bran - Fuego a medianoche, destruccin al amanecer.pdf",
+        "category": "teoria",
+        "author": "Kasimere Bran",
+        "title": "Fuego a medianoche, destruccin al amanecer",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Luce Fabbri": {
+    "books": [
+      {
+        "filename": "Luce Fabbri - El camino. Hacia un socialismo sin Estado.pdf",
+        "category": "teoria",
+        "author": "Luce Fabbri",
+        "title": "El camino. Hacia un socialismo sin Estado",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Luce Fabbri - La libertad entre la historia y la utopoa.pdf",
+        "category": "teoria",
+        "author": "Luce Fabbri",
+        "title": "La libertad entre la historia y la utopoa",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Luigi Fabbri": {
+    "books": [
+      {
+        "filename": "Luigi Fabbri - Cartas a una mujer sobre la anarquía.pdf",
+        "category": "teoria",
+        "author": "Luigi Fabbri",
+        "title": "Cartas a una mujer sobre la anarquía",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Luigi Fabbri - El concepto anarquista de la revolución.pdf",
+        "category": "teoria",
+        "author": "Luigi Fabbri",
+        "title": "El concepto anarquista de la revolución",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Luigi Fabbri - Lo nico y la pluralidad.pdf",
+        "category": "teoria",
+        "author": "Luigi Fabbri",
+        "title": "Lo nico y la pluralidad",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Luigi Fabbri - Qué es la Anarquía.pdf",
+        "category": "teoria",
+        "author": "Luigi Fabbri",
+        "title": "Qué es la Anarquía",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Luisa Capetillo Peron": {
+    "books": [
+      {
+        "filename": "Luisa Capetillo Peron - Ensayos Libertarios.pdf",
+        "category": "teoria",
+        "author": "Luisa Capetillo Peron",
+        "title": "Ensayos Libertarios",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Manuel Gonzalez Prada": {
+    "books": [
+      {
+        "filename": "Manuel Gonzalez Prada - Bajo el oprobio.pdf",
+        "category": "teoria",
+        "author": "Manuel Gonzalez Prada",
+        "title": "Bajo el oprobio",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Manuel Gonzalez Prada - El tonel de Diogenes.pdf",
+        "category": "teoria",
+        "author": "Manuel Gonzalez Prada",
+        "title": "El tonel de Diogenes",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Manuel Gonzalez Prada - Horas de lucha.pdf",
+        "category": "teoria",
+        "author": "Manuel Gonzalez Prada",
+        "title": "Horas de lucha",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Manuel Gonzalez Prada - Las dos patrias (Antologia contra las fronteras y el militarismo).pdf",
+        "category": "teoria",
+        "author": "Manuel Gonzalez Prada",
+        "title": "Las dos patrias (Antologia contra las fronteras y el militarismo)",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Manuel Gonzalez Prada - Nuestros indios.pdf",
+        "category": "teoria",
+        "author": "Manuel Gonzalez Prada",
+        "title": "Nuestros indios",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Manuel Gonzalez Prada - Nuevas paginas libres.pdf",
+        "category": "teoria",
+        "author": "Manuel Gonzalez Prada",
+        "title": "Nuevas paginas libres",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Manuel Gonzalez Prada - Paginas libres.pdf",
+        "category": "teoria",
+        "author": "Manuel Gonzalez Prada",
+        "title": "Paginas libres",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Manuel Gonzalez Prada - Propaganda y ataque.pdf",
+        "category": "teoria",
+        "author": "Manuel Gonzalez Prada",
+        "title": "Propaganda y ataque",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Manuel Gonzalez Prada - Selección de ensayos y obra poética.pdf",
+        "category": "teoria",
+        "author": "Manuel Gonzalez Prada",
+        "title": "Selección de ensayos y obra poética",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Marcelo Maldonado Rocha": {
+    "books": [
+      {
+        "filename": "Marcelo Maldonado Rocha - Esbozos de pedagogoa libertaria en el altiplano.pdf",
+        "category": "teoria",
+        "author": "Marcelo Maldonado Rocha",
+        "title": "Esbozos de pedagogoa libertaria en el altiplano",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Maria Lacerda De Moura": {
+    "books": [
+      {
+        "filename": "Maria Lacerda De Moura - Contra la hidra de la autoridad.pdf",
+        "category": "teoria",
+        "author": "Maria Lacerda De Moura",
+        "title": "Contra la hidra de la autoridad",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Max Nettlau": {
+    "books": [
+      {
+        "filename": "Max Nettlau - El lugar de las ideas libertarias en la serie de las liberaciones humanas.pdf",
+        "category": "teoria",
+        "author": "Max Nettlau",
+        "title": "El lugar de las ideas libertarias en la serie de las liberaciones humanas",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Max Nettlau - Panarquía. Una olvidada idea de 1860.pdf",
+        "category": "teoria",
+        "author": "Max Nettlau",
+        "title": "Panarquía. Una olvidada idea de 1860",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Max Stirner": {
+    "books": [
+      {
+        "filename": "Max Stirner - El arte y la religion.pdf",
+        "category": "teoria",
+        "author": "Max Stirner",
+        "title": "El arte y la religion",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Max Stirner - El falso principio de nuestra educacion.pdf",
+        "category": "teoria",
+        "author": "Max Stirner",
+        "title": "El falso principio de nuestra educacion",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "MijaiL Bakunin": {
+    "books": [
+      {
+        "filename": "MijaiL Bakunin - Critica al marxismo (compilacion).pdf",
+        "category": "teoria",
+        "author": "MijaiL Bakunin",
+        "title": "Critica al marxismo (compilacion)",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "MijaiL Bakunin - Dircuso en el Congreso de la AIT (Basilea, 1869).pdf",
+        "category": "teoria",
+        "author": "MijaiL Bakunin",
+        "title": "Dircuso en el Congreso de la AIT (Basilea, 1869)",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "MijaiL Bakunin - Escritos de filosofia politica I ( Tomo I).pdf",
+        "category": "teoria",
+        "author": "MijaiL Bakunin",
+        "title": "Escritos de filosofia politica I ( Tomo I)",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "MijaiL Bakunin - Escritos de filosofia politica II ( Tomo I).pdf",
+        "category": "teoria",
+        "author": "MijaiL Bakunin",
+        "title": "Escritos de filosofia politica II ( Tomo I)",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "MijaiL Bakunin - Escritos de filosofia politica III ( Tomo II).pdf",
+        "category": "teoria",
+        "author": "MijaiL Bakunin",
+        "title": "Escritos de filosofia politica III ( Tomo II)",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "MijaiL Bakunin - Escritos de filosofia politica (Tomo I).pdf",
+        "category": "teoria",
+        "author": "MijaiL Bakunin",
+        "title": "Escritos de filosofia politica (Tomo I)",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "MijaiL Bakunin - Escritos revolucionarios.pdf",
+        "category": "teoria",
+        "author": "MijaiL Bakunin",
+        "title": "Escritos revolucionarios",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "MijaiL Bakunin - Escritos varios.pdf",
+        "category": "teoria",
+        "author": "MijaiL Bakunin",
+        "title": "Escritos varios",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "MijaiL Bakunin - Incitar a la accion (Antologia).pdf",
+        "category": "teoria",
+        "author": "MijaiL Bakunin",
+        "title": "Incitar a la accion (Antologia)",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "MijaiL Bakunin - La instruccion integral.pdf",
+        "category": "teoria",
+        "author": "MijaiL Bakunin",
+        "title": "La instruccion integral",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "MijaiL Bakunin - Los adormecedores.pdf",
+        "category": "teoria",
+        "author": "MijaiL Bakunin",
+        "title": "Los adormecedores",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "MijaiL Bakunin - Notas sobre Rousseau.pdf",
+        "category": "teoria",
+        "author": "MijaiL Bakunin",
+        "title": "Notas sobre Rousseau",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "MijaiL Bakunin - Proposicion razonada al Comite Central de la Liga de la paz y de la libertad.pdf",
+        "category": "teoria",
+        "author": "MijaiL Bakunin",
+        "title": "Proposicion razonada al Comite Central de la Liga de la paz y de la libertad",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "MijaiL Bakunin - Tacticas revolucionarias.pdf",
+        "category": "teoria",
+        "author": "MijaiL Bakunin",
+        "title": "Tacticas revolucionarias",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "MijaiL Bakunin - Tres conferencias dadas a los obreros del valle de Saint-Imier.pdf",
+        "category": "teoria",
+        "author": "MijaiL Bakunin",
+        "title": "Tres conferencias dadas a los obreros del valle de Saint-Imier",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "MijaiL Bakunin - Unas palabras a mis jovenes hermanos de Rusia.pdf",
+        "category": "teoria",
+        "author": "MijaiL Bakunin",
+        "title": "Unas palabras a mis jovenes hermanos de Rusia",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Miquel Izard": {
+    "books": []
+  },
+  "Murray Bookchin": {
+    "books": [
+      {
+        "filename": "Murray Bookchin - Ecologoa libertaria.pdf",
+        "category": "teoria",
+        "author": "Murray Bookchin",
+        "title": "Ecologoa libertaria",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Murray Bookchin - Ecologoa y pensamiento revolucionario.pdf",
+        "category": "teoria",
+        "author": "Murray Bookchin",
+        "title": "Ecologoa y pensamiento revolucionario",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Murray Bookchin - El significado de Confederalismo.pdf",
+        "category": "teoria",
+        "author": "Murray Bookchin",
+        "title": "El significado de Confederalismo",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Murray Bookchin - Hacia una tecnologoa liberadora.pdf",
+        "category": "teoria",
+        "author": "Murray Bookchin",
+        "title": "Hacia una tecnologoa liberadora",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Murray Bookchin - La ecologoa de la libertad. La emergencia y la disolucin de las jerarquoas.pdf",
+        "category": "teoria",
+        "author": "Murray Bookchin",
+        "title": "La ecologoa de la libertad. La emergencia y la disolucin de las jerarquoas",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Murray Bookchin - La próxima revolución. Las asambleas populares y la promesa de la democracia directa.pdf",
+        "category": "teoria",
+        "author": "Murray Bookchin",
+        "title": "La próxima revolución. Las asambleas populares y la promesa de la democracia directa",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Murray Bookchin - Libertad y necesidad en la Naturaleza. Problemas de itica ecolgica.pdf",
+        "category": "teoria",
+        "author": "Murray Bookchin",
+        "title": "Libertad y necesidad en la Naturaleza. Problemas de itica ecolgica",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Murray Bookchin - Los lomites de la ciudad.pdf",
+        "category": "teoria",
+        "author": "Murray Bookchin",
+        "title": "Los lomites de la ciudad",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Murray Bookchin - Por una sociedad ecolgica.pdf",
+        "category": "teoria",
+        "author": "Murray Bookchin",
+        "title": "Por una sociedad ecolgica",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Murray Bookchin - Seis tesis sobre municipalismo libertario.pdf",
+        "category": "teoria",
+        "author": "Murray Bookchin",
+        "title": "Seis tesis sobre municipalismo libertario",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Murray Bookchin - Sociedad, polotica y Estado.pdf",
+        "category": "teoria",
+        "author": "Murray Bookchin",
+        "title": "Sociedad, polotica y Estado",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Murray Et Al. Bookchin": {
+    "books": [
+      {
+        "filename": "Murray Et Al. Bookchin - La utopoa es posible. Experiencias contemporaneas.pdf",
+        "category": "teoria",
+        "author": "Murray Et Al. Bookchin",
+        "title": "La utopoa es posible. Experiencias contemporaneas",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Nelson MeNdez": {
+    "books": [
+      {
+        "filename": "Nelson MeNdez - Socialismo libertario. Una propuesta para el siglo XXI.pdf",
+        "category": "teoria",
+        "author": "Nelson MeNdez",
+        "title": "Socialismo libertario. Una propuesta para el siglo XXI",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Nestor Majno": {
+    "books": [
+      {
+        "filename": "Nestor Majno - Acerca de la defensa de la revolucion.pdf",
+        "category": "teoria",
+        "author": "Nestor Majno",
+        "title": "Acerca de la defensa de la revolucion",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Nestor Majno - Antologia de escritos.pdf",
+        "category": "teoria",
+        "author": "Nestor Majno",
+        "title": "Antologia de escritos",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Nestor Majno - El abecedario del anarquista revolucionario.pdf",
+        "category": "teoria",
+        "author": "Nestor Majno",
+        "title": "El abecedario del anarquista revolucionario",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Nestor Majno - El poder sovietico, su presente y su futuro.pdf",
+        "category": "teoria",
+        "author": "Nestor Majno",
+        "title": "El poder sovietico, su presente y su futuro",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Nestor Majno - La idea de igualdad y los bolcheviques.pdf",
+        "category": "teoria",
+        "author": "Nestor Majno",
+        "title": "La idea de igualdad y los bolcheviques",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Nestor Majno - Lenin y el leninismo, guias del proletariado mundial.pdf",
+        "category": "teoria",
+        "author": "Nestor Majno",
+        "title": "Lenin y el leninismo, guias del proletariado mundial",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Nestor Majno - Nuestra organizacion.pdf",
+        "category": "teoria",
+        "author": "Nestor Majno",
+        "title": "Nuestra organizacion",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Nestor Majno - Sobre la disciplina revolucionaria.pdf",
+        "category": "teoria",
+        "author": "Nestor Majno",
+        "title": "Sobre la disciplina revolucionaria",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Octave Mirbeau": {
+    "books": [
+      {
+        "filename": "Octave Mirbeau - La huelga de los electores.pdf",
+        "category": "teoria",
+        "author": "Octave Mirbeau",
+        "title": "La huelga de los electores",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Omar Ardila Murcia": {
+    "books": [
+      {
+        "filename": "Omar Ardila Murcia - Antologoa anarquista II.pdf",
+        "category": "teoria",
+        "author": "Omar Ardila Murcia",
+        "title": "Antologoa anarquista II",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Omar Ardila Murcia - Antologoa anarquista I.pdf",
+        "category": "teoria",
+        "author": "Omar Ardila Murcia",
+        "title": "Antologoa anarquista I",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Osvaldo Bayer": {
+    "books": [
+      {
+        "filename": "Osvaldo Bayer - Compilacin de escritos.pdf",
+        "category": "teoria",
+        "author": "Osvaldo Bayer",
+        "title": "Compilacin de escritos",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Osvaldo Bayer - La Única salida es la violencia.pdf",
+        "category": "teoria",
+        "author": "Osvaldo Bayer",
+        "title": "La Única salida es la violencia",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Osvaldo Bayer - Los altruistas.pdf",
+        "category": "teoria",
+        "author": "Osvaldo Bayer",
+        "title": "Los altruistas",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Osvaldo Bayer - Rebeldoa y esperanza.pdf",
+        "category": "teoria",
+        "author": "Osvaldo Bayer",
+        "title": "Rebeldoa y esperanza",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Oyon, Jose Luis Y Serra, Marta": {
+    "books": []
+  },
+  "Patrick Dunn": {
+    "books": [
+      {
+        "filename": "Patrick Dunn - Para abolir la violacin, derrocad el deseo masculino.pdf",
+        "category": "teoria",
+        "author": "Patrick Dunn",
+        "title": "Para abolir la violacin, derrocad el deseo masculino",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Patrick Rossineri": {
+    "books": [
+      {
+        "filename": "Patrick Rossineri - Contra el mercado. Hacia una economia de lo concreto.pdf",
+        "category": "teoria",
+        "author": "Patrick Rossineri",
+        "title": "Contra el mercado. Hacia una economia de lo concreto",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Patrick Rossineri - Renovacion y continuidad en la ideologia anarquista.pdf",
+        "category": "teoria",
+        "author": "Patrick Rossineri",
+        "title": "Renovacion y continuidad en la ideologia anarquista",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Pauline McCormack": {
+    "books": [
+      {
+        "filename": "Pauline McCormack - Por qui la educacin libertaria.pdf",
+        "category": "teoria",
+        "author": "Pauline McCormack",
+        "title": "Por qui la educacin libertaria",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Pedro Esteve": {
+    "books": [
+      {
+        "filename": "Pedro Esteve - Socialismo anarquista.pdf",
+        "category": "teoria",
+        "author": "Pedro Esteve",
+        "title": "Socialismo anarquista",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Pedro Garcia Guirao": {
+    "books": [
+      {
+        "filename": "Pedro Garcia Guirao - Dialogo(s) anarquista(s) en el Caribe hispanohablante. Entrevista a Kirwin R. Shaffer.pdf",
+        "category": "teoria",
+        "author": "Pedro Garcia Guirao",
+        "title": "Dialogo(s) anarquista(s) en el Caribe hispanohablante. Entrevista a Kirwin R. Shaffer",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Pedro Garcia Guirao - La lectura publica y el modelo de las bibliotecas libertarias.pdf",
+        "category": "teoria",
+        "author": "Pedro Garcia Guirao",
+        "title": "La lectura publica y el modelo de las bibliotecas libertarias",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Pedro Garcia Guirao - La voz de la sangre (Una critica anarquista de los valores tradicionales).pdf",
+        "category": "teoria",
+        "author": "Pedro Garcia Guirao",
+        "title": "La voz de la sangre (Una critica anarquista de los valores tradicionales)",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Peter Gelderloos": {
+    "books": [
+      {
+        "filename": "Peter Gelderloos - El fracaso de la noviolencia. de la Primavera Árabe al movimiento 15M.pdf",
+        "category": "teoria",
+        "author": "Peter Gelderloos",
+        "title": "El fracaso de la noviolencia. de la Primavera Árabe al movimiento 15M",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Peter Gelderloos - En defensa de las revoluciones sin loderes.pdf",
+        "category": "teoria",
+        "author": "Peter Gelderloos",
+        "title": "En defensa de las revoluciones sin loderes",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Peter Gelderloos - Hacia un analisis mas profundo del racismo.pdf",
+        "category": "teoria",
+        "author": "Peter Gelderloos",
+        "title": "Hacia un analisis mas profundo del racismo",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Peter Gelderloos - La ciencia patriarcal de los medios corporativos de comunicacin.pdf",
+        "category": "teoria",
+        "author": "Peter Gelderloos",
+        "title": "La ciencia patriarcal de los medios corporativos de comunicacin",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Peter Gelderloos - La diferencia entre la anarquía y la academia.pdf",
+        "category": "teoria",
+        "author": "Peter Gelderloos",
+        "title": "La diferencia entre la anarquía y la academia",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Peter Gelderloos - Un atajo entre el turismo y el terrorismo.pdf",
+        "category": "teoria",
+        "author": "Peter Gelderloos",
+        "title": "Un atajo entre el turismo y el terrorismo",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Philippe Pelletier": {
+    "books": [
+      {
+        "filename": "Philippe Pelletier - Catastrofismo o abandono del sentido critico.pdf",
+        "category": "teoria",
+        "author": "Philippe Pelletier",
+        "title": "Catastrofismo o abandono del sentido critico",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Pierre-Joseph Proudhon": {
+    "books": [
+      {
+        "filename": "Pierre-Joseph Proudhon - Contradicciones poloticas. Teoroa del movimiento constitucional (en el siglo XIX).pdf",
+        "category": "teoria",
+        "author": "Pierre-Joseph Proudhon",
+        "title": "Contradicciones poloticas. Teoroa del movimiento constitucional (en el siglo XIX)",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Pierre-Joseph Proudhon - De la capacidad polotica de las clases jornaleras.pdf",
+        "category": "teoria",
+        "author": "Pierre-Joseph Proudhon",
+        "title": "De la capacidad polotica de las clases jornaleras",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Pierre-Joseph Proudhon - Psicología de la revolución.pdf",
+        "category": "teoria",
+        "author": "Pierre-Joseph Proudhon",
+        "title": "Psicología de la revolución",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Pierre-Joseph Proudhon - Sistema de las contradicciones econmicas o Filosofoa de la miseria.pdf",
+        "category": "teoria",
+        "author": "Pierre-Joseph Proudhon",
+        "title": "Sistema de las contradicciones econmicas o Filosofoa de la miseria",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Pierre-Joseph Proudhon - Teoroa de la contribucin.pdf",
+        "category": "teoria",
+        "author": "Pierre-Joseph Proudhon",
+        "title": "Teoroa de la contribucin",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Pietro Gori": {
+    "books": [
+      {
+        "filename": "Pietro Gori - La anarquía ante los tribunales.pdf",
+        "category": "teoria",
+        "author": "Pietro Gori",
+        "title": "La anarquía ante los tribunales",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Pietro Gori - Las bases sociológicas de la anarquía.pdf",
+        "category": "teoria",
+        "author": "Pietro Gori",
+        "title": "Las bases sociológicas de la anarquía",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Piotr Kropotkin": {
+    "books": [
+      {
+        "filename": "Piotr Kropotkin - Anarcocomunismo, sus fundamentos y principios.pdf",
+        "category": "teoria",
+        "author": "Piotr Kropotkin",
+        "title": "Anarcocomunismo, sus fundamentos y principios",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Piotr Kropotkin - El comunismo anarquista.pdf",
+        "category": "teoria",
+        "author": "Piotr Kropotkin",
+        "title": "El comunismo anarquista",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Piotr Kropotkin - El esporitu de rebelin y otros escritos.pdf",
+        "category": "teoria",
+        "author": "Piotr Kropotkin",
+        "title": "El esporitu de rebelin y otros escritos",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Piotr Kropotkin - Folletos revolucionarios 2. Ley y autoridad.pdf",
+        "category": "teoria",
+        "author": "Piotr Kropotkin",
+        "title": "Folletos revolucionarios 2. Ley y autoridad",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Piotr Kropotkin - La Agricultura.pdf",
+        "category": "teoria",
+        "author": "Piotr Kropotkin",
+        "title": "La Agricultura",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Piotr Kropotkin - La ayuda mutua.pdf",
+        "category": "teoria",
+        "author": "Piotr Kropotkin",
+        "title": "La ayuda mutua",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Piotr Kropotkin - La ciencia moderna y la anarquía.pdf",
+        "category": "teoria",
+        "author": "Piotr Kropotkin",
+        "title": "La ciencia moderna y la anarquía",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Piotr Kropotkin - La moral anarquista y otros escritos.pdf",
+        "category": "teoria",
+        "author": "Piotr Kropotkin",
+        "title": "La moral anarquista y otros escritos",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Piotr Kropotkin - Las carceles y su influencia moral sobre los presos.pdf",
+        "category": "teoria",
+        "author": "Piotr Kropotkin",
+        "title": "Las carceles y su influencia moral sobre los presos",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Piotr Kropotkin - Lo inevitable. Insurrecciones y Revolución. Rebelin y Revolución.pdf",
+        "category": "teoria",
+        "author": "Piotr Kropotkin",
+        "title": "Lo inevitable. Insurrecciones y Revolución. Rebelin y Revolución",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Piotr Kropotkin - Palabras de un rebelde.pdf",
+        "category": "teoria",
+        "author": "Piotr Kropotkin",
+        "title": "Palabras de un rebelde",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Piotr Kropotkin - Un siglo de espera. El gobierno revolucionario.pdf",
+        "category": "teoria",
+        "author": "Piotr Kropotkin",
+        "title": "Un siglo de espera. El gobierno revolucionario",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Praxedis G. Guerrero": {
+    "books": [
+      {
+        "filename": "Praxedis G. Guerrero - Puntos rojos.pdf",
+        "category": "teoria",
+        "author": "Praxedis G. Guerrero",
+        "title": "Puntos rojos",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Praxedis G. Guerrero - Sopla.pdf",
+        "category": "teoria",
+        "author": "Praxedis G. Guerrero",
+        "title": "Sopla",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Rafael Barrett": {
+    "books": [
+      {
+        "filename": "Rafael Barrett - A partir de ahora el combate sera libre (Antologoa).pdf",
+        "category": "teoria",
+        "author": "Rafael Barrett",
+        "title": "A partir de ahora el combate sera libre (Antologoa)",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Rafael Barrett - Germinal (Antologoa).pdf",
+        "category": "teoria",
+        "author": "Rafael Barrett",
+        "title": "Germinal (Antologoa)",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Rafael Barrett - Obras completas III.pdf",
+        "category": "teoria",
+        "author": "Rafael Barrett",
+        "title": "Obras completas III",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Rafael Barrett - Obras completas II.pdf",
+        "category": "teoria",
+        "author": "Rafael Barrett",
+        "title": "Obras completas II",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Rafael Barrett - Obras completas I.pdf",
+        "category": "teoria",
+        "author": "Rafael Barrett",
+        "title": "Obras completas I",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Renzo Novatore": {
+    "books": [
+      {
+        "filename": "Renzo Novatore - Así habló el Único (Escritos).pdf",
+        "category": "teoria",
+        "author": "Renzo Novatore",
+        "title": "Así habló el Único (Escritos)",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Renzo Novatore - El Temperamento Anarquista en el Vrtice de la Historia.pdf",
+        "category": "teoria",
+        "author": "Renzo Novatore",
+        "title": "El Temperamento Anarquista en el Vrtice de la Historia",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Renzo Novatore - En el reino de los fantasmas.pdf",
+        "category": "teoria",
+        "author": "Renzo Novatore",
+        "title": "En el reino de los fantasmas",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Renzo Novatore - La amistad y los amigos.pdf",
+        "category": "teoria",
+        "author": "Renzo Novatore",
+        "title": "La amistad y los amigos",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Renzo Novatore - Perversidad espiritual.pdf",
+        "category": "teoria",
+        "author": "Renzo Novatore",
+        "title": "Perversidad espiritual",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Renzo Novatore - Retornando.pdf",
+        "category": "teoria",
+        "author": "Renzo Novatore",
+        "title": "Retornando",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Renzo Novatore - Yo tambiin soy un Nihilista.pdf",
+        "category": "teoria",
+        "author": "Renzo Novatore",
+        "title": "Yo tambiin soy un Nihilista",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Ricardo Flores Magon": {
+    "books": [
+      {
+        "filename": "Ricardo Flores Magon - La patria burguesa y la patria universal.pdf",
+        "category": "teoria",
+        "author": "Ricardo Flores Magon",
+        "title": "La patria burguesa y la patria universal",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Ricardo Mella Cea": {
+    "books": [
+      {
+        "filename": "Ricardo Mella Cea - Agitacin, organización y revolución.pdf",
+        "category": "teoria",
+        "author": "Ricardo Mella Cea",
+        "title": "Agitacin, organización y revolución",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Ricardo Mella Cea - Anarquoa. Su pasado, presente y su porvenir.pdf",
+        "category": "teoria",
+        "author": "Ricardo Mella Cea",
+        "title": "Anarquoa. Su pasado, presente y su porvenir",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Ricardo Mella Cea - Artoculos.pdf",
+        "category": "teoria",
+        "author": "Ricardo Mella Cea",
+        "title": "Artoculos",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Ricardo Mella Cea - Breves apuntes sobre las pasiones humanas.pdf",
+        "category": "teoria",
+        "author": "Ricardo Mella Cea",
+        "title": "Breves apuntes sobre las pasiones humanas",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Ricardo Mella Cea - Cuestiones de enseanza libertaria II.pdf",
+        "category": "teoria",
+        "author": "Ricardo Mella Cea",
+        "title": "Cuestiones de enseanza libertaria II",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Ricardo Mella Cea - Cuestiones de enseanza libertaria I.pdf",
+        "category": "teoria",
+        "author": "Ricardo Mella Cea",
+        "title": "Cuestiones de enseanza libertaria I",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Ricardo Mella Cea - Cuestiones de enseanza.pdf",
+        "category": "teoria",
+        "author": "Ricardo Mella Cea",
+        "title": "Cuestiones de enseanza",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Ricardo Mella Cea - Divagaciones sobre la enseanza.pdf",
+        "category": "teoria",
+        "author": "Ricardo Mella Cea",
+        "title": "Divagaciones sobre la enseanza",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Ricardo Mella Cea - El colectivismo. Sus fundamentos cientoficos.pdf",
+        "category": "teoria",
+        "author": "Ricardo Mella Cea",
+        "title": "El colectivismo. Sus fundamentos cientoficos",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Ricardo Mella Cea - El socialismo anarquista.pdf",
+        "category": "teoria",
+        "author": "Ricardo Mella Cea",
+        "title": "El socialismo anarquista",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Ricardo Mella Cea - El trabajo, es una necesidad fisiolgica.pdf",
+        "category": "teoria",
+        "author": "Ricardo Mella Cea",
+        "title": "El trabajo, es una necesidad fisiolgica",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Ricardo Mella Cea - Evolucin y revolución.pdf",
+        "category": "teoria",
+        "author": "Ricardo Mella Cea",
+        "title": "Evolucin y revolución",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Ricardo Mella Cea - Forjando un mundo libre.pdf",
+        "category": "teoria",
+        "author": "Ricardo Mella Cea",
+        "title": "Forjando un mundo libre",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Ricardo Mella Cea - La coaccin moral (Fundamentos de una nueva sociedad).pdf",
+        "category": "teoria",
+        "author": "Ricardo Mella Cea",
+        "title": "La coaccin moral (Fundamentos de una nueva sociedad)",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Ricardo Mella Cea - La cooperacin libre y los sistemas de comunidad.pdf",
+        "category": "teoria",
+        "author": "Ricardo Mella Cea",
+        "title": "La cooperacin libre y los sistemas de comunidad",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Ricardo Mella Cea - La lucha de clases.pdf",
+        "category": "teoria",
+        "author": "Ricardo Mella Cea",
+        "title": "La lucha de clases",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Ricardo Mella Cea - Mirando hacia el futuro. Paginas anarquistas.pdf",
+        "category": "teoria",
+        "author": "Ricardo Mella Cea",
+        "title": "Mirando hacia el futuro. Paginas anarquistas",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Ricardo Mella Cea - Revolucionarios so voceros de la revolución, no.pdf",
+        "category": "teoria",
+        "author": "Ricardo Mella Cea",
+        "title": "Revolucionarios so voceros de la revolución, no",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Ricardo Mella Cea - Sinopsis Social. La anarquía, la federación y el colectivismo.pdf",
+        "category": "teoria",
+        "author": "Ricardo Mella Cea",
+        "title": "Sinopsis Social. La anarquía, la federación y el colectivismo",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Ricardo Mella Cea - Tactica Socialista.pdf",
+        "category": "teoria",
+        "author": "Ricardo Mella Cea",
+        "title": "Tactica Socialista",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Richard Cleminson": {
+    "books": [
+      {
+        "filename": "Richard Cleminson - Sexualidad y movimiento libertario. Un debate abierto.pdf",
+        "category": "teoria",
+        "author": "Richard Cleminson",
+        "title": "Sexualidad y movimiento libertario. Un debate abierto",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Rojas, Manuel Y Gonzalez Vera, Jose Santos": {
+    "books": []
+  },
+  "Rudolf Rocker": {
+    "books": [
+      {
+        "filename": "Rudolf Rocker - Escritos seleccionados.pdf",
+        "category": "teoria",
+        "author": "Rudolf Rocker",
+        "title": "Escritos seleccionados",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Rudolf Rocker - La influencia de las ideas absolutistas en el socialismo.pdf",
+        "category": "teoria",
+        "author": "Rudolf Rocker",
+        "title": "La influencia de las ideas absolutistas en el socialismo",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Rudolf Rocker - La maldicion del practicismo. Alaiz, Felipe - Nueva maldicion del practicismo.pdf",
+        "category": "teoria",
+        "author": "Rudolf Rocker",
+        "title": "La maldicion del practicismo. Alaiz, Felipe - Nueva maldicion del practicismo",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Rudolf Rocker - Las bases del sindicalismo revolucionario.pdf",
+        "category": "teoria",
+        "author": "Rudolf Rocker",
+        "title": "Las bases del sindicalismo revolucionario",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Rudolf Rocker - Las corrientes liberales en los Estados Unidos.pdf",
+        "category": "teoria",
+        "author": "Rudolf Rocker",
+        "title": "Las corrientes liberales en los Estados Unidos",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Rudolf Rocker - Marx y el anarquism.pdf",
+        "category": "teoria",
+        "author": "Rudolf Rocker",
+        "title": "Marx y el anarquism",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Rudolf Rocker - Nacionalismo y cultura.pdf",
+        "category": "teoria",
+        "author": "Rudolf Rocker",
+        "title": "Nacionalismo y cultura",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Rudolf Rocker - Por que soy anarquista.pdf",
+        "category": "teoria",
+        "author": "Rudolf Rocker",
+        "title": "Por que soy anarquista",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Sam Dolgoff": {
+    "books": [
+      {
+        "filename": "Sam Dolgoff - Autonomoa y federalismo.pdf",
+        "category": "teoria",
+        "author": "Sam Dolgoff",
+        "title": "Autonomoa y federalismo",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "SeBastien Faure": {
+    "books": [
+      {
+        "filename": "SeBastien Faure - El dolor universal.pdf",
+        "category": "teoria",
+        "author": "SeBastien Faure",
+        "title": "El dolor universal",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "SeBastien Faure - Hacia la dicha.pdf",
+        "category": "teoria",
+        "author": "SeBastien Faure",
+        "title": "Hacia la dicha",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "SeBastien Faure - La crisis economica y el paro forzoso.pdf",
+        "category": "teoria",
+        "author": "SeBastien Faure",
+        "title": "La crisis economica y el paro forzoso",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "SeBastien Faure - La sintesis anarquista.pdf",
+        "category": "teoria",
+        "author": "SeBastien Faure",
+        "title": "La sintesis anarquista",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "SeBastien Faure - Temas subversivos. La conmocion revolucionaria.pdf",
+        "category": "teoria",
+        "author": "SeBastien Faure",
+        "title": "Temas subversivos. La conmocion revolucionaria",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Severino Di Giovanni": {
+    "books": [
+      {
+        "filename": "Severino Di Giovanni - El Derecho al Ocio y a la Expropiacin Individual.pdf",
+        "category": "teoria",
+        "author": "Severino Di Giovanni",
+        "title": "El Derecho al Ocio y a la Expropiacin Individual",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Silvio Gallo": {
+    "books": [
+      {
+        "filename": "Silvio Gallo - El paradigma anarquista de la educacin.pdf",
+        "category": "teoria",
+        "author": "Silvio Gallo",
+        "title": "El paradigma anarquista de la educacin",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Silvio Gallo - Pedagogoa libertaria. Principios polotico-filosficos.pdf",
+        "category": "teoria",
+        "author": "Silvio Gallo",
+        "title": "Pedagogoa libertaria. Principios polotico-filosficos",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Simon Springer": {
+    "books": [
+      {
+        "filename": "Simon Springer - Las raices anarquistas de la geografia. Hacia la emancipacion espacial.pdf",
+        "category": "teoria",
+        "author": "Simon Springer",
+        "title": "Las raices anarquistas de la geografia. Hacia la emancipacion espacial",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Teresa Claramunt": {
+    "books": [
+      {
+        "filename": "Teresa Claramunt - Anarquistas meditemos.pdf",
+        "category": "teoria",
+        "author": "Teresa Claramunt",
+        "title": "Anarquistas meditemos",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Teresa Claramunt - La acracia... hara justicia a la mujer.pdf",
+        "category": "teoria",
+        "author": "Teresa Claramunt",
+        "title": "La acracia... hara justicia a la mujer",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Teresa Claramunt - La anarquía regenera la humanidad.pdf",
+        "category": "teoria",
+        "author": "Teresa Claramunt",
+        "title": "La anarquía regenera la humanidad",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Teresa Claramunt - Posibilidad de la vida en la anarquía.pdf",
+        "category": "teoria",
+        "author": "Teresa Claramunt",
+        "title": "Posibilidad de la vida en la anarquía",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Tiqqun": {
+    "books": [
+      {
+        "filename": "Tiqqun - Compilacion de textos.pdf",
+        "category": "teoria",
+        "author": "Tiqqun",
+        "title": "Compilacion de textos",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Tiqqun - De la economia considerada como magia negra.pdf",
+        "category": "teoria",
+        "author": "Tiqqun",
+        "title": "De la economia considerada como magia negra",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Tiqqun - Esto no es un programa.pdf",
+        "category": "teoria",
+        "author": "Tiqqun",
+        "title": "Esto no es un programa",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Tiqqun - La hipotesis cibernetica.pdf",
+        "category": "teoria",
+        "author": "Tiqqun",
+        "title": "La hipotesis cibernetica",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Tiqqun - Llamamiento y otros fogonazos.pdf",
+        "category": "teoria",
+        "author": "Tiqqun",
+        "title": "Llamamiento y otros fogonazos",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Tiqqun - Primeros materiales para una teoria de la Jovencita.pdf",
+        "category": "teoria",
+        "author": "Tiqqun",
+        "title": "Primeros materiales para una teoria de la Jovencita",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Tiqqun - Teoria del Bloom.pdf",
+        "category": "teoria",
+        "author": "Tiqqun",
+        "title": "Teoria del Bloom",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Uri Gordon": {
+    "books": [
+      {
+        "filename": "Uri Gordon - Negros presagios. Polotica anarquista en la era del colapso.pdf",
+        "category": "teoria",
+        "author": "Uri Gordon",
+        "title": "Negros presagios. Polotica anarquista en la era del colapso",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Varios autores": {
+    "books": [
+      {
+        "filename": "Varios autores - Aspectos sociales de la humanidad. El sindicalismo. Origen, tacticas y propositos.pdf",
+        "category": "teoria",
+        "author": "Varios autores",
+        "title": "Aspectos sociales de la humanidad. El sindicalismo. Origen, tacticas y propositos",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Varios autores - Economia anarquista. Una vision global.pdf",
+        "category": "teoria",
+        "author": "Varios autores",
+        "title": "Economia anarquista. Una vision global",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Varios autores - Eduacion anarquista. Aprendizajes para una sociedad libre.pdf",
+        "category": "teoria",
+        "author": "Varios autores",
+        "title": "Eduacion anarquista. Aprendizajes para una sociedad libre",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Varios autores - Ejercitos en las calles. Sudamerica.pdf",
+        "category": "teoria",
+        "author": "Varios autores",
+        "title": "Ejercitos en las calles. Sudamerica",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Varios autores - Guerra al patriarcado. Guerra a la tecnologia asesina.pdf",
+        "category": "teoria",
+        "author": "Varios autores",
+        "title": "Guerra al patriarcado. Guerra a la tecnologia asesina",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Varios autores - Los pies en la tierra. Reflexiones y experiencias hacia un movimiento agroecologico.pdf",
+        "category": "teoria",
+        "author": "Varios autores",
+        "title": "Los pies en la tierra. Reflexiones y experiencias hacia un movimiento agroecologico",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Varios autores - Primera punalada al nacionalismo.pdf",
+        "category": "teoria",
+        "author": "Varios autores",
+        "title": "Primera punalada al nacionalismo",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Varios autores - Red de solidadridad de seattle. Una experiencia de apoyo mutuo y accion directa.pdf",
+        "category": "teoria",
+        "author": "Varios autores",
+        "title": "Red de solidadridad de seattle. Una experiencia de apoyo mutuo y accion directa",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Varios autores - Segunda punalada al nacionalismo.pdf",
+        "category": "teoria",
+        "author": "Varios autores",
+        "title": "Segunda punalada al nacionalismo",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Varios autores - Textos contra el trabajo.pdf",
+        "category": "teoria",
+        "author": "Varios autores",
+        "title": "Textos contra el trabajo",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Varios autores - Tomar y hacer en vez de pedir y esperar. Autonomia y movimientos sociales.pdf",
+        "category": "teoria",
+        "author": "Varios autores",
+        "title": "Tomar y hacer en vez de pedir y esperar. Autonomia y movimientos sociales",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Victor Griffuelhes": {
+    "books": [
+      {
+        "filename": "Victor Griffuelhes - El sindicalismo revolucionario.pdf",
+        "category": "teoria",
+        "author": "Victor Griffuelhes",
+        "title": "El sindicalismo revolucionario",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Victor Griffuelhes - La accin sindicalista.pdf",
+        "category": "teoria",
+        "author": "Victor Griffuelhes",
+        "title": "La accin sindicalista",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Wayne Price": {
+    "books": [
+      {
+        "filename": "Wayne Price - Firmeza en los principios, flexibilidad en las tacticas.pdf",
+        "category": "teoria",
+        "author": "Wayne Price",
+        "title": "Firmeza en los principios, flexibilidad en las tacticas",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "William Godwin": {
+    "books": [
+      {
+        "filename": "William Godwin - Investigacin acerca de la justicia polotica y su influencia en la virtud y la dicha generales.pdf",
+        "category": "teoria",
+        "author": "William Godwin",
+        "title": "Investigacin acerca de la justicia polotica y su influencia en la virtud y la dicha generales",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Austria": {
+    "iso": "at",
+    "books": [
+      {
+        "filename": "Max Nettlau - Desde Austria (cartas a Les Tempes Nouveaux de Paros).pdf",
+        "category": "historia",
+        "author": "Max Nettlau",
+        "title": "Desde Austria (cartas a Les Tempes Nouveaux de Paros)",
+        "year": null,
+        "rating": null
+      }
+    ]
+  },
+  "Ecuador": {
+    "iso": "ec",
+    "books": [
+      {
+        "filename": "Miquel Izard - Un ambito libertario llamado Javaro.pdf",
+        "category": "historia",
+        "author": "Miquel Izard",
+        "title": "Un ambito libertario llamado Javaro",
+        "year": null,
+        "rating": null
       }
     ]
   }

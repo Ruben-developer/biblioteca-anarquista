@@ -25,9 +25,11 @@ const COUNTRY_NAME_TO_REGION = {
   nigeria: 'Nigeria',
   // Países añadidos en la importación de 2026-08-19 (historia-anarquista)
   armenia: 'Armenia',
+  austria: 'Austria',
   brazil: 'Brasil',
   china: 'China',
   cuba: 'Cuba',
+  ecuador: 'Ecuador',
   egypt: 'Egipto',
   greece: 'Grecia',
   macedonia: 'Macedonia',
