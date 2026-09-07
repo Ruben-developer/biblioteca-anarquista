@@ -72,7 +72,7 @@ describe('WorldMapView edge cases', () => {
     expect(html).toContain('Muchos textos');
   });
 
-  it('ignora regiones sin código ISO en el mapamundi pero las lista como botón', () => {
+  it('ignora regiones sin código ISO en el mapamundi y no las lista como botón', () => {
     const dataConRegionSinISO = {
       ...regionData,
       'Tierra de Nadie': {
@@ -82,10 +82,10 @@ describe('WorldMapView edge cases', () => {
     const html = renderToStaticMarkup(
       <WorldMapView darkMode={false} regionData={dataConRegionSinISO} onSelectRegion={noop} />
     );
-    // La región sin ISO aparece como botón de navegación (tiene 1 histórico)...
-    expect(html).toContain('Tierra de Nadie');
-    // ...con el singular correcto
-    expect(html).toContain('1 texto histórico');
+    // La región sin ISO no aparece como botón de navegación: la vista del mapa
+    // es solo para países/regiones geográficas (con ISO). Sus textos siguen
+    // accesibles en Biblioteca y Autores.
+    expect(html).not.toContain('Tierra de Nadie');
   });
 
   it('tolera regiones sin lista de libros', () => {
@@ -127,7 +127,7 @@ describe('WorldMapView — países con 0 textos históricos no se marcan en el m
     expect(fiMatch[1]).toContain('#e7e5e4'); // gris por defecto en modo claro
     expect(fiMatch[1]).not.toMatch(/rgb\(/);
     // Regla de negocio: con 0 textos históricos, la región NO genera tarjeta
-    // en "O navega por región" (solo aparecen regiones con ≥1 histórico).
+    // en "O navega por región" (solo aparecen países con ISO y ≥1 histórico).
     expect(html).not.toMatch(/(^|[^0-9])0 textos históricos/);
   });
 

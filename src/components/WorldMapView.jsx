@@ -128,8 +128,8 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {Object.entries(regionData)
-          .map(([region]) => ({ region, count: getHistoricalBooks(regionData, region).length }))
-          .filter(({ count }) => count > 0)
+          .map(([region, data]) => ({ region, iso: data?.iso, count: getHistoricalBooks(regionData, region).length }))
+          .filter(({ count, iso }) => count > 0 && iso)
           .sort((a, b) => b.count - a.count)
           .map(({ region, count }) => (
           <button

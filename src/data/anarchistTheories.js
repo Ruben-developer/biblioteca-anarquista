@@ -48,7 +48,6 @@ export const anarchistTheories = [
       "Origen y evolución de la moral",
       "Campos, fábricas y talleres",
       "Etapas del pensamiento socialista",
-      "Prehistoria del anarquismo",
       "Sentido del positivismo latinoamericano",
       "Socialismo utópico y anarquía",
       "Lenin: sepulturero de la revolución rusa",

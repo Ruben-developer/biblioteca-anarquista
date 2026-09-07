@@ -2229,6 +2229,38 @@ export const regionData = {
         "category": "historia",
         "rating": 4.5,
         "filename": "Francisco Madrid Santos - Los anarquistas internacionales en la Revolución española.pdf"
+      },
+      {
+        "filename": "Clara E. Lida - Discurso e imaginario en la cultura anarquista.pdf",
+        "category": "historia",
+        "author": "Clara E. Lida",
+        "title": "Discurso e imaginario en la cultura anarquista",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - Prólogo de Camille Pert En Anarquoa.pdf",
+        "category": "historia",
+        "author": "Anselmo Lorenzo",
+        "title": "Prólogo de Camille Pert En Anarquoa",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - Prólogo de Jean Grave Tierra Libre.pdf",
+        "category": "historia",
+        "author": "Anselmo Lorenzo",
+        "title": "Prólogo de Jean Grave Tierra Libre",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Anselmo Lorenzo - Prólogo de Kropotkin La Gran Revolución.pdf",
+        "category": "historia",
+        "author": "Anselmo Lorenzo",
+        "title": "Prólogo de Kropotkin La Gran Revolución",
+        "year": null,
+        "rating": null
       }
     ]
   },
@@ -2519,6 +2551,14 @@ export const regionData = {
         "category": "teoria",
         "author": "Camillo Berneri",
         "title": "Escritos VII (Antifascismo)",
+        "year": null,
+        "rating": null
+      },
+      {
+        "filename": "Luce Fabbri - Garibaldi y el socialismo de su tiempo.pdf",
+        "category": "historia",
+        "author": "Luce Fabbri",
+        "title": "Garibaldi y el socialismo de su tiempo",
         "year": null,
         "rating": null
       }
@@ -3476,6 +3516,22 @@ export const regionData = {
         "category": "historia",
         "rating": 4.5,
         "filename": "Varios autores - Una realización colectivista en Palestina.pdf"
+      },
+      {
+        "title": "Prehistoria del anarquismo",
+        "author": "Ángel J. Cappelletti",
+        "pubYear": 1983,
+        "category": "historia",
+        "rating": 4.5,
+        "filename": "Ángel J. Cappelletti - Prehistoria del anarquismo.pdf"
+      },
+      {
+        "filename": "Max Nettlau - Esbozo de historia de las utopoas.pdf",
+        "category": "historia",
+        "author": "Max Nettlau",
+        "title": "Esbozo de historia de las utopoas",
+        "year": null,
+        "rating": null
       }
     ]
   },
@@ -6088,14 +6144,6 @@ export const regionData = {
         "filename": "Ángel J. Cappelletti - Etapas del pensamiento socialista.pdf"
       },
       {
-        "title": "Prehistoria del anarquismo",
-        "author": "Ángel J. Cappelletti",
-        "pubYear": 1983,
-        "category": "historia",
-        "rating": 4.5,
-        "filename": "Ángel J. Cappelletti - Prehistoria del anarquismo.pdf"
-      },
-      {
         "title": "Sentido del positivismo latinoamericano",
         "author": "Ángel J. Cappelletti",
         "category": "teoria",
@@ -6538,14 +6586,6 @@ export const regionData = {
         "rating": null
       },
       {
-        "filename": "Anselmo Lorenzo - Prólogo de Camille Pert En Anarquoa.pdf",
-        "category": "historia",
-        "author": "Anselmo Lorenzo",
-        "title": "Prólogo de Camille Pert En Anarquoa",
-        "year": null,
-        "rating": null
-      },
-      {
         "filename": "Anselmo Lorenzo - Prólogo de Francisco Ferrer Ferrer y La Huelga General.pdf",
         "category": "teoria",
         "author": "Anselmo Lorenzo",
@@ -6562,26 +6602,10 @@ export const regionData = {
         "rating": null
       },
       {
-        "filename": "Anselmo Lorenzo - Prólogo de Jean Grave Tierra Libre.pdf",
-        "category": "historia",
-        "author": "Anselmo Lorenzo",
-        "title": "Prólogo de Jean Grave Tierra Libre",
-        "year": null,
-        "rating": null
-      },
-      {
         "filename": "Anselmo Lorenzo - Prólogo de Josi Lpez Montenegro El botn de fuego.pdf",
         "category": "teoria",
         "author": "Anselmo Lorenzo",
         "title": "Prólogo de Josi Lpez Montenegro El botn de fuego",
-        "year": null,
-        "rating": null
-      },
-      {
-        "filename": "Anselmo Lorenzo - Prólogo de Kropotkin La Gran Revolución.pdf",
-        "category": "historia",
-        "author": "Anselmo Lorenzo",
-        "title": "Prólogo de Kropotkin La Gran Revolución",
         "year": null,
         "rating": null
       },
@@ -6876,16 +6900,7 @@ export const regionData = {
     ]
   },
   "Clara E. Lida": {
-    "books": [
-      {
-        "filename": "Clara E. Lida - Discurso e imaginario en la cultura anarquista.pdf",
-        "category": "historia",
-        "author": "Clara E. Lida",
-        "title": "Discurso e imaginario en la cultura anarquista",
-        "year": null,
-        "rating": null
-      }
-    ]
+    "books": []
   },
   "CNT": {
     "books": [
@@ -8018,14 +8033,6 @@ export const regionData = {
         "rating": null
       },
       {
-        "filename": "Luce Fabbri - Garibaldi y el socialismo de su tiempo.pdf",
-        "category": "historia",
-        "author": "Luce Fabbri",
-        "title": "Garibaldi y el socialismo de su tiempo",
-        "year": null,
-        "rating": null
-      },
-      {
         "filename": "Luce Fabbri - La libertad entre la historia y la utopoa.pdf",
         "category": "teoria",
         "author": "Luce Fabbri",
@@ -8190,14 +8197,6 @@ export const regionData = {
         "category": "teoria",
         "author": "Max Nettlau",
         "title": "El lugar de las ideas libertarias en la serie de las liberaciones humanas",
-        "year": null,
-        "rating": null
-      },
-      {
-        "filename": "Max Nettlau - Esbozo de historia de las utopoas.pdf",
-        "category": "historia",
-        "author": "Max Nettlau",
-        "title": "Esbozo de historia de las utopoas",
         "year": null,
         "rating": null
       },
