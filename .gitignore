@@ -20,3 +20,4 @@ yarn-error.log*
 .scannerwork/
 pdfs-no-configurados/
 pdfs-descartes/
+data/registros/**/*.txt
