@@ -67,7 +67,8 @@ export const anarchistTheories = [
       "La ciencia moderna y la anarquía",
       "La moral anarquista y otros escritos",
       "Las carceles y su influencia moral sobre los presos",
-      "Palabras de un rebelde"
+      "Palabras de un rebelde",
+      "Lo inevitable. Insurrecciones y Revolución. Rebelin y Revolución"
     ]
   },
   {
@@ -194,7 +195,8 @@ export const anarchistTheories = [
       "Teoroa de la contribucin",
       "Contradicciones poloticas. Teoroa del movimiento constitucional (en el siglo XIX)",
       "De la capacidad polotica de las clases jornaleras",
-      "Sistema de las contradicciones econmicas o Filosofoa de la miseria"
+      "Sistema de las contradicciones econmicas o Filosofoa de la miseria",
+      "Psicología de la revolución"
     ]
   },
   {
@@ -240,7 +242,8 @@ export const anarchistTheories = [
       "En el reino de los fantasmas",
       "La amistad y los amigos",
       "Perversidad espiritual",
-      "Retornando"
+      "Retornando",
+      "Así habló el Único (Escritos)"
     ]
   },
   {
@@ -438,7 +441,10 @@ export const anarchistTheories = [
       "Un atajo entre el turismo y el terrorismo",
       "Puntos rojos",
       "Sopla",
-      "La patria burguesa y la patria universal"
+      "La patria burguesa y la patria universal",
+      "Cuando se halla el pueblo preparado para la libertad",
+      "La Única salida es la violencia",
+      "Hacia una nueva revolución"
     ]
   },
   {
@@ -719,7 +725,14 @@ export const anarchistTheories = [
       "Primera punalada al nacionalismo",
       "Segunda punalada al nacionalismo",
       "Textos contra el trabajo",
-      "Firmeza en los principios, flexibilidad en las tacticas"
+      "Firmeza en los principios, flexibilidad en las tacticas",
+      "El derecho a la evolución",
+      "La revolución es la paz (II Certamen Socialista)",
+      "El concepto anarquista de la revolución",
+      "La revolución. Entre el azar y la necesidad",
+      "Agitacin, organización y revolución",
+      "Evolucin y revolución",
+      "Revolucionarios so voceros de la revolución, no"
     ]
   },
   {
@@ -771,7 +784,8 @@ export const anarchistTheories = [
       "Nuevas paginas libres",
       "Paginas libres",
       "Propaganda y ataque",
-      "Selección de ensayos y obra poética"
+      "Selección de ensayos y obra poética",
+      "Acracia o República"
     ]
   },
   {
@@ -804,7 +818,8 @@ export const anarchistTheories = [
       "La hipotesis cibernetica",
       "Llamamiento y otros fogonazos",
       "Primeros materiales para una teoria de la Jovencita",
-      "Teoria del Bloom"
+      "Teoria del Bloom",
+      "Ocho sencillos pasos hacia la revolución"
     ]
   },
   {
@@ -854,7 +869,8 @@ export const anarchistTheories = [
       "Anarquismos no occidentales. Reflexiones sobre el contexto global",
       "Problemas del anarquismo y la revolución en China",
       "América, hoy",
-      "Dialogo(s) anarquista(s) en el Caribe hispanohablante. Entrevista a Kirwin R. Shaffer"
+      "Dialogo(s) anarquista(s) en el Caribe hispanohablante. Entrevista a Kirwin R. Shaffer",
+      "La próxima revolución. Las asambleas populares y la promesa de la democracia directa"
     ]
   },
   {
@@ -928,7 +944,8 @@ export const anarchistTheories = [
       "Germinal (Antologoa)",
       "Obras completas III",
       "Obras completas II",
-      "Obras completas I"
+      "Obras completas I",
+      "El arte en la revolución"
     ]
   },
   {
@@ -969,7 +986,8 @@ export const anarchistTheories = [
       "Guoa practico-utpica del inminente colapso",
       "Los nuevos anarquistas",
       "Occupy, la deuda y los lomites histricos del capitalismo. Entrevista",
-      "Hacia un analisis mas profundo del racismo"
+      "Hacia un analisis mas profundo del racismo",
+      "El fracaso de la noviolencia. de la Primavera Árabe al movimiento 15M"
     ]
   },
   {
@@ -992,7 +1010,8 @@ export const anarchistTheories = [
       "El Reino de Dios está dentro de vosotros",
       "¿Qué es el arte?",
       "Reflexiones sobre las causas de la libertad y de la opresión social",
-      "Anarquía y cristianismo"
+      "Anarquía y cristianismo",
+      "La justicia en el evangelio (La revolución intelectual. El derecho a la vida)"
     ]
   },
   {
@@ -1017,7 +1036,8 @@ export const anarchistTheories = [
       "AnarQueer 6",
       "AnarQueer 7",
       "AnarQueer 8",
-      "Queer explicado para anarquistas"
+      "Queer explicado para anarquistas",
+      "Ética amatoria del deseo libertario y las afectaciones libres y alegres y las afectaciones libres y alegres"
     ]
   },
   {
