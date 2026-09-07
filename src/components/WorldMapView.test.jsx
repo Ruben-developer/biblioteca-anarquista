@@ -83,9 +83,17 @@ describe('WorldMapView edge cases', () => {
       <WorldMapView darkMode={false} regionData={dataConRegionSinISO} onSelectRegion={noop} />
     );
     // La región sin ISO no aparece como botón de navegación: la vista del mapa
-    // es solo para países/regiones geográficas (con ISO). Sus textos siguen
-    // accesibles en Biblioteca y Autores.
+    // es solo para países/regiones geográficas (con ISO) más "Internacional".
+    // Sus textos siguen accesibles en Biblioteca y Autores.
     expect(html).not.toContain('Tierra de Nadie');
+  });
+
+  it('la tarjeta "Internacional" sí aparece aunque no tenga ISO', () => {
+    const html = renderToStaticMarkup(
+      <WorldMapView darkMode={false} regionData={regionData} onSelectRegion={noop} />
+    );
+    // Guarda la historia sin región determinada (varios lugares a la vez).
+    expect(html).toContain('Internacional');
   });
 
   it('tolera regiones sin lista de libros', () => {
