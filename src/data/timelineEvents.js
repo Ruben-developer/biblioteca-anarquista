@@ -349,6 +349,20 @@ export const timelineEvents = [
     ]
   },
   {
+    "year": 1934,
+    "decade": "1930s",
+    "type": "con_texto",
+    "title": "Asturias 1934: insurrección obrera",
+    "quote": "Muchas mujeres formaban parte de ellas, jóvenes libertarias y socialistas, que habían unido su suerte a la de sus padres, novios, hermanos.",
+    "author": "Federica Montseny",
+    "description": "1934 · España — Insurrección obrera de octubre de 1934 en Asturias y su represión; las mujeres libertarias en la revuelta.",
+    "region": "España",
+    "category": "historia",
+    "relatedTexts": [
+      "Heroínas"
+    ]
+  },
+  {
     "year": 1935,
     "decade": "1930s",
     "type": "con_texto",
@@ -389,7 +403,8 @@ export const timelineEvents = [
       "Ante la guerra. El movimiento anarquista y la matanza mundial de 1914-1918",
       "Los anarquistas españoles y el poder (1868-1969)",
       "La historiografía reciente sobre la guerra civil. El rigor histórico contra el rigor mortis",
-      "La revuelta permanente"
+      "La revuelta permanente",
+      "Arcangeles. Doce historias de revolucionarios herejes del siglo XX"
     ]
   },
   {
@@ -529,7 +544,8 @@ export const timelineEvents = [
       "Actividad política de la izquierda libertaria en la Comarca del Vallès Occidental durante la Guerra Civil",
       "El poder político anarcosindicalista en los ayuntamientos del Vallès occidental (1936-1939)",
       "Papeles de plomo. Los voluntarios uruguayos en la guerra de España",
-      "Entre el pacto y la revolución. El movimiento libertario en la primavera de 1936"
+      "Entre el pacto y la revolución. El movimiento libertario en la primavera de 1936",
+      "biografías del 36"
     ]
   },
   {
@@ -589,7 +605,8 @@ export const timelineEvents = [
       "En relación con el Caso Scala. Nueva ofensiva policial contra la CNT y el MLE",
       "Guerrilla anarquista leonesa",
       "Historia de diez años",
-      "Fascismo y anarquismo en la España contemporánea"
+      "Fascismo y anarquismo en la España contemporánea",
+      "Tras el antifaz. La resistencia"
     ]
   },
   {

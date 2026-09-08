@@ -2261,6 +2261,27 @@ export const regionData = {
         "title": "Prólogo de Kropotkin La Gran Revolución",
         "year": null,
         "rating": null
+      },
+      {
+        "title": "Heroínas",
+        "author": "Federica Montseny",
+        "pubYear": null,
+        "category": "historia",
+        "filename": "Federica Montseny - Heroínas.pdf"
+      },
+      {
+        "title": "biografías del 36",
+        "author": "Varios autores",
+        "pubYear": null,
+        "category": "historia",
+        "filename": "Varios autores - biografías del 36.pdf"
+      },
+      {
+        "title": "Tras el antifaz. La resistencia",
+        "author": "Rodrigo Vescovi",
+        "pubYear": null,
+        "category": "historia",
+        "filename": "Rodrigo Vescovi - Tras el antifaz. La resistencia.pdf"
       }
     ]
   },
@@ -3532,6 +3553,13 @@ export const regionData = {
         "title": "Esbozo de historia de las utopoas",
         "year": null,
         "rating": null
+      },
+      {
+        "title": "Arcangeles. Doce historias de revolucionarios herejes del siglo XX",
+        "author": "Paco Ignacio Taibo II",
+        "pubYear": null,
+        "category": "historia",
+        "filename": "Paco Ignacio Taibo II - Arcangeles. Doce historias de revolucionarios herejes del siglo XX.pdf"
       }
     ]
   },
@@ -6276,6 +6304,22 @@ export const regionData = {
         "title": "Tesis de Cosenza. El problema del empleo. Por una critica libertaria de la perspectiva anarco-sindicalista",
         "year": null,
         "rating": null
+      },
+      {
+        "title": "Errico Malatesta y la violencia revolucionaria (2010)",
+        "author": "Alfredo M. Bonanno",
+        "pubYear": 2010,
+        "category": "acratas",
+        "filename": "Alfredo M. Bonanno - Errico Malatesta y la violencia revolucionaria (2010).pdf",
+        "subject": "Errico Malatesta"
+      },
+      {
+        "title": "Unas breves notas sobre Sacco y Vanzetti",
+        "author": "Alfredo M. Bonanno",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Alfredo M. Bonanno - Unas breves notas sobre Sacco y Vanzetti.pdf",
+        "subject": "Ferdinando Nicola Sacco y Bartolomeo Vanzetti"
       }
     ]
   },
@@ -6648,6 +6692,30 @@ export const regionData = {
         "title": "Voa libre. El trabajador. Su ideal emancipador",
         "year": null,
         "rating": null
+      },
+      {
+        "title": "Biografía de Miguel Bakunin",
+        "author": "Anselmo Lorenzo",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Anselmo Lorenzo - Biografía de Miguel Bakunin.pdf",
+        "subject": "Mijaíl Bakunin"
+      },
+      {
+        "title": "Biografía de Pedro Kropotkin",
+        "author": "Anselmo Lorenzo",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Anselmo Lorenzo - Biografía de Pedro Kropotkin.pdf",
+        "subject": "Piotr Kropotkin"
+      },
+      {
+        "title": "Miguel Bakounine, estudio biográfico",
+        "author": "Anselmo Lorenzo",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Anselmo Lorenzo - Miguel Bakounine, estudio biográfico.pdf",
+        "subject": "Mijaíl Bakunin"
       }
     ]
   },
@@ -7347,6 +7415,46 @@ export const regionData = {
         "title": "Situacin social de la mujer",
         "year": null,
         "rating": null
+      },
+      {
+        "title": "Francisco Ferrer y la escuela moderna",
+        "author": "Emma Goldman",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Emma Goldman - Francisco Ferrer y la escuela moderna.pdf",
+        "subject": "Francisco Ferrer Guardia"
+      },
+      {
+        "title": "Fraternalmente, Emma. Cartas de amor y de guerra (2008)",
+        "author": "Emma Goldman",
+        "pubYear": 2008,
+        "category": "acratas",
+        "filename": "Emma Goldman - Fraternalmente, Emma. Cartas de amor y de guerra (2008).pdf",
+        "subject": "Emma Goldman"
+      },
+      {
+        "title": "La mujer más peligrosa del mundo",
+        "author": "Emma Goldman",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Emma Goldman - La mujer más peligrosa del mundo.pdf",
+        "subject": "Emma Goldman"
+      },
+      {
+        "title": "Viviendo mi vida (Vol. I) (1996)",
+        "author": "Emma Goldman",
+        "pubYear": 1996,
+        "category": "acratas",
+        "filename": "Emma Goldman - Viviendo mi vida (Vol. I) (1996).pdf",
+        "subject": "Emma Goldman"
+      },
+      {
+        "title": "Viviendo mi vida (Vol. II) (1996)",
+        "author": "Emma Goldman",
+        "pubYear": 1996,
+        "category": "acratas",
+        "filename": "Emma Goldman - Viviendo mi vida (Vol. II) (1996).pdf",
+        "subject": "Emma Goldman"
       }
     ]
   },
@@ -7439,6 +7547,22 @@ export const regionData = {
         "title": "Nuestro ideario",
         "year": null,
         "rating": null
+      },
+      {
+        "title": "Carta a Luigi Fabbri sobre los bolcheviques",
+        "author": "Errico Malatesta",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Errico Malatesta - Carta a Luigi Fabbri sobre los bolcheviques.pdf",
+        "subject": "Luigi Fabbri"
+      },
+      {
+        "title": "Respuesta a Majno (Una respuesta a Sobre la Plataforma)",
+        "author": "Errico Malatesta",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Errico Malatesta - Respuesta a Majno (Una respuesta a Sobre la Plataforma).pdf",
+        "subject": "Néstor Majno"
       }
     ]
   },
@@ -7483,6 +7607,22 @@ export const regionData = {
         "title": "Las lecciones de una experiencia historica",
         "year": null,
         "rating": null
+      },
+      {
+        "title": "Mis primeros cuarenta años (1987)",
+        "author": "Federica Montseny",
+        "pubYear": 1987,
+        "category": "acratas",
+        "filename": "Federica Montseny - Mis primeros cuarenta años (1987).pdf",
+        "subject": "Federica Montseny"
+      },
+      {
+        "title": "Vida y obra de Anselmo Lorenzo",
+        "author": "Federica Montseny",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Federica Montseny - Vida y obra de Anselmo Lorenzo.pdf",
+        "subject": "Anselmo Lorenzo"
       }
     ]
   },
@@ -7587,6 +7727,14 @@ export const regionData = {
         "title": "Principios de moral cientofica",
         "year": null,
         "rating": null
+      },
+      {
+        "title": "Testamento",
+        "author": "Francisco Ferrer Guardia",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Francisco Ferrer Guardia - Testamento.pdf",
+        "subject": "Francisco Ferrer Guardia"
       }
     ]
   },
@@ -7599,6 +7747,22 @@ export const regionData = {
         "title": "Apuntes largos sobre la ciencia",
         "year": null,
         "rating": null
+      },
+      {
+        "title": "Diálogo entre Lenin y Kropotkin",
+        "author": "Frank Mintz",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Frank Mintz - Diálogo entre Lenin y Kropotkin.pdf",
+        "subject": "Piotr Kropotkin"
+      },
+      {
+        "title": "Vigencia del pensamiento de Camillo Berneri",
+        "author": "Frank Mintz",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Frank Mintz - Vigencia del pensamiento de Camillo Berneri.pdf",
+        "subject": "Camillo Berneri"
       }
     ]
   },
@@ -7827,6 +7991,46 @@ export const regionData = {
         "title": "Lo intimo en algunas memorias de anarquistas espanoles",
         "year": null,
         "rating": null
+      },
+      {
+        "title": "Aproximación a las fuentes del pensamiento filosófico y político de Manuel González Prada. Un bosquejo de biografía intelectual",
+        "author": "Joel Delhom",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Joel Delhom - Aproximación a las fuentes del pensamiento filosófico y político de Manuel González Prada. Un bosquejo de biografía intelectual.pdf",
+        "subject": "Manuel González Prada"
+      },
+      {
+        "title": "El discurso sobre la mujer y su emancipación en Manuel González Prada. Entre romanticismo, positivismo y anarquismo",
+        "author": "Joel Delhom",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Joel Delhom - El discurso sobre la mujer y su emancipación en Manuel González Prada. Entre romanticismo, positivismo y anarquismo.pdf",
+        "subject": "Manuel González Prada"
+      },
+      {
+        "title": "González Prada y Estados Unidos. Una admiración discreta y lúcida",
+        "author": "Joel Delhom",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Joel Delhom - González Prada y Estados Unidos. Una admiración discreta y lúcida.pdf",
+        "subject": "Manuel González Prada"
+      },
+      {
+        "title": "Manuel González Prada. El hombre y el revolucionario frente a la muerte",
+        "author": "Joel Delhom",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Joel Delhom - Manuel González Prada. El hombre y el revolucionario frente a la muerte.pdf",
+        "subject": "Manuel González Prada"
+      },
+      {
+        "title": "Manuel González Prada y la prensa del Perú",
+        "author": "Joel Delhom",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Joel Delhom - Manuel González Prada y la prensa del Perú.pdf",
+        "subject": "Manuel González Prada"
       }
     ]
   },
@@ -7983,6 +8187,14 @@ export const regionData = {
         "title": "La religion y la cuestion social",
         "year": null,
         "rating": null
+      },
+      {
+        "title": "Consideraciones sobre el hecho y muerte de Pallás (1893)",
+        "author": "Juan Montseny",
+        "pubYear": 1893,
+        "category": "acratas",
+        "filename": "Juan Montseny - Consideraciones sobre el hecho y muerte de Pallás (1893).pdf",
+        "subject": "Paulino Pallás"
       }
     ]
   },
@@ -8075,6 +8287,14 @@ export const regionData = {
         "title": "Qué es la Anarquía",
         "year": null,
         "rating": null
+      },
+      {
+        "title": "Anarquía y comunismo en el pensamiento de Malatesta",
+        "author": "Luigi Fabbri",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Luigi Fabbri - Anarquía y comunismo en el pensamiento de Malatesta.pdf",
+        "subject": "Errico Malatesta"
       }
     ]
   },
@@ -8207,6 +8427,22 @@ export const regionData = {
         "title": "Panarquía. Una olvidada idea de 1860",
         "year": null,
         "rating": null
+      },
+      {
+        "title": "Carta a Jean Grave (5 de julio de 1934)",
+        "author": "Max Nettlau",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Max Nettlau - Carta a Jean Grave (5 de julio de 1934).pdf",
+        "subject": "Jean Grave"
+      },
+      {
+        "title": "Errico Malatesta. La vida de un anarquista (1923)",
+        "author": "Max Nettlau",
+        "pubYear": 1923,
+        "category": "acratas",
+        "filename": "Max Nettlau - Errico Malatesta. La vida de un anarquista (1923).pdf",
+        "subject": "Errico Malatesta"
       }
     ]
   },
@@ -8765,6 +9001,14 @@ export const regionData = {
         "title": "Catastrofismo o abandono del sentido critico",
         "year": null,
         "rating": null
+      },
+      {
+        "title": "Élisée Reclus. Teoría geográfica y Teoría anarquista",
+        "author": "Philippe Pelletier",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Philippe Pelletier - Élisée Reclus. Teoría geográfica y Teoría anarquista.pdf",
+        "subject": "Élisée Reclus"
       }
     ]
   },
@@ -8809,6 +9053,22 @@ export const regionData = {
         "title": "Teoroa de la contribucin",
         "year": null,
         "rating": null
+      },
+      {
+        "title": "Apuntes autobiográficos (1987)",
+        "author": "Pierre-Joseph Proudhon",
+        "pubYear": 1987,
+        "category": "acratas",
+        "filename": "Pierre-Joseph Proudhon - Apuntes autobiográficos (1987).pdf",
+        "subject": "Pierre-Joseph Proudhon"
+      },
+      {
+        "title": "Carta a M. Villiamé",
+        "author": "Pierre-Joseph Proudhon",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Pierre-Joseph Proudhon - Carta a M. Villiamé.pdf",
+        "subject": "Pierre-Joseph Proudhon"
       }
     ]
   },
@@ -8929,6 +9189,14 @@ export const regionData = {
         "title": "Un siglo de espera. El gobierno revolucionario",
         "year": null,
         "rating": null
+      },
+      {
+        "title": "Carta a Ferrer i Guardia",
+        "author": "Piotr Kropotkin",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Piotr Kropotkin - Carta a Ferrer i Guardia.pdf",
+        "subject": "Francisco Ferrer Guardia"
       }
     ]
   },
@@ -8993,6 +9261,14 @@ export const regionData = {
         "title": "Obras completas I",
         "year": null,
         "rating": null
+      },
+      {
+        "title": "Cartas íntimas (1967)",
+        "author": "Rafael Barrett",
+        "pubYear": 1967,
+        "category": "acratas",
+        "filename": "Rafael Barrett - Cartas íntimas (1967).pdf",
+        "subject": "Rafael Barrett"
       }
     ]
   },
@@ -9312,6 +9588,38 @@ export const regionData = {
         "title": "Por que soy anarquista",
         "year": null,
         "rating": null
+      },
+      {
+        "title": "Fermín Salvochea",
+        "author": "Rudolf Rocker",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Rudolf Rocker - Fermín Salvochea.pdf",
+        "subject": "Fermín Salvochea"
+      },
+      {
+        "title": "Max Nettlau. El Herodoto de la anarquía (1950)",
+        "author": "Rudolf Rocker",
+        "pubYear": 1950,
+        "category": "acratas",
+        "filename": "Rudolf Rocker - Max Nettlau. El Herodoto de la anarquía (1950).pdf",
+        "subject": "Max Nettlau"
+      },
+      {
+        "title": "Mi encuentro con Hermann Jung",
+        "author": "Rudolf Rocker",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Rudolf Rocker - Mi encuentro con Hermann Jung.pdf",
+        "subject": "Hermann Jung"
+      },
+      {
+        "title": "Una jornada en la vida de Malatesta",
+        "author": "Rudolf Rocker",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Rudolf Rocker - Una jornada en la vida de Malatesta.pdf",
+        "subject": "Errico Malatesta"
       }
     ]
   },
@@ -9612,6 +9920,30 @@ export const regionData = {
         "title": "Tomar y hacer en vez de pedir y esperar. Autonomia y movimientos sociales",
         "year": null,
         "rating": null
+      },
+      {
+        "title": "Actividades políticas y revolucionarias de los hermanos Flores Magón",
+        "author": "Varios autores",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Varios autores - Actividades políticas y revolucionarias de los hermanos Flores Magón.pdf",
+        "subject": "Hermanos Flores Magón"
+      },
+      {
+        "title": "Durruti 1896-1936",
+        "author": "Varios autores",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Varios autores - Durruti 1896-1936.pdf",
+        "subject": "Buenaventura Durruti"
+      },
+      {
+        "title": "El lenguaje de los hechos. Ocho ensayos en torno a Buenaventura Durruti (1996)",
+        "author": "Varios autores",
+        "pubYear": 1996,
+        "category": "acratas",
+        "filename": "Varios autores - El lenguaje de los hechos. Ocho ensayos en torno a Buenaventura Durruti (1996).pdf",
+        "subject": "Buenaventura Durruti"
       }
     ]
   },
@@ -9682,6 +10014,1350 @@ export const regionData = {
         "title": "Un ambito libertario llamado Javaro",
         "year": null,
         "rating": null
+      }
+    ]
+  },
+  "Agustín Guillamón Iborra": {
+    "books": [
+      {
+        "title": "Abel Paz, anarquista e historiador",
+        "author": "Agustín Guillamón Iborra",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Agustín Guillamón Iborra - Abel Paz, anarquista e historiador.pdf",
+        "subject": "Abel Paz"
+      }
+    ]
+  },
+  "Álvaro Girón Sierra": {
+    "books": [
+      {
+        "title": "Evolucionismo y ética. Piotr Kropotkin",
+        "author": "Álvaro Girón Sierra",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Álvaro Girón Sierra - Evolucionismo y ética. Piotr Kropotkin.pdf",
+        "subject": "Piotr Kropotkin"
+      },
+      {
+        "title": "Kropotkin contra la eugenesia. Siete intensos minutos",
+        "author": "Álvaro Girón Sierra",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Álvaro Girón Sierra - Kropotkin contra la eugenesia. Siete intensos minutos.pdf",
+        "subject": "Piotr Kropotkin"
+      },
+      {
+        "title": "Piotr Kropotkin visto desde Élisée Reclus. Ciencia, amistad y anarquía",
+        "author": "Álvaro Girón Sierra",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Álvaro Girón Sierra - Piotr Kropotkin visto desde Élisée Reclus. Ciencia, amistad y anarquía.pdf",
+        "subject": "Piotr Kropotkin y Élisée Reclus"
+      },
+      {
+        "title": "Segando la hierba bajo los pies del cristianismo. Darwinismo y religión en Piotr Kropotkin, 1842-1921",
+        "author": "Álvaro Girón Sierra",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Álvaro Girón Sierra - Segando la hierba bajo los pies del cristianismo. Darwinismo y religión en Piotr Kropotkin, 1842-1921.pdf",
+        "subject": "Piotr Kropotkin"
+      },
+      {
+        "title": "Tomando a Piotr Kropotkin en serio. Darwinismo, anarquismo y ciencia",
+        "author": "Álvaro Girón Sierra",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Álvaro Girón Sierra - Tomando a Piotr Kropotkin en serio. Darwinismo, anarquismo y ciencia.pdf",
+        "subject": "Piotr Kropotkin"
+      }
+    ]
+  },
+  "Amadeu Casellas": {
+    "books": [
+      {
+        "title": "Un reflejo de la sociedad. Crónica de una experiencia en las cárceles de la democracia",
+        "author": "Amadeu Casellas",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Amadeu Casellas - Un reflejo de la sociedad. Crónica de una experiencia en las cárceles de la democracia.pdf",
+        "subject": "Amadeu Casellas"
+      }
+    ]
+  },
+  "Ammon Hennacy": {
+    "books": [
+      {
+        "title": "Autobiografía de un anarquista católico",
+        "author": "Ammon Hennacy",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Ammon Hennacy - Autobiografía de un anarquista católico.pdf",
+        "subject": "Ammon Hennacy"
+      }
+    ]
+  },
+  "Anatol Gorelik": {
+    "books": [
+      {
+        "title": "Bakunin el anarquista",
+        "author": "Anatol Gorelik",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Anatol Gorelik - Bakunin el anarquista.pdf",
+        "subject": "Mijaíl Bakunin"
+      }
+    ]
+  },
+  "Ángel Herrerín López": {
+    "books": [
+      {
+        "title": "Memoria y olvido de una ministra anarquista",
+        "author": "Ángel Herrerín López",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Ángel Herrerín López - Memoria y olvido de una ministra anarquista.pdf",
+        "subject": "Federica Montseny"
+      }
+    ]
+  },
+  "Ángel J. Cappelletti": {
+    "books": [
+      {
+        "title": "Bakunin y el socialismo libertario",
+        "author": "Ángel J. Cappelletti",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Ángel J. Cappelletti - Bakunin y el socialismo libertario.pdf",
+        "subject": "Mijaíl Bakunin"
+      },
+      {
+        "title": "Bakunin y los anarquistas",
+        "author": "Ángel J. Cappelletti",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Ángel J. Cappelletti - Bakunin y los anarquistas.pdf",
+        "subject": "Mijaíl Bakunin"
+      },
+      {
+        "title": "El ateísmo de Bakunin",
+        "author": "Ángel J. Cappelletti",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Ángel J. Cappelletti - El ateísmo de Bakunin.pdf",
+        "subject": "Mijaíl Bakunin"
+      },
+      {
+        "title": "Francisco Ferrer Guardia y la pedagogía libertaria (2)",
+        "author": "Ángel J. Cappelletti",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Ángel J. Cappelletti - Francisco Ferrer Guardia y la pedagogía libertaria (2).pdf",
+        "subject": "Francisco Ferrer Guardia"
+      },
+      {
+        "title": "Francisco Ferrer Guardia y la pedagogía libertaria (3)",
+        "author": "Ángel J. Cappelletti",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Ángel J. Cappelletti - Francisco Ferrer Guardia y la pedagogía libertaria (3).pdf",
+        "subject": "Francisco Ferrer Guardia"
+      },
+      {
+        "title": "Gustav Landauer. El espíritu contra el Estado",
+        "author": "Ángel J. Cappelletti",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Ángel J. Cappelletti - Gustav Landauer. El espíritu contra el Estado.pdf",
+        "subject": "Gustav Landauer"
+      },
+      {
+        "title": "La evolución del pensamiento filosófico y político de Bakunin (2013)",
+        "author": "Ángel J. Cappelletti",
+        "pubYear": 2013,
+        "category": "acratas",
+        "filename": "Ángel J. Cappelletti - La evolución del pensamiento filosófico y político de Bakunin (2013).pdf",
+        "subject": "Mijaíl Bakunin"
+      },
+      {
+        "title": "Rudolf Rocker. El socialismo como anti-absolutismo",
+        "author": "Ángel J. Cappelletti",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Ángel J. Cappelletti - Rudolf Rocker. El socialismo como anti-absolutismo.pdf",
+        "subject": "Rudolf Rocker"
+      },
+      {
+        "title": "Violencia y no violencia en el pensamiento de Malatesta",
+        "author": "Ángel J. Cappelletti",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Ángel J. Cappelletti - Violencia y no violencia en el pensamiento de Malatesta.pdf",
+        "subject": "Errico Malatesta"
+      },
+      {
+        "title": "Vitalismo y anarquismo en Rafael Barrett",
+        "author": "Ángel J. Cappelletti",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Ángel J. Cappelletti - Vitalismo y anarquismo en Rafael Barrett.pdf",
+        "subject": "Rafael Barrett"
+      }
+    ]
+  },
+  "Ángel M. de Lera": {
+    "books": [
+      {
+        "title": "Ángel Pestana, retrato de un anarquista (1978)",
+        "author": "Ángel M. de Lera",
+        "pubYear": 1978,
+        "category": "acratas",
+        "filename": "Ángel M. de Lera - Ángel Pestana, retrato de un anarquista (1978).pdf",
+        "subject": "Ángel Pestaña"
+      }
+    ]
+  },
+  "Ángel Pestana": {
+    "books": [
+      {
+        "title": "Lo que aprendí en la vida (Vol. I) (1972)",
+        "author": "Ángel Pestana",
+        "pubYear": 1972,
+        "category": "acratas",
+        "filename": "Ángel Pestana - Lo que aprendí en la vida (Vol. I) (1972).pdf",
+        "subject": "Ángel Pestaña"
+      }
+    ]
+  },
+  "Anthropos nº 102": {
+    "books": [
+      {
+        "title": "José Peirats Valls. Historia contemporanea del movimiento libertario (1989)",
+        "author": "Anthropos nº 102",
+        "pubYear": 1989,
+        "category": "acratas",
+        "filename": "Anthropos nº 102 - José Peirats Valls. Historia contemporanea del movimiento libertario (1989).pdf",
+        "subject": "José Peirats Valls"
+      }
+    ]
+  },
+  "Anthropos Suplementos nº 18": {
+    "books": [
+      {
+        "title": "José Peirats Valls. Una experiencia histórica del pensamiento libertario (1990)",
+        "author": "Anthropos Suplementos nº 18",
+        "pubYear": 1990,
+        "category": "acratas",
+        "filename": "Anthropos Suplementos nº 18 - José Peirats Valls. Una experiencia histórica del pensamiento libertario (1990).pdf",
+        "subject": "José Peirats Valls"
+      }
+    ]
+  },
+  "Anton Fernández Álvarez": {
+    "books": [
+      {
+        "title": "Ricardo Mella o el anarquismo humanista",
+        "author": "Anton Fernández Álvarez",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Anton Fernández Álvarez - Ricardo Mella o el anarquismo humanista.pdf",
+        "subject": "Ricardo Mella Cea"
+      },
+      {
+        "title": "William Godwin y el anarquismo. A propósito del Political Justice (1993)",
+        "author": "Anton Fernández Álvarez",
+        "pubYear": 1993,
+        "category": "acratas",
+        "filename": "Anton Fernández Álvarez - William Godwin y el anarquismo. A propósito del Political Justice (1993).pdf",
+        "subject": "William Godwin"
+      }
+    ]
+  },
+  "Antoni Dalmau": {
+    "books": [
+      {
+        "title": "Jesús Navarro Botella (1881-), maestro racionalista, activista anarquista y editor",
+        "author": "Antoni Dalmau",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Antoni Dalmau - Jesús Navarro Botella (1881-), maestro racionalista, activista anarquista y editor.pdf",
+        "subject": "Jesús Navarro Botella"
+      }
+    ]
+  },
+  "Antonia Fontanillas Borrás y Sonya Torres Planells": {
+    "books": [
+      {
+        "title": "Lola Iturbe Arizcuren. Vida e ideal de una luchadora anarquista (2006)",
+        "author": "Antonia Fontanillas Borrás y Sonya Torres Planells",
+        "pubYear": 2006,
+        "category": "acratas",
+        "filename": "Antonia Fontanillas Borrás y Sonya Torres Planells - Lola Iturbe Arizcuren. Vida e ideal de una luchadora anarquista (2006).pdf",
+        "subject": "Lola Iturbe Arizcuren"
+      }
+    ]
+  },
+  "Antonina Rodrigo": {
+    "books": [
+      {
+        "title": "Una mujer libre. Amparo Poch y Gascón, médica y anarquista (2002)",
+        "author": "Antonina Rodrigo",
+        "pubYear": 2002,
+        "category": "acratas",
+        "filename": "Antonina Rodrigo - Una mujer libre. Amparo Poch y Gascón, médica y anarquista (2002).pdf",
+        "subject": "Amparo Poch y Gascón"
+      }
+    ]
+  },
+  "Antonio Rosado": {
+    "books": [
+      {
+        "title": "Tierra y Libertad. Memorias de un campesino anarcosindicalista andaluz",
+        "author": "Antonio Rosado",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Antonio Rosado - Tierra y Libertad. Memorias de un campesino anarcosindicalista andaluz.pdf",
+        "subject": "Antonio Rosado"
+      }
+    ]
+  },
+  "Arthur Lehning (ed.)": {
+    "books": [
+      {
+        "title": "Conversaciones con Bakunin (1999)",
+        "author": "Arthur Lehning (ed.)",
+        "pubYear": 1999,
+        "category": "acratas",
+        "filename": "Arthur Lehning (ed.) - Conversaciones con Bakunin (1999).pdf",
+        "subject": "Mijaíl Bakunin"
+      }
+    ]
+  },
+  "Bruna Bianchi": {
+    "books": [
+      {
+        "title": "El pensamiento anarcofeminista de Emma Goldman",
+        "author": "Bruna Bianchi",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Bruna Bianchi - El pensamiento anarcofeminista de Emma Goldman.pdf",
+        "subject": "Emma Goldman"
+      }
+    ]
+  },
+  "Capi Vidal": {
+    "books": [
+      {
+        "title": "Colin Ward y la anarquía en acción",
+        "author": "Capi Vidal",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Capi Vidal - Colin Ward y la anarquía en acción.pdf",
+        "subject": "Colin Ward"
+      }
+    ]
+  },
+  "Carlos Díaz": {
+    "books": [
+      {
+        "title": "Por y contra Stirner (1979)",
+        "author": "Carlos Díaz",
+        "pubYear": 1979,
+        "category": "acratas",
+        "filename": "Carlos Díaz - Por y contra Stirner (1979).pdf",
+        "subject": "Max Stirner"
+      }
+    ]
+  },
+  "Carlos López Cortezo": {
+    "books": [
+      {
+        "title": "Bakunin (Apuntes biográficos) (1966)",
+        "author": "Carlos López Cortezo",
+        "pubYear": 1966,
+        "category": "acratas",
+        "filename": "Carlos López Cortezo - Bakunin (Apuntes biográficos) (1966).pdf",
+        "subject": "Mijaíl Bakunin"
+      }
+    ]
+  },
+  "Carlos M. Rama": {
+    "books": [
+      {
+        "title": "Camillo Berneri, intelectual anarquista",
+        "author": "Carlos M. Rama",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Carlos M. Rama - Camillo Berneri, intelectual anarquista.pdf",
+        "subject": "Camillo Berneri"
+      }
+    ]
+  },
+  "Carlus Jove": {
+    "books": [
+      {
+        "title": "Joe Hill. Sindicalismo con banda sonora",
+        "author": "Carlus Jove",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Carlus Jove - Joe Hill. Sindicalismo con banda sonora.pdf",
+        "subject": "Joe Hill"
+      }
+    ]
+  },
+  "Cipriano Mera": {
+    "books": [
+      {
+        "title": "Guerra, exilio y cárcel de un anarcosindicalista",
+        "author": "Cipriano Mera",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Cipriano Mera - Guerra, exilio y cárcel de un anarcosindicalista.pdf",
+        "subject": "Cipriano Mera"
+      }
+    ]
+  },
+  "Claudio Lomnitz": {
+    "books": [
+      {
+        "title": "El regreso del camarada Ricardo Flores Magón (2020)",
+        "author": "Claudio Lomnitz",
+        "pubYear": 2020,
+        "category": "acratas",
+        "filename": "Claudio Lomnitz - El regreso del camarada Ricardo Flores Magón (2020).pdf",
+        "subject": "Ricardo Flores Magón"
+      }
+    ]
+  },
+  "Cristina Guzzo": {
+    "books": [
+      {
+        "title": "Luisa Capetillo y Salvadora Medina Onrubia de Botana, dos íconos anarquistas. Una comparación",
+        "author": "Cristina Guzzo",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Cristina Guzzo - Luisa Capetillo y Salvadora Medina Onrubia de Botana, dos íconos anarquistas. Una comparación.pdf",
+        "subject": "Luisa Capetillo y Salvadora Medina Onrubia"
+      }
+    ]
+  },
+  "Cristina Noble": {
+    "books": [
+      {
+        "title": "Severino Di Giovanni. La pasión anarquista (2006)",
+        "author": "Cristina Noble",
+        "pubYear": 2006,
+        "category": "acratas",
+        "filename": "Cristina Noble - Severino Di Giovanni. La pasión anarquista (2006).pdf",
+        "subject": "Severino Di Giovanni"
+      }
+    ]
+  },
+  "David Goodway": {
+    "books": [
+      {
+        "title": "La mirada anarquista. Conversación con Colin Ward",
+        "author": "David Goodway",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "David Goodway - La mirada anarquista. Conversación con Colin Ward.pdf",
+        "subject": "Colin Ward"
+      }
+    ]
+  },
+  "E. Armand y América Scarfo": {
+    "books": [
+      {
+        "title": "Carta de América Scarfo y respuesta de Armand (2013)",
+        "author": "E. Armand y América Scarfo",
+        "pubYear": 2013,
+        "category": "acratas",
+        "filename": "E. Armand y América Scarfo - Carta de América Scarfo y respuesta de Armand (2013).pdf",
+        "subject": "E. Armand y América Scarfo"
+      }
+    ]
+  },
+  "Eduardo A. Godoy Sepúlveda": {
+    "books": [
+      {
+        "title": "César Flores Naso. El cenetista olvidado en el sur austral",
+        "author": "Eduardo A. Godoy Sepúlveda",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Eduardo A. Godoy Sepúlveda - César Flores Naso. El cenetista olvidado en el sur austral.pdf",
+        "subject": "César Flores Naso"
+      },
+      {
+        "title": "La vida por la libertad. El asesinato de Osvaldo Solís Soto y el auge del anarcosindicalismo en Osorno (1929-1932)",
+        "author": "Eduardo A. Godoy Sepúlveda",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Eduardo A. Godoy Sepúlveda - La vida por la libertad. El asesinato de Osvaldo Solís Soto y el auge del anarcosindicalismo en Osorno (1929-1932).pdf",
+        "subject": "Osvaldo Solís Soto"
+      },
+      {
+        "title": "Pietro Gori. Biografía de un Tribuno libertario y su paso por la región Chilena",
+        "author": "Eduardo A. Godoy Sepúlveda",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Eduardo A. Godoy Sepúlveda - Pietro Gori. Biografía de un Tribuno libertario y su paso por la región Chilena.pdf",
+        "subject": "Pietro Gori"
+      },
+      {
+        "title": "Sepan que la tiranía de arriba engendra la rebelión de abajo. Represión contra los anarquistas, la historia de Voltaire Argandoña y Hortensia Quinio (Santiago, 1913)",
+        "author": "Eduardo A. Godoy Sepúlveda",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Eduardo A. Godoy Sepúlveda - Sepan que la tiranía de arriba engendra la rebelión de abajo. Represión contra los anarquistas, la historia de Voltaire Argandoña y Hortensia Quinio (Santiago, 1913).pdf",
+        "subject": "Voltaire Argandoña y Hortensia Quinio"
+      }
+    ]
+  },
+  "Eduardo Colombo y Osvaldo Bayer": {
+    "books": [
+      {
+        "title": "Joaquín Penina, el fusilado de Rosario (1901-1930)",
+        "author": "Eduardo Colombo y Osvaldo Bayer",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Eduardo Colombo y Osvaldo Bayer - Joaquín Penina, el fusilado de Rosario (1901-1930).pdf",
+        "subject": "Joaquín Penina"
+      }
+    ]
+  },
+  "Eduardo de Guzmán": {
+    "books": [
+      {
+        "title": "Cipriano Mera. La muerte de un combatiente libertario",
+        "author": "Eduardo de Guzmán",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Eduardo de Guzmán - Cipriano Mera. La muerte de un combatiente libertario.pdf",
+        "subject": "Cipriano Mera"
+      },
+      {
+        "title": "Federica Montseny en Madrid",
+        "author": "Eduardo de Guzmán",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Eduardo de Guzmán - Federica Montseny en Madrid.pdf",
+        "subject": "Federica Montseny"
+      },
+      {
+        "title": "Vida y lección de Anselmo Lorenzo",
+        "author": "Eduardo de Guzmán",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Eduardo de Guzmán - Vida y lección de Anselmo Lorenzo.pdf",
+        "subject": "Anselmo Lorenzo"
+      }
+    ]
+  },
+  "Enric Melich": {
+    "books": [
+      {
+        "title": "A cada cual su exilio. Itinerario de un militante libertario español (2016)",
+        "author": "Enric Melich",
+        "pubYear": 2016,
+        "category": "acratas",
+        "filename": "Enric Melich - A cada cual su exilio. Itinerario de un militante libertario español (2016).pdf",
+        "subject": "Enric Melich"
+      }
+    ]
+  },
+  "Félix Padín Gallo": {
+    "books": [
+      {
+        "title": "República, guerra y campos de concentración. Memorias de un anarquista bilbaíno",
+        "author": "Félix Padín Gallo",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Félix Padín Gallo - República, guerra y campos de concentración. Memorias de un anarquista bilbaíno.pdf",
+        "subject": "Félix Padín Gallo"
+      }
+    ]
+  },
+  "Fernando Tarrida del Marmol": {
+    "books": [
+      {
+        "title": "Estudio crítico-biográfico de Anselmo Lorenzo",
+        "author": "Fernando Tarrida del Marmol",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Fernando Tarrida del Marmol - Estudio crítico-biográfico de Anselmo Lorenzo.pdf",
+        "subject": "Anselmo Lorenzo"
+      }
+    ]
+  },
+  "Fernando Ventura": {
+    "books": [
+      {
+        "title": "Vida accidental de un anarquista",
+        "author": "Fernando Ventura",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Fernando Ventura - Vida accidental de un anarquista.pdf",
+        "subject": "Fernando Ventura"
+      }
+    ]
+  },
+  "Francisco de Paula Fernández Gomez": {
+    "books": [
+      {
+        "title": "De Fanelli a Angiolillo (El anarquismo en el Estado español del siglo XIX) (2)",
+        "author": "Francisco de Paula Fernández Gomez",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Francisco de Paula Fernández Gomez - De Fanelli a Angiolillo (El anarquismo en el Estado español del siglo XIX) (2).pdf",
+        "subject": "Giuseppe Fanelli y Michele Angiolillo"
+      }
+    ]
+  },
+  "Francisco Fernández de Mendiola": {
+    "books": [
+      {
+        "title": "Isaac Puente, el médico anarquista",
+        "author": "Francisco Fernández de Mendiola",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Francisco Fernández de Mendiola - Isaac Puente, el médico anarquista.pdf",
+        "subject": "Isaac Puente"
+      }
+    ]
+  },
+  "Francisco Madrid Santos": {
+    "books": [
+      {
+        "title": "Camillo Berneri, un anarquista italiano (1897-1937). revolución y contrarrevolución en Europa (1917-1937) (I)",
+        "author": "Francisco Madrid Santos",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Francisco Madrid Santos - Camillo Berneri, un anarquista italiano (1897-1937). revolución y contrarrevolución en Europa (1917-1937) (I).pdf",
+        "subject": "Camillo Berneri"
+      }
+    ]
+  },
+  "Francisco Madrid Santos (comp.)": {
+    "books": [
+      {
+        "title": "Anselmo Lorenzo. Un militante en el ojo del huracán (2008)",
+        "author": "Francisco Madrid Santos (comp.)",
+        "pubYear": 2008,
+        "category": "acratas",
+        "filename": "Francisco Madrid Santos (comp.) - Anselmo Lorenzo. Un militante en el ojo del huracán (2008).pdf",
+        "subject": "Anselmo Lorenzo"
+      }
+    ]
+  },
+  "Francisco Sánchez Téllez": {
+    "books": [
+      {
+        "title": "Mis memorias como recluso en el presidio de Ceuta (1991)",
+        "author": "Francisco Sánchez Téllez",
+        "pubYear": 1991,
+        "category": "acratas",
+        "filename": "Francisco Sánchez Téllez - Mis memorias como recluso en el presidio de Ceuta (1991).pdf",
+        "subject": "Francisco Sánchez Téllez"
+      }
+    ]
+  },
+  "Frank Fernández": {
+    "books": [
+      {
+        "title": "Memorias de Guangara Libertaria",
+        "author": "Frank Fernández",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Frank Fernández - Memorias de Guangara Libertaria.pdf",
+        "subject": "Frank Fernández"
+      }
+    ]
+  },
+  "Gianpiero Landi": {
+    "books": [
+      {
+        "title": "Armando Borghi. Protagonista y crítico del sindicalismo anarquista (2016)",
+        "author": "Gianpiero Landi",
+        "pubYear": 2016,
+        "category": "acratas",
+        "filename": "Gianpiero Landi - Armando Borghi. Protagonista y crítico del sindicalismo anarquista (2016).pdf",
+        "subject": "Armando Borghi"
+      }
+    ]
+  },
+  "Henri Arvon": {
+    "books": [
+      {
+        "title": "Bakunin. Absoluto y revolución (1975)",
+        "author": "Henri Arvon",
+        "pubYear": 1975,
+        "category": "acratas",
+        "filename": "Henri Arvon - Bakunin. Absoluto y revolución (1975).pdf",
+        "subject": "Mijaíl Bakunin"
+      }
+    ]
+  },
+  "Henri De Lubac": {
+    "books": [
+      {
+        "title": "Proudhon y el cristianismo (1965)",
+        "author": "Henri De Lubac",
+        "pubYear": 1965,
+        "category": "acratas",
+        "filename": "Henri De Lubac - Proudhon y el cristianismo (1965).pdf",
+        "subject": "Pierre-Joseph Proudhon"
+      }
+    ]
+  },
+  "Hugo Pereyra Plasencia": {
+    "books": [
+      {
+        "title": "Manuel González Prada y el radicalismo peruano (2009)",
+        "author": "Hugo Pereyra Plasencia",
+        "pubYear": 2009,
+        "category": "acratas",
+        "filename": "Hugo Pereyra Plasencia - Manuel González Prada y el radicalismo peruano (2009).pdf",
+        "subject": "Manuel González Prada"
+      }
+    ]
+  },
+  "Ignacio Clemente Soriano Jiménez": {
+    "books": [
+      {
+        "title": "Hermoso Plaja Saló y Carmen Paredes Sans, el anarquismo silencioso, 1889-1982",
+        "author": "Ignacio Clemente Soriano Jiménez",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Ignacio Clemente Soriano Jiménez - Hermoso Plaja Saló y Carmen Paredes Sans, el anarquismo silencioso, 1889-1982.pdf",
+        "subject": "Hermoso Plaja Saló y Carmen Paredes Sans"
+      },
+      {
+        "title": "Los libros de Anselmo Lorenzo",
+        "author": "Ignacio Clemente Soriano Jiménez",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Ignacio Clemente Soriano Jiménez - Los libros de Anselmo Lorenzo.pdf",
+        "subject": "Anselmo Lorenzo"
+      },
+      {
+        "title": "Semblanza de Federica Montseny",
+        "author": "Ignacio Clemente Soriano Jiménez",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Ignacio Clemente Soriano Jiménez - Semblanza de Federica Montseny.pdf",
+        "subject": "Federica Montseny"
+      },
+      {
+        "title": "Semblanza de Francisco Ferrer Guardia",
+        "author": "Ignacio Clemente Soriano Jiménez",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Ignacio Clemente Soriano Jiménez - Semblanza de Francisco Ferrer Guardia.pdf",
+        "subject": "Francisco Ferrer Guardia"
+      },
+      {
+        "title": "Semblanza de Juan Montseny Carret",
+        "author": "Ignacio Clemente Soriano Jiménez",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Ignacio Clemente Soriano Jiménez - Semblanza de Juan Montseny Carret.pdf",
+        "subject": "Juan Montseny Carret"
+      },
+      {
+        "title": "Semblanza de Lorenzo Portet y Tubau",
+        "author": "Ignacio Clemente Soriano Jiménez",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Ignacio Clemente Soriano Jiménez - Semblanza de Lorenzo Portet y Tubau.pdf",
+        "subject": "Lorenzo Portet y Tubau"
+      }
+    ]
+  },
+  "Igor Olinevich": {
+    "books": [
+      {
+        "title": "Voy a Magadan. Diario de un preso anarquista bielorruso (2016)",
+        "author": "Igor Olinevich",
+        "pubYear": 2016,
+        "category": "acratas",
+        "filename": "Igor Olinevich - Voy a Magadan. Diario de un preso anarquista bielorruso (2016).pdf",
+        "subject": "Igor Olinevich"
+      }
+    ]
+  },
+  "Jacques Maurice (coord.)": {
+    "books": [
+      {
+        "title": "Fermín Salvochea. Un anarquista entre la leyenda y la historia (2009)",
+        "author": "Jacques Maurice (coord.)",
+        "pubYear": 2009,
+        "category": "acratas",
+        "filename": "Jacques Maurice (coord.) - Fermín Salvochea. Un anarquista entre la leyenda y la historia (2009).pdf",
+        "subject": "Fermín Salvochea"
+      }
+    ]
+  },
+  "James Guillaume": {
+    "books": [
+      {
+        "title": "Bakunin, apuntes biográficos",
+        "author": "James Guillaume",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "James Guillaume - Bakunin, apuntes biográficos.pdf",
+        "subject": "Mijaíl Bakunin"
+      },
+      {
+        "title": "Bakunin, un esbozo de su vida",
+        "author": "James Guillaume",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "James Guillaume - Bakunin, un esbozo de su vida.pdf",
+        "subject": "Mijaíl Bakunin"
+      }
+    ]
+  },
+  "Janet Biehl": {
+    "books": [
+      {
+        "title": "Bookchin, Öcalan y las dialécticas de la democracia",
+        "author": "Janet Biehl",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Janet Biehl - Bookchin, Öcalan y las dialécticas de la democracia.pdf",
+        "subject": "Murray Bookchin"
+      }
+    ]
+  },
+  "Jean Maitron": {
+    "books": [
+      {
+        "title": "Ravachol y los anarquistas",
+        "author": "Jean Maitron",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Jean Maitron - Ravachol y los anarquistas.pdf",
+        "subject": "Ravachol"
+      }
+    ]
+  },
+  "Joan Llarch": {
+    "books": [
+      {
+        "title": "Anselmo Lorenzo (Obreros mártires de la libertad)",
+        "author": "Joan Llarch",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Joan Llarch - Anselmo Lorenzo (Obreros mártires de la libertad).pdf",
+        "subject": "Anselmo Lorenzo"
+      }
+    ]
+  },
+  "José Luis Gutiérrez Molina": {
+    "books": [
+      {
+        "title": "Federica Montseny en Andalucía. Verano de 1932 (1994)",
+        "author": "José Luis Gutiérrez Molina",
+        "pubYear": 1994,
+        "category": "acratas",
+        "filename": "José Luis Gutiérrez Molina - Federica Montseny en Andalucía. Verano de 1932 (1994).pdf",
+        "subject": "Federica Montseny"
+      },
+      {
+        "title": "La tiza, la tinta y la palabra. José Sánchez Rosa, maestro y anarquista andaluz (1864-1936)",
+        "author": "José Luis Gutiérrez Molina",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "José Luis Gutiérrez Molina - La tiza, la tinta y la palabra. José Sánchez Rosa, maestro y anarquista andaluz (1864-1936).pdf",
+        "subject": "José Sánchez Rosa"
+      }
+    ]
+  },
+  "José Peirats": {
+    "books": [
+      {
+        "title": "Anselmo Lorenzo (Figuras del movimiento libertario español)",
+        "author": "José Peirats",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "José Peirats - Anselmo Lorenzo (Figuras del movimiento libertario español).pdf",
+        "subject": "Anselmo Lorenzo"
+      },
+      {
+        "title": "De mi paso por la vida (Memorias) (2009)",
+        "author": "José Peirats",
+        "pubYear": 2009,
+        "category": "acratas",
+        "filename": "José Peirats - De mi paso por la vida (Memorias) (2009).pdf",
+        "subject": "José Peirats"
+      },
+      {
+        "title": "Durruti-Ascaso (Figuras del movimiento libertario español)",
+        "author": "José Peirats",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "José Peirats - Durruti-Ascaso (Figuras del movimiento libertario español).pdf",
+        "subject": "Buenaventura Durruti y Francisco Ascaso"
+      },
+      {
+        "title": "Emma Goldman. Una mujer en la tormenta del siglo (1983)",
+        "author": "José Peirats",
+        "pubYear": 1983,
+        "category": "acratas",
+        "filename": "José Peirats - Emma Goldman. Una mujer en la tormenta del siglo (1983).pdf",
+        "subject": "Emma Goldman"
+      }
+    ]
+  },
+  "José Peirats y Fontarura": {
+    "books": [
+      {
+        "title": "Felipe Alaiz",
+        "author": "José Peirats y Fontarura",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "José Peirats y Fontarura - Felipe Alaiz.pdf",
+        "subject": "Felipe Alaiz"
+      }
+    ]
+  },
+  "José Peiró": {
+    "books": [
+      {
+        "title": "Juan Peiró. Teórico y militante del anarcosindicalismo español (1978)",
+        "author": "José Peiró",
+        "pubYear": 1978,
+        "category": "acratas",
+        "filename": "José Peiró - Juan Peiró. Teórico y militante del anarcosindicalismo español (1978).pdf",
+        "subject": "Juan Peiró"
+      }
+    ]
+  },
+  "Josep Costa Font": {
+    "books": [
+      {
+        "title": "Memorias de un colectivista libertario badalonés (1936-1939)",
+        "author": "Josep Costa Font",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Josep Costa Font - Memorias de un colectivista libertario badalonés (1936-1939).pdf",
+        "subject": "Josep Costa Font"
+      }
+    ]
+  },
+  "Juan Avilés Farré": {
+    "books": [
+      {
+        "title": "Republicanismo, librepensamiento y revolución. La ideología de Francisco Ferrer Guardia",
+        "author": "Juan Avilés Farré",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Juan Avilés Farré - Republicanismo, librepensamiento y revolución. La ideología de Francisco Ferrer Guardia.pdf",
+        "subject": "Francisco Ferrer Guardia"
+      }
+    ]
+  },
+  "Juan Avilés Farré y M. Morán Pallarés": {
+    "books": [
+      {
+        "title": "Ha vuelto Mateo Morral El anarquismo insurreccionalista del siglo XXI y sus antecedentes históricos",
+        "author": "Juan Avilés Farré y M. Morán Pallarés",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Juan Avilés Farré y M. Morán Pallarés - Ha vuelto Mateo Morral El anarquismo insurreccionalista del siglo XXI y sus antecedentes históricos.pdf",
+        "subject": "Mateo Morral"
+      }
+    ]
+  },
+  "Juan Busquets": {
+    "books": [
+      {
+        "title": "Veinte años de prisión. Los anarquistas en las cárceles de Franco (1998)",
+        "author": "Juan Busquets",
+        "pubYear": 1998,
+        "category": "acratas",
+        "filename": "Juan Busquets - Veinte años de prisión. Los anarquistas en las cárceles de Franco (1998).pdf",
+        "subject": "Juan Busquets"
+      }
+    ]
+  },
+  "Juan López Sánchez": {
+    "books": [
+      {
+        "title": "Una misión sin importancia (Memorias de un sindicalista) (1972)",
+        "author": "Juan López Sánchez",
+        "pubYear": 1972,
+        "category": "acratas",
+        "filename": "Juan López Sánchez - Una misión sin importancia (Memorias de un sindicalista) (1972).pdf",
+        "subject": "Juan López Sánchez"
+      }
+    ]
+  },
+  "Juan Peiró": {
+    "books": [
+      {
+        "title": "De la fábrica de vidrio de Mataró al Ministerio de Industria (1937)",
+        "author": "Juan Peiró",
+        "pubYear": 1937,
+        "category": "acratas",
+        "filename": "Juan Peiró - De la fábrica de vidrio de Mataró al Ministerio de Industria (1937).pdf",
+        "subject": "Juan Peiró"
+      },
+      {
+        "title": "El pensamiento de Juan Peiró (1959)",
+        "author": "Juan Peiró",
+        "pubYear": 1959,
+        "category": "acratas",
+        "filename": "Juan Peiró - El pensamiento de Juan Peiró (1959).pdf",
+        "subject": "Juan Peiró"
+      }
+    ]
+  },
+  "Julián Vadillo Muñoz": {
+    "books": [
+      {
+        "title": "Juan Peiró y el cooperativismo en España",
+        "author": "Julián Vadillo Muñoz",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Julián Vadillo Muñoz - Juan Peiró y el cooperativismo en España.pdf",
+        "subject": "Juan Peiró"
+      },
+      {
+        "title": "Los obreros vistos por un obrero. Centenario de la muerte de Anselmo Lorenzo Asperilla",
+        "author": "Julián Vadillo Muñoz",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Julián Vadillo Muñoz - Los obreros vistos por un obrero. Centenario de la muerte de Anselmo Lorenzo Asperilla.pdf",
+        "subject": "Anselmo Lorenzo"
+      }
+    ]
+  },
+  "Laura Fernández Cordero et al.": {
+    "books": [
+      {
+        "title": "Biografías anarquistas - Virginia Bolten",
+        "author": "Laura Fernández Cordero et al.",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Laura Fernández Cordero et al. - Biografías anarquistas - Virginia Bolten.pdf",
+        "subject": "Virginia Bolten"
+      }
+    ]
+  },
+  "Manuel Lagos Mieres": {
+    "books": [
+      {
+        "title": "Canto a la Pampa. Vida y obra del poeta anarquista Francisco Pezoa Astudillo (2019)",
+        "author": "Manuel Lagos Mieres",
+        "pubYear": 2019,
+        "category": "acratas",
+        "filename": "Manuel Lagos Mieres - Canto a la Pampa. Vida y obra del poeta anarquista Francisco Pezoa Astudillo (2019).pdf",
+        "subject": "Francisco Pezoa Astudillo"
+      }
+    ]
+  },
+  "María Amalia Pradas Baena": {
+    "books": [
+      {
+        "title": "Teresa Claramunt. La virgen roja barcelonesa. Biografía y escritos (2006)",
+        "author": "María Amalia Pradas Baena",
+        "pubYear": 2006,
+        "category": "acratas",
+        "filename": "María Amalia Pradas Baena - Teresa Claramunt. La virgen roja barcelonesa. Biografía y escritos (2006).pdf",
+        "subject": "Teresa Claramunt"
+      }
+    ]
+  },
+  "Marian Leighton": {
+    "books": [
+      {
+        "title": "Anarcofeminismo y Louise Michel",
+        "author": "Marian Leighton",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Marian Leighton - Anarcofeminismo y Louise Michel.pdf",
+        "subject": "Louise Michel"
+      }
+    ]
+  },
+  "Martin Caparros": {
+    "books": [
+      {
+        "title": "Amor y anarquía. La vida urgente de Soledad Rosas (1974-1998)",
+        "author": "Martin Caparros",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Martin Caparros - Amor y anarquía. La vida urgente de Soledad Rosas (1974-1998).pdf",
+        "subject": "Soledad Rosas"
+      }
+    ]
+  },
+  "Mary Nash": {
+    "books": [
+      {
+        "title": "Dos intelectuales anarquistas frente al problema de la mujer. Federica Montseny y Lucía Sánchez Saornil",
+        "author": "Mary Nash",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Mary Nash - Dos intelectuales anarquistas frente al problema de la mujer. Federica Montseny y Lucía Sánchez Saornil.pdf",
+        "subject": "Federica Montseny y Lucía Sánchez Saornil"
+      }
+    ]
+  },
+  "Mijail Bakunin": {
+    "books": [
+      {
+        "title": "Mi vida (Confesión)",
+        "author": "Mijail Bakunin",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Mijail Bakunin - Mi vida (Confesión).pdf",
+        "subject": "Mijaíl Bakunin"
+      }
+    ]
+  },
+  "Nelson Méndez": {
+    "books": [
+      {
+        "title": "Ángel Cappelletti y su enfoque del anarquismo histórico",
+        "author": "Nelson Méndez",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Nelson Méndez - Ángel Cappelletti y su enfoque del anarquismo histórico.pdf",
+        "subject": "Ángel Cappelletti"
+      }
+    ]
+  },
+  "Néstor Majno": {
+    "books": [
+      {
+        "title": "Carta a las anarquistas españoles",
+        "author": "Néstor Majno",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Néstor Majno - Carta a las anarquistas españoles.pdf",
+        "subject": "Néstor Majno"
+      },
+      {
+        "title": "La revolución rusa en Ucrania 1918-1921 (Memorias)",
+        "author": "Néstor Majno",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Néstor Majno - La revolución rusa en Ucrania 1918-1921 (Memorias).pdf",
+        "subject": "Néstor Majno"
+      },
+      {
+        "title": "Una segunda carta a Malatesta",
+        "author": "Néstor Majno",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Néstor Majno - Una segunda carta a Malatesta.pdf",
+        "subject": "Errico Malatesta"
+      }
+    ]
+  },
+  "Vernon Richards": {
+    "books": [
+      {
+        "title": "Malatesta, pensamiento y acción revolucionarios (2007)",
+        "author": "Vernon Richards",
+        "pubYear": 2007,
+        "category": "acratas",
+        "filename": "Vernon Richards - Malatesta, pensamiento y acción revolucionarios (2007).pdf",
+        "subject": "Errico Malatesta"
+      }
+    ]
+  },
+  "Sergio Grez Toso": {
+    "books": [
+      {
+        "title": "González Vera. De muchacho anarquista a hombre de izquierda",
+        "author": "Sergio Grez Toso",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Sergio Grez Toso - González Vera. De muchacho anarquista a hombre de izquierda.pdf",
+        "subject": "José Santos González Vera"
+      }
+    ]
+  },
+  "Shirley F. Fredricks": {
+    "books": [
+      {
+        "title": "Federica Montseny y el Feminismo Anarquista español (Traducción, introducción y notas de Pedro García Guirao)",
+        "author": "Shirley F. Fredricks",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Shirley F. Fredricks - Federica Montseny y el Feminismo Anarquista español (Traducción, introducción y notas de Pedro García Guirao).pdf",
+        "subject": "Federica Montseny"
+      }
+    ]
+  },
+  "Susanna Tavera": {
+    "books": [
+      {
+        "title": "Federica Montseny. La indomable (2005) (2)",
+        "author": "Susanna Tavera",
+        "pubYear": 2005,
+        "category": "acratas",
+        "filename": "Susanna Tavera - Federica Montseny. La indomable (2005) (2).pdf",
+        "subject": "Federica Montseny"
+      }
+    ]
+  },
+  "Víctor García": {
+    "books": [
+      {
+        "title": "3 anarquistas japoneses",
+        "author": "Víctor García",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Víctor García - 3 anarquistas japoneses.pdf",
+        "subject": "Kōtoku Shūsui, Sakae Ōsugi y Kanno Sugako"
+      },
+      {
+        "title": "Bakunin, hoy",
+        "author": "Víctor García",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Víctor García - Bakunin, hoy.pdf",
+        "subject": "Mijaíl Bakunin"
+      }
+    ]
+  },
+  "Vladimiro Muñoz": {
+    "books": [
+      {
+        "title": "Anselmo Lorenzo. El precursor",
+        "author": "Vladimiro Muñoz",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Vladimiro Muñoz - Anselmo Lorenzo. El precursor.pdf",
+        "subject": "Anselmo Lorenzo"
+      },
+      {
+        "title": "Anselmo Lorenzo. Una cronología",
+        "author": "Vladimiro Muñoz",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Vladimiro Muñoz - Anselmo Lorenzo. Una cronología.pdf",
+        "subject": "Anselmo Lorenzo"
+      },
+      {
+        "title": "Correspondencia selecta de Francisco Ferrer Guardia",
+        "author": "Vladimiro Muñoz",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Vladimiro Muñoz - Correspondencia selecta de Francisco Ferrer Guardia.pdf",
+        "subject": "Francisco Ferrer Guardia"
+      }
+    ]
+  },
+  "Zélia Gattai": {
+    "books": [
+      {
+        "title": "Anarquistas gracias a Dios",
+        "author": "Zélia Gattai",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Zélia Gattai - Anarquistas gracias a Dios.pdf",
+        "subject": "Zélia Gattai"
+      }
+    ]
+  },
+  "Rafael Carrillo": {
+    "books": [
+      {
+        "title": "Ricardo Flores Magón (1945)",
+        "author": "Rafael Carrillo",
+        "pubYear": 1945,
+        "category": "acratas",
+        "filename": "Rafael Carrillo - Ricardo Flores Magón (1945).pdf",
+        "subject": "Ricardo Flores Magón"
+      }
+    ]
+  },
+  "Rafael Farga Pellicer": {
+    "books": [
+      {
+        "title": "Carta a Bakunin (1 de agosto de 1869)",
+        "author": "Rafael Farga Pellicer",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Rafael Farga Pellicer - Carta a Bakunin (1 de agosto de 1869).pdf",
+        "subject": "Mijaíl Bakunin"
+      }
+    ]
+  },
+  "Pedro García Guirao": {
+    "books": [
+      {
+        "title": "El anarquismo de Federica Montseny",
+        "author": "Pedro García Guirao",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Pedro García Guirao - El anarquismo de Federica Montseny.pdf",
+        "subject": "Federica Montseny"
+      },
+      {
+        "title": "Federica Montseny en Francia. La nueva comunidad humana y el exilio como utopía",
+        "author": "Pedro García Guirao",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Pedro García Guirao - Federica Montseny en Francia. La nueva comunidad humana y el exilio como utopía.pdf",
+        "subject": "Federica Montseny"
+      },
+      {
+        "title": "Federica Montseny y el anarquismo práctico",
+        "author": "Pedro García Guirao",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Pedro García Guirao - Federica Montseny y el anarquismo práctico.pdf",
+        "subject": "Federica Montseny"
+      },
+      {
+        "title": "Pobres pero honradas. Lujuria burguesa y honorabilidad proletaria en las novelas breves de Federica Montseny",
+        "author": "Pedro García Guirao",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Pedro García Guirao - Pobres pero honradas. Lujuria burguesa y honorabilidad proletaria en las novelas breves de Federica Montseny.pdf",
+        "subject": "Federica Montseny"
+      }
+    ]
+  },
+  "Bartolomeo Vanzetti": {
+    "books": [
+      {
+        "title": "Cartas sobre el sindicalismo (2015)",
+        "author": "Bartolomeo Vanzetti",
+        "pubYear": 2015,
+        "category": "acratas",
+        "filename": "Bartolomeo Vanzetti - Cartas sobre el sindicalismo (2015).pdf",
+        "subject": "Ferdinando Nicola Sacco y Bartolomeo Vanzetti"
+      }
+    ]
+  },
+  "Pascual Muñoz": {
+    "books": [
+      {
+        "title": "Francisco Ferrer i Guardia. Su vida, la pedagogía anarquista, las repercusiones en el Uruguay",
+        "author": "Pascual Muñoz",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Pascual Muñoz - Francisco Ferrer i Guardia. Su vida, la pedagogía anarquista, las repercusiones en el Uruguay.pdf",
+        "subject": "Francisco Ferrer Guardia"
+      }
+    ]
+  },
+  "Pietro Ferrua": {
+    "books": [
+      {
+        "title": "Práxedis G. Guerrero. Un anarquista en la revolución mexicana (2012)",
+        "author": "Pietro Ferrua",
+        "pubYear": 2012,
+        "category": "acratas",
+        "filename": "Pietro Ferrua - Práxedis G. Guerrero. Un anarquista en la revolución mexicana (2012).pdf",
+        "subject": "Práxedis G. Guerrero"
       }
     ]
   }
