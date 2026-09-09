@@ -68,7 +68,8 @@ export const anarchistTheories = [
       "La moral anarquista y otros escritos",
       "Las carceles y su influencia moral sobre los presos",
       "Palabras de un rebelde",
-      "Lo inevitable. Insurrecciones y Revolución. Rebelin y Revolución"
+      "Lo inevitable. Insurrecciones y Revolución. Rebelin y Revolución",
+      "El anarquismo expuesto por Kropotkin (1931)"
     ]
   },
   {
@@ -911,7 +912,11 @@ export const anarchistTheories = [
       "Lenin y el leninismo, guias del proletariado mundial",
       "Nuestra organizacion",
       "Sobre la disciplina revolucionaria",
-      "Marx y el anarquism"
+      "Marx y el anarquism",
+      "Carta a Karl Marx (17 de mayo de 1846)",
+      "Cartas a Vladimir Lenin I",
+      "Cartas a Vladimir Lenin II",
+      "Cartas a Vladimir Lenin"
     ]
   },
   {

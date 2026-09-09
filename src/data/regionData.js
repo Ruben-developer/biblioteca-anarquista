@@ -3103,6 +3103,13 @@ export const regionData = {
         "category": "historia",
         "rating": 4.5,
         "filename": "Anatoly Viktorovich Dubovik - Los anarquistas rusos en el movimiento obrero a principios del siglo XX.pdf"
+      },
+      {
+        "title": "Los exiliados románticos (Bakunin, Herzen, Ogarev) (1985)",
+        "author": "Edward Hallett Carr",
+        "pubYear": 1985,
+        "category": "historia",
+        "filename": "Edward Hallett Carr - Los exiliados románticos (Bakunin, Herzen, Ogarev) (1985).pdf"
       }
     ]
   },
@@ -3560,6 +3567,13 @@ export const regionData = {
         "pubYear": null,
         "category": "historia",
         "filename": "Paco Ignacio Taibo II - Arcangeles. Doce historias de revolucionarios herejes del siglo XX.pdf"
+      },
+      {
+        "title": "Dias rebeldes. Cronicas de la insumision",
+        "author": "Varios autores",
+        "pubYear": null,
+        "category": "historia",
+        "filename": "Vv. Aa. - Dias rebeldes. Cronicas de la insumision.pdf"
       }
     ]
   },
@@ -9069,6 +9083,13 @@ export const regionData = {
         "category": "acratas",
         "filename": "Pierre-Joseph Proudhon - Carta a M. Villiamé.pdf",
         "subject": "Pierre-Joseph Proudhon"
+      },
+      {
+        "title": "Carta a Karl Marx (17 de mayo de 1846)",
+        "author": "Pierre-Joseph Proudhon",
+        "pubYear": 1846,
+        "category": "teoria",
+        "filename": "Pierre-Joseph Proudhon - Carta a Karl Marx (17 de mayo de 1846).pdf"
       }
     ]
   },
@@ -9197,6 +9218,27 @@ export const regionData = {
         "category": "acratas",
         "filename": "Piotr Kropotkin - Carta a Ferrer i Guardia.pdf",
         "subject": "Francisco Ferrer Guardia"
+      },
+      {
+        "title": "Cartas a Vladimir Lenin I",
+        "author": "Piotr Kropotkin",
+        "pubYear": null,
+        "category": "teoria",
+        "filename": "Piotr Kropotkin - Cartas a Vladimir Lenin I.pdf"
+      },
+      {
+        "title": "Cartas a Vladimir Lenin II",
+        "author": "Piotr Kropotkin",
+        "pubYear": null,
+        "category": "teoria",
+        "filename": "Piotr Kropotkin - Cartas a Vladimir Lenin II.pdf"
+      },
+      {
+        "title": "Cartas a Vladimir Lenin",
+        "author": "Piotr Kropotkin",
+        "pubYear": null,
+        "category": "teoria",
+        "filename": "Piotr Kropotkin - Cartas a Vladimir Lenin.pdf"
       }
     ]
   },
@@ -11358,6 +11400,17 @@ export const regionData = {
         "category": "acratas",
         "filename": "Pietro Ferrua - Práxedis G. Guerrero. Un anarquista en la revolución mexicana (2012).pdf",
         "subject": "Práxedis G. Guerrero"
+      }
+    ]
+  },
+  "Edmundo González-Blanco": {
+    "books": [
+      {
+        "title": "El anarquismo expuesto por Kropotkin (1931)",
+        "author": "Edmundo González-Blanco",
+        "pubYear": 1931,
+        "category": "teoria",
+        "filename": "Edmundo González-Blanco - El anarquismo expuesto por Kropotkin (1931).pdf"
       }
     ]
   }

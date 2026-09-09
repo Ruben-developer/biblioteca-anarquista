@@ -36,7 +36,8 @@ export const timelineEvents = [
       "Bakunin y la guerra franco-prusiana",
       "Mijaíl Bakunin, la Internacional y la Alianza en España (1868-1873)",
       "Garibaldi y el socialismo de su tiempo",
-      "Las casas de Reclus. Hacia la fusion naturaleza-ciudad, 1830-1871"
+      "Las casas de Reclus. Hacia la fusion naturaleza-ciudad, 1830-1871",
+      "Los exiliados románticos (Bakunin, Herzen, Ogarev) (1985)"
     ]
   },
   {
@@ -404,7 +405,8 @@ export const timelineEvents = [
       "Los anarquistas españoles y el poder (1868-1969)",
       "La historiografía reciente sobre la guerra civil. El rigor histórico contra el rigor mortis",
       "La revuelta permanente",
-      "Arcangeles. Doce historias de revolucionarios herejes del siglo XX"
+      "Arcangeles. Doce historias de revolucionarios herejes del siglo XX",
+      "Dias rebeldes. Cronicas de la insumision"
     ]
   },
   {
