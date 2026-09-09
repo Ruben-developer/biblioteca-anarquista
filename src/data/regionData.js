@@ -2275,13 +2275,6 @@ export const regionData = {
         "pubYear": null,
         "category": "historia",
         "filename": "Varios autores - biografías del 36.pdf"
-      },
-      {
-        "title": "Tras el antifaz. La resistencia",
-        "author": "Rodrigo Vescovi",
-        "pubYear": null,
-        "category": "historia",
-        "filename": "Rodrigo Vescovi - Tras el antifaz. La resistencia.pdf"
       }
     ]
   },
@@ -3103,13 +3096,6 @@ export const regionData = {
         "category": "historia",
         "rating": 4.5,
         "filename": "Anatoly Viktorovich Dubovik - Los anarquistas rusos en el movimiento obrero a principios del siglo XX.pdf"
-      },
-      {
-        "title": "Los exiliados románticos (Bakunin, Herzen, Ogarev) (1985)",
-        "author": "Edward Hallett Carr",
-        "pubYear": 1985,
-        "category": "historia",
-        "filename": "Edward Hallett Carr - Los exiliados románticos (Bakunin, Herzen, Ogarev) (1985).pdf"
       }
     ]
   },
@@ -3243,6 +3229,13 @@ export const regionData = {
         "category": "historia",
         "rating": 4.5,
         "filename": "Varios autores - Papeles de plomo. Los voluntarios uruguayos en la guerra de España.pdf"
+      },
+      {
+        "title": "Tras el antifaz. La resistencia",
+        "author": "Rodrigo Vescovi",
+        "pubYear": null,
+        "category": "historia",
+        "filename": "Rodrigo Vescovi - Tras el antifaz. La resistencia.pdf"
       }
     ]
   },
@@ -7577,6 +7570,14 @@ export const regionData = {
         "category": "acratas",
         "filename": "Errico Malatesta - Respuesta a Majno (Una respuesta a Sobre la Plataforma).pdf",
         "subject": "Néstor Majno"
+      },
+      {
+        "title": "Carta a Luigi Fabbri",
+        "author": "Errico Malatesta",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Errico Malatesta - Carta a Luigi Fabbri.pdf",
+        "subject": "Luigi Fabbri"
       }
     ]
   },
@@ -8456,6 +8457,14 @@ export const regionData = {
         "pubYear": 1923,
         "category": "acratas",
         "filename": "Max Nettlau - Errico Malatesta. La vida de un anarquista (1923).pdf",
+        "subject": "Errico Malatesta"
+      },
+      {
+        "title": "Errico Malatesta. La vida de un anarquista",
+        "author": "Max Nettlau",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Max Nettlau - Errico Malatesta. La vida de un anarquista.pdf",
         "subject": "Errico Malatesta"
       }
     ]
@@ -9662,6 +9671,14 @@ export const regionData = {
         "category": "acratas",
         "filename": "Rudolf Rocker - Una jornada en la vida de Malatesta.pdf",
         "subject": "Errico Malatesta"
+      },
+      {
+        "title": "Max Nettlau. El Herodoto de la anarquía",
+        "author": "Rudolf Rocker",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Rudolf Rocker - Max Nettlau. El Herodoto de la anarquía.pdf",
+        "subject": "Max Nettlau"
       }
     ]
   },
@@ -10244,6 +10261,22 @@ export const regionData = {
         "category": "acratas",
         "filename": "Ángel J. Cappelletti - Vitalismo y anarquismo en Rafael Barrett.pdf",
         "subject": "Rafael Barrett"
+      },
+      {
+        "title": "Francisco Ferrer Guardia y la pedagogía libertaria",
+        "author": "Ángel J. Cappelletti",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Ángel J. Cappelletti - Francisco Ferrer Guardia y la pedagogía libertaria.pdf",
+        "subject": "Francisco Ferrer Guardia"
+      },
+      {
+        "title": "Pierre Clastres. La sociedad contra el Estado (1992)",
+        "author": "Ángel J. Cappelletti",
+        "pubYear": 1992,
+        "category": "acratas",
+        "filename": "Ángel J. Cappelletti - Pierre Clastres. La sociedad contra el Estado (1992).pdf",
+        "subject": "Pierre Clastres"
       }
     ]
   },
@@ -10652,6 +10685,14 @@ export const regionData = {
         "category": "acratas",
         "filename": "Francisco de Paula Fernández Gomez - De Fanelli a Angiolillo (El anarquismo en el Estado español del siglo XIX) (2).pdf",
         "subject": "Giuseppe Fanelli y Michele Angiolillo"
+      },
+      {
+        "title": "De Fanelli a Angiolillo (El anarquismo en el Estado español del siglo XIX)",
+        "author": "Francisco de Paula Fernández Gomez",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Francisco de Paula Fernández Gomez - De Fanelli a Angiolillo (El anarquismo en el Estado español del siglo XIX).pdf",
+        "subject": "Giuseppe Fanelli y Michele Angiolillo"
       }
     ]
   },
@@ -10996,6 +11037,14 @@ export const regionData = {
         "category": "acratas",
         "filename": "Juan Avilés Farré - Republicanismo, librepensamiento y revolución. La ideología de Francisco Ferrer Guardia.pdf",
         "subject": "Francisco Ferrer Guardia"
+      },
+      {
+        "title": "Pío Baroja y el anarquismo",
+        "author": "Juan Avilés Farré",
+        "pubYear": null,
+        "category": "acratas",
+        "filename": "Juan Avilés Farré - Pío Baroja y el anarquismo.pdf",
+        "subject": "Pío Baroja"
       }
     ]
   },
@@ -11244,6 +11293,14 @@ export const regionData = {
         "category": "acratas",
         "filename": "Susanna Tavera - Federica Montseny. La indomable (2005) (2).pdf",
         "subject": "Federica Montseny"
+      },
+      {
+        "title": "Federica Montseny. La indomable (2005)",
+        "author": "Susanna Tavera",
+        "pubYear": 2005,
+        "category": "acratas",
+        "filename": "Susanna Tavera - Federica Montseny. La indomable (2005).pdf",
+        "subject": "Federica Montseny"
       }
     ]
   },
@@ -11411,6 +11468,24 @@ export const regionData = {
         "pubYear": 1931,
         "category": "teoria",
         "filename": "Edmundo González-Blanco - El anarquismo expuesto por Kropotkin (1931).pdf"
+      }
+    ]
+  },
+  "Comité Invisible": {
+    "books": []
+  },
+  "Theodore Kaczynski": {
+    "books": []
+  },
+  "E. H. Carr": {
+    "books": [
+      {
+        "title": "Los exiliados románticos (Bakunin, Herzen, Ogarev) (1985)",
+        "author": "E. H. Carr",
+        "pubYear": 1985,
+        "category": "acratas",
+        "filename": "E. H. Carr - Los exiliados románticos (Bakunin, Herzen, Ogarev) (1985).pdf",
+        "subject": "Mijaíl Bakunin, Aleksandr Herzen, Nikolái Ogariov"
       }
     ]
   }

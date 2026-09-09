@@ -36,8 +36,7 @@ export const timelineEvents = [
       "Bakunin y la guerra franco-prusiana",
       "Mijaíl Bakunin, la Internacional y la Alianza en España (1868-1873)",
       "Garibaldi y el socialismo de su tiempo",
-      "Las casas de Reclus. Hacia la fusion naturaleza-ciudad, 1830-1871",
-      "Los exiliados románticos (Bakunin, Herzen, Ogarev) (1985)"
+      "Las casas de Reclus. Hacia la fusion naturaleza-ciudad, 1830-1871"
     ]
   },
   {
@@ -123,7 +122,8 @@ export const timelineEvents = [
       "Las prácticas culturales del anarquismo argentino",
       "Anarquismo argentino (1876-1902)",
       "Influencia del anarquismo español sobre la formación del anarquismo argentino",
-      "El anarquismo en el Uruguay hasta 1900"
+      "El anarquismo en el Uruguay hasta 1900",
+      "Tras el antifaz. La resistencia"
     ]
   },
   {
@@ -607,8 +607,7 @@ export const timelineEvents = [
       "En relación con el Caso Scala. Nueva ofensiva policial contra la CNT y el MLE",
       "Guerrilla anarquista leonesa",
       "Historia de diez años",
-      "Fascismo y anarquismo en la España contemporánea",
-      "Tras el antifaz. La resistencia"
+      "Fascismo y anarquismo en la España contemporánea"
     ]
   },
   {
