@@ -211,7 +211,7 @@ describe('AcratasView', () => {
   it('renderiza el título y agrupa por personaje', () => {
     const html = renderToStaticMarkup(<AcratasView darkMode={false} regionData={regionData} />);
     expect(html).toContain('Acratas');
-    expect(html).toContain('Buenaventura Durruti');
+    expect(html).toContain('Abel Paz');
     expect(html).toContain('personas del archivo');
   });
 
@@ -219,7 +219,7 @@ describe('AcratasView', () => {
     // @vitest-environment jsdom
     const { render, screen, fireEvent } = await import('@testing-library/react');
     render(<AcratasView darkMode regionData={regionData} />);
-    expect(screen.getByText('Buenaventura Durruti')).toBeTruthy();
+    expect(screen.getByText('Abel Paz')).toBeTruthy();
     fireEvent.change(screen.getByLabelText('Buscar persona o texto...'), { target: { value: 'Teresa Claramunt' } });
     expect(screen.getByText(/Teresa Claramunt/)).toBeTruthy();
     expect(screen.queryByText('Buenaventura Durruti')).toBeNull();
