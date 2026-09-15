@@ -3940,7 +3940,7 @@ export const regionData = {
         "rating": 4.7,
         "summary": "La pedagogía racionalista de Ferrer i Guardia, fusilado por sus ideas anarquistas en 1909.",
         "filename": "Anónimo - Francisco Ferrer i Guardia y la Escuela Moderna.pdf",
-        "subject": "Francisco Ferrer i Guardia"
+        "subject": "Francisco Ferrer Guardia"
       },
       {
         "title": "Actualidad del anarquismo",
@@ -4081,7 +4081,7 @@ export const regionData = {
         "rating": 4.5,
         "summary": "Biografía de Fidel Miró Solanes, anarquista catalán exiliado, a partir de sus memorias: militancia cenetista, prisión y exilio tras la Guerra Civil.",
         "filename": "Fernando Cabrera Parra - Fidel Miró Solanes. Memorias anarquistas de un catalán exiliado.pdf",
-        "subject": "Fidel Miró"
+        "subject": "Fidel Miró Solanes"
       },
       {
         "title": "La muerte de Durruti",
@@ -4338,7 +4338,7 @@ export const regionData = {
         "subject": "Salvador Seguí"
       },
       {
-        "title": "Antonia Maymon. Anarquista, maestra, naturista.",
+        "title": "Antonia Maymón. Anarquista, maestra y naturista.",
         "author": "Mª del Pilar Carmen Agullo Diaz y Molina Beneyto",
         "pubYear": 2014,
         "category": "acratas",
@@ -4347,13 +4347,13 @@ export const regionData = {
         "subject": "Antonia Maymón"
       },
       {
-        "title": "Ada Marti Vall. El sueno de la conciencia libre",
+        "title": "Ada Martí Vall. El sueño de la conciencia libre",
         "author": "Manel Aisa",
         "pubYear": 2019,
         "category": "acratas",
         "rating": 4.5,
         "filename": "Manel Aisa - Ada Marti Vall. El sueno de la conciencia libre.pdf",
-        "subject": "Ada Martí Vall"
+        "subject": "Ada Martí"
       },
       {
         "title": "Tras las huellas de una vida generosa. Aurelio Fernandez Sanchez y Los Solidarios",
@@ -4390,8 +4390,8 @@ export const regionData = {
         "subject": "Octavio Alberola"
       },
       {
-        "title": "Prologo a Anselmo Lorenzo El Proletariado Militante",
-        "author": "Jose Álvarez Junco",
+        "title": "Prólogo a Anselmo Lorenzo. El Proletariado Militante",
+        "author": "José Álvarez Junco",
         "category": "acratas",
         "rating": 4.5,
         "filename": "Jose Álvarez Junco - Prologo a Anselmo Lorenzo El Proletariado Militante.pdf",
@@ -4884,8 +4884,8 @@ export const regionData = {
         "filename": "Jacques Ellul - Anarquía y cristianismo.pdf"
       },
       {
-        "title": "Elisee Reclus. El geografo acrata y su paisaje de la libertad",
-        "author": "Ivan Dario Álvarez Escobar",
+        "title": "Élisée Reclus. El geógrafo ácrata y su paisaje de la libertad",
+        "author": "Iván Darío Álvarez Escobar",
         "category": "acratas",
         "rating": 4.5,
         "filename": "Ivan Dario Álvarez Escobar - Elisee Reclus. El geografo acrata y su paisaje de la libertad.pdf",
@@ -5300,12 +5300,12 @@ export const regionData = {
       },
       {
         "title": "Historia del Movimiento Makhnovista",
-        "author": "Néstor Makhno",
+        "author": "Néstor Majnó",
         "pubYear": 1929,
         "category": "acratas",
         "rating": 4.7,
         "filename": "Néstor Makhno - Historia del Movimiento Makhnovista.pdf",
-        "subject": "Néstor Makhno"
+        "subject": "Néstor Majnó"
       },
       {
         "title": "Dios y el Estado",
@@ -5923,7 +5923,7 @@ export const regionData = {
       },
       {
         "title": "La anarquia nuestra de cada dia",
-        "author": "Ivan Dario Álvarez Escobar",
+        "author": "Iván Darío Álvarez Escobar",
         "pubYear": 1992,
         "category": "teoria",
         "rating": 4.5,
@@ -5931,14 +5931,14 @@ export const regionData = {
       },
       {
         "title": "La ideologia politica del anarquismo espanol",
-        "author": "Jose Álvarez Junco",
+        "author": "José Álvarez Junco",
         "category": "teoria",
         "rating": 4.5,
         "filename": "Jose Álvarez Junco - La ideologia politica del anarquismo espanol.pdf"
       },
       {
         "title": "La teoria politica del anarquismo",
-        "author": "Jose Álvarez Junco",
+        "author": "José Álvarez Junco",
         "category": "teoria",
         "rating": 4.5,
         "filename": "Jose Álvarez Junco - La teoria politica del anarquismo.pdf"
@@ -6326,7 +6326,7 @@ export const regionData = {
         "pubYear": null,
         "category": "acratas",
         "filename": "Alfredo M. Bonanno - Unas breves notas sobre Sacco y Vanzetti.pdf",
-        "subject": "Ferdinando Nicola Sacco y Bartolomeo Vanzetti"
+        "subject": "Nicola Sacco y Bartolomeo Vanzetti"
       }
     ]
   },
@@ -7601,7 +7601,7 @@ export const regionData = {
         "pubYear": null,
         "category": "acratas",
         "filename": "Errico Malatesta - Respuesta a Majno (Una respuesta a Sobre la Plataforma).pdf",
-        "subject": "Néstor Majno"
+        "subject": "Néstor Majnó"
       },
       {
         "title": "Carta a Luigi Fabbri",
@@ -7820,7 +7820,7 @@ export const regionData = {
         "subject": "Camillo Berneri"
       },
       {
-        "title": "Bakunin y sus persistentes calumniadores.lt",
+        "title": "Bakunin y sus persistentes calumniadores",
         "author": "Frank Mintz",
         "pubYear": null,
         "category": "acratas",
@@ -8368,7 +8368,7 @@ export const regionData = {
         "subject": "Errico Malatesta"
       },
       {
-        "title": "Élisée Reclus  -  Correspondencia",
+        "title": "Élisée Reclus - Correspondencia",
         "author": "Luigi Fabbri",
         "pubYear": null,
         "category": "acratas",
@@ -10247,7 +10247,7 @@ export const regionData = {
         "subject": "Abel Paz"
       },
       {
-        "title": "Ada Marti (1915-1960)",
+        "title": "Ada Martí (1915-1960)",
         "author": "Agustín Guillamón Iborra",
         "pubYear": null,
         "category": "acratas",
@@ -10467,7 +10467,7 @@ export const regionData = {
   "Ángel M. de Lera": {
     "books": [
       {
-        "title": "Ángel Pestana, retrato de un anarquista (1978)",
+        "title": "Ángel Pestaña, retrato de un anarquista (1978)",
         "author": "Ángel M. de Lera",
         "pubYear": 1978,
         "category": "acratas",
@@ -10480,7 +10480,7 @@ export const regionData = {
     "books": [
       {
         "title": "Lo que aprendí en la vida (Vol. I) (1972)",
-        "author": "Ángel Pestana",
+        "author": "Ángel Pestaña",
         "pubYear": 1972,
         "category": "acratas",
         "filename": "Ángel Pestana - Lo que aprendí en la vida (Vol. I) (1972).pdf",
@@ -10496,7 +10496,7 @@ export const regionData = {
         "pubYear": 1989,
         "category": "acratas",
         "filename": "Anthropos nº 102 - José Peirats Valls. Historia contemporanea del movimiento libertario (1989).pdf",
-        "subject": "José Peirats Valls"
+        "subject": "José Peirats"
       }
     ]
   },
@@ -10508,7 +10508,7 @@ export const regionData = {
         "pubYear": 1990,
         "category": "acratas",
         "filename": "Anthropos Suplementos nº 18 - José Peirats Valls. Una experiencia histórica del pensamiento libertario (1990).pdf",
-        "subject": "José Peirats Valls"
+        "subject": "José Peirats"
       }
     ]
   },
@@ -10552,7 +10552,7 @@ export const regionData = {
         "pubYear": 2006,
         "category": "acratas",
         "filename": "Antonia Fontanillas Borrás y Sonya Torres Planells - Lola Iturbe Arizcuren. Vida e ideal de una luchadora anarquista (2006).pdf",
-        "subject": "Lola Iturbe Arizcuren"
+        "subject": "Lola Iturbe"
       }
     ]
   },
@@ -11248,15 +11248,15 @@ export const regionData = {
         "pubYear": null,
         "category": "acratas",
         "filename": "José Luis Gutiérrez Molina - Fermín Salvochea Álvarez. La heterodoxia convertida en mito.pdf",
-        "subject": "Fermín Salvochea Álvarez"
+        "subject": "Fermín Salvochea"
       },
       {
-        "title": "Una ocassión desaprovechada. Salvochea y el centenario de su muerte (2008)",
+        "title": "Una ocasión desaprovechada. Salvochea y el centenario de su muerte (2008)",
         "author": "José Luis Gutiérrez Molina",
         "pubYear": null,
         "category": "acratas",
         "filename": "José Luis Gutiérrez Molina - Una ocassión desaprovechada. Salvochea y el centenario de su muerte (2008).pdf",
-        "subject": "Fermín Salvochea Álvarez"
+        "subject": "Fermín Salvochea"
       },
       {
         "title": "Valeriano Orobon Fernández",
@@ -11512,7 +11512,7 @@ export const regionData = {
     "books": [
       {
         "title": "Mi vida (Confesión)",
-        "author": "Mijail Bakunin",
+        "author": "Mijaíl Bakunin",
         "pubYear": null,
         "category": "acratas",
         "filename": "Mijail Bakunin - Mi vida (Confesión).pdf",
@@ -11544,23 +11544,23 @@ export const regionData = {
     "books": [
       {
         "title": "Carta a las anarquistas españoles",
-        "author": "Néstor Majno",
+        "author": "Néstor Majnó",
         "pubYear": null,
         "category": "acratas",
         "filename": "Néstor Majno - Carta a las anarquistas españoles.pdf",
-        "subject": "Néstor Majno"
+        "subject": "Néstor Majnó"
       },
       {
         "title": "La revolución rusa en Ucrania 1918-1921 (Memorias)",
-        "author": "Néstor Majno",
+        "author": "Néstor Majnó",
         "pubYear": null,
         "category": "acratas",
         "filename": "Néstor Majno - La revolución rusa en Ucrania 1918-1921 (Memorias).pdf",
-        "subject": "Néstor Majno"
+        "subject": "Néstor Majnó"
       },
       {
         "title": "Una segunda carta a Malatesta",
-        "author": "Néstor Majno",
+        "author": "Néstor Majnó",
         "pubYear": null,
         "category": "acratas",
         "filename": "Néstor Majno - Una segunda carta a Malatesta.pdf",
@@ -11760,7 +11760,7 @@ export const regionData = {
         "pubYear": 2015,
         "category": "acratas",
         "filename": "Bartolomeo Vanzetti - Cartas sobre el sindicalismo (2015).pdf",
-        "subject": "Ferdinando Nicola Sacco y Bartolomeo Vanzetti"
+        "subject": "Nicola Sacco y Bartolomeo Vanzetti"
       },
       {
         "title": "Historia de la vida de un proletario (2013)",
@@ -11852,8 +11852,8 @@ export const regionData = {
   "Andres Sabella Galvez": {
     "books": [
       {
-        "title": "Gomez Rojas. Realidad y simbolo",
-        "author": "Andres Sabella Galvez",
+        "title": "Gómez Rojas. Realidad y símbolo",
+        "author": "Andrés Sabella Gálvez",
         "pubYear": null,
         "category": "acratas",
         "filename": "Andres Sabella Galvez - Gomez Rojas. Realidad y simbolo.pdf",
@@ -11968,8 +11968,8 @@ export const regionData = {
   "Cincuentenario de Rudolf Rocker (1873": {
     "books": [
       {
-        "title": "1958)",
-        "author": "Cincuentenario de Rudolf Rocker (1873",
+        "title": "Cincuentenario de Rudolf Rocker (1873 - 1958)",
+        "author": "",
         "pubYear": null,
         "category": "acratas",
         "filename": "Cincuentenario de Rudolf Rocker (1873 - 1958).pdf",
@@ -12017,7 +12017,7 @@ export const regionData = {
     "books": [
       {
         "title": "Hans Magnus Enzensberger",
-        "author": "Enzensberger",
+        "author": "Hans Magnus Enzensberger",
         "pubYear": null,
         "category": "acratas",
         "filename": "Enzensberger - Hans Magnus Enzensberger.pdf",
@@ -12052,8 +12052,8 @@ export const regionData = {
   "Federacción de Estudiantes de Chile": {
     "books": [
       {
-        "title": "Popularizacción de Gomez Rojas (1939)",
-        "author": "Federacción de Estudiantes de Chile",
+        "title": "Popularización de Gómez Rojas (1939)",
+        "author": "Federación de Estudiantes de Chile",
         "pubYear": null,
         "category": "acratas",
         "filename": "Federacción de Estudiantes de Chile - Popularizacción de Gomez Rojas (1939).pdf",
@@ -12097,7 +12097,7 @@ export const regionData = {
         "pubYear": null,
         "category": "acratas",
         "filename": "Fernando Cabrera Parra - Fidel Mir Solanes. Memorias anarquistas de un catalán exiliado (2019).pdf",
-        "subject": "Fidel Mir Solanes"
+        "subject": "Fidel Miró Solanes"
       }
     ]
   },
@@ -12124,7 +12124,7 @@ export const regionData = {
         "subject": "Francisco Ascaso"
       },
       {
-        "title": "Cinco oscenses (Samblancat, Alaiz, Acín, Maurín y Sender) en la punta de lanza de la prerrevolucin espaola (1993)",
+        "title": "Cinco oscenses (Samblancat, Alaiz, Acín, Maurín y Sender) en la punta de lanza de la prerrevolución española (1993)",
         "author": "Francisco Carrasquer Launed",
         "pubYear": null,
         "category": "acratas",
@@ -12216,7 +12216,7 @@ export const regionData = {
   "Gregori Maximov": {
     "books": [
       {
-        "title": "Discusin con Bakunin (2016)",
+        "title": "Discusión con Bakunin (2016)",
         "author": "Gregori Maximov",
         "pubYear": null,
         "category": "acratas",
@@ -12240,7 +12240,7 @@ export const regionData = {
   "Guillermo Sánchez Ortiz": {
     "books": [
       {
-        "title": "Delfin Levano (1985)",
+        "title": "Delfín Lévano (1985)",
         "author": "Guillermo Sánchez Ortiz",
         "pubYear": null,
         "category": "acratas",
@@ -12257,7 +12257,7 @@ export const regionData = {
         "pubYear": null,
         "category": "acratas",
         "filename": "Hans Magnus Enzensberger - M.A.B. 1814-1876 (1977).pdf",
-        "subject": "Mijaíl Aleksándrovich Bakunin"
+        "subject": "Mijaíl Bakunin"
       }
     ]
   },
@@ -12428,8 +12428,8 @@ export const regionData = {
   "Lois Perez Leira": {
     "books": [
       {
-        "title": "Antonio Soto. desde Ferrol hasta el fin del mundo (2009)",
-        "author": "Lois Perez Leira",
+        "title": "Antonio Soto. Desde Ferrol hasta el fin del mundo (2009)",
+        "author": "Lois Pérez Leira",
         "pubYear": null,
         "category": "acratas",
         "filename": "Lois Perez Leira - Antonio Soto. desde Ferrol hasta el fin del mundo (2009).pdf",
@@ -12440,19 +12440,19 @@ export const regionData = {
   "Luigi Lucheni": {
     "books": [
       {
-        "title": "Cmo y por qué asesiné a la princesa Sissi (2015)",
+        "title": "Cómo y por qué asesiné a la princesa Sissi (2015)",
         "author": "Luigi Lucheni",
         "pubYear": null,
         "category": "acratas",
         "filename": "Luigi Lucheni - Cmo y por qué asesiné a la princesa Sissi (2015).pdf",
-        "subject": "Isabel de Baviera (\"Sissi\")"
+        "subject": "Luigi Lucheni"
       }
     ]
   },
   "Manuel Rojas": {
     "books": [
       {
-        "title": "Recuerdos de José Domingo Gomez Rojas",
+        "title": "Recuerdos de José Domingo Gómez Rojas",
         "author": "Manuel Rojas",
         "pubYear": null,
         "category": "acratas",
@@ -12465,7 +12465,7 @@ export const regionData = {
     "books": [
       {
         "title": "Ortiz. General sin dios ni amo (1999)",
-        "author": "Marquez Rodriguez J.M y J.J Gallardo Romero",
+        "author": "José Márquez Rodríguez y Juan José Gallardo Romero",
         "pubYear": null,
         "category": "acratas",
         "filename": "Marquez Rodriguez J.M y J.J Gallardo Romero - Ortiz. General sin dios ni amo (1999).pdf",
@@ -12476,7 +12476,7 @@ export const regionData = {
   "Max Baginski": {
     "books": [
       {
-        "title": "Stirner. El nico y su propiedad",
+        "title": "Stirner. El único y su propiedad",
         "author": "Max Baginski",
         "pubYear": null,
         "category": "acratas",
@@ -12501,7 +12501,7 @@ export const regionData = {
     "books": [
       {
         "title": "Stirner",
-        "author": "Miguel Gimenez Igualada",
+        "author": "Miguel Giménez Igualada",
         "pubYear": null,
         "category": "acratas",
         "filename": "Miguel Gimenez Igualada - Stirner.pdf",
@@ -12561,7 +12561,7 @@ export const regionData = {
     "books": [
       {
         "title": "George Orwell ante sus calumniadores. Algunas observaciones.",
-        "author": "Orwell",
+        "author": "George Orwell",
         "pubYear": null,
         "category": "acratas",
         "filename": "Orwell - George Orwell ante sus calumniadores. Algunas observaciones..pdf",
@@ -12596,12 +12596,12 @@ export const regionData = {
   "Pascual Muñoz y Pablo Suarez": {
     "books": [
       {
-        "title": "La vida anarquica de Florencio Sánchez Sánchez (2010)",
-        "author": "Pascual Muñoz y Pablo Suarez",
+        "title": "La vida anárquica de Florencio Sánchez (2010)",
+        "author": "Pascual Muñoz y Pablo Suárez",
         "pubYear": null,
         "category": "acratas",
         "filename": "Pascual Muñoz y Pablo Suarez - La vida anarquica de Florencio Sánchez Sánchez (2010).pdf",
-        "subject": "Florencio Sánchez Sánchez"
+        "subject": "Florencio Sánchez"
       }
     ]
   },
@@ -12621,7 +12621,7 @@ export const regionData = {
     "books": [
       {
         "title": "Correspondencia entre Abel Paz y Juan García Oliver",
-        "author": "Paz",
+        "author": "Abel Paz y Juan García Oliver",
         "pubYear": null,
         "category": "acratas",
         "filename": "Paz - Correspondencia entre Abel Paz y Juan García Oliver.pdf",
@@ -12637,7 +12637,7 @@ export const regionData = {
         "pubYear": null,
         "category": "acratas",
         "filename": "Pedro Vallina - Fermín Salvochea. Crónica de un Revolucionario (2012).pdf",
-        "subject": "Fermín Salvochea Álvarez"
+        "subject": "Fermín Salvochea"
       },
       {
         "title": "Mis memorias (2000)",
@@ -12684,7 +12684,7 @@ export const regionData = {
         "subject": "Salvador Puig Antich"
       },
       {
-        "title": "A la Comisin Central de Solidaridad",
+        "title": "A la Comisión Central de Solidaridad",
         "author": "Puig Antich",
         "pubYear": null,
         "category": "acratas",
@@ -12728,12 +12728,12 @@ export const regionData = {
   "Ravachol (Francois Claudius Koenigstein) 1859-1892": {
     "books": [
       {
-        "title": "Declaracción de Ravachol",
-        "author": "Ravachol (Francois Claudius Koenigstein) 1859-1892",
+        "title": "Declaración de Ravachol",
+        "author": "Ravachol",
         "pubYear": null,
         "category": "acratas",
         "filename": "Ravachol (Francois Claudius Koenigstein) 1859-1892 - Declaracción de Ravachol.pdf",
-        "subject": "François Claudius Koënigstein (\"Ravachol\")"
+        "subject": "Ravachol"
       }
     ]
   },
@@ -12785,7 +12785,7 @@ export const regionData = {
     "books": [
       {
         "title": "Rudolf Rocker, Nacionalismo y cultura",
-        "author": "Rocker",
+        "author": "Rudolf Rocker",
         "pubYear": null,
         "category": "acratas",
         "filename": "Rocker - Rudolf Rocker, Nacionalismo y cultura.pdf",
@@ -12796,8 +12796,8 @@ export const regionData = {
   "Rolando DAlessandro": {
     "books": [
       {
-        "title": "Si te vas no vuelvas. 30 aos de vida ilegal y clandestina (2017)",
-        "author": "Rolando DAlessandro",
+        "title": "Si te vas no vuelvas. 30 años de vida ilegal y clandestina (2017)",
+        "author": "Rolando D'Alessandro",
         "pubYear": null,
         "category": "acratas",
         "filename": "Rolando DAlessandro - Si te vas no vuelvas. 30 aos de vida ilegal y clandestina (2017).pdf",
