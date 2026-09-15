@@ -4338,8 +4338,8 @@ export const regionData = {
         "subject": "Salvador Seguí"
       },
       {
-        "title": "Antonia Maymón. Anarquista, maestra y naturista.",
-        "author": "Mª del Pilar Carmen Agullo Diaz y Molina Beneyto",
+        "title": "Antonia Maymón. Anarquista, maestra, naturista",
+        "author": "Mª Carmen Agulló Díaz y Mª Pilar Molina Beneyto",
         "pubYear": 2014,
         "category": "acratas",
         "rating": 4.5,
@@ -9360,22 +9360,6 @@ export const regionData = {
         "category": "acratas",
         "filename": "Piotr Kropotkin - Carta a Francisco Ferrer Guardia.pdf",
         "subject": "Francisco Ferrer Guardia"
-      },
-      {
-        "title": "Memorias de un revolucionario (Vol. I)",
-        "author": "Piotr Kropotkin",
-        "pubYear": null,
-        "category": "acratas",
-        "filename": "Piotr Kropotkin - Memorias de un revolucionario (Vol. I).pdf",
-        "subject": "Piotr Kropotkin"
-      },
-      {
-        "title": "Memorias de un revolucionario (Vol. II)",
-        "author": "Piotr Kropotkin",
-        "pubYear": null,
-        "category": "acratas",
-        "filename": "Piotr Kropotkin - Memorias de un revolucionario (Vol. II).pdf",
-        "subject": "Piotr Kropotkin"
       }
     ]
   },
@@ -9799,14 +9783,6 @@ export const regionData = {
         "category": "acratas",
         "filename": "Rudolf Rocker - Una jornada en la vida de Malatesta.pdf",
         "subject": "Errico Malatesta"
-      },
-      {
-        "title": "Max Nettlau. El Herodoto de la anarquía",
-        "author": "Rudolf Rocker",
-        "pubYear": null,
-        "category": "acratas",
-        "filename": "Rudolf Rocker - Max Nettlau. El Herodoto de la anarquía.pdf",
-        "subject": "Max Nettlau"
       },
       {
         "title": "Encuentro con Max Nettlau",
@@ -10541,18 +10517,6 @@ export const regionData = {
         "category": "acratas",
         "filename": "Antoni Dalmau - Jesús Navarro Botella (1881-), maestro racionalista, activista anarquista y editor.pdf",
         "subject": "Jesús Navarro Botella"
-      }
-    ]
-  },
-  "Antonia Fontanillas Borrás y Sonya Torres Planells": {
-    "books": [
-      {
-        "title": "Lola Iturbe Arizcuren. Vida e ideal de una luchadora anarquista (2006)",
-        "author": "Antonia Fontanillas Borrás y Sonya Torres Planells",
-        "pubYear": 2006,
-        "category": "acratas",
-        "filename": "Antonia Fontanillas Borrás y Sonya Torres Planells - Lola Iturbe Arizcuren. Vida e ideal de una luchadora anarquista (2006).pdf",
-        "subject": "Lola Iturbe"
       }
     ]
   },
@@ -11427,7 +11391,7 @@ export const regionData = {
         "subject": "Juan Peiró"
       },
       {
-        "title": "Los obreros vistos por un obrero. Centenario de la muerte de Anselmo Lorenzo Asperilla",
+        "title": "Los obreros vistos por un obrero. Centenario de la muerte de Anselmo Lorenzo",
         "author": "Julián Vadillo Muñoz",
         "pubYear": null,
         "category": "acratas",
@@ -11607,14 +11571,6 @@ export const regionData = {
   "Susanna Tavera": {
     "books": [
       {
-        "title": "Federica Montseny. La indomable (2005) (2)",
-        "author": "Susanna Tavera",
-        "pubYear": 2005,
-        "category": "acratas",
-        "filename": "Susanna Tavera - Federica Montseny. La indomable (2005) (2).pdf",
-        "subject": "Federica Montseny"
-      },
-      {
         "title": "Federica Montseny. La indomable (2005)",
         "author": "Susanna Tavera",
         "pubYear": 2005,
@@ -11669,14 +11625,6 @@ export const regionData = {
         "category": "acratas",
         "filename": "Vladimiro Muñoz - Correspondencia selecta de Francisco Ferrer Guardia.pdf",
         "subject": "Francisco Ferrer Guardia"
-      },
-      {
-        "title": "Barrett (1994)",
-        "author": "Vladimiro Muñoz",
-        "pubYear": null,
-        "category": "acratas",
-        "filename": "Vladimiro Muñoz - Barrett (1994).pdf",
-        "subject": "Rafael Barrett"
       }
     ]
   },
@@ -11965,11 +11913,11 @@ export const regionData = {
       }
     ]
   },
-  "Cincuentenario de Rudolf Rocker (1873": {
+  "Comité de Homenaje a Rudolf Rocker": {
     "books": [
       {
         "title": "Cincuentenario de Rudolf Rocker (1873 - 1958)",
-        "author": "",
+        "author": "Comité de Homenaje a Rudolf Rocker",
         "pubYear": null,
         "category": "acratas",
         "filename": "Cincuentenario de Rudolf Rocker (1873 - 1958).pdf",
@@ -12010,18 +11958,6 @@ export const regionData = {
         "category": "acratas",
         "filename": "E. H Carr - Bakunin (1982).pdf",
         "subject": "Mijaíl Bakunin"
-      }
-    ]
-  },
-  "Enzensberger": {
-    "books": [
-      {
-        "title": "Hans Magnus Enzensberger",
-        "author": "Hans Magnus Enzensberger",
-        "pubYear": null,
-        "category": "acratas",
-        "filename": "Enzensberger - Hans Magnus Enzensberger.pdf",
-        "subject": "Hans Magnus Enzensberger"
       }
     ]
   },
@@ -12086,18 +12022,6 @@ export const regionData = {
         "category": "acratas",
         "filename": "Federico Urales - Mi Vida (Tomo III) (1932).pdf",
         "subject": "Federico Urales"
-      }
-    ]
-  },
-  "Fernando Cabrera Parra": {
-    "books": [
-      {
-        "title": "Fidel Mir Solanes. Memorias anarquistas de un catalán exiliado (2019)",
-        "author": "Fernando Cabrera Parra",
-        "pubYear": null,
-        "category": "acratas",
-        "filename": "Fernando Cabrera Parra - Fidel Mir Solanes. Memorias anarquistas de un catalán exiliado (2019).pdf",
-        "subject": "Fidel Miró Solanes"
       }
     ]
   },
@@ -12377,18 +12301,6 @@ export const regionData = {
       }
     ]
   },
-  "Juan García Oliver": {
-    "books": [
-      {
-        "title": "El eco de los pasos (1978)",
-        "author": "Juan García Oliver",
-        "pubYear": null,
-        "category": "acratas",
-        "filename": "Juan García Oliver - El eco de los pasos (1978).pdf",
-        "subject": "Juan García Oliver"
-      }
-    ]
-  },
   "Juan Hernández Luna": {
     "books": [
       {
@@ -12434,18 +12346,6 @@ export const regionData = {
         "category": "acratas",
         "filename": "Lois Perez Leira - Antonio Soto. desde Ferrol hasta el fin del mundo (2009).pdf",
         "subject": "Antonio Soto (\"Gallego Soto\")"
-      }
-    ]
-  },
-  "Luigi Lucheni": {
-    "books": [
-      {
-        "title": "Cómo y por qué asesiné a la princesa Sissi (2015)",
-        "author": "Luigi Lucheni",
-        "pubYear": null,
-        "category": "acratas",
-        "filename": "Luigi Lucheni - Cmo y por qué asesiné a la princesa Sissi (2015).pdf",
-        "subject": "Luigi Lucheni"
       }
     ]
   },
@@ -12549,11 +12449,11 @@ export const regionData = {
     "books": [
       {
         "title": "Ramos, Antonio - Francisco Ascaso",
-        "author": "Orts",
+        "author": "Tomás Orts Ramos",
         "pubYear": null,
         "category": "acratas",
         "filename": "Orts - Ramos, Antonio - Francisco Ascaso.pdf",
-        "subject": "Antonio Ramos y Francisco Ascaso"
+        "subject": "Francisco Ascaso"
       }
     ]
   },
@@ -12590,18 +12490,6 @@ export const regionData = {
         "category": "acratas",
         "filename": "Panclasta - Biofilo Panclasta. Amante de la vida y destructor de todo.pdf",
         "subject": "Biófilo Panclasta"
-      }
-    ]
-  },
-  "Pascual Muñoz y Pablo Suarez": {
-    "books": [
-      {
-        "title": "La vida anárquica de Florencio Sánchez (2010)",
-        "author": "Pascual Muñoz y Pablo Suárez",
-        "pubYear": null,
-        "category": "acratas",
-        "filename": "Pascual Muñoz y Pablo Suarez - La vida anarquica de Florencio Sánchez Sánchez (2010).pdf",
-        "subject": "Florencio Sánchez"
       }
     ]
   },
@@ -12676,7 +12564,7 @@ export const regionData = {
   "Puig Antich": {
     "books": [
       {
-        "title": "(1973)",
+        "title": "Salvador Puig Antich: Dossier/Comisión de Solidaridad (1973)",
         "author": "Puig Antich",
         "pubYear": null,
         "category": "acratas",
@@ -12885,7 +12773,7 @@ export const regionData = {
         "pubYear": null,
         "category": "acratas",
         "filename": "Samuel Kaplan - Peleamos contra la injusticia (Vol. I) (1960).pdf",
-        "subject": "Samuel Kaplan / Ricardo Flores Magón"
+        "subject": "Ricardo Flores Magón"
       }
     ]
   },
@@ -12966,18 +12854,6 @@ export const regionData = {
         "category": "acratas",
         "filename": "Vicente Castillo - Recuerdos y Vivencias 2.pdf",
         "subject": "Vicente Castillo"
-      }
-    ]
-  },
-  "Víctor Muñoz Cortés": {
-    "books": [
-      {
-        "title": "Cuando la patria mata. La historia del anarquista Julio Rebosio (1914-1920) (2011)",
-        "author": "Víctor Muñoz Cortés",
-        "pubYear": null,
-        "category": "acratas",
-        "filename": "Víctor Muñoz Cortés - Cuando la patria mata. La historia del anarquista Julio Rebosio (1914-1920) (2011).pdf",
-        "subject": "Julio Rebosio"
       }
     ]
   },

@@ -1,4 +1,4 @@
-Total textos: 370 | Personas: 185
+Total textos: 358 | Personas: 182
 ACRATAS VISIBLES EN PRE (catalogo)
 Formato: PERSONA (N textos) > texto — autor (año)
 ============================================================
@@ -62,20 +62,17 @@ Anselmo Lorenzo (12 textos)
    - Anselmo Lorenzo. Una cronología — Vladimiro Muñoz
    - Estudio crítico-biográfico de Anselmo Lorenzo — Fernando Tarrida del Marmol
    - Los libros de Anselmo Lorenzo — Ignacio Clemente Soriano Jiménez
-   - Los obreros vistos por un obrero. Centenario de la muerte de Anselmo Lorenzo Asperilla — Julián Vadillo Muñoz
+   - Los obreros vistos por un obrero. Centenario de la muerte de Anselmo Lorenzo — Julián Vadillo Muñoz
    - Prólogo a Anselmo Lorenzo. El Proletariado Militante — José Álvarez Junco
    - Vida y lección de Anselmo Lorenzo — Eduardo de Guzmán
    - Vida y obra de Anselmo Lorenzo — Federica Montseny
    - Anselmo Lorenzo. Un militante en el ojo del huracán (2008) — Francisco Madrid Santos (comp.) (2008)
 
 Antonia Maymón (1 texto)
-   - Antonia Maymón. Anarquista, maestra y naturista. — Mª del Pilar Carmen Agullo Diaz y Molina Beneyto (2014)
+   - Antonia Maymón. Anarquista, maestra, naturista — Mª Carmen Agulló Díaz y Mª Pilar Molina Beneyto (2014)
 
 Antonio Ortiz Ramírez (1 texto)
    - Ortiz. General sin dios ni amo (1999) — José Márquez Rodríguez y Juan José Gallardo Romero
-
-Antonio Ramos y Francisco Ascaso (1 texto)
-   - Ramos, Antonio - Francisco Ascaso — Orts
 
 Antonio Rosado (1 texto)
    - Tierra y Libertad. Memorias de un campesino anarcosindicalista andaluz — Antonio Rosado
@@ -212,7 +209,7 @@ Errico Malatesta (9 textos)
    - Malatesta, pensamiento y acción revolucionarios (2007) — Vernon Richards (2007)
    - Errico Malatesta y la violencia revolucionaria (2010) — Alfredo M. Bonanno (2010)
 
-Federica Montseny (13 textos)
+Federica Montseny (12 textos)
    - Carta a Federica Montseny — Camillo Berneri
    - El anarquismo de Federica Montseny — Pedro García Guirao
    - Federica Montseny en Francia. La nueva comunidad humana y el exilio como utopía — Pedro García Guirao
@@ -225,7 +222,6 @@ Federica Montseny (13 textos)
    - Mis primeros cuarenta años (1987) — Federica Montseny (1987)
    - Federica Montseny en Andalucía. Verano de 1932 (1994) — José Luis Gutiérrez Molina (1994)
    - Federica Montseny. La indomable (2005) — Susanna Tavera (2005)
-   - Federica Montseny. La indomable (2005) (2) — Susanna Tavera (2005)
 
 Federica Montseny y Lucía Sánchez Saornil (1 texto)
    - Dos intelectuales anarquistas frente al problema de la mujer. Federica Montseny y Lucía Sánchez Saornil — Mary Nash
@@ -255,13 +251,11 @@ Fernando Carballo (1 texto)
 Fernando Ventura (1 texto)
    - Vida accidental de un anarquista — Fernando Ventura
 
-Fidel Miró Solanes (3 textos)
-   - Fidel Mir Solanes. Memorias anarquistas de un catalán exiliado (2019) — Fernando Cabrera Parra
+Fidel Miró Solanes (2 textos)
    - Anarquismo y anarquistas — Fidel Miró Solanes (1996)
    - Fidel Miró Solanes. Memorias anarquistas de un catalán exiliado — Fernando Cabrera Parra (2000)
 
-Florencio Sánchez (2 textos)
-   - La vida anárquica de Florencio Sánchez (2010) — Pascual Muñoz y Pablo Suárez
+Florencio Sánchez (1 texto)
    - La vida anárquica de Florencio Sánchez — Pascual Muñoz y Pablo Suárez (2010)
 
 Flores Magón (1 texto)
@@ -270,8 +264,9 @@ Flores Magón (1 texto)
 Francesc Sabaté Llopart ("El Quico") (1 texto)
    - Sabate. Guerrilla urbana en España — Antonio Téllez Sola
 
-Francisco Ascaso (1 texto)
+Francisco Ascaso (2 textos)
    - Ascaso y Zaragoza. Dos pérdidas, la pérdida — Francisco Carrasquer Launed
+   - Ramos, Antonio - Francisco Ascaso — Tomás Orts Ramos
 
 Francisco Ferrer Guardia (12 textos)
    - Carta a Ferrer i Guardia — Piotr Kropotkin
@@ -318,9 +313,6 @@ Guillermina Rojas Orgis (1 texto)
 Gustav Landauer (2 textos)
    - Gustav Landauer — Revista Bicicleta
    - Gustav Landauer. El espíritu contra el Estado — Ángel J. Cappelletti
-
-Hans Magnus Enzensberger (1 texto)
-   - Hans Magnus Enzensberger — Hans Magnus Enzensberger
 
 Herbert Read (1 texto)
    - Herbert Read. Esbozo biográfico y de introducción a su obra (2009) — Nelson Méndez
@@ -426,8 +418,7 @@ Juan Busquets (1 texto)
 Juan Fernández Ayala ("Juanín") y Francisco Bedoya Gutiérrez (1 texto)
    - Juanín y Bedoya. Los últimos guerrilleros — Antonio Brevers
 
-Juan García Oliver (2 textos)
-   - El eco de los pasos (1978) — Juan García Oliver
+Juan García Oliver (1 texto)
    - El eco de los pasos — Juan García Oliver (1978)
 
 Juan Lazarte (1 texto)
@@ -449,8 +440,7 @@ Juan Peiró (5 textos)
 Juana Rouco Buela (1 texto)
    - Historia de un ideal vivido por una mujer - (1964) — Juana Rouco Buela
 
-Julio Rebosio (2 textos)
-   - Cuando la patria mata. La historia del anarquista Julio Rebosio (1914-1920) (2011) — Víctor Muñoz Cortés
+Julio Rebosio (1 texto)
    - Cuando la patria mata: la historia del anarquista Julio Rebosio (1914-1920) — Víctor Muñoz Cortés (2011)
 
 Kōtoku Shūsui, Sakae Ōsugi y Kanno Sugako (1 texto)
@@ -465,8 +455,7 @@ Librado Rivera (4 textos)
    - Librado Rivera y los hermanos rojos en el movimiento social y cultural anarquista en Villa Cecilia y Tampico, Tamaulipas, 1915-1930 — Aurora Monica Alcayaga Sasso
    - Librado Rivera. El indomable magonero — Aurora Monica Alcayaga Sasso
 
-Lola Iturbe (2 textos)
-   - Lola Iturbe Arizcuren. Vida e ideal de una luchadora anarquista (2006) — Antonia Fontanillas Borrás y Sonya Torres Planells (2006)
+Lola Iturbe (1 texto)
    - Lola Iturbe: vida e ideal de una luchadora anarquista — Sonya Torres y Antonia Fontanillas (2006)
 
 Lorenzo Portet y Tubau (1 texto)
@@ -479,8 +468,7 @@ Luigi Fabbri (2 textos)
    - Carta a Luigi Fabbri — Errico Malatesta
    - Carta a Luigi Fabbri sobre los bolcheviques — Errico Malatesta
 
-Luigi Lucheni (2 textos)
-   - Cómo y por qué asesiné a la princesa Sissi (2015) — Luigi Lucheni
+Luigi Lucheni (1 texto)
    - Cómo y porqué asesiné a la princesa Sissi — Luigi Lucheni (1898)
 
 Luisa Capetillo (1 texto)
@@ -512,9 +500,8 @@ Maroto (1 texto)
 Mateo Morral (1 texto)
    - Ha vuelto Mateo Morral El anarquismo insurreccionalista del siglo XXI y sus antecedentes históricos — Juan Avilés Farré y M. Morán Pallarés
 
-Max Nettlau (3 textos)
+Max Nettlau (2 textos)
    - Encuentro con Max Nettlau — Rudolf Rocker
-   - Max Nettlau. El Herodoto de la anarquía — Rudolf Rocker
    - Max Nettlau. El Herodoto de la anarquía (1950) — Rudolf Rocker (1950)
 
 Max Stirner (3 textos)
@@ -616,13 +603,11 @@ Pietro Gori (1 texto)
 Pío Baroja (1 texto)
    - Pío Baroja y el anarquismo — Juan Avilés Farré
 
-Piotr Kropotkin (10 textos)
+Piotr Kropotkin (8 textos)
    - Biografía de Pedro Kropotkin — Anselmo Lorenzo
    - Diálogo entre Lenin y Kropotkin — Frank Mintz
    - Evolucionismo y ética. Piotr Kropotkin — Álvaro Girón Sierra
    - Kropotkin contra la eugenesia. Siete intensos minutos — Álvaro Girón Sierra
-   - Memorias de un revolucionario (Vol. I) — Piotr Kropotkin
-   - Memorias de un revolucionario (Vol. II) — Piotr Kropotkin
    - Piotr Kropotkin — Rudolf Rocker
    - Segando la hierba bajo los pies del cristianismo. Darwinismo y religión en Piotr Kropotkin, 1842-1921 — Álvaro Girón Sierra
    - Tomando a Piotr Kropotkin en serio. Darwinismo, anarquismo y ciencia — Álvaro Girón Sierra
@@ -635,8 +620,7 @@ Práxedis G. Guerrero (2 textos)
    - La vida heroica de Praxedis G. Guerrero (1960) — Eugenio Martinez Nunez
    - Práxedis G. Guerrero. Un anarquista en la revolución mexicana (2012) — Pietro Ferrua (2012)
 
-Rafael Barrett (4 textos)
-   - Barrett (1994) — Vladimiro Muñoz
+Rafael Barrett (3 textos)
    - Vitalismo y anarquismo en Rafael Barrett — Ángel J. Cappelletti
    - Cartas íntimas (1967) — Rafael Barrett (1967)
    - Barrett — Vladimiro Muñoz (1994)
@@ -651,10 +635,11 @@ Ravachol (2 textos)
    - Declaración de Ravachol — Ravachol
    - Ravachol y los anarquistas — Jean Maitron
 
-Ricardo Flores Magón (9 textos)
+Ricardo Flores Magón (10 textos)
    - Epistolario ultimo — Ricardo Flores Magón
    - Nada es tan desalentador como un esclavo satisfecho (Cartas desde la prisión) — Ricardo Flores Magón
    - No hay virtud en el servilismo. Biografia de Ricardo Flores Magón — Juan Hernández Luna
+   - Peleamos contra la injusticia (Vol. I) (1960) — Samuel Kaplan
    - Ricardo Flores Magón y el Partido Liberal Mexicano (1960) — Ethel Duffy Turner
    - Ricardo Flores Magón y su actitud en la Baja California (1962) — Jesús Gonzalez Monroy
    - Ricardo Flores Magon, el apostol de la revolucion social mexicana — Diego Abad de Santillán (1925)
@@ -669,7 +654,7 @@ Rolando D'Alessandro (1 texto)
    - Si te vas no vuelvas. 30 años de vida ilegal y clandestina (2017) — Rolando D'Alessandro
 
 Rudolf Rocker (5 textos)
-   - Cincuentenario de Rudolf Rocker (1873 - 1958) — 
+   - Cincuentenario de Rudolf Rocker (1873 - 1958) — Comité de Homenaje a Rudolf Rocker
    - La juventud de un rebelde — Rudolf Rocker
    - Rudolf Rocker, Nacionalismo y cultura — Rudolf Rocker
    - Rudolf Rocker. El socialismo como anti-absolutismo — Ángel J. Cappelletti
@@ -679,15 +664,12 @@ Sakine Cansiz (1 texto)
    - Toda mi vida fue una lucha (Tomo I) (2018) — Sakine Cansiz
 
 Salvador Puig Antich (3 textos)
-   - (1973) — Puig Antich
    - A la Comisión Central de Solidaridad — Puig Antich
    - Quién resucita a un muerto (1973) — Puig Antich
+   - Salvador Puig Antich: Dossier/Comisión de Solidaridad (1973) — Puig Antich
 
 Salvador Seguí (1 texto)
    - Topicos, utilizacion y revision historiografica en torno a una figura carismatica. El ejemplo de Salvador Segui — Teresa Abelló Güell
-
-Samuel Kaplan / Ricardo Flores Magón (1 texto)
-   - Peleamos contra la injusticia (Vol. I) (1960) — Samuel Kaplan
 
 Sara Berenguer (1 texto)
    - Entre el sol y la tormenta. Revolución, guerra y exilio de una mujer libre — Sara Berenguer
