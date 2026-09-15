@@ -1,0 +1,115 @@
+{
+  "documents": [
+    {
+      "id": "proudhon-propiedad-1840",
+      "title": "¿Qué es la Propiedad?",
+      "author": "Pierre-Joseph Proudhon",
+      "authorBio": "Filósofo francés, padre del anarquismo moderno, desarrolló el mutualismo",
+      "authorYear": "1809-1865",
+      "year": 1840,
+      "publisher": "Garnier-Frères",
+      "place": "París",
+      "country": "Francia",
+      "region": "Francia",
+      "type": "teoría",
+      "subtype": "mutualismo",
+      "category": "teoria",
+      "tags": [
+        "propiedad",
+        "anarquismo",
+        "filosofía",
+        "mutualismo",
+        "justicia"
+      ],
+      "keywords": [
+        "propiedad privada",
+        "robo",
+        "sociedad",
+        "autoridad"
+      ],
+      "pages": 450,
+      "wordCount": 125000,
+      "language": "es",
+      "decade": "1840s",
+      "excerpt": "La propiedad es un robo. Esta afirmación que forma los primeros nombres de mi obra, ha de sorprender en primer lugar; mas cuando el lector haya leído todas las páginas que siguen, quizá no esté sorprendido de que haya empezado por una imagen tan fuerte...",
+      "summary": "Obra fundamental de Pierre-Joseph Proudhon que cuestiona radicalmente la naturaleza y legitimidad de la propiedad privada. A través de un análisis riguroso, Proudhon argumenta que la propiedad es inherentemente un robo, presentando su teoría del mutualismo como alternativa para una sociedad justa basada en el intercambio equitativo y la ayuda mutua.",
+      "filename": "anarquismo/f7849880_Propiedad_Final_pmd.pdf",
+      "fileFormat": "pdf",
+      "fileSize": 3.5,
+      "license": "CC0",
+      "accessLevel": "public",
+      "quality": "excelente",
+      "hasOCR": true,
+      "verified": true,
+      "rating": 4.8,
+      "reviewCount": 34,
+      "accessCount": 1250,
+      "relatedPeople": [
+        "Karl Marx",
+        "Mijaíl Bakunin",
+        "Louise Michel"
+      ],
+      "relatedMovements": [
+        "Anarquismo",
+        "Socialismo Utópico",
+        "Mutualismo"
+      ],
+      "historicalEvent": "Prelude al primer anarquismo"
+    },
+    {
+      "id": "kropotkin-apoyo-mutuo-1902",
+      "title": "El Apoyo Mutuo",
+      "author": "Piotr Kropotkin",
+      "authorBio": "Príncipe y teórico ruso del anarcocomunismo, revolucionario y naturalista",
+      "authorYear": "1842-1921",
+      "year": 1902,
+      "publisher": "Twentieth Century Press",
+      "place": "Londres",
+      "country": "Rusia/Reino Unido",
+      "region": "Rusia",
+      "type": "teoría",
+      "subtype": "anarcocomunismo",
+      "category": "teoria",
+      "tags": [
+        "cooperación",
+        "evolución",
+        "naturaleza",
+        "anarquismo",
+        "sociedad"
+      ],
+      "keywords": [
+        "apoyo mutuo",
+        "ayuda mutua",
+        "cooperación",
+        "lucha por la existencia"
+      ],
+      "pages": 320,
+      "wordCount": 95000,
+      "language": "es",
+      "decade": "1900s",
+      "excerpt": "La idea de que la lucha por la existencia es principalmente una lucha entre individuos aislados, de que el progreso depende de la destrucción de los débiles por los fuertes, y que tales destructores llevan al género humano al perfección...",
+      "summary": "Kropotkin presenta evidencia científica de que la cooperación, no la competencia, ha sido el factor evolutivo dominante en la naturaleza. Basándose en observaciones biológicas y antropológicas, argumenta que el apoyo mutuo es la ley natural de la evolución y el fundamento de una sociedad armoniosa y justa.",
+      "filename": "anarquismo/f7067536_El_Apoyo_Mutuo_1902.pdf",
+      "fileFormat": "pdf",
+      "fileSize": 2.8,
+      "license": "CC0",
+      "accessLevel": "public",
+      "quality": "buena",
+      "hasOCR": true,
+      "verified": true,
+      "rating": 5.0,
+      "reviewCount": 28,
+      "accessCount": 980,
+      "relatedPeople": [
+        "Charles Darwin",
+        "Thomas Huxley",
+        "Emma Goldman"
+      ],
+      "relatedMovements": [
+        "Anarcocomunismo",
+        "Anarcosindicalismo"
+      ],
+      "historicalEvent": "Teorización del anarquismo científico"
+    }
+  ]
+}
