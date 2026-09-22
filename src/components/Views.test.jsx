@@ -49,15 +49,15 @@ describe('Navigation', () => {
 describe('Header', () => {
   const stats = { texts: 114, events: 16, regions: 16 };
 
-  it('renderiza el título y el resumen de estadísticas', () => {
+  it('renderiza el título y el subtítulo', () => {
     const html = renderToStaticMarkup(
       <Header darkMode={false} onDarkModeToggle={() => {}} onShowStats={() => {}} onShowContact={() => {}} stats={stats} />
     );
     expect(html).toContain('La Idea');
     expect(html).toContain('Archivo Histórico Anarquista');
-    expect(html).toContain('114 textos');
-    expect(html).toContain('16 eventos');
-    expect(html).toContain('16 regiones');
+    expect(html).not.toContain('114 textos');
+    expect(html).not.toContain('16 eventos');
+    expect(html).not.toContain('16 regiones');
   });
 
   it('muestra el botón de tema claro cuando está en modo oscuro', () => {
