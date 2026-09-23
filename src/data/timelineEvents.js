@@ -16,7 +16,7 @@ export const timelineEvents = [
       "Los hermanos de la Costa. Piratería libertaria en el Caribe",
       "Colón y la civilización occidental",
       "La Gran Revolución (1789-1793) (Vol. I)",
-      "Esbozo de historia de las utopoas"
+      "Esbozo de historia de las utopías"
     ]
   },
   {
@@ -36,7 +36,7 @@ export const timelineEvents = [
       "Bakunin y la guerra franco-prusiana",
       "Mijaíl Bakunin, la Internacional y la Alianza en España (1868-1873)",
       "Garibaldi y el socialismo de su tiempo",
-      "Las casas de Reclus. Hacia la fusion naturaleza-ciudad, 1830-1871"
+      "Las casas de Reclus. Hacia la fusión naturaleza-ciudad, 1830-1871"
     ]
   },
   {
@@ -193,7 +193,7 @@ export const timelineEvents = [
       "La utopía libertaria en el Perú",
       "Anarquismo y anarcosindicalismo en el Perú. Testimonios",
       "Los artesanos libertarios y la ética del trabajo",
-      "Un ambito libertario llamado Javaro"
+      "Un ámbito libertario llamado Játiva"
     ]
   },
   {
@@ -526,7 +526,6 @@ export const timelineEvents = [
       "La traición de Stalin. Cómo terminó la guerra de España",
       "Teníamos que perder",
       "El protagonismo político de la CNT en los ayuntamientos catalanes (1936-1939). El Vallés Occidental",
-      "Autogestión y anarcosindicalismo en la España revolucionaria",
       "La gesta traicionada. Los anarquistas vascos y la Guerra Civil en Euskal Herriak (Julio 1936 - Junio 1937)",
       "Entre los campesinos de Aragón. El comunismo libertario en las comarcas liberadas (1977) (2)",
       "Escritos II (Revolución Española)",
@@ -795,7 +794,7 @@ export const timelineEvents = [
       "Conferencia. El anarquismo en Andalucía hasta hoy",
       "Guerra a la guerra. El movimiento obrero frente la guerra (1898-1918)",
       "Los hijos del trabajo. El sindicalismo español antes de la Guerra Civil",
-      "Prólogo de Camille Pert En Anarquoa",
+      "Prólogo de Camille Pert En Anarquía",
       "Prólogo de Jean Grave Tierra Libre",
       "El Internado Durruti",
       "Prólogo de Kropotkin La Gran Revolución"

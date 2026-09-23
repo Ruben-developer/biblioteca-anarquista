@@ -2242,7 +2242,7 @@ export const regionData = {
         "filename": "Anselmo Lorenzo - Prólogo de Camille Pert En Anarquoa.pdf",
         "category": "historia",
         "author": "Anselmo Lorenzo",
-        "title": "Prólogo de Camille Pert En Anarquoa",
+        "title": "Prólogo de Camille Pert En Anarquía",
         "year": null,
         "rating": null
       },
@@ -2441,7 +2441,7 @@ export const regionData = {
         "filename": "Oyon, Jose Luis Y Serra, Marta - Las casas de Reclus. Hacia la fusion naturaleza-ciudad, 1830-1871.pdf",
         "category": "historia",
         "author": "Oyon, Jose Luis Y Serra, Marta",
-        "title": "Las casas de Reclus. Hacia la fusion naturaleza-ciudad, 1830-1871",
+        "title": "Las casas de Reclus. Hacia la fusión naturaleza-ciudad, 1830-1871",
         "year": null,
         "rating": null
       }
@@ -3550,7 +3550,7 @@ export const regionData = {
         "filename": "Max Nettlau - Esbozo de historia de las utopoas.pdf",
         "category": "historia",
         "author": "Max Nettlau",
-        "title": "Esbozo de historia de las utopoas",
+        "title": "Esbozo de historia de las utopías",
         "year": null,
         "rating": null
       },
@@ -10206,7 +10206,7 @@ export const regionData = {
         "filename": "Miquel Izard - Un ambito libertario llamado Javaro.pdf",
         "category": "historia",
         "author": "Miquel Izard",
-        "title": "Un ambito libertario llamado Javaro",
+        "title": "Un ámbito libertario llamado Játiva",
         "year": null,
         "rating": null
       }
