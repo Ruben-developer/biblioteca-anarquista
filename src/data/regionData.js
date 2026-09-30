@@ -8,6 +8,30 @@ export const regionData = {
         "category": "historia",
         "rating": 4.5,
         "filename": "Albert Meltzer - La resistencia anarquista a la Alemania nazi.pdf"
+      },
+      {
+        "title": "Republicanos espaoles en los campos de exterminio nazis",
+        "author": "Eduardo Pons Prades",
+        "category": "historia",
+        "filename": "Eduardo Pons Prades - Republicanos espaoles en los campos de exterminio nazis.pdf"
+      },
+      {
+        "title": "La tragedia de millares de espanoles bajo el nazismo. Los cerdos del comandante",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - La tragedia de millares de espanoles bajo el nazismo. Los cerdos del comandante.pdf"
+      },
+      {
+        "title": "La historia de las Rote Zora y las Celulas Revolucionarias",
+        "author": "Rote Zora 1977-1995",
+        "category": "historia",
+        "filename": "Rote Zora 1977-1995 - La historia de las Rote Zora y las Celulas Revolucionarias.pdf"
+      },
+      {
+        "title": "Rote Zora (2013)",
+        "author": "Rote Zora 1977-1995",
+        "category": "historia",
+        "filename": "Rote Zora 1977-1995 - Rote Zora (2013).pdf"
       }
     ]
   },
@@ -251,6 +275,90 @@ export const regionData = {
         "category": "historia",
         "rating": 4.5,
         "filename": "Gonzalo Zaragoza - Anarquismo argentino (1876-1902).pdf"
+      },
+      {
+        "title": "1940)",
+        "author": "Catalogo de Folletos Anarquistas Argentinos (1890",
+        "category": "historia",
+        "filename": "Catalogo de Folletos Anarquistas Argentinos (1890 - 1940).pdf"
+      },
+      {
+        "title": "Literatura argentina y politica (Vol. II) De los jacobinos porteños a La bohemia anarquista",
+        "author": "David Viñas",
+        "category": "historia",
+        "filename": "David Viñas - Literatura argentina y politica (Vol. II) De los jacobinos porteños a La bohemia anarquista.pdf"
+      },
+      {
+        "title": "La Semana Trágica (1984)",
+        "author": "Edgardo J Bilsky",
+        "category": "historia",
+        "filename": "Edgardo J Bilsky - La Semana Trágica (1984).pdf"
+      },
+      {
+        "title": "Catalogo de publicaciones obreras argentinas",
+        "author": "Federación Libertaria Argentina FLA",
+        "category": "historia",
+        "filename": "Federacción Libertaria Argentina FLA - Catalogo de publicaciones obreras argentinas.pdf"
+      },
+      {
+        "title": "La imprenta enterrada. Baroja, Arlt y el imaginario anarquista (2000)",
+        "author": "Glen S. Close",
+        "category": "historia",
+        "filename": "Glen S. Close - La imprenta enterrada. Baroja, Arlt y el imaginario anarquista (2000).pdf"
+      },
+      {
+        "title": "La Alianza Obrera Spartacus - (2005)",
+        "author": "Javier Benyo",
+        "category": "historia",
+        "filename": "Javier Benyo - La Alianza Obrera Spartacus - (2005).pdf"
+      },
+      {
+        "title": "El anarquismo",
+        "author": "Juan Suriano",
+        "category": "historia",
+        "filename": "Juan Suriano - El anarquismo.pdf"
+      },
+      {
+        "title": "Los festejos del primer Centenario de la revolución de Mayo y la exclusión del movimiento obrero",
+        "author": "Juan Suriano",
+        "category": "historia",
+        "filename": "Juan Suriano - Los festejos del primer Centenario de la revolución de Mayo y la exclussión del movimiento obrero.pdf"
+      },
+      {
+        "title": "Anarquismo, género y sexualidad en América del sur. Breve ensayo bibliográfico",
+        "author": "Laura Fernández Cordero",
+        "category": "historia",
+        "filename": "Laura Fernández Cordero - Anarquismo, género y sexualidad en América del sur. Breve ensayo bibliográfico.pdf"
+      },
+      {
+        "title": "Buenos Aires de la utopia",
+        "author": "Laura Fernández Cordero",
+        "category": "historia",
+        "filename": "Laura Fernández Cordero - Buenos Aires de la utopia.pdf"
+      },
+      {
+        "title": "Izquierdas y feminismos, hitos contemporáneos",
+        "author": "Laura Fernández Cordero",
+        "category": "historia",
+        "filename": "Laura Fernández Cordero - Izquierdas y feminismos, hitos contemporáneos.pdf"
+      },
+      {
+        "title": "El anarquismo argentino. Bibliografía, hemerografía y fondos de archivo (2018)",
+        "author": "Lucas Domínguez Rubio",
+        "category": "historia",
+        "filename": "Lucas Domínguez Rubio - El anarquismo argentino. Bibliografía, hemerografía y fondos de archivo (2018).pdf"
+      },
+      {
+        "title": "Recuerdos de la vida pampera (Recuerdos de la semana tragica de enero de 1919) (1962)",
+        "author": "Serafin Fernández",
+        "category": "historia",
+        "filename": "Serafin Fernández - Recuerdos de la vida pampera (Recuerdos de la semana tragica de enero de 1919) (1962).pdf"
+      },
+      {
+        "title": "1945)",
+        "author": "Sociales Catalogo de Publicaciones políticas y Culturales Anarquistas (1890",
+        "category": "historia",
+        "filename": "Sociales Catalogo de Publicaciones políticas y Culturales Anarquistas (1890 - 1945).pdf"
       }
     ]
   },
@@ -335,6 +443,14 @@ export const regionData = {
         "category": "historia",
         "rating": 4.5,
         "filename": "Varios autores - Por sólo 20 centavos. La lucha contra el aumento del transporte en Brasil.pdf"
+      },
+      {
+        "filename": "Miquel Izard - Un ambito libertario llamado Javaro.pdf",
+        "category": "historia",
+        "author": "Miquel Izard",
+        "title": "Un ámbito libertario llamado Javarí",
+        "year": null,
+        "rating": null
       }
     ]
   },
@@ -578,6 +694,36 @@ export const regionData = {
         "title": "Letras anarquistas. Articulos politicos y otros escritos ineditos",
         "year": null,
         "rating": null
+      },
+      {
+        "title": "Los Subversivos. Las maquinaciones del poder, república de Chile, 1920 (2012)",
+        "author": "Manuel Lagos Mieres",
+        "category": "historia",
+        "filename": "Manuel Lagos Mieres - Los Subversivos. Las maquinaciones del poder, república de Chile, 1920 (2012).pdf"
+      },
+      {
+        "title": "Los wobblies criollos (2008)",
+        "author": "Mario Araya Saavedra",
+        "category": "historia",
+        "filename": "Mario Araya Saavedra - Los wobblies criollos (2008).pdf"
+      },
+      {
+        "title": "De la Regeneracin del pueblo a la huelga general (1998)",
+        "author": "Sergio Grez Toso",
+        "category": "historia",
+        "filename": "Sergio Grez Toso - De la Regeneracin del pueblo a la huelga general (1998).pdf"
+      },
+      {
+        "title": "La cuestin social en Chile. Ideas y debates precursores (1804 - 1902)",
+        "author": "Sergio Grez Toso",
+        "category": "historia",
+        "filename": "Sergio Grez Toso - La cuestin social en Chile. Ideas y debates precursores (1804 - 1902).pdf"
+      },
+      {
+        "title": "Teatro acrata o teatro obrero Chile, 1895-1927",
+        "author": "Sergio Grez Toso",
+        "category": "historia",
+        "filename": "Sergio Grez Toso - Teatro ácrata o teatro obrero Chile, 1895-1927.pdf"
       }
     ]
   },
@@ -638,6 +784,12 @@ export const regionData = {
         "rating": 4.7,
         "summary": "Historia y actualidad del anarquismo y el anarcosindicalismo colombiano, editada por el CIL.",
         "filename": "Centro de Investigación Libertaria y Educación Popular - Pasado y presente del anarquismo y del anarcosindicalismo en Colombia.pdf"
+      },
+      {
+        "title": "Anarquismo entre rejas (2019)",
+        "author": "William Andres Mesa Cardenas",
+        "category": "historia",
+        "filename": "William Andres Mesa Cardenas - Anarquismo entre rejas (2019).pdf"
       }
     ]
   },
@@ -703,6 +855,30 @@ export const regionData = {
         "category": "historia",
         "rating": 4.5,
         "filename": "Revista Cuba Nuestra - Los anarquistas cubanos a fines del siglo XIX. Los libertarios y la guerra del 95.pdf"
+      },
+      {
+        "title": "Revolución y Dictadura en Cuba (1963)",
+        "author": "Abelardo Iglesias",
+        "category": "historia",
+        "filename": "Abelardo Iglesias - Revolución y Dictadura en Cuba (1963).pdf"
+      },
+      {
+        "title": "Testimonios de la revolución cubana (1960)",
+        "author": "Augustin Souchy",
+        "category": "historia",
+        "filename": "Augustin Souchy - Testimonios de la revolución cubana (1960).pdf"
+      },
+      {
+        "title": "La cultura obrera en Cuba. La lectura colectiva en los talleres de tabaquería",
+        "author": "Lily Litvak",
+        "category": "historia",
+        "filename": "Lily Litvak - La cultura obrera en Cuba. La lectura colectiva en los talleres de tabaquería.pdf"
+      },
+      {
+        "title": "La revolución cubana. Un enfoque crítico (1978)",
+        "author": "Sam Dolgoff",
+        "category": "historia",
+        "filename": "Sam Dolgoff - La revolución cubana. Un enfoque crítico (1978).pdf"
       }
     ]
   },
@@ -2275,6 +2451,1482 @@ export const regionData = {
         "pubYear": null,
         "category": "historia",
         "filename": "Varios autores - biografías del 36.pdf"
+      },
+      {
+        "title": "Paradigma de una revolución (19 de julio de 1936, en Barcelona) (1967)",
+        "author": "Abel Paz",
+        "category": "historia",
+        "filename": "Abel Paz - Paradigma de una revolución (19 de julio de 1936, en Barcelona) (1967).pdf"
+      },
+      {
+        "title": "Viaje al pasado 1936-1939 (2002)",
+        "author": "Abel Paz",
+        "category": "historia",
+        "filename": "Abel Paz - Viaje al pasado 1936-1939 (2002).pdf"
+      },
+      {
+        "title": "El error político militar de la República. La perdida de la guerra civil (1936-1939) (2012)",
+        "author": "Abraham Guillen",
+        "category": "historia",
+        "filename": "Abraham Guillen - El error político militar de la República. La perdida de la guerra civil (1936-1939) (2012).pdf"
+      },
+      {
+        "title": "Casas Viejas. No convertir la rebelión en cultura",
+        "author": "Agustín García Calvo",
+        "category": "historia",
+        "filename": "Agustín García Calvo - Casas Viejas. No convertir la rebelión en cultura.pdf"
+      },
+      {
+        "title": "De los Comites de Defensa a las Milicias Populares",
+        "author": "Agustín Guillamón Iborra",
+        "category": "historia",
+        "filename": "Agustín Guillamón Iborra - De los Comites de Defensa a las Milicias Populares.pdf"
+      },
+      {
+        "title": "El grupo franco-español de Los Amigos de Durruti",
+        "author": "Agustín Guillamón Iborra",
+        "category": "historia",
+        "filename": "Agustín Guillamón Iborra - El grupo franco-español de Los Amigos de Durruti.pdf"
+      },
+      {
+        "title": "La agrupación de Los Amigos de Durruti",
+        "author": "Agustín Guillamón Iborra",
+        "category": "historia",
+        "filename": "Agustín Guillamón Iborra - La agrupación de Los Amigos de Durruti.pdf"
+      },
+      {
+        "title": "La guerra del pan. Hambre y violencia en la Barcelona revolucionaria. De diciembre de 1936 a mayo de 1937 (2014)",
+        "author": "Agustín Guillamón Iborra",
+        "category": "historia",
+        "filename": "Agustín Guillamón Iborra - La guerra del pan. Hambre y violencia en la Barcelona revolucionaria. De diciembre de 1936 a mayo de 1937 (2014).pdf"
+      },
+      {
+        "title": "La represión contra la CNT y los revolucionarios. Hambre y violencia en la Barcelona revolucionaria. De mayo a septiembre de 1937 (2015)",
+        "author": "Agustín Guillamón Iborra",
+        "category": "historia",
+        "filename": "Agustín Guillamón Iborra - La represión contra la CNT y los revolucionarios. Hambre y violencia en la Barcelona revolucionaria. De mayo a septiembre de 1937 (2015).pdf"
+      },
+      {
+        "title": "Los Amigos de Durruti. Historia y antologia de textos",
+        "author": "Agustín Guillamón Iborra",
+        "category": "historia",
+        "filename": "Agustín Guillamón Iborra - Los Amigos de Durruti. Historia y antologia de textos.pdf"
+      },
+      {
+        "title": "Los Comites de Defensa de la CNT",
+        "author": "Agustín Guillamón Iborra",
+        "category": "historia",
+        "filename": "Agustín Guillamón Iborra - Los Comites de Defensa de la CNT.pdf"
+      },
+      {
+        "title": "El terror estalinista en Barcelona (1938) (2013)",
+        "author": "Agustín Guillamón",
+        "category": "historia",
+        "filename": "Agustín Guillamón - El terror estalinista en Barcelona (1938) (2013).pdf"
+      },
+      {
+        "title": "¡España libre",
+        "author": "Albert Camus",
+        "category": "historia",
+        "filename": "Albert Camus - ¡España libre.pdf"
+      },
+      {
+        "title": "El poder de la revolución. Percepción y representación en el anarquismo español de los años treinta (2016)",
+        "author": "Alejandro Lora Medina",
+        "category": "historia",
+        "filename": "Alejandro Lora Medina - El poder de la revolución. Percepción y representación en el anarquismo español de los años treinta (2016).pdf"
+      },
+      {
+        "title": "Del caciquismo a la colectivización. El desarrollo histórico de las colectividades de Guadalajara, 1936-1939",
+        "author": "Alejandro Ramon Diez Torre",
+        "category": "historia",
+        "filename": "Alejandro Ramon Diez Torre - Del caciquismo a la colectivización. El desarrollo histórico de las colectividades de Guadalajara, 1936-1939.pdf"
+      },
+      {
+        "title": "El Archivo de la Guerra Civil de Salamanca y sus fuentes documentales para Aragon, 1936-1938",
+        "author": "Alejandro Ramon Diez Torre",
+        "category": "historia",
+        "filename": "Alejandro Ramon Diez Torre - El Archivo de la Guerra Civil de Salamanca y sus fuentes documentales para Aragon, 1936-1938.pdf"
+      },
+      {
+        "title": "Pistolerismo",
+        "author": "Alfonso Martinez Rizo",
+        "category": "historia",
+        "filename": "Alfonso Martinez Rizo - Pistolerismo.pdf"
+      },
+      {
+        "title": "El cenit de la CNT en Vizcaya en torno a 1920",
+        "author": "Alfredo Velasco Nunez",
+        "category": "historia",
+        "filename": "Alfredo Velasco Nunez - El cenit de la CNT en Vizcaya en torno a 1920.pdf"
+      },
+      {
+        "title": "Medio siglo de parlamentarismo",
+        "author": "Anselmo Lorenzo",
+        "category": "historia",
+        "filename": "Anselmo Lorenzo - Medio siglo de parlamentarismo.pdf"
+      },
+      {
+        "title": "Las transformaciones colectivistas en la industria y los servicios de Barcelona (1936-1939) (1992)",
+        "author": "Antoni Castells Duran",
+        "category": "historia",
+        "filename": "Antoni Castells Duran - Las transformaciones colectivistas en la industria y los servicios de Barcelona (1936-1939) (1992).pdf"
+      },
+      {
+        "title": "La oleada de violencia en la Barcelona de 1904-1908",
+        "author": "Antoni Dalmau",
+        "category": "historia",
+        "filename": "Antoni Dalmau - La oleada de violencia en la Barcelona de 1904-1908.pdf"
+      },
+      {
+        "title": "La CNT en los años rojos",
+        "author": "Antonio Bar",
+        "category": "historia",
+        "filename": "Antonio Bar - La CNT en los años rojos.pdf"
+      },
+      {
+        "title": "Paginas de la historia del proletariado español (1848-1907) (1971)",
+        "author": "Arnold Roller",
+        "category": "historia",
+        "filename": "Arnold Roller - Paginas de la historia del proletariado español (1848-1907) (1971).pdf"
+      },
+      {
+        "title": "El Raval. Epicentro del movimiento obrero barcelonés (2018)",
+        "author": "Assemblea del Raval",
+        "category": "historia",
+        "filename": "Assemblea del Raval - El Raval. Epicentro del movimiento obrero barcelonés (2018).pdf"
+      },
+      {
+        "title": "La insurrección de una fábrica. El motín de 1880 en la fábrica Morell y Murillo (2019)",
+        "author": "Assemblea del Raval",
+        "category": "historia",
+        "filename": "Assemblea del Raval - La insurrección de una fábrica. El motín de 1880 en la fábrica Morell y Murillo (2019).pdf"
+      },
+      {
+        "title": "Colectivizaciones. La obra constructiva de la revolución española (1977)",
+        "author": "Augustin Souchy y Paul Folgare",
+        "category": "historia",
+        "filename": "Augustin Souchy y Paul Folgare - Colectivizaciones. La obra constructiva de la revolución española (1977).pdf"
+      },
+      {
+        "title": "Empresas colectivizadas e intervenidas (1937)",
+        "author": "Baldomero Cerda Richart",
+        "category": "historia",
+        "filename": "Baldomero Cerda Richart - Empresas colectivizadas e intervenidas (1937).pdf"
+      },
+      {
+        "title": "El colectivismo agrario en la revolución española",
+        "author": "Benjamín Cano Ruiz y Ismael Viadiu",
+        "category": "historia",
+        "filename": "Benjamín Cano Ruiz y Ismael Viadiu - El colectivismo agrario en la revolución española.pdf"
+      },
+      {
+        "title": "1 CONGRESO CONSTITUCION CNT 1910",
+        "author": "CNT Confederacción Nacional del Trabajo",
+        "category": "historia",
+        "filename": "CNT Confederacción Nacional del Trabajo - 1 CONGRESO CONSTITUCION CNT 1910.pdf"
+      },
+      {
+        "title": "11 CONGRESO CNT 2015 ZARAGOZA",
+        "author": "CNT Confederacción Nacional del Trabajo",
+        "category": "historia",
+        "filename": "CNT Confederacción Nacional del Trabajo - 11 CONGRESO CNT 2015 ZARAGOZA.pdf"
+      },
+      {
+        "title": "2 CONGRESO CNT 1919",
+        "author": "CNT Confederacción Nacional del Trabajo",
+        "category": "historia",
+        "filename": "CNT Confederacción Nacional del Trabajo - 2 CONGRESO CNT 1919.pdf"
+      },
+      {
+        "title": "3 CONGRESO CNT 1931",
+        "author": "CNT Confederacción Nacional del Trabajo",
+        "category": "historia",
+        "filename": "CNT Confederacción Nacional del Trabajo - 3 CONGRESO CNT 1931.pdf"
+      },
+      {
+        "title": "4 CONGRESO CNT 1936 ZARAGOZA",
+        "author": "CNT Confederacción Nacional del Trabajo",
+        "category": "historia",
+        "filename": "CNT Confederacción Nacional del Trabajo - 4 CONGRESO CNT 1936 ZARAGOZA.pdf"
+      },
+      {
+        "title": "5 CONGRESO CNT 1977 MADRID",
+        "author": "CNT Confederacción Nacional del Trabajo",
+        "category": "historia",
+        "filename": "CNT Confederacción Nacional del Trabajo - 5 CONGRESO CNT 1977 MADRID.pdf"
+      },
+      {
+        "title": "7 CONGRESO CNT 1990 BILBAO",
+        "author": "CNT Confederación Nacional del Trabajo",
+        "category": "historia",
+        "filename": "CNT Confederacción Nacional del Trabajo - 7 CONGRESO CNT 1990 BILBAO.pdf"
+      },
+      {
+        "title": "8 CONGRESO CNT 1995 GRANADA",
+        "author": "CNT Confederacción Nacional del Trabajo",
+        "category": "historia",
+        "filename": "CNT Confederacción Nacional del Trabajo - 8 CONGRESO CNT 1995 GRANADA.pdf"
+      },
+      {
+        "title": "CNT a los trabajadores del espectacuo",
+        "author": "CNT Confederacción Nacional del Trabajo",
+        "category": "historia",
+        "filename": "CNT Confederacción Nacional del Trabajo - CNT a los trabajadores del espectaculo.pdf"
+      },
+      {
+        "title": "Colectividades de Castilla. El colectivismo en la provincia de Madrid",
+        "author": "CNT Confederacción Nacional del Trabajo",
+        "category": "historia",
+        "filename": "CNT Confederacción Nacional del Trabajo - Colectividades de Castilla. El colectivismo en la provincia de Madrid.pdf"
+      },
+      {
+        "title": "Comicios historicos de la CNT (Memoria del Congreso de Barcelona de 1918)",
+        "author": "CNT Confederacción Nacional del Trabajo",
+        "category": "historia",
+        "filename": "CNT Confederacción Nacional del Trabajo - Comicios historicos de la CNT (Memoria del Congreso de Barcelona de 1918).pdf"
+      },
+      {
+        "title": "Comicios historicos de la CNT. Congreso de constitucción de la Confeder hustle Nacional del Trabajo (1959)",
+        "author": "CNT Confederación Nacional del Trabajo",
+        "category": "historia",
+        "filename": "CNT Confederacción Nacional del Trabajo - Comicios historicos de la CNT. Congreso de constitucción de la Confederacción Nacional del Trabajo (1959).pdf"
+      },
+      {
+        "title": "De Companys a Indalecio Prieto (1939)",
+        "author": "CNT Confederación Nacional del Trabajo",
+        "category": "historia",
+        "filename": "CNT Confederacción Nacional del Trabajo - De Companys a Indalecio Prieto (1939).pdf"
+      },
+      {
+        "title": "Hoja volante de la Huelga de los Vapores Pareja",
+        "author": "CNT Confederación Nacional del Trabajo",
+        "category": "historia",
+        "filename": "CNT Confederacción Nacional del Trabajo - Hoja volante de la Huelga de los Vapores Pareja.pdf"
+      },
+      {
+        "title": "La militancia pide la palabra (1961)",
+        "author": "CNT Confederación Nacional del Trabajo",
+        "category": "historia",
+        "filename": "CNT Confederacción Nacional del Trabajo - La militancia pide la palabra (1961).pdf"
+      },
+      {
+        "title": "La verdad sobre la tragedia de Casas Viejas",
+        "author": "CNT Confederación Nacional del Trabajo",
+        "category": "historia",
+        "filename": "CNT Confederacción Nacional del Trabajo - La verdad sobre la tragedia de Casas Viejas.pdf"
+      },
+      {
+        "title": "AIT - Bases de trabajo agricola (1936) (2020)",
+        "author": "CNT",
+        "category": "historia",
+        "filename": "CNT - AIT - Bases de trabajo agricola (1936) (2020).pdf"
+      },
+      {
+        "title": "AIT - Memoria del Congreso extraordinario de 1931",
+        "author": "CNT",
+        "category": "historia",
+        "filename": "CNT - AIT - Memoria del Congreso extraordinario de 1931.pdf"
+      },
+      {
+        "title": "Acuerdos Vº Congreso (1980)",
+        "author": "CNT",
+        "category": "historia",
+        "filename": "CNT - Acuerdos Vº Congreso (1980).pdf"
+      },
+      {
+        "title": "Acuerdos del Pleno Economico Nacional Ampliado (1938)",
+        "author": "CNT",
+        "category": "historia",
+        "filename": "CNT - Acuerdos del Pleno Economico Nacional Ampliado (1938).pdf"
+      },
+      {
+        "title": "Paginas de Sangre (1920-1921)",
+        "author": "CNT",
+        "category": "historia",
+        "filename": "CNT - Paginas de Sangre (1920-1921).pdf"
+      },
+      {
+        "title": "Realizaciones Revolucionarias y Estructuras Colectivistas de la Comarcal de Monzon (Huesca)",
+        "author": "CNT",
+        "category": "historia",
+        "filename": "CNT - Realizaciones Revolucionarias y Estructuras Colectivistas de la Comarcal de Monzon (Huesca).pdf"
+      },
+      {
+        "title": "Entre la revolución y las trincheras (9 artículos 1936-1937)",
+        "author": "Camillo Berneri",
+        "category": "historia",
+        "filename": "Camillo Berneri - Entre la revolución y las trincheras (9 artículos 1936-1937).pdf"
+      },
+      {
+        "title": "La Columna Durruti y otros artículos y entrevistas de la Guerra Civil espanola",
+        "author": "Carl Einstein",
+        "category": "historia",
+        "filename": "Carl Einstein - La Columna Durruti y otros artículos y entrevistas de la Guerra Civil espaola.pdf"
+      },
+      {
+        "title": "Garrote vil para dos inocentes. El caso Delgado-Granado",
+        "author": "Carlos Fonseca",
+        "category": "historia",
+        "filename": "Carlos Fonseca - Garrote vil para dos inocentes. El caso Delgado-Granado.pdf"
+      },
+      {
+        "title": "Los mitos de la II república",
+        "author": "Chris Ealham",
+        "category": "historia",
+        "filename": "Chris Ealham - Los mitos de la II república.pdf"
+      },
+      {
+        "title": "De nuestra guerra (Diario de campaa)",
+        "author": "Cipriano Mera",
+        "category": "historia",
+        "filename": "Cipriano Mera - De nuestra guerra (Diario de campaa).pdf"
+      },
+      {
+        "title": "Ideas y tragedias (1923)",
+        "author": "Comite Pro Presos",
+        "category": "historia",
+        "filename": "Comite Pro Presos - Ideas y tragedias (1923).pdf"
+      },
+      {
+        "title": "CNT. Ser o no ser",
+        "author": "Cuadernos de Ruedo Iberico",
+        "category": "historia",
+        "filename": "Cuadernos de Ruedo Iberico - CNT. Ser o no ser.pdf"
+      },
+      {
+        "title": "julio 73 (1973)",
+        "author": "Diciembre 72 Historia Terrible",
+        "category": "historia",
+        "filename": "Diciembre 72 Historia Terrible - julio 73 (1973).pdf"
+      },
+      {
+        "title": "Memorias de Libertad",
+        "author": "Distribuidora Anarquista Polaris",
+        "category": "historia",
+        "filename": "Distribuidora Anarquista Polaris - Memorias de Libertad.pdf"
+      },
+      {
+        "title": "Barcelona entre vallas y flores",
+        "author": "Distribuidora Peligrosidad Social",
+        "category": "historia",
+        "filename": "Distribuidora Peligrosidad Social - Barcelona entre vallas y flores.pdf"
+      },
+      {
+        "title": "Memorias de Peligrosidad Social (2011-2019)",
+        "author": "Distribuidora Peligrosidad Social",
+        "category": "historia",
+        "filename": "Distribuidora Peligrosidad Social - Memorias de Peligrosidad Social (2011-2019).pdf"
+      },
+      {
+        "title": "Pequa historia del reformismo okupa matritense",
+        "author": "Distribuidora Peligrosidad Social",
+        "category": "historia",
+        "filename": "Distribuidora Peligrosidad Social - STAR.pdf"
+      },
+      {
+        "title": "Clandestinos. El maquis contra el franquismo, 1934-1975",
+        "author": "Dolors Marin",
+        "category": "historia",
+        "filename": "Dolors Marin - Clandestinos. El maquis contra el franquismo, 1934-1975.pdf"
+      },
+      {
+        "title": "37",
+        "author": "Dossier MIL del Movimiento Iberico de Liberación A los Grupos Autonomos de Combate y Ediciones Mayo",
+        "category": "historia",
+        "filename": "Dossier MIL del Movimiento Iberico de Liberación A los Grupos Autonomos de Combate y Ediciones Mayo - 37.pdf"
+      },
+      {
+        "title": "El Solidario, n 14. Con dos textos de Chris Ealham",
+        "author": "Ealham",
+        "category": "historia",
+        "filename": "Ealham - El Solidario, n 14. Con dos textos de Chris Ealham.pdf"
+      },
+      {
+        "title": "La Internacional defendida por Salmeron y Pi y Margall",
+        "author": "Editorial Publicaciones de la Escuela Moderna",
+        "category": "historia",
+        "filename": "Editorial Publicaciones de la Escuela Moderna - La Internacional defendida por Salmeron y Pi y Margall.pdf"
+      },
+      {
+        "title": "El neomalthusianismo ibérico e italiano. Un precedente de la ecología humana contemporánea",
+        "author": "Eduard Masjuan Bracons",
+        "category": "historia",
+        "filename": "Eduard Masjuan Bracons - El neomalthusianismo ibérico e italiano. Un precedente de la ecología humana contemporánea.pdf"
+      },
+      {
+        "title": "La ciudad jardín o ecológica contra la ciudad lineal. Una controversia histórica",
+        "author": "Eduard Masjuan Bracons",
+        "category": "historia",
+        "filename": "Eduard Masjuan Bracons - La ciudad jardín o ecológica contra la ciudad lineal. Una controversia histórica.pdf"
+      },
+      {
+        "title": "Los orígenes del neomalthusianismo ibérico",
+        "author": "Eduard Masjuan Bracons",
+        "category": "historia",
+        "filename": "Eduard Masjuan Bracons - Los orígenes del neomalthusianismo ibérico.pdf"
+      },
+      {
+        "title": "Tribunales populares, justicia de clase y nuevo derecho. El caso Barriobero (1936-1939)",
+        "author": "Eduard Masjuan Bracons",
+        "category": "historia",
+        "filename": "Eduard Masjuan Bracons - Tribunales populares, justicia de clase y nuevo derecho. El caso Barriobero (1936-1939).pdf"
+      },
+      {
+        "title": "Cadenas de evasin espaolas en la II Guerra Mundial",
+        "author": "Eduardo Pons Prades",
+        "category": "historia",
+        "filename": "Eduardo Pons Prades - Cadenas de evasin espaolas en la II Guerra Mundial.pdf"
+      },
+      {
+        "title": "CNT contra el terrorismo (1978)",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - CNT contra el terrorismo (1978).pdf"
+      },
+      {
+        "title": "Cadiz, 1812. Dramaticos origenes de la vida parlamentaria española",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - Cadiz, 1812. Dramaticos origenes de la vida parlamentaria española.pdf"
+      },
+      {
+        "title": "Cuatro dias de noviembre",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - Cuatro dias de noviembre.pdf"
+      },
+      {
+        "title": "El ano de la victoria",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - El ano de la victoria.pdf"
+      },
+      {
+        "title": "El clan de los Franco",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - El clan de los Franco.pdf"
+      },
+      {
+        "title": "El estallido revolucionario de diciembre de 1933",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - El estallido revolucionario de diciembre de 1933.pdf"
+      },
+      {
+        "title": "El exilio español",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - El exilio español.pdf"
+      },
+      {
+        "title": "El terror",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - El terror.pdf"
+      },
+      {
+        "title": "Elecciones y abstención en España. UCD. 23 diputados mas con un millon de votos menos",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - Elecciones y abstencción en España. UCD. 23 diputados mas con un millon de votos menos.pdf"
+      },
+      {
+        "title": "Gil-Robles y la monarquia. Unas memorias desmitificadoras",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - Gil-Robles y la monarquia. Unas memorias desmitificadoras.pdf"
+      },
+      {
+        "title": "Ifni. Un territorio del Sahara mucho tiempo olvidado",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - Ifni. Un territorio del Sahara mucho tiempo olvidado.pdf"
+      },
+      {
+        "title": "La muerte de la esperanza",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - La muerte de la esperanza.pdf"
+      },
+      {
+        "title": "La muerte del general Primo de Rivera",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - La muerte del general Primo de Rivera.pdf"
+      },
+      {
+        "title": "La soberania popular frente al absolutismo autocratico. Una pugna de dos siglos",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - La soberania popular frente al absolutismo autocratico. Una pugna de dos siglos.pdf"
+      },
+      {
+        "title": "Los cinco congresos historicos de la CNT",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - Los cinco congresos historicos de la CNT.pdf"
+      },
+      {
+        "title": "Los ultimos dias de Pablo Iglesias",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - Los ultimos dias de Pablo Iglesias.pdf"
+      },
+      {
+        "title": "Madrid Rojo y Negro, Milicias Confederales",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - Madrid Rojo y Negro, Milicias Confederales.pdf"
+      },
+      {
+        "title": "Nacimiento, vicisitudes y muerte de la Primera República española",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - Nacimiento, vicisitudes y muerte de la Primera República española.pdf"
+      },
+      {
+        "title": "Periodicos y periodistas del Madrid en guerra",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - Periodicos y periodistas del Madrid en guerra.pdf"
+      },
+      {
+        "title": "Periodistas depurados, condenados o fusilados al termino de nuestra guerra civil",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - Periodistas depurados, condenados o fusilados al termino de nuestra guerra civil.pdf"
+      },
+      {
+        "title": "Revissión de la CNT",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - Revissión de la CNT.pdf"
+      },
+      {
+        "title": "Se repite la historia De Berenguer a Suarez",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - Se repite la historia De Berenguer a Suarez.pdf"
+      },
+      {
+        "title": "Serrano Suner ante la historia",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - Serrano Suner ante la historia.pdf"
+      },
+      {
+        "title": "Socrates Gomez. De la derrota a la represión",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - Socrates Gomez. De la derrota a la represión.pdf"
+      },
+      {
+        "title": "Tambien el horror fue aqui. La impresionante tragedia de Villarta de los Montes",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - Tambien el horror fue aqui. La impresionante tragedia de Villarta de los Montes.pdf"
+      },
+      {
+        "title": "Un millon de presos politicos y doscientos mil muertos en España",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - Un millon de presos politicos y doscientos mil muertos en España.pdf"
+      },
+      {
+        "title": "Vicisitudes y penalidades de la prensa española de 1936 a 1979",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - Vicisitudes y penalidades de la prensa española de 1936 a 1979.pdf"
+      },
+      {
+        "title": "Visperas de guerra civil en la España de 1936 (I)",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - Visperas de guerra civil en la España de 1936 (I).pdf"
+      },
+      {
+        "title": "Visperas de guerra civil en la España de 1936 (II)",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - Visperas de guerra civil en la España de 1936 (II).pdf"
+      },
+      {
+        "title": "La pedagogía obrerista de la imagen",
+        "author": "Enric Olive I Serret",
+        "category": "historia",
+        "filename": "Enric Olive I Serret - La pedagogía obrerista de la imagen.pdf"
+      },
+      {
+        "title": "La Traicción de la Hoz y el Martillo",
+        "author": "Erick Benitez Martinez",
+        "category": "historia",
+        "filename": "Erick Benitez Martinez - La Traicción de la Hoz y el Martillo.pdf"
+      },
+      {
+        "title": "Estampas de la revolución española",
+        "author": "Estampas de la Revolución Española",
+        "category": "historia",
+        "filename": "Estampas de la Revolución Española - Estampas de la revolución española.pdf"
+      },
+      {
+        "title": "La evolución de la filosofia en España (1977)",
+        "author": "Federico Urales",
+        "category": "historia",
+        "filename": "Federico Urales - La evolución de la filosofia en España (1977).pdf"
+      },
+      {
+        "title": "La evolución de la filosofia en España (Tomo I) (1934)",
+        "author": "Federico Urales",
+        "category": "historia",
+        "filename": "Federico Urales - La evolución de la filosofia en España (Tomo I) (1934).pdf"
+      },
+      {
+        "title": "La evolución de la filosofia en España (Tomo II) (1934)",
+        "author": "Federico Urales",
+        "category": "historia",
+        "filename": "Federico Urales - La evolución de la filosofia en España (Tomo II) (1934).pdf"
+      },
+      {
+        "title": "Entre dos fascismos (Memorias de un voluntario en las Brigadas Internacionales en España)",
+        "author": "Fernando Solano Palacio",
+        "category": "historia",
+        "filename": "Fernando Solano Palacio - Entre dos fascismos (Memorias de un voluntario en las Brigadas Internacionales en España).pdf"
+      },
+      {
+        "title": "1939)",
+        "author": "Folletos Catalogo de Publicaciones y Documentos Anarquistas Espanoles (1890",
+        "category": "historia",
+        "filename": "Folletos Catalogo de Publicaciones y Documentos Anarquistas Espanoles (1890 - 1939).pdf"
+      },
+      {
+        "title": "El desnarigado (2017)",
+        "author": "Francisco José Fernández Andujar",
+        "category": "historia",
+        "filename": "Francisco José Fernández Andujar - El desnarigado (2017).pdf"
+      },
+      {
+        "title": "Antología Documental del anarquismo espaol. Bibliografía del anarquismo en Espaa, 1868-1939",
+        "author": "Francisco Madrid Santos y Ignacio C. Soriano",
+        "category": "historia",
+        "filename": "Francisco Madrid Santos y Ignacio C. Soriano - Antología Documental del anarquismo espaol. Bibliografía del anarquismo en Espaa, 1868-1939.pdf"
+      },
+      {
+        "title": "Solidaridad Obrera y el periodismo de raíz acrata (2007)",
+        "author": "Francisco Madrid Santos",
+        "category": "historia",
+        "filename": "Francisco Madrid Santos - Solidaridad Obrera y el periodismo de raíz ácrata (2007).pdf"
+      },
+      {
+        "title": "Anarcocomunismo en España (1882-1896). El grupo de Gracia y sus relaciones internacionales",
+        "author": "Francisco de Paula Fernández Gomez",
+        "category": "historia",
+        "filename": "Francisco de Paula Fernández Gomez - Anarcocomunismo en España (1882-1896). El grupo de Gracia y sus relaciones internacionales.pdf"
+      },
+      {
+        "title": "La Barcelona de los exiliados, antipatriotas, desertores, profugos y solidarios",
+        "author": "Francisco de Paula Fernández Gomez",
+        "category": "historia",
+        "filename": "Francisco de Paula Fernández Gomez - La Barcelona de los exiliados, antipatriotas, desertores, profugos y solidarios.pdf"
+      },
+      {
+        "title": "XIX. El siglo de las insurrecciones",
+        "author": "Francisco de Paula Fernández Gomez",
+        "category": "historia",
+        "filename": "Francisco de Paula Fernández Gomez - XIX. El siglo de las insurrecciones.pdf"
+      },
+      {
+        "title": "Democracia inocua. Lo que el postfranquismo ha hecho de nosotros (2015)",
+        "author": "Francois Godicheau (coord.)",
+        "category": "historia",
+        "filename": "Francois Godicheau (coord.) - Democracia inocua. Lo que el postfranquismo ha hecho de nosotros (2015).pdf"
+      },
+      {
+        "title": "El proceso del POUM. Proceso ordinario de una justicia extraordinaria",
+        "author": "Francois Godicheau",
+        "category": "historia",
+        "filename": "Francois Godicheau - El proceso del POUM. Proceso ordinario de una justicia extraordinaria.pdf"
+      },
+      {
+        "title": "La guerra civil, figura del desorden publico. El concepto de guerra civil y la definiccion del orden político",
+        "author": "Francois Godicheau",
+        "category": "historia",
+        "filename": "Francois Godicheau - La guerra civil, figura del desorden publico. El concepto de guerra civil y la definicción del orden político.pdf"
+      },
+      {
+        "title": "La represión y la guerra civil española. Memoria y tratamiento histórico",
+        "author": "Francois Godicheau",
+        "category": "historia",
+        "filename": "Francois Godicheau - La represión y la guerra civil española. Memoria y tratamiento histórico.pdf"
+      },
+      {
+        "title": "Los Hechos de Mayo de 1937 y los presos antifascistas. Identificacion de un fenomeno represivo (2002)",
+        "author": "Francois Godicheau",
+        "category": "historia",
+        "filename": "Francois Godicheau - Los Hechos de Mayo de 1937 y los presos antifascistas. Identificacción de un fenomeno represivo (2002).pdf"
+      },
+      {
+        "title": "Origenes del concepto de orden publico en España",
+        "author": "Francois Godicheau",
+        "category": "historia",
+        "filename": "Francois Godicheau - Origenes del concepto de orden publico en España.pdf"
+      },
+      {
+        "title": "La escuela de militantes de Aragon (2015)",
+        "author": "Félix Carrasquer Launed",
+        "category": "historia",
+        "filename": "Félix Carrasquer Launed - La escuela de militantes de Aragon (2015).pdf"
+      },
+      {
+        "title": "Las Colectividades de Aragon. Un vivir autogestionado, promesa de futuro (2016)",
+        "author": "Félix Carrasquer Launed",
+        "category": "historia",
+        "filename": "Félix Carrasquer Launed - Las Colectividades de Aragon. Un vivir autogestionado, promesa de futuro (2016).pdf"
+      },
+      {
+        "title": "Cartas de la revolución. Reportes de un obrero chileno en la Guerra Civil española (1936-1939) (2016)",
+        "author": "Félix López Caceres",
+        "category": "historia",
+        "filename": "Félix López Caceres - Cartas de la revolución. Reportes de un obrero chileno en la Guerra Civil española (1936-1939) (2016).pdf"
+      },
+      {
+        "title": "Recuerdos de la guerra de Espaa",
+        "author": "George Orwell",
+        "category": "historia",
+        "filename": "George Orwell - Recuerdos de la guerra de Espaa.pdf"
+      },
+      {
+        "title": "El mensaje revolucionario de los amigos de Durruti",
+        "author": "Georges Fontenis",
+        "category": "historia",
+        "filename": "Georges Fontenis - El mensaje revolucionario de los amigos de Durruti.pdf"
+      },
+      {
+        "title": "El laberinto espanol (Antecedentes sociales y políticos de la guerra civil) (1962)",
+        "author": "Gerald Brenan",
+        "category": "historia",
+        "filename": "Gerald Brenan - El laberinto espaol (Antecedentes sociales y políticos de la guerra civil) (1962).pdf"
+      },
+      {
+        "title": "La buena nueva de la mujer profeta. Identidad y cultura política en las fourieristas",
+        "author": "Gloria Espigado",
+        "category": "historia",
+        "filename": "Gloria Espigado - La buena nueva de la mujer profeta. Identidad y cultura política en las fourieristas.pdf"
+      },
+      {
+        "title": "Mujeres radicales. Utopicas, republicanas e internacionalistas en Espaa (1848-1874)",
+        "author": "Gloria Espigado",
+        "category": "historia",
+        "filename": "Gloria Espigado - Mujeres radicales. Utpicas, republicanas e internacionalistas en Espaa (1848-1874).pdf"
+      },
+      {
+        "title": "En la senda de Mujeres Libres",
+        "author": "Grupo Moiras",
+        "category": "historia",
+        "filename": "Grupo Moiras - En la senda de Mujeres Libres.pdf"
+      },
+      {
+        "title": "Debate entre Octavio Alberola y Agustín Guillmon",
+        "author": "Guillamón",
+        "category": "historia",
+        "filename": "Guillamón - Debate entre Octavio Alberola y Agustín Guillmon.pdf"
+      },
+      {
+        "title": "Eduardo de - Asi empezo nuestro dia mas largo",
+        "author": "Guzmán",
+        "category": "historia",
+        "filename": "Guzmán - Eduardo de - Asi empezo nuestro dia mas largo.pdf"
+      },
+      {
+        "title": "Carta a don Ángel Herrerín López a propósito de su obra La CNT durante el franquismo",
+        "author": "Heleno Sana",
+        "category": "historia",
+        "filename": "Heleno Sana - Carta a don Ángel Herrerín López a propósito de su obra La CNT durante el franquismo.pdf"
+      },
+      {
+        "title": "Semblanza de Ediciones Pastor",
+        "author": "Ignacio Clemente Soriano Jiménez",
+        "category": "historia",
+        "filename": "Ignacio Clemente Soriano Jiménez - Semblanza de Ediciones Pastor.pdf"
+      },
+      {
+        "title": "Semblanza de Editorial Estudios",
+        "author": "Ignacio Clemente Soriano Jiménez",
+        "category": "historia",
+        "filename": "Ignacio Clemente Soriano Jiménez - Semblanza de Editorial Estudios.pdf"
+      },
+      {
+        "title": "Semblanza de Editorial Vertice",
+        "author": "Ignacio Clemente Soriano Jiménez",
+        "category": "historia",
+        "filename": "Ignacio Clemente Soriano Jiménez - Semblanza de Editorial Vertice.pdf"
+      },
+      {
+        "title": "Semblanza de La Novela Ideal",
+        "author": "Ignacio Clemente Soriano Jiménez",
+        "category": "historia",
+        "filename": "Ignacio Clemente Soriano Jiménez - Semblanza de La Novela Ideal.pdf"
+      },
+      {
+        "title": "Semblanza de La Revista Blanca",
+        "author": "Ignacio Clemente Soriano Jiménez",
+        "category": "historia",
+        "filename": "Ignacio Clemente Soriano Jiménez - Semblanza de La Revista Blanca.pdf"
+      },
+      {
+        "title": "Semblanza de Publicaciones de La Escuela Moderna (1901-1937)",
+        "author": "Ignacio Clemente Soriano Jiménez",
+        "category": "historia",
+        "filename": "Ignacio Clemente Soriano Jiménez - Semblanza de Publicaciones de La Escuela Moderna (1901-1937).pdf"
+      },
+      {
+        "title": "Montjuich. Notas y recuerdos hstricos",
+        "author": "Ignasi Bo I Singla",
+        "category": "historia",
+        "filename": "Ignasi Bo I Singla - Montjuich. Notas y recuerdos histricos.pdf"
+      },
+      {
+        "title": "Aproximación al papel de las mujeres dentro de los Grupos Autonomos de la Transiccion (2017)",
+        "author": "Irene Cardona Curco",
+        "category": "historia",
+        "filename": "Irene Cardona Curco - Aproximacción al papel de las mujeres dentro de los Grupos Autonomos de la Transicción (2017).pdf"
+      },
+      {
+        "title": "La huelga general de 1917 (1971)",
+        "author": "Jacinto Martin",
+        "category": "historia",
+        "filename": "Jacinto Martin - La huelga general de 1917 (1971).pdf"
+      },
+      {
+        "title": "No es hora de confusionismos",
+        "author": "Jaume Balius Mir",
+        "category": "historia",
+        "filename": "Jaume Balius Mir - No es hora de confusionismos.pdf"
+      },
+      {
+        "title": "Por los fueros de la verdad",
+        "author": "Jaume Balius Mir",
+        "category": "historia",
+        "filename": "Jaume Balius Mir - Por los fueros de la verdad.pdf"
+      },
+      {
+        "title": "De La Dictadura a La Guerra Civil (1923-1939)",
+        "author": "Javier Paniagua Fuentes",
+        "category": "historia",
+        "filename": "Javier Paniagua Fuentes - De La Dictadura a La Guerra Civil (1923-1939).pdf"
+      },
+      {
+        "title": "Campos de concentración en la Espaa de Franco (1978)",
+        "author": "Joan Llarch",
+        "category": "historia",
+        "filename": "Joan Llarch - Campos de concentracin en la Espaa de Franco (1978).pdf"
+      },
+      {
+        "title": "El caso Scala y la CNT. Terrorismo de Estado",
+        "author": "Joan Zambrana",
+        "category": "historia",
+        "filename": "Joan Zambrana - El caso Scala y la CNT. Terrorismo de Estado.pdf"
+      },
+      {
+        "title": "El movimiento obrero catalan en el periodico Solidaridad Obrera (1907-1919)",
+        "author": "Joan Zambrana",
+        "category": "historia",
+        "filename": "Joan Zambrana - El movimiento obrero catalan en el periodico Solidaridad Obrera (1907-1919).pdf"
+      },
+      {
+        "title": "La CNT y la Asamblea de Valencia (Mayo 1916)",
+        "author": "Joan Zambrana",
+        "category": "historia",
+        "filename": "Joan Zambrana - La CNT y la Asamblea de Valencia (Mayo 1916).pdf"
+      },
+      {
+        "title": "Inventario provisorio de las memorias anarquistas y anarcosindicalistas españolas",
+        "author": "Joel Delhom",
+        "category": "historia",
+        "filename": "Joel Delhom - Inventario provisorio de las memorias anarquistas y anarcosindicalistas españolas.pdf"
+      },
+      {
+        "title": "La primera gran huelga de los constructores de calzado de Barcelona en 1903",
+        "author": "Joel Delhom",
+        "category": "historia",
+        "filename": "Joel Delhom - La primera gran huelga de los constructores de calzado de Barcelona en 1903.pdf"
+      },
+      {
+        "title": "Octubre de 1871. Debate parlamentario sobre la Internacional en España",
+        "author": "Joel Delhom",
+        "category": "historia",
+        "filename": "Joel Delhom - Octubre de 1871. Debate parlamentario sobre la Internacional en España.pdf"
+      },
+      {
+        "title": "Anarcosindicalismo y revolución en Espaa (1930-1937)",
+        "author": "John Brademas",
+        "category": "historia",
+        "filename": "John Brademas - Anarcosindicalismo y revolución en Espaa (1930-1937).pdf"
+      },
+      {
+        "title": "Mi paso por la Columna Durruti - 26 Divissión (2005)",
+        "author": "José Fortea Gracia",
+        "category": "historia",
+        "filename": "José Fortea Gracia - Mi paso por la Columna Durruti - 26 Divissión (2005).pdf"
+      },
+      {
+        "title": "Carilanteras. Mujeres y franquismo en un pueblo andaluz (2009)",
+        "author": "José Luis Gutiérrez Molina",
+        "category": "historia",
+        "filename": "José Luis Gutiérrez Molina - Carilanteras. Mujeres y franquismo en un pueblo andaluz (2009).pdf"
+      },
+      {
+        "title": "Informe sobre el trabajo esclavo en España durante la dictadura franquista (2014)",
+        "author": "José Luis Gutiérrez Molina",
+        "category": "historia",
+        "filename": "José Luis Gutiérrez Molina - Informe sobre el trabajo esclavo en España durante la dictadura franquista (2014).pdf"
+      },
+      {
+        "title": "La construcción de un mito. La Mano Negra",
+        "author": "José Luis Gutiérrez Molina",
+        "category": "historia",
+        "filename": "José Luis Gutiérrez Molina - La construccción de un mito. La Mano Negra.pdf"
+      },
+      {
+        "title": "La huelga general de octubre de 1931 en Cadiz y la pervivencia del mito de la violencia revolucionaria",
+        "author": "José Luis Gutiérrez Molina",
+        "category": "historia",
+        "filename": "José Luis Gutiérrez Molina - La huelga general de octubre de 1931 en Cadiz y la pervivencia del mito de la violencia revolucionaria.pdf"
+      },
+      {
+        "title": "Los muelles de las Delicias y de la Paja. El barco de la muerte",
+        "author": "José Luis Gutiérrez Molina",
+        "category": "historia",
+        "filename": "José Luis Gutiérrez Molina - Los muelles de las Delicias y de la Paja. El barco de la muerte.pdf"
+      },
+      {
+        "title": "Mayo de 1937, el freno definitivo de la revolución (2017)",
+        "author": "José Luis Gutiérrez Molina",
+        "category": "historia",
+        "filename": "José Luis Gutiérrez Molina - Mayo de 1937, el freno definitivo de la revolución (2017).pdf"
+      },
+      {
+        "title": "Trabajo esclavo y obras hidraulicas. Extremenos en el Canal de los Presos",
+        "author": "José Luis Gutiérrez Molina",
+        "category": "historia",
+        "filename": "José Luis Gutiérrez Molina - Trabajo esclavo y obras hidraulicas. Extremenos en el Canal de los Presos.pdf"
+      },
+      {
+        "title": "Un dia en el Archivo histórico del Tribunal Militar Territorial Segundo en Sevilla",
+        "author": "José Luis Gutiérrez Molina",
+        "category": "historia",
+        "filename": "José Luis Gutiérrez Molina - Un dia en el Archivo histórico del Tribunal Militar Territorial Segundo en Sevilla.pdf"
+      },
+      {
+        "title": "Pongratz, Katrhin - Saberes transatlanticos en la historia de la ciencia Barcelona-Buenos Aires. Notas sobre historia urbana relacional",
+        "author": "José Luis Oyon y Golda",
+        "category": "historia",
+        "filename": "José Luis Oyon y Golda - Pongratz, Katrhin - Saberes transatlanticos en la historia de la ciencia Barcelona-Buenos Aires. Notas sobre historia urbana relacional.pdf"
+      },
+      {
+        "title": "Historia urbana. El espacio no es inocente",
+        "author": "José Luis Oyon y Marta Serra",
+        "category": "historia",
+        "filename": "José Luis Oyon y Marta Serra - Historia urbana. El espacio no es inocente.pdf"
+      },
+      {
+        "title": "Historia urbana e historia obrera. Reflexiones sobre la vida obrera y su inscripción en el espacio urbano, 1900-1950",
+        "author": "José Luis Oyon",
+        "category": "historia",
+        "filename": "José Luis Oyon - Historia urbana e historia obrera. Reflexiones sobre la vida obrera y su inscripcción en el espacio urbano, 1900-1950.pdf"
+      },
+      {
+        "title": "Mundo obrero, inmigración y radicalismo cenetista en la Barcelona de la decada de 1930",
+        "author": "José Luis Oyon",
+        "category": "historia",
+        "filename": "José Luis Oyon - Mundo obrero, inmigracción y radicalismo cenetista en la Barcelona de la decada de 1930.pdf"
+      },
+      {
+        "title": "Obreros en la ciudad. Lineas de un proyecto de investigación en historia urbana",
+        "author": "José Luis Oyon",
+        "category": "historia",
+        "filename": "José Luis Oyon - Obreros en la ciudad. Lineas de un proyecto de investigacción en historia urbana.pdf"
+      },
+      {
+        "title": "Los 70 a destajo",
+        "author": "José Ribas",
+        "category": "historia",
+        "filename": "José Ribas - Los 70 a destajo.pdf"
+      },
+      {
+        "title": "1936-1939. El colectivismo en Membrilla (C. Real)",
+        "author": "Juan Caba Guijarro",
+        "category": "historia",
+        "filename": "Juan Caba Guijarro - 1936-1939. El colectivismo en Membrilla (C. Real).pdf"
+      },
+      {
+        "title": "1936-1986. Ciencuentenario de las desventuras espalas en su Guerra Civil (1986)",
+        "author": "Juan Caba Guijarro",
+        "category": "historia",
+        "filename": "Juan Caba Guijarro - 1936-1986. Ciencuentenario de las desventuras espaolas en su Guerra Civil (1986).pdf"
+      },
+      {
+        "title": "Historia de las agitaciones campesinas andaluzas",
+        "author": "Juan Díaz del Moral",
+        "category": "historia",
+        "filename": "Juan Díaz del Moral - Historia de las agitaciones campesinas andaluzas.pdf"
+      },
+      {
+        "title": "El relanzamiento de la CNT (Con un epilogo hasta la primavera de 1984)",
+        "author": "Juan Gomez Casas",
+        "category": "historia",
+        "filename": "Juan Gomez Casas - El relanzamiento de la CNT (Con un epilogo hasta la primavera de 1984).pdf"
+      },
+      {
+        "title": "Los cruces de caminos (Antecedentes y pequena historia de una decada, 1966-1976)",
+        "author": "Juan Gomez Casas",
+        "category": "historia",
+        "filename": "Juan Gomez Casas - Los cruces de caminos (Antecedentes y pequena historia de una decada, 1966-1976).pdf"
+      },
+      {
+        "title": "Glosario (Anselmo Lorenzo -El Proletariado Militante)",
+        "author": "Juan Gómez Casas",
+        "category": "historia",
+        "filename": "Juan Gómez Casas - Glosario (Anselmo Lorenzo -El Proletariado Militante).pdf"
+      },
+      {
+        "title": "Los sucesos revolucionarios de Bujalance (1944)",
+        "author": "Juan del Pueblo",
+        "category": "historia",
+        "filename": "Juan del Pueblo - Los sucesos revolucionarios de Bujalance (1944).pdf"
+      },
+      {
+        "title": "Historia de la CNT (2019)",
+        "author": "Julián Vadillo Muñoz",
+        "category": "historia",
+        "filename": "Julián Vadillo Muñoz - Historia de la CNT (2019).pdf"
+      },
+      {
+        "title": "Barcelona 1909. La revolución de julio (2016)",
+        "author": "Leopoldo Bonafulla",
+        "category": "historia",
+        "filename": "Leopoldo Bonafulla - Barcelona 1909. La revolución de julio (2016).pdf"
+      },
+      {
+        "title": "La Mirada Roja. Estética y arte del anarquismo espanol (1880-1913) (1988)",
+        "author": "Lily Litvak",
+        "category": "historia",
+        "filename": "Lily Litvak - La Mirada Roja. Estética y arte del anarquismo espaol (1880-1913) (1988).pdf"
+      },
+      {
+        "title": "Musa Libertaria. Arte, literatura y vida cultural del anarquismo espanol (1880-1913) (1981)",
+        "author": "Lily Litvak",
+        "category": "historia",
+        "filename": "Lily Litvak - Musa Libertaria. Arte, literatura y vida cultural del anarquismo espaol (1880-1913) (1981).pdf"
+      },
+      {
+        "title": "Horas de revolución (1937)",
+        "author": "Lucia Sánchez Saornil",
+        "category": "historia",
+        "filename": "Lucia Sánchez Saornil - Horas de revolución (1937).pdf"
+      },
+      {
+        "title": "Las mujeres. Ellas tambien lo dieron todo",
+        "author": "Lucia Sánchez Saornil",
+        "category": "historia",
+        "filename": "Lucia Sánchez Saornil - Las mujeres. Ellas tambien lo dieron todo.pdf"
+      },
+      {
+        "title": "Las doctrinas sociales y la revolución espala (1938)",
+        "author": "Luis Castro",
+        "category": "historia",
+        "filename": "Luis Castro - Las doctrinas sociales y la revolución espaola (1938).pdf"
+      },
+      {
+        "title": "El 1000 y la OLLA (2014)",
+        "author": "MIL (Movimiento Iberico de Liberación) 1967-1973",
+        "category": "historia",
+        "filename": "MIL (Movimiento Iberico de Liberación) 1967-1973 - El 1000 y la OLLA (2014).pdf"
+      },
+      {
+        "title": "El MIL en sus textos",
+        "author": "MIL (Movimiento Iberico de Liberación) 1967-1973",
+        "category": "historia",
+        "filename": "MIL (Movimiento Iberico de Liberación) 1967-1973 - El MIL en sus textos.pdf"
+      },
+      {
+        "title": "Las 1000 y una del 1000",
+        "author": "MIL (Movimiento Iberico de Liberación) 1967-1973",
+        "category": "historia",
+        "filename": "MIL (Movimiento Iberico de Liberación) 1967-1973 - Las 1000 y una del 1000.pdf"
+      },
+      {
+        "title": "El movimiento obrero espanol. Historia y crítica (1886-1926) (1966)",
+        "author": "Manuel Buenacasa",
+        "category": "historia",
+        "filename": "Manuel Buenacasa - El movimiento obrero espaol. Historia y crítica (1886-1926) (1966).pdf"
+      },
+      {
+        "title": "España en la ruta de la libertad (1962)",
+        "author": "Manuel Villar",
+        "category": "historia",
+        "filename": "Manuel Villar - España en la ruta de la libertad (1962).pdf"
+      },
+      {
+        "title": "Colectividades agrarias en la regón de Girona, 1936-1939",
+        "author": "Marciano Cardaba Carrascal",
+        "category": "historia",
+        "filename": "Marciano Cardaba Carrascal - Colectividades agrarias en la reggión de Girona, 1936-1939.pdf"
+      },
+      {
+        "title": "La CNT y la revolución Social (1931-1939) (2011)",
+        "author": "Marciano Cardaba Carrascal",
+        "category": "historia",
+        "filename": "Marciano Cardaba Carrascal - La CNT y la revolución Social (1931-1939) (2011).pdf"
+      },
+      {
+        "title": "Voces de revuelta (2017)",
+        "author": "Mariano Martinez Paredes",
+        "category": "historia",
+        "filename": "Mariano Martinez Paredes - Voces de revuelta (2017).pdf"
+      },
+      {
+        "title": "El aprendizaje del feminismo hstrico en Espaa",
+        "author": "Mary Nash",
+        "category": "historia",
+        "filename": "Mary Nash - El aprendizaje del feminismo histrico en Espaa.pdf"
+      },
+      {
+        "title": "Experiencia y aprendizaje. La formación hstrica de los feminismos en Espaa",
+        "author": "Mary Nash",
+        "category": "historia",
+        "filename": "Mary Nash - Experiencia y aprendizaje. La formacin histrica de los feminismos en Espaa.pdf"
+      },
+      {
+        "title": "Nuevas dimensiones en la historia de la mujer",
+        "author": "Mary Nash",
+        "category": "historia",
+        "filename": "Mary Nash - Nuevas dimensiones en la historia de la mujer.pdf"
+      },
+      {
+        "title": "Republicanas en la guerra civil. El compromiso antifascista",
+        "author": "Mary Nash",
+        "category": "historia",
+        "filename": "Mary Nash - Republicanas en la guerra civil. El compromiso antifascista.pdf"
+      },
+      {
+        "title": "Rojas, las mujeres republicanas en la Guerra Civil",
+        "author": "Mary Nash",
+        "category": "historia",
+        "filename": "Mary Nash - Rojas, las mujeres republicanas en la Guerra Civil.pdf"
+      },
+      {
+        "title": "Cronicas del frente de Madrid (1937)",
+        "author": "Mauro Bajatierra Morán",
+        "category": "historia",
+        "filename": "Mauro Bajatierra Morán - Cronicas del frente de Madrid (1937).pdf"
+      },
+      {
+        "title": "Desde las barricadas. Una semana de revolución en España (1918)",
+        "author": "Mauro Bajatierra Morán",
+        "category": "historia",
+        "filename": "Mauro Bajatierra Morán - Desde las barricadas. Una semana de revolución en España (1918).pdf"
+      },
+      {
+        "title": "Quienes mataron a Dato (1931)",
+        "author": "Mauro Bajatierra Morán",
+        "category": "historia",
+        "filename": "Mauro Bajatierra Morán - Quienes mataron a Dato (1931).pdf"
+      },
+      {
+        "title": "Cara al sol jugando a contar mentiras",
+        "author": "Miquel Izard",
+        "category": "historia",
+        "filename": "Miquel Izard - Cara al sol jugando a contar mentiras.pdf"
+      },
+      {
+        "title": "Que lo sepan ellos y no lo olvidemos nosotros (El inverosímil verano del 36 en Cataluña) (2012)",
+        "author": "Miquel Izard",
+        "category": "historia",
+        "filename": "Miquel Izard - Que lo sepan ellos y no lo olvidemos nosotros (El inverosímil verano del 36 en Catalua) (2012).pdf"
+      },
+      {
+        "title": "Actividades de la FN Mujeres Libres",
+        "author": "Mujeres Libres 1936-1939",
+        "category": "historia",
+        "filename": "Mujeres Libres 1936-1939 - Actividades de la FN Mujeres Libres.pdf"
+      },
+      {
+        "title": "Las colectividades agrarias en Castilla-La Mancha",
+        "author": "Natividad Rodrigo Gonzalez",
+        "category": "historia",
+        "filename": "Natividad Rodrigo Gonzalez - Las colectividades agrarias en Castilla-La Mancha.pdf"
+      },
+      {
+        "title": "mil. (1973)",
+        "author": "Organizacin Pol",
+        "category": "historia",
+        "filename": "Organizacin Pol - mil. (1973).pdf"
+      },
+      {
+        "title": "La clase obrera hace historia. Raices históricas (1840-1910) (2008)",
+        "author": "Paco Zugasti",
+        "category": "historia",
+        "filename": "Paco Zugasti - La clase obrera hace historia. Raices históricas (1840-1910) (2008).pdf"
+      },
+      {
+        "title": "Las luchas sociales en el Alto Llobregat y Cardoner (Contribución a la historia de Manresa y comarca) (1982)",
+        "author": "Pedro Flores Martinez",
+        "category": "historia",
+        "filename": "Pedro Flores Martinez - Las luchas sociales en el Alto Llobregat y Cardoner (Contribucción a la historia de Manresa y comarca) (1982).pdf"
+      },
+      {
+        "title": "Para matar a Franco (de risa). El periodico acrata en el exilio y los usos del humor grafico",
+        "author": "Pedro García Guirao",
+        "category": "historia",
+        "filename": "Pedro García Guirao - Para matar a Franco (de risa). El periodico acrata en el exilio y los usos del humor grafico.pdf"
+      },
+      {
+        "title": "tradición contra novedad o las antinomias de la España Liberal",
+        "author": "Pedro García Guirao",
+        "category": "historia",
+        "filename": "Pedro García Guirao - Tradicción contra novedad o las antinomias de la España Liberal.pdf"
+      },
+      {
+        "title": "Los archivos del terrorismo blanco. El fichero Lasarte",
+        "author": "Pere Foix",
+        "category": "historia",
+        "filename": "Pere Foix - Los archivos del terrorismo blanco. El fichero Lasarte.pdf"
+      },
+      {
+        "title": "A vueltas y revueltas con la historia social obrera en Espaa. Historia obrera, historia popular e historia contemporánea",
+        "author": "Pere Gabriel",
+        "category": "historia",
+        "filename": "Pere Gabriel - A vueltas y revueltas con la historia social obrera en Espaa. Historia obrera, historia popular e historia contemporánea.pdf"
+      },
+      {
+        "title": "Publicistas, socilogos y militantes. El nacimiento de la historia obrera en Espaa",
+        "author": "Pere Gabriel",
+        "category": "historia",
+        "filename": "Pere Gabriel - Publicistas, socilogos y militantes. El nacimiento de la historia obrera en Espaa.pdf"
+      },
+      {
+        "title": "Rastros de rostros en un prado rojo (y negro). Las Casas Baratas de Can Tunis en la revolución social de los años treinta",
+        "author": "Pere López Sánchez",
+        "category": "historia",
+        "filename": "Pere López Sánchez - Rastros de rostros en un prado rojo (y negro). Las Casas Baratas de Can Tunis en la revolución social de los años treinta.pdf"
+      },
+      {
+        "title": "invertidxs y rompepatrias. Marxismo, anarquismo y desobediencia sexual y de género en el estado español (1868-1982) (2019)",
+        "author": "Piro Subrat",
+        "category": "historia",
+        "filename": "Piro Subrat - invertidxs y rompepatrias. Marxismo, anarquismo y desobediencia sexual y de género en el estado español (1868-1982) (2019).pdf"
+      },
+      {
+        "title": "Viaje a la aldea del crimen (Documental de Casas Viejas)",
+        "author": "Ramon J Sender",
+        "category": "historia",
+        "filename": "Ramon J Sender - Viaje a la aldea del crimen (Documental de Casas Viejas).pdf"
+      },
+      {
+        "title": "La CNT al servicio del pueblo (1978)",
+        "author": "Ramon Liarte",
+        "category": "historia",
+        "filename": "Ramon Liarte - La CNT al servicio del pueblo (1978).pdf"
+      },
+      {
+        "title": "Maestria y ejemplo de la revolución social española (2016)",
+        "author": "Ramon Liarte",
+        "category": "historia",
+        "filename": "Ramon Liarte - Maestria y ejemplo de la revolución social española (2016).pdf"
+      },
+      {
+        "title": "El 1 de Mayo (1893)",
+        "author": "Ricardo Mella Cea",
+        "category": "historia",
+        "filename": "Ricardo Mella Cea - El 1 de Mayo (1893).pdf"
+      },
+      {
+        "title": "La sinrazn de un juicio",
+        "author": "Ricardo Mella Cea",
+        "category": "historia",
+        "filename": "Ricardo Mella Cea - La sinrazn de un juicio.pdf"
+      },
+      {
+        "title": "Proceso sumarísimo",
+        "author": "Ricardo Mella Cea",
+        "category": "historia",
+        "filename": "Ricardo Mella Cea - Proceso sumarísimo.pdf"
+      },
+      {
+        "title": "Los Treinta Judas",
+        "author": "Ricardo Sanz García",
+        "category": "historia",
+        "filename": "Ricardo Sanz García - Los Treinta Judas.pdf"
+      },
+      {
+        "title": "Los que fuimos a Madrid. Columna Durruti",
+        "author": "Ricardo Sanz García",
+        "category": "historia",
+        "filename": "Ricardo Sanz García - Los que fuimos a Madrid. Columna Durruti.pdf"
+      },
+      {
+        "title": "Ruta de titanes (2014)",
+        "author": "Ricardo Sanz García",
+        "category": "historia",
+        "filename": "Ricardo Sanz García - Ruta de titanes (2014).pdf"
+      },
+      {
+        "title": "Franco y el quinto mandamiento",
+        "author": "SIA",
+        "category": "historia",
+        "filename": "SIA - Franco y el quinto mandamiento.pdf"
+      },
+      {
+        "title": "Socialización, Colectivización y represión en Alcoy (1936-1956) (2015)",
+        "author": "Salome Molto",
+        "category": "historia",
+        "filename": "Salome Molto - Socializacción, Colectivizacción y represión en Alcoy (1936-1956) (2015).pdf"
+      },
+      {
+        "title": "Segundo Certamen Socialista (1890)",
+        "author": "Segundo Certamen Socialista 1890",
+        "category": "historia",
+        "filename": "Segundo Certamen Socialista 1890 - Segundo Certamen Socialista (1890).pdf"
+      },
+      {
+        "title": "Breve historia del MIL",
+        "author": "Sergi Roses Cordovilla",
+        "category": "historia",
+        "filename": "Sergi Roses Cordovilla - Breve historia del MIL.pdf"
+      },
+      {
+        "title": "El MIL, Puig Antich y los GARI (1977)",
+        "author": "Telesforo Tajuelo",
+        "category": "historia",
+        "filename": "Telesforo Tajuelo - El MIL, Puig Antich y los GARI (1977).pdf"
+      },
+      {
+        "title": "A propósito de la rebelión en Asturias. Octubre 1934",
+        "author": "Textos Anónimos y de Autoría Colectiva",
+        "category": "historia",
+        "filename": "Textos Anónimos y de Autoría Colectiva - A propósito de la rebelión en Asturias. Octubre 1934.pdf"
+      },
+      {
+        "title": "11-1918)",
+        "author": "Textos Historicos de la CNT Independencia y 19 Autonomia (Editorial Solidaridad Obrera",
+        "category": "historia",
+        "filename": "Textos Historicos de la CNT Independencia y 19 Autonomia (Editorial Solidaridad Obrera - 11-1918).pdf"
+      },
+      {
+        "title": "El cantón de Cartagena (2012)",
+        "author": "Tomas Cano Ruiz",
+        "category": "historia",
+        "filename": "Tomas Cano Ruiz - El cantón de Cartagena (2012).pdf"
+      },
+      {
+        "title": "La CNT y los comunistas espanoles",
+        "author": "Valeriano Orobon Fernández",
+        "category": "historia",
+        "filename": "Valeriano Orobon Fernández - La CNT y los comunistas espanoles.pdf"
+      },
+      {
+        "title": "España en armas. El cine de la Guerra Civil española",
+        "author": "Varios Autores",
+        "category": "historia",
+        "filename": "Varios Autores - España en armas. El cine de la Guerra Civil española.pdf"
+      },
+      {
+        "title": "Enseanzas de la revolución española",
+        "author": "Vernon Richards",
+        "category": "historia",
+        "filename": "Vernon Richards - Ensenanzas de la revolución española.pdf"
+      },
+      {
+        "title": "El Caso Scala. Terrorismo de Estado y algo mas (2008)",
+        "author": "Xavier Canadas Gascón",
+        "category": "historia",
+        "filename": "Xavier Canadas Gascón - El Caso Scala. Terrorismo de Estado y algo mas (2008).pdf"
+      },
+      {
+        "title": "El Tubo (Terror y miseria en las cárceles espanolas de la democracia)",
+        "author": "Xavier Canadas Gascón",
+        "category": "historia",
+        "filename": "Xavier Canadas Gascón - El Tubo (Terror y miseria en las cárceles espanolas de la democracia).pdf"
+      },
+      {
+        "title": "Entremuros (Las prisiones en la Transición Democratica)",
+        "author": "Xavier Canadas Gascón",
+        "category": "historia",
+        "filename": "Xavier Canadas Gascón - Entremuros (Las prisiones en la Transaccción Democratica).pdf"
+      },
+      {
+        "title": "Laposta municipalista. De les bullangues a les lluites actuals pels municipis lliures a Catalunya (2015)",
+        "author": "Xavier Diez I Rodriguez et al.",
+        "category": "historia",
+        "filename": "Xavier Diez I Rodriguez et al. - Laposta municipalista. De les bullangues a les lluites actuals pels municipis lliures a Catalunya (2015).pdf"
+      },
+      {
+        "title": "Buscando bajo las piedras",
+        "author": "Yanira Hermida",
+        "category": "historia",
+        "filename": "Yanira Hermida - Buscando bajo las piedras.pdf"
+      },
+      {
+        "title": "Creando la revolución. Publicaciones anarcofeministas en el Estado español",
+        "author": "Yanira Hermida",
+        "category": "historia",
+        "filename": "Yanira Hermida - Creando la revolución. Publicaciones anarcofeministas en el Estado español.pdf"
+      },
+      {
+        "title": "Luchaban por un mundo nuevo (2016)",
+        "author": "Yanira Hermida",
+        "category": "historia",
+        "filename": "Yanira Hermida - Luchaban por un mundo nuevo (2016).pdf"
+      },
+      {
+        "title": "Techo y dignidad. La lucha del Sindicato de Inquilinos de Tenerife",
+        "author": "Yanira Hermida",
+        "category": "historia",
+        "filename": "Yanira Hermida - Techo y dignidad. La lucha del Sindicato de Inquilinos de Tenerife.pdf"
+      },
+      {
+        "title": "El darwinismo republicano y librepensador de un joven naturalista. Odon de Buen y del Cos y las Dominicales del Librepensamiento (1883-1900)",
+        "author": "Álvaro Girón Sierra",
+        "category": "historia",
+        "filename": "Álvaro Girón Sierra - El darwinismo republicano y librepensador de un joven naturalista. Odon de Buen y del Cos y las Dominicales del Librepensamiento (1883-1900).pdf"
+      },
+      {
+        "title": "1893. Año clave del terrorismo en la España de la Restauración",
+        "author": "Ángel Herrerín López",
+        "category": "historia",
+        "filename": "Ángel Herrerín López - 1893. Ano clave del terrorismo en la España de la Restauracción.pdf"
+      },
+      {
+        "title": "La represión contra la CNT (1939-1949)",
+        "author": "Ángel Herrerín López",
+        "category": "historia",
+        "filename": "Ángel Herrerín López - La represión contra la CNT (1939-1949).pdf"
+      },
+      {
+        "title": "Los anarcomonarquicos. La opción monarquica en la CNT",
+        "author": "Ángel Herrerín López",
+        "category": "historia",
+        "filename": "Ángel Herrerín López - Los anarcomonarquicos. La opcción monarquica en la CNT.pdf"
+      },
+      {
+        "title": "El genocidio franquista en extremadura",
+        "author": "Ángel Olmedo Alonso et al.",
+        "category": "historia",
+        "filename": "Ángel Olmedo Alonso et al. - El genocidio franquista en extremadura.pdf"
+      },
+      {
+        "title": "El terrorismo en Barcelona (Vol. I) (1920)",
+        "author": "Ángel Pestaña",
+        "category": "historia",
+        "filename": "Ángel Pestaña - El terrorismo en Barcelona (Vol. I) (1920).pdf"
+      },
+      {
+        "title": "La caida del dictador",
+        "author": "Ángel Pestaña",
+        "category": "historia",
+        "filename": "Ángel Pestaña - La caida del dictador.pdf"
       }
     ]
   },
@@ -2358,6 +4010,114 @@ export const regionData = {
         "category": "historia",
         "rating": 4.5,
         "filename": "Howard Zinn - Colón y la civilización occidental.pdf"
+      },
+      {
+        "title": "La Salute e in Voi. Luigi Galleani y los anarquistas de acción en los Estados Unidos",
+        "author": "Circulo Anarquico Villa Española",
+        "category": "historia",
+        "filename": "Circulo Anarquico Villa Española - La Salute e in Voi. Luigi Galleani y los anarquistas de acción en los Estados Unidos.pdf"
+      },
+      {
+        "title": "Los origenes de la policia",
+        "author": "David Whitehouse",
+        "category": "historia",
+        "filename": "David Whitehouse - Los origenes de la policia.pdf"
+      },
+      {
+        "title": "STAR",
+        "author": "Distribuidora Peligrosidad Social",
+        "category": "historia",
+        "filename": "Distribuidora Peligrosidad Social - ASIF.pdf"
+      },
+      {
+        "title": "No, no volvemos a casa. Relatos de la revuelta de Ferguson",
+        "author": "Editorial Segadores",
+        "category": "historia",
+        "filename": "Editorial Segadores - No, no volvemos a casa. Relatos de la revuelta de Ferguson.pdf"
+      },
+      {
+        "title": "Little Big Horn en su centenario. La ultima victoria de los indios americanos",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - Little Big Horn en su centenario. La ultima victoria de los indios americanos.pdf"
+      },
+      {
+        "title": "Significacción del 1. de mayo. La huelga general de 1886 en Chicago",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - Significacción del 1. de mayo. La huelga general de 1886 en Chicago.pdf"
+      },
+      {
+        "title": "California",
+        "author": "Emma Goldman",
+        "category": "historia",
+        "filename": "Emma Goldman - California.pdf"
+      },
+      {
+        "title": "El genocidio colombino",
+        "author": "Howard Zinn",
+        "category": "historia",
+        "filename": "Howard Zinn - El genocidio colombino.pdf"
+      },
+      {
+        "title": "La otra Historia de los Estados Unidos. Desde 1492 hasta hoy",
+        "author": "Howard Zinn",
+        "category": "historia",
+        "filename": "Howard Zinn - La otra Historia de los Estados Unidos. Desde 1492 hasta hoy.pdf"
+      },
+      {
+        "title": "Solidaridad siempre. Una historia oral de los IWW",
+        "author": "IWW Industrial Workers Of The World",
+        "category": "historia",
+        "filename": "IWW Industrial Workers Of The World - Solidaridad siempre. Una historia oral de los IWW.pdf"
+      },
+      {
+        "title": "Voces rebeldes",
+        "author": "Joyce L Kornbluh (ed.)",
+        "category": "historia",
+        "filename": "Joyce L Kornbluh (ed.) - Voces rebeldes.pdf"
+      },
+      {
+        "title": "Lo seremos todo",
+        "author": "Melvyn Dubofsky",
+        "category": "historia",
+        "filename": "Melvyn Dubofsky - Lo seremos todo.pdf"
+      },
+      {
+        "title": "Escenas de sublevacin (1988)",
+        "author": "Noam Chomsky",
+        "category": "historia",
+        "filename": "Noam Chomsky - Escenas de sublevacin (1988).pdf"
+      },
+      {
+        "title": "Repensando Camelot (Kennedy, Vietnam y la cultura política de EEUU) (1994)",
+        "author": "Noam Chomsky",
+        "category": "historia",
+        "filename": "Noam Chomsky - Repensando Camelot (Kennedy, Vietnam y la cultura política de EEUU) (1994).pdf"
+      },
+      {
+        "title": "La leyenda del Primero de mayo",
+        "author": "Pietro Gori",
+        "category": "historia",
+        "filename": "Pietro Gori - La leyenda del Primero de mayo.pdf"
+      },
+      {
+        "title": "El crimen de Chicago (1890)",
+        "author": "Ricardo Mella Cea",
+        "category": "historia",
+        "filename": "Ricardo Mella Cea - El crimen de Chicago (1890).pdf"
+      },
+      {
+        "title": "Noviembre rojo, noviembre negro",
+        "author": "Salvatore Salerno",
+        "category": "historia",
+        "filename": "Salvatore Salerno - Noviembre rojo, noviembre negro.pdf"
+      },
+      {
+        "title": "Standing Rock. Los guardianes del agua contra la serpiente negra (2017)",
+        "author": "Textos Anónimos y de Autoría Colectiva",
+        "category": "historia",
+        "filename": "Textos Anónimos y de Autoría Colectiva - Standing Rock. Los guardianes del agua contra la serpiente negra (2017).pdf"
       }
     ]
   },
@@ -2444,6 +4204,108 @@ export const regionData = {
         "title": "Las casas de Reclus. Hacia la fusión naturaleza-ciudad, 1830-1871",
         "year": null,
         "rating": null
+      },
+      {
+        "title": "El socialismo en Francia",
+        "author": "Augustin Hamon",
+        "category": "historia",
+        "filename": "Augustin Hamon - El socialismo en Francia.pdf"
+      },
+      {
+        "title": "Resena de la Conferencia Intercontinental del Movimiento Libertario español (1947)",
+        "author": "CNT Confederación Nacional del Trabajo",
+        "category": "historia",
+        "filename": "CNT Confederacción Nacional del Trabajo - Resena de la Conferencia Intercontinental del Movimiento Libertario español (1947).pdf"
+      },
+      {
+        "title": "CNT en Francia (1947)",
+        "author": "Dictamenes y Resoluciones del 2º Congreso del MLE",
+        "category": "historia",
+        "filename": "Dictamenes y Resoluciones del 2º Congreso del MLE - CNT en Francia (1947).pdf"
+      },
+      {
+        "title": "La Comuna de Paris (2009)",
+        "author": "Edouard Dolleans",
+        "category": "historia",
+        "filename": "Edouard Dolleans - La Comuna de Paris (2009).pdf"
+      },
+      {
+        "title": "La banda de Bonnot",
+        "author": "Eduardo Pons Prades",
+        "category": "historia",
+        "filename": "Eduardo Pons Prades - La banda de Bonnot.pdf"
+      },
+      {
+        "title": "Republicanos en la liberacin de París",
+        "author": "Eduardo Pons Prades",
+        "category": "historia",
+        "filename": "Eduardo Pons Prades - Republicanos en la liberacin de París.pdf"
+      },
+      {
+        "title": "Los Bandidos Trágicos",
+        "author": "Errico Malatesta",
+        "category": "historia",
+        "filename": "Errico Malatesta - Los Bandidos Trágicos.pdf"
+      },
+      {
+        "title": "Y ahora, volved a vuestras casas",
+        "author": "Evelyn Mesquida",
+        "category": "historia",
+        "filename": "Evelyn Mesquida - Y ahora, volved a vuestras casas.pdf"
+      },
+      {
+        "title": "Historia de las bolsas del trabajo (1978)",
+        "author": "Fernand Pelloutier",
+        "category": "historia",
+        "filename": "Fernand Pelloutier - Historia de las bolsas del trabajo (1978).pdf"
+      },
+      {
+        "title": "Luz en las barracas. Carta de Miguel Gimenez Igualada a un ministro frances ante la situacion vivida en el Campo de Bram",
+        "author": "Gimenez Igualada",
+        "category": "historia",
+        "filename": "Gimenez Igualada - Luz en las barracas. Carta de Miguel Gimenez Igualada a un ministro frances ante la situacción vivida en el Campo de Bram.pdf"
+      },
+      {
+        "title": "Ideologías y tendencias en la Comuna de París (2013)",
+        "author": "Heinrich Koechlin",
+        "category": "historia",
+        "filename": "Heinrich Koechlin - Ideologías y tendencias en la Comuna de París (2013).pdf"
+      },
+      {
+        "title": "Contribución a la historia de la CNT de España en el exilio (1967)",
+        "author": "José Berruezo Silvente",
+        "category": "historia",
+        "filename": "José Berruezo Silvente - Contribucción a la historia de la CNT de España en el exilio (1967).pdf"
+      },
+      {
+        "title": "La Gran Revolución Francesa (1789-1793) (2015)",
+        "author": "Piotr Kropotkin",
+        "category": "historia",
+        "filename": "Piotr Kropotkin - La Gran Revolución Francesa (1789-1793) (2015).pdf"
+      },
+      {
+        "title": "Historia de la Comuna de París (Vol. I) (1971)",
+        "author": "Prosper Olivier Lissagaray",
+        "category": "historia",
+        "filename": "Prosper Olivier Lissagaray - Historia de la Comuna de París (Vol. I) (1971).pdf"
+      },
+      {
+        "title": "Historia de la Comuna de París (Vol. II) (1971)",
+        "author": "Prosper Olivier Lissagaray",
+        "category": "historia",
+        "filename": "Prosper Olivier Lissagaray - Historia de la Comuna de París (Vol. II) (1971).pdf"
+      },
+      {
+        "title": "La comuna de Paris (2012)",
+        "author": "Varios Autores",
+        "category": "historia",
+        "filename": "Varios Autores - La comuna de Paris (2012).pdf"
+      },
+      {
+        "title": "La peste parda",
+        "author": "Daniel Guerin",
+        "category": "historia",
+        "filename": "Daniel Guerin - La peste parda.pdf"
       }
     ]
   },
@@ -2514,6 +4376,18 @@ export const regionData = {
         "category": "historia",
         "rating": 4.5,
         "filename": "Angry Brigade 1967-1984 - La Brigada de la Cólera.pdf"
+      },
+      {
+        "title": "El movimiento obrero en la Gran Bretana",
+        "author": "Augustin Hamon",
+        "category": "historia",
+        "filename": "Augustin Hamon - El movimiento obrero en la Gran Bretana.pdf"
+      },
+      {
+        "title": "Contra todo pronostico 1972-1986",
+        "author": "Liberación Animal",
+        "category": "historia",
+        "filename": "Liberación Animal - Contra todo pronostico 1972-1986.pdf"
       }
     ]
   },
@@ -2575,6 +4449,30 @@ export const regionData = {
         "title": "Garibaldi y el socialismo de su tiempo",
         "year": null,
         "rating": null
+      },
+      {
+        "title": "Feminismo y lucha armada en Italia",
+        "author": "Distribuidora Peligrosidad Social",
+        "category": "historia",
+        "filename": "Distribuidora Peligrosidad Social - Feminismo y lucha armada en Italia.pdf"
+      },
+      {
+        "title": "Mussolini al poder",
+        "author": "Errico Malatesta",
+        "category": "historia",
+        "filename": "Errico Malatesta - Mussolini al poder.pdf"
+      },
+      {
+        "title": "La USI. 1923-1945",
+        "author": "Franco Schirone",
+        "category": "historia",
+        "filename": "Franco Schirone - La USI. 1923-1945.pdf"
+      },
+      {
+        "title": "Historia de la USI. 1912-1922",
+        "author": "Ugo Fedeli",
+        "category": "historia",
+        "filename": "Ugo Fedeli - Historia de la USI. 1912-1922.pdf"
       }
     ]
   },
@@ -2765,6 +4663,84 @@ export const regionData = {
         "category": "historia",
         "rating": 4.5,
         "filename": "Varios autores - Aprender escuchando. Autonomía, educación y guerrilla en Chiapas y Kurdistán.pdf"
+      },
+      {
+        "title": "Magonismo y vida comunal mesoamericana. A 90 años de la muerte de Ricardo Flores Magón (2012)",
+        "author": "Benjamín Maldonado Alvarado",
+        "category": "historia",
+        "filename": "Benjamín Maldonado Alvarado - Magonismo y vida comunal mesoamericana. A 90 años de la muerte de Ricardo Flores Magón (2012).pdf"
+      },
+      {
+        "title": "Movimientos revolucionarios en Veracruz (1941)",
+        "author": "Candido Donato Padua",
+        "category": "historia",
+        "filename": "Candido Donato Padua - Movimientos revolucionarios en Veracruz (1941).pdf"
+      },
+      {
+        "title": "El magonismo y la Revolución mexicana en la prensa acrata y radical francfona (2013)",
+        "author": "David Doillon",
+        "category": "historia",
+        "filename": "David Doillon - El magonismo y la Revolución mexicana en la prensa ácrata y radical francfona (2013).pdf"
+      },
+      {
+        "title": "Antologia de testimonios de precursores de la revolución Mexicana",
+        "author": "Diego Flores Magón",
+        "category": "historia",
+        "filename": "Diego Flores Magón - Antologia de testimonios de precursores de la revolución Mexicana.pdf"
+      },
+      {
+        "title": "Historia del movimiento obrero en México Vol. I) (1975)",
+        "author": "Luis Araiza",
+        "category": "historia",
+        "filename": "Luis Araiza - Historia del movimiento obrero en México Vol. I) (1975).pdf"
+      },
+      {
+        "title": "Historia del movimiento obrero en México Vol. II) (1975)",
+        "author": "Luis Araiza",
+        "category": "historia",
+        "filename": "Luis Araiza - Historia del movimiento obrero en México Vol. II) (1975).pdf"
+      },
+      {
+        "title": "Mexico y España. Reflexiones en torno a la Casa del Obrero Mundial. Entrevista a Anna Ribero Carbo",
+        "author": "Pedro García Guirao",
+        "category": "historia",
+        "filename": "Pedro García Guirao - Mexico y España. Reflexiones en torno a la Casa del Obrero Mundial. Entrevista a Anna Ribero Carbo.pdf"
+      },
+      {
+        "title": "Manifiesto del 16 de marzo de 1918",
+        "author": "Ricardo Flores Magón y Librado Rivera",
+        "category": "historia",
+        "filename": "Ricardo Flores Magón y Librado Rivera - Manifiesto del 16 de marzo de 1918.pdf"
+      },
+      {
+        "title": "1914. La intervención americana en Mexico",
+        "author": "Ricardo Flores Magón",
+        "category": "historia",
+        "filename": "Ricardo Flores Magón - 1914. La intervencción americana en Mexico.pdf"
+      },
+      {
+        "title": "La revolución mexicana (1970)",
+        "author": "Ricardo Flores Magón",
+        "category": "historia",
+        "filename": "Ricardo Flores Magón - La revolución mexicana (1970).pdf"
+      },
+      {
+        "title": "Magonismo. Utopia y revolución (1910-1913) (2010)",
+        "author": "Rubén Trejo",
+        "category": "historia",
+        "filename": "Rubén Trejo - Magonismo. Utopia y revolución (1910-1913) (2010).pdf"
+      },
+      {
+        "title": "Las tinajas de Ulua (1943)",
+        "author": "Teodoro Hernández",
+        "category": "historia",
+        "filename": "Teodoro Hernández - Las tinajas de Ulua (1943).pdf"
+      },
+      {
+        "title": "Los precursores de la revolución (1940)",
+        "author": "Teodoro Hernández",
+        "category": "historia",
+        "filename": "Teodoro Hernández - Los precursores de la revolución (1940).pdf"
       }
     ]
   },
@@ -2886,6 +4862,30 @@ export const regionData = {
         "category": "historia",
         "rating": 4.5,
         "filename": "Varios autores - Anarquismo y anarcosindicalismo en el Perú. Testimonios.pdf"
+      },
+      {
+        "title": "El anarquismo en el Perú (1961)",
+        "author": "Federación Anarquista del Perú",
+        "category": "historia",
+        "filename": "Federacción Anarquista del Perú - El anarquismo en el Perú (1961).pdf"
+      },
+      {
+        "title": "La invisible muerte del proletario. Un análisis de la prensa peruana (1904-1925)",
+        "author": "Joel Delhom",
+        "category": "historia",
+        "filename": "Joel Delhom - La invisible muerte del proletario. Un análisis de la prensa peruana (1904-1925).pdf"
+      },
+      {
+        "title": "Anarquismo y sindicalismo en el Perú (1978)",
+        "author": "Piedad Pareja",
+        "category": "historia",
+        "filename": "Piedad Pareja - Anarquismo y sindicalismo en el Perú (1978).pdf"
+      },
+      {
+        "title": "El movimiento obrero peruano 1918-1919",
+        "author": "Ricardo Martinez de la Torre",
+        "category": "historia",
+        "filename": "Ricardo Martinez de la Torre - El movimiento obrero peruano 1918-1919.pdf"
       }
     ]
   },
@@ -2940,15 +4940,6 @@ export const regionData = {
         "rating": 4.7,
         "summary": "Estudio del movimiento campesino libertario ucraniano de Néstor Makhno durante la guerra civil rusa.",
         "filename": "Lorena Paz Paredes - La Makhnovschina. Un movimiento libertario bajo fuego en Ucrania (1918-1921).pdf"
-      },
-      {
-        "title": "El anarquismo en el espejo judío",
-        "author": "Yago Mellado López",
-        "pubYear": 2013,
-        "category": "historia",
-        "rating": 4.4,
-        "summary": "Tesis doctoral sobre el anarquismo judío: la presencia de militantes y pensadores judíos en el movimiento libertario.",
-        "filename": "Yago Mellado López - El anarquismo en el espejo judío.pdf"
       },
       {
         "title": "Los anarquistas y los soviets",
@@ -3096,6 +5087,120 @@ export const regionData = {
         "category": "historia",
         "rating": 4.5,
         "filename": "Anatoly Viktorovich Dubovik - Los anarquistas rusos en el movimiento obrero a principios del siglo XX.pdf"
+      },
+      {
+        "title": "Kronstadt",
+        "author": "Alexander Berkman",
+        "category": "historia",
+        "filename": "Alexander Berkman - Kronstadt.pdf"
+      },
+      {
+        "title": "Marxismo y anarquismo en la revolución rusa",
+        "author": "Arthur Lehning",
+        "category": "historia",
+        "filename": "Arthur Lehning - Marxismo y anarquismo en la revolución rusa.pdf"
+      },
+      {
+        "title": "El asalto al Palacio de Invierno",
+        "author": "Eduardo Pons Prades",
+        "category": "historia",
+        "filename": "Eduardo Pons Prades - El asalto al Palacio de Invierno.pdf"
+      },
+      {
+        "title": "Dos aos en Rusia",
+        "author": "Emma Goldman",
+        "category": "historia",
+        "filename": "Emma Goldman - Dos aos en Rusia.pdf"
+      },
+      {
+        "title": "El primero de mayo en Petrogrado",
+        "author": "Emma Goldman",
+        "category": "historia",
+        "filename": "Emma Goldman - El primero de mayo en Petrogrado.pdf"
+      },
+      {
+        "title": "Losovski levanta el teln",
+        "author": "Emma Goldman",
+        "category": "historia",
+        "filename": "Emma Goldman - Losovski levanta el teln.pdf"
+      },
+      {
+        "title": "El populismo ruso (Vol. I)",
+        "author": "Franco Venturi",
+        "category": "historia",
+        "filename": "Franco Venturi - El populismo ruso (Vol. I).pdf"
+      },
+      {
+        "title": "El populismo ruso (Vol. II)",
+        "author": "Franco Venturi",
+        "category": "historia",
+        "filename": "Franco Venturi - El populismo ruso (Vol. II).pdf"
+      },
+      {
+        "title": "Una Majnovschina siberiana",
+        "author": "Frank Mintz",
+        "category": "historia",
+        "filename": "Frank Mintz - Una Majnovschina siberiana.pdf"
+      },
+      {
+        "title": "Lenin, sepulturero de la revolución",
+        "author": "Gaston Leval",
+        "category": "historia",
+        "filename": "Gaston Leval - Lenin, sepulturero de la revolución.pdf"
+      },
+      {
+        "title": "La comuna de Kronstadt (2006)",
+        "author": "Ida Mett",
+        "category": "historia",
+        "filename": "Ida Mett - La comuna de Kronstadt (2006).pdf"
+      },
+      {
+        "title": "CNT, 1948",
+        "author": "Karaganda. la Tragedia del Antifascismo Español Ediciones del MLE",
+        "category": "historia",
+        "filename": "Karaganda. la Tragedia del Antifascismo Español Ediciones del MLE - CNT, 1948.pdf"
+      },
+      {
+        "title": "La Rusia roja. Cómo tomaron el poder los bolcheviques",
+        "author": "Manuel Buenacasa",
+        "category": "historia",
+        "filename": "Manuel Buenacasa - La Rusia roja. Cmo tomaron el poder los bolcheviques.pdf"
+      },
+      {
+        "title": "Los dos Octubres (1927) (2009)",
+        "author": "Piotr Archinov",
+        "category": "historia",
+        "filename": "Piotr Archinov - Los dos Octubres (1927) (2009).pdf"
+      },
+      {
+        "title": "La Rusia subterranea (2016)",
+        "author": "Stepniak (Sergei Michailovitch Kravchinski)",
+        "category": "historia",
+        "filename": "Stepniak (Sergei Michailovitch Kravchinski) - La Rusia subterranea (2016).pdf"
+      },
+      {
+        "title": "La Rusia terrorista. Perfiles y bocetos revolucionarios",
+        "author": "Stepniak (Sergei Michailovitch Kravchinski)",
+        "category": "historia",
+        "filename": "Stepniak (Sergei Michailovitch Kravchinski) - La Rusia terrorista. Perfiles y bocetos revolucionarios.pdf"
+      },
+      {
+        "title": "El sabor de la sangre en la boca. revolucionarios, anarquistas, rebeldes y nihilistas en la Rusia del S.XIX (2017)",
+        "author": "Textos Anónimos y de Autoría Colectiva",
+        "category": "historia",
+        "filename": "Textos Anónimos y de Autoría Colectiva - El sabor de la sangre en la boca. revolucionarios, anarquistas, rebeldes y nihilistas en la Rusia del S.XIX (2017).pdf"
+      },
+      {
+        "title": "Como sali de Rusia (1933)",
+        "author": "Vicente (Combina) Perez",
+        "category": "historia",
+        "filename": "Vicente (Combina) Perez - Como sali de Rusia (1933).pdf"
+      },
+      {
+        "title": "Un militante de la CNT en Rusia (1933)",
+        "author": "Vicente (Combina) Perez",
+        "category": "historia",
+        "filename": "Vicente (Combina) Perez - Un militante de la CNT en Rusia (1933).pdf"
       }
     ]
   },
@@ -3126,6 +5231,18 @@ export const regionData = {
         "category": "historia",
         "rating": 4.5,
         "filename": "Varios autores - Revolución en Rojava. Liberación de la mujer y comunalismo entre la guerra y el embargo.pdf"
+      },
+      {
+        "title": "Aprendamos de la revolución de Rojava (2018)",
+        "author": "Baran Pedraforca",
+        "category": "historia",
+        "filename": "Baran Pedraforca - Aprendamos de la revolución de Rojava (2018).pdf"
+      },
+      {
+        "title": "Un verano kurdo. Historias de resistencia al ISIS, a la ocupación y al exilio (2016)",
+        "author": "Zekine Turkeri",
+        "category": "historia",
+        "filename": "Zekine Turkeri - Un verano kurdo. Historias de resistencia al ISIS, a la ocupacción y al exilio (2016).pdf"
       }
     ]
   },
@@ -3164,6 +5281,18 @@ export const regionData = {
         "category": "historia",
         "rating": 4.5,
         "filename": "Néstor Majnó - El Gran Octubre en Ucrania.pdf"
+      },
+      {
+        "title": "La revolución desconocida. Ukrania 1917-1921, la gesta Makhnovista (2000)",
+        "author": "Hector Schujman",
+        "category": "historia",
+        "filename": "Hector Schujman - La revolución desconocida. Ukrania 1917-1921, la gesta Makhnovista (2000).pdf"
+      },
+      {
+        "title": "El ejército insurreccional makhnovista (1972)",
+        "author": "Ugo Fedeli",
+        "category": "historia",
+        "filename": "Ugo Fedeli - El ejército insurreccional makhnovista (1972).pdf"
       }
     ]
   },
@@ -3236,6 +5365,54 @@ export const regionData = {
         "pubYear": null,
         "category": "historia",
         "filename": "Rodrigo Vescovi - Tras el antifaz. La resistencia.pdf"
+      },
+      {
+        "title": "2016",
+        "author": "Documentos Intervenir. Historia y 2011 Análisis de Dos Luchas en Territorio Uruguayo",
+        "category": "historia",
+        "filename": "Documentos Intervenir. Historia y 2011 Análisis de Dos Luchas en Territorio Uruguayo - 2016.pdf"
+      },
+      {
+        "title": "Apuntes para una historia del Sindicato Unico del Automovil (1903-1965)",
+        "author": "Pascual Muñoz",
+        "category": "historia",
+        "filename": "Pascual Muñoz - Apuntes para una historia del Sindicato Unico del Automovil (1903-1965).pdf"
+      },
+      {
+        "title": "Atentado al arzobispo de Montevideo (18 de junio de 1922)",
+        "author": "Pascual Muñoz",
+        "category": "historia",
+        "filename": "Pascual Muñoz - Atentado al arzobispo de Montevideo (18 de junio de 1922).pdf"
+      },
+      {
+        "title": "Cultura obrera en el interior del Uruguay (Salto, Paysandu y Rocha, 1918-1925) (2015)",
+        "author": "Pascual Muñoz",
+        "category": "historia",
+        "filename": "Pascual Muñoz - Cultura obrera en el interior del Uruguay (Salto, Paysandu y Rocha, 1918-1925) (2015).pdf"
+      },
+      {
+        "title": "El 1º de Mayo en Uruguay (1890-1925)",
+        "author": "Pascual Muñoz",
+        "category": "historia",
+        "filename": "Pascual Muñoz - El 1º de Mayo en Uruguay (1890-1925).pdf"
+      },
+      {
+        "title": "El ultimo 1º de Mayo bajo el capitalismo",
+        "author": "Pascual Muñoz",
+        "category": "historia",
+        "filename": "Pascual Muñoz - El ultimo 1º de Mayo bajo el capitalismo.pdf"
+      },
+      {
+        "title": "Obreros o Carneros. De la huelga maritima a la huelga general por la libertad de Ángel Gonzalez",
+        "author": "Pascual Muñoz",
+        "category": "historia",
+        "filename": "Pascual Muñoz - Obreros o Carneros. De la huelga maritima a la huelga general por la libertad de Ángel Gonzalez.pdf"
+      },
+      {
+        "title": "acción Directa en Uruguay, 1968-1973 (2019)",
+        "author": "Rodrigo Vescovi",
+        "category": "historia",
+        "filename": "Rodrigo Vescovi - acción Directa en Uruguay, 1968-1973 (2019).pdf"
       }
     ]
   },
@@ -3567,6 +5744,255 @@ export const regionData = {
         "pubYear": null,
         "category": "historia",
         "filename": "Vv. Aa. - Dias rebeldes. Cronicas de la insumision.pdf"
+      },
+      {
+        "title": "Compendio de la Historia del socialismo (1908)",
+        "author": "Augustin Hamon",
+        "category": "historia",
+        "filename": "Augustin Hamon - Compendio de la Historia del socialismo (1908).pdf"
+      },
+      {
+        "title": "El movimiento obrero y social en América Latina. Primeras experiencias (1830-1917)",
+        "author": "Carlos M Rama",
+        "category": "historia",
+        "filename": "Carlos M Rama - El movimiento obrero y social en América Latina. Primeras experiencias (1830-1917).pdf"
+      },
+      {
+        "title": "El socialismo salvaje (2020)",
+        "author": "Charles Reeve",
+        "category": "historia",
+        "filename": "Charles Reeve - El socialismo salvaje (2020).pdf"
+      },
+      {
+        "title": "Homosexualidad, cristianismo y herejía en Europa",
+        "author": "Distribuidora Peligrosidad Social",
+        "category": "historia",
+        "filename": "Distribuidora Peligrosidad Social - Homosexualidad, cristianismo y herejía en Europa.pdf"
+      },
+      {
+        "title": "Los Hermanos de la Costa",
+        "author": "Distribuidora Peligrosidad Social",
+        "category": "historia",
+        "filename": "Distribuidora Peligrosidad Social - Los Hermanos de la Costa.pdf"
+      },
+      {
+        "title": "Sociedades secretas contra el Estado",
+        "author": "Distribuidora Peligrosidad Social",
+        "category": "historia",
+        "filename": "Distribuidora Peligrosidad Social - Sociedades secretas contra el Estado.pdf"
+      },
+      {
+        "title": "Historia del movimiento obrero (Tomo I) (1962)",
+        "author": "Edouard Dolleans",
+        "category": "historia",
+        "filename": "Edouard Dolleans - Historia del movimiento obrero (Tomo I) (1962).pdf"
+      },
+      {
+        "title": "Historia del movimiento obrero (Tomo II) (1961)",
+        "author": "Edouard Dolleans",
+        "category": "historia",
+        "filename": "Edouard Dolleans - Historia del movimiento obrero (Tomo II) (1961).pdf"
+      },
+      {
+        "title": "Historia del movimiento obrero (Tomo III) (1961)",
+        "author": "Edouard Dolleans",
+        "category": "historia",
+        "filename": "Edouard Dolleans - Historia del movimiento obrero (Tomo III) (1961).pdf"
+      },
+      {
+        "title": "Procreación consciente y emigración. El ejemplo del neomalthusianismo ibérico en América Latina (1900-1914)",
+        "author": "Eduard Masjuan Bracons",
+        "category": "historia",
+        "filename": "Eduard Masjuan Bracons - Procreación consciente y emigración. El ejemplo del neomalthusianismo ibérico en América Latina (1900-1914).pdf"
+      },
+      {
+        "title": "Historia del movimiento obrero revolucionario (2013)",
+        "author": "Eduardo Colombo (comp.)",
+        "category": "historia",
+        "filename": "Eduardo Colombo (comp.) - Historia del movimiento obrero revolucionario (2013).pdf"
+      },
+      {
+        "title": "Terrorismo. El viejo de la montana",
+        "author": "Eduardo de Guzmán",
+        "category": "historia",
+        "filename": "Eduardo de Guzmán - Terrorismo. El viejo de la montana.pdf"
+      },
+      {
+        "title": "De una a otra revolución, 1789-1918 (1961)",
+        "author": "Francisco Olaya Morales",
+        "category": "historia",
+        "filename": "Francisco Olaya Morales - De una a otra revolución, 1789-1918 (1961).pdf"
+      },
+      {
+        "title": "Oleadas terroristas. Una critica a la teoria de las oleadas terroristas",
+        "author": "Francisco de Paula Fernández Gomez",
+        "category": "historia",
+        "filename": "Francisco de Paula Fernández Gomez - Oleadas terroristas. Una critica a la teoria de las oleadas terroristas.pdf"
+      },
+      {
+        "title": "El Estado en la historia (1978)",
+        "author": "Gaston Leval",
+        "category": "historia",
+        "filename": "Gaston Leval - El Estado en la historia (1978).pdf"
+      },
+      {
+        "title": "Albores del anarquismo",
+        "author": "George Woodcock",
+        "category": "historia",
+        "filename": "George Woodcock - Albores del anarquismo.pdf"
+      },
+      {
+        "title": "La Europa revolucionaria (1789-1848)",
+        "author": "Javier Paniagua Fuentes",
+        "category": "historia",
+        "filename": "Javier Paniagua Fuentes - La Europa revolucionaria (1789-1848).pdf"
+      },
+      {
+        "title": "Breve Historia de la Noviolencia (2010)",
+        "author": "Jesús Castanar Perez",
+        "category": "historia",
+        "filename": "Jesús Castanar Perez - Breve Historia de la Noviolencia (2010).pdf"
+      },
+      {
+        "title": "Cuando los anarquistas citaban la Biblia (2014)",
+        "author": "Joel Delhom y Daniel Attala",
+        "category": "historia",
+        "filename": "Joel Delhom y Daniel Attala - Cuando los anarquistas citaban la Biblia (2014).pdf"
+      },
+      {
+        "title": "Historia de las utopías",
+        "author": "Lewis Mumford",
+        "category": "historia",
+        "filename": "Lewis Mumford - Historia de las utopías.pdf"
+      },
+      {
+        "title": "La ciudad en la historia",
+        "author": "Lewis Mumford",
+        "category": "historia",
+        "filename": "Lewis Mumford - La ciudad en la historia.pdf"
+      },
+      {
+        "title": "Historia del primero de mayo (2011)",
+        "author": "Maurice Dommanget et al.",
+        "category": "historia",
+        "filename": "Maurice Dommanget et al. - Historia del primero de mayo (2011).pdf"
+      },
+      {
+        "title": "Historia del 1 de mayo (1976)",
+        "author": "Maurice Dommanget",
+        "category": "historia",
+        "filename": "Maurice Dommanget - Historia del 1 de mayo (1976).pdf"
+      },
+      {
+        "title": "Futbol y anarquismo (2020)",
+        "author": "Miguel Fernández Ubiria",
+        "category": "historia",
+        "filename": "Miguel Fernández Ubiria - Futbol y anarquismo (2020).pdf"
+      },
+      {
+        "title": "1968. Cuando se marchit el rojo de las banderas (2018)",
+        "author": "Miquel Izard",
+        "category": "historia",
+        "filename": "Miquel Izard - 1968. Cuando se marchit el rojo de las banderas (2018).pdf"
+      },
+      {
+        "title": "La encrucijada antillana",
+        "author": "Miquel Izard",
+        "category": "historia",
+        "filename": "Miquel Izard - La encrucijada antillana.pdf"
+      },
+      {
+        "title": "El mito de la conspiracin judía mundial (1995)",
+        "author": "Norman Cohn",
+        "category": "historia",
+        "filename": "Norman Cohn - El mito de la conspiracin judía mundial (1995).pdf"
+      },
+      {
+        "title": "En pos del milenio (1981)",
+        "author": "Norman Cohn",
+        "category": "historia",
+        "filename": "Norman Cohn - En pos del milenio (1981).pdf"
+      },
+      {
+        "title": "Los demonios familiares de Europa (1980)",
+        "author": "Norman Cohn",
+        "category": "historia",
+        "filename": "Norman Cohn - Los demonios familiares de Europa (1980).pdf"
+      },
+      {
+        "title": "Las raíces del anarquismo (2016)",
+        "author": "Peter Marshall",
+        "category": "historia",
+        "filename": "Peter Marshall - Las raíces del anarquismo (2016).pdf"
+      },
+      {
+        "title": "El movimiento obrero latinoamericano. Tomo I (1990)",
+        "author": "Ricardo Melgar Bao",
+        "category": "historia",
+        "filename": "Ricardo Melgar Bao - El movimiento obrero latinoamericano. Tomo I (1990).pdf"
+      },
+      {
+        "title": "El movimiento obrero latinoamericano. Tomo II (1990)",
+        "author": "Ricardo Melgar Bao",
+        "category": "historia",
+        "filename": "Ricardo Melgar Bao - El movimiento obrero latinoamericano. Tomo II (1990).pdf"
+      },
+      {
+        "title": "Historia del anarcofeminismo en América Latina",
+        "author": "Textos Anónimos y de Autoría Colectiva",
+        "category": "historia",
+        "filename": "Textos Anónimos y de Autoría Colectiva - Historia del anarcofeminismo en América Latina.pdf"
+      },
+      {
+        "title": "Wobblies del mundo",
+        "author": "Varios Autores",
+        "category": "historia",
+        "filename": "Varios Autores - Wobblies del mundo.pdf"
+      },
+      {
+        "title": "La Internacional obrera",
+        "author": "Víctor García",
+        "category": "historia",
+        "filename": "Víctor García - La Internacional obrera.pdf"
+      },
+      {
+        "title": "El hombre y la tierra (Tomo 2) (1906)",
+        "author": "Élisée Reclus",
+        "category": "historia",
+        "filename": "Élisée Reclus - El hombre y la tierra (Tomo 2) (1906).pdf"
+      },
+      {
+        "title": "El hombre y la tierra (Tomo 3) (1906)",
+        "author": "Élisée Reclus",
+        "category": "historia",
+        "filename": "Élisée Reclus - El hombre y la tierra (Tomo 3) (1906).pdf"
+      },
+      {
+        "title": "El hombre y la tierra (Tomo 4) (1906)",
+        "author": "Élisée Reclus",
+        "category": "historia",
+        "filename": "Élisée Reclus - El hombre y la tierra (Tomo 4) (1906).pdf"
+      },
+      {
+        "title": "El hombre y la tierra (Tomo 5) (1906)",
+        "author": "Élisée Reclus",
+        "category": "historia",
+        "filename": "Élisée Reclus - El hombre y la tierra (Tomo 5) (1906).pdf"
+      },
+      {
+        "title": "El hombre y la tierra (Tomo 6) (1906)",
+        "author": "Élisée Reclus",
+        "category": "historia",
+        "filename": "Élisée Reclus - El hombre y la tierra (Tomo 6) (1906).pdf"
+      },
+      {
+        "title": "El anarquismo en el espejo judío",
+        "author": "Yago Mellado López",
+        "pubYear": 2013,
+        "category": "historia",
+        "rating": 4.4,
+        "summary": "Tesis doctoral sobre el anarquismo judío: la presencia de militantes y pensadores judíos en el movimiento libertario.",
+        "filename": "Yago Mellado López - El anarquismo en el espejo judío.pdf"
       }
     ]
   },
@@ -3590,6 +6016,12 @@ export const regionData = {
         "rating": 4.5,
         "summary": "Estudio del movimiento Provo neerlandés (1965-67) y su lugar en la tradición utópica y libertaria, por el historiador Manuel Pérez Ledesma.",
         "filename": "Manuel Pérez Ledesma - El movimiento Provo.pdf"
+      },
+      {
+        "title": "El grupo De Moker (2018)",
+        "author": "Els Van Daele",
+        "category": "historia",
+        "filename": "Els Van Daele - El grupo De Moker (2018).pdf"
       }
     ]
   },
@@ -10199,19 +12631,6 @@ export const regionData = {
       }
     ]
   },
-  "Ecuador": {
-    "iso": "ec",
-    "books": [
-      {
-        "filename": "Miquel Izard - Un ambito libertario llamado Javaro.pdf",
-        "category": "historia",
-        "author": "Miquel Izard",
-        "title": "Un ámbito libertario llamado Játiva",
-        "year": null,
-        "rating": null
-      }
-    ]
-  },
   "Agustín Guillamón Iborra": {
     "books": [
       {
@@ -12868,5 +15287,131 @@ export const regionData = {
         "subject": "Teresa González de Chávez"
       }
     ]
+  },
+  "Suecia": {
+    "iso": "se",
+    "books": [
+      {
+        "title": "El movimiento cooperativista en Suecia (1945)",
+        "author": "Augustin Souchy",
+        "category": "historia",
+        "filename": "Augustin Souchy - El movimiento cooperativista en Suecia (1945).pdf"
+      }
+    ]
+  },
+  "Palestina": {
+    "iso": "ps",
+    "books": [
+      {
+        "title": "Violación de los derechos humanos en Palestina. Crónica del apartheid",
+        "author": "Jesús Castanar Perez",
+        "category": "historia",
+        "filename": "Jesús Castanar Perez - Violacción de los derechos humanos en Palestina. Crónica del apartheid.pdf"
+      },
+      {
+        "title": "El Triángulo Fatal. Estados Unidos, Israel y Palestina (2004)",
+        "author": "Noam Chomsky",
+        "category": "historia",
+        "filename": "Noam Chomsky - El Triángulo Fatal. Estados Unidos, Israel y Palestina (2004).pdf"
+      }
+    ]
+  },
+  "Marruecos": {
+    "iso": "ma",
+    "books": [
+      {
+        "title": "Utopías piratas",
+        "author": "Hakim Bey",
+        "category": "historia",
+        "filename": "Hakim Bey - Utopías piratas.pdf"
+      }
+    ]
+  },
+  "Venezuela": {
+    "iso": "ve",
+    "books": [
+      {
+        "title": "Alucinaciones, artificios, engaos, fábulas y mitos",
+        "author": "Miquel Izard",
+        "category": "historia",
+        "filename": "Miquel Izard - Alucinaciones, artificios, engaos, fábulas y mitos.pdf"
+      },
+      {
+        "title": "Artistas y barruntafechas",
+        "author": "Miquel Izard",
+        "category": "historia",
+        "filename": "Miquel Izard - Artistas y barruntafechas.pdf"
+      },
+      {
+        "title": "Caballos, canes, conquistadores y cruzados",
+        "author": "Miquel Izard",
+        "category": "historia",
+        "filename": "Miquel Izard - Caballos, canes, conquistadores y cruzados.pdf"
+      },
+      {
+        "title": "Cabello planchado, origen negado",
+        "author": "Miquel Izard",
+        "category": "historia",
+        "filename": "Miquel Izard - Cabello planchado, origen negado.pdf"
+      },
+      {
+        "title": "Cimarrones, gauchos y cuatreros",
+        "author": "Miquel Izard",
+        "category": "historia",
+        "filename": "Miquel Izard - Cimarrones, gauchos y cuatreros.pdf"
+      },
+      {
+        "title": "Cuando los quiméricos devinieron sanguinarios",
+        "author": "Miquel Izard",
+        "category": "historia",
+        "filename": "Miquel Izard - Cuando los quiméricos devinieron sanguinarios.pdf"
+      },
+      {
+        "title": "Esclavos y negreros",
+        "author": "Miquel Izard",
+        "category": "historia",
+        "filename": "Miquel Izard - Esclavos y negreros.pdf"
+      },
+      {
+        "title": "Himnos y baladas",
+        "author": "Miquel Izard",
+        "category": "historia",
+        "filename": "Miquel Izard - Himnos y baladas.pdf"
+      },
+      {
+        "title": "La memoria callada",
+        "author": "Miquel Izard",
+        "category": "historia",
+        "filename": "Miquel Izard - La memoria callada.pdf"
+      },
+      {
+        "title": "Los indios son allí todavía indios y vagan en la barbarie esperando la hispanidad",
+        "author": "Miquel Izard",
+        "category": "historia",
+        "filename": "Miquel Izard - Los indios son allí todavía indios y vagan en la barbarie esperando la hispanidad.pdf"
+      },
+      {
+        "title": "Nadie recordará nuestros nombres cuando hayamos muerto",
+        "author": "Miquel Izard",
+        "category": "historia",
+        "filename": "Miquel Izard - Nadie recordará nuestros nombres cuando hayamos muerto.pdf"
+      },
+      {
+        "title": "Quien no trabaja no come",
+        "author": "Miquel Izard",
+        "category": "historia",
+        "filename": "Miquel Izard - Quien no trabaja no come.pdf"
+      },
+      {
+        "title": "Resistiendo la civilización o desdeando el progreso. Introducción",
+        "author": "Miquel Izard",
+        "category": "historia",
+        "filename": "Miquel Izard - Resistiendo la civilizacin o desdeando el progreso. Introduccin.pdf"
+      }
+    ]
+  },
+  "Ecuador": {
+    "iso": "ec",
+    "books": []
   }
 };

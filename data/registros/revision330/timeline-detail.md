@@ -1,18 +1,59 @@
+# Timeline — eventos y textos asociados
 
--1800 - Protoanarquismo, Utopías y Piratería (5)
+31 eventos · 863 textos vinculados
+
+-1800 - Protoanarquismo, Utopías, Piratería y Revoluciones Atlánticas (27)
   - Ángel J. Cappelletti - Utopías antiguas y modernas
+  - Ángel J. Cappelletti - Prehistoria del anarquismo
   - Simón Royo Hernández - El anarquismo en la antigua Grecia
   - Bernardo Fuster - Los hermanos de la Costa. Piratería libertaria en el Caribe
   - Howard Zinn - Colón y la civilización occidental
   - Piotr Kropotkin - La Gran Revolución (1789-1793) (Vol. I)
+  - Max Nettlau - Esbozo de historia de las utopías
+  - Distribuidora Peligrosidad Social - Homosexualidad, cristianismo y herejía en Europa
+  - Distribuidora Peligrosidad Social - Los Hermanos de la Costa
+  - Distribuidora Peligrosidad Social - Sociedades secretas contra el Estado
+  - Eduardo de Guzmán - Cadiz, 1812. Dramaticos origenes de la vida parlamentaria española
+  - Eduardo de Guzmán - Terrorismo. El viejo de la montana
+  - George Woodcock - Albores del anarquismo
+  - Gloria Espigado - La buena nueva de la mujer profeta. Identidad y cultura política en las fourieristas
+  - Hakim Bey - Utopías piratas
+  - Howard Zinn - El genocidio colombino
+  - Javier Paniagua Fuentes - La Europa revolucionaria (1789-1848)
+  - Lewis Mumford - Historia de las utopías
+  - Lewis Mumford - La ciudad en la historia
+  - Norman Cohn - En pos del milenio (1981)
+  - Norman Cohn - Los demonios familiares de Europa (1980)
+  - Piotr Kropotkin - La Gran Revolución Francesa (1789-1793) (2015)
+  - Élisée Reclus - El hombre y la tierra (Tomo 2) (1906)
+  - Élisée Reclus - El hombre y la tierra (Tomo 3) (1906)
+  - Élisée Reclus - El hombre y la tierra (Tomo 4) (1906)
+  - Élisée Reclus - El hombre y la tierra (Tomo 5) (1906)
+  - Élisée Reclus - El hombre y la tierra (Tomo 6) (1906)
 
-1868 - La Primera Internacional, Bakunin y la Comuna de París (4)
+1868 - La Primera Internacional, Bakunin y la Comuna de París (20)
   - Piotr Kropotkin - La Comuna de París
   - Mijaíl Bakunin Louise Michel y Piotr Kropotkin - La comuna de París (antología)
   - Juan J. Alcalde - Bakunin-Netchaiev. El Catecismo Revolucionario
   - Ángel J. Cappelletti - Bakunin y la guerra franco-prusiana
+  - Max Nettlau - Mijaíl Bakunin, la Internacional y la Alianza en España (1868-1873)
+  - Luce Fabbri - Garibaldi y el socialismo de su tiempo
+  - Oyon, Jose Luis Y Serra, Marta - Las casas de Reclus. Hacia la fusión naturaleza-ciudad, 1830-1871
+  - Editorial Publicaciones de la Escuela Moderna - La Internacional defendida por Salmeron y Pi y Margall
+  - Edouard Dolleans - La Comuna de Paris (2009)
+  - Eduardo de Guzmán - Nacimiento, vicisitudes y muerte de la Primera República española
+  - Franco Venturi - El populismo ruso (Vol. I)
+  - Gloria Espigado - Mujeres radicales. Utopicas, republicanas e internacionalistas en Espaa (1848-1874)
+  - Heinrich Koechlin - Ideologías y tendencias en la Comuna de París (2013)
+  - Joel Delhom - Octubre de 1871. Debate parlamentario sobre la Internacional en España
+  - Juan Gómez Casas - Glosario (Anselmo Lorenzo -El Proletariado Militante)
+  - Prosper Olivier Lissagaray - Historia de la Comuna de París (Vol. I) (1971)
+  - Prosper Olivier Lissagaray - Historia de la Comuna de París (Vol. II) (1971)
+  - Tomas Cano Ruiz - El cantón de Cartagena (2012)
+  - Varios Autores - La comuna de Paris (2012)
+  - Víctor García - La Internacional obrera
 
-1874 - Clandestinidad, Mano Negra y los orígenes del movimiento obrero andaluz (14)
+1874 - Clandestinidad, Mano Negra y los orígenes del movimiento obrero andaluz (27)
   - Clara E. Lida - La Mano Negra. Anarquismo agrario en Andalucía
   - Clara E. Lida - Los discursos de la clandestinidad en el anarquismo del XIX
   - Clara E. Lida - Organización, cultura y prácticas políticas del anarquismo español en la clandestinidad, 1873-1881
@@ -27,15 +68,38 @@
   - Lida, Clara E. - Estudio preliminar a Max Nettlau - Miguel Bakunin, La Internacional y la Alianza en España (1868-1873)
   - Francisco Madrid Santos y Claudio Venza - Antología Documental del anarquismo español I. Organización y revolución. De la Primera Internacional al Proceso de Montjuïc (1868-1896)
   - Anselmo Lorenzo - El proletariado militante
+  - Clara E. Lida - Discurso e imaginario en la cultura anarquista
+  - Arnold Roller - Paginas de la historia del proletariado español (1848-1907) (1971)
+  - Assemblea del Raval - La insurrección de una fábrica. El motín de 1880 en la fábrica Morell y Murillo (2019)
+  - Francisco de Paula Fernández Gomez - Anarcocomunismo en España (1882-1896). El grupo de Gracia y sus relaciones internacionales
+  - Francisco de Paula Fernández Gomez - XIX. El siglo de las insurrecciones
+  - Ignasi Bo I Singla - Montjuich. Notas y recuerdos hstricos
+  - José Luis Gutiérrez Molina - La construcción de un mito. La Mano Negra
+  - Juan Díaz del Moral - Historia de las agitaciones campesinas andaluzas
+  - Paco Zugasti - La clase obrera hace historia. Raices históricas (1840-1910) (2008)
+  - Ricardo Mella Cea - La sinrazn de un juicio
+  - Ricardo Mella Cea - Proceso sumarísimo
+  - Segundo Certamen Socialista 1890 - Segundo Certamen Socialista (1890)
+  - Álvaro Girón Sierra - El darwinismo republicano y librepensador de un joven naturalista. Odon de Buen y del Cos y las Dominicales del Librepensamiento (1883-1900)
 
-1880 - La Propaganda por el Hecho y el Magnicidio en Europa (5)
+1880 - La Propaganda por el Hecho y el Magnicidio en Europa (15)
   - Juan Avilés - El terrorismo anarquista como propaganda por el hecho
   - Rodolfo Montes de Oca - La conjura de los indomables
   - Círculo Anárquico Villa Española (Montevideo) - La Epidemia Terrorista. Declaraciones de Ravachol y de Émile Henry
   - Fernando Barbero Carrasco - Anarquistas vengadores
   - Varios autores - Chernoe Znamia (anarquistas rusos, 1900s)
+  - Max Nettlau - Desde Austria (cartas a Les Tempes Nouveaux de Paros)
+  - Circulo Anarquico Villa Española - La Salute e in Voi. Luigi Galleani y los anarquistas de acción en los Estados Unidos
+  - Eduardo Pons Prades - La banda de Bonnot
+  - Errico Malatesta - Los Bandidos Trágicos
+  - Francisco de Paula Fernández Gomez - Oleadas terroristas. Una critica a la teoria de las oleadas terroristas
+  - Franco Venturi - El populismo ruso (Vol. II)
+  - Stepniak (Sergei Michailovitch Kravchinski) - La Rusia subterranea (2016)
+  - Stepniak (Sergei Michailovitch Kravchinski) - La Rusia terrorista. Perfiles y bocetos revolucionarios
+  - Textos Anónimos y de Autoría Colectiva - El sabor de la sangre en la boca. revolucionarios, anarquistas, rebeldes y nihilistas en la Rusia del S.XIX (2017)
+  - Ángel Herrerín López - 1893. Año clave del terrorismo en la España de la Restauración
 
-1880 - Auge del Anarquismo en el Cono Sur: Argentina y Uruguay (32)
+1880 - Auge del Anarquismo en el Cono Sur: Argentina y Uruguay (53)
   - Diego Abad de Santillán - El movimiento anarquista en la Argentina (Desde sus inicios hasta 1910)
   - Osvaldo Bayer - Los anarquistas expropiadores
   - Osvaldo Bayer - La Patagonia Rebelde
@@ -68,8 +132,29 @@
   - Gonzalo Zaragoza - Anarquismo argentino (1876-1902)
   - Iaacov Oved - Influencia del anarquismo español sobre la formación del anarquismo argentino
   - Vladimiro Muñoz - El anarquismo en el Uruguay hasta 1900
+  - Rodrigo Vescovi - Tras el antifaz. La resistencia
+  - Carlos M Rama - El movimiento obrero y social en América Latina. Primeras experiencias (1830-1917)
+  - Catalogo de Folletos Anarquistas Argentinos (1890 - 1940)
+  - David Viñas - Literatura argentina y politica (Vol. II) De los jacobinos porteños a La bohemia anarquista
+  - Edgardo J Bilsky - La Semana Trágica (1984)
+  - Federación Libertaria Argentina FLA - Catalogo de publicaciones obreras argentinas
+  - Glen S. Close - La imprenta enterrada. Baroja, Arlt y el imaginario anarquista (2000)
+  - Javier Benyo - La Alianza Obrera Spartacus - (2005)
+  - Juan Suriano - Los festejos del primer Centenario de la revolución de Mayo y la exclusión del movimiento obrero
+  - Laura Fernández Cordero - Anarquismo, género y sexualidad en América del sur. Breve ensayo bibliográfico
+  - Laura Fernández Cordero - Buenos Aires de la utopia
+  - Laura Fernández Cordero - Izquierdas y feminismos, hitos contemporáneos
+  - Lucas Domínguez Rubio - El anarquismo argentino. Bibliografía, hemerografía y fondos de archivo (2018)
+  - Pascual Muñoz - Apuntes para una historia del Sindicato Unico del Automovil (1903-1965)
+  - Pascual Muñoz - Atentado al arzobispo de Montevideo (18 de junio de 1922)
+  - Pascual Muñoz - Cultura obrera en el interior del Uruguay (Salto, Paysandu y Rocha, 1918-1925) (2015)
+  - Pascual Muñoz - El 1º de Mayo en Uruguay (1890-1925)
+  - Pascual Muñoz - El ultimo 1º de Mayo bajo el capitalismo
+  - Pascual Muñoz - Obreros o Carneros. De la huelga maritima a la huelga general por la libertad de Ángel Gonzalez
+  - Serafin Fernández - Recuerdos de la vida pampera (Recuerdos de la semana tragica de enero de 1919) (1962)
+  - Sociales Catalogo de Publicaciones políticas y Culturales Anarquistas (1890 - 1945)
 
-1886 - Los Mártires de Chicago y el nacimiento del 1º de Mayo (9)
+1886 - Los Mártires de Chicago y el nacimiento del 1º de Mayo (22)
   - Anónimo - El origen del 1º de Mayo
   - Agrupacion Tiempos Nuevos - 1º de mayo. Su origen y significado
   - José Antonio Gutiérrez D. (comp.) - Los orígenes libertarios del Primero de Mayo: de Chicago a América Latina (1886-1930)
@@ -79,8 +164,21 @@
   - Federica et al. Montseny - Breve historia del movimiento anarquista en EE.UU
   - Augustin Souchy - El martirio de los anarquistas de Chicago
   - Fred Thompson y Jon Bekken - La IWW. Sus cien primeros años
+  - Eduardo de Guzmán - Significacción del 1. de mayo. La huelga general de 1886 en Chicago
+  - IWW Industrial Workers Of The World - Solidaridad siempre. Una historia oral de los IWW
+  - Joyce L Kornbluh (ed.) - Voces rebeldes
+  - Maurice Dommanget et al. - Historia del primero de mayo (2011)
+  - Maurice Dommanget - Historia del 1 de mayo (1976)
+  - Melvyn Dubofsky - Lo seremos todo
+  - Pietro Gori - La leyenda del Primero de mayo
+  - Ricardo Mella Cea - El 1 de Mayo (1893)
+  - Ricardo Mella Cea - El crimen de Chicago (1890)
+  - Salvatore Salerno - Noviembre rojo, noviembre negro
+  - Varios Autores - Wobblies del mundo
+  - Miquel Izard - Un ámbito libertario llamado Javarí
+  - Eduardo de Guzmán - Little Big Horn en su centenario. La ultima victoria de los indios americanos
 
-1890 - Movimiento Obrero, Masacres y Acción Directa en Chile (26)
+1890 - Movimiento Obrero, Masacres y Acción Directa en Chile (32)
   - Víctor Muñoz Cortés - Sin Dios ni patrones. Historia del anarquismo en la región chilena (1890-1990)
   - Darío Covarrubias Bañados - Destruir para construir: violencia y acción directa en la corriente anarquista chilena (1890-1914)
   - Igor Goicovic Donoso - La propaganda por los hechos en el movimiento anarquista chileno (1890-1910)
@@ -107,8 +205,14 @@
   - Víctor Muñoz Cortés - Anarquismo en Chile. Una síntesis histórica desde 1890 hasta nuestros días (2)
   - Víctor Muñoz Cortés - Cuando las bombas son de papel. Los trabajadores, el Estado y la propaganda anarquista impresa (Región chilena, 1915-1927)
   - Víctor Muñoz Cortés - El anarquismo y los orígenes del movimiento sindical campesino en Osorno (1930-1940)
+  - Rojas, Manuel Y Gonzalez Vera, Jose Santos - Letras anarquistas. Articulos politicos y otros escritos ineditos
+  - Manuel Lagos Mieres - Los Subversivos. Las maquinaciones del poder, república de Chile, 1920 (2012)
+  - Mario Araya Saavedra - Los wobblies criollos (2008)
+  - Sergio Grez Toso - De la Regeneracin del pueblo a la huelga general (1998)
+  - Sergio Grez Toso - La cuestin social en Chile. Ideas y debates precursores (1804 - 1902)
+  - Sergio Grez Toso - Teatro acrata o teatro obrero Chile, 1895-1927
 
-1890 - El Movimiento Libertario en Brasil y Cuba (12)
+1890 - El Movimiento Libertario en Brasil y Cuba (16)
   - Ruy Mauro Marini - El movimiento obrero brasileño
   - Frank Fernández - El anarquismo en Cuba
   - Cristina Guzzo - Libertarias en América del Sur. De la A a la Z
@@ -121,16 +225,25 @@
   - Daniel Barret - La leyenda negra de los anarquistas cubanos
   - Revista Cuba Nuestra - Los anarquistas cubanos a fines del siglo XIX. Los libertarios y la guerra del 95
   - Eduardo Daniel Rodríguez Trejo - Los anarquistas y la Revolución Cubana: entre el júbilo y el desencanto
+  - Abelardo Iglesias - Revolución y Dictadura en Cuba (1963)
+  - Augustin Souchy - Testimonios de la revolución cubana (1960)
+  - Lily Litvak - La cultura obrera en Cuba. La lectura colectiva en los talleres de tabaquería
+  - Sam Dolgoff - La revolución cubana. Un enfoque crítico (1978)
 
-1890 - Anarquismo Anticolonial en Asia y Redes Globales (6)
+1890 - Anarquismo Anticolonial en Asia, África y Oriente Medio (11)
   - Emilio Crisi - Revolución anarquista en Corea: la Comuna de Shinmin (1929-1932)
   - Jason Adams - Anarquismos no occidentales
   - Sam Mbah e I. E. Igariwey - Anarquismo africano
   - Yago Mellado López - El anarquismo en el espejo judío
   - Benedict Anderson - Bajo tres banderas. Anarquismo e imaginación anticolonial
-  - VV. AA. - Una realización colectivista en Palestina
+  - Varios autores - Una realización colectivista en Palestina
+  - Emilio Crisi - Revolución anarquista en Manchuria (1929-1932)
+  - Albert Meltzer - Historia del movimiento anarquista en China (2)
+  - Robert A. Scalapino y George T. Yu - El movimiento anarquista en China
+  - Juan Suriano - El anarquismo
+  - Varios autores - El anarquismo en China
 
-1898 - Anarcosindicalismo en la Región Andina: Perú, Bolivia y Colombia (16)
+1898 - Anarcosindicalismo en la Región Andina: Perú, Bolivia y Colombia (22)
   - Piedad Pareja - Anarquismo y sindicalismo en el Perú (1904-1929)
   - Federación Anarquista del Perú - El anarcosindicalismo en el Perú
   - Steven J. Hirsch - El anarcosindicalismo en el sur andino peruano: Arequipa, Mollendo, Cusco, Puno
@@ -145,10 +258,16 @@
   - Piedad Pareja - El anarquismo en el Perú y el problema indígena
   - Luis Tejada - La cuestión del pan. El anarcosindicalismo en el Perú
   - Luis Tejada y César Lévano (comps.) - La utopía libertaria en el Perú
-  - VV. AA. - Anarquismo y anarcosindicalismo en el Perú. Testimonios
+  - Varios autores - Anarquismo y anarcosindicalismo en el Perú. Testimonios
   - Zulema Lehm A. y Silvia Rivera C. - Los artesanos libertarios y la ética del trabajo
+  - Federación Anarquista del Perú - El anarquismo en el Perú (1961)
+  - Joel Delhom - La invisible muerte del proletario. Un análisis de la prensa peruana (1904-1925)
+  - Piedad Pareja - Anarquismo y sindicalismo en el Perú (1978)
+  - Ricardo Martinez de la Torre - El movimiento obrero peruano 1918-1919
+  - Ricardo Melgar Bao - El movimiento obrero latinoamericano. Tomo I (1990)
+  - Ricardo Melgar Bao - El movimiento obrero latinoamericano. Tomo II (1990)
 
-1900 - La Revolución Mexicana y el Magonismo (13)
+1900 - La Revolución Mexicana y el Magonismo (26)
   - Diego Abad de Santillán - Historia de la Revolucion Mexicana
   - D. L. Nevin - Revolución en Baja California, México (1911)
   - Enrique Aldrete - Baja California heroica
@@ -162,13 +281,32 @@
   - John M. Hart - Los orígenes anarquistas y los valores políticos de la clase trabajadora mexicana y los movimientos campesinos
   - Salvador Hernández Padilla - El Magonismo. Historia de una pasión libertaria 1900-1922
   - Clara E. e Illades Carlos Lida - El anarquismo europeo y sus primeras influencias en México después de la Comuna de París. 1871-1881
+  - Benjamín Maldonado Alvarado - Magonismo y vida comunal mesoamericana. A 90 años de la muerte de Ricardo Flores Magón (2012)
+  - Candido Donato Padua - Movimientos revolucionarios en Veracruz (1941)
+  - David Doillon - El magonismo y la Revolución mexicana en la prensa acrata y radical francfona (2013)
+  - Diego Flores Magón - Antologia de testimonios de precursores de la revolución Mexicana
+  - Luis Araiza - Historia del movimiento obrero en México Vol. I) (1975)
+  - Luis Araiza - Historia del movimiento obrero en México Vol. II) (1975)
+  - Pedro García Guirao - Mexico y España. Reflexiones en torno a la Casa del Obrero Mundial. Entrevista a Anna Ribero Carbo
+  - Ricardo Flores Magón y Librado Rivera - Manifiesto del 16 de marzo de 1918
+  - Ricardo Flores Magón - 1914. La intervención americana en Mexico
+  - Ricardo Flores Magón - La revolución mexicana (1970)
+  - Rubén Trejo - Magonismo. Utopia y revolución (1910-1913) (2010)
+  - Teodoro Hernández - Las tinajas de Ulua (1943)
+  - Teodoro Hernández - Los precursores de la revolución (1940)
 
-1901 - La Escuela Moderna y la Semana Trágica de Barcelona (5)
+1901 - La Escuela Moderna y la Semana Trágica de Barcelona (11)
   - José Comaposada - La Revolución de Barcelona (Semana Trágica, 1909)
   - José Comaposada - La Revolución de Cataluña
   - Guillermo Fiscer Lamelas - Pedagogía libertaria española a inicios del siglo XX
   - CGT (Federación de Enseñanza) - Las culturas de la libertad en el anarquismo ibérico
-  - VV. AA. - Entre la revolución y la tragedia. Fotografías, documentos y miradas sobre la Semana Trágica
+  - Varios autores - Entre la revolución y la tragedia. Fotografías, documentos y miradas sobre la Semana Trágica
+  - Antoni Dalmau - La oleada de violencia en la Barcelona de 1904-1908
+  - CNT Confederación Nacional del Trabajo - Hoja volante de la Huelga de los Vapores Pareja
+  - Eduard Masjuan Bracons - Los orígenes del neomalthusianismo ibérico
+  - Ignacio Clemente Soriano Jiménez - Semblanza de Publicaciones de La Escuela Moderna (1901-1937)
+  - Joel Delhom - La primera gran huelga de los constructores de calzado de Barcelona en 1903
+  - Leopoldo Bonafulla - Barcelona 1909. La revolución de julio (2016)
 
 1910 - El Incidente de Alta Traición y el Anarquismo en Japón (7)
   - Stefan Anarkowic - Contra el Dios Emperador. Juicios de la traición anarquista en Japón
@@ -179,24 +317,15 @@
   - Víctor García - El anarquismo en Japón
   - Philippe Pelletier - El anarco-sindicalismo en Japón desde 1911 hasta 1934
 
-1910 - Anarquismo español en el primer tercio del siglo XX: sindicalismo, cultura y pensamiento (65)
+1910 - Cultura, pensamiento y Minorías (60)
   - Albert Balcells - El arraigo del anarquismo en Cataluña
   - Pere Gabriel - Historiografía reciente sobre el anarquismo y el sindicalismo en España (1870-1923)
-  - Pere Gabriel - Propagandistas confederales entre el sindicato y el anarquismo. La construcción barcelonesa de la CNT en Cataluña, Aragón, País Valenciano y Baleares
-  - Kike García Francés - Diario de una ciudad libertaria. Zaragoza, 1871-1936
-  - Xavier Cuadrat - Socialismo y anarquismo en Cataluña (1899-1911). Los orígenes de la CNT
-  - Marciano Cárdaba Carrascal - El auge anarcosindicalista. El congreso de Sants y los Sindicatos Únicos
   - Chris Ealham - La calle como memoria y conflicto (Barcelona, 1914-1923)
   - José Luis Oyón - La ruptura de la ciudad obrera y popular. Espacio urbano, inmigración y anarquismo en la Barcelona de entreguerras (1914-1936)
   - Chris Ealham - La lucha por la calle. La venta ambulante, la cultura de protesta y la represión en Barcelona (c. 1930-36)
   - Chris Ealham y Beatriz Ansón - Una geografía imaginada. Ideología, espacio urbano y protesta en la creación del Barrio chino de Barcelona, c. 1835-1936
-  - Chris Ealham - De la cima al abismo. Las contradicciones entre el individualismo y el colectivismo en el anarquismo español
   - Antoni Dalmau - Las mujeres anarquistas y la represión de fines del siglo XIX en Barcelona (1893-1900)
   - Javier Paniagua Fuentes - La ideología económica de los anarquistas en Cataluña y el País Valenciano
-  - Juan Avilés Farré y Ángel Herrerín López - Propaganda por el hecho y propaganda por la represión. Anarquismo y violencia en España a fines del XIX (2)
-  - Francisco Madrid Santos - Racionalismo pedagógico y movimiento obrero en España. Ferrer Guardia y La Huelga General
-  - Xavier Diez i Rodríguez - La insumisión voluntaria. El anarquismo individualista español durante la Dictadura y la Segunda República (1923-1938)
-  - Chris Ealham - De la unidad antifascista a la desunión libertaria. Los comités superiores del movimiento libertario contra los quijotes anarquistas en el marco del Frente Popular
   - Eduard Masjuan Bracons - El pensamiento demográfico anarquista. Fecundidad y emigración a América Latina (1900-1914)
   - Eduard Masjuan Bracons - Procreación consciente y discurso ambientalista. Anarquismo y neomalthusianismo en España e Italia, 1900-1936
   - Álvaro Girón Sierra - Los anarquistas españoles y la criminología de Cesare Lombroso (1890-1914)
@@ -206,13 +335,6 @@
   - Álvaro Girón Sierra - Hacer tabla rasa de la historia. La analogía entre herencia fisiológica y memoria en el anarquismo español (1870-1914)
   - Álvaro Girón Sierra - La economía moral de la naturaleza. Darwinismo y lucha por la existencia en el anarquismo español (1882-1914)
   - Álvaro Girón Sierra - Metáforas finiseculares del declive biológico. Degeneración y evolución en el anarquismo español (1872-1914)
-  - Max Nettlau - Impresiones sobre el socialismo en España
-  - VV. AA. - El anarquismo en Burgos
-  - Ángel Olmedo Alonso - Algunas notas sobre el anarquismo en Extremadura. Desde sus Inicios hasta el establecimiento de la II República
-  - Ángel Olmedo Alonso - El anarquismo extremeño frente al poder. Estudio de un periódico libertario. El Amigo del Pueblo 1930-1933
-  - Antoni Dalmau - El arraigo territorial de la Idea. El caso de los anarquistas de Igualada
-  - Ángel Pestaña y Salvador Seguí - Sindicalismo Libertario en Cataluña
-  - Ángel Pestaña - Por qué se constituyó el Partido Sindicalista
   - Josep María Roselló - Viva la naturaleza. Escritos libertarios contra la civilización, el progreso y la ciencia (1894-1930)
   - Josep María Roselló - El naturismo libertario en la Península Ibérica (1890-1939)
   - Alejandro Lora Medina - El amor libre y las relaciones sentimentales en el anarquismo español (1930-1939)
@@ -222,6 +344,53 @@
   - Alejandro Lora Medina - La vivencia del ideal anarquista en la España de los años treinta
   - Alejandro Lora Medina - Sexualidad, desnudismo y moralidad en el anarquismo español de los años treinta
   - Gloria Espigado - Las mujeres en el anarquismo español (1869-1939)
+  - Alejandro Lora Medina - El poder de la revolución. Percepción y representación en el anarquismo español de los años treinta (2016)
+  - Ignacio Clemente Soriano Jiménez - Semblanza de Ediciones Pastor
+  - Ignacio Clemente Soriano Jiménez - Semblanza de Editorial Estudios
+  - Ignacio Clemente Soriano Jiménez - Semblanza de Editorial Vertice
+  - Ignacio Clemente Soriano Jiménez - Semblanza de La Novela Ideal
+  - Ignacio Clemente Soriano Jiménez - Semblanza de La Revista Blanca
+  - Lily Litvak - La Mirada Roja. Estética y arte del anarquismo espanol (1880-1913) (1988)
+  - Lily Litvak - Musa Libertaria. Arte, literatura y vida cultural del anarquismo espanol (1880-1913) (1981)
+  - José Luis Oyon y Golda - Pongratz, Katrhin - Saberes transatlanticos en la historia de la ciencia Barcelona-Buenos Aires. Notas sobre historia urbana relacional
+  - José Luis Oyon y Marta Serra - Historia urbana. El espacio no es inocente
+  - José Luis Oyon - Historia urbana e historia obrera. Reflexiones sobre la vida obrera y su inscripción en el espacio urbano, 1900-1950
+  - José Luis Oyon - Mundo obrero, inmigración y radicalismo cenetista en la Barcelona de la decada de 1930
+  - José Luis Oyon - Obreros en la ciudad. Lineas de un proyecto de investigación en historia urbana
+  - Enric Olive I Serret - La pedagogía obrerista de la imagen
+  - Federico Urales - La evolución de la filosofia en España (1977)
+  - Federico Urales - La evolución de la filosofia en España (Tomo I) (1934)
+  - Federico Urales - La evolución de la filosofia en España (Tomo II) (1934)
+  - Folletos Catalogo de Publicaciones y Documentos Anarquistas Espanoles (1890 - 1939)
+  - Francisco Madrid Santos y Ignacio C. Soriano - Antología Documental del anarquismo espaol. Bibliografía del anarquismo en Espaa, 1868-1939
+  - Francisco Madrid Santos - Solidaridad Obrera y el periodismo de raíz acrata (2007)
+  - Xavier Diez i Rodríguez - L'anarquisme, fet diferencial català. Influència i llegat de l'anarquisme en la història i la societat catalana contemporània
+  - Xavier Diez i Rodríguez - La historiografía anarquista en Cataluña y el País Valenciano. Una larga tradición entre el desconocimiento y la vitalidad
+  - Javier Paniagua Fuentes - Otra vuelta de tuerca. Las interpretaciones del arraigo del anarquismo en España. Sigue la polémica
+  - Javier Paniagua Fuentes - Una gran pregunta y varias respuestas. El anarquismo español. Desde la política a la historiografía
+  - Gerald Brenan - El laberinto espanol (Antecedentes sociales y políticos de la guerra civil) (1962)
+  - Cuadernos de Ruedo Ibérico - El Movimiento Libertario Español. Pasado, presente y futuro
+  - Joan Zambrana - El movimiento obrero catalan en el periodico Solidaridad Obrera (1907-1919)
+  - Assemblea del Raval - El Raval. Epicentro del movimiento obrero barcelonés (2018)
+  - Chris Ealham - De la cima al abismo. Las contradicciones entre el individualismo y el colectivismo en el anarquismo español
+  - Joël Delhom - Dos décadas de publicaciones sobre el anarquismo español. 1990-2011
+  - Julián Vadillo Muñoz - El movimiento obrero en Alcalá de Henares (1868-1939)
+  - Ángel Olmedo Alonso - Algunas notas sobre el anarquismo en Extremadura. Desde sus Inicios hasta el establecimiento de la II República
+  - Varios autores - El anarquismo en Burgos
+  - Max Nettlau - Impresiones sobre el socialismo en España
+
+1910 - Sindicalismo confederal y la FAI (43)
+  - Pere Gabriel - Propagandistas confederales entre el sindicato y el anarquismo. La construcción barcelonesa de la CNT en Cataluña, Aragón, País Valenciano y Baleares
+  - Kike García Francés - Diario de una ciudad libertaria. Zaragoza, 1871-1936
+  - Xavier Cuadrat - Socialismo y anarquismo en Cataluña (1899-1911). Los orígenes de la CNT
+  - Marciano Cárdaba Carrascal - El auge anarcosindicalista. El congreso de Sants y los Sindicatos Únicos
+  - Juan Avilés Farré y Ángel Herrerín López - Propaganda por el hecho y propaganda por la represión. Anarquismo y violencia en España a fines del XIX (2)
+  - Francisco Madrid Santos - Racionalismo pedagógico y movimiento obrero en España. Ferrer Guardia y La Huelga General
+  - Chris Ealham - De la unidad antifascista a la desunión libertaria. Los comités superiores del movimiento libertario contra los quijotes anarquistas en el marco del Frente Popular
+  - Ángel Olmedo Alonso - El anarquismo extremeño frente al poder. Estudio de un periódico libertario. El Amigo del Pueblo 1930-1933
+  - Antoni Dalmau - El arraigo territorial de la Idea. El caso de los anarquistas de Igualada
+  - Ángel Pestaña y Salvador Seguí - Sindicalismo Libertario en Cataluña
+  - Ángel Pestaña - Por qué se constituyó el Partido Sindicalista
   - Ángel Samblancat - La cuerda de deportados
   - Federica Montseny - Impresiones de un viaje por Galicia
   - Francisco Madrid Santos - La prensa anarquista y anarcosindicalista desde la I Internacional hasta el final de la Guerra Civil
@@ -233,26 +402,29 @@
   - Ramón J. Sender - La F. A. I., Macià, la revolución y la C. N. T
   - Joan Zambrana - Federaciones Regionales Anarquistas en España (1912-1919)
   - Joan Zambrana - El anarquismo organizado en los orígenes de la CNT. Tierra y Libertad 1910-1919
-  - Julián Vadillo Muñoz - El movimiento obrero en Alcalá de Henares (1868-1939)
   - Joël Delhom - Los obreros zapateros de Barcelona. Una historia sindical (Vol. I)
   - Beltrán Roca Martínez y Luis Baños Gutiérrez - Cultura sindical y movimiento obrero en Andalucía
-  - Joël Delhom - Dos décadas de publicaciones sobre el anarquismo español. 1990-2011
-  - Xavier Diez i Rodríguez - L'anarquisme, fet diferencial català. Influència i llegat de l'anarquisme en la història i la societat catalana contemporània
-  - Xavier Diez i Rodríguez - La historiografía anarquista en Cataluña y el País Valenciano. Una larga tradición entre el desconocimiento y la vitalidad
-  - Javier Paniagua Fuentes - Otra vuelta de tuerca. Las interpretaciones del arraigo del anarquismo en España. Sigue la polémica
-  - Javier Paniagua Fuentes - Una gran pregunta y varias respuestas. El anarquismo español. Desde la política a la historiografía
-  - Cuadernos de Ruedo Ibérico - El Movimiento Libertario Español. Pasado, presente y futuro
   - José Luis Gutiérrez Molina - Conferencia. El anarquismo en Andalucía hasta hoy
   - Julián Vadillo Muñoz - Guerra a la guerra. El movimiento obrero frente la guerra (1898-1918)
   - Ricardo Sanz García - Los hijos del trabajo. El sindicalismo español antes de la Guerra Civil
+  - Anselmo Lorenzo - Prólogo de Camille Pert En Anarquía
+  - Anselmo Lorenzo - Prólogo de Jean Grave Tierra Libre
+  - Cristina Escrivá Moscardó - El Internado Durruti
+  - Anselmo Lorenzo - Prólogo de Kropotkin La Gran Revolución
+  - Anselmo Lorenzo - Medio siglo de parlamentarismo
+  - CNT Confederacción Nacional del Trabajo - 1 CONGRESO CONSTITUCION CNT 1910
+  - CNT Confederación Nacional del Trabajo - Comicios historicos de la CNT. Congreso de constitucción de la Confeder hustle Nacional del Trabajo (1959)
+  - Ealham - El Solidario, n 14. Con dos textos de Chris Ealham
+  - Eduard Masjuan Bracons - El neomalthusianismo ibérico e italiano. Un precedente de la ecología humana contemporánea
+  - Eduard Masjuan Bracons - La ciudad jardín o ecológica contra la ciudad lineal. Una controversia histórica
+  - Eduard Masjuan Bracons - Procreación consciente y emigración. El ejemplo del neomalthusianismo ibérico en América Latina (1900-1914)
+  - Eduardo de Guzmán - Los cinco congresos historicos de la CNT
+  - Joan Zambrana - La CNT y la Asamblea de Valencia (Mayo 1916)
+  - Pedro Flores Martinez - Las luchas sociales en el Alto Llobregat y Cardoner (Contribución a la historia de Manresa y comarca) (1982)
+  - Pedro García Guirao - tradición contra novedad o las antinomias de la España Liberal
+  - Valeriano Orobon Fernández - La CNT y los comunistas espanoles
 
-1911 - El Anarquismo en China: de la Escuela del Sol a la resistencia (4)
-  - Varios autores - El anarquismo en China
-  - Emilio Crisi - Revolución anarquista en Manchuria (1929-1932)
-  - Albert Meltzer - Historia del movimiento anarquista en China (2)
-  - Robert A. Scalapino y George T. Yu - El movimiento anarquista en China
-
-1917 - La Revolución Rusa, la Makhnovtchina y Kronstadt (24)
+1917 - La Revolución Rusa, la Makhnovtchina y Kronstadt (39)
   - Volin - La revolución desconocida
   - François Hombourger - Los anarquistas en la Revolución Rusa: la Makhnovtchina (Ucrania 1919)
   - Néstor Makhno - La Revolución Rusa en Ucrania (1918-1921)
@@ -264,7 +436,7 @@
   - Néstor Majnó - El Gran Octubre en Ucrania
   - Paul Avrich - Los anarquistas rusos
   - Alexander Berkman - El mito bolchevique
-  - Berkman, Alexander - Kronstadt. Petritchenko, Stepan - La verdad sobre Kronstadt
+  - Varios autores - La verdad sobre Kronstadt
   - Camillo Berneri - Escritos V (Revolución Rusa)
   - José Luis García Rúa - Mirando hacia atrás sin ira (una mirada libertaria al proceso soviético)
   - Emma Goldman - Apreciaciones sobre la revolución rusa
@@ -277,8 +449,23 @@
   - Ángel Pestaña - Informe de mi estancia en la URSS (Documento para la historia obrera)
   - Ángel Pestaña - Setenta días en Rusia. Lo que yo vi
   - Anatoly Viktorovich Dubovik - Los anarquistas rusos en el movimiento obrero a principios del siglo XX
+  - Alexander Berkman - Kronstadt
+  - Arthur Lehning - Marxismo y anarquismo en la revolución rusa
+  - Eduardo Pons Prades - El asalto al Palacio de Invierno
+  - Emma Goldman - Dos aos en Rusia
+  - Emma Goldman - El primero de mayo en Petrogrado
+  - Emma Goldman - Losovski levanta el teln
+  - Frank Mintz - Una Majnovschina siberiana
+  - Gaston Leval - Lenin, sepulturero de la revolución
+  - Hector Schujman - La revolución desconocida. Ukrania 1917-1921, la gesta Makhnovista (2000)
+  - Ida Mett - La comuna de Kronstadt (2006)
+  - Manuel Buenacasa - La Rusia roja. Cómo tomaron el poder los bolcheviques
+  - Piotr Archinov - Los dos Octubres (1927) (2009)
+  - Ugo Fedeli - El ejército insurreccional makhnovista (1972)
+  - Vicente (Combina) Perez - Como sali de Rusia (1933)
+  - Vicente (Combina) Perez - Un militante de la CNT en Rusia (1933)
 
-1917 - Pistolerismo, Dictadura de Primo de Rivera y Fundación de la FAI (14)
+1917 - Pistolerismo, Dictadura de Primo de Rivera y Fundación de la FAI (32)
   - Murray Bookchin - Los anarquistas españoles. Los años heroicos (1868-1936)
   - Diego Abad de Santillán - Historia del movimiento obrero español I
   - Teresa Abelló Güell - El movimiento obrero en Espana, siglos XIX y XX
@@ -293,21 +480,63 @@
   - Juan J. Alcalde - Los comités de defensa confederales
   - Julián Vadillo Muñoz - El anarquismo en el Madrid de la Segunda República. Perfil social, estrategias y tácticas
   - Julián Vadillo Muñoz - El anarquismo madrileño en el contexto político de la Segunda República
+  - Alfonso Martinez Rizo - Pistolerismo
+  - Alfredo Velasco Nunez - El cenit de la CNT en Vizcaya en torno a 1920
+  - CNT Confederacción Nacional del Trabajo - 2 CONGRESO CNT 1919
+  - CNT Confederacción Nacional del Trabajo - Comicios historicos de la CNT (Memoria del Congreso de Barcelona de 1918)
+  - CNT - Paginas de Sangre (1920-1921)
+  - Comite Pro Presos - Ideas y tragedias (1923)
+  - Eduardo de Guzmán - La muerte del general Primo de Rivera
+  - Eduardo de Guzmán - Los ultimos dias de Pablo Iglesias
+  - Francisco de Paula Fernández Gomez - La Barcelona de los exiliados, antipatriotas, desertores, profugos y solidarios
+  - Jacinto Martin - La huelga general de 1917 (1971)
+  - Javier Paniagua Fuentes - De La Dictadura a La Guerra Civil (1923-1939)
+  - Manuel Buenacasa - El movimiento obrero espanol. Historia y crítica (1886-1926) (1966)
+  - Mauro Bajatierra Morán - Desde las barricadas. Una semana de revolución en España (1918)
+  - Mauro Bajatierra Morán - Quienes mataron a Dato (1931)
+  - Pere Foix - Los archivos del terrorismo blanco. El fichero Lasarte
+  - Textos Historicos de la CNT Independencia y 19 Autonomia (Editorial Solidaridad Obrera - 11-1918)
+  - Ángel Pestaña - El terrorismo en Barcelona (Vol. I) (1920)
+  - Ángel Pestaña - La caida del dictador
 
-1919 - Resistencia Libertaria y Guerrilla en los Balcanes y Europa del Este: Polonia y Bulgaria (4)
+1919 - Resistencia Libertaria y Guerrilla en los Balcanes y Europa del Este: Polonia y Bulgaria (5)
   - Michael Schmidt - El anarquismo búlgaro en armas
   - Distro Ingobernables - Historia del anarquismo polaco
-  - VV. AA. - Anarquistas de Bialystok 1903-1908
+  - Varios autores - Anarquistas de Bialystok 1903-1908
   - Colectivo anarquista de Macedonia - La Banda de Chernopeev
+  - Els Van Daele - El grupo De Moker (2018)
 
-1922 - El Anarquismo y el Fascismo en Italia (5)
+1922 - El Anarquismo y el Fascismo en Italia (9)
   - Anónimo - Años rojos, años negros. La resistencia anarquista contra el fascismo en Italia
   - Alfredo M. Bonanno - No podréis pararnos. La lucha anarquista en Italia
   - Luce Fabbri - Camisas Negras
   - Luce Fabbri - El fascismo, definición e Historia
   - Errico Malatesta - Sobre el fascismo al poder (1922, 1923)
+  - Errico Malatesta - Mussolini al poder
+  - Franco Schirone - La USI. 1923-1945
+  - Ugo Fedeli - Historia de la USI. 1912-1922
+  - Daniel Guerin - La peste parda
 
-1935 - Panoramas Globales, Historias Generales y Cronologías (30)
+1931 - La Segunda República, Casas Viejas y Asturias (17)
+  - Federica Montseny - Heroínas
+  - Textos Anónimos y de Autoría Colectiva - A propósito de la rebelión en Asturias. Octubre 1934
+  - Agustín García Calvo - Casas Viejas. No convertir la rebelión en cultura
+  - CNT Confederación Nacional del Trabajo - La verdad sobre la tragedia de Casas Viejas
+  - CNT Confederacción Nacional del Trabajo - 3 CONGRESO CNT 1931
+  - CNT - AIT - Memoria del Congreso extraordinario de 1931
+  - Chris Ealham - Los mitos de la II república
+  - Eduardo de Guzmán - El estallido revolucionario de diciembre de 1933
+  - Eduardo de Guzmán - Gil-Robles y la monarquia. Unas memorias desmitificadoras
+  - José Luis Gutiérrez Molina - La huelga general de octubre de 1931 en Cadiz y la pervivencia del mito de la violencia revolucionaria
+  - Xavier Diez i Rodríguez - La insumisión voluntaria. El anarquismo individualista español durante la Dictadura y la Segunda República (1923-1938)
+  - Pere López Sánchez - Rastros de rostros en un prado rojo (y negro). Las Casas Baratas de Can Tunis en la revolución social de los años treinta
+  - Ramon J Sender - Viaje a la aldea del crimen (Documental de Casas Viejas)
+  - Antonio Bar - La CNT en los años rojos
+  - Francisco José Fernández Andujar - El desnarigado (2017)
+  - Ricardo Sanz García - Los Treinta Judas
+  - Ángel Herrerín López - Los anarcomonarquicos. La opción monarquica en la CNT
+
+1935 - Panoramas Globales, Historias Generales y Cronologías (75)
   - Max Nettlau - La anarquía a través de los tiempos
   - George Woodcock - El anarquismo: historia de las ideas y movimientos libertarios
   - Justus F. Wittkop - Bajo la bandera negra
@@ -333,18 +562,61 @@
   - Carlos Taibo - Las otras Europas
   - Julián Vadillo Muñoz - A 150 años... Reflexiones alrededor de la historia del anarquismo
   - David Viñas - Anarquistas en América Latina
-  - VV. AA. - El Congreso Revolucionario Internacional de París
+  - Varios autores - El Congreso Revolucionario Internacional de París
   - James Horrox - Una revolución viva. El anarquismo en el movimiento de los kibutz
   - Piotr et al. Kropotkin - Ante la guerra. El movimiento anarquista y la matanza mundial de 1914-1918
   - César M. Lorenzo - Los anarquistas españoles y el poder (1868-1969)
   - Chris Ealham - La historiografía reciente sobre la guerra civil. El rigor histórico contra el rigor mortis
+  - Baltasar Porcel - La revuelta permanente
+  - Paco Ignacio Taibo II - Arcangeles. Doce historias de revolucionarios herejes del siglo XX
+  - Varios autores - Dias rebeldes. Cronicas de la insumision
+  - Augustin Hamon - Compendio de la Historia del socialismo (1908)
+  - Augustin Hamon - El movimiento obrero en la Gran Bretana
+  - Augustin Hamon - El socialismo en Francia
+  - Augustin Souchy - El movimiento cooperativista en Suecia (1945)
+  - Charles Reeve - El socialismo salvaje (2020)
+  - David Whitehouse - Los origenes de la policia
+  - Edouard Dolleans - Historia del movimiento obrero (Tomo II) (1961)
+  - Edouard Dolleans - Historia del movimiento obrero (Tomo III) (1961)
+  - Eduardo Colombo (comp.) - Historia del movimiento obrero revolucionario (2013)
+  - Eduardo de Guzmán - La soberania popular frente al absolutismo autocratico. Una pugna de dos siglos
+  - Emma Goldman - California
+  - Fernand Pelloutier - Historia de las bolsas del trabajo (1978)
+  - Francisco Olaya Morales - De una a otra revolución, 1789-1918 (1961)
+  - Francois Godicheau - Origenes del concepto de orden publico en España
+  - Gaston Leval - El Estado en la historia (1978)
+  - Howard Zinn - La otra Historia de los Estados Unidos. Desde 1492 hasta hoy
+  - Jesús Castanar Perez - Breve Historia de la Noviolencia (2010)
+  - Joel Delhom y Daniel Attala - Cuando los anarquistas citaban la Biblia (2014)
+  - Joel Delhom - Inventario provisorio de las memorias anarquistas y anarcosindicalistas españolas
+  - Julián Vadillo Muñoz - Historia de la CNT (2019)
+  - Mariano Martinez Paredes - Voces de revuelta (2017)
+  - Miguel Fernández Ubiria - Futbol y anarquismo (2020)
+  - Norman Cohn - El mito de la conspiracin judía mundial (1995)
+  - Pere Gabriel - A vueltas y revueltas con la historia social obrera en Espaa. Historia obrera, historia popular e historia contemporánea
+  - Pere Gabriel - Publicistas, socilogos y militantes. El nacimiento de la historia obrera en Espaa
+  - Peter Marshall - Las raíces del anarquismo (2016)
+  - Piro Subrat - invertidxs y rompepatrias. Marxismo, anarquismo y desobediencia sexual y de género en el estado español (1868-1982) (2019)
+  - Miquel Izard - Alucinaciones, artificios, engaos, fábulas y mitos
+  - Miquel Izard - Artistas y barruntafechas
+  - Miquel Izard - Caballos, canes, conquistadores y cruzados
+  - Miquel Izard - Cabello planchado, origen negado
+  - Miquel Izard - Cimarrones, gauchos y cuatreros
+  - Miquel Izard - Cuando los quiméricos devinieron sanguinarios
+  - Miquel Izard - Esclavos y negreros
+  - Miquel Izard - Himnos y baladas
+  - Miquel Izard - La encrucijada antillana
+  - Miquel Izard - La memoria callada
+  - Miquel Izard - Los indios son allí todavía indios y vagan en la barbarie esperando la hispanidad
+  - Miquel Izard - Nadie recordará nuestros nombres cuando hayamos muerto
+  - Miquel Izard - Quien no trabaja no come
+  - Miquel Izard - Resistiendo la civilización o desdeando el progreso. Introducción
+  - Edouard Dolleans - Historia del movimiento obrero (Tomo I) (1962)
 
-1936 - 1936 – Revolución Social y Guerra Civil en España (57)
+1936 - Guerra Civil, milicias y repressiones (91)
   - José Peirats - Los anarquistas en la crisis política española (1869-1939)
   - George Orwell - Homenaje a Cataluña
   - José Peirats - La CNT en la revolución española (Vol. I)
-  - Anastasio Ovejero - Las colectividades libertarias en España (1936-1938)
-  - Luis Buendía García - La experiencia autogestionaria durante la Guerra Civil española
   - Agustín Guillamón - Barricadas en Barcelona
   - Juan J. Alcalde - Milicias anarquistas y anarcosindicalistas en la guerra civil española
   - Anónimo - Un incontrolado de la Columna de Hierro
@@ -352,53 +624,131 @@
   - MLE-CNT - 1936. De la revolución española
   - Toni Álvaro - Catálogo de decisiones y fragilidades
   - John Brademas - Anarcosindicalismo y revolución en España (1930-1937)
-  - Amigos de Durruti - Los Amigos de Durruti
   - Chris Ealham - Una revolución a medias. Los orígenes de los hechos de mayo y la crisis del anarquismo
   - Abraham Guillén - El error político-militar de la República
   - S. Cánovas Cervantes - Durruti y Ascaso. La CNT y la revolución de julio
   - CNT-FAI - 19 de julio de 1936. España
   - Diego Abad de Santillán - El anarquismo y la revolución en España
   - Diego Abad de Santillán - Por qué perdimos la guerra
-  - Alejandro Ramón Díez Torre - La sociedad rural anarquista durante la guerra civil española
-  - Alejandro Ramón Díez Torre - Trabajan para la eternidad. Colectividades de trabajo y ayuda mutua durante la Guerra Civil en Aragón
   - Distribuidora Peligrosidad Social - Anarquismo y lucha antialcohólica en la guerra civil española
   - Distribuidora Peligrosidad Social - Un breve recorrido sobre el anarquismo en la guerra civil
-  - Britta Gröndahl - El comunismo libertario en la práctica. La autogestión en España (1936-1939)
-  - Agustín Guillamón Iborra - La revolución de los comités. Hambre y violencia en la Barcelona revolucionaria. De junio a diciembre de 1936
   - Armand Guerra - A través de la metralla. Escenas vividas en los frentes y en la retaguardia
-  - José Luis Gutiérrez Molina - Colectividades libertarias en Castilla
-  - Gastón Leval - Colectividades libertarias en España (2)
   - Eduardo de Guzmán - Cuando Fígols proclamó el Comunismo Libertario
   - Félix Martí Ibáñez - Grandezas y miserias de la revolución social española
   - Dolors Marín - Ministros anarquistas. La CNT en el gobierno de la II República (1936-1939)
   - Grupo D.A.S. (Deutschen Anarcho-Syndikalisten). Comité Nacional de la CNT - El nazismo al desnudo. Su intervención y ayuda a los facciosos españoles puesta al descubierto por sus propios documentos
   - José García Pradas - La traición de Stalin. Cómo terminó la guerra de España
   - José García Pradas - Teníamos que perder
-  - Juan Peiró - El misterioso proceso del POUM
-  - Frank Mintz y Miguel Peciña - Los Amigos de Durruti, los trotsquistas y los sucesos de Mayo
-  - Frank Mintz - Autogestión y anarcosindicalismo en la España revolucionaria (2)
-  - José Luis Gutiérrez Molina - Sobre el intento de exterminio del anarcosindicalismo gaditano por los sediciosos de julio de 1936
-  - François Godicheau - Periódicos clandestinos anarquistas en 1937-1938. Las voces de la base militante
-  - José García Pradas - Guerra Civil
-  - Julián Vadillo Muñoz - En pie contra el fascismo. La prensa anarquista ante el golpe del 18 de julio de 1936
-  - Francisco José Fernández Andújar - La resistencia anarquista en el Albaicín (julio de 1936). Los inicios de la Guerra Civil en Granada
   - Alfredo Velasco Núñez - La gesta traicionada. Los anarquistas vascos y la Guerra Civil en Euskal Herriak (Julio 1936 - Junio 1937)
-  - David Porter (ed.) - Visión en llamas. Emma Goldman sobre la Revolución española
   - Camillo Berneri - Escritos II (Revolución Española)
-  - Francisco Madrid Santos - Los anarquistas internacionales en la Revolución española
-  - Carlos M. Rama - Fascismo y anarquismo en la España contemporánea
+  - David Porter (ed.) - Visión en llamas. Emma Goldman sobre la Revolución española
   - Federica Montseny - La Commune de Paris y la Revolución Española. El anarquismo militante y la realidad española
-  - Baltasar Porcel - La revuelta permanente
+  - Francisco José Fernández Andújar - La resistencia anarquista en el Albaicín (julio de 1936). Los inicios de la Guerra Civil en Granada
+  - Francisco Madrid Santos - Los anarquistas internacionales en la Revolución española
+  - François Godicheau - Periódicos clandestinos anarquistas en 1937-1938. Las voces de la base militante
+  - Frank Mintz - Autogestión y anarcosindicalismo en la España revolucionaria (2)
+  - Frank Mintz y Miguel Peciña - Los Amigos de Durruti, los trotsquistas y los sucesos de Mayo
+  - José Luis Gutiérrez Molina - Sobre el intento de exterminio del anarcosindicalismo gaditano por los sediciosos de julio de 1936
+  - Juan Peiró - El misterioso proceso del POUM
+  - Julián Vadillo Muñoz - En pie contra el fascismo. La prensa anarquista ante el golpe del 18 de julio de 1936
+  - Julián Vadillo Muñoz - Desarrollo y debates en los grupos anarquistas de la FAI en el Madrid republicano
+  - Julián Vadillo Muñoz - La diversidad y el conflicto. Las disputas del bando republicano durante la guerra civil
+  - Varios autores - Papeles de plomo. Los voluntarios uruguayos en la guerra de España
+  - Julián Vadillo Muñoz - Entre el pacto y la revolución. El movimiento libertario en la primavera de 1936
+  - Varios autores - biografías del 36
+  - Abel Paz - Paradigma de una revolución (19 de julio de 1936, en Barcelona) (1967)
+  - Abel Paz - Viaje al pasado 1936-1939 (2002)
+  - Abraham Guillen - El error político militar de la República. La perdida de la guerra civil (1936-1939) (2012)
+  - Agustín Guillamón Iborra - El grupo franco-español de Los Amigos de Durruti
+  - Agustín Guillamón Iborra - La agrupación de Los Amigos de Durruti
+  - Agustín Guillamón Iborra - Los Amigos de Durruti. Historia y antologia de textos
+  - Alejandro Ramon Diez Torre - El Archivo de la Guerra Civil de Salamanca y sus fuentes documentales para Aragon, 1936-1938
+  - Camillo Berneri - Entre la revolución y las trincheras (9 artículos 1936-1937)
+  - Carl Einstein - La Columna Durruti y otros artículos y entrevistas de la Guerra Civil espanola
+  - Cipriano Mera - De nuestra guerra (Diario de campaa)
+  - Eduard Masjuan Bracons - Tribunales populares, justicia de clase y nuevo derecho. El caso Barriobero (1936-1939)
+  - Eduardo de Guzmán - Cuatro dias de noviembre
+  - Eduardo de Guzmán - El terror
+  - Eduardo de Guzmán - La muerte de la esperanza
+  - Eduardo de Guzmán - Madrid Rojo y Negro, Milicias Confederales
+  - Eduardo de Guzmán - Periodicos y periodistas del Madrid en guerra
+  - Eduardo de Guzmán - Tambien el horror fue aqui. La impresionante tragedia de Villarta de los Montes
+  - Eduardo de Guzmán - Visperas de guerra civil en la España de 1936 (I)
+  - Eduardo de Guzmán - Visperas de guerra civil en la España de 1936 (II)
+  - Erick Benitez Martinez - La Traicción de la Hoz y el Martillo
+  - Estampas de la Revolución Española - Estampas de la revolución española
+  - Fernando Solano Palacio - Entre dos fascismos (Memorias de un voluntario en las Brigadas Internacionales en España)
+  - Francois Godicheau - El proceso del POUM. Proceso ordinario de una justicia extraordinaria
+  - Francois Godicheau - La guerra civil, figura del desorden publico. El concepto de guerra civil y la definiccion del orden político
+  - Francois Godicheau - La represión y la guerra civil española. Memoria y tratamiento histórico
+  - Francois Godicheau - Los Hechos de Mayo de 1937 y los presos antifascistas. Identificacion de un fenomeno represivo (2002)
+  - Félix López Caceres - Cartas de la revolución. Reportes de un obrero chileno en la Guerra Civil española (1936-1939) (2016)
+  - George Orwell - Recuerdos de la guerra de Espaa
+  - Georges Fontenis - El mensaje revolucionario de los amigos de Durruti
+  - Guzmán - Eduardo de - Asi empezo nuestro dia mas largo
+  - Jaume Balius Mir - No es hora de confusionismos
+  - Jaume Balius Mir - Por los fueros de la verdad
+  - John Brademas - Anarcosindicalismo y revolución en Espaa (1930-1937)
+  - José Fortea Gracia - Mi paso por la Columna Durruti - 26 Divissión (2005)
+  - José Luis Gutiérrez Molina - Los muelles de las Delicias y de la Paja. El barco de la muerte
+  - José Luis Gutiérrez Molina - Mayo de 1937, el freno definitivo de la revolución (2017)
+  - Juan Caba Guijarro - 1936-1986. Ciencuentenario de las desventuras espalas en su Guerra Civil (1986)
+  - Lucia Sánchez Saornil - Horas de revolución (1937)
+  - Luis Castro - Las doctrinas sociales y la revolución espala (1938)
+  - Manuel Villar - España en la ruta de la libertad (1962)
+  - Mary Nash - Republicanas en la guerra civil. El compromiso antifascista
+  - Mauro Bajatierra Morán - Cronicas del frente de Madrid (1937)
+  - Miquel Izard - Que lo sepan ellos y no lo olvidemos nosotros (El inverosímil verano del 36 en Cataluña) (2012)
+  - Ricardo Sanz García - Los que fuimos a Madrid. Columna Durruti
+  - Ricardo Sanz García - Ruta de titanes (2014)
+  - SIA - Franco y el quinto mandamiento
+  - Varios Autores - España en armas. El cine de la Guerra Civil española
+  - Vernon Richards - Enseanzas de la revolución española
+  - Yanira Hermida - Luchaban por un mundo nuevo (2016)
+
+1936 - Colectivizaciones y gestión libertaria (40)
+  - Anastasio Ovejero - Las colectividades libertarias en España (1936-1938)
+  - Luis Buendía García - La experiencia autogestionaria durante la Guerra Civil española
+  - Alejandro Ramón Díez Torre - La sociedad rural anarquista durante la guerra civil española
+  - Alejandro Ramón Díez Torre - Trabajan para la eternidad. Colectividades de trabajo y ayuda mutua durante la Guerra Civil en Aragón
+  - Britta Gröndahl - El comunismo libertario en la práctica. La autogestión en España (1936-1939)
+  - José Luis Gutiérrez Molina - Colectividades libertarias en Castilla
+  - Gastón Leval - Colectividades libertarias en España (2)
+  - Agustín Guillamón Iborra - La revolución de los comités. Hambre y violencia en la Barcelona revolucionaria. De junio a diciembre de 1936
+  - CNT Confederacción Nacional del Trabajo - 4 CONGRESO CNT 1936 ZARAGOZA
+  - CNT Confederacción Nacional del Trabajo - CNT a los trabajadores del espectacuo
+  - CNT Confederacción Nacional del Trabajo - Colectividades de Castilla. El colectivismo en la provincia de Madrid
+  - CNT Confederación Nacional del Trabajo - De Companys a Indalecio Prieto (1939)
+  - CNT - AIT - Bases de trabajo agricola (1936) (2020)
+  - CNT - Acuerdos del Pleno Economico Nacional Ampliado (1938)
+  - CNT - Realizaciones Revolucionarias y Estructuras Colectivistas de la Comarcal de Monzon (Huesca)
+  - Antoni Castells Duran - Las transformaciones colectivistas en la industria y los servicios de Barcelona (1936-1939) (1992)
+  - Agustín Guillamón Iborra - Los Comites de Defensa de la CNT
+  - Augustin Souchy y Paul Folgare - Colectivizaciones. La obra constructiva de la revolución española (1977)
   - Augustin Souchy - Entre los campesinos de Aragón. El comunismo libertario en las comarcas liberadas (1977) (2)
+  - Baldomero Cerda Richart - Empresas colectivizadas e intervenidas (1937)
+  - Benjamín Cano Ruiz y Ismael Viadiu - El colectivismo agrario en la revolución española
+  - Alejandro Ramon Diez Torre - Del caciquismo a la colectivización. El desarrollo histórico de las colectividades de Guadalajara, 1936-1939
+  - José García Pradas - Guerra Civil
+  - Félix Carrasquer Launed - Las Colectividades de Aragon. Un vivir autogestionado, promesa de futuro (2016)
+  - Félix Carrasquer Launed - La escuela de militantes de Aragon (2015)
+  - Marciano Cardaba Carrascal - Colectividades agrarias en la regón de Girona, 1936-1939
+  - Marciano Cardaba Carrascal - La CNT y la revolución Social (1931-1939) (2011)
+  - Natividad Rodrigo Gonzalez - Las colectividades agrarias en Castilla-La Mancha
+  - Juan Caba Guijarro - 1936-1939. El colectivismo en Membrilla (C. Real)
+  - Salome Molto - Socialización, Colectivización y represión en Alcoy (1936-1956) (2015)
+  - Ramon Liarte - La CNT al servicio del pueblo (1978)
+  - Ramon Liarte - Maestria y ejemplo de la revolución social española (2016)
+  - Matías Vargas Puga - El protagonismo político de la CNT en los ayuntamientos catalanes (1936-1939). El Vallés Occidental
   - Matías Vargas Puga - Actividad política de la izquierda libertaria en la Comarca del Vallès Occidental durante la Guerra Civil
   - Matías Vargas Puga - El poder político anarcosindicalista en los ayuntamientos del Vallès occidental (1936-1939)
-  - Julián Vadillo Muñoz - Entre el pacto y la revolución. El movimiento libertario en la primavera de 1936
-  - Julián Vadillo Muñoz - La diversidad y el conflicto. Las disputas del bando republicano durante la guerra civil
-  - VV. AA. - Papeles de plomo. Los voluntarios uruguayos en la guerra de España
-  - Julián Vadillo Muñoz - Desarrollo y debates en los grupos anarquistas de la FAI en el Madrid republicano
-  - Cristina Escrivá Moscardó - El Internado Durruti
+  - Agustín Guillamón Iborra - La guerra del pan. Hambre y violencia en la Barcelona revolucionaria. De diciembre de 1936 a mayo de 1937 (2014)
+  - Agustín Guillamón Iborra - La represión contra la CNT y los revolucionarios. Hambre y violencia en la Barcelona revolucionaria. De mayo a septiembre de 1937 (2015)
+  - Agustín Guillamón - El terror estalinista en Barcelona (1938) (2013)
+  - Agustín Guillamón Iborra - De los Comites de Defensa a las Milicias Populares
+  - Amigos de Durruti - Los Amigos de Durruti
 
-1936 - Mujeres Libres y Emancipación Femenina (8)
+1936 - Mujeres Libres y Emancipación Femenina (16)
   - Mary Nash - Mujeres Libres. España 1936-1939
   - Helena Andrés Granel - Mujeres Libres: emancipación femenina y revolución social
   - Laura Sánchez Blanco - El anarcofeminismo en España: las propuestas de Mujeres Libres
@@ -407,8 +757,16 @@
   - Helena Andrés Granel - Discursos y experiencias femeninas en el anarquismo español. Mujeres Libres en la retaguardia oscense
   - Anónimo - La miliciana en la Guerra Civil: realidad e imagen
   - Lola Iturbe - La mujer en la lucha social y en la guerra civil de España
+  - Grupo Moiras - En la senda de Mujeres Libres
+  - Lucia Sánchez Saornil - Las mujeres. Ellas tambien lo dieron todo
+  - Mary Nash - El aprendizaje del feminismo hstrico en Espaa
+  - Mary Nash - Experiencia y aprendizaje. La formación hstrica de los feminismos en Espaa
+  - Mary Nash - Nuevas dimensiones en la historia de la mujer
+  - Mary Nash - Rojas, las mujeres republicanas en la Guerra Civil
+  - Mujeres Libres 1936-1939 - Actividades de la FN Mujeres Libres
+  - Textos Anónimos y de Autoría Colectiva - Historia del anarcofeminismo en América Latina
 
-1939 - Antifascismo, Exilio y Resistencia Armada contra Franco (25)
+1939 - Exilio, represalia y antifascismo (59)
   - Octavio Alberola - La resistencia Libertaria contra el Franquismo. El D.I.
   - Juan J. Alcalde - Los servicios secretos en España. La represión contra el Movimiento Libertario español
   - Octavio Alberola - Los libertarios y la Memoria histórica
@@ -430,12 +788,46 @@
   - Antonio Téllez Solà - Historia de un atentado aéreo contra el general Franco
   - Antonio Téllez Solà y Francesc Torres - La lucha del movimiento libertario contra el franquismo
   - Julián Vadillo Muñoz - El anarquismo y anarcosindicalismo en la España de la Transición
-  - VV. AA. - Comandos Autónomos, un anticapitalismo iconoclasta
-  - VV. AA. - En relación con el Caso Scala. Nueva ofensiva policial contra la CNT y el MLE
-  - VV. AA. - Guerrilla anarquista leonesa
-  - VV. AA. - Historia de diez años
+  - Varios autores - En relación con el Caso Scala. Nueva ofensiva policial contra la CNT y el MLE
+  - Varios autores - Historia de diez años
+  - Carlos M. Rama - Fascismo y anarquismo en la España contemporánea
+  - Albert Camus - ¡España libre
+  - CNT Confederación Nacional del Trabajo - La militancia pide la palabra (1961)
+  - CNT Confederación Nacional del Trabajo - Resena de la Conferencia Intercontinental del Movimiento Libertario español (1947)
+  - Carlos Fonseca - Garrote vil para dos inocentes. El caso Delgado-Granado
+  - Dictamenes y Resoluciones del 2º Congreso del MLE - CNT en Francia (1947)
+  - Dolors Marin - Clandestinos. El maquis contra el franquismo, 1934-1975
+  - Eduardo Pons Prades - Cadenas de evasin espaolas en la II Guerra Mundial
+  - Eduardo Pons Prades - Republicanos en la liberacin de París
+  - Eduardo Pons Prades - Republicanos espaoles en los campos de exterminio nazis
+  - Eduardo de Guzmán - El ano de la victoria
+  - Eduardo de Guzmán - El clan de los Franco
+  - Eduardo de Guzmán - El exilio español
+  - Eduardo de Guzmán - Ifni. Un territorio del Sahara mucho tiempo olvidado
+  - Eduardo de Guzmán - La tragedia de millares de espanoles bajo el nazismo. Los cerdos del comandante
+  - Eduardo de Guzmán - Periodistas depurados, condenados o fusilados al termino de nuestra guerra civil
+  - Eduardo de Guzmán - Serrano Suner ante la historia
+  - Eduardo de Guzmán - Socrates Gomez. De la derrota a la represión
+  - Eduardo de Guzmán - Un millon de presos politicos y doscientos mil muertos en España
+  - Eduardo de Guzmán - Vicisitudes y penalidades de la prensa española de 1936 a 1979
+  - Evelyn Mesquida - Y ahora, volved a vuestras casas
+  - Gimenez Igualada - Luz en las barracas. Carta de Miguel Gimenez Igualada a un ministro frances ante la situacion vivida en el Campo de Bram
+  - Guillamón - Debate entre Octavio Alberola y Agustín Guillmon
+  - Heleno Sana - Carta a don Ángel Herrerín López a propósito de su obra La CNT durante el franquismo
+  - José Berruezo Silvente - Contribución a la historia de la CNT de España en el exilio (1967)
+  - José Luis Gutiérrez Molina - Carilanteras. Mujeres y franquismo en un pueblo andaluz (2009)
+  - José Luis Gutiérrez Molina - Informe sobre el trabajo esclavo en España durante la dictadura franquista (2014)
+  - José Luis Gutiérrez Molina - Trabajo esclavo y obras hidraulicas. Extremenos en el Canal de los Presos
+  - José Luis Gutiérrez Molina - Un dia en el Archivo histórico del Tribunal Militar Territorial Segundo en Sevilla
+  - Juan Gomez Casas - Los cruces de caminos (Antecedentes y pequena historia de una decada, 1966-1976)
+  - Juan del Pueblo - Los sucesos revolucionarios de Bujalance (1944)
+  - Karaganda. la Tragedia del Antifascismo Español Ediciones del MLE - CNT, 1948
+  - Miquel Izard - Cara al sol jugando a contar mentiras
+  - Pedro García Guirao - Para matar a Franco (de risa). El periodico acrata en el exilio y los usos del humor grafico
+  - Ángel Herrerín López - La represión contra la CNT (1939-1949)
+  - Ángel Olmedo Alonso et al. - El genocidio franquista en extremadura
 
-1965 - Mayo del 68, Situacionismo y Movimiento Autónomo (9)
+1965 - Mayo del 68, Situacionismo y Movimiento Autónomo (17)
   - Octavio Alberola - La rebelión de Mayo 68
   - Miquel Amorós - Los situacionistas y la anarquía
   - Manuel Pérez Ledesma - El movimiento Provo
@@ -445,36 +837,92 @@
   - Internacional Situacionista / Anónimo - El retorno de la Columna Durruti
   - Miquel Amorós - 1968. El año sublime de la acracia
   - José Antonio Recio Cuesta - La revolución como juego. El movimiento Provo
+  - Distribuidora Peligrosidad Social - Feminismo y lucha armada en Italia
+  - Distribuidora Peligrosidad Social - STAR
+  - Liberación Animal - Contra todo pronostico 1972-1986
+  - Miquel Izard - 1968. Cuando se marchit el rojo de las banderas (2018)
+  - Noam Chomsky - Repensando Camelot (Kennedy, Vietnam y la cultura política de EEUU) (1994)
+  - Rodrigo Vescovi - acción Directa en Uruguay, 1968-1973 (2019)
+  - Rote Zora 1977-1995 - La historia de las Rote Zora y las Celulas Revolucionarias
+  - Rote Zora 1977-1995 - Rote Zora (2013)
 
-1975 - Reorganización Libertaria y Lucha Anticarcelaria (6)
+1975 - MIL, guerrilla y resistencia armada (11)
+  - MIL (Movimiento Iberico de Liberación) 1967-1973 - El 1000 y la OLLA (2014)
+  - MIL (Movimiento Iberico de Liberación) 1967-1973 - El MIL en sus textos
+  - MIL (Movimiento Iberico de Liberación) 1967-1973 - Las 1000 y una del 1000
+  - Sergi Roses Cordovilla - Breve historia del MIL
+  - Telesforo Tajuelo - El MIL, Puig Antich y los GARI (1977)
+  - Dossier MIL del Movimiento Iberico de Liberación A los Grupos Autonomos de Combate y Ediciones Mayo - 37
+  - Organizacin Pol - mil. (1973)
+  - Varios autores - Comandos Autónomos, un anticapitalismo iconoclasta
+  - Varios autores - Guerrilla anarquista leonesa
+  - Diciembre 72 Historia Terrible - julio 73 (1973)
+  - Joan Llarch - Campos de concentración en la Espaa de Franco (1978)
+
+1975 - Reorganización Libertaria y Lucha Anticarcelaria (23)
   - Anónimo - Dentro contra fuera, sobre la agitacion dentro y fuera de las carceles belgas
   - Júlio Antonio Zacouteguy - O Inimigo do Rei, el grito irreverente y osado de la anarquía
   - Guillermo Reigosa Pérez - La Federación Anarquista Uruguaya
   - Publicación anarquista Tierra y Tempestad - Masacre en Jacinto Vera
   - Anónimo - Okupa Madrid (1985-2011). Memoria, reflexion, debate y autogestion
   - Comité regional de Cataluña de la CNT - La CNT ante el golpe del 23F
+  - CNT Confederacción Nacional del Trabajo - 5 CONGRESO CNT 1977 MADRID
+  - CNT - Acuerdos Vº Congreso (1980)
+  - Cuadernos de Ruedo Iberico - CNT. Ser o no ser
+  - Distribuidora Anarquista Polaris - Memorias de Libertad
+  - Eduardo de Guzmán - CNT contra el terrorismo (1978)
+  - Eduardo de Guzmán - Elecciones y abstención en España. UCD. 23 diputados mas con un millon de votos menos
+  - Eduardo de Guzmán - Revissión de la CNT
+  - Eduardo de Guzmán - Se repite la historia De Berenguer a Suarez
+  - Irene Cardona Curco - Aproximación al papel de las mujeres dentro de los Grupos Autonomos de la Transiccion (2017)
+  - Joan Zambrana - El caso Scala y la CNT. Terrorismo de Estado
+  - José Ribas - Los 70 a destajo
+  - Juan Gomez Casas - El relanzamiento de la CNT (Con un epilogo hasta la primavera de 1984)
+  - William Andres Mesa Cardenas - Anarquismo entre rejas (2019)
+  - Xavier Canadas Gascón - El Caso Scala. Terrorismo de Estado y algo mas (2008)
+  - Xavier Canadas Gascón - El Tubo (Terror y miseria en las cárceles espanolas de la democracia)
+  - Xavier Canadas Gascón - Entremuros (Las prisiones en la Transición Democratica)
+  - Noam Chomsky - Escenas de sublevacin (1988)
 
 2000 - Insurreccionalismo Urbano y Revueltas en Europa (5)
   - Anónimo - A tres años de la revuelta griega
   - Anónimo - Reflexiones sobre el movimiento anarquista en Grecia y la solidaridad con los presos políticos
   - Gavroche - La revuelta de los Banlieusards
   - Miquel Amorós - La cólera del suburbio
-  - VV. AA. - Maderos, cerdos asesinos. Crónica del diciembre griego
+  - Varios autores - Maderos, cerdos asesinos. Crónica del diciembre griego
 
-2000 - Movimientos sociales y sindicalismo en la España contemporánea (5)
+2000 - Movimientos sociales y sindicalismo en la España contemporánea (16)
   - Beltrán Roca Martínez - Movilizando a los precarios. El anarcosindicalismo español contemporáneo ante el capitalismo flexible
   - Beltrán Roca Martínez y Ibán Díaz-Parra - De la tierra a los supermercados. El SAT como ejemplo de particularismo militante y de renovación sindical
   - Beltrán Roca Martínez y David Florido del Corral - Narrativas de la reconversión. Historias de vida, memoria social y acción colectiva en el astillero de Puerto Real
   - José Luis Carretero Miramar - Iluminando el futuro. Experiencias de creatividad libertaria en la España de la crisis
   - Revista Resquicios - La epidemia de rabia en España (1996-2007)
+  - CNT Confederacción Nacional del Trabajo - 11 CONGRESO CNT 2015 ZARAGOZA
+  - CNT Confederación Nacional del Trabajo - 7 CONGRESO CNT 1990 BILBAO
+  - CNT Confederacción Nacional del Trabajo - 8 CONGRESO CNT 1995 GRANADA
+  - Distribuidora Peligrosidad Social - Barcelona entre vallas y flores
+  - Distribuidora Peligrosidad Social - Memorias de Peligrosidad Social (2011-2019)
+  - Distribuidora Peligrosidad Social - Pequa historia del reformismo okupa matritense
+  - Francois Godicheau (coord.) - Democracia inocua. Lo que el postfranquismo ha hecho de nosotros (2015)
+  - Xavier Diez I Rodriguez et al. - Laposta municipalista. De les bullangues a les lluites actuals pels municipis lliures a Catalunya (2015)
+  - Yanira Hermida - Buscando bajo las piedras
+  - Yanira Hermida - Creando la revolución. Publicaciones anarcofeministas en el Estado español
+  - Yanira Hermida - Techo y dignidad. La lucha del Sindicato de Inquilinos de Tenerife
 
-2011 - Resistencias Contemporáneas y Descolonización (9)
+2011 - Resistencias Contemporáneas y Descolonización (16)
   - Zaher Baher - El experimento del Kurdistán oeste (Kurdistán sirio)
   - Laura Galián Hernández - El Anarquismo Descolonizado: una historia de las experiencias antiautoritarias en Egipto (1860-2016)
   - Laura Galián Hernández - Hacia un estudio decolonial del anarquismo. Egipto y Túnez
   - Anónimo - Enrabiaos, apuntes sobre la Spanish Revolution
-  - VV. AA. - Aprender escuchando. Autonomía, educación y guerrilla en Chiapas y Kurdistán
+  - Varios autores - Aprender escuchando. Autonomía, educación y guerrilla en Chiapas y Kurdistán
   - Anónimo - Fuego a la pólvora. Guerra y guerrilla en Irak
-  - VV. AA. - Por sólo 20 centavos. La lucha contra el aumento del transporte en Brasil
-  - VV. AA. - La revolución ignorada. Liberación de la mujer, democracia directa y pluralismo radical en Oriente Medio
-  - VV. AA. - Revolución en Rojava. Liberación de la mujer y comunalismo entre la guerra y el embargo
+  - Varios autores - Por sólo 20 centavos. La lucha contra el aumento del transporte en Brasil
+  - Varios autores - La revolución ignorada. Liberación de la mujer, democracia directa y pluralismo radical en Oriente Medio
+  - Varios autores - Revolución en Rojava. Liberación de la mujer y comunalismo entre la guerra y el embargo
+  - Baran Pedraforca - Aprendamos de la revolución de Rojava (2018)
+  - Documentos Intervenir. Historia y 2011 Análisis de Dos Luchas en Territorio Uruguayo - 2016
+  - Editorial Segadores - No, no volvemos a casa. Relatos de la revuelta de Ferguson
+  - Jesús Castanar Perez - Violación de los derechos humanos en Palestina. Crónica del apartheid
+  - Noam Chomsky - El Triángulo Fatal. Estados Unidos, Israel y Palestina (2004)
+  - Textos Anónimos y de Autoría Colectiva - Standing Rock. Los guardianes del agua contra la serpiente negra (2017)
+  - Zekine Turkeri - Un verano kurdo. Historias de resistencia al ISIS, a la ocupación y al exilio (2016)
