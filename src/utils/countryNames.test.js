@@ -1,5 +1,8 @@
 import { describe, it, expect } from 'vitest';
+import { readFileSync } from 'node:fs';
 import { normalizeCountryName, translateCountryName } from './countryNames';
+import { regionData } from '../data/regionData';
+import { getHistoricalBooks } from './library';
 
 describe('normalizeCountryName', () => {
   it('traduce nombres del mapa (inglés) a claves de región (español)', () => {
@@ -66,5 +69,50 @@ describe('translateCountryName', () => {
     expect(translateCountryName('')).toBe('');
     expect(translateCountryName(null)).toBeNull();
     expect(translateCountryName(undefined)).toBeUndefined();
+  });
+});
+
+// Regresión: WorldMapView no resuelve la región por el ISO sino por el nombre
+// inglés del GeoJSON. Si ese nombre falta en COUNTRY_NAME_TO_REGION, el país se
+// pinta (el ISO llega bien desde regionData) pero el clic no hace nada.
+describe('cobertura del mapa', () => {
+  const geo = JSON.parse(
+    readFileSync(new URL('../data/worldmap.geo.json', import.meta.url), 'utf8')
+  );
+  const nameByIso = new Map(
+    geo.features
+      .filter((f) => f.properties?.I)
+      .map((f) => [f.properties.I.toUpperCase(), f.properties.N])
+  );
+
+  const painted = Object.entries(regionData)
+    .map(([region, data]) => ({
+      region,
+      iso: data?.iso,
+      value: getHistoricalBooks(regionData, region).length
+    }))
+    .filter((r) => r.iso && r.value > 0);
+
+  it('cada país pintado por el mapa debe ser clicable', () => {
+    const dead = painted
+      .map((r) => ({ ...r, geoName: nameByIso.get(r.iso.toUpperCase()) }))
+      .filter((r) => !r.geoName || normalizeCountryName(r.geoName) !== r.region)
+      .map(
+        (r) =>
+          `${r.region} (iso ${r.iso}) -> ${r.geoName ?? 'PAIS AUSENTE EN EL GEOJSON'}: normalizeCountryName devuelve ${
+            r.geoName ? normalizeCountryName(r.geoName) : 'null'
+          }`
+      );
+    expect(dead).toEqual([]);
+  });
+
+  it('todo país del GeoJSON usado tiene traducción para el tooltip', () => {
+    // El tooltip usa otro diccionario; si divergen, el mapa muestra el nombre
+    // en inglés y aun así el clic funciona (o al revés: nombre bien, clic muerto).
+    const missing = [...nameByIso.keys()]
+      .filter((iso) => painted.some((r) => r.iso.toUpperCase() === iso))
+      .map((iso) => nameByIso.get(iso))
+      .filter((name) => !translateCountryName(name));
+    expect(missing).toEqual([]);
   });
 });

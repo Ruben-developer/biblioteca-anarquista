@@ -37,7 +37,17 @@ const COUNTRY_NAME_TO_REGION = {
   peru: 'Perú',
   poland: 'Polonia',
   ukraine: 'Ucrania',
-  uruguay: 'Uruguay'
+  uruguay: 'Uruguay',
+  // Sin estas entradas el país se pintaba en el mapa (el ISO llega bien desde
+  // regionData) pero el clic moría: WorldMapView resuelve la región por el
+  // nombre inglés del GeoJSON, no por el ISO.
+  belgium: 'Bélgica',
+  bulgaria: 'Bulgaria',
+  morocco: 'Marruecos',
+  netherlands: 'Países Bajos',
+  palestine: 'Palestina',
+  sweden: 'Suecia',
+  venezuela: 'Venezuela'
 };
 
 // Diccionario inglés → español de los 174 países del mapa (propiedades N del GeoJSON).
