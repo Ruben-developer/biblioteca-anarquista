@@ -5,7 +5,8 @@ Guía para agentes autónomos (y humanos) que iteran sobre este repo.
 ## Qué es esto
 **La Idea — Archivo Histórico Anarquista** — app interactiva del movimiento anarquista:
 línea temporal (1840-1968), mapa de regiones con textos, biografías, favoritos,
-modo oscuro/claro, filtros y estadísticas. Deploy en GitHub Pages.
+modo oscuro/claro, filtros y estadísticas. Deploy en GitHub Pages (PRE/PRO) +
+beta paralelo en Cloudflare Workers (`beta.laidea.antarquia.cl`, rutas reales).
 
 ## Stack (IMPORTANTE)
 - **React 18** + **Vite 4** + **Tailwind CSS 3** — JavaScript/JSX (NO TypeScript).
@@ -19,6 +20,9 @@ modo oscuro/claro, filtros y estadísticas. Deploy en GitHub Pages.
   - `npm run test:coverage` — tests Vitest con cobertura v8 (genera `coverage/lcov.info`)
   - `npm run preview` — sirve el build local
 - CI de Pages: `npm ci` → lint → test → audit (informativo) → build → deploy.
+- CI beta (Cloudflare Workers): `beta.yml` en cada push a `develop` → lint →
+  test → build con `VITE_ROUTES_MODE=pathname` → `wrangler deploy`
+  (secretos `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID`; ver `wrangler.jsonc`).
 
 ## Estructura
 ```
@@ -28,7 +32,7 @@ src/
 ├── services/     # documentService.js (solo getDocumentDownloadUrl: PDFs del contenedor, TXT del repo)
 ├── constants/    # Categorías, décadas, regiones (derivadas), vistas, temas de color
 ├── hooks/        # useScrollTop, useDarkMode, useFavorites
-└── utils/        # filters.js, countryNames.js (normalización nombres de país del mapa), routes.js (deep links: hash ↔ vista/obra)
+└── utils/        # filters.js, countryNames.js (normalización nombres de país del mapa), routes.js (deep links: modo dual hash ↔ pathname — GitHub Pages usa #/, el beta Workers usa /mapa)
 public/documents/ # documents.json (metadatos) + TXT de descarga
 data/registros/   # registro.json (métricas diarias del agente)
 .daily-runs/      # logs diarios del agente

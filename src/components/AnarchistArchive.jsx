@@ -4,7 +4,15 @@ import { regionData } from '../data/regionData';
 import { VIEWS } from '../constants';
 import { filterEvents } from '../utils/filters';
 import { getAllAuthors, getArchiveStats } from '../utils/library';
-import { parseRoute, buildViewHash, buildBookHash, buildBookSlugIndex } from '../utils/routes';
+import {
+  parseRoute,
+  buildBookSlugIndex,
+  readRouteInput,
+  currentRouteHref,
+  viewHref,
+  bookHref,
+  routesMode
+} from '../utils/routes';
 import { useScrollTop, useDarkMode, useFavorites } from '../hooks';
 
 // Components
@@ -36,7 +44,7 @@ const BOOK_INDEX = buildBookSlugIndex(regionData);
 const getInitialRoute = () =>
   typeof window === 'undefined'
     ? { type: 'view', view: VIEWS.LIBRARY }
-    : parseRoute(window.location.hash, BOOK_INDEX);
+    : parseRoute(readRouteInput(), BOOK_INDEX);
 
 const AnarchistArchive = () => {
   const { darkMode, toggleDarkMode } = useDarkMode();
@@ -111,7 +119,8 @@ const AnarchistArchive = () => {
   // Estado → URL: la URL siempre refleja la vista activa y la obra abierta,
   // para que cualquier página sea compartible. El primer sincronizado usa
   // replaceState (no añade entrada al historial); los cambios posteriores
-  // asignan location.hash, lo que crea una entrada y habilita Atrás/Adelante.
+  // crean entrada y habilitan Atrás/Adelante: location.hash en modo hash,
+  // pushState en modo pathname (rutas reales del beta en Cloudflare Workers).
   // Si la URL ya coincide no se toca nada (evita bucles con hashchange).
   const hashSyncedRef = useRef(false);
   useEffect(() => {
@@ -121,29 +130,34 @@ const AnarchistArchive = () => {
       // Obra sin enlace canónico (p. ej. un favorito cuyo título ya no está en
       // el catálogo): se abre el lector sin reescribir la URL.
       if (!slug) return;
-      target = buildBookHash(slug);
+      target = bookHref(slug);
     } else {
-      target = buildViewHash(activeView);
+      target = viewHref(activeView);
     }
-    if (window.location.hash === target) {
+    if (currentRouteHref() === target) {
       hashSyncedRef.current = true;
       return;
     }
     if (hashSyncedRef.current) {
-      window.location.hash = target;
+      if (routesMode() === 'pathname') {
+        window.history.pushState(null, '', target);
+      } else {
+        window.location.hash = target;
+      }
     } else {
       hashSyncedRef.current = true;
       window.history.replaceState(null, '', target);
     }
   }, [activeView, readingBook]);
 
-  // URL → estado: responde a Atrás/Adelante, a la edición manual del hash y a
+  // URL → estado: responde a Atrás/Adelante, a la edición manual de la URL y a
   // enlaces externos. Escucha también popstate por si el navegador no emite
-  // hashchange en la traversión. Handler idempotente: si el estado ya coincide
-  // con la URL, ningún setState cambia y no se re-renderiza.
+  // hashchange en la traversión (en modo pathname, popstate es el único que
+  // llega). Handler idempotente: si el estado ya coincide con la URL, ningún
+  // setState cambia y no se re-renderiza.
   useEffect(() => {
     const syncFromHash = () => {
-      const route = parseRoute(window.location.hash, BOOK_INDEX);
+      const route = parseRoute(readRouteInput(), BOOK_INDEX);
       if (route.type === 'book') {
         // Un deep link de obra no cambia la vista: solo abre (o sustituye) el lector.
         setReadingBook((prev) => (prev && BOOK_INDEX.slugFor(prev) === route.slug ? prev : route.book));

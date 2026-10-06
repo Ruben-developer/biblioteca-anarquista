@@ -81,6 +81,57 @@ export const buildViewHash = (view) => `#/${VIEW_SLUGS[view] || VIEW_SLUGS[VIEWS
 // Slug de obra → hash canónico.
 export const buildBookHash = (slug) => `#/${BOOK_ROUTE}/${slug}`;
 
+// ---------------------------------------------------------------------------
+// Modo dual de rutas (hash | pathname).
+// - `hash` (por defecto): GitHub Pages no tiene rewrites, el fragmento es lo
+//   único portable entre PRE (/preview/) y PRO.
+// - `pathname` (VITE_ROUTES_MODE=pathname): rutas reales /mapa, /libro/<slug>
+//   para el deploy beta en Cloudflare Workers, que sirve index.html ante
+//   cualquier ruta desconocida (fallback SPA). Vite inyecta la variable en
+//   build; aquí se lee en cada llamada para que los tests puedan cambiarla.
+// ---------------------------------------------------------------------------
+
+export const routesMode = () =>
+  (import.meta.env?.VITE_ROUTES_MODE === 'pathname' ? 'pathname' : 'hash');
+
+// Prefijo base del sitio ('/' o '/preview/'), siempre con barra final.
+const basePath = () => {
+  const base = import.meta.env?.BASE_URL || '/';
+  return base.endsWith('/') ? base : `${base}/`;
+};
+
+// Entrada cruda para parseRoute según el modo. En pathname devuelve el path
+// sin el prefijo base; parseRoute se encarga del resto de la normalización.
+export const readRouteInput = (mode = routesMode()) => {
+  if (mode === 'pathname') {
+    const base = basePath();
+    const path = window.location.pathname;
+    return base !== '/' && path.startsWith(base) ? path.slice(base.length) : path;
+  }
+  return window.location.hash;
+};
+
+// Forma canónica de la URL actual (misma forma que viewHref/bookHref) para
+// decidir si hace falta escribir. En pathname se ignora la barra final.
+export const currentRouteHref = (mode = routesMode()) => {
+  if (mode === 'pathname') {
+    const path = window.location.pathname;
+    return path.length > 1 ? path.replace(/\/+$/, '') : path;
+  }
+  return window.location.hash;
+};
+
+// Ruta → href para history.replaceState/pushState (pathname) o
+// location.hash (hash). Vista desconocida → biblioteca.
+export const viewHref = (view, mode = routesMode()) => {
+  const rel = VIEW_SLUGS[view] || VIEW_SLUGS[VIEWS.LIBRARY];
+  return mode === 'pathname' ? `${basePath()}${rel}` : buildViewHash(view);
+};
+
+// Slug de obra → href según el modo.
+export const bookHref = (slug, mode = routesMode()) =>
+  mode === 'pathname' ? `${basePath()}${BOOK_ROUTE}/${slug}` : buildBookHash(slug);
+
 const keyPart = (value) => String(value ?? '').trim().toLowerCase();
 
 // Índice de enlaces profundos de las obras del catálogo:

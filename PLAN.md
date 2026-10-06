@@ -654,6 +654,25 @@ tiene 113 PDFs y 0 TXT) — son 6 obras a las que nunca se les asignó `filename
   cerrar el lector restaura el hash de la vista. **28 tests nuevos**
   (`utils/routes.test.js` 16 + `AnarchistArchive.deeplink.test.jsx` 12, con el
   Atrás del navegador incluido); **274 tests**, lint 0 errores, build OK.
+- [x] **Beta paralelo en Cloudflare Workers (rutas reales, comparar antes de
+  migrar)** ✅ 2026-10-06: despliegue duplicado SIN tocar producción.
+  `beta.laidea.antarquia.cl` lo sirve un Worker estático (`wrangler.jsonc` en la
+  raíz: assets de `dist/` + `not_found_handling: single-page-application`, que
+  además crea el subdominio como custom domain). **Modo dual de rutas** en
+  `src/utils/routes.js` vía `VITE_ROUTES_MODE`: `hash` (default — sigue siendo lo
+  que usan PRE/PRO de GitHub Pages, intactos) o `pathname` (beta — rutas reales
+  `/mapa`, `/libro/<slug>`); nuevos helpers `routesMode`, `readRouteInput`,
+  `currentRouteHref`, `viewHref`, `bookHref`. `AnarchistArchive.jsx` mantiene la
+  misma maquinaria en ambos modos: `replaceState` en el primer sync y, después,
+  `pushState` (pathname) o `location.hash` (hash) para el historial, con los
+  listeners `hashchange`+`popstate` compartidos. Workflow `.github/workflows/
+  beta.yml`: en cada push a `develop` → lint + test + build con
+  `VITE_ROUTES_MODE=pathname` → `wrangler deploy` (requiere los secretos
+  `CLOUDFLARE_API_TOKEN` y `CLOUDFLARE_ACCOUNT_ID`). **17 tests nuevos**
+  (`utils/routes.pathmode.test.js` 9 + `AnarchistArchive.pathmode.test.jsx` 8,
+  con Atrás/popstate); **291 tests**, lint 0 errores, build OK en ambos modos y
+  fallback SPA verificado con `vite preview` (`/mapa` y `/libro/<slug>` → 200).
+  Producción no se toca: la migración final queda sujeta a comparar ambos.
 - [ ] **Estética**: iterar paleta de colores y tipografía (variables CSS ya separadas).
   Puesta a punto visual en general.
 - [ ] **Línea de tiempo** de autores y obras (ordenado por año). ← ya existe en el
