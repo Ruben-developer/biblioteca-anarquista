@@ -43,4 +43,6 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # wrangler 3 no soporta assets-only (sin main); hace falta wrangler 4.
+          wranglerVersion: 4.148.0
           command: deploy
