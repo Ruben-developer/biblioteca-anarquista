@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { describe, it, expect, vi, afterEach } from 'vitest';
+import { describe, it, expect, vi, afterEach, beforeEach } from 'vitest';
 import React from 'react';
 import { render, screen, fireEvent, cleanup, within } from '@testing-library/react';
 import TimelineFilters from './TimelineFilters';
@@ -12,6 +12,10 @@ import Navigation from './Navigation';
 import Header from './Header';
 import { VIEWS } from '../constants';
 
+// Cada test empieza sin hash: la URL (deep links) no se filtra entre tests.
+beforeEach(() => {
+  window.history.replaceState(null, '', window.location.pathname + window.location.search);
+});
 afterEach(cleanup);
 
 describe('TimelineFilters interactivo', () => {

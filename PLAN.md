@@ -636,8 +636,24 @@ tiene 113 PDFs y 0 TXT) — son 6 obras a las que nunca se les asignó `filename
    gradiente scroll timeline móvil (M7). ✅ 2026-08-27: unificado padding de tarjetas
    a `p-5` (autores/teorías/mapa), sombras hover a `hover:shadow-lg` (timeline/biblioteca/
    autores/teorías), grid `gap-5`; StatsPanel ambas filas `border-2 p-4`; footer con
-   stats + enlaces Glosario/Contacto + crédito; `ModalHeader` compartido (EventModal/
-   RegionModal); fade gradiente en timeline horizontal. 250 tests, lint 0, build OK.
+  stats + enlaces Glosario/Contacto + crédito; `ModalHeader` compartido (EventModal/
+  RegionModal); fade gradiente en timeline horizontal. 250 tests, lint 0, build OK.
+- [x] **Deep links (URL compartibles por vista y por obra)** ✅ 2026-10-06: hash
+  routing sin dependencias (GitHub Pages no tiene rewrites; PRE se sirve con base
+  `/preview/`). Cada vista tiene slug propio: `#/biblioteca`, `#/linea-temporal`,
+  `#/mapa`, `#/autores`, `#/favoritos`, `#/teorias`, `#/influencias`, `#/acratas`,
+  `#/rutas`, `#/glosario`, `#/contacto`, `#/estadisticas` (alias en inglés:
+  `#/map`, `#/timeline`…). Cada obra abre el lector con `#/libro/<slug>` (slug del
+  título; con títulos repetidos se desambigua con `--<autor>`, `--<región>` y
+  `--<n>`: 10 colisiones resueltas en las 1.844 obras). Nuevo `src/utils/routes.js`
+  (`slugify`, `VIEW_SLUGS`, `parseRoute`, `buildViewHash`, `buildBookHash`,
+  `buildBookSlugIndex`) y sincronización URL↔estado en `AnarchistArchive.jsx`:
+  `replaceState` en el primer render, `location.hash` en cada cambio (historial
+  Atrás/Adelante) y listeners `hashchange`+`popstate` idempotentes; un deep link
+  de obra no cambia la vista activa, un slug desconocido cae a la biblioteca y
+  cerrar el lector restaura el hash de la vista. **28 tests nuevos**
+  (`utils/routes.test.js` 16 + `AnarchistArchive.deeplink.test.jsx` 12, con el
+  Atrás del navegador incluido); **274 tests**, lint 0 errores, build OK.
 - [ ] **Estética**: iterar paleta de colores y tipografía (variables CSS ya separadas).
   Puesta a punto visual en general.
 - [ ] **Línea de tiempo** de autores y obras (ordenado por año). ← ya existe en el

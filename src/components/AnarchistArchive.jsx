@@ -1,9 +1,10 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { timelineEvents } from '../data/timelineEvents';
 import { regionData } from '../data/regionData';
 import { VIEWS } from '../constants';
 import { filterEvents } from '../utils/filters';
 import { getAllAuthors, getArchiveStats } from '../utils/library';
+import { parseRoute, buildViewHash, buildBookHash, buildBookSlugIndex } from '../utils/routes';
 import { useScrollTop, useDarkMode, useFavorites } from '../hooks';
 
 // Components
@@ -26,16 +27,32 @@ import RegionModal from './RegionModal';
 import EventModal from './EventModal';
 import ScrollTopButton from './ScrollTopButton';
 
+// Índice de enlaces profundos (slug ↔ obra): se calcula una sola vez por módulo,
+// no en cada render. Inmutable durante la vida de la app (regionData es fijo).
+const BOOK_INDEX = buildBookSlugIndex(regionData);
+
+// Ruta inicial de la URL (#/mapa, #/libro/<slug>…). En SSR no hay window:
+// se usa la vista por defecto (biblioteca) sin abrir ninguna obra.
+const getInitialRoute = () =>
+  typeof window === 'undefined'
+    ? { type: 'view', view: VIEWS.LIBRARY }
+    : parseRoute(window.location.hash, BOOK_INDEX);
+
 const AnarchistArchive = () => {
   const { darkMode, toggleDarkMode } = useDarkMode();
   const { favorites, toggleFavorite, updateFavoriteNote, addFavoriteNote, deleteFavoriteNote, exportFavorites, importFavorites } = useFavorites();
   const { showScrollTop, scrollToTop } = useScrollTop();
 
-  const [activeView, setActiveView] = useState(VIEWS.LIBRARY);
+  // Ruta inicial de la URL: un deep link (#/mapa, #/libro/<slug>) abre
+  // directamente esa vista/obra; sin hash se parte de la biblioteca.
+  const [initialRoute] = useState(getInitialRoute);
+  const [activeView, setActiveView] = useState(
+    initialRoute.type === 'view' ? initialRoute.view : VIEWS.LIBRARY
+  );
   const [selectedRegion, setSelectedRegion] = useState(null);
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [showFilters, setShowFilters] = useState(false);
-  const [readingBook, setReadingBook] = useState(null);
+  const [readingBook, setReadingBook] = useState(initialRoute.type === 'book' ? initialRoute.book : null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [libraryInitialFilters, setLibraryInitialFilters] = useState(null);
 
@@ -90,6 +107,59 @@ const AnarchistArchive = () => {
     if (view === VIEWS.LIBRARY) setLibraryInitialFilters(null);
     setActiveView(view);
   };
+
+  // Estado → URL: la URL siempre refleja la vista activa y la obra abierta,
+  // para que cualquier página sea compartible. El primer sincronizado usa
+  // replaceState (no añade entrada al historial); los cambios posteriores
+  // asignan location.hash, lo que crea una entrada y habilita Atrás/Adelante.
+  // Si la URL ya coincide no se toca nada (evita bucles con hashchange).
+  const hashSyncedRef = useRef(false);
+  useEffect(() => {
+    let target;
+    if (readingBook) {
+      const slug = BOOK_INDEX.slugFor(readingBook);
+      // Obra sin enlace canónico (p. ej. un favorito cuyo título ya no está en
+      // el catálogo): se abre el lector sin reescribir la URL.
+      if (!slug) return;
+      target = buildBookHash(slug);
+    } else {
+      target = buildViewHash(activeView);
+    }
+    if (window.location.hash === target) {
+      hashSyncedRef.current = true;
+      return;
+    }
+    if (hashSyncedRef.current) {
+      window.location.hash = target;
+    } else {
+      hashSyncedRef.current = true;
+      window.history.replaceState(null, '', target);
+    }
+  }, [activeView, readingBook]);
+
+  // URL → estado: responde a Atrás/Adelante, a la edición manual del hash y a
+  // enlaces externos. Escucha también popstate por si el navegador no emite
+  // hashchange en la traversión. Handler idempotente: si el estado ya coincide
+  // con la URL, ningún setState cambia y no se re-renderiza.
+  useEffect(() => {
+    const syncFromHash = () => {
+      const route = parseRoute(window.location.hash, BOOK_INDEX);
+      if (route.type === 'book') {
+        // Un deep link de obra no cambia la vista: solo abre (o sustituye) el lector.
+        setReadingBook((prev) => (prev && BOOK_INDEX.slugFor(prev) === route.slug ? prev : route.book));
+        return;
+      }
+      setReadingBook(null);
+      if (route.view === VIEWS.LIBRARY) setLibraryInitialFilters(null);
+      setActiveView(route.view);
+    };
+    window.addEventListener('hashchange', syncFromHash);
+    window.addEventListener('popstate', syncFromHash);
+    return () => {
+      window.removeEventListener('hashchange', syncFromHash);
+      window.removeEventListener('popstate', syncFromHash);
+    };
+  }, []);
 
   const bgClass = darkMode
     ? 'bg-gradient-to-br from-red-950 via-black to-gray-900 text-gray-100'

@@ -28,7 +28,7 @@ src/
 ├── services/     # documentService.js (solo getDocumentDownloadUrl: PDFs del contenedor, TXT del repo)
 ├── constants/    # Categorías, décadas, regiones (derivadas), vistas, temas de color
 ├── hooks/        # useScrollTop, useDarkMode, useFavorites
-└── utils/        # filters.js, countryNames.js (normalización nombres de país del mapa)
+└── utils/        # filters.js, countryNames.js (normalización nombres de país del mapa), routes.js (deep links: hash ↔ vista/obra)
 public/documents/ # documents.json (metadatos) + TXT de descarga
 data/registros/   # registro.json (métricas diarias del agente)
 .daily-runs/      # logs diarios del agente

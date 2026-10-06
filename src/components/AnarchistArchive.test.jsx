@@ -1,9 +1,13 @@
-import { describe, it, expect, afterEach } from 'vitest';
+import { describe, it, expect, afterEach, beforeEach } from 'vitest';
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { cleanup } from '@testing-library/react';
 import AnarchistArchive from './AnarchistArchive';
 
+// Cada test empieza sin hash: la URL (deep links) no se filtra entre tests.
+beforeEach(() => {
+  window.history.replaceState(null, '', window.location.pathname + window.location.search);
+});
 afterEach(cleanup);
 
 describe('AnarchistArchive', () => {
