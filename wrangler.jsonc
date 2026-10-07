@@ -8,7 +8,7 @@
   },
   "routes": [
     {
-      "pattern": "beta.laidea.antarquia.cl",
+      "pattern": "beta.antarquia.cl",
       "custom_domain": true
     }
   ]

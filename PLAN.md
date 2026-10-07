@@ -656,7 +656,7 @@ tiene 113 PDFs y 0 TXT) — son 6 obras a las que nunca se les asignó `filename
   Atrás del navegador incluido); **274 tests**, lint 0 errores, build OK.
 - [x] **Beta paralelo en Cloudflare Workers (rutas reales, comparar antes de
   migrar)** ✅ 2026-10-06: despliegue duplicado SIN tocar producción.
-  `beta.laidea.antarquia.cl` lo sirve un Worker estático (`wrangler.jsonc` en la
+  `beta.antarquia.cl` lo sirve un Worker estático (`wrangler.jsonc` en la
   raíz: assets de `dist/` + `not_found_handling: single-page-application`, que
   además crea el subdominio como custom domain). **Modo dual de rutas** en
   `src/utils/routes.js` vía `VITE_ROUTES_MODE`: `hash` (default — sigue siendo lo
@@ -672,6 +672,11 @@ tiene 113 PDFs y 0 TXT) — son 6 obras a las que nunca se les asignó `filename
   (`utils/routes.pathmode.test.js` 9 + `AnarchistArchive.pathmode.test.jsx` 8,
   con Atrás/popstate); **291 tests**, lint 0 errores, build OK en ambos modos y
   fallback SPA verificado con `vite preview` (`/mapa` y `/libro/<slug>` → 200).
+  Nota: el custom domain original `beta.laidea.antarquia.cl` era un subdominio
+  de **tercer nivel**, que Universal SSL (plan gratuito: solo apex + un nivel) no
+  cubre; el certificado avanzado del Custom Domain no se emitió y el handshake
+  TLS fallaba. Se movió a `beta.antarquia.cl` (primer nivel, cubierto por
+  `*.antarquia.cl`).
   Producción no se toca: la migración final queda sujeta a comparar ambos.
 - [ ] **Estética**: iterar paleta de colores y tipografía (variables CSS ya separadas).
   Puesta a punto visual en general.
