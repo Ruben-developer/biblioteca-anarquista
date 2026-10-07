@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "biblioteca-anarquista-beta",
+  "name": "biblioteca-anarquista",
   "compatibility_date": "2026-10-06",
   "assets": {
     "directory": "./dist",
@@ -8,7 +8,7 @@
   },
   "routes": [
     {
-      "pattern": "laidea-beta.antarquia.cl",
+      "pattern": "laidea.antarquia.cl",
       "custom_domain": true
     }
   ]

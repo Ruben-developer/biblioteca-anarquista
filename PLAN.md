@@ -675,9 +675,26 @@ tiene 113 PDFs y 0 TXT) — son 6 obras a las que nunca se les asignó `filename
   Nota: el custom domain original `beta.laidea.antarquia.cl` era un subdominio
   de **tercer nivel**, que Universal SSL (plan gratuito: solo apex + un nivel) no
   cubre; el certificado avanzado del Custom Domain no se emitió y el handshake
-  TLS fallaba. Se movió a `beta.antarquia.cl` (primer nivel, cubierto por
-  `*.antarquia.cl`).
+  TLS fallaba. Se movió primero a `beta.antarquia.cl` y, tras decidir que
+  `antarquia.cl` es un paraguas general, el nombre final es
+  `laidea-beta.antarquia.cl` (primer nivel).
   Producción no se toca: la migración final queda sujeta a comparar ambos.
+- [x] **Cutover de producción a Cloudflare Workers + naming por paraguas** ✅
+  2026-10-07: decisión de dominio — `antarquia.cl` es el paraguas general y
+  `laidea` su único proyecto, así que los entornos quedan `laidea.antarquia.cl`
+  (prod, custom domain de un Worker nuevo `biblioteca-anarquista` desplegado
+  desde `main` con `VITE_ROUTES_MODE=pathname`) y `laidea-beta.antarquia.cl`
+  (beta, desde `develop`; renombrado desde `beta.antarquia.cl`, que era ambiguo
+  bajo el paraguas). Nuevo `wrangler.prod.jsonc` + workflow `prod-workers.yml`.
+  `laidea` queda con nube naranja → la **Analytics de zona** mide visitas por
+  día/semana/mes y países (métricas no invasivas, sin cookies ni JS).
+  GitHub Pages (`pages.yml` desde `main`) sigue desplegando como **respaldo**:
+  rollback = revertir el DNS a `ruben-developer.github.io` (modo `#/`).
+  El preview `/preview/` deja de ser URL pública (el custom domain absorbe
+  todas las rutas); `preview.yml` sigue publicando el build de `develop` en
+  gh-pages como artefacto. También decisión de **mantener los PDFs en el
+  servidor local/túnel**: 12,14 GiB > 10 GiB del free tier de R2 (exceso
+  ~US$0,05/mes, pero el criterio del usuario es "simple y gratuito").
 - [ ] **Estética**: iterar paleta de colores y tipografía (variables CSS ya separadas).
   Puesta a punto visual en general.
 - [ ] **Línea de tiempo** de autores y obras (ordenado por año). ← ya existe en el

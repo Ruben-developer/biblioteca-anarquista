@@ -1,0 +1,47 @@
+name: Deploy prod (Cloudflare Workers)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: prod
+  cancel-in-progress: true
+
+jobs:
+  deploy-prod:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Instalar dependencias
+        run: npm ci --ignore-scripts
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Tests
+        run: npm test
+
+      - name: Build (rutas reales /pathname)
+        run: npm run build
+        env:
+          VITE_PDF_BASE: ${{ secrets.VITE_PDF_BASE }}
+          VITE_ROUTES_MODE: pathname
+
+      - name: Desplegar en Cloudflare Workers (producción)
+        # wrangler-action v4.1.3 — usa el wrangler del propio proyecto (devDependency).
+        uses: cloudflare/wrangler-action@953926a2e2182532811c01a25e53647d93bf07c0 # v4.1.3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy --config wrangler.prod.jsonc

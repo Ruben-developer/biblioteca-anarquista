@@ -5,8 +5,9 @@ Guía para agentes autónomos (y humanos) que iteran sobre este repo.
 ## Qué es esto
 **La Idea — Archivo Histórico Anarquista** — app interactiva del movimiento anarquista:
 línea temporal (1840-1968), mapa de regiones con textos, biografías, favoritos,
-modo oscuro/claro, filtros y estadísticas. Deploy en GitHub Pages (PRE/PRO) +
-beta paralelo en Cloudflare Workers (`beta.antarquia.cl`, rutas reales).
+modo oscuro/claro, filtros y estadísticas. Deploy en Cloudflare Workers (prod `laidea.antarquia.cl` desde `main`; beta
+`laidea-beta.antarquia.cl` desde `develop`) + GitHub Pages como respaldo
+(rollback = revertir el DNS a `ruben-developer.github.io`).
 
 ## Stack (IMPORTANTE)
 - **React 18** + **Vite 4** + **Tailwind CSS 3** — JavaScript/JSX (NO TypeScript).
@@ -19,10 +20,13 @@ beta paralelo en Cloudflare Workers (`beta.antarquia.cl`, rutas reales).
   - `npm run check-downloads` — verifica que todos los `filename` del catálogo respondan HTTP 200 en el contenedor
   - `npm run test:coverage` — tests Vitest con cobertura v8 (genera `coverage/lcov.info`)
   - `npm run preview` — sirve el build local
-- CI de Pages: `npm ci` → lint → test → audit (informativo) → build → deploy.
+- CI de Pages (respaldo): `npm ci` → lint → test → audit (informativo) → build → deploy.
 - CI beta (Cloudflare Workers): `beta.yml` en cada push a `develop` → lint →
   test → build con `VITE_ROUTES_MODE=pathname` → `wrangler deploy`
   (secretos `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID`; ver `wrangler.jsonc`).
+- CI prod (Cloudflare Workers): `prod-workers.yml` en cada push a `main` →
+  mismo pipeline → `wrangler deploy --config wrangler.prod.jsonc`
+  (custom domain `laidea.antarquia.cl`).
 
 ## Estructura
 ```
