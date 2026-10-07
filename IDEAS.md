@@ -67,6 +67,14 @@
 - **CI que valide `worldmap.geo.json`**: regenerar/verificar en el pipeline para
   evitar divergencias silenciosas.
 
+## Seguridad / ops (anotado 2026-10-07)
+- **Rotar `CLOUDFLARE_API_TOKEN`**: el valor quedó expuesto en el historial de
+  un chat. Pendiente por decisión del usuario ("de momento nada"); cuando se
+  quiera: regenerar en Cloudflare dashboard → API Tokens, y actualizar con
+  `gh secret set CLOUDFLARE_API_TOKEN < nuevo-token`. El token actual solo tiene
+  Workers Scripts:Edit + Workers Routes:Edit + Zone:Read (sin DNS/R2/Analytics;
+  esos cambios se hacen a mano en el dashboard).
+
 ## Fixes de negocio pendientes
 - **Orden de países en el menú del mapa**: `WorldMapView.jsx:130` usa
   `Object.entries(regionData)` → orden de inserción en regionData.js (España,

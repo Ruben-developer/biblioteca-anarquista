@@ -29,3 +29,12 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: SBOM (CycloneDX)
+        run: npm sbom --omit dev --format cyclonedx-json > sbom.cdx.json
+
+      - name: Subir SBOM como artifacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: sbom
+          path: sbom.cdx.json
