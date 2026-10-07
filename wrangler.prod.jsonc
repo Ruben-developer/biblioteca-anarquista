@@ -8,8 +8,8 @@
   },
   "routes": [
     {
-      "pattern": "laidea.antarquia.cl",
-      "custom_domain": true
+      "pattern": "laidea.antarquia.cl/*",
+      "zone_name": "antarquia.cl"
     }
   ]
 }
