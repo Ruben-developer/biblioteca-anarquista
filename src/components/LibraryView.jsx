@@ -17,23 +17,6 @@ const getLeerBtnClass = (darkMode) =>
 const getSinArchivoClass = (darkMode) =>
   darkMode ? 'border-[#872320]/50 text-gray-500' : 'border-[#B79F6E] text-amber-600'
 
-const BookEventLink = ({ book, timelineEvents, onOpenEvent, darkMode }) => {
-  const bookEvents = getBookEvents(timelineEvents, book)
-  if (!bookEvents.length) return null
-  return (
-    <button
-      onClick={() => onOpenEvent(bookEvents[0])}
-      className={`mt-2 flex items-center gap-1.5 text-xs font-medium transition-colors ${
-        darkMode ? 'text-red-400 hover:text-red-300' : 'text-amber-700 hover:text-amber-900'
-      } hover:underline`}
-      title={`Ir al evento de la línea temporal: ${bookEvents[0].title} (${bookEvents[0].year})`}
-    >
-      <CalendarClock size={14} />
-      Ver en la línea temporal: {bookEvents[0].title} ({bookEvents[0].year})
-    </button>
-  )
-}
-
 const LeerButton = ({ book, onRead, darkMode }) => {
   if (!book.filename) {
     return (

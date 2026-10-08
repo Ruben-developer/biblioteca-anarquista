@@ -32,7 +32,7 @@ modo oscuro/claro, filtros y estadísticas. Deploy en Cloudflare Workers (prod `
 ```
 src/
 ├── components/   # Header, Navigation, TimelineView, WorldMapView + WorldMap (mapamundi propio con d3-geo), AuthorsView, FavoritesView, modales
-├── data/         # regionData.js (FUENTE ÚNICA: regiones + libros + iso), timelineEvents.js, authors.js, countryData.js (deriva ISO), worldmap.geo.json (geometrías del mapa)
+├── data/         # regionData.js (FUENTE ÚNICA: regiones + libros + iso), timelineEvents.js, authors.js, worldmap.geo.json (geometrías del mapa)
 ├── services/     # documentService.js (solo getDocumentDownloadUrl: PDFs del contenedor, TXT del repo)
 ├── constants/    # Categorías, décadas, regiones (derivadas), vistas, temas de color
 ├── hooks/        # useScrollTop, useDarkMode, useFavorites
@@ -47,10 +47,10 @@ data/registros/   # registro.json (métricas diarias del agente)
   - `relatedTexts` empareja por **título**, NO por región/país: así el 15M (2011) enlaza solo con textos del 15M y no con la guerra civil (ambos son de España).
   - **Los eventos NACEN de los textos**: al importar un texto histórico, si no existe una tarjeta que lo agrupe, se crea (ej. "Anarquismo en Colombia"). Todo texto histórico DEBE quedar vinculado a un evento (`@evento-builder`). El orden del timeline se deriva por año en `filterEvents`, el archivo no necesita estar ordenado.
 - **Autor** → derivado automáticamente de `regionData.js` con `getAllAuthors` (agrupa TODOS los libros: historia + ideas). No hay archivo de autores manual.
-- **Texto por región** → `src/data/regionData.js`. Campos: `title`, `author`, `year`, `category`, `rating`, y opcional `filename`. **FUENTE ÚNICA**: `REGIONS` (filtros) y el ISO del mapa se derivan automáticamente de aquí; no hay que tocar `countryData.js` ni `REGIONS` manualmente.
+- **Texto por región** → `src/data/regionData.js`. Campos: `title`, `author`, `year`, `category`, `rating`, y opcional `filename`. **FUENTE ÚNICA**: `REGIONS` (filtros) y el ISO del mapa se derivan automáticamente de aquí; no hay que tocar `REGIONS` manualmente.
 - **Metadatos completos de obra** → legacy en `public/documents/documents.json`. Ya no se consume en la app (el catálogo real es `regionData.js`); no añadir obras nuevas aquí.
 - **Nuevo PDF descargable** → añade `filename` al libro en `regionData.js` (el botón Descargar solo aparece si hay `filename`).
-- **Nuevo país en el mapa** → añade la región a `regionData.js` con su campo `iso` (ej. `"Francia": { iso: "fr", books: [...] }`). El mapa, los filtros y `countryData.js` se actualizan solos. Si una clave no tiene `iso` (autores, conceptos como "Ideas"), no se pinta en el mapa ni aparece en la lista por región. Excepción única: `"Internacional"`, que guarda la historia sin región determinada y sí tiene tarjeta (sin pintar país).
+- **Nuevo país en el mapa** → añade la región a `regionData.js` con su campo `iso` (ej. `"Francia": { iso: "fr", books: [...] }`). El mapa y los filtros se actualizan solos (el ISO se lee directo de la región en `WorldMapView.jsx`). Si una clave no tiene `iso` (autores, conceptos como "Ideas"), no se pinta en el mapa ni aparece en la lista por región. Excepción única: `"Internacional"`, que guarda la historia sin región determinada y sí tiene tarjeta (sin pintar país).
 - **Mapa**: un país solo se destaca si tiene AL MENOS 1 texto de categoría histórica (`historia`). Si solo tiene teoría (p. ej. Inglaterra), queda en gris. Los textos históricos se filtran con `getHistoricalBooks(regionData, region)` en `src/utils/library.js`.
   - **Tarjetas "O navega por región"**: se muestran SOLO los países con `iso` y ≥1 texto histórico, ordenadas por número DESC, más la tarjeta especial `"Internacional"` (historia sin región, no pinta país). Una región sin `iso` o con 0 históricos ni se pinta ni crea tarjeta.
   - **Invariante**: `textos en línea temporal (vinculados a eventos) = textos del mapa (históricos)`. Todo texto histórico debe estar vinculado a un evento.
@@ -84,9 +84,8 @@ data/registros/   # registro.json (métricas diarias del agente)
 - **Componente propio** `src/components/WorldMap.jsx` renderizado con `d3-geo`
   (no usa librería externa de mapas). Datos en `src/data/worldmap.geo.json`
   (FeatureCollection GeoJSON, generado por `npm run generate-worldmap`).
-- `src/data/countryData.js`: deriva `COUNTRY_ISO` desde el campo `iso` de cada región en `regionData.js` (fuente única, no hay que mantenerlo a mano).
 - `src/components/WorldMapView.jsx`: vista que alimenta `WorldMap` con `data`,
-  `styleFunction`, `onClickFunction`, `tooltipTextFunction` y colores por tema.
+  `styleFunction`, `onClickFunction`, `tooltipTextFunction` y colores por tema
 - **Política del mapa**: el GeoJSON fusiona la geometría de Israel dentro de
   Palestine (`npm run generate-worldmap` lo reconstruye desde el TopoJSON de
   Natural Earth). Israel NO existe como país en el mapa. No revertir esto.
@@ -154,7 +153,7 @@ data/registros/   # registro.json (métricas diarias del agente)
 - Trabaja SOLO en este repo, nunca en `devops-lab` ni otros proyectos.
 - No toques `pdfs-local/` (los PDFs no se versionan) ni subas artefactos (`dist/`, `node_modules/`).
 - No cambies `PDF_BASE` a hostname ni rompas la ruta `base: /biblioteca-anarquista/` en `vite.config.js`.
-- Al añadir regiones al mapa, edita SOLO `regionData.js` (con su `iso`); `REGIONS` y `countryData.js` se derivan solos. No tocar esos dos manualmente.
+- Al añadir regiones al mapa, edita SOLO `regionData.js` (con su `iso`); `REGIONS` se deriva solo. No tocarlo manualmente.
 - Tras cada cambio: `npm run check` (lint + tests + build) debe pasar, y el CI de Pages quedar verde. Si tocaste el catálogo, corre también `npm run check-downloads`.
 - Mantén actualizados `PLAN.md`, `data/registros/registro.json` y `.daily-runs/`.
 - Commits convencionales en español (`feat:`, `fix:`, `docs:`, `chore:`).

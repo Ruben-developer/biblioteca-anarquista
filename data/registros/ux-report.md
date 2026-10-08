@@ -1,271 +1,152 @@
 # Reporte UX/UI — Biblioteca Anarquista (Archivo Histórico Anarquista)
 
-> **Fecha y hora:** 2026-08-11 15:11 (UTC-4)
+> **Fecha y hora:** 2026-10-07 20:59 (UTC-3)
 > **Revisor:** `@ux-review`
-> **Alcance:** `src/components/*`, `src/index.css`, `src/constants/index.js`, `index.html`, `tailwind.config.js`
-> **Verificación:** build de producción OK (`vite build`, 1398 módulos) + análisis del CSS generado en `dist/` + revisión estática de todos los componentes.
+> **Alcance:** estética visual, experiencia (navegación, búsqueda, filtros, lectura, mobile) y propuestas de módulos.
+> **Verificación:** revisión estática de `src/components/*`, `src/index.css`, `tailwind.config.js`, `src/constants/index.js`, `src/utils/library.js`, `src/hooks/index.js`, `index.html` + **comprobaciones de datos reales** ejecutadas con `node` contra `regionData.js` y `timelineEvents.js` (los números citados abajo son medidos, no estimados).
+> **Relación con reportes previos:** este documento reemplaza a `ux-report.md` (2026-08-11, recuperable con git) y complementa `ux-report-navegacion.md` (2026-08-17) y `ux-report-estetica.md` (2026-08-26). Se han verificado como **resueltos** en el código actual: fondo pergamino, scrollbar bermellón, foco global `:focus-visible`, `prefers-reduced-motion`, estados vacíos de Timeline, trampa de foco en `RegionModal`/`EventModal` (`useModalFocus`), `ModalHeader` compartido, mapa con `tabIndex`/`Enter`/`Space`, `font-mono`/`font-serif` al menos en Biblioteca y EventModal.
 
 ---
 
 ## 0. Resumen ejecutivo
 
-La base funcional es sólida (112 obras, mapa propio d3-geo, 154 tests, CI verde). El problema no es de contenido sino de **"piel de plantilla"**: la app se lee como un dashboard genérico con una paleta parcialmente aplicada. Verifiqué tres cosas graves que lo demuestran:
+La capa estética ("archivo/afiche") está asentada y es coherente en tema, tipografía display y bordes. Los problemas actuales son de **funcionalidad de filtros y navegación que contradicen los datos reales**, más que de pinceladas:
 
-1. **El pergamino no llega al fondo de la página** (bug real de CSS): el selector de `index.css` usa un combinatorio de descendiente y la clase del tema vive en el MISMO elemento que las clases de fondo, así que el degradado raíz sigue siendo el amarillo de Tailwind (`#fffbeb → #fefce8 → #fff7ed`).
-2. **Quedan residuos de ámbar/amarillo** en el tema claro (países del mapa, leyenda, marco, placeholder de búsqueda) exactamente donde el usuario pidió bermellón.
-3. **Elementos de plantilla sin teñir**: scrollbar **púrpura** (`rgba(155,89,182,…)`), emojis genéricos, tipografías de sistema, sin footer.
-
-El reporte entrega hallazgos por severidad con valores exactos, un plan tipográfico completo y cierra con las 5 acciones de máximo impacto.
-
----
-
-## 1. Hallazgos — SEVERIDAD CRÍTICA
-
-### C1. El fondo del tema pergamino NO se aplica a la página (sigue el amarillo de Tailwind)
-- **Ubicación:** `src/components/AnarchistArchive.jsx:64-69` + `src/index.css:236-238` y `93-98`.
-- **Problema:** La raíz renderiza
-  ```jsx
-  <div className={`min-h-screen bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 text-gray-800 … theme-constructivista theme-pergamino`}>
-  ```
-  y el override del tema es `.theme-constructivista.theme-pergamino .bg-gradient-to-br.from-amber-50.via-yellow-50.to-orange-50` (con **espacio** = combinatorio descendiente). Un elemento no es descendiente de sí mismo, así que la regla **no matchea la raíz**: el fondo visible sigue siendo el degradado por defecto de Tailwind (`amber-50 #fffbeb → yellow-50 #fefce8 → orange-50 #fff7ed`), que es **amarillento**. Lo confirmé en el CSS compilado (`dist/`): no existe ninguna regla sin espacio (`.theme-constructivista.bg-gradient…`).
-- **Impacto:** La premisa central del tema ("fondo marfil→tan, sin amarillo") está rota en el elemento más visible de la web. Afecta también al modo oscuro (`index.css:93-95`) y al `text-gray-800` heredado de la raíz.
-- **Solución concreta:**
-  1. Duplicar las 3-4 reglas que apuntan a la raíz con selector compuesto (sin espacio): `.theme-constructivista.theme-pergamino.bg-gradient-to-br.from-amber-50.via-yellow-50.to-orange-50` (y equivalente para `from-red-950.via-black.to-gray-900` y `text-gray-800`).
-  2. Alternativa más robusta (recomendada): aplicar los colores de fondo a `body` desde CSS cuando `.theme-pergamino` esté presente, y dejar la raíz con `bg-transparent`:
-     ```css
-     .theme-constructivista.theme-pergamino { background-image: linear-gradient(135deg,#F5EDD9 0%,#F0E3C9 45%,#E2D0A9 75%,#D6BF8F 100%); }
-     ```
-     y quitar `bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50` del `bgClass`.
+1. **La línea temporal tiene filtros que no pueden dar resultados**: el filtro "Región" renderiza **343 chips** (307 son nombres de autor o pseudosecciones de `regionData`), y de las 22 regiones de los eventos solo 4 coinciden con algún chip. El filtro "Categoría" ofrece Teoría/Acratas/Otros cuando **los 31 eventos son `historia`**.
+2. **La Biblioteca (vista raíz, 1.838 obras publicadas) no tiene filtros ni orden**: `filterBooks` y `sortBooks` existen en `utils/library.js` pero no se usan; solo hay búsqueda libre y paginación de 12 → ~153 páginas en orden arbitrario. Además `LibraryView.jsx:126` excluye `otros` pero **no** `acratas`: las 358 obras de vidas aparecen duplicadas en Biblioteca y Autores contra la regla de `AGENTS.md` (ver A5).
+3. **El año de obra está desincronizado**: `getAllBooks` devuelve `pubYear` (542 libros) pero los componentes leen `book.year` (**0 de 1.844 libros lo tienen**) → la "Línea de tiempo de su obra" de Autores es código muerto y ninguna tarjeta muestra el año.
+4. **Navegación sin mapa del sitio**: en desktop el único camino es el drawer; la vista activa no se indica fuera de él; Glosario y Estadísticas **no tienen ningún botón de entrada** (solo URL).
 
 ---
 
-### C2. Residuos de ámbar/amarillo en el tema claro (mapa, leyenda, placeholder, bordes)
-- **Ubicación:** `src/components/WorldMapView.jsx:67-75, 99-100, 109-117`; `src/components/LibraryView.jsx:51`; `src/constants/index.js:49-51`.
-- **Problema:** En tema claro (pergamino) siguen visibles colores ámbar Tailwind que contradicen la paleta bermellón:
-  - Países del mapa: `['#fde68a', '#92400e']` (ámbar-200 → ámbar-800, amarillento).
-  - Marco y borde del mapa: `frameColor/borderColor = '#b45309'` (ámbar-700).
-  - Leyenda: `linear-gradient(to right, #fde68a, #92400e)`.
-  - Placeholder de búsqueda: `placeholder-amber-400` = `#fbbf24` (amarillo puro, sin override en `index.css`).
-  - Bordes de header/nav claros: `border-amber-800/30` y `border-amber-800/20` (sin override en el tema).
-- **Solución concreta:**
-  - `WorldMapView.jsx`: en tema claro usar la rampa rojo bermellón: `['#E4CCC0', '#8A1E19']` (ya definida en `index.css:290-305`); `frameColor/borderColor = '#A0241A'`; leyenda `linear-gradient(to right, #E4CCC0, #8A1E19)`.
-  - `LibraryView.jsx:51`: cambiar `placeholder-amber-400` por `placeholder-amber-700` (→ `#A3201A`) o añadir en `index.css` un override `.theme-constructivista .placeholder-amber-400::placeholder { color: #8A6336; }`.
-  - `constants/index.js`: añadir overrides para `border-amber-800/30` y `border-amber-800/20` en el bloque constructivista (→ `rgba(160,36,26,0.35)` y `rgba(160,36,26,0.25)`).
+## 1. Hallazgos — ALTA prioridad
+
+### A1. Filtros de la línea temporal que no pueden dar resultados (Región: 343 chips; Categoría: solo Historia)
+- **Ubicación:** `src/constants/index.js:22` (`REGIONS = ['all', ...Object.keys(regionData)]`), `src/components/TimelineFilters.jsx:97-110` y `:119-131`.
+- **Problema (medido con node):** `regionData` tiene **343 claves**, de las cuales solo 36 tienen `iso` (países reales); las otras 307 son autores y agrupaciones ("Ideas", "Abraham Guillen", …). El filtro "Región" las renderiza **todas** como chips. De las 22 regiones de `timelineEvents` ("España, Francia e Italia", "Mediterráneo y Caribe", …) solo **4 coinciden** con alguna clave (`España`, `Chile`, `Japón`, `Italia`). Clicar "Abraham Guillen" o "Mediterráneo y Caribe" → vacío garantizado. Además el grupo "Categoría" ofrece Teoría/Acratas/Otros cuando **31/31 eventos son `historia`** — esas tres chips solo llevan al estado vacío.
+- **Solución concreta (1-2 frases):** derivar las opciones de región **de los datos de eventos** (`[...new Set(timelineEvents.map(e => e.region))]` con contadores) y eliminar el grupo Categoría del timeline o sustituirlo por un filtro real derivado de `event.type` ("con texto" / "hecho"). `REGIONS` de constants queda únicamente para la futura Biblioteca (ver A2).
+
+### A2. Biblioteca sin filtros ni orden — infraestructura muerta (`filterBooks`/`sortBooks`)
+- **Ubicación:** `src/components/LibraryView.jsx:131-138` (filtro inline solo por texto) frente a `src/utils/library.js:44-65` (`filterBooks` con categoría/región/década/autor/disponibilidad/favoritos y `sortBooks` — **0 usos** fuera de tests).
+- **Problema (medido):** el catálogo publica **1.838 obras** (863 historia, 617 teoría, 358 acratas) pero la única vista inicial solo permite búsqueda de palabras; no hay filtro por categoría/región/década, no hay selector de orden y las 12 tarjetas por página aparecen en orden de inserción de `regionData` (~153 páginas arbitrarias). El README describe la web como "filtros avanzados" que hoy no existen en el catálogo.
+- **Solución concreta:** conectar `filterBooks` + `sortBooks` a la UI de `LibraryView`: chips de categoría (Historia/Teoría/Acratas) + chips o select de región derivado de claves con `iso` + selector de orden ("Mejor valorado" / "Título" / "Año"), reutilizando el patrón visual de `TimelineFilters.jsx:57-134`.
+- **Nota:** la búsqueda semántica y filtros cruzados ya están en `IDEAS.md` (F3); esta nota es solo lo que `filterBooks` ya resuelve.
+
+### A3. Año de obra desincronizado: `book.year` vs `pubYear` → feature muerta y tarjetas sin año
+- **Ubicación:** `src/utils/library.js:13-22` (`getAllBooks` no normaliza el año), `src/components/AuthorsView.jsx:178` (filtra `b.year` para la "Línea de tiempo de su obra") y `:221-225` (muestra `book.year`), `src/components/LibraryView.jsx:74-107` (GridCard no muestra año).
+- **Problema (medido):** en `regionData` **0 de 1.844 libros tienen `year`** y 542 tienen `pubYear`. Como los componentes leen `book.year`, la mini-línea de tiempo de obras por autor **nunca se renderiza**, el año no aparece en ninguna tarjeta de un archivo histórico, y `FavoriteButton` guarda `year: null` (`LibraryView.jsx:61`).
+- **Solución concreta:** normalizar en `getAllBooks` (`year: book.pubYear ?? book.year`) y cambiar las 3 lecturas a `book.year` normalizado; con eso la línea de tiempo de autor y el chip de año en GridCard funcionan sin tocar datos.
+
+### A4. Navegación invisible en desktop + vistas huérfanas (Glosario y Estadísticas sin entrada)
+- **Ubicación:** `src/components/Navigation.jsx:48-98` (solo renderiza el `<dialog>` del drawer), `src/components/Header.jsx:8` (`onShowStats` se recibe pero nunca se usa → sin botón), `src/components/AnarchistArchive.jsx:318-324` (footer de una línea, sin enlaces) y `:206-315` (`GLOSSARY` y `STATS` solo alcanzables por URL `/glosario`, `/estadisticas`).
+- **Problema:** en desktop no hay pestañas persistentes ni breadcrumb; la vista activa solo se deduce del `h2` del contenido (el label del menú está oculto con `md:hidden`, `Header.jsx:36`). "Mi Biblioteca (N)" queda dentro del drawer. Glosario y StatsPanel (`StatsPanel.jsx`, 166 líneas de trabajo) no tienen botón en ninguna parte.
+- **Solución concreta:** volver a una barra de pestañas desktop (≤7: Biblioteca, Mapa, Línea Temporal, Autores, Acratas, Teorías, Rutas; Favoritos ya vive en el header) con `aria-current` (ya implementado en el drawer); mover Glosario + Estadísticas al footer como enlaces (ver M8). El panel de Estadísticas, además, hoy es la única vista sin `h2` ni contenedor tipo tarjeta (ver §3).
+
+### A5. Las 358 obras "acratas" están duplicadas en Biblioteca y Autores (contradice `AGENTS.md`)
+- **Ubicación:** `src/components/LibraryView.jsx:126` (filtra `b.category !== 'otros'` pero **no** `'acratas'`) y `src/utils/library.js` `getAllAuthors` (agrupa los **1.844** libros, incluidos `acratas` y `otros`) → `AnarchistArchive.jsx:79` pasa ese resultado a `AuthorsView`.
+- **Problema (medido con node):** las 358 obras de vidas (categoría `acratas`) aparecen **tres veces**: en Biblioteca (catálogo), en Autores (222 de los 740 autores tienen libros acratas) y en la sección Acratas. `AGENTS.md` es explícito: "`acratas` … NO van al mapa ni a la línea temporal; **tampoco a la Biblioteca ni Autores** (apartadas)". El resultado es una arquitectura de información incoherente: el usuario ve la misma biografía duplicada en dos índices distintos sin saber que es la misma colección.
+- **Solución concreta:** en `LibraryView.jsx:126` añadir `&& b.category !== 'acratas'` (mismo tratamiento que `otros`) y en `getAllAuthors` excluir también `acratas`/`otros` — o, si se decide intencionadamente integrarlas en el catálogo (es defendible: 358 obras es el 19% del catálogo), **actualizar `AGENTS.md` y el README** para que la documentación refleje la elección y evitar el doble inventario.
 
 ---
 
-### C3. Scrollbar púrpura de plantilla
-- **Ubicación:** `src/index.css:39-46`.
-- **Problema:** `::-webkit-scrollbar-thumb { background: rgba(155, 89, 182, 0.5) }` — púrpura de un template genérico, totalmente fuera de la paleta (y visible en toda la app al hacer scroll vertical).
-- **Solución concreta:** sustituir por tono del tema:
-  ```css
-  ::-webkit-scrollbar-thumb { background: rgba(160, 36, 26, 0.45); border-radius: 2px; }
-  ::-webkit-scrollbar-thumb:hover { background: rgba(160, 36, 26, 0.65); }
-  ```
-  (rojo bermellón semitransparente sobre pergamino; en dark podría alternarse a `rgba(208,44,38,.5)`).
+## 2. Hallazgos — MEDIA prioridad
+
+### M1. Foco de teclado invisible en 3 buscadores (`focus:outline-none` + borde de foco = color de reposo)
+- **Ubicación:** `src/components/AuthorsView.jsx:98`, `src/components/AcratasView.jsx:133`, `src/components/TimelineFilters.jsx:44`. Las tres usan `focus:outline-none focus:border-[#B79F6E]` (light) o `focus:border-[#872320]` (dark) — **idéntico al borde de reposo** → al tabear, el input no muestra ningún cambio.
+- **Solución concreta:** reemplazar por `focus:border-[#A0241A] focus:ring-2 focus:ring-[#A0241A]/30` (o simplemente quitar `focus:outline-none` para que actúe el `:focus-visible` global de `index.css:57-60`).
+
+### M2. Drawer de navegación sin trampa de foco ni foco inicial
+- **Ubicación:** `src/components/Navigation.jsx:46-99`.
+- **Problema:** al abrir el drawer, el foco queda en el botón hamburguesa; `Tab` recorre el contenido de detrás (el overlay lo tapa visualmente pero el teclado "sale"). No se restaura el foco al cerrar. `RegionModal`/`EventModal` ya resuelven esto con `useModalFocus` (`src/hooks/index.js:171`).
+- **Solución concreta:** reutilizar `useModalFocus` (o su variante sin escape) sobre el `<dialog>` del drawer: mover foco al primer item, atrapar `Tab`/`Shift+Tab`, restaurar al desmontar.
+
+### M3. Inputs `bg-white` puros que rompen la paleta pergamino
+- **Ubicación:** `LibraryView.jsx:156`, `AuthorsView.jsx:98`, `AcratasView.jsx:133`, `GlossaryView.jsx:23, 95, 118`, `TheoriesView.jsx:98, 129`, `ReadingPathsView.jsx:86, 110`, `ContactView.jsx:108`, `FavoritesView.jsx:214` (todos `bg-white` sin opacidad) — y `src/index.css:166-169` solo sobreescribe `.bg-white/60` y `.bg-white/80`.
+- **Problema:** sobre el fondo pergamino (`#F5EDD9→#D6BF8F`), los inputs y botones "En el catálogo" quedan **blanco puro #FFFFFF**, exactamente donde el tema litera los demás blancos → parches de "formulario genérico" en un archivo cálido.
+- **Solución concreta:** añadir en `index.css` `.theme-constructivista .bg-white { background-color: rgba(248,240,220,0.95); }` (y su variante `theme-pergamino`), o sustituir `bg-white` por `bg-white/80` en esos 10 sitios.
+
+### M4. Estados vacíos sin acción (Biblioteca, Autores, Acratas) y Favoritos sin CTA
+- **Ubicación:** `LibraryView.jsx:163-165` (un `<p>` plano), `AuthorsView.jsx:132-136`, `AcratasView.jsx:143-146`, `FavoritesView.jsx:91-99` (icono + texto pero sin botón; invita a "ir a Biblioteca o el Mapa" sin enlace).
+- **Problema:** el timeline ya tiene el patrón correcto (`TimelineView.jsx:164-184`: mensaje + botón "Limpiar filtros"); las demás vistas no. Un usuario con búsqueda sin resultados no tiene qué hacer.
+- **Solución concreta:** un patrón mínimo compartido (espacio vacío de `p-12`, icono lucide, mensaje con el término buscado y botón "Limpiar búsqueda") y, en Favoritos, un botón primario que navegue a `VIEWS.LIBRARY` (el scroll "Guarda textos desde la Biblioteca…" no clica).
+
+### M5. Elevación y radio de tarjeta inconsistentes
+- **Ubicación:** tarjetas con **sombra base** (`shadow-md`): `AuthorsView.jsx:146`, `TheoriesView.jsx:28`, `AcratasView.jsx:156`, `GlossaryView.jsx:58`, `ReadingPathsView.jsx:28`, `FavoritesView.jsx:151`, `TimelineView.jsx:44,109` — frente a tarjetas **sin sombra en reposo**: `LibraryView.jsx:74` (GridCard solo `hover:shadow-lg`) y `WorldMapView.jsx:140` (tarjeta de región). Además `FeaturedBook.jsx:13` usa `rounded-xl` mientras **todas** las demás tarjetas usan `rounded-lg` (incluido el resto de la Biblioteca).
+- **Problema:** el grid de la vista inicial se ve "plano" respecto a Autores/Teorías/Glosario; la obra del día tiene un radio distinto sin motivo.
+- **Solución concreta:** añadir `shadow-md` (o `shadow-sm`) a `GridCard` y a las tarjetas de región del mapa, y unificar `rounded-xl → rounded-lg` en `FeaturedBook`.
+
+### M6. Grafo de influencias inaccesible por teclado y con `role="img"` sobre contenido interactivo
+- **Ubicación:** `src/components/InfluencesView.jsx:63-119` (`<svg role="img">` con `<g onMouseEnter/onClick>` por nodo), y el mismo patrón `role="img"` con paths enfocables en `WorldMap.jsx:118-125`.
+- **Problema:** `role="img"` priva a los hijos del árbol de accesibilidad (el lector de pantalla lee solo la etiqueta del grafo) y, además, los nodos del grafo **no son enfocables** (a diferencia del `WorldMap`, que ya tiene `tabIndex`/`Enter`/`Space`, `WorldMap.jsx:91-102`): un usuario de teclado no puede seleccionar pensadores.
+- **Solución concreta:** en `InfluencesView` cambiar a `role="group"` y añadir `tabIndex={0}` + `role="button"` + `onKeyDown` (Enter/Espacio → `setSelectedId`) a cada `<g>` de nodo, más `:focus-visible` con el borde del tema (como `.worldmap__country:focus-visible`, `index.css:75-79`). En `WorldMap.jsx`, usar `role="group"` en el `svg` y dejar `role="button"` en los paths.
+
+### M7. Chips de década/categoría que llevan al vacío (desalineados con los datos)
+- **Ubicación:** `src/constants/index.js:16` (`DECADES` fijo) + `TimelineFilters.jsx:75-87`, con `CATEGORIES` (`index.js:1-7`).
+- **Problema (medido):** las décadas de los eventos son `-1800s, 1860s–1930s, 1960s, 1970s, 2000s, 2010s`; los chips `1700s, 1840s, 1940s, 1950s, 1980s` dan siempre 0 resultados, y `-1800s` (el evento "A.A.") **no existe como chip** para el usuario. "Otros" de `CATEGORIES` es un cubo interno que nunca aparecerá en la UI del timeline.
+- **Solución concreta:** derivar las décadas presentes de `filterEvents` (con contador por chip, como hace `AuthorsView.jsx:117-121` con las letras) y eliminar de este filtro las categorías que no existen en eventos.
+
+### M8. Footer de una línea: Glosario/Estadísticas/Contacto huérfanos y sin cierre de archivo
+- **Ubicación:** `AnarchistArchive.jsx:318-324`.
+- **Problema:** el acceso a Glosario y Estadísticas (A4) se arregla exactamente aquí: hoy el footer es solo "La Idea · Archivo Histórico Anarquista" y no tiene un solo enlace. El reporte de estética (2026-08-26, M5) ya propuso el footer completo y sigue sin implementarse.
+- **Solución concreta:** añadir al footer las estadísticas (`stats.texts` / `stats.events` / `stats.regions`, ya computadas en `AnarchistArchive.jsx:87`) y enlaces a Glosario, Estadísticas y Contacto reutilizando `handleViewChange`.
 
 ---
 
-### C4. Línea temporal sin estado vacío (búsqueda sin resultados = contenedor mudo)
-- **Ubicación:** `src/components/TimelineView.jsx:13-14` + `src/components/TimelineFilters.jsx:136-138`.
-- **Problema:** Cuando `filteredEvents.length === 0`, `minWidth` se calcula como `0 * 380 = 0` y el panel renderiza un contenedor vacío con una franja de gradiente y **cero mensajes**: solo queda el contador "Mostrando 0 de 16 eventos" arriba. El usuario no recibe feedback visual de por qué no hay nada.
-- **Solución concreta:** en `TimelineView.jsx`, antes de renderizar el contenedor, añadir:
-  ```jsx
-  {filteredEvents.length === 0 ? (
-    <div className="p-12 text-center …">
-      <p className="text-xl …">No hay eventos que coincidan con los filtros</p>
-      <button onClick={onClearFilters} className="…">Limpiar filtros</button>
-    </div>
-  ) : ( …el contenedor actual… )}
-  ```
-  pasando `onClearFilters` como prop desde `AnarchistArchive.jsx:103-107` (ya existe `clearFilters`).
+## 3. Hallazgos — BAJA prioridad
+
+### B1. Botones del header por debajo del área táctil de 44px en móvil
+- **Ubicación:** `src/components/Header.jsx:29-71` (`p-2 md:p-3`; con icono de 20px → 36×36px < 44px) y `ScrollTopButton.jsx:9-16` (`p-4` + icono 24 → 56px, correcto).
+- **Solución concreta:** en móvil usar `p-3` en los 3 botones del header (correo, tema, favoritos) para alcanzar ~44px, o añadir un área de toque invisible.
+
+### B2. Toolbar del lector sin `flex-wrap` → riesgo de corte en pantallas ≤375px; sin estado de carga del PDF
+- **Ubicación:** `src/components/ReaderOverlay.jsx:31-103`.
+- **Problema:** la barra superior tiene 5 controles ("Cerrar", "Claro/Oscuro", Descargar, Abrir, Favorito) en una fila sin `flex-wrap`: el mínimo aproximado es ~382-390px (medido de sus paddings/iconos) → en 360-375px el último botón puede quedar recortado (el `overflow-x:hidden` global, `index.css:19-22`, lo ocultaría en silencio). Además el `<iframe>` de PDF no muestra indicador mientras carga.
+- **Solución concreta:** añadir `flex-wrap` a la barra (o colapsar etiquetas a iconos bajo `sm`) y un sutil `loading` (spinner `Loader2` + `animate-spin`) sobre el iframe con `onLoad` para restaurarlo — en la línea de `ContactView.jsx:94`.
+
+### B3. Compartir en redes: sin Open Graph, Twitter Card ni `theme-color`
+- **Ubicación:** `index.html` (no hay `og:*`, `twitter:*`, `theme-color`; solo `title` + `description`).
+- **Problema:** cada vista tiene URL compartible (`/mapa`, `/libro/<slug>`, `/estadisticas` vía `utils/routes.js`) pero al pegarla en Telegram/WhatsApp/X sale una tarjeta genérica.
+- **Solución concreta:** añadir `og:title`, `og:description`, `og:type=website` y `meta name="theme-color"` con `#1A1818` (oscuro) / `#F5EDD9` (claro, según `useDarkMode` — puede fijarse el del tema por defecto).
+
+### B4. "Obra del día" no se oculta al buscar
+- **Ubicación:** `LibraryView.jsx:161` (`<FeaturedBook/>` se renderiza antes de comprobar `filtered.length === 0`).
+- **Problema:** al escribir "Kropotkin" en la búsqueda, la obra destacada (que puede no coincidir) sigue arriba del grid de resultados.
+- **Solución concreta:** renderizar `FeaturedBook` solo cuando `!searchTerm.trim()` (o mostrar "resultados de la búsqueda" como título de sección reemplazando al destacado).
 
 ---
 
-## 2. Hallazgos — MEJORA
+## 4. Incoherencias visuales entre vistas (verificadas en código)
 
-### M1. Tipografía de sistema: falta identidad de archivo/imprenta
-- **Ubicación:** `src/index.css:16-22` (stack de sistema), `src/components/Header.jsx:21` (`fontFamily: 'Georgia, serif'` inline).
-- **Problema:** Todo el texto usa el stack genérico de navegador; el único intento de carácter es un `Georgia` inline en el H1. Es el mayor responsable de la sensación de "web con plantilla".
-- **Plan tipográfico concreto** (ver §3 más abajo): Google Fonts + `tailwind.config.js` → `font-display`, `font-serif`, `font-sans`, `font-mono`; aplicar `font-display` a títulos/nav/años, `font-serif` a citas, `font-sans` a cuerpo y `font-mono` a las "fichas" (chips de categoría/región).
-
----
-
-### M2. Modales sin gestión de foco (teclado roto al abrir)
-- **Ubicación:** `src/components/EventModal.jsx:14-26`, `RegionModal.jsx:23-35`, `TourModal.jsx:16-28`.
-- **Problema:** Los tres modales tienen `role="dialog" aria-modal="true"` y cierran con Escape, pero:
-  - Al abrir no se mueve el foco al modal (el foco sigue en el botón disparador, fuera del overlay) → **Escape no funciona hasta que el usuario clica dentro**.
-  - No hay trampa de foco (Tab puede salirse al contenido de atrás).
-  - Al cerrar no se restaura el foco al elemento que abrió.
-  - El scroll de fondo no se bloquea (`overflow` del body activo).
-- **Solución concreta:** usar un helper mínimo (sin librería): al montar, `ref` + `focus()` sobre el panel (o el botón cerrar) con `tabIndex={-1}`; `onKeyDown` con `Tab`/`Shift+Tab` para mantener el foco dentro; al desmontar, restaurar `document.activeElement` anterior y `body.style.overflow = ''`. Un solo hook `useModalFocus(open, onClose)` reutilizable en los tres modales.
+| Aspecto | Vista A | Vista B | Detalle |
+|---|---|---|---|
+| Sombra base de tarjetas | Autores/Teorías/Glosario/Acratas/Rutas/Favoritos/Timeline (`shadow-md`) | **Biblioteca** (`LibraryView.jsx:74`) y **tarjetas de región del mapa** (`WorldMapView.jsx:140`) **sin sombra** | El grid raíz se ve plano frente al resto |
+| Radio de tarjeta | `rounded-lg` en todas las tarjetas | **`rounded-xl`** solo en `FeaturedBook.jsx:13` | Obra del día con radio distinto sin motivo |
+| Chips de categoría/región | `LibraryView.jsx:85` y `FeaturedBook.jsx:35`: `font-mono text-[10px] uppercase` + `rounded` | `RegionModal.jsx:60` y `AuthorsView.jsx:218`: sans `text-xs`, `rounded`; `TimelineView.jsx:53`, `TheoriesView.jsx:66` y `InfluencesView.jsx:153`: `rounded-full` | 3-4 estilos de "ficha" sin sistema (candidato a componente `Chip`) |
+| Inputs de búsqueda | `TimelineFilters.jsx:38-45`: `border-2 py-3`, `bg-white/80` | `AuthorsView.jsx:98` / `AcratasView.jsx:133`: `border-2 py-2.5`, `bg-white`; `LibraryView.jsx:156`: `border` (1px) `py-2`; `GlossaryView.jsx:20-24`: `w-full md:w-96` | 4 alturas/grosor de borde/anchos distintos y fondo blanco puro (M3) |
+| Cabecera de vista | `h2 text-3xl md:text-4xl font-display` + subtítulo `mb-4` (Biblioteca, Timeline, Autores, Acratas) | Subtítulo `mb-6` (Mapa, Teorías, Rutas, Glosario, Influencias, Contacto) | Ritmo vertical de apertura distinto según vista |
+| Contenedor de vista | Panel con `rounded-lg shadow-lg border-2 p-6 md:p-8` en 10 vistas | **Contacto** (`ContactView.jsx:161-172`) sin contenedor; **Estadísticas** (`StatsPanel.jsx:89`) con estilo `nav` y sin `h2` | Contacto "flota" sobre el fondo; Estadísticas no parece una vista |
+| Estado vacío | Timeline: panel + título + CTA (`TimelineView.jsx:164-184`) | Biblioteca: `<p>` plano; Autores/Acratas: `<p>` plano; Favoritos: icono sin botón | Falta el patrón único (M4) |
+| Fade del timeline | `TimelineView.jsx:72` usa `from-amber-50` (light) | El tema pergamino sobreescribe el fondo pero **no** `.from-amber-50` (`index.css` no lo cubre) | Posible costura blanquecina en el borde derecho del fade en tema claro |
+| Foco de inputs | `:focus-visible` global bermellón | 3 inputs lo anulan con `focus:outline-none` (M1) | Foco invisible por excepción |
 
 ---
 
-### M3. Mapa no navegable por teclado
-- **Ubicación:** `src/components/WorldMap.jsx:83-95`.
-- **Problema:** Los `<path>` de países tienen `aria-label` y `onClick`, pero un `<path>` SVG **no es enfocable**: un usuario de teclado no puede seleccionar ningún país (solo existe el grid de regiones de abajo como alternativa, y es desconocida).
-- **Solución concreta:** en `WorldMap.jsx`, sobre los paths con datos añadir `tabIndex={0}`, `role="button"`, `onKeyDown` con `Enter`/`Space` → `onClickFunction(context)`, y estilos `:focus` con `outline` (p. ej. `filter: drop-shadow(0 0 2px #A0241A)`). Si se considera complejo, al menos `focusable` + `tabIndex` sobre los países con `countryValue !== undefined`.
+## 5. Nuevos módulos propuestos (no están en `IDEAS.md`)
+
+1. **Miniaturas de portada generadas desde los PDFs** — pipeline offline (script una vez, no por petición) que renderice la primera página de los 1.842 PDFs a WebP (~300px) y los sirva como `src` de las tarjetas, con fallback monograma del autor (iniciales sobre el fondo pergamino). **Valor:** alto — rompe la monotonía textual de 1.838 fichas y da sensación de colección real; mejora el escaneo visual de la Biblioteca en ~153 páginas. **Esfuerzo:** M.
+2. **Mapa de circulación y exilios** — capa opcional en `WorldMap` que trace arcos entre las regiones de los autores con obra en varios países (`getAllAuthors` ya agrupa libro con `region`): visualiza la red transnacional del movimiento (España→Francia→América, etc.), conectando con la identidad histórica del archivo. **Valor:** medio-alto; esfuerzo M.
+3. **"Siguiente lectura" al cerrar el lector** — al cerrar `ReaderOverlay`, minitarjetas de obras relacionadas (mismo autor → misma categoría → mismo sujeto acrata) y un botón "Al azar" en la Biblioteca que abra un libro aleatorio con archivo. Reutiliza `getAllBooks`/`findBookByTitle`; sube la retención en el modo de lectura que es el corazón de la app. **Valor:** alto; esfuerzo **S**.
+4. **Segunda capa del mapa: "Vidas (Acratas)"** — toggle en `WorldMapView` para pintar el mapa por número de biografías/memorias (categoría `acratas`, 358 textos, agrupados por `subject` en `getAcratasPersons`) en vez de solo textos históricos; hoy el mapa solo pinta `historia` (`WorldMapView.jsx:32-39`) y deja a Acratas sin expresión geográfica. **Valor:** medio; esfuerzo S.
+5. **Árbol genealógico de corrientes** — vista diagramática (árbol/radial) de derivación de las corrientes de `TheoriesView` (mutualismo → colectivismo → anarcosindicalismo…), clicable hacia autores y obras; es la pieza educativa que hoy el grafo de personas (`InfluencesView`) no cubre. **Valor:** medio (pedagógico); esfuerzo M.
 
 ---
 
-### M4. Navegación sin `aria-current` y botones con estados ambiguos
-- **Ubicación:** `src/components/Navigation.jsx:26-43`, `src/components/Header.jsx:45-51`, `LibraryView.jsx:133-143`, `RegionModal.jsx:96-105`.
-- **Problema:**
-  - La pestaña activa se comunica solo por color → añadir `aria-current="page"` al botón activo.
-  - El toggle de tema usa emoji `☀️/🌙` sin `aria-pressed` ni label del estado destino → para lector de pantalla es solo "🌙". Usar `aria-label="Activar tema claro"`/`"Activar tema oscuro"` y `aria-pressed={darkMode}`.
-  - Los corazones de favorito (LibraryView y RegionModal) tienen `title` pero no `aria-pressed`; añadir `aria-pressed={isFavorite}`.
-  - El `<nav>` de `Navigation.jsx` no tiene `aria-label` (hay dos landmarks `nav` en pantalla: navegación y pestañas de filtros).
-- **Solución concreta:** añadir los atributos ARIA listados; reemplazar los emojis del header por iconos `lucide-react` (`Sun`/`Moon`, ya disponible en las deps) con `aria-hidden`.
+## 6. Nota final — prioridad para la próxima iteración
 
----
+1. **A1 + A2 + A5 (filtros contra los datos reales + duplicación acratas)** — es el mayor gap de usabilidad: la web describe "filtros" que no filtran, el catálogo (entidad raíz) no tiene ni categoría ni región ni orden, y 358 obras viven duplicadas en dos índices. Esfuerzo: 1-2 h con infraestructura ya escrita (`utils/library.js`) y la exclusión de acratas es un cambio de una línea (más decidir documento vs código: actualizar `AGENTS.md` si se integran).
+2. **A3 (año `pubYear` vs `year`)** — 20 min y desbloquea una feature completa (línea de tiempo de autor) + el dato "año" en todas las tarjetas de un archivo histórico.
+3. **A4 + M2 + M1 (navegación y foco)** — barra de pestañas desktop, entradas de Glosario/Estadísticas en el footer y drawer con `useModalFocus`: son los tres cambios que "arreglan el wayfinding" de una app con 12 vistas.
+4. **M3 (blancos puros del tema)** — 5 líneas de CSS que rematan la paleta pergamino en los inputs.
+5. Baja prioridad: M4, M5, M6, M7, B1-B4 — pulido y una ronda de accesibilidad (grafo de influencias) que no afecta lógica de datos.
 
-### M5. Contraste insuficiente en la paleta pergamino
-- **Ubicación:** `src/index.css:286-289` (`.text-gray-400/500 → #98896B`), `LibraryView.jsx:51` (placeholder).
-- **Problema (medido):** sobre el fondo marfil `#F5EDD9`:
-  - `#98896B` (gris 400/500 del tema) → **2.94:1 — FALLA AA** (normal y grande).
-  - `#8A6336` (ámbar 600/700) → 4.59:1 (pasa AA por 0.09 — al límite en texto de 12px).
-  - `#77684C` (gris 600/700) → 4.65:1 (al límite).
-  - Correctos: tinta `#33291A` → 12.2:1; bermellón `#A0241A` → 6.5:1; botón `#8A1E19` + marfil → 7.9:1.
-- **Solución concreta:**
-  - Oscurecer el gris secundario del tema a `#6F5F45` (≥4.6:1) o mejor a `#5F5238` (≈5.6:1).
-  - Oscurecer el ámbar secundario a `#7A5230`.
-  - Placeholder: `#8A6336` en lugar de `#fbbf24`.
-  - Mantener los tonos de tinta/bermellón actuales (ya cumplen AA).
-
----
-
-### M6. Dimensiones y composición inconsistentes entre vistas
-- **Ubicación:** `LibraryView.jsx:55,123,128` / `AuthorsView.jsx:26,31` / `WorldMapView.jsx:124,129` / `TimelineView.jsx:14-25` / `AnarchistArchive.jsx:90`.
-- **Problema:** la rejilla de la app es coherente de fondo pero los detalles delatan plantilla:
-  - Paddings de tarjeta: `p-5` (20px) en Biblioteca vs `p-6` (24px) en Autores y Mapa.
-  - Gaps de rejilla: `gap-4` (16px) en Biblioteca/Mapa vs `gap-6` (24px) en Autores.
-  - Ritmo vertical del `main`: `py-8` (32px) en todas las vistas, sin variación entre secciones.
-  - Bloques de cabecera de vista inconsistentes: `h2 mb-2` + subtítulo `mb-6` en Biblioteca/Mapa/Autores vs `h2 mb-6` sin subtítulo en Favoritos.
-- **Solución concreta (valores exactos):**
-  - Unificar tarjetas en `p-6` (24px) y rejillas en `gap-5` (20px) en las tres vistas.
-  - `main`: `py-10 md:py-12` (40/48px) para dar aire de archivo.
-  - Cabecera de vista estándar: `h2 text-3xl md:text-4xl font-bold` + `mt-1` línea de separación doble + subtítulo `mb-8`; aplicar el mismo patrón en las 4 vistas.
-  - `TimelineView`: tarjeta `p-5 → p-6`, ancho `360 → 380px`, gap `gap-8 → gap-10` (deja respirar la línea).
-
----
-
-### M7. Responsive: mapa minúsculo en móvil y timeline de scroll infinito
-- **Ubicación:** `WorldMapView.jsx:95-105`, `TimelineView.jsx:14`.
-- **Problema:**
-  - El SVG del mapamundi ocupa `width:100%` (≈360px en móvil) → los 174 países quedan con objetivos de clic de pocos píxeles.
-  - La línea temporal fuerza scroll horizontal con tarjetas de 380px **incluso en móvil**, sin indicación de que se puede deslizar.
-- **Solución concreta:**
-  - Mapa: envolver el `WorldMap` en un contenedor con `overflow-x-auto` y `min-width: 620px` bajo `sm`, de modo que en móvil se deslice el mapa sin encoger los países.
-  - Timeline: bajo `md` mostrar el scroll horizontal igual, pero añadir una pista "⟶ Desliza para ver más eventos" (visible solo en móvil), y `scrollbar-width: none` + fade lateral en el contenedor.
-
----
-
-### M8. Estados vacíos mejorables (Favoritos y Biblioteca)
-- **Ubicación:** `FavoritesView.jsx:18-27`, `LibraryView.jsx:118-121`.
-- **Problema:** el vacío de Favoritos explica qué hacer pero **no ofrece acción** ("Explora el mapa…" sin botón); el de Biblioteca es un `<p>` plano sin icono ni CTA.
-- **Solución concreta:**
-  - Favoritos: botón primario "Explorar el mapa" → requiere prop `onNavigate(VIEWS.MAP)` desde `AnarchistArchive.jsx:136-142`.
-  - Biblioteca: estado vacío con icono (lucide `BookX` o `SearchX`), texto y botón "Limpiar filtros" (reutilizar `clearFilters`, ya existente).
-
----
-
-### M9. Falta footer, skip-link y foco visible global
-- **Ubicación:** `AnarchistArchive.jsx:68-178`, `index.css` (sin `:focus-visible`), `index.html:10-12`.
-- **Problema:**
-  - No existe `<footer>`: la página termina en seco tras el contenido.
-  - No hay "Saltar al contenido" para teclado (la navegación se repite en las 5 vistas).
-  - No hay regla global `:focus-visible`; el único input con foco custom es el de TimelineFilters (`focus:outline-none focus:border-amber-600`, línea 43, que además usa ámbar tenue `#8A6336`).
-- **Solución concreta:**
-  - Añadir footer con carácter: "Archivo Histórico Anarquista · 1840–1968 · Textos de dominio público" + doble regla superior (ver S4).
-  - Añadir `main` con `tabIndex={-1}` y un enlace oculto "Saltar al contenido" antes de `Header`.
-  - CSS global: `:focus-visible { outline: 2px solid #A0241A; outline-offset: 2px; }` (bermellón, visible en ambos temas) y en `TimelineFilters` cambiar el foco del input a `focus:border-red-700`.
-
----
-
-## 3. Plan tipográfico con carácter de archivo/imprenta (dimensiones 3)
-
-Estado actual: `body` usa stack de sistema (`index.css:16-22`) y el único acento es `Georgia` inline en el H1 (`Header.jsx:21`).
-
-### 3.1 Fuentes (Google Fonts)
-1. **Cartel condensado — títulos:** `Anton` (400, una sola variante, muy condensada, ideal para wordmark y años) con fallback `Oswald` 600/700 para títulos de sección y navegación. Apariencia de encabezado de imprenta/afiche soviético.
-2. **Serif editorial — citas y textos "históricos":** `Playfair Display` 400/600/700 + cursiva para blockquotes, descripciones de eventos y años en modales (estética de periódico antiguo).
-3. **Sans racional — cuerpo:** `Source Sans 3` 400/600 (gótica de lectura moderna que no compite con el carácter de los títulos).
-4. **Mono de máquina — fichas de archivo:** `IBM Plex Mono` 400/500 para etiquetas pequeñas tipo ficha ("N.º 034", "AÑO 1892", chips de categoría/región).
-
-### 3.2 Implementación
-- **`index.html`** (antes del CSS):
-  ```html
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500&family=Oswald:wght@500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-  ```
-- **`tailwind.config.js`** → `theme.extend.fontFamily`:
-  ```js
-  display: ['Anton', 'Oswald', 'Impact', 'sans-serif'],
-  serif: ['"Playfair Display"', 'Georgia', 'serif'],
-  sans: ['"Source Sans 3"', 'system-ui', 'sans-serif'],
-  mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
-  ```
-  Y reemplazar el stack de `body` en `index.css:16-22` por `font-family: 'Source Sans 3', system-ui, sans-serif`.
-
-### 3.3 Asignación de fuentes a elementos
-| Elemento | Fuente | Clase |
-|---|---|---|
-| H1 wordmark (Header) | Anton, uppercase, `tracking-tight` | `font-display` (quitar el `Georgia` inline) |
-| Pestañas de navegación | Oswald 600, `text-sm uppercase tracking-wider` | `font-display` |
-| `h2`/`h3` de vistas | Oswald 600, `uppercase tracking-wide` | `font-display` |
-| Años de la línea temporal y modales | Anton (numeral grande de cartel) o Playfair 700 | `font-display` / `font-serif` |
-| Blockquote de EventModal | Playfair Display itálica | `font-serif italic` |
-| Cuerpo (descripciones, resúmenes, metadatos) | Source Sans 3 | `font-sans` (default) |
-| Chips de categoría/región y etiquetas "N.º x" | IBM Plex Mono, `text-[11px] uppercase tracking-wider` | `font-mono` |
-
----
-
-## 4. Hallazgos — SUGERENCIA (detalles con carácter y microinteracciones)
-
-### S1. Textura de papel sutil
-- **Ubicación:** `src/index.css` (regla del fondo raíz, C1).
-- **Solución:** superponer sobre el degradado pergamino un ruido fino con `feTurbulence` en data-URI a ~3-4% de opacidad, o un `radial-gradient` de viñeta de 6-8% en las esquinas. Debe ser imperceptible pero romper la planitud de "pantalla".
-
-### S2. Microinteracción de favorito con feedback
-- **Ubicación:** `LibraryView.jsx:133-143`, `RegionModal.jsx:96-105`.
-- **Solución:** añadir `active:scale-90` y una animación de "pop" (`transition-all duration-150`) al corazón; opcionalmente un mini-toast "Guardado en favoritos" de 2s. Añadir `aria-pressed` (ya pedido en M4). El cambio de estado actual (relleno) es correcto pero se siente estático.
-
-### S3. Separadores y marcos de archivo
-- **Ubicación:** cabeceras de vista (`LibraryView.jsx:56-64`, `WorldMapView.jsx:88-93`, `AuthorsView.jsx:20-25`, `FavoritesView.jsx:15`).
-- **Solución:** bajo cada `h2`, una doble regla `─── ● ───` (o `border-t-2 border-b border-amber-300`) en lugar de solo `mb`. Los bordes de tarjeta podrían pasar de `border-2` a doble línea (`border-2` + `outline` 1px interior) para imitar marcos de documento.
-
-### S4. Footer de archivo (junto a M9)
-- **Ubicación:** `AnarchistArchive.jsx` (después de `</main>`).
-- **Solución:** `<footer>` con doble regla superior, "ARCHIVO HISTÓRICO ANARQUISTA · 1840–1968", línea de créditos ("Textos de dominio público. Descargas desde el repositorio interno.") y contador `N.º {stats.texts} registros` — cierra la experiencia de archivo.
-
-### S5. Tratamiento de imágenes y avatares
-- **Ubicación:** `AuthorsView.jsx:37` (`👤 text-5xl`), `Header.jsx:23` (`🏴`), `LibraryView.jsx:155` y `RegionModal.jsx:74` (`⭐`), `TimelineView.jsx:21` (emojis de evento), `TourModal.jsx:9-14` (emojis).
-- **Solución:** sustituir el avatar `👤` por un **monograma** (iniciales del autor, p. ej. "MA" de Malatesta) en un cuadrado con doble borde y rotación de 1-2º (sello de archivo). Los `⭐` y `📅` de las tarjetas por iconos lucide (`Star`, `Calendar`) ya que están en el bundle. Los emojis de la timeline pueden quedarse (aportan carácter) pero dentro de un medallón con doble borde (ya existe el círculo) y `aria-hidden`. El `🏴` del header se puede sustituir por un `Flag` de lucide o mantener emoji pero escalado con alineación cuidada.
-
-### S6. Tooltip y leyenda del mapa en clave pergamino
-- **Ubicación:** `src/index.css:62-85`, `WorldMapView.jsx:107-119`.
-- **Solución:** tooltip del mapa con fondo `#1A1818` y texto `#E5DCD0` (ya es aceptable) pero con borde de 1px bermellón y tipografía `font-mono` de 12px (ficha de archivo); la leyenda ya pasa a bermellón con C2.
-
-### S7. Navegación con muesca de afiche
-- **Ubicación:** `Navigation.jsx:30-38`.
-- **Solución:** en vez de píldora completa activa, mantener el fondo neutro y añadir bajo la pestaña activa un **triángulo/muesca roja** (como en los afiches) o `border-b-2 border-red-700`; refuerza el carácter sin recargar.
-
-### S8. Numeración de fichas en el catálogo
-- **Ubicación:** `LibraryView.jsx:128-180`.
-- **Solución:** micro-etiqueta mono superior-izquierda `N.º {idx+1:03d}` con el año (`AÑO 1892`) en `font-mono text-[10px] uppercase tracking-widest text-gray-500` → convierte la rejilla en un catálogo.
-
----
-
-## 5. Nota final — Prioridad para la próxima iteración
-
-**Las 5 mejoras de MÁXIMO impacto, en orden de aplicación:**
-
-1. **C1 — Arreglar el fondo raíz del tema pergamino** (selector compuesto o fondo en el contenedor raíz). Es la base de todo lo visual: sin esto la app "parece amarilla" aunque el resto del tema esté bien.
-2. **C2 — Purga de ámbar/amarillo del tema claro** (países del mapa, leyenda, marco, placeholder, bordes del header). Junto a C1 cierra el 80% del "carácter pergamino".
-3. **M1 — Plan tipográfico** (Google Fonts: Anton/Oswald + Playfair + Source Sans 3 + IBM Plex Mono y asignación de la §3.3). El salto visual más perceptible a "imprenta/afiche".
-4. **C3 + C4 — Scrollbar púrpura → bermellón** y **estado vacío de la línea temporal** (y CTA en Favoritos/Biblioteca). Pequeños, seguros y de gran impacto percibido.
-5. **M2 + M3 — Accesibilidad de teclado** (foco de modales + mapa enfocable + `aria-current`/`aria-pressed` + `:focus-visible` global + skip-link). Son los cambios que llevan la web de "bonita" a "profesional y usable".
-
-**Orden de esfuerzo estimado:** C1+C2+C3+C4 ≈ 30-45 min; M1 ≈ 45-60 min; M2+M3+M8+M9 ≈ 1-2 h; el resto (sección 4) puede ir en iteraciones posteriores sin romper tests ni build. Ninguno de estos cambios afecta a la lógica de datos, por lo que `npm run check` (lint + 154 tests + build) debe seguir verde; los tests existentes que buscan cadenas como `☀️` o `⭐` (`Views.test.jsx:53`, `LibraryView.test.jsx:95`) deberán actualizarse al sustituir emojis por iconos.
+Ninguno de los cambios propuestos toca la lógica de datos (salvo la normalización de `year` en `getAllBooks`, que es un añadido sin efecto sobre `regionData`); `npm run check` debe seguir verde con actualizaciones menores de aserciones de UI donde se modifiquen textos o chips.

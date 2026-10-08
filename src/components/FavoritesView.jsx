@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Heart, BookOpen, X, Download, Upload, StickyNote, Calendar, User, Tag, Trash2 } from 'lucide-react';
+import { Heart, BookOpen, X, Download, Upload, StickyNote, User, Tag, Trash2 } from 'lucide-react';
 import { THEME } from '../constants';
 
 const CATEGORY_LABELS = {

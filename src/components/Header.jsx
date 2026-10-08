@@ -5,11 +5,9 @@ import { THEME, VIEW_LABELS, VIEWS } from '../constants';
 const Header = ({
   darkMode,
   onDarkModeToggle,
-  onShowStats,
   onShowContact,
   onViewChange,
   favoriteCount,
-  stats,
   activeView,
   menuOpen,
   onMenuToggle

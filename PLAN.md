@@ -24,7 +24,7 @@ data/registros/ux-report.md → reporte del revisor UX/UI (subagente @ux-review)
 .daily-runs/*.md         → logs narrativos diarios del agente
 src/                     → app React (componentes, datos, servicios)
   components/            → Header, Navigation, TimelineView, MapView, AuthorsView, FavoritesView, modales...
-  data/                  → timelineEvents.js, authors.js, regionData.js, countryData.js (ISO por región)
+  data/                  → timelineEvents.js, authors.js, regionData.js (ISO por región)
   services/              → documentService.js (descargas de documentos)
   constants/  hooks/  utils/
 public/documents/        → documents.json (metadatos) + TXT de descarga

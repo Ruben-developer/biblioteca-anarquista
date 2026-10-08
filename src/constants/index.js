@@ -9,9 +9,6 @@ export const CATEGORIES = [
 // Textos "históricos": hechos del movimiento (mapa y línea temporal).
 // Los de filosofía/ideas (teoria) y las vidas (acratas) viven en Autores / Acratas.
 // 'otros' es un cubo de contabilidad: no se muestra en ninguna vista.
-// FUENTE ÚNICA definida en utils/library.js — aquí solo se re-exporta.
-export { HISTORICAL_CATEGORIES, isHistoricalCategory } from '../utils/library';
-export const IDEAS_CATEGORIES = ['teoria', 'acratas'];
 
 export const DECADES = ['all', '1700s', '1840s', '1860s', '1870s', '1880s', '1890s', '1900s', '1910s', '1920s', '1930s', '1940s', '1950s', '1960s', '1970s', '1980s', '1990s', '2000s', '2010s'];
 
