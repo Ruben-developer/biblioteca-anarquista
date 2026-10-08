@@ -56,7 +56,7 @@ const GridCard = ({ book, idx, favorites, onToggleFavorite, onRead, onOpenEvent,
   return (
     <div key={`${book.region}-${book.title}`} className={`${cardClass} border-2 rounded-lg p-5 shadow-md hover:shadow-lg transition-all flex flex-col card-appear`} style={{ animationDelay: `${Math.min(idx, 8) * 40}ms` }}>
       <div className="flex items-center justify-between gap-2 mb-1">
-        <h3 className={`font-roman leading-tight ${darkMode ? 'text-gray-100' : 'text-gray-800'} flex-1`}>
+        <h3 className={`font-bold leading-tight ${darkMode ? 'text-gray-100' : 'text-gray-800'} flex-1`}>
           {book.title}
         </h3>
         <FavoriteButton book={book} isFavorite={isFav} onToggleFavorite={onToggleFavorite} darkMode={darkMode} />

@@ -425,7 +425,7 @@ export const anarchistTheories = [
       "El Derecho al Ocio y a la Expropiacin Individual",
       "Contra la amnistoa. Encerrados bajo llave",
       "Analisis de un periodo de cambio",
-      "Compilación de escritos",
+      "Compilacin de escritos",
       "Después de Marx, autonomía",
       "El abstencionismo anarquista",
       "Enfermedad y capital",

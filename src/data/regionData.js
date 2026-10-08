@@ -8678,7 +8678,7 @@ export const regionData = {
         "filename": "Alfredo M. Bonanno - Compilacin de escritos.pdf",
         "category": "teoria",
         "author": "Alfredo M. Bonanno",
-        "title": "Compilación de escritos",
+        "title": "Compilacin de escritos",
         "year": null,
         "rating": null
       },
@@ -9969,7 +9969,7 @@ export const regionData = {
         "filename": "Errico Malatesta - Compilacin de escritos.pdf",
         "category": "teoria",
         "author": "Errico Malatesta",
-        "title": "Compilación de textos",
+        "title": "Compilacin de escritos",
         "year": null,
         "rating": null
       },

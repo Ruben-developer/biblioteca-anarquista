@@ -7,7 +7,6 @@ export default {
     extend: {
       fontFamily: {
         display: ['"High Voltage Rough"', 'Anton', 'Oswald', 'Impact', 'sans-serif'],
-        roman: ['"Roman Antique"', 'Georgia', 'serif'],
         serif: ['"Playfair Display"', 'Georgia', 'serif'],
         sans: ['"Source Sans 3"', 'system-ui', 'sans-serif'],
         mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace']

@@ -10,15 +10,6 @@
   font-display: swap;
 }
 
-/* PRE: Roman Antique (Dieter Steffmann) — prueba en títulos de tarjeta de Biblioteca */
-@font-face {
-  font-family: 'Roman Antique';
-  src: url('/fonts/roman-antique.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
 * {
   margin: 0;
   padding: 0;
