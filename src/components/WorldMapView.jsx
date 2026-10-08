@@ -137,7 +137,7 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
           <button
             key={region}
             onClick={() => onSelectRegion(region)}
-            className={`${cardClass} border-2 rounded-lg p-5 hover:shadow-lg transition-all text-left`}
+            className={`${cardClass} border-2 rounded-lg p-5 shadow-md hover:shadow-lg transition-all text-left`}
           >
             <div className="flex items-center gap-3 mb-2">
               <MapPin className={darkMode ? 'text-red-400' : 'text-amber-700'} size={24} />

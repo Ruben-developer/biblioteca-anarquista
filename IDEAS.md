@@ -76,6 +76,16 @@
   esos cambios se hacen a mano en el dashboard).
 
 ## Fixes de negocio pendientes
+- **Filtros de la Biblioteca (A2) — pendiente, diseño decidido (2026-10-07)**: cablear
+  `filterBooks`/`sortBooks` en `LibraryView.jsx`. Regla del usuario: los filtros
+  dependen de la CATEGORÍA (ej. historia → región y década; teoría → corriente),
+  NO todos los libros tienen región/década/corriente, y **la Biblioteca muestra
+  TODOS los textos** (no ocultar acratas en el catálogo).
+- **Filtros del timeline reales (A1) — pendiente**: derivar las opciones de
+  región y década de `timelineEvents` (hoy 343 chips y categorías que no filtran).
+- **Dedupe de acratas (A5) — pendiente, aplazado por el usuario**: 358 obras
+  triplicadas (Biblioteca + Autores + Acratas); decidir excluirlas o integrarlas y
+  actualizar AGENTS.md.
 - **Orden de países en el menú del mapa**: `WorldMapView.jsx:130` usa
   `Object.entries(regionData)` → orden de inserción en regionData.js (España,
   Francia, …) en vez de ordenarse por nº de textos históricos (desc). Ordenar

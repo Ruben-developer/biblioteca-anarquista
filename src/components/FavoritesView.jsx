@@ -211,7 +211,7 @@ const FavoritesView = ({
                     onKeyDown={(e) => { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) handleAdd(fav.title); }}
                     placeholder="Escribe una nota..."
                     rows={2}
-                    className={`flex-1 px-3 py-2 rounded-lg border text-sm resize-none ${darkMode ? 'bg-gray-800 border-[#872320] text-gray-200 placeholder-gray-500' : 'bg-white border-[#B79F6E] text-gray-800 placeholder-amber-800'}`}
+                    className={`flex-1 px-3 py-2 rounded-lg border text-sm resize-none ${darkMode ? 'bg-gray-800 border-[#872320] text-gray-200 placeholder-gray-500' : 'bg-white/80 border-[#B79F6E] text-gray-800 placeholder-amber-800'}`}
                   />
                   <button
                     onClick={() => handleAdd(fav.title)}

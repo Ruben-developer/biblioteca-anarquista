@@ -105,7 +105,7 @@ const ContactForm = ({ name, email, message, status, darkMode, setName, setEmail
 const ContactView = ({ darkMode }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card
   const inputClass = `w-full px-4 py-2 rounded-lg border text-sm ${
-    darkMode ? 'bg-gray-800 border-[#872320] text-gray-200 placeholder-gray-500' : 'bg-white border-[#B79F6E] text-gray-800 placeholder-amber-700'
+    darkMode ? 'bg-gray-800 border-[#872320] text-gray-200 placeholder-gray-500' : 'bg-white/80 border-[#B79F6E] text-gray-800 placeholder-amber-700'
   }`
   const labelClass = `block text-sm font-semibold mb-1 ${darkMode ? 'text-gray-300' : 'text-amber-900'}`
 

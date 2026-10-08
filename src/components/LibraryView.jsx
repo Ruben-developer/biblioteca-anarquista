@@ -54,7 +54,7 @@ const GridCard = ({ book, idx, favorites, onToggleFavorite, onRead, onOpenEvent,
   const isFav = favorites.some((f) => f.title === book.title)
   const bookEvents = getBookEvents(timelineEvents, book)
   return (
-    <div key={`${book.region}-${book.title}`} className={`${cardClass} border-2 rounded-lg p-5 hover:shadow-lg transition-all flex flex-col card-appear`} style={{ animationDelay: `${Math.min(idx, 8) * 40}ms` }}>
+    <div key={`${book.region}-${book.title}`} className={`${cardClass} border-2 rounded-lg p-5 shadow-md hover:shadow-lg transition-all flex flex-col card-appear`} style={{ animationDelay: `${Math.min(idx, 8) * 40}ms` }}>
       <div className="flex items-center justify-between gap-2 mb-1">
         <h3 className={`font-bold leading-tight ${darkMode ? 'text-gray-100' : 'text-gray-800'} flex-1`}>
           {book.title}
@@ -136,12 +136,12 @@ const LibraryView = ({
           value={searchTerm}
           onChange={(e) => { setSearchTerm(e.target.value); setPage(1) }}
           placeholder="Buscar por palabras clave..."
-          className={`w-full px-4 py-2 rounded-lg border text-sm pl-10 ${darkMode ? 'bg-gray-800 border-[#872320] text-gray-200 placeholder-gray-500' : 'bg-white border-[#B79F6E] text-gray-800 placeholder-amber-700'}`}
+          className={`w-full px-4 py-2 rounded-lg border text-sm pl-10 ${darkMode ? 'bg-gray-800 border-[#872320] text-gray-200 placeholder-gray-500' : 'bg-white/80 border-[#B79F6E] text-gray-800 placeholder-amber-700'}`}
           aria-label="Buscar por palabras clave"
         />
       </div>
 
-      <FeaturedBook darkMode={darkMode} book={featured} onRead={onRead} />
+      {!searchTerm.trim() && <FeaturedBook darkMode={darkMode} book={featured} onRead={onRead} />}
 
       {filtered.length === 0 ? (
         <p className={`text-center py-12 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>No hay obras que coincidan con la búsqueda.</p>
