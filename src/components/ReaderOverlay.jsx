@@ -107,6 +107,8 @@ const ReaderOverlay = ({ book, darkMode, onClose, favorites = [], onToggleFavori
           <iframe
             src={url}
             title={`Lector de ${book.title}`}
+            referrerPolicy="no-referrer"
+            loading="lazy"
             className={`w-full max-w-5xl flex-1 rounded-lg border ${
               readingDark ? 'bg-white border-[#872320]' : 'bg-white border-[#CBB788]'
             }`}

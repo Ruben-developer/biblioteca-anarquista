@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Archivo histórico interactivo del movimiento anarquista con línea temporal, mapa de regiones, biografías y biblioteca de textos",
-  "author": "Tu Nombre",
+  "author": "Ruben Contreras",
   "license": "MIT",
   "scripts": {
     "dev": "vite",

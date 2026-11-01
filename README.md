@@ -6,11 +6,13 @@ modo oscuro/claro, filtros avanzados y estadísticas.
 
 - **Contacto**: antarquia@riseup.net (formulario en la propia web)
 - **Stack**: React 18 + Vite 4 + Tailwind CSS
-- **Deploy**: GitHub Pages → https://ruben-developer.github.io/biblioteca-anarquista/ (dominio propio en camino: laidea.antarquia.cl)
+- **Deploy**: Cloudflare Workers → https://laidea.antarquia.cl (prod, `main`) y
+  beta desde `develop`; GitHub Pages queda como respaldo
 - **Contenido**: `src/data/` (eventos, autores, textos por región) + `public/documents/`
-- **Descargas PDF**: contenedor nginx local (`http://192.168.1.117:8081/pdfs/...`), TXT desde el repo
+- **Descargas PDF**: contenedor nginx local vía Tailscale (`VITE_PDF_BASE`), TXT desde el repo
 - **Métricas**: `data/registros/registro.json`
 - **Plan y evolución**: `PLAN.md` + `.daily-runs/`
+- **Seguridad**: ver [`SECURITY.md`](SECURITY.md) · **Licencia**: MIT (ver [`LICENSE`](LICENSE))
 
 ## Desarrollo local
 
