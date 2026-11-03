@@ -16,7 +16,7 @@ const ReadingPathsView = ({ darkMode, regionData, onRead = () => {}, onOpenLibra
         Rutas de lectura
       </h2>
       <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-        {readingPaths.length} itinerarios temáticos para adentrarse en el archivo. Cada ruta enlaza obras del catálogo en el orden propuesto.
+        {readingPaths.length} itinerarios temáticos para adentrarse en la biblioteca. Cada ruta enlaza obras del catálogo en el orden propuesto.
       </p>
       <div className="flex flex-col gap-4">
         {readingPaths.map((path) => {

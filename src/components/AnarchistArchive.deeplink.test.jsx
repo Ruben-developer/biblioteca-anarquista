@@ -57,7 +57,7 @@ describe('Deep links: la URL abre directamente vista u obra', () => {
     window.history.replaceState(null, '', '#/libro/obra-que-no-existe');
     const { container } = render(<AnarchistArchive />);
     expect(screen.queryByRole('dialog')).toBeNull();
-    expect(container.innerHTML).toContain('obras del archivo');
+    expect(container.innerHTML).toContain('obras en la biblioteca');
     expect(window.location.hash).toBe('#/biblioteca');
   });
 });

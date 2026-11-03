@@ -95,7 +95,7 @@ const AcratasView = ({
       </h2>
 
       <p className={`text-sm mb-4 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-        {persons.length} personas del archivo y {persons.reduce((s, p) => s + p.bookCount, 0)} textos que hablan de ellas.
+        {persons.length} personas del catálogo y {persons.reduce((s, p) => s + p.bookCount, 0)} textos que hablan de ellas.
       </p>
 
       <div className="flex flex-wrap gap-1 mb-5">
@@ -214,7 +214,7 @@ const AcratasView = ({
                                   </button>
                                 ) : (
                                   <span className={`flex-shrink-0 text-xs ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
-                                    Sin archivo
+                                    Sin PDF
                                   </span>
                                 )}
                               </div>

@@ -16,7 +16,7 @@ const TheoriesView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
         Teorías y corrientes del anarquismo
       </h2>
       <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-        {anarchistTheories.length} ramas del pensamiento libertario. Haz clic en una corriente para ver sus ideas, autores y obras del archivo.
+        {anarchistTheories.length} ramas del pensamiento libertario. Haz clic en una corriente para ver sus ideas, autores y obras en la biblioteca.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {anarchistTheories.map((theory, idx) => {

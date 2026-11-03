@@ -212,7 +212,7 @@ describe('AcratasView', () => {
     const html = renderToStaticMarkup(<AcratasView darkMode={false} regionData={regionData} />);
     expect(html).toContain('Acratas');
     expect(html).toContain('Abel Paz');
-    expect(html).toContain('personas del archivo');
+    expect(html).toContain('personas del catálogo');
   });
 
   it('filtra las personas por búsqueda', async () => {
@@ -288,7 +288,7 @@ describe('ReaderOverlay', () => {
     const html = renderToStaticMarkup(
       <ReaderOverlay book={{ title: 'Sin archivo', filename: undefined }} onClose={() => {}} />
     );
-    expect(html).toContain('Esta obra no tiene archivo digitalizado');
+    expect(html).toContain('Esta obra no tiene PDF digitalizado');
   });
 });
 

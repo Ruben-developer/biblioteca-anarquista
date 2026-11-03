@@ -29,7 +29,7 @@ const GlossaryView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
         Glosario libertario
       </h2>
       <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-        {glossaryTerms.length} términos del vocabulario anarquista, con sus definiciones y las obras del archivo que los tratan.
+        {glossaryTerms.length} términos del vocabulario anarquista, con sus definiciones y las obras de la biblioteca que los tratan.
       </p>
 
       <div className="relative mb-6">
@@ -68,7 +68,7 @@ const GlossaryView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
                 {books.length > 0 && (
                   <div className={`pt-3 mt-3 border-t ${darkMode ? 'border-[#872320]' : 'border-[#B79F6E]'}`}>
                     <p className={`text-xs uppercase tracking-wide mb-2 ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
-                      Obras del archivo
+                      Obras en la biblioteca
                     </p>
                     <div className="space-y-1.5">
                       {books.map((book) => (

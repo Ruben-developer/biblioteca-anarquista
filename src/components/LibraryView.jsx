@@ -39,9 +39,9 @@ const LeerButton = ({ book, onRead, darkMode }) => {
     return (
       <span
         className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-sm border-2 ${getSinArchivoClass(darkMode)}`}
-        title="Esta obra aún no tiene archivo digitalizado en el archivo"
+        title="Esta obra aún no tiene PDF digitalizado en la biblioteca"
       >
-        Sin archivo disponible
+        Sin PDF disponible
       </span>
     )
   }
@@ -143,7 +143,7 @@ const LibraryView = ({
         Biblioteca
       </h2>
       <p className={`text-sm mb-4 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-        {filtered.length} de {allBooks.length} obras del archivo.
+        {filtered.length} de {allBooks.length} obras en la biblioteca.
       </p>
 
       <div className="relative mb-6">

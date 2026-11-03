@@ -24,7 +24,7 @@ describe('AnarchistArchive', () => {
   it('muestra la biblioteca en la vista inicial', () => {
     const html = renderToStaticMarkup(<AnarchistArchive />);
     expect(html).toContain('Biblioteca');
-    expect(html).toContain('obras del archivo');
+    expect(html).toContain('obras en la biblioteca');
   });
 });
 

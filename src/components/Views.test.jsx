@@ -87,7 +87,7 @@ describe('StatsPanel', () => {
     byDecade: [{ decade: '1930s', count: 15 }, { decade: '1890s', count: 9 }]
   };
 
-  it('muestra las métricas clave del archivo', () => {
+  it('muestra las métricas clave de la biblioteca', () => {
     const html = renderToStaticMarkup(
       <StatsPanel darkMode={false} stats={stats} />
     );
@@ -99,12 +99,12 @@ describe('StatsPanel', () => {
     expect(html).toContain('40');
   });
 
-  it('muestra el estado del archivo (descargables, históricos, ideas)', () => {
+  it('muestra el estado de la biblioteca (descargables, históricos, ideas)', () => {
     const html = renderToStaticMarkup(
       <StatsPanel darkMode={false} stats={stats} />
     );
     expect(html).toContain('Descargables');
-    expect(html).toContain('Sin archivo');
+    expect(html).toContain('Sin PDF');
     expect(html).toContain('Históricos');
     expect(html).toContain('Ideas');
     expect(html).toContain('113');

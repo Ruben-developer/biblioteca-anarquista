@@ -114,7 +114,7 @@ const ReaderOverlay = ({ book, darkMode, onClose, favorites = [], onToggleFavori
         ) : (
           <div className={`flex-1 flex flex-col items-center justify-center text-center ${readingDark ? 'text-gray-400' : 'text-amber-800'}`}>
             <BookOpen size={48} className="mb-3" />
-            <p className="text-lg font-semibold mb-1">Esta obra no tiene archivo digitalizado</p>
+            <p className="text-lg font-semibold mb-1">Esta obra no tiene PDF digitalizado</p>
             <p className="text-sm">Pronto estará disponible para leer.</p>
           </div>
         )}
