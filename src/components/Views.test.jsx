@@ -54,7 +54,7 @@ describe('Header', () => {
       <Header darkMode={false} onDarkModeToggle={() => {}} onShowStats={() => {}} onShowContact={() => {}} stats={stats} />
     );
     expect(html).toContain('La Idea');
-    expect(html).toContain('Archivo Histórico Anarquista');
+    expect(html).toContain('Biblioteca digital anarquista');
     expect(html).not.toContain('114 textos');
     expect(html).not.toContain('16 eventos');
     expect(html).not.toContain('16 regiones');

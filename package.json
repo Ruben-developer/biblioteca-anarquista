@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Archivo histórico interactivo del movimiento anarquista con línea temporal, mapa de regiones, biografías y biblioteca de textos",
+  "description": "Biblioteca digital anarquista: catálogo de más de 1.800 textos con PDF, línea temporal, mapa de regiones, biografías y rutas de lectura",
   "author": "Tu Nombre",
   "license": "MIT",
   "scripts": {

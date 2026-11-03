@@ -1,8 +1,9 @@
-# La Idea — Archivo Histórico Anarquista
+# La Idea — Biblioteca digital anarquista
 
-Archivo histórico interactivo del movimiento anarquista mundial: línea temporal
-(1840-1968), mapa de regiones con textos, biografías de pensadores, favoritos,
-modo oscuro/claro, filtros avanzados y estadísticas.
+Biblioteca digital del movimiento anarquista mundial: **más de 1.800 textos en PDF**
+de descarga libre, línea temporal (1840-1968), mapa de regiones, biografías de
+pensadores, rutas de lectura, favoritos, modo oscuro/claro, filtros avanzados y
+estadísticas.
 
 - **Contacto**: antarquia@riseup.net (formulario en la propia web)
 - **Stack**: React 18 + Vite 4 + Tailwind CSS
