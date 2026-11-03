@@ -1,0 +1,81 @@
+/* ============================================================================
+   ESTILOS · retoques por estilo
+   Los tokens (color, tipografía, radio, borde, sombra) viven en estilos.css.
+   Aquí van solo los gestos que no caben en una variable: texturas de fondo,
+   proporciones de titular y detalles de cabecera.
+   ============================================================================ */
+
+/* Las tarjetas usan bg-white/60–80. En los estilos de papel, el blanco puro
+   rompe la paleta: se sustituye por el papel del estilo. */
+html:not([data-estilo="clasico"]) .bg-white\/60 {
+  background-color: rgb(var(--c-paper) / 0.6);
+}
+html:not([data-estilo="clasico"]) .bg-white\/80 {
+  background-color: rgb(var(--c-paper) / 0.8);
+}
+
+/* ── Bauhaus · Constructivismo infográfico ─────────────────────────────── */
+/* Franjas oblicuas de 45° sobre la cabecera: la rejilla diagonal del estilo. */
+html[data-estilo="bauhaus"] header {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgb(var(--c-accent) / 0.14) 0 12px,
+    transparent 12px 32px
+  );
+}
+/* Titulares geométricos: mayúsculas, sin tracking apretado, línea alta. */
+html[data-estilo="bauhaus"] h1,
+html[data-estilo="bauhaus"] h2 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+}
+
+/* ── Brutalismo tipográfico / Suizo ────────────────────────────────────── */
+/* Titular ultracomprimido: interlineado por debajo de 1 y tracking negativo. */
+html[data-estilo="brutal"] h1,
+html[data-estilo="brutal"] h2 {
+  letter-spacing: -0.035em;
+  line-height: 0.86;
+}
+/* Los datos y las fechas van en mono, como en una ficha técnica. */
+html[data-estilo="brutal"] .font-mono {
+  letter-spacing: 0.02em;
+}
+
+/* ── Collage editorial urbano ──────────────────────────────────────────── */
+/* Titulares serif de alto contraste con un subrayado de marcador. */
+html[data-estilo="collage"] h1,
+html[data-estilo="collage"] h2 {
+  letter-spacing: -0.01em;
+}
+html[data-estilo="collage"] h1 span {
+  background-image: linear-gradient(
+    transparent 62%,
+    rgb(var(--c-accent) / 0.28) 62%
+  );
+}
+
+/* ── Constructivismo ruso esquemático ──────────────────────────────────── */
+/* Cabecera con regla gruesa: el bloque de propaganda bajo el título. */
+html[data-estilo="constructivista"] header {
+  border-bottom-width: 4px;
+  border-bottom-color: rgb(var(--c-accent));
+}
+html[data-estilo="constructivista"] h1,
+html[data-estilo="constructivista"] h2 {
+  letter-spacing: 0.005em;
+  line-height: 0.94;
+}
+
+/* ── Transición al cambiar de estilo ───────────────────────────────────── */
+/* El cambio de tokens es instantáneo; un fundido corto evita el parpadeo. */
+html[data-estilo] body {
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-estilo] body {
+    transition: none;
+  }
+}
