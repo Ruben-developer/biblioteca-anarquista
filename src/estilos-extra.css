@@ -303,6 +303,13 @@ html[data-estilo="hud"] button {
   font-family: var(--font-mono);
   font-size: 0.72rem;
 }
+/* El desplegable de estilos se lee como interfaz, no como HUD: sin
+   mayúsculas para que los nombres no se partan en dos líneas. */
+html[data-estilo="hud"] [role="menu"] button {
+  text-transform: none;
+  letter-spacing: 0.01em;
+  font-size: 0.875rem;
+}
 html[data-estilo="hud"] button:hover {
   filter: drop-shadow(0 0 7px rgb(var(--c-accent) / 0.55));
 }
