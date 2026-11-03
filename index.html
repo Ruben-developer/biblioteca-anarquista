@@ -10,7 +10,7 @@
       // Anti-destello: aplica el estilo guardado antes de pintar. Sin esto,
       // el HTML saldría con el estilo por defecto y cambiaría al hidratar.
       (function () {
-        var validos = ['clasico', 'bauhaus', 'brutal', 'collage', 'constructivista'];
+        var validos = ['clasico', 'brutal', 'brutal-acido', 'collage', 'collage-prensa', 'hud', 'deconstructivo', 'zine', 'bauhaus', 'constructivista'];
         try {
           var pedido = new URLSearchParams(location.search).get('estilo');
           var guardado = pedido || localStorage.getItem('laidea_estilo_v1');
@@ -22,9 +22,9 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500&family=Jost:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="/assets/index-07b9ecfe.js"></script>
-    <link rel="stylesheet" href="/assets/index-cd4f7bd2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Chakra+Petch:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Jost:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="/assets/index-93f1e904.js"></script>
+    <link rel="stylesheet" href="/assets/index-d44de50e.css">
   </head>
   <body>
     <div id="root"></div>
