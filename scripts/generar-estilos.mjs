@@ -33,7 +33,7 @@ const ESTILOS = {
     claro: { 'orange-50': '#fffbeb', 'yellow-50': '#fffbeb' },
     sem: { 'c-line': '#B79F6E', 'c-line-soft': '#CBB788', 'c-accent': '#872320', 'c-paper': '#F5EDD9', 'c-paper-deep': '#EDE1C8' },
     rojo: ['#D02C26', '#B0241E', '#A0241A'],
-    radio: ['0.375rem', '0.5rem', '0.75rem', '9999px'],
+    radio: ['0', '0', '0', '0'],
     borde: '2px',
     sombra: [
       '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
@@ -48,15 +48,15 @@ const ESTILOS = {
   },
 
   // ── Editorial ──────────────────────────────────────────────────────────
-  // Papel crema, berenjena, Playfair en los titulares y Source Sans 3 en los
+  // Papel crema, rojo oscuro, Playfair en los titulares y Source Sans 3 en los
   // datos. El modo noche invierte la paleta conservando el mismo esqueleto.
   'collage-vino': {
-    amber: { 50: '#F6F0EC', 100: '#FBF7F4', 200: '#EDE4DE', 300: '#DDD0C8', 400: '#B9A9A1', 500: '#8A7A72', 600: '#6B1F3A', 700: '#6B1F3A', 800: '#51152B', 900: '#1A1416' },
+    amber: { 50: '#F6F0EC', 100: '#FBF7F4', 200: '#EDE4DE', 300: '#DDD0C8', 400: '#B9A9A1', 500: '#8A7A72', 600: '#A83E32', 700: '#8A1C1C', 800: '#6E1414', 900: '#1A1416' },
     gray: { 100: '#FBF7F4', 200: '#EDE4DE', 300: '#DDD0C8', 400: '#9C8C84', 500: '#7A6A62', 600: '#544842', 700: '#382F2B', 800: '#241E1B', 900: '#1A1416', 950: '#0D0A09' },
-    red: { 50: '#F8E9EE', 100: '#F0D2DC', 200: '#E0A7BA', 300: '#CC7A94', 400: '#B24A6C', 500: '#8E2A4C', 600: '#6B1F3A', 700: '#51152B', 800: '#3B0E1F', 900: '#280914', 950: '#15040A' },
+    red: { 50: '#FBEDEA', 100: '#F5D8D2', 200: '#E8B4AA', 300: '#D98D80', 400: '#C46355', 500: '#A83E32', 600: '#8A1C1C', 700: '#6E1414', 800: '#520F0F', 900: '#390A0A', 950: '#1E0505' },
     claro: { 'orange-50': '#F6F0EC', 'yellow-50': '#F6F0EC' },
-    sem: { 'c-line': '#1A1416', 'c-line-soft': '#DDD0C8', 'c-accent': '#6B1F3A', 'c-paper': '#FBF7F4', 'c-paper-deep': '#F6F0EC' },
-    rojo: ['#6B1F3A', '#51152B', '#8E2A4C'],
+    sem: { 'c-line': '#1A1416', 'c-line-soft': '#DDD0C8', 'c-accent': '#8A1C1C', 'c-paper': '#FBF7F4', 'c-paper-deep': '#F6F0EC' },
+    rojo: ['#8A1C1C', '#6E1414', '#A83E32'],
     radio: ['0', '0', '0', '0'],
     borde: '2px',
     sombra: ['6px 6px 0 rgb(26 20 22 / 0.10)', '10px 10px 0 rgb(26 20 22 / 0.14)'],
@@ -66,12 +66,12 @@ const ESTILOS = {
       "'Source Sans 3', system-ui, sans-serif",
       "'IBM Plex Mono', ui-monospace, monospace"
     ],
-    // Noche: el papel se vuelve tinta y el acento se aclara a rosa.
+    // Noche: el papel se vuelve tinta y el acento se aclara a coral rojizo.
     noche: {
-      amber: { 50: '#14100F', 100: '#241A1F', 200: '#33222A', 300: '#4A2A35', 400: '#6B3A4A', 500: '#96536C', 600: '#B96A85', 700: '#C97E97', 800: '#E4C7D1', 900: '#F3EAE3' },
-      red: { 50: '#FCF3F6', 100: '#F7E7EC', 200: '#F0D6DF', 300: '#E7BECC', 400: '#D99CB2', 500: '#C97E97', 600: '#B05C77', 700: '#8E4460', 800: '#6E3249', 900: '#4A2030', 950: '#1A0E13' },
-      sem: { 'c-line': '#3B2F33', 'c-line-soft': '#2A2226', 'c-accent': '#C97E97', 'c-paper': '#14100F', 'c-paper-deep': '#0C0908' },
-      rojo: ['#B05C77', '#8E4460', '#D99CB2']
+      amber: { 50: '#14100F', 100: '#241A18', 200: '#33221F', 300: '#4A2A26', 400: '#6B3A34', 500: '#96534A', 600: '#B96A5F', 700: '#D98A80', 800: '#E4C7C1', 900: '#F3EAE7' },
+      red: { 50: '#FCF3F1', 100: '#F7E7E3', 200: '#F0D6D0', 300: '#E7BEB6', 400: '#D99C92', 500: '#C97E72', 600: '#B05C50', 700: '#8E443A', 800: '#6E322A', 900: '#4A201B', 950: '#1A0E0B' },
+      sem: { 'c-line': '#3B2F2C', 'c-line-soft': '#2A2220', 'c-accent': '#D98A80', 'c-paper': '#14100F', 'c-paper-deep': '#0C0908' },
+      rojo: ['#B05C50', '#8E443A', '#E7BEB6']
     }
   }
 };

@@ -13,11 +13,19 @@ const PraxisView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary = (
   return (
     <div className={`${darkMode ? 'bg-gray-900/60 border-accent/50' : 'bg-white/60 border-line'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
-        Praxis y corrientes del anarquismo
+        Praxis anarquista
       </h2>
       <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
         {anarchistTheories.length} ramas del pensamiento libertario. Haz clic en una corriente para ver sus ideas, autores y obras en la biblioteca.
       </p>
+
+      <div className={`mb-6 flex items-start gap-3 rounded-lg border-2 p-4 ${darkMode ? 'bg-gray-900/40 border-accent/50' : 'bg-white/60 border-line'}`}>
+        <Compass className={darkMode ? 'text-red-400' : 'text-amber-700'} size={20} />
+        <p className={`text-xs ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
+          Las corrientes no son compartimentos estancos: casi todos los autores transitaron varias. Esta clasificación es orientativa y nace del propio catálogo.
+        </p>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {anarchistTheories.map((theory, idx) => {
           const isOpen = openId === theory.id;
@@ -114,24 +122,6 @@ const PraxisView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary = (
           );
         })}
       </div>
-
-      <div className={`mt-8 flex items-start gap-3 rounded-lg border-2 p-4 ${darkMode ? 'bg-gray-900/40 border-accent/50' : 'bg-white/60 border-line'}`}>
-        <Compass className={darkMode ? 'text-red-400' : 'text-amber-700'} size={20} />
-        <p className={`text-xs ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-          Las corrientes no son compartimentos estancos: casi todos los autores transitaron varias. Esta clasificación es orientativa y nace del propio catálogo.
-        </p>
-      </div>
-
-      <button
-        type="button"
-        onClick={() => onOpenLibrary({})}
-        className={`mt-4 flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-          darkMode ? 'bg-gray-800 border border-accent text-gray-200 hover:bg-gray-700' : 'bg-white border border-line text-amber-800 hover:bg-amber-100'
-        }`}
-      >
-        <Library size={16} />
-        Ver todas las obras del catálogo
-      </button>
     </div>
   );
 };

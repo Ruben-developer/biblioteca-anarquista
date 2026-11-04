@@ -16,9 +16,9 @@ export const ESTILOS = [
   {
     id: 'collage-vino',
     nombre: 'Collage Vino',
-    nota: 'Crema, berenjena, Playfair, passe-partout',
+    nota: 'Crema, rojo oscuro, Playfair, passe-partout',
     grupo: 'Editorial',
-    muestra: ['#F6F0EC', '#6B1F3A', '#1A1416']
+    muestra: ['#F6F0EC', '#8A1C1C', '#1A1416']
   }
 ];
 

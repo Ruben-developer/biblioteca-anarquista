@@ -103,16 +103,6 @@ const ReadingPathsView = ({ darkMode, regionData, onRead = () => {}, onOpenLibra
         })}
       </div>
 
-      <button
-        type="button"
-        onClick={() => onOpenLibrary({})}
-        className={`mt-4 flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-          darkMode ? 'bg-gray-800 border border-accent text-gray-200 hover:bg-gray-700' : 'bg-white border border-line text-amber-800 hover:bg-amber-100'
-        }`}
-      >
-        <Library size={16} />
-        Ver todas las obras del catálogo
-      </button>
     </div>
   );
 };

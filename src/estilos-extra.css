@@ -75,11 +75,8 @@ html[data-estilo="collage-vino"] .card-appear:hover {
 }
 html[data-estilo="collage-vino"] h1 {
   font-size: clamp(2.9rem, 7.5vw, 6rem);
-  line-height: 0.86;
+  line-height: 0.9;
   letter-spacing: -0.02em;
-}
-html[data-estilo="collage-vino"] h1 span {
-  font-style: italic;
 }
 html[data-estilo="collage-vino"] h2 {
   font-variant: small-caps;

@@ -21,6 +21,23 @@ const lerpColor = (c1, c2, t) => {
   return `rgb(${r}, ${g}, ${bl})`;
 };
 
+// Tope de la escala de color: a partir de 50 textos históricos todos los países
+// comparten el tono más intenso (España, con 449, no aplasta al resto).
+const TOPE_TEXTO = 50;
+const ESCALA_MAPA = {
+  dia: { claro: '#E8B4AA', oscuro: '#8A1C1C', borde: '#6E1414' },
+  noche: { claro: '#4A2A26', oscuro: '#D98A80', borde: '#E4C7C1' }
+};
+
+// Color de un país según sus textos históricos. `count` se recorta en
+// TOPE_TEXTO y la raíz cuadrada reparte mejor los valores bajos (la mayoría
+// del catálogo). Exportada para poder probar el tope sin depender del mapa.
+export const colorPorTextos = (count, darkMode) => {
+  const escala = darkMode ? ESCALA_MAPA.noche : ESCALA_MAPA.dia;
+  const t = Math.sqrt((Math.min(count, TOPE_TEXTO) - 1) / (TOPE_TEXTO - 1));
+  return lerpColor(escala.claro, escala.oscuro, Math.min(Math.max(t, 0), 1));
+};
+
 const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
 
@@ -63,18 +80,12 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
         cursor: 'default'
       };
     }
-    // Gradiente: 1 texto = color claro, N textos = más oscuro (hasta maxValue).
-    const max = Math.max(context.maxValue, 1);
-    const min = Math.min(context.minValue, max);
-    const t = max > min
-      ? Math.min(Math.max((count - min) / (max - min), 0), 1)
-      : 1;
-    const [light, dark] = darkMode
-      ? ['#fca5a5', '#7f1d1d']
-      : ['#E4CCC0', '#8A1E19'];
+    // Gradiente con tope: 1 texto = tono más claro, 50 o más = tono más
+    // intenso (la raíz cuadrada reparte mejor los valores bajos).
+    const escala = darkMode ? ESCALA_MAPA.noche : ESCALA_MAPA.dia;
     return {
-      fill: lerpColor(light, dark, t),
-      stroke: darkMode ? '#f87171' : '#A0241A',
+      fill: colorPorTextos(count, darkMode),
+      stroke: escala.borde,
       strokeWidth: 1,
       cursor: 'pointer'
     };
@@ -94,14 +105,14 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
         Mapa Mundial de Textos
       </h2>
       <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-        Haz clic en un país destacado para ver sus textos históricos. Cuanto más oscuro el color, más hechos del movimiento registra ese país. Los textos de filosofía e ideas viven en la sección de Autores.
+        Haz clic en un país destacado para ver sus textos históricos. Cuanto más intenso el color, más hechos del movimiento registra ese país (a partir de 50 textos el tono ya no cambia). Los textos de filosofía e ideas viven en la sección de Autores.
       </p>
 
       <div className={`rounded-lg border-2 overflow-hidden ${darkMode ? 'border-accent/50' : 'border-line'}`}>
         <WorldMap
           data={mapData}
           backgroundColor="transparent"
-          borderColor={darkMode ? '#7f1d1d' : '#A0241A'}
+          borderColor={darkMode ? ESCALA_MAPA.noche.borde : ESCALA_MAPA.dia.borde}
           onClickFunction={handleCountryClick}
           styleFunction={styleFunction}
           tooltipTextFunction={tooltipTextFunction}
@@ -114,13 +125,11 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
         <div
           className="h-3 w-40 rounded-full border"
           style={{
-            background: darkMode
-              ? 'linear-gradient(to right, #fca5a5, #7f1d1d)'
-              : 'linear-gradient(to right, #E4CCC0, #8A1E19)',
+            background: `linear-gradient(to right, ${(darkMode ? ESCALA_MAPA.noche : ESCALA_MAPA.dia).claro}, ${(darkMode ? ESCALA_MAPA.noche : ESCALA_MAPA.dia).oscuro})`,
             borderColor: darkMode ? '#52525b' : '#d6d3d1'
           }}
         />
-        <span className={`text-xs ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>Muchos textos</span>
+        <span className={`text-xs ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>50 o más textos</span>
       </div>
 
       <h3 className={`text-xl font-display uppercase tracking-wide mt-8 mb-4 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>

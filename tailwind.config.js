@@ -48,6 +48,8 @@ export default {
         yellow: { 50: canal('yellow-50') }
       },
       borderRadius: {
+        DEFAULT: 'var(--r-md)',
+        sm: 'var(--r-md)',
         md: 'var(--r-md)',
         lg: 'var(--r-lg)',
         xl: 'var(--r-xl)',

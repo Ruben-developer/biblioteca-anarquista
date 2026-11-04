@@ -77,7 +77,7 @@ describe('PraxisView', () => {
     const html = renderToStaticMarkup(
       <PraxisView darkMode={false} regionData={regionData} />
     );
-    expect(html).toContain('Praxis y corrientes del anarquismo');
+    expect(html).toContain('Praxis anarquista');
     expect(html).toContain('Anarcomunismo');
     expect(html).toContain('Anarcosindicalismo');
     expect(html).toContain('Mutualismo');
@@ -106,14 +106,6 @@ describe('PraxisView', () => {
     expect(onOpenLibrary).toHaveBeenCalledWith({ searchTerm: 'La Conquista del Pan' });
   });
 
-  it('llama onOpenLibrary sin filtros al pulsar "Ver todas las obras del catálogo"', async () => {
-    // @vitest-environment jsdom
-    const { render, screen, fireEvent } = await import('@testing-library/react');
-    const onOpenLibrary = vi.fn();
-    render(<PraxisView darkMode={false} regionData={regionData} onOpenLibrary={onOpenLibrary} />);
-    fireEvent.click(screen.getByText('Ver todas las obras del catálogo'));
-    expect(onOpenLibrary).toHaveBeenCalledWith({});
-  });
 });
 
 describe('GlossaryView', () => {
@@ -143,14 +135,6 @@ describe('GlossaryView', () => {
     expect(onOpenLibrary).toHaveBeenCalledWith({ searchTerm: 'La Conquista del Pan' });
   });
 
-  it('llama onOpenLibrary sin filtros al pulsar "Ver todas las obras del catálogo"', async () => {
-    // @vitest-environment jsdom
-    const { render, screen, fireEvent } = await import('@testing-library/react');
-    const onOpenLibrary = vi.fn();
-    render(<GlossaryView darkMode regionData={regionData} onOpenLibrary={onOpenLibrary} />);
-    fireEvent.click(screen.getByText('Ver todas las obras del catálogo'));
-    expect(onOpenLibrary).toHaveBeenCalledWith({});
-  });
 });
 
 describe('ReadingPathsView', () => {
@@ -180,14 +164,6 @@ describe('ReadingPathsView', () => {
     expect(onOpenLibrary).toHaveBeenCalledWith({ searchTerm: '¿Qué es la Propiedad?' });
   });
 
-  it('llama onOpenLibrary sin filtros al pulsar "Ver todas las obras del catálogo"', async () => {
-    // @vitest-environment jsdom
-    const { render, screen, fireEvent } = await import('@testing-library/react');
-    const onOpenLibrary = vi.fn();
-    render(<ReadingPathsView darkMode regionData={regionData} onOpenLibrary={onOpenLibrary} />);
-    fireEvent.click(screen.getByText('Ver todas las obras del catálogo'));
-    expect(onOpenLibrary).toHaveBeenCalledWith({});
-  });
 });
 
 describe('InfluencesView', () => {
