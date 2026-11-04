@@ -5,7 +5,7 @@ export const anarchistTheories = [
     "id": "anarcocomunismo",
     "name": "Anarcocomunismo",
     "icon": "🌾",
-    "description": "La corriente más influyente: abolición del Estado Y de la propiedad privada, producción y reparto según necesidades y capacidades, con los recursos en común.",
+    "description": "Abolición del Estado Y de la propiedad privada, producción y reparto según necesidades y capacidades, con los recursos en común.",
     "keyIdeas": [
       "Comunismo libertario",
       "De cada cual según sus capacidades, a cada cual según sus necesidades",
@@ -134,7 +134,7 @@ export const anarchistTheories = [
     "id": "anarcocolectivismo",
     "name": "Anarcocolectivismo",
     "icon": "🤝",
-    "description": "La propuesta de Bakunin y la Internacional: socialización de los medios de producción en colectividades de trabajadores, manteniendo el salario por trabajo realizado en la transición.",
+    "description": "La propuesta de Bakunin y la Internacional: socialización de los medios de producción en colectividades de trabajadores, retribución según el trabajo.",
     "keyIdeas": [
       "Colectivización de los medios de producción",
       "Retribución según el trabajo",
@@ -793,7 +793,7 @@ export const anarchistTheories = [
     "id": "post-izquierda",
     "name": "Anarquismo postizquierda, situacionismo y autonomía",
     "icon": "🌀",
-    "description": "La crítica anarquista a la izquierda tradicional: autonomía obrera, situacionismo, artificialismo y las zonas temporalmente autónomas como espacio de revuelta.",
+    "description": "La crítica anarquista a la izquierda tradicional: autonomía obrera, situacionismo y las zonas temporalmente autónomas como espacio de revuelta.",
     "keyIdeas": [
       "Crítica a la izquierda del capitalismo",
       "Autonomía obrera y autogestión",
@@ -878,7 +878,7 @@ export const anarchistTheories = [
     "id": "critica-marxismo",
     "name": "Crítica libertaria al marxismo y al totalitarismo",
     "icon": "🔴",
-    "description": "La crítica anarquista al marxismo-leninismo y a los totalitarismos del siglo XX: desde la revolución rusa hasta el stalinismo, pasando por la desilusión de Goldman.",
+    "description": "La crítica anarquista al marxismo-leninismo y a los totalitarismos del siglo XX: desde la revolución rusa hasta el stalinismo.",
     "keyIdeas": [
       "Crítica al leninismo y al stalinismo",
       "La revolución rusa desde el anarquismo",

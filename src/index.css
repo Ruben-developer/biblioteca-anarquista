@@ -148,17 +148,6 @@ code {
   --c-ink-rgb: 26, 24, 24;
   --c-stone-2-rgb: 111, 108, 104;
 }
-/* Reglas de raíz: la clase del tema vive en el MISMO elemento que las clases
-   de fondo, así que hace falta selector compuesto (sin espacio) además del
-   descendiente para los hijos. */
-.theme-constructivista.bg-gradient-to-br.from-red-950.via-black.to-gray-900,
-.theme-constructivista .bg-gradient-to-br.from-red-950.via-black.to-gray-900 {
-  background-image: linear-gradient(135deg, var(--c-void) 0%, var(--c-ink) 55%, var(--c-ink-2) 100%);
-}
-.theme-constructivista.bg-gradient-to-br.from-amber-50.via-yellow-50.to-orange-50,
-.theme-constructivista .bg-gradient-to-br.from-amber-50.via-yellow-50.to-orange-50 {
-  background-image: linear-gradient(135deg, var(--c-cream) 0%, var(--c-cream-2) 60%, var(--c-cream-3) 100%);
-}
 /* Cabecera y navegación: bloques negros + acentos rojos */
 .theme-constructivista .bg-black\/50 {
   background-color: var(--c-ink);
@@ -169,13 +158,6 @@ code {
 .theme-constructivista .bg-amber-100\/80,
 .theme-constructivista .bg-amber-100\/60 {
   background-color: var(--c-cream);
-}
-/* Tarjetas */
-.theme-constructivista .bg-gradient-to-br.from-gray-800\/80.to-gray-900\/80 {
-  background-image: linear-gradient(135deg, var(--c-ink-2) 0%, var(--c-ink) 100%);
-}
-.theme-constructivista .bg-gradient-to-br.from-amber-50.to-orange-50 {
-  background-image: linear-gradient(135deg, var(--c-parchment) 0%, var(--c-cream-2) 100%);
 }
 .theme-constructivista .bg-white\/60,
 .theme-constructivista .bg-white\/80 {
@@ -211,11 +193,6 @@ code {
 .theme-constructivista .bg-gray-600 {
   background-color: var(--c-stone-3);
 }
-.theme-constructivista .from-gray-900 {
-  --tw-gradient-from: var(--c-void) var(--tw-gradient-from-position);
-  --tw-gradient-to: rgba(var(--c-void-rgb), 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
 /* Variantes hover y placeholder grises azulados -> cálidos ya usados en el tema */
 .theme-constructivista .hover\:bg-gray-700\/50:hover {
   background-color: rgba(var(--c-stone-2-rgb), 0.5);
@@ -235,19 +212,6 @@ code {
 }
 .theme-constructivista .hover\:text-gray-400:hover {
   color: var(--c-stone);
-}
-/* Stops de degradado grises -> cálidos (por si algún gradiente no está en la combo cubierta) */
-.theme-constructivista .to-gray-900 {
-  --tw-gradient-to: var(--c-void) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-.theme-constructivista .from-gray-800 {
-  --tw-gradient-from: var(--c-ink) var(--tw-gradient-from-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-.theme-constructivista .via-gray-900 {
-  --tw-gradient-via: var(--c-void) var(--tw-gradient-via-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to);
 }
 /* Base en modo claro para consistencia cálida (casi neutros, sin azul) */
 .theme-constructivista .text-gray-900 { color: var(--c-ink); }
@@ -370,29 +334,14 @@ code {
 .theme-constructivista .bg-gray-900\/60 {
   background-color: rgba(var(--c-void-rgb), 0.72);
 }
-/* Gradientes de la línea temporal */
-.theme-constructivista .bg-gradient-to-r.from-red-600.via-red-500.to-red-800 {
-  background-image: linear-gradient(90deg, var(--c-red) 0%, #E04A3C 50%, var(--c-red-deep) 100%);
-}
-.theme-constructivista .bg-gradient-to-r.from-amber-600.via-amber-700.to-amber-800 {
-  background-image: linear-gradient(90deg, var(--c-red) 0%, var(--c-red-deep) 60%, #8A1813 100%);
-}
-
 /* ============================================================
    PROPUESTA CLARA 1 — PERGAMINO (vitela/papel envejecido real)
    Fondo marfil→camello→tan, tinta marrón oscuro, acentos rojo
    bermellón. Cálido pero SIN amarillo. Mantiene el oscuro.
    ============================================================ */
-.theme-constructivista.theme-pergamino.bg-gradient-to-br.from-amber-50.via-yellow-50.to-orange-50,
-.theme-constructivista.theme-pergamino .bg-gradient-to-br.from-amber-50.via-yellow-50.to-orange-50 {
-  background-image: linear-gradient(135deg, #F5EDD9 0%, #F0E3C9 45%, #E2D0A9 75%, #D6BF8F 100%);
-}
 .theme-constructivista.theme-pergamino .bg-amber-100\/80,
 .theme-constructivista.theme-pergamino .bg-amber-100\/60 {
   background-color: #F3E9D2;
-}
-.theme-constructivista.theme-pergamino .bg-gradient-to-br.from-amber-50.to-orange-50 {
-  background-image: linear-gradient(135deg, #FAF3E3 0%, #EFE1C4 100%);
 }
 .theme-constructivista.theme-pergamino .bg-white\/60,
 .theme-constructivista.theme-pergamino .bg-white\/80 {

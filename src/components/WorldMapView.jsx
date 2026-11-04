@@ -105,7 +105,7 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
         Mapa Mundial de Textos
       </h2>
       <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-        Haz clic en un país destacado para ver sus textos históricos. Cuanto más intenso el color, más hechos del movimiento registra ese país (a partir de 50 textos el tono ya no cambia). Los textos de filosofía e ideas viven en la sección de Autores.
+        Haz clic en un país destacado para ver sus textos históricos. Cuanto más intenso el color, más hechos del movimiento registra ese país.
       </p>
 
       <div className={`rounded-lg border-2 overflow-hidden ${darkMode ? 'border-accent/50' : 'border-line'}`}>
@@ -123,12 +123,18 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
       <div className="mt-4 flex items-center gap-3 justify-center">
         <span className={`text-xs ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>Pocos textos</span>
         <div
-          className="h-3 w-40 rounded-full border"
-          style={{
-            background: `linear-gradient(to right, ${(darkMode ? ESCALA_MAPA.noche : ESCALA_MAPA.dia).claro}, ${(darkMode ? ESCALA_MAPA.noche : ESCALA_MAPA.dia).oscuro})`,
-            borderColor: darkMode ? '#52525b' : '#d6d3d1'
-          }}
-        />
+          className="flex h-3 w-40 overflow-hidden border"
+          style={{ borderColor: darkMode ? ESCALA_MAPA.noche.borde : ESCALA_MAPA.dia.borde }}
+          aria-hidden="true"
+        >
+          {[1, 10, 25, 40, 50].map((paso) => (
+            <span
+              key={paso}
+              className="block flex-1"
+              style={{ backgroundColor: colorPorTextos(paso, darkMode) }}
+            />
+          ))}
+        </div>
         <span className={`text-xs ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>50 o más textos</span>
       </div>
 

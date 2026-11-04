@@ -192,7 +192,6 @@ const HorizontalTimeline = ({
           ))}
         </div>
       </div>
-      <div className={`absolute right-0 top-0 bottom-6 w-8 pointer-events-none bg-gradient-to-l ${darkMode ? 'from-gray-900' : 'from-amber-50'}`} />
       <BarraHorizontal contenedorRef={scrollRef} darkMode={darkMode} />
     </div>
   </div>

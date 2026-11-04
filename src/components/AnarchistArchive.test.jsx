@@ -82,7 +82,7 @@ describe('AnarchistArchive interactivo (jsdom)', () => {
     const { render } = await import('@testing-library/react');
     localStorage.setItem('darkMode', 'true');
     const { container } = render(<AnarchistArchive />);
-    expect(container.innerHTML).toContain('bg-gradient-to-br from-red-950');
+    expect(container.innerHTML).toContain('bg-paper-deep');
     container.remove();
     localStorage.removeItem('darkMode');
   });

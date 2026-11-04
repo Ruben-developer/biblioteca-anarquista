@@ -38,7 +38,7 @@ const PraxisView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary = (
       <div className={`mb-6 flex items-start gap-3 rounded-lg border-2 p-4 ${darkMode ? 'bg-gray-900/40 border-accent/50' : 'bg-white/60 border-line'}`}>
         <Compass className={darkMode ? 'text-red-400' : 'text-amber-700'} size={20} />
         <p className={`text-xs ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-          Las corrientes no son compartimentos estancos: casi todos los autores transitaron varias. Esta clasificación es orientativa y nace del propio catálogo.
+          Las corrientes no son dogmas físicos: casi todos los autores transitaron varias. Esta clasificación es orientativa y nace del propio catálogo.
         </p>
       </div>
 

@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { ESTILO_KEY, aplicarEstilo, estiloInicial } from '../styles/estilos';
 
 /**
  * Hook personalizado para manejar el desplazamiento y mostrar botón "ir arriba"
@@ -21,32 +20,6 @@ export const useScrollTop = (threshold = 300) => {
   };
 
   return { showScrollTop, scrollToTop };
-};
-
-/**
- * Estilo visual de la app (data-estilo en <html>), persistido en localStorage.
- * El CSS de cada estilo vive en src/estilos.css.
- */
-export const useEstilo = () => {
-  const [estilo, setEstilo] = useState(estiloInicial);
-  // No persistir en el primer render: si alguien abre un enlace de muestra
-  // (?estilo=brutal), no se le cambia el estilo guardado para siempre.
-  const primero = useRef(true);
-
-  useEffect(() => {
-    aplicarEstilo(estilo);
-    if (primero.current) {
-      primero.current = false;
-      return;
-    }
-    try {
-      localStorage.setItem(ESTILO_KEY, estilo);
-    } catch {
-      // Modo privado o almacenamiento lleno: el estilo vale solo esta sesión.
-    }
-  }, [estilo]);
-
-  return { estilo, setEstilo };
 };
 
 /**

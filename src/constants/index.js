@@ -54,10 +54,10 @@ export const VIEW_LABELS = {
 // por tema): contenedores, tarjetas, navegación, cabecera/pie, modales, mapa.
 export const THEME = {
   dark: {
-    bg: 'bg-gradient-to-br from-red-950 via-black to-gray-900 text-gray-100',
+    bg: 'bg-paper-deep text-gray-100',
     header: 'bg-black/30 border-b-2 border-accent/50',
     nav: 'bg-black/30 border-2 border-accent/50',
-    card: 'bg-gradient-to-br from-gray-800/80 to-gray-900/80 border-2 border-accent/50',
+    card: 'bg-paper border-2 border-accent/50',
     border: 'border-2 border-accent/50',
     accentText: 'text-red-400',
     accentBg: 'bg-red-600',
@@ -65,10 +65,10 @@ export const THEME = {
     button: 'bg-black/60 hover:bg-black/80'
   },
   light: {
-    bg: 'bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 text-gray-800',
+    bg: 'bg-paper-deep text-gray-800',
     header: 'bg-amber-100/60 border-b-2 border-line',
     nav: 'bg-amber-100/60 border-2 border-line',
-    card: 'bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-line',
+    card: 'bg-paper border-2 border-line',
     border: 'border-2 border-line',
     accentText: 'text-amber-800',
     accentBg: 'bg-amber-700',

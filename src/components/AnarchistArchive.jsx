@@ -13,7 +13,7 @@ import {
   bookHref,
   routesMode
 } from '../utils/routes';
-import { useScrollTop, useDarkMode, useFavorites, useEstilo } from '../hooks';
+import { useScrollTop, useDarkMode, useFavorites } from '../hooks';
 
 // Components
 import Header from './Header';
@@ -48,10 +48,7 @@ const getInitialRoute = () =>
 
 const AnarchistArchive = () => {
   const { darkMode: darkPreferido, toggleDarkMode } = useDarkMode();
-  const { estilo, setEstilo } = useEstilo();
-  // El modo noche está disponible en los dos estilos: Clásico lo resuelve con
-  // su tema pergamino/constructivista y Collage Vino con la paleta nocturna
-  // (`data-modo="noche"` en <html>).
+  // Un único estilo visual, con paleta de día y de noche (`data-modo`).
   const darkMode = darkPreferido;
   const { favorites, toggleFavorite, updateFavoriteNote, addFavoriteNote, deleteFavoriteNote, exportFavorites, importFavorites } = useFavorites();
   const { showScrollTop, scrollToTop } = useScrollTop();
@@ -187,16 +184,14 @@ const AnarchistArchive = () => {
   }, [darkMode]);
 
   const bgClass = darkMode
-    ? 'bg-gradient-to-br from-red-950 via-black to-gray-900 text-gray-100'
-    : 'bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 text-gray-800';
+    ? 'bg-paper-deep text-gray-100'
+    : 'bg-paper-deep text-gray-800';
 
   return (
-    <div className={`min-h-screen ${bgClass} transition-colors duration-500 ${estilo === 'clasico' ? 'theme-constructivista theme-pergamino' : ''}`}>
+    <div className={`min-h-screen ${bgClass} transition-colors duration-500`}>
       <Header
         darkMode={darkMode}
         onDarkModeToggle={toggleDarkMode}
-        estilo={estilo}
-        onEstiloChange={setEstilo}
         onShowStats={() => setActiveView(VIEWS.STATS)}
         onShowContact={() => setActiveView(VIEWS.CONTACT)}
         onViewChange={handleViewChange}

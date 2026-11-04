@@ -4,16 +4,18 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import WorldMapView, { colorPorTextos } from './WorldMapView';
 import { regionData } from '../data/regionData';
 
-describe('WorldMapView (gradiente por nº de textos)', () => {
+describe('WorldMapView (escala por nº de textos)', () => {
   const noop = () => {};
 
-  it('renderiza la leyenda de gradiente de colores', () => {
+  it('renderiza la leyenda con bloques de color sólidos', () => {
     const html = renderToStaticMarkup(
       <WorldMapView darkMode={false} regionData={regionData} onSelectRegion={noop} />
     );
     expect(html).toContain('Pocos textos');
     expect(html).toContain('50 o más textos');
-    expect(html).toContain('linear-gradient');
+    expect(html).not.toContain('linear-gradient');
+    expect(html).toContain('rgb(232, 180, 170)');
+    expect(html).toContain('rgb(138, 28, 28)');
   });
 
   const getFill = (html, ariaLabel) => {
@@ -75,7 +77,9 @@ describe('WorldMapView edge cases', () => {
     const html = renderToStaticMarkup(
       <WorldMapView darkMode regionData={regionData} onSelectRegion={noop} />
     );
-    expect(html).toContain('linear-gradient(to right, #452222, #E05252)');
+    expect(html).not.toContain('linear-gradient');
+    expect(html).toContain('rgb(69, 34, 34)');
+    expect(html).toContain('rgb(224, 82, 82)');
     expect(html).toContain('Pocos textos');
     expect(html).toContain('50 o más textos');
   });

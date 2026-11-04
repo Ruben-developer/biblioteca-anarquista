@@ -1,7 +1,6 @@
 import React from 'react';
 import { Mail, Menu, Sun, Moon, Heart } from 'lucide-react';
 import { THEME, VIEW_LABELS, VIEWS } from '../constants';
-import StyleSwitcher from './StyleSwitcher';
 
 const Header = ({
   darkMode,
@@ -10,8 +9,6 @@ const Header = ({
   onViewChange,
   favoriteCount,
   activeView,
-  estilo = 'clasico',
-  onEstiloChange = () => {},
   menuOpen,
   onMenuToggle
 }) => {
@@ -40,7 +37,6 @@ const Header = ({
           </button>
 
           <div className="[grid-area:bots] justify-self-end flex items-center gap-2 md:gap-3">
-            <StyleSwitcher estilo={estilo} onChange={onEstiloChange} darkMode={darkMode} />
             <button
               onClick={onShowContact}
               className={`p-2 md:p-3 rounded-lg ${themeClass.button} transition-colors`}
