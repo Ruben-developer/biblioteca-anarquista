@@ -175,7 +175,7 @@ const AuthorsView = ({
 
                 {isOpen && (
                   <div className="mt-4 space-y-2">
-                    {author.books.filter((b) => b.year).length > 1 && (
+                    {author.books.filter((b) => b.pubYear).length > 1 && (
                       <div className={`rounded-lg border-2 p-3 ${darkMode ? 'bg-gray-800/60 border-accent/50' : 'bg-white/80 border-line'}`}>
                         <p className={`text-xs uppercase tracking-wide mb-2 ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
                           Línea de tiempo de su obra
