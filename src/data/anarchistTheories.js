@@ -127,7 +127,15 @@ export const anarchistTheories = [
       "Mecanismo organico de la Confederacion Nacional del Trabajo",
       "Las bases del sindicalismo revolucionario",
       "El sindicalismo revolucionario",
-      "La accin sindicalista"
+      "La accin sindicalista",
+      "La Confederacion General del Trabajo",
+      "Las bases del sindicalismo",
+      "Variaciones guesdistas",
+      "Organización corporativa y anarquía",
+      "La IWW en la teoria y en la practica",
+      "Discordancias de bronce. Nuestra opinion sobre el sindicalismo",
+      "Manifiesto de los treinta",
+      "Problemas y cintarazos"
     ]
   },
   {
@@ -244,7 +252,12 @@ export const anarchistTheories = [
       "La amistad y los amigos",
       "Perversidad espiritual",
       "Retornando",
-      "Así habló el Único (Escritos)"
+      "Así habló el Único (Escritos)",
+      "Arte y ciencia",
+      "El amor entre anarcoindividualistas",
+      "Formas de vida en comn sin Estado ni Autoridad (Las experiencias econmicas y sexulaes a travis de la historia)",
+      "Feligreses, ciudadanos, compañeros",
+      "La filosofia de Max Stirner o la propiedad de si mismo"
     ]
   },
   {
@@ -291,7 +304,7 @@ export const anarchistTheories = [
     "id": "anarquismo-verde",
     "name": "Anarquismo Verde",
     "icon": "🌿",
-    "description": "Crítica radical a la civilización industrial: desde la ecología social de Bookchin hasta el primitivismo de Kaczynski, pasando por el antidesarrollismo y la liberación animal.",
+    "description": "La crisis ecológica entendida como crisis social: desde la ecología social y el municipalismo libertario de Bookchin hasta el antidesarrollismo y el decrecimiento, pasando por la liberación animal y el anarcoveganismo.",
     "keyIdeas": [
       "La crisis ecológica es una crisis social",
       "Municipalismo libertario",
@@ -343,7 +356,13 @@ export const anarchistTheories = [
       "Seis tesis sobre municipalismo libertario",
       "Sociedad, polotica y Estado",
       "La utopoa es posible. Experiencias contemporaneas",
-      "Catastrofismo o abandono del sentido critico"
+      "Catastrofismo o abandono del sentido critico",
+      "Colapso. Capitalismo terminal, transicion ecosocial, ecofascismo",
+      "Dos diagnosticos sobre la crisis",
+      "El decrecimiento explicado con sencillez",
+      "Tenemos que buscar una salida al capitalismo",
+      "V de Veganismo",
+      "Las raices anarquistas de la geografia. Hacia la emancipacion espacial"
     ]
   },
   {
@@ -445,7 +464,9 @@ export const anarchistTheories = [
       "La patria burguesa y la patria universal",
       "Cuando se halla el pueblo preparado para la libertad",
       "La Única salida es la violencia",
-      "Hacia una nueva revolución"
+      "Hacia una nueva revolución",
+      "La herejia del materialismo historico",
+      "Dialogos anarquistas, un coloquio sobre teoria y practica"
     ]
   },
   {
@@ -512,7 +533,18 @@ export const anarchistTheories = [
       "Cuestiones de enseanza libertaria I",
       "Divagaciones sobre la enseanza",
       "Esbozos de pedagogoa libertaria en el altiplano",
-      "La instruccion integral"
+      "La instruccion integral",
+      "El paradigma anarquista de la educacin",
+      "Pedagogoa libertaria. Principios polotico-filosficos",
+      "Educacin burguesa y educacin libertaria",
+      "Por qui la educacin libertaria",
+      "Senderos de libertad",
+      "Escritos anarquistas sobre educacion",
+      "Alternativas pedagogicas libertarias en la escuela hoy",
+      "Manifiesto libertario de la enseñanza",
+      "Informe del Sindicato de Ensenanza de CNT en 1977",
+      "El falso principio de nuestra educacion",
+      "Cuestiones de enseanza"
     ]
   },
   {
@@ -547,7 +579,6 @@ export const anarchistTheories = [
       "Anarquismo: de la teoría a la práctica",
       "Anarquismo básico",
       "El anarquismo como doctrina y movimiento",
-      "Senderos de libertad",
       "Sobre el anarquismo",
       "Anarquismo: argumentos a favor y en contra",
       "Actualidad del anarquismo",
@@ -579,11 +610,9 @@ export const anarchistTheories = [
       "La anarquia nuestra de cada dia",
       "Curso de resolucion de conflictos",
       "M Agua",
-      "Surrealismo y anarquismo",
       "En torno a nuestros objetivos libertarios (1938) (2013)",
       "Previsin de un juicio futuro (II Certamen Socialista)",
       "El anarqusimo ante la crisis de las ideologoas",
-      "Dialogos anarquistas, un coloquio sobre teoria y practica",
       "El camino. Hacia un socialismo sin Estado",
       "Antologoa anarquista II",
       "El trabajo, es una necesidad fisiolgica",
@@ -592,14 +621,10 @@ export const anarchistTheories = [
       "Mirando hacia el futuro. Paginas anarquistas",
       "Temas subversivos. La conmocion revolucionaria",
       "Economia anarquista. Una vision global",
-      "Apuntes para la conferencia DEMOCRACIA",
       "La vida sexual de la mujer",
       "Sanatorio de optimismo",
       "La ideologia anarquista",
       "Donde cree usted que va el mundo",
-      "Feligreses, ciudadanos, compañeros",
-      "La filosofia de Max Stirner o la propiedad de si mismo",
-      "V de Veganismo",
       "Manifiesto de la anarquía",
       "Artoculos para Ciencia Social",
       "Artoculos para La Idea Libre",
@@ -616,7 +641,6 @@ export const anarchistTheories = [
       "La ganancia",
       "Las olimpiadas de la paz",
       "Tres Textos",
-      "La IWW en la teoria y en la practica",
       "Los jovenes anarquistas",
       "Capitalismo, democracia y socialismo libertario",
       "Concepcion anarquista del derecho natural",
@@ -625,56 +649,28 @@ export const anarchistTheories = [
       "Escritos III (Anticlericalismo)",
       "Escritos VII (Antifascismo)",
       "Por un programa de accin comunalista",
-      "Manifiesto libertario de la enseñanza",
-      "Colapso. Capitalismo terminal, transicion ecosocial, ecofascismo",
-      "Dos diagnosticos sobre la crisis",
-      "El decrecimiento explicado con sencillez",
-      "Tenemos que buscar una salida al capitalismo",
-      "Informe del Sindicato de Ensenanza de CNT en 1977",
       "La libertad de circular. Despues de la era del motor",
       "Reflexiones libertarias",
       "Lecturas anarquistas de Spinoza",
       "Dandole la vuelta a los modos de produccin o por qui el capitalismo es una transformacin de la esclavitud",
-      "AnarQueer",
-      "La herejia del materialismo historico",
-      "Arte y ciencia",
-      "El amor entre anarcoindividualistas",
-      "Formas de vida en comn sin Estado ni Autoridad (Las experiencias econmicas y sexulaes a travis de la historia)",
-      "La Confederacion General del Trabajo",
-      "Las bases del sindicalismo",
-      "Variaciones guesdistas",
       "La palabra como arma",
       "Recopilatorio de escritos",
       "Acerca de mi juicio Lucha de clases u odio de clases",
-      "Compilacin de escritos",
       "Estrategia y tacticas en la practica anarquista",
       "Companero campesino, escucha",
       "Las lecciones de una experiencia historica",
-      "Escritos anarquistas sobre educacion",
-      "Alternativas pedagogicas libertarias en la escuela hoy",
-      "Organización corporativa y anarquía",
       "Concepcion del Ideal Libertario",
       "Por qui somos anarquistas",
       "Apuntes largos sobre la ciencia",
       "La idea anarquista",
-      "Gente sin gobierno. Una antropología de la anarquía",
-      "Yin - Lo que las mujeres debiesen saber sobre el comunismo",
       "La sociedad del porvenir. El comunismo anarquico",
-      "La utilidad del caos y del carisma, una perspectiva anarquista",
       "Desmoralizando el moralismo. La futilidad de los valores fetichizados",
-      "Educacin burguesa y educacin libertaria",
       "La sociedad moribunda y la Anarquía",
       "Hola, compañeros (Manifiesto anarquista)",
       "Identidad y socializacion anarquistas en las memorias de mujeres. Un despertar a la reivindicacion de genero",
-      "El anarcocomunismo ante las elecciones",
       "El socialismo anarquista",
       "Origen, esencia y fin de la sociedad de clases",
       "Revolucion proletaria",
-      "Razones y sinrazones de la participacion libertaria en el gobierno",
-      "Discordancias de bronce. Nuestra opinion sobre el sindicalismo",
-      "Manifiesto de los treinta",
-      "Problemas y cintarazos",
-      "Elogio de la anarquía por dos excéntricos chinos del siglo III",
       "La libertad entre la historia y la utopoa",
       "Cartas a una mujer sobre la anarquía",
       "Lo nico y la pluralidad",
@@ -683,24 +679,19 @@ export const anarchistTheories = [
       "El lugar de las ideas libertarias en la serie de las liberaciones humanas",
       "Panarquía. Una olvidada idea de 1860",
       "El arte y la religion",
-      "El falso principio de nuestra educacion",
       "Socialismo libertario. Una propuesta para el siglo XXI",
-      "La huelga de los electores",
       "Antologoa anarquista I",
       "Los altruistas",
       "Rebeldoa y esperanza",
       "Para abolir la violacin, derrocad el deseo masculino",
       "Renovacion y continuidad en la ideologia anarquista",
-      "Por qui la educacin libertaria",
       "Socialismo anarquista",
       "La lectura publica y el modelo de las bibliotecas libertarias",
       "La diferencia entre la anarquía y la academia",
-      "La anarquía ante los tribunales",
       "Las bases sociológicas de la anarquía",
       "Anarquoa. Su pasado, presente y su porvenir",
       "Artoculos",
       "Breves apuntes sobre las pasiones humanas",
-      "Cuestiones de enseanza",
       "Forjando un mundo libre",
       "La lucha de clases",
       "Tactica Socialista",
@@ -715,9 +706,6 @@ export const anarchistTheories = [
       "Hacia la dicha",
       "La crisis economica y el paro forzoso",
       "La sintesis anarquista",
-      "El paradigma anarquista de la educacin",
-      "Pedagogoa libertaria. Principios polotico-filosficos",
-      "Las raices anarquistas de la geografia. Hacia la emancipacion espacial",
       "Anarquistas meditemos",
       "La acracia... hara justicia a la mujer",
       "La anarquía regenera la humanidad",
@@ -786,7 +774,12 @@ export const anarchistTheories = [
       "Paginas libres",
       "Propaganda y ataque",
       "Selección de ensayos y obra poética",
-      "Acracia o República"
+      "Acracia o República",
+      "Apuntes para la conferencia DEMOCRACIA",
+      "La huelga de los electores",
+      "La anarquía ante los tribunales",
+      "Razones y sinrazones de la participacion libertaria en el gobierno",
+      "El anarcocomunismo ante las elecciones"
     ]
   },
   {
@@ -871,7 +864,9 @@ export const anarchistTheories = [
       "Problemas del anarquismo y la revolución en China",
       "América, hoy",
       "Dialogo(s) anarquista(s) en el Caribe hispanohablante. Entrevista a Kirwin R. Shaffer",
-      "La próxima revolución. Las asambleas populares y la promesa de la democracia directa"
+      "La próxima revolución. Las asambleas populares y la promesa de la democracia directa",
+      "Yin - Lo que las mujeres debiesen saber sobre el comunismo",
+      "Elogio de la anarquía por dos excéntricos chinos del siglo III"
     ]
   },
   {
@@ -950,7 +945,8 @@ export const anarchistTheories = [
       "Obras completas III",
       "Obras completas II",
       "Obras completas I",
-      "El arte en la revolución"
+      "El arte en la revolución",
+      "Surrealismo y anarquismo"
     ]
   },
   {
@@ -1042,7 +1038,8 @@ export const anarchistTheories = [
       "AnarQueer 7",
       "AnarQueer 8",
       "Queer explicado para anarquistas",
-      "Ética amatoria del deseo libertario y las afectaciones libres y alegres y las afectaciones libres y alegres"
+      "Ética amatoria del deseo libertario y las afectaciones libres y alegres y las afectaciones libres y alegres",
+      "AnarQueer"
     ]
   },
   {
@@ -1066,7 +1063,9 @@ export const anarchistTheories = [
       "La financiacion de las ONGD desde la perspectiva de redes",
       "Parra, Iban - Un pie en la calle y otro en la institucion. Analisis socioespacial de una iniciativa municipalista",
       "Aproximacion a las fuentes de Prada sobre la cuestion religiosa",
-      "Lo intimo en algunas memorias de anarquistas espanoles"
+      "Lo intimo en algunas memorias de anarquistas espanoles",
+      "Gente sin gobierno. Una antropología de la anarquía",
+      "La utilidad del caos y del carisma, una perspectiva anarquista"
     ]
   },
   {
@@ -1086,4 +1085,4 @@ export const anarchistTheories = [
       "El espiritu comercial de los tiempos modernos"
     ]
   }
-]
+];
