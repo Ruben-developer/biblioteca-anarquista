@@ -50,7 +50,7 @@ const CollectionModal = ({
       aria-modal="true"
       aria-label={title}
     >
-      <div className={`bg-paper border-2 ${darkMode ? 'border-accent/50' : 'border-line'} rounded-lg max-w-3xl w-full p-6 max-h-[90vh] flex flex-col`}>
+      <div className={`bg-paper border-2 ${darkMode ? 'border-accent/50' : 'border-line'} rounded-lg max-w-3xl w-full p-6 h-[90vh] max-h-[90vh] flex flex-col`}>
         <ModalHeader
           darkMode={darkMode}
           title={title}
@@ -58,8 +58,6 @@ const CollectionModal = ({
           icon={icon}
           onClose={onClose}
         />
-
-        {extra}
 
         {books.length > 8 && (
           <div className="relative mb-3">
@@ -78,7 +76,9 @@ const CollectionModal = ({
           </div>
         )}
 
-        <div className="space-y-2 overflow-y-auto pr-1 min-h-0">
+        <div className="flex-1 min-h-0 space-y-2 overflow-y-auto overscroll-contain pr-1">
+          {extra && <div className="mb-4">{extra}</div>}
+
           {filtered.map((book, idx) => (
             <div
               key={`${book.region || ''}-${book.title}-${idx}`}
