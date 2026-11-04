@@ -63,7 +63,7 @@ const FavoritesView = ({
 
   if (favorites.length === 0) {
     return (
-      <div className={`${darkMode ? 'bg-gray-900/60 border-accent/50' : 'bg-white/60 border-line'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
+      <div className={`${darkMode ? 'bg-gray-900/60 border-[#872320]/50' : 'bg-white/60 border-[#B79F6E]'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
         <div className="mb-6">
           <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
             Mi Biblioteca
@@ -73,8 +73,8 @@ const FavoritesView = ({
               onClick={handleImportClick}
               className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                 darkMode
-                  ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-accent'
-                  : 'bg-amber-100 text-amber-800 hover:bg-amber-200 border border-line'
+                  ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-[#872320]'
+                  : 'bg-amber-100 text-amber-800 hover:bg-amber-200 border border-[#B79F6E]'
               }`}
             >
               <Upload size={16} />
@@ -102,7 +102,7 @@ const FavoritesView = ({
   }
 
   return (
-    <div className={`${darkMode ? 'bg-gray-900/60 border-accent/50' : 'bg-white/60 border-line'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
+    <div className={`${darkMode ? 'bg-gray-900/60 border-[#872320]/50' : 'bg-white/60 border-[#B79F6E]'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <div className="mb-6">
         <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
           Mi Biblioteca
@@ -115,8 +115,8 @@ const FavoritesView = ({
             onClick={handleImportClick}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               darkMode
-                ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-accent'
-                : 'bg-amber-100 text-amber-800 hover:bg-amber-200 border border-line'
+                ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-[#872320]'
+                : 'bg-amber-100 text-amber-800 hover:bg-amber-200 border border-[#B79F6E]'
             }`}
           >
             <Upload size={16} />
@@ -126,8 +126,8 @@ const FavoritesView = ({
             onClick={handleExport}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               darkMode
-                ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-accent'
-                : 'bg-amber-100 text-amber-800 hover:bg-amber-200 border border-line'
+                ? 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-[#872320]'
+                : 'bg-amber-100 text-amber-800 hover:bg-amber-200 border border-[#B79F6E]'
             }`}
           >
             <Download size={16} />
@@ -180,7 +180,7 @@ const FavoritesView = ({
                 )}
               </div>
 
-              <div className={`border-t ${darkMode ? 'border-gray-700' : 'border-line'} pt-3 mt-1 flex-1`}>
+              <div className={`border-t ${darkMode ? 'border-gray-700' : 'border-[#B79F6E]'} pt-3 mt-1 flex-1`}>
                 <h4 className={`flex items-center gap-1.5 text-xs font-semibold mb-2 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                   <StickyNote size={12} />
                   Notas {notes.length > 0 && <span className={`px-1.5 py-0.5 rounded-full text-[10px] ${darkMode ? 'bg-gray-700 text-gray-400' : 'bg-amber-800 text-amber-50'}`}>{notes.length}</span>}
@@ -211,7 +211,7 @@ const FavoritesView = ({
                     onKeyDown={(e) => { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) handleAdd(fav.title); }}
                     placeholder="Escribe una nota..."
                     rows={2}
-                    className={`flex-1 px-3 py-2 rounded-lg border text-sm resize-none ${darkMode ? 'bg-gray-800 border-accent text-gray-200 placeholder-gray-500' : 'bg-white border-line text-gray-800 placeholder-amber-800'}`}
+                    className={`flex-1 px-3 py-2 rounded-lg border text-sm resize-none ${darkMode ? 'bg-gray-800 border-[#872320] text-gray-200 placeholder-gray-500' : 'bg-white border-[#B79F6E] text-gray-800 placeholder-amber-800'}`}
                   />
                   <button
                     onClick={() => handleAdd(fav.title)}
