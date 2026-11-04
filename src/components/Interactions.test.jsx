@@ -293,7 +293,7 @@ describe('LibraryView interactivo', () => {
   it.skip('filtra por búsqueda y muestra el contador actualizado', () => {
     const { container } = render(<LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />);
     fireEvent.change(screen.getByLabelText('Buscar obra'), { target: { value: 'Pan' } });
-    expect(screen.getByText('1 de 3 obras del archivo. Busca y filtra por categoría, década, tipo o favoritos.')).toBeTruthy();
+    expect(screen.getByText('1 de 3 obras en la biblioteca. Busca y filtra por categoría, década, tipo o favoritos.')).toBeTruthy();
     // Se consulta el grid de tarjetas: el widget "Obra del día" es global y no
     // depende de los filtros (puede mostrar cualquier título).
     const grid = container.querySelector('div.grid');
@@ -308,7 +308,7 @@ describe('LibraryView interactivo', () => {
     fireEvent.change(screen.getByLabelText('Filtrar por década'), { target: { value: '1890s' } });
     // 1890s → solo La Conquista del Pan (1892). El desplegable deriva sus
     // opciones de pubYear (disponible en el mock), y el filtro cuenta 1 de 3.
-    expect(screen.getByText('1 de 3 obras del archivo. Busca y filtra por categoría, década, tipo o favoritos.')).toBeTruthy();
+    expect(screen.getByText('1 de 3 obras en la biblioteca. Busca y filtra por categoría, década, tipo o favoritos.')).toBeTruthy();
     fireEvent.change(screen.getByLabelText('Filtrar por categoría'), { target: { value: 'teoria' } });
     // Sigue quedando La Conquista del Pan (1892, teoría); Columna Durruti (1936) queda fuera por década.
     expect(grid.textContent).toContain('La Conquista del Pan');
@@ -321,7 +321,7 @@ describe('LibraryView interactivo', () => {
     fireEvent.change(screen.getByLabelText('Buscar obra'), { target: { value: 'noexiste' } });
     expect(screen.getByText('No hay obras que coincidan con los filtros.')).toBeTruthy();
     fireEvent.click(screen.getByText('Limpiar filtros'));
-    expect(screen.getByText('3 de 3 obras del archivo. Busca y filtra por categoría, década, tipo o favoritos.')).toBeTruthy();
+    expect(screen.getByText('3 de 3 obras en la biblioteca. Busca y filtra por categoría, década, tipo o favoritos.')).toBeTruthy();
     container.remove();
   });
 

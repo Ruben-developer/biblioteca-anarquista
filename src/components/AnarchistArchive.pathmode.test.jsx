@@ -53,7 +53,7 @@ describe('Rutas reales (pathname): deep links', () => {
     window.history.replaceState(null, '', '/ruta-que-no-existe');
     const { container } = render(<AnarchistArchive />);
     expect(screen.queryByRole('dialog')).toBeNull();
-    expect(container.innerHTML).toContain('obras del archivo');
+    expect(container.innerHTML).toContain('obras en la biblioteca');
     expect(window.location.pathname).toBe('/biblioteca');
   });
 
@@ -89,7 +89,7 @@ describe('Rutas reales (pathname): navegación e historial', () => {
     await waitFor(
       () => {
         expect(window.location.pathname).toBe('/biblioteca');
-        expect(container.innerHTML).toContain('obras del archivo');
+        expect(container.innerHTML).toContain('obras en la biblioteca');
       },
       { timeout: 3000 }
     );

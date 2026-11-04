@@ -25,7 +25,7 @@ describe('LibraryView', () => {
       <LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />
     );
     expect(html).toContain('Biblioteca');
-    expect(html).toContain('3 obras del archivo');
+    expect(html).toContain('3 obras en la biblioteca');
   });
 
   it('renderiza un botón Leer por cada obra con archivo', () => {
@@ -61,7 +61,7 @@ describe('LibraryView', () => {
     );
     expect(html).not.toContain('Buscar por título o autor');
     expect(html).not.toContain('Todas las categorías');
-    expect(html).toContain('3 obras del archivo');
+    expect(html).toContain('3 obras en la biblioteca');
   });
 });
 
@@ -83,7 +83,7 @@ describe('LibraryView edge cases', () => {
       <LibraryView darkMode regionData={regionDataEdge} favorites={[]} onToggleFavorite={noop} />
     );
     expect(html).toContain('text-red-400');
-    expect(html).toContain('3 obras del archivo');
+    expect(html).toContain('3 obras en la biblioteca');
   });
 
   it('no muestra año/rating y solo categoría cuando faltan datos', () => {
@@ -107,7 +107,7 @@ describe('LibraryView edge cases', () => {
     // 2 tarjetas con archivo tienen enlace Leer + 1 del widget (obra destacada con resumen)
     expect((html.match(/Leer/g) || []).length).toBe(3);
     // La obra sin archivo ahora se marca explícitamente (fix de negocio IDEAS.md)
-    expect(html).toContain('Sin archivo disponible');
+    expect(html).toContain('Sin PDF disponible');
   });
 
   it('marca como favorito el corazón de las obras guardadas', () => {
@@ -127,7 +127,7 @@ describe('LibraryView edge cases', () => {
         initialFilters={{ searchTerm: 'Propiedad' }}
       />
     );
-    expect(html).toContain('3 obras del archivo');
+    expect(html).toContain('3 obras en la biblioteca');
     expect(html).toContain('¿Qué es la Propiedad?');
   });
 
@@ -141,7 +141,7 @@ describe('LibraryView edge cases', () => {
         initialFilters={{ type: 'historical' }}
       />
     );
-    expect(html).toContain('3 obras del archivo');
+    expect(html).toContain('3 obras en la biblioteca');
     const gridHtml = html.slice(html.indexOf('grid grid-cols-1'));
     expect(gridHtml).toContain('Obra sin archivo');
     expect(gridHtml).toContain('Obra completa');
@@ -151,7 +151,7 @@ describe('LibraryView edge cases', () => {
     const html = renderToStaticMarkup(
       <LibraryView darkMode={false} regionData={regionData} favorites={[]} onToggleFavorite={noop} />
     );
-    expect(html).toContain('3 obras del archivo');
+    expect(html).toContain('3 obras en la biblioteca');
   });
 });
 

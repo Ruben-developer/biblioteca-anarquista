@@ -89,13 +89,13 @@ const AcratasView = ({
   };
 
   return (
-    <div className={`${darkMode ? 'bg-gray-900/60 border-[#872320]/50' : 'bg-white/60 border-[#B79F6E]'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
+    <div className={`${darkMode ? 'bg-gray-900/60 border-accent/50' : 'bg-white/60 border-line'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         Acratas
       </h2>
 
       <p className={`text-sm mb-4 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-        {persons.length} personas del archivo y {persons.reduce((s, p) => s + p.bookCount, 0)} textos que hablan de ellas.
+        {persons.length} personas del catálogo y {persons.reduce((s, p) => s + p.bookCount, 0)} textos que hablan de ellas.
       </p>
 
       <div className="flex flex-wrap gap-1 mb-5">
@@ -130,7 +130,7 @@ const AcratasView = ({
           aria-label="Buscar persona o texto..."
           value={search}
           onChange={handleSearchChange}
-          className={`w-full ${darkMode ? 'bg-gray-800 border-[#872320] text-gray-100 placeholder-gray-500' : 'bg-white/80 border-[#B79F6E] text-gray-800 placeholder-amber-600'} border-2 rounded-lg pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:border-[#B79F6E] transition-colors`}
+          className={`w-full ${darkMode ? 'bg-gray-800 border-accent text-gray-100 placeholder-gray-500' : 'bg-white/80 border-line text-gray-800 placeholder-amber-600'} border-2 rounded-lg pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:border-line transition-colors`}
         />
       </div>
 
@@ -162,7 +162,7 @@ const AcratasView = ({
                       <h3 className={`text-xl font-bold ${darkMode ? 'text-gray-100' : 'text-gray-800'} mb-2 text-center`}>
                         {person.subject}
                       </h3>
-                      <div className={`flex items-center justify-between pt-3 mt-3 border-t ${darkMode ? 'border-[#872320]' : 'border-[#B79F6E]'}`}>
+                      <div className={`flex items-center justify-between pt-3 mt-3 border-t ${darkMode ? 'border-accent' : 'border-line'}`}>
                         <span className="text-sm">
                           <BookOpen size={16} className="inline mr-1" />
                           {person.bookCount} {person.bookCount === 1 ? 'texto' : 'textos'}
@@ -179,7 +179,7 @@ const AcratasView = ({
                           return (
                             <div
                               key={`${book.region}-${book.title}-${idx}`}
-                              className={`rounded-lg border-2 p-3 ${darkMode ? 'bg-gray-800/60 border-[#872320]/50' : 'bg-white/80 border-[#B79F6E]'}`}
+                              className={`rounded-lg border-2 p-3 ${darkMode ? 'bg-gray-800/60 border-accent/50' : 'bg-white/80 border-line'}`}
                             >
                               <div className="flex justify-between items-start gap-2">
                                 <div className="flex-1">
@@ -214,7 +214,7 @@ const AcratasView = ({
                                   </button>
                                 ) : (
                                   <span className={`flex-shrink-0 text-xs ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
-                                    Sin archivo
+                                    Sin PDF
                                   </span>
                                 )}
                               </div>
@@ -228,7 +228,7 @@ const AcratasView = ({
               })}
             </div>
             {totalPages > 1 && (
-              <div className={`flex items-center justify-center gap-3 mt-6 pt-4 border-t ${darkMode ? 'border-[#872320]' : 'border-[#B79F6E]'}`}>
+              <div className={`flex items-center justify-center gap-3 mt-6 pt-4 border-t ${darkMode ? 'border-accent' : 'border-line'}`}>
                 <button
                   onClick={() => setPage((p) => Math.max(1, p - 1))}
                   disabled={page === 1}

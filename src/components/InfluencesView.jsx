@@ -51,7 +51,7 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
   const labelColor = darkMode ? '#E5DCD0' : '#33291A';
 
   return (
-    <div className={`${darkMode ? 'bg-gray-900/60 border-[#872320]/50' : 'bg-white/60 border-[#B79F6E]'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
+    <div className={`${darkMode ? 'bg-gray-900/60 border-accent/50' : 'bg-white/60 border-line'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         Red de Influencias
       </h2>
@@ -183,15 +183,15 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
           </div>
 
           {selectedAuthor && (
-            <div className={`rounded-lg border-2 p-4 ${darkMode ? 'bg-gray-800/60 border-[#872320]/50' : 'bg-white/80 border-[#B79F6E]'}`}>
+            <div className={`rounded-lg border-2 p-4 ${darkMode ? 'bg-gray-800/60 border-accent/50' : 'bg-white/80 border-line'}`}>
               <p className={`text-xs uppercase tracking-wide mb-2 ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
-                Obras en el archivo ({selectedAuthor.bookCount})
+                Obras en la biblioteca ({selectedAuthor.bookCount})
               </p>
               <div className="flex flex-wrap gap-2">
                 {selectedAuthor.books.map((book) => (
                   <div
                     key={book.title}
-                    className={`rounded-lg border-2 px-3 py-2 flex items-center gap-2 ${darkMode ? 'bg-gray-900/50 border-[#872320]/50' : 'bg-white/50 border-[#B79F6E]'}`}
+                    className={`rounded-lg border-2 px-3 py-2 flex items-center gap-2 ${darkMode ? 'bg-gray-900/50 border-accent/50' : 'bg-white/50 border-line'}`}
                   >
                     <span className={`text-xs ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
                       {book.title}

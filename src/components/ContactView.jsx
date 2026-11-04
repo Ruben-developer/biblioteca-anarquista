@@ -8,7 +8,7 @@ export const FORM_ENDPOINT = 'https://formsubmit.co/ajax/antarquia@riseup.net'
 const SuccessView = ({ email, darkMode, resetForm, cardClass }) => (
   <div className={`${cardClass} border-2 rounded-lg p-6 shadow-md max-w-2xl card-appear`}>
     <p className={`text-sm mb-4 ${darkMode ? 'text-gray-300' : 'text-amber-900'}`}>
-      Mensaje enviado. Gracias por escribir al archivo
+      Mensaje enviado. Gracias por escribir a la biblioteca
       {email.trim() ? ` — te responderemos a ${email.trim()}` : ''}.
     </p>
     <button
@@ -23,7 +23,7 @@ const SuccessView = ({ email, darkMode, resetForm, cardClass }) => (
 )
 
 const ErrorView = ({ darkMode, resetForm, cardClass }) => (
-  <div className={`${cardClass} border-2 border-[#872320] rounded-lg p-6 shadow-md max-w-2xl card-appear`}>
+  <div className={`${cardClass} border-2 border-accent rounded-lg p-6 shadow-md max-w-2xl card-appear`}>
     <p className={`text-sm mb-4 ${darkMode ? 'text-gray-300' : 'text-amber-900'}`}>
       No se pudo enviar el mensaje desde la página. Escríbenos directamente
       a <a className="underline" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
@@ -80,7 +80,7 @@ const ContactForm = ({ name, email, message, status, darkMode, setName, setEmail
         rows={5}
         value={message}
         onChange={(e) => setMessage(e.target.value)}
-        placeholder="Tu mensaje para el archivo…"
+        placeholder="Tu mensaje para la biblioteca…"
         className={inputClass}
       />
     </div>
@@ -105,7 +105,7 @@ const ContactForm = ({ name, email, message, status, darkMode, setName, setEmail
 const ContactView = ({ darkMode }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card
   const inputClass = `w-full px-4 py-2 rounded-lg border text-sm ${
-    darkMode ? 'bg-gray-800 border-[#872320] text-gray-200 placeholder-gray-500' : 'bg-white/80 border-[#B79F6E] text-gray-800 placeholder-amber-700'
+    darkMode ? 'bg-gray-800 border-accent text-gray-200 placeholder-gray-500' : 'bg-white border-line text-gray-800 placeholder-amber-700'
   }`
   const labelClass = `block text-sm font-semibold mb-1 ${darkMode ? 'text-gray-300' : 'text-amber-900'}`
 
@@ -164,7 +164,7 @@ const ContactView = ({ darkMode }) => {
         Contacto
       </h2>
       <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-        Escríbenos para aportar textos, corregir datos o colaborar con el archivo.
+        Escríbenos para aportar textos, corregir datos o colaborar con la biblioteca.
         Tu mensaje llega a <span className="font-semibold">{CONTACT_EMAIL}</span>.
       </p>
       {renderContent()}

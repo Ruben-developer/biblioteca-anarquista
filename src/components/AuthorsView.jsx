@@ -79,7 +79,7 @@ const AuthorsView = ({
   };
 
   return (
-    <div className={`${darkMode ? 'bg-gray-900/60 border-[#872320]/50' : 'bg-white/60 border-[#B79F6E]'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
+    <div className={`${darkMode ? 'bg-gray-900/60 border-accent/50' : 'bg-white/60 border-line'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         Autores
       </h2>
@@ -95,7 +95,7 @@ const AuthorsView = ({
           placeholder="Buscar autor..."
           value={search}
           onChange={handleSearchChange}
-          className={`w-full ${darkMode ? 'bg-gray-800 border-[#872320] text-gray-100 placeholder-gray-500' : 'bg-white/80 border-[#B79F6E] text-gray-800 placeholder-amber-600'} border-2 rounded-lg pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:border-[#B79F6E] transition-colors`}
+          className={`w-full ${darkMode ? 'bg-gray-800 border-accent text-gray-100 placeholder-gray-500' : 'bg-white/80 border-line text-gray-800 placeholder-amber-600'} border-2 rounded-lg pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:border-line transition-colors`}
         />
       </div>
 
@@ -162,7 +162,7 @@ const AuthorsView = ({
                       {author.regions.join(', ')}
                     </p>
                   )}
-                  <div className={`flex items-center justify-between pt-3 mt-3 border-t ${darkMode ? 'border-[#872320]' : 'border-[#B79F6E]'}`}>
+                  <div className={`flex items-center justify-between pt-3 mt-3 border-t ${darkMode ? 'border-accent' : 'border-line'}`}>
                     <span className="text-sm">
                       <Book size={16} className="inline mr-1" />
                       {author.bookCount} {author.bookCount === 1 ? 'texto' : 'textos'}
@@ -175,8 +175,8 @@ const AuthorsView = ({
 
                 {isOpen && (
                   <div className="mt-4 space-y-2">
-                    {author.books.filter((b) => b.pubYear).length > 1 && (
-                      <div className={`rounded-lg border-2 p-3 ${darkMode ? 'bg-gray-800/60 border-[#872320]/50' : 'bg-white/80 border-[#B79F6E]'}`}>
+                    {author.books.filter((b) => b.year).length > 1 && (
+                      <div className={`rounded-lg border-2 p-3 ${darkMode ? 'bg-gray-800/60 border-accent/50' : 'bg-white/80 border-line'}`}>
                         <p className={`text-xs uppercase tracking-wide mb-2 ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
                           Línea de tiempo de su obra
                         </p>
@@ -204,7 +204,7 @@ const AuthorsView = ({
                     {author.books.map((book, idx) => (
                       <div
                         key={`${book.region}-${book.title}-${idx}`}
-                        className={`rounded-lg border-2 p-3 ${darkMode ? 'bg-gray-800/60 border-[#872320]/50' : 'bg-white/80 border-[#B79F6E]'}`}
+                        className={`rounded-lg border-2 p-3 ${darkMode ? 'bg-gray-800/60 border-accent/50' : 'bg-white/80 border-line'}`}
                       >
                         <div className="flex justify-between items-start gap-2">
                           <div className="flex-1">
@@ -246,7 +246,7 @@ const AuthorsView = ({
           })}
             </div>
             {totalPages > 1 && (
-              <div className={`flex items-center justify-center gap-3 mt-6 pt-4 border-t ${darkMode ? 'border-[#872320]' : 'border-[#B79F6E]'}`}>
+              <div className={`flex items-center justify-center gap-3 mt-6 pt-4 border-t ${darkMode ? 'border-accent' : 'border-line'}`}>
                 <button
                   onClick={() => setPage((p) => Math.max(1, p - 1))}
                   disabled={page === 1}

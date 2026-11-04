@@ -18,7 +18,7 @@ const HorizontalTimeline = ({
   cardClass,
   onSelectEvent
 }) => (
-  <div className={`${darkMode ? 'bg-gray-900/60 border-[#872320]/50' : 'bg-white/60 border-[#B79F6E]'} rounded-lg shadow-lg border-2 p-6`}>
+  <div className={`${darkMode ? 'bg-gray-900/60 border-accent/50' : 'bg-white/60 border-line'} rounded-lg shadow-lg border-2 p-6`}>
     <div className="relative">
       <div className="overflow-x-auto">
         <div className="flex gap-6" style={{ minWidth: 'max-content' }}>
@@ -86,7 +86,7 @@ const VerticalTimeline = ({
   cardClass,
   onSelectEvent
 }) => (
-  <div className={`${darkMode ? 'bg-gray-900/60 border-[#872320]/50' : 'bg-white/60 border-[#B79F6E]'} rounded-lg shadow-lg border-2 p-6`}>
+  <div className={`${darkMode ? 'bg-gray-900/60 border-accent/50' : 'bg-white/60 border-line'} rounded-lg shadow-lg border-2 p-6`}>
     <div className="space-y-8">
     {sortedDecades.map((decade) => (
       <div key={decade}>
@@ -163,7 +163,7 @@ const TimelineView = ({
 
   if (filteredEvents.length === 0) {
     return (
-      <div className={`${darkMode ? 'bg-gray-900/60 border-[#872320]/50' : 'bg-white/60 border-[#B79F6E]'} rounded-lg shadow-lg border-2 p-12 text-center`}>
+      <div className={`${darkMode ? 'bg-gray-900/60 border-accent/50' : 'bg-white/60 border-line'} rounded-lg shadow-lg border-2 p-12 text-center`}>
         <p className={`text-xl font-semibold mb-3 ${darkMode ? 'text-gray-200' : 'text-amber-900'}`}>
           No hay eventos que coincidan con los filtros
         </p>
@@ -186,8 +186,8 @@ const TimelineView = ({
 
   const dashedColor = darkMode ? 'rgba(220,38,38,0.3)' : 'rgba(180,83,9,0.3)'
   const dotColor = darkMode ? 'bg-red-500' : 'bg-amber-600'
-  const dotBorder = darkMode ? 'border-[#872320]' : 'border-[#B79F6E]'
-  const decadeBg = darkMode ? 'bg-red-600 border-[#872320]' : 'bg-amber-700 border-[#B79F6E]'
+  const dotBorder = darkMode ? 'border-accent' : 'border-line'
+  const decadeBg = darkMode ? 'bg-red-600 border-accent' : 'bg-amber-700 border-line'
   const lineColor = darkMode ? 'bg-red-900/50' : 'bg-amber-300'
 
   const timelineProps = {
@@ -204,7 +204,7 @@ const TimelineView = ({
   }
 
   return (
-    <div className={`${darkMode ? 'bg-gray-900/60 border-[#872320]/50' : 'bg-white/60 border-[#B79F6E]'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
+    <div className={`${darkMode ? 'bg-gray-900/60 border-accent/50' : 'bg-white/60 border-line'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         Línea Temporal
       </h2>

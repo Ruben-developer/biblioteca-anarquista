@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, Menu, Sun, Moon, Heart } from 'lucide-react';
 import { THEME, VIEW_LABELS, VIEWS } from '../constants';
+import StyleSwitcher from './StyleSwitcher';
 
 const Header = ({
   darkMode,
@@ -9,6 +10,8 @@ const Header = ({
   onViewChange,
   favoriteCount,
   activeView,
+  estilo = 'clasico',
+  onEstiloChange = () => {},
   menuOpen,
   onMenuToggle
 }) => {
@@ -37,6 +40,7 @@ const Header = ({
           </button>
 
           <div className="[grid-area:bots] justify-self-end flex items-center gap-2 md:gap-3">
+            <StyleSwitcher estilo={estilo} onChange={onEstiloChange} darkMode={darkMode} />
             <button
               onClick={onShowContact}
               className={`p-2 md:p-3 rounded-lg ${themeClass.button} transition-colors`}
@@ -45,6 +49,7 @@ const Header = ({
             >
               <Mail size={20} />
             </button>
+            {estilo === 'clasico' && (
             <button
               onClick={onDarkModeToggle}
               className={`p-2 md:p-3 rounded-lg ${themeClass.button} transition-colors`}
@@ -54,6 +59,7 @@ const Header = ({
             >
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
             </button>
+            )}
             <button
               onClick={() => onViewChange(VIEWS.FAVORITES)}
               className={`p-2 md:p-3 rounded-lg ${themeClass.button} transition-colors relative`}
@@ -76,7 +82,7 @@ const Header = ({
               <span className="break-words">La Idea</span>
             </h1>
             <p className={`hidden sm:block text-xs sm:text-sm ${darkMode ? 'text-gray-400' : 'text-amber-900'}`}>
-              Archivo Histórico Anarquista
+              Biblioteca digital anarquista
             </p>
           </div>
         </div>

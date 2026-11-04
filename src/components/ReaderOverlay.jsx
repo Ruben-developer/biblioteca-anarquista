@@ -25,10 +25,10 @@ const ReaderOverlay = ({ book, darkMode, onClose, favorites = [], onToggleFavori
   return (
     <dialog
       open
-      className={`fixed inset-0 z-50 flex flex-col ${readingDark ? 'bg-gray-950' : 'bg-[#F5EDD9]'}`}
+      className={`fixed inset-0 z-50 flex flex-col ${readingDark ? 'bg-gray-950' : 'bg-paper'}`}
       aria-label={`Lector: ${book.title}`}
     >
-      <div className={`flex items-center gap-3 px-4 py-3 border-b ${readingDark ? 'bg-gray-900 border-[#872320]' : 'bg-[#EDE1C8] border-[#CBB788]'}`}>
+      <div className={`flex items-center gap-3 px-4 py-3 border-b ${readingDark ? 'bg-gray-900 border-accent' : 'bg-paper-deep border-line-soft'}`}>
         <button
           onClick={onClose}
           className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
@@ -102,7 +102,7 @@ const ReaderOverlay = ({ book, darkMode, onClose, favorites = [], onToggleFavori
         </div>
       </div>
 
-      <div className={`flex-1 flex flex-col items-center px-4 py-4 overflow-hidden ${readingDark ? 'bg-gray-950' : 'bg-[#F5EDD9]'}`}>
+      <div className={`flex-1 flex flex-col items-center px-4 py-4 overflow-hidden ${readingDark ? 'bg-gray-950' : 'bg-paper'}`}>
         {url ? (
           <iframe
             src={url}
@@ -110,13 +110,13 @@ const ReaderOverlay = ({ book, darkMode, onClose, favorites = [], onToggleFavori
             referrerPolicy="no-referrer"
             loading="lazy"
             className={`w-full max-w-5xl flex-1 rounded-lg border ${
-              readingDark ? 'bg-white border-[#872320]' : 'bg-white border-[#CBB788]'
+              readingDark ? 'bg-white border-accent' : 'bg-white border-line-soft'
             }`}
           />
         ) : (
           <div className={`flex-1 flex flex-col items-center justify-center text-center ${readingDark ? 'text-gray-400' : 'text-amber-800'}`}>
             <BookOpen size={48} className="mb-3" />
-            <p className="text-lg font-semibold mb-1">Esta obra no tiene archivo digitalizado</p>
+            <p className="text-lg font-semibold mb-1">Esta obra no tiene PDF digitalizado</p>
             <p className="text-sm">Pronto estará disponible para leer.</p>
           </div>
         )}

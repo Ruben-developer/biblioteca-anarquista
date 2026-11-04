@@ -89,7 +89,7 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
   };
 
   return (
-    <div className={`${darkMode ? 'bg-gray-900/60 border-[#872320]/50' : 'bg-white/60 border-[#B79F6E]'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
+    <div className={`${darkMode ? 'bg-gray-900/60 border-accent/50' : 'bg-white/60 border-line'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         Mapa Mundial de Textos
       </h2>
@@ -97,7 +97,7 @@ const WorldMapView = ({ darkMode, regionData, onSelectRegion }) => {
         Haz clic en un país destacado para ver sus textos históricos. Cuanto más oscuro el color, más hechos del movimiento registra ese país. Los textos de filosofía e ideas viven en la sección de Autores.
       </p>
 
-      <div className={`rounded-lg border-2 overflow-hidden ${darkMode ? 'border-[#872320]/50' : 'border-[#B79F6E]'}`}>
+      <div className={`rounded-lg border-2 overflow-hidden ${darkMode ? 'border-accent/50' : 'border-line'}`}>
         <WorldMap
           data={mapData}
           backgroundColor="transparent"

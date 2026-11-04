@@ -3,9 +3,9 @@
 Guía para agentes autónomos (y humanos) que iteran sobre este repo.
 
 ## Qué es esto
-**La Idea — Archivo Histórico Anarquista** — app interactiva del movimiento anarquista:
-línea temporal (1840-1968), mapa de regiones con textos, biografías, favoritos,
-modo oscuro/claro, filtros y estadísticas. Deploy en Cloudflare Workers (prod `laidea.antarquia.cl` desde `main`; beta
+**La Idea — Biblioteca digital anarquista** — app interactiva del movimiento anarquista:
+catálogo de más de 1.800 textos con PDF, línea temporal (1840-1968), mapa de regiones,
+biografías, favoritos, modo oscuro/claro, filtros y estadísticas. Deploy en Cloudflare Workers (prod `laidea.antarquia.cl` desde `main`; beta
 `laidea-beta.antarquia.cl` desde `develop`) + GitHub Pages como respaldo
 (rollback = revertir el DNS a `ruben-developer.github.io`).
 

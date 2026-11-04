@@ -13,7 +13,7 @@ import {
   bookHref,
   routesMode
 } from '../utils/routes';
-import { useScrollTop, useDarkMode, useFavorites } from '../hooks';
+import { useScrollTop, useDarkMode, useFavorites, useEstilo } from '../hooks';
 
 // Components
 import Header from './Header';
@@ -47,7 +47,11 @@ const getInitialRoute = () =>
     : parseRoute(readRouteInput(), BOOK_INDEX);
 
 const AnarchistArchive = () => {
-  const { darkMode, toggleDarkMode } = useDarkMode();
+  const { darkMode: darkPreferido, toggleDarkMode } = useDarkMode();
+  const { estilo, setEstilo } = useEstilo();
+  // El modo noche solo existe en el estilo clásico: el resto de estilos trae
+  // su propia paleta y no tiene sentido invertirla.
+  const darkMode = darkPreferido && estilo === 'clasico';
   const { favorites, toggleFavorite, updateFavoriteNote, addFavoriteNote, deleteFavoriteNote, exportFavorites, importFavorites } = useFavorites();
   const { showScrollTop, scrollToTop } = useScrollTop();
 
@@ -180,10 +184,13 @@ const AnarchistArchive = () => {
     : 'bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 text-gray-800';
 
   return (
-    <div className={`min-h-screen ${bgClass} transition-colors duration-500 theme-constructivista theme-pergamino`}>
+    <div className={`min-h-screen ${bgClass} transition-colors duration-500 ${estilo === 'clasico' ? 'theme-constructivista theme-pergamino' : ''}`}>
       <Header
         darkMode={darkMode}
         onDarkModeToggle={toggleDarkMode}
+        estilo={estilo}
+        onEstiloChange={setEstilo}
+        onShowStats={() => setActiveView(VIEWS.STATS)}
         onShowContact={() => setActiveView(VIEWS.CONTACT)}
         onViewChange={handleViewChange}
         favoriteCount={favorites.length}
@@ -313,10 +320,10 @@ const AnarchistArchive = () => {
         </div>
       </main>
 
-      <footer className={`border-t-2 shadow-[0_-4px_12px_rgba(0,0,0,0.25)] ${darkMode ? 'border-[#872320]/50 bg-black/30' : 'border-[#B79F6E] bg-amber-100/60'}`}>
+      <footer className={`border-t-2 shadow-[0_-4px_12px_rgba(0,0,0,0.25)] ${darkMode ? 'border-accent/50 bg-black/30' : 'border-line bg-amber-100/60'}`}>
         <div className="container mx-auto px-4 py-8">
           <p className={`font-display uppercase tracking-widest text-sm text-center ${darkMode ? 'text-gray-300' : 'text-amber-900'}`}>
-            La Idea · Archivo Histórico Anarquista
+            La Idea · Biblioteca digital anarquista
           </p>
         </div>
       </footer>
