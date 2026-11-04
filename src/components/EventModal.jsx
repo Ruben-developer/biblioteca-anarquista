@@ -54,7 +54,7 @@ const EventModal = ({ darkMode, event, regionData, onClose, onRead = () => {} })
                     key={`${book.region}-${book.title}-${idx}`}
                     className={`rounded-lg border-2 p-3 ${darkMode ? 'bg-gray-800/50 border-accent/50' : 'bg-white/80 border-line'}`}
                   >
-                    <p className={`font-medium ${darkMode ? 'text-gray-200' : 'text-gray-800'} mb-1`}>
+                    <p className={`font-medium font-serif ${darkMode ? 'text-gray-200' : 'text-gray-800'} mb-1`}>
                       {book.title}
                     </p>
                     <div className="flex items-center gap-3 text-sm flex-wrap">

@@ -193,7 +193,7 @@ const InfluencesView = ({ darkMode, regionData, onRead = () => {} }) => {
                     key={book.title}
                     className={`rounded-lg border-2 px-3 py-2 flex items-center gap-2 ${darkMode ? 'bg-gray-900/50 border-accent/50' : 'bg-white/50 border-line'}`}
                   >
-                    <span className={`text-xs ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
+                    <span className={`text-xs font-serif ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
                       {book.title}
                     </span>
                     {book.filename && (

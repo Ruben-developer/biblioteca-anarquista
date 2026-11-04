@@ -49,7 +49,6 @@ const Header = ({
             >
               <Mail size={20} />
             </button>
-            {estilo === 'clasico' && (
             <button
               onClick={onDarkModeToggle}
               className={`p-2 md:p-3 rounded-lg ${themeClass.button} transition-colors`}
@@ -59,7 +58,6 @@ const Header = ({
             >
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
             </button>
-            )}
             <button
               onClick={() => onViewChange(VIEWS.FAVORITES)}
               className={`p-2 md:p-3 rounded-lg ${themeClass.button} transition-colors relative`}

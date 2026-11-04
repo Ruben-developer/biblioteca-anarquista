@@ -1,7 +1,7 @@
 export const CATEGORIES = [
   { id: 'all', name: 'Todas' },
   { id: 'historia', name: 'Historia' },
-  { id: 'teoria', name: 'Teoría' },
+  { id: 'teoria', name: 'Praxis' },
   { id: 'acratas', name: 'Acratas' },
   { id: 'otros', name: 'Otros' }
 ];
@@ -40,7 +40,7 @@ export const VIEW_LABELS = {
   [VIEWS.AUTHORS]: 'Autores',
   [VIEWS.FAVORITES]: 'Mi Biblioteca',
   [VIEWS.LIBRARY]: 'Biblioteca',
-  [VIEWS.THEORIES]: 'Teorías',
+  [VIEWS.THEORIES]: 'Praxis',
   [VIEWS.INFLUENCES]: 'Red de Influencias',
   [VIEWS.ACRATAS]: 'Acratas',
   [VIEWS.PATHS]: 'Rutas',

@@ -26,7 +26,7 @@ import InfluencesView from './InfluencesView';
 import AcratasView from './AcratasView';
 import FavoritesView from './FavoritesView';
 import LibraryView from './LibraryView';
-import TheoriesView from './TheoriesView';
+import PraxisView from './PraxisView';
 import ReadingPathsView from './ReadingPathsView';
 import GlossaryView from './GlossaryView';
 import ContactView from './ContactView';
@@ -49,9 +49,10 @@ const getInitialRoute = () =>
 const AnarchistArchive = () => {
   const { darkMode: darkPreferido, toggleDarkMode } = useDarkMode();
   const { estilo, setEstilo } = useEstilo();
-  // El modo noche solo existe en el estilo clásico: el resto de estilos trae
-  // su propia paleta y no tiene sentido invertirla.
-  const darkMode = darkPreferido && estilo === 'clasico';
+  // El modo noche está disponible en los dos estilos: Clásico lo resuelve con
+  // su tema pergamino/constructivista y Collage Vino con la paleta nocturna
+  // (`data-modo="noche"` en <html>).
+  const darkMode = darkPreferido;
   const { favorites, toggleFavorite, updateFavoriteNote, addFavoriteNote, deleteFavoriteNote, exportFavorites, importFavorites } = useFavorites();
   const { showScrollTop, scrollToTop } = useScrollTop();
 
@@ -106,7 +107,7 @@ const AnarchistArchive = () => {
     setSelectedEvent(event);
   };
 
-  // Cross-links desde Teorías/Rutas/Glosario → Biblioteca con filtros
+  // Cross-links desde Praxis/Rutas/Glosario → Biblioteca con filtros
   // precargados (cambio 5 del reporte @ux-review de navegación, 2026-08-17).
   const openLibraryWithFilters = (filters) => {
     setLibraryInitialFilters(filters || null);
@@ -178,6 +179,12 @@ const AnarchistArchive = () => {
       window.removeEventListener('popstate', syncFromHash);
     };
   }, []);
+
+  // Modo noche en <html>: las paletas nocturnas se activan con
+  // `data-modo="noche"`, sin tocar las clases de cada componente.
+  useEffect(() => {
+    document.documentElement.dataset.modo = darkMode ? 'noche' : 'dia';
+  }, [darkMode]);
 
   const bgClass = darkMode
     ? 'bg-gradient-to-br from-red-950 via-black to-gray-900 text-gray-100'
@@ -288,7 +295,7 @@ const AnarchistArchive = () => {
           )}
 
           {activeView === VIEWS.THEORIES && (
-            <TheoriesView
+            <PraxisView
               darkMode={darkMode}
               regionData={regionData}
               onRead={setReadingBook}

@@ -4,7 +4,7 @@ import { THEME } from '../constants';
 import { anarchistTheories } from '../data/anarchistTheories';
 import { findBookByTitle } from '../utils/library';
 
-const TheoriesView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary = () => {} }) => {
+const PraxisView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary = () => {} }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
   const [openId, setOpenId] = useState(null);
 
@@ -13,7 +13,7 @@ const TheoriesView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
   return (
     <div className={`${darkMode ? 'bg-gray-900/60 border-accent/50' : 'bg-white/60 border-line'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
-        Teorías y corrientes del anarquismo
+        Praxis y corrientes del anarquismo
       </h2>
       <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
         {anarchistTheories.length} ramas del pensamiento libertario. Haz clic en una corriente para ver sus ideas, autores y obras en la biblioteca.
@@ -73,14 +73,14 @@ const TheoriesView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
                     <div className="space-y-2">
                       {books.map((book, idx) => (
                         <div key={`${theory.id}-${idx}`} className={`rounded-lg border-2 p-3 ${darkMode ? 'bg-gray-800/60 border-accent/50' : 'bg-white/80 border-line'}`}>
-                          <p className={`text-sm font-medium mb-1 ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
+                          <p className={`text-sm font-medium font-serif mb-1 ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
                             {book.title}
                           </p>
-                          <div className="flex items-center justify-between gap-2">
-                            <span className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                          <div className="flex flex-wrap items-center justify-between gap-2">
+                            <span className={`text-xs min-w-0 break-words ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                               {book.author}
                             </span>
-                            <span className="flex items-center gap-1.5 flex-shrink-0">
+                            <span className="flex flex-wrap items-center gap-1.5">
                               {book.filename && (
                                 <button
                                   onClick={() => onRead(book)}
@@ -137,4 +137,4 @@ const TheoriesView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
 };
 
 
-export default TheoriesView;
+export default PraxisView;

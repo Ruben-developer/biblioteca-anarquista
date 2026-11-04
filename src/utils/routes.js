@@ -28,7 +28,7 @@ export const VIEW_SLUGS = {
   [VIEWS.AUTHORS]: 'autores',
   [VIEWS.FAVORITES]: 'favoritos',
   [VIEWS.LIBRARY]: 'biblioteca',
-  [VIEWS.THEORIES]: 'teorias',
+  [VIEWS.THEORIES]: 'praxis',
   [VIEWS.INFLUENCES]: 'influencias',
   [VIEWS.ACRATAS]: 'acratas',
   [VIEWS.PATHS]: 'rutas',
@@ -43,6 +43,9 @@ Object.entries(VIEW_SLUGS).forEach(([view, slug]) => {
   ROUTE_TOKENS.set(slug, view);
   ROUTE_TOKENS.set(view, view);
 });
+// Alias histórico: los enlaces compartidos antes del cambio de nombre
+// (#/teorias) siguen abriendo la vista de Praxis.
+ROUTE_TOKENS.set('teorias', VIEWS.THEORIES);
 
 const safeDecode = (value) => {
   try {

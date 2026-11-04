@@ -62,7 +62,7 @@ const ReadingPathsView = ({ darkMode, regionData, onRead = () => {}, onOpenLibra
                             {idx + 1}
                           </span>
                           <div className={`flex-1 min-w-0 rounded-lg border-2 p-3 ${darkMode ? 'bg-gray-800/60 border-accent/50' : 'bg-white/80 border-line'}`}>
-                            <p className={`text-sm font-medium break-words ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
+                            <p className={`text-sm font-medium font-serif break-words ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
                               {book.title}
                             </p>
                             <p className={`text-xs mb-2 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>

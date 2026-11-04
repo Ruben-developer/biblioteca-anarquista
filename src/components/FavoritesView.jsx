@@ -3,7 +3,7 @@ import { Heart, BookOpen, X, Download, Upload, StickyNote, User, Tag, Trash2 } f
 import { THEME } from '../constants';
 
 const CATEGORY_LABELS = {
-  teoria: 'Teoría', historia: 'Historia', acratas: 'Acratas',
+  teoria: 'Praxis', historia: 'Historia', acratas: 'Acratas',
   otros: 'Otros'
 };
 

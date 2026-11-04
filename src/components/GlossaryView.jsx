@@ -73,7 +73,7 @@ const GlossaryView = ({ darkMode, regionData, onRead = () => {}, onOpenLibrary =
                     <div className="space-y-1.5">
                       {books.map((book) => (
                         <div key={book.title} className="flex items-center justify-between gap-2">
-                          <span className={`text-xs ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                          <span className={`text-xs font-serif ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                             {book.title}
                           </span>
                           <span className="flex items-center gap-1.5 flex-shrink-0">

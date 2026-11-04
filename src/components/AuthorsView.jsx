@@ -208,7 +208,7 @@ const AuthorsView = ({
                       >
                         <div className="flex justify-between items-start gap-2">
                           <div className="flex-1">
-                            <p className={`text-sm font-medium ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
+                            <p className={`text-sm font-medium font-serif ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
                               {book.title}
                             </p>
                             <div className="flex items-center gap-2 mt-1 flex-wrap">

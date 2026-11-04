@@ -186,6 +186,14 @@
 
 > Verificación: `npm run check` (lint 0 errores + **250 tests** + build) verde.
 
+## 2026-11-04 — Dos estilos, serif, modo noche y Teorías → Praxis (develop)
+
+| Hora | Tipo | Commit | Detalle |
+|------|------|--------|---------|
+| — | 🧑 Manual | (pendiente) | **Iteración visual final en PRE.** El selector queda con **dos estilos**: `clasico` (por defecto) y `collage-vino`; se descartan Brutal, Collage, Constructivista, Deconstructivo y sus variantes. **Todos los titulares pasan a serif** (Playfair Display) y los datos (autores, fechas, cantidades) a sans; los badges pequeños siguen en mono. **Modo noche en ambos** vía `data-modo="noche"` (Collage Vino estrena paleta nocturna; Clásico mantiene `theme-constructivista`). **Línea temporal**: barra de scroll propia, siempre visible y pegada al borde inferior del panel (la nativa de Chrome es superpuesta y se desvanece). **«Red de Influencias» oculta del menú** (componente y ruta intactos). **Teorías → Praxis** en interfaz, rutas (`#/praxis`, alias `#/teorias`) y `.md`; la categoría interna `teoria` no cambia. **Arreglo** del desborde del botón «En el catálogo» en las fichas de Praxis. |
+
+> Verificación: `npm run check` (lint 0 errores + **298 tests** + build) verde; capturas de Clásico y Collage Vino en día y noche. Solo en `develop` → `laidea-beta.antarquia.cl`.
+
 ## Estado actual
 
 - **25+ commits** en `main`, CI de Pages **verde** (lint+tests+audit+build), web **HTTP 200**.

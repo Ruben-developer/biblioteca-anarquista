@@ -53,6 +53,20 @@ code {
   background: rgba(var(--c-red-deep-rgb), 0.65);
 }
 
+/* Línea temporal horizontal: barra propia, visible y pegada al borde inferior
+   del panel. El padding inferior del contenedor que desliza separa la barra
+   del contenido sin despegarla del borde. */
+/* Línea temporal horizontal: la barra se dibuja en el componente
+   (`BarraHorizontal`) para que sea siempre visible y quede pegada al borde
+   inferior del panel; la nativa se oculta porque Chrome la superpone y la
+   desvanece al dejar de desplazar. */
+.timeline-scroll {
+  scrollbar-width: none;
+}
+.timeline-scroll::-webkit-scrollbar {
+  display: none;
+}
+
 /* Foco visible global: bermellón, visible en ambos temas */
 :focus-visible {
   outline: 2px solid var(--c-red-focus);

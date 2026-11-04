@@ -20,8 +20,8 @@ describe('StyleSwitcher', () => {
     expect(screen.queryByRole('menu')).toBeNull();
   });
 
-  it('abre el desplegable con las cinco opciones y marca la activa', () => {
-    render(<StyleSwitcher estilo="brutal" onChange={() => {}} darkMode={false} />);
+  it('abre el desplegable con todas las opciones y marca la activa', () => {
+    render(<StyleSwitcher estilo="collage-vino" onChange={() => {}} darkMode={false} />);
     fireEvent.click(screen.getByRole('button', { name: /estilo visual/i }));
 
     expect(screen.getByRole('menu')).toBeTruthy();
@@ -29,7 +29,7 @@ describe('StyleSwitcher', () => {
     expect(opciones).toHaveLength(ESTILOS.length);
 
     const activa = opciones.find((o) => o.getAttribute('aria-checked') === 'true');
-    expect(activa.textContent).toContain('Brutal');
+    expect(activa.textContent).toContain('Collage Vino');
   });
 
   it('al elegir un estilo avisa al padre y cierra el menú', () => {
@@ -37,8 +37,11 @@ describe('StyleSwitcher', () => {
     render(<StyleSwitcher estilo="clasico" onChange={onChange} darkMode={false} />);
     fireEvent.click(screen.getByRole('button', { name: /estilo visual/i }));
 
-    fireEvent.click(screen.getByText('Constructivista'));
-    expect(onChange).toHaveBeenCalledWith('constructivista');
+    const opcion = screen
+      .getAllByRole('menuitemradio')
+      .find((o) => o.textContent.includes('Collage Vino'));
+    fireEvent.click(opcion);
+    expect(onChange).toHaveBeenCalledWith('collage-vino');
     expect(screen.queryByRole('menu')).toBeNull();
   });
 
@@ -63,8 +66,8 @@ describe('estilos: metadatos y aplicación', () => {
   });
 
   it('aplicarEstilo escribe data-estilo y cae al primero si el id no existe', () => {
-    aplicarEstilo('collage');
-    expect(document.documentElement.dataset.estilo).toBe('collage');
+    aplicarEstilo('collage-vino');
+    expect(document.documentElement.dataset.estilo).toBe('collage-vino');
 
     aplicarEstilo('no-existe');
     expect(document.documentElement.dataset.estilo).toBe(ESTILOS[0].id);
@@ -81,17 +84,17 @@ describe('estilos: metadatos y aplicación', () => {
 
 describe('useEstilo', () => {
   it('arranca desde localStorage', () => {
-    localStorage.setItem(ESTILO_KEY, 'collage');
+    localStorage.setItem(ESTILO_KEY, 'collage-vino');
     const { result } = renderHook(() => useEstilo());
-    expect(result.current.estilo).toBe('collage');
+    expect(result.current.estilo).toBe('collage-vino');
   });
 
   it('un ?estilo= válido manda sobre lo guardado y no se persiste', () => {
     localStorage.setItem(ESTILO_KEY, 'clasico');
-    window.history.replaceState(null, '', '/?estilo=brutal');
+    window.history.replaceState(null, '', '/?estilo=collage-vino');
 
     const { result } = renderHook(() => useEstilo());
-    expect(result.current.estilo).toBe('brutal');
+    expect(result.current.estilo).toBe('collage-vino');
     expect(localStorage.getItem(ESTILO_KEY)).toBe('clasico');
 
     window.history.replaceState(null, '', '/');
@@ -106,9 +109,9 @@ describe('useEstilo', () => {
 
   it('al cambiar desde la UI aplica el atributo y persiste', () => {
     const { result } = renderHook(() => useEstilo());
-    act(() => result.current.setEstilo('constructivista'));
+    act(() => result.current.setEstilo('collage-vino'));
 
-    expect(document.documentElement.dataset.estilo).toBe('constructivista');
-    expect(localStorage.getItem(ESTILO_KEY)).toBe('constructivista');
+    expect(document.documentElement.dataset.estilo).toBe('collage-vino');
+    expect(localStorage.getItem(ESTILO_KEY)).toBe('collage-vino');
   });
 });

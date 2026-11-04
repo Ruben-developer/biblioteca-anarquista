@@ -1,10 +1,124 @@
-import React, { useMemo } from 'react'
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { THEME } from '../constants'
 import { useIsMobile } from '../hooks'
 import TimelineFilters from './TimelineFilters'
 
 const formatYear = (year) => (year === -1800 ? 'A.A.' : year)
 const formatDecade = (decade) => (decade === '-1800s' ? 'A.A.' : decade.replace('s', ''))
+
+/**
+ * Barra de scroll propia para la línea temporal.
+ * Chrome usa barras superpuestas que solo aparecen al desplazar (y que ignoran
+ * ::-webkit-scrollbar), así que la dibujamos nosotros: siempre visible, pegada
+ * al borde inferior del panel y con los colores del estilo activo.
+ */
+const BarraHorizontal = ({ contenedorRef, darkMode }) => {
+  const [estado, setEstado] = useState({ ancho: 100, izq: 0, visible: false })
+
+  const medir = useCallback(() => {
+    const el = contenedorRef.current
+    if (!el) return
+    const desborde = el.scrollWidth - el.clientWidth
+    if (desborde <= 1) {
+      setEstado({ ancho: 100, izq: 0, visible: false })
+      return
+    }
+    // El pulgar nunca baja del 12%: sigue siendo agarrable en líneas largas.
+    const ancho = Math.max((el.clientWidth / el.scrollWidth) * 100, 12)
+    const izq = (el.scrollLeft / desborde) * (100 - ancho)
+    setEstado({ ancho, izq, visible: true })
+  }, [contenedorRef])
+
+  useEffect(() => {
+    medir()
+    const el = contenedorRef.current
+    if (!el) return undefined
+    const observador = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(medir) : null
+    if (observador) observador.observe(el)
+    el.addEventListener('scroll', medir, { passive: true })
+    globalThis.addEventListener('resize', medir)
+    return () => {
+      if (observador) observador.disconnect()
+      el.removeEventListener('scroll', medir)
+      globalThis.removeEventListener('resize', medir)
+    }
+  }, [contenedorRef, medir])
+
+  const irA = useCallback((fraccion) => {
+    const el = contenedorRef.current
+    if (!el) return
+    el.scrollLeft = fraccion * (el.scrollWidth - el.clientWidth)
+  }, [contenedorRef])
+
+  const arrastrar = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    const el = contenedorRef.current
+    if (!el) return
+    const inicioX = e.clientX
+    const inicioScroll = el.scrollLeft
+    const desborde = el.scrollWidth - el.clientWidth
+    const pista = e.currentTarget.parentElement
+    const anchoPista = pista ? pista.clientWidth : 1
+    const mover = (ev) => {
+      const delta = ((ev.clientX - inicioX) / anchoPista) * desborde
+      el.scrollLeft = inicioScroll + delta
+    }
+    const soltar = () => {
+      globalThis.removeEventListener('pointermove', mover)
+      globalThis.removeEventListener('pointerup', soltar)
+    }
+    globalThis.addEventListener('pointermove', mover)
+    globalThis.addEventListener('pointerup', soltar)
+  }
+
+  const saltar = (e) => {
+    if (e.target !== e.currentTarget) return
+    const rect = e.currentTarget.getBoundingClientRect()
+    irA((e.clientX - rect.left) / rect.width)
+  }
+
+  const fraccionActual = () => {
+    const el = contenedorRef.current
+    if (!el) return 0
+    const desborde = el.scrollWidth - el.clientWidth
+    return desborde > 0 ? el.scrollLeft / desborde : 0
+  }
+
+  const teclas = (e) => {
+    const paso = 0.1
+    if (e.key === 'ArrowRight') { e.preventDefault(); irA(Math.min(1, fraccionActual() + paso)) }
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); irA(Math.max(0, fraccionActual() - paso)) }
+    else if (e.key === 'Home') { e.preventDefault(); irA(0) }
+    else if (e.key === 'End') { e.preventDefault(); irA(1) }
+  }
+
+  if (!estado.visible) return null
+
+  const pistaClass = darkMode ? 'bg-gray-700/70' : 'bg-line-soft/60'
+  const pulgarClass = darkMode ? 'bg-red-400/80 hover:bg-red-300' : 'bg-accent hover:bg-red-deep'
+
+  return (
+    <div
+      className={`absolute inset-x-0 bottom-0 h-3 rounded-full cursor-pointer ${pistaClass}`}
+      onClick={saltar}
+      role="scrollbar"
+      aria-orientation="horizontal"
+      aria-controls="linea-temporal-pista"
+      aria-valuemin={0}
+      aria-valuemax={100}
+      aria-valuenow={Math.round(estado.izq + estado.ancho / 2)}
+      tabIndex={0}
+      onKeyDown={teclas}
+    >
+      <div
+        className={`absolute top-0 h-3 rounded-full ${pulgarClass} cursor-grab active:cursor-grabbing`}
+        style={{ width: `${estado.ancho}%`, left: `${estado.izq}%` }}
+        onPointerDown={arrastrar}
+      />
+    </div>
+  )
+}
 
 const HorizontalTimeline = ({
   sortedDecades,
@@ -17,10 +131,19 @@ const HorizontalTimeline = ({
   lineColor,
   cardClass,
   onSelectEvent
-}) => (
-  <div className={`${darkMode ? 'bg-gray-900/60 border-accent/50' : 'bg-white/60 border-line'} rounded-lg shadow-lg border-2 p-6`}>
+}) => {
+  const scrollRef = useRef(null)
+
+  return (
+  <div className={`${darkMode ? 'bg-gray-900/60 border-accent/50' : 'bg-white/60 border-line'} rounded-lg shadow-lg border-2 p-6 pb-0`}>
     <div className="relative">
-      <div className="overflow-x-auto">
+      {/* La barra propia vive en el borde inferior del panel; el padding
+          inferior del contenedor que desliza separa las tarjetas de ella. */}
+      <div
+        id="linea-temporal-pista"
+        ref={scrollRef}
+        className="timeline-scroll overflow-x-auto pb-6"
+      >
         <div className="flex gap-6" style={{ minWidth: 'max-content' }}>
           {sortedDecades.map((decade) => (
             <div key={decade} className="flex flex-col" style={{ minWidth: `${groupedByDecade[decade].length * 220 + 60}px` }}>
@@ -69,10 +192,12 @@ const HorizontalTimeline = ({
           ))}
         </div>
       </div>
-      <div className={`absolute right-0 top-0 bottom-0 w-8 pointer-events-none bg-gradient-to-l ${darkMode ? 'from-gray-900' : 'from-amber-50'}`} />
+      <div className={`absolute right-0 top-0 bottom-6 w-8 pointer-events-none bg-gradient-to-l ${darkMode ? 'from-gray-900' : 'from-amber-50'}`} />
+      <BarraHorizontal contenedorRef={scrollRef} darkMode={darkMode} />
     </div>
   </div>
-)
+  )
+}
 
 const VerticalTimeline = ({
   sortedDecades,

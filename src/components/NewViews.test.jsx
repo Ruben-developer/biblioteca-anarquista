@@ -8,7 +8,7 @@ import { glossaryTerms } from '../data/glossary';
 import { readingPaths } from '../data/readingPaths';
 import { influenceNodes, influenceEdges, influenceBox } from '../data/influences';
 import { findBookByTitle, getAllBooks } from '../utils/library';
-import TheoriesView from './TheoriesView';
+import PraxisView from './PraxisView';
 import GlossaryView from './GlossaryView';
 import ReadingPathsView from './ReadingPathsView';
 import InfluencesView from './InfluencesView';
@@ -72,12 +72,12 @@ describe('Datos de las nuevas secciones', () => {
   });
 });
 
-describe('TheoriesView', () => {
+describe('PraxisView', () => {
   it('renderiza el título y todas las corrientes', () => {
     const html = renderToStaticMarkup(
-      <TheoriesView darkMode={false} regionData={regionData} />
+      <PraxisView darkMode={false} regionData={regionData} />
     );
-    expect(html).toContain('Teorías y corrientes del anarquismo');
+    expect(html).toContain('Praxis y corrientes del anarquismo');
     expect(html).toContain('Anarcomunismo');
     expect(html).toContain('Anarcosindicalismo');
     expect(html).toContain('Mutualismo');
@@ -87,7 +87,7 @@ describe('TheoriesView', () => {
   it('despliega ideas, autores y obras al hacer clic', async () => {
     // @vitest-environment jsdom
     const { render, screen, fireEvent } = await import('@testing-library/react');
-    render(<TheoriesView darkMode={false} regionData={regionData} />);
+    render(<PraxisView darkMode={false} regionData={regionData} />);
     fireEvent.click(screen.getByText('Anarcomunismo'));
     expect(screen.getByText('Comunismo libertario')).toBeTruthy();
     // "Piotr Kropotkin" puede aparecer en varias secciones de la tarjeta abierta
@@ -100,7 +100,7 @@ describe('TheoriesView', () => {
     // @vitest-environment jsdom
     const { render, screen, fireEvent } = await import('@testing-library/react');
     const onOpenLibrary = vi.fn();
-    render(<TheoriesView darkMode={false} regionData={regionData} onOpenLibrary={onOpenLibrary} />);
+    render(<PraxisView darkMode={false} regionData={regionData} onOpenLibrary={onOpenLibrary} />);
     fireEvent.click(screen.getByText('Anarcomunismo'));
     fireEvent.click(screen.getAllByTitle(/Ver "La Conquista del Pan" en el catálogo/)[0]);
     expect(onOpenLibrary).toHaveBeenCalledWith({ searchTerm: 'La Conquista del Pan' });
@@ -110,7 +110,7 @@ describe('TheoriesView', () => {
     // @vitest-environment jsdom
     const { render, screen, fireEvent } = await import('@testing-library/react');
     const onOpenLibrary = vi.fn();
-    render(<TheoriesView darkMode={false} regionData={regionData} onOpenLibrary={onOpenLibrary} />);
+    render(<PraxisView darkMode={false} regionData={regionData} onOpenLibrary={onOpenLibrary} />);
     fireEvent.click(screen.getByText('Ver todas las obras del catálogo'));
     expect(onOpenLibrary).toHaveBeenCalledWith({});
   });

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Calendar, MapPin, User, Heart, BookOpen, Compass, Milestone, Share2, UserSquare, X } from 'lucide-react';
+import { Calendar, MapPin, User, Heart, BookOpen, Compass, Milestone, UserSquare, X } from 'lucide-react';
 import { THEME, VIEWS } from '../constants';
 
 const Navigation = ({
@@ -36,9 +36,10 @@ const Navigation = ({
     { view: VIEWS.MAP, label: 'Mapa', icon: MapPin },
     { view: VIEWS.TIMELINE, label: 'Línea Temporal', icon: Calendar },
     { view: VIEWS.AUTHORS, label: 'Autores', icon: User },
-    { view: VIEWS.INFLUENCES, label: 'Red de Influencias', icon: Share2 },
+    // «Red de Influencias» queda oculta por ahora: el componente sigue en el
+    // código y la ruta responde, pero no se ofrece en el menú.
     { view: VIEWS.ACRATAS, label: 'Acratas', icon: UserSquare },
-    { view: VIEWS.THEORIES, label: 'Teorías', icon: Compass },
+    { view: VIEWS.THEORIES, label: 'Praxis', icon: Compass },
     { view: VIEWS.PATHS, label: 'Rutas', icon: Milestone },
     { view: VIEWS.FAVORITES, label: `Mi Biblioteca (${favoriteCount})`, icon: Heart }
   ];

@@ -186,13 +186,13 @@ const AcratasView = ({
                                   {book.filename ? (
                                     <button
                                       onClick={() => onRead(book)}
-                                      className={`text-sm font-medium text-left ${darkMode ? 'text-gray-200 hover:text-red-400' : 'text-gray-800 hover:text-amber-700'}`}
+                                      className={`text-sm font-medium font-serif text-left ${darkMode ? 'text-gray-200 hover:text-red-400' : 'text-gray-800 hover:text-amber-700'}`}
                                       title={`Abrir ${book.title}`}
                                     >
                                       {book.title}
                                     </button>
                                   ) : (
-                                    <p className={`text-sm font-medium ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
+                                    <p className={`text-sm font-medium font-serif ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
                                       {book.title}
                                     </p>
                                   )}

@@ -14,67 +14,11 @@ export const ESTILOS = [
     muestra: ['#F5EDD9', '#D02C26', '#1A1818']
   },
   {
-    id: 'brutal',
-    nombre: 'Brutal',
-    nota: 'Negro, coral, Anton, sin sombras',
-    grupo: 'Brutal',
-    muestra: ['#0A0A0A', '#FF3B2F', '#F5EFDF']
-  },
-  {
-    id: 'brutal-acido',
-    nombre: 'Brutal ácido',
-    nota: 'Negro, lima, mono, rejilla dura',
-    grupo: 'Brutal',
-    muestra: ['#08090A', '#D8FF00', '#F2F0E6']
-  },
-  {
-    id: 'collage',
-    nombre: 'Collage',
-    nota: 'Blanco, carmesí, serif, recortes',
-    grupo: 'Collage',
-    muestra: ['#FFFFFF', '#D0021B', '#111111']
-  },
-  {
-    id: 'collage-prensa',
-    nombre: 'Collage prensa',
-    nota: 'Papel prensa, rojo, Oswald, trama',
-    grupo: 'Collage',
-    muestra: ['#EFEBE3', '#C8102E', '#141414']
-  },
-  {
-    id: 'hud',
-    nombre: 'HUD sci-fi',
-    nota: 'Negro, naranja neón, corchetes',
-    grupo: 'Nuevos',
-    muestra: ['#040607', '#FF6A00', '#FFD400']
-  },
-  {
-    id: 'deconstructivo',
-    nombre: 'Deconstructivo',
-    nota: 'Blanco, rojo puro, círculos, solape',
-    grupo: 'Nuevos',
-    muestra: ['#FFFFFF', '#E30613', '#0B0B0B']
-  },
-  {
-    id: 'zine',
-    nombre: 'Zine',
-    nota: 'Tomate, negro, marcador, estrellas',
-    grupo: 'Nuevos',
-    muestra: ['#FFFFFF', '#FF4438', '#0B0B0B']
-  },
-  {
-    id: 'bauhaus',
-    nombre: 'Bauhaus',
-    nota: 'Crema, terracota, Jost, diagonales',
-    grupo: 'Primera iteración',
-    muestra: ['#EDE3CE', '#B23A2A', '#26211B']
-  },
-  {
-    id: 'constructivista',
-    nombre: 'Constructivista',
-    nota: 'Papel viejo, carmesí, Oswald',
-    grupo: 'Primera iteración',
-    muestra: ['#E8DCC0', '#C1121F', '#1A1714']
+    id: 'collage-vino',
+    nombre: 'Collage Vino',
+    nota: 'Crema, berenjena, Playfair, passe-partout',
+    grupo: 'Editorial',
+    muestra: ['#F6F0EC', '#6B1F3A', '#1A1416']
   }
 ];
 

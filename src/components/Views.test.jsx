@@ -22,7 +22,7 @@ describe('Navigation', () => {
     expect(html).toContain('Biblioteca');
     expect(html).toContain('Autores');
     expect(html).toContain('Mi Biblioteca (3)');
-    expect(html).toContain('Teorías');
+    expect(html).toContain('Praxis');
     expect(html).toContain('Rutas');
     // El drawer usa <dialog> con rol implícito y aria-modal.
     expect(html).toContain('<dialog');
@@ -116,7 +116,7 @@ describe('StatsPanel', () => {
       <StatsPanel darkMode={false} stats={stats} />
     );
     expect(html).toContain('Composición por categoría');
-    expect(html).toContain('Teoría');
+    expect(html).toContain('Praxis');
     expect(html).toContain('Autores más prolíficos');
     expect(html).toContain('Ricardo Mella');
     expect(html).toContain('7 obras');
