@@ -78,19 +78,31 @@ describe('PraxisView', () => {
       <PraxisView darkMode={false} regionData={regionData} />
     );
     expect(html).toContain('Praxis anarquista');
-    expect(html).toContain('Anarcomunismo');
+    expect(html).toContain('Anarcocomunismo');
     expect(html).toContain('Anarcosindicalismo');
     expect(html).toContain('Mutualismo');
     expect(html).toContain('Plataformismo y especifismo');
   });
 
-  it('despliega ideas, autores y obras al hacer clic', async () => {
+  it('ordena las corrientes de más a menos obras', () => {
+    const html = renderToStaticMarkup(
+      <PraxisView darkMode={false} regionData={regionData} />
+    );
+    const conteo = (theory) =>
+      theory.books.map((t) => findBookByTitle(regionData, t)).filter(Boolean).length;
+    const esperado = [...anarchistTheories].sort((a, b) => conteo(b) - conteo(a));
+    const posiciones = esperado.map((t) => html.indexOf(t.name));
+    expect(posiciones.every((p) => p >= 0)).toBe(true);
+    expect([...posiciones].sort((a, b) => a - b)).toEqual(posiciones);
+  });
+
+  it('abre un modal con ideas, autores y obras al hacer clic', async () => {
     // @vitest-environment jsdom
     const { render, screen, fireEvent } = await import('@testing-library/react');
     render(<PraxisView darkMode={false} regionData={regionData} />);
-    fireEvent.click(screen.getByText('Anarcomunismo'));
+    fireEvent.click(screen.getByText('Anarcocomunismo'));
     expect(screen.getByText('Comunismo libertario')).toBeTruthy();
-    // "Piotr Kropotkin" puede aparecer en varias secciones de la tarjeta abierta
+    // "Piotr Kropotkin" puede aparecer en varias secciones del modal
     // (autores relacionados y/o obras), por lo que usamos getAllByText.
     expect(screen.getAllByText('Piotr Kropotkin').length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText('La Conquista del Pan').length).toBeGreaterThanOrEqual(1);
@@ -101,7 +113,7 @@ describe('PraxisView', () => {
     const { render, screen, fireEvent } = await import('@testing-library/react');
     const onOpenLibrary = vi.fn();
     render(<PraxisView darkMode={false} regionData={regionData} onOpenLibrary={onOpenLibrary} />);
-    fireEvent.click(screen.getByText('Anarcomunismo'));
+    fireEvent.click(screen.getByText('Anarcocomunismo'));
     fireEvent.click(screen.getAllByTitle(/Ver "La Conquista del Pan" en el catálogo/)[0]);
     expect(onOpenLibrary).toHaveBeenCalledWith({ searchTerm: 'La Conquista del Pan' });
   });
@@ -201,7 +213,7 @@ describe('AcratasView', () => {
     expect(screen.queryByText('Buenaventura Durruti')).toBeNull();
   });
 
-  it('despliega los textos de una persona al hacer clic', async () => {
+  it('abre un modal con los textos de una persona al hacer clic', async () => {
     // @vitest-environment jsdom
     const { render, screen, fireEvent } = await import('@testing-library/react');
     render(<AcratasView darkMode={false} regionData={regionData} />);
@@ -221,14 +233,15 @@ describe('AcratasView', () => {
     expect(screen.queryByText('Buenaventura Durruti')).toBeNull();
   });
 
-  it('abre la biografía al hacer clic en su título', async () => {
+  it('abre la biografía al pulsar "Leer" en el modal', async () => {
     // @vitest-environment jsdom
-    const { render, screen, fireEvent } = await import('@testing-library/react');
+    const { render, screen, fireEvent, within } = await import('@testing-library/react');
     const onRead = vi.fn();
     render(<AcratasView darkMode={false} regionData={regionData} onRead={onRead} />);
     fireEvent.change(screen.getByLabelText('Buscar persona o texto...'), { target: { value: 'Emma Goldman' } });
     fireEvent.click(screen.getByText('Emma Goldman'));
-    fireEvent.click(screen.getByText('Fraternalmente, Emma'));
+    const fila = screen.getByText('Fraternalmente, Emma').closest('div.rounded-lg');
+    fireEvent.click(within(fila).getByText('Leer'));
     expect(onRead).toHaveBeenCalledWith(expect.objectContaining({ title: 'Fraternalmente, Emma' }));
   });
 });

@@ -3,7 +3,7 @@
 export const anarchistTheories = [
   {
     "id": "anarcocomunismo",
-    "name": "Anarcomunismo",
+    "name": "Anarcocomunismo",
     "icon": "🌾",
     "description": "La corriente más influyente: abolición del Estado Y de la propiedad privada, producción y reparto según necesidades y capacidades, con los recursos en común.",
     "keyIdeas": [

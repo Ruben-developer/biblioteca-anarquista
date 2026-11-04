@@ -1,4 +1,4 @@
-# La Idea — Biblioteca digital anarquista
+# La Idea — Biblioteca Digital Anarquista
 
 Biblioteca digital del movimiento anarquista mundial: **más de 1.800 textos en PDF**
 de descarga libre, línea temporal (1840-1968), mapa de regiones, biografías de

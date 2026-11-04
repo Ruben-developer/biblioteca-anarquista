@@ -26,7 +26,7 @@ const lerpColor = (c1, c2, t) => {
 const TOPE_TEXTO = 50;
 const ESCALA_MAPA = {
   dia: { claro: '#E8B4AA', oscuro: '#8A1C1C', borde: '#6E1414' },
-  noche: { claro: '#4A2A26', oscuro: '#D98A80', borde: '#E4C7C1' }
+  noche: { claro: '#452222', oscuro: '#E05252', borde: '#F2C4C4' }
 };
 
 // Color de un país según sus textos históricos. `count` se recorta en

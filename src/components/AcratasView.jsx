@@ -1,7 +1,8 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Search, BookOpen, ChevronDown, ChevronUp, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Search, BookOpen, ChevronLeft, ChevronRight } from 'lucide-react';
 import { THEME } from '../constants';
 import { getAcratasPersons } from '../utils/library';
+import CollectionModal from './CollectionModal';
 
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const PAGE_SIZE = 12;
@@ -34,12 +35,13 @@ const getLetterCountClass = (darkMode, activeLetter, letter) => {
 const AcratasView = ({
   darkMode,
   regionData,
-  onRead = () => {}
+  onRead = () => {},
+  onOpenLibrary = () => {}
 }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card;
   const [search, setSearch] = useState('');
   const [activeLetter, setActiveLetter] = useState(null);
-  const [openSubject, setOpenSubject] = useState(null);
+  const [selectedSubject, setSelectedSubject] = useState(null);
   const [page, setPage] = useState(1);
 
   const persons = useMemo(
@@ -73,10 +75,6 @@ const AcratasView = ({
   }, [persons, activeLetter, search]);
 
   useEffect(() => { setPage(1) }, [activeLetter, search]);
-
-  const toggleSubject = (subject) => {
-    setOpenSubject((prev) => (prev === subject ? null : subject));
-  };
 
   const handleLetterClick = (letter) => {
     setActiveLetter((prev) => (prev === letter ? null : letter));
@@ -150,82 +148,28 @@ const AcratasView = ({
         return (
           <>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {paged.map((person) => {
-                const isOpen = openSubject === person.subject;
-                return (
-                  <div key={person.subject} className={`${cardClass} border-2 rounded-lg p-5 shadow-md hover:shadow-lg transition-all flex flex-col`}>
-                    <button
-                      className="text-left w-full"
-                      onClick={() => toggleSubject(person.subject)}
-                      aria-expanded={isOpen}
-                    >
-                      <h3 className={`text-xl font-bold ${darkMode ? 'text-gray-100' : 'text-gray-800'} mb-2 text-center`}>
-                        {person.subject}
-                      </h3>
-                      <div className={`flex items-center justify-between pt-3 mt-3 border-t ${darkMode ? 'border-accent' : 'border-line'}`}>
-                        <span className="text-sm">
-                          <BookOpen size={16} className="inline mr-1" />
-                          {person.bookCount} {person.bookCount === 1 ? 'texto' : 'textos'}
-                        </span>
-                        <span className="text-sm flex items-center gap-1">
-                          {isOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                        </span>
-                      </div>
-                    </button>
-
-                    {isOpen && (
-                      <div className="mt-4 space-y-2">
-                        {person.books.map((book, idx) => {
-                          return (
-                            <div
-                              key={`${book.region}-${book.title}-${idx}`}
-                              className={`rounded-lg border-2 p-3 ${darkMode ? 'bg-gray-800/60 border-accent/50' : 'bg-white/80 border-line'}`}
-                            >
-                              <div className="flex justify-between items-start gap-2">
-                                <div className="flex-1">
-                                  {book.filename ? (
-                                    <button
-                                      onClick={() => onRead(book)}
-                                      className={`text-sm font-medium font-serif text-left ${darkMode ? 'text-gray-200 hover:text-red-400' : 'text-gray-800 hover:text-amber-700'}`}
-                                      title={`Abrir ${book.title}`}
-                                    >
-                                      {book.title}
-                                    </button>
-                                  ) : (
-                                    <p className={`text-sm font-medium font-serif ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
-                                      {book.title}
-                                    </p>
-                                  )}
-                                  {book.author && (
-                                    <p className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-600'} mt-1`}>
-                                      {book.author}
-                                    </p>
-                                  )}
-                                </div>
-                                {book.filename ? (
-                                  <button
-                                    onClick={() => onRead(book)}
-                                    className={`flex-shrink-0 flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium transition-colors ${
-                                      darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
-                                    }`}
-                                  >
-                                    <BookOpen size={12} />
-                                    Leer
-                                  </button>
-                                ) : (
-                                  <span className={`flex-shrink-0 text-xs ${darkMode ? 'text-gray-500' : 'text-amber-600'}`}>
-                                    Sin PDF
-                                  </span>
-                                )}
-                              </div>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    )}
+              {paged.map((person) => (
+                <button
+                  key={person.subject}
+                  type="button"
+                  onClick={() => setSelectedSubject(person.subject)}
+                  aria-haspopup="dialog"
+                  className={`${cardClass} border-2 rounded-lg p-5 shadow-md hover:shadow-lg transition-all flex flex-col text-left`}
+                >
+                  <h3 className={`text-xl font-bold ${darkMode ? 'text-gray-100' : 'text-gray-800'} mb-2 text-center`}>
+                    {person.subject}
+                  </h3>
+                  <div className={`flex items-center justify-between pt-3 mt-auto border-t ${darkMode ? 'border-accent' : 'border-line'}`}>
+                    <span className="text-sm">
+                      <BookOpen size={16} className="inline mr-1" />
+                      {person.bookCount} {person.bookCount === 1 ? 'texto' : 'textos'}
+                    </span>
+                    <span className={`text-xs ${darkMode ? 'text-red-400' : 'text-amber-700'}`}>
+                      Ver textos
+                    </span>
                   </div>
-                );
-              })}
+                </button>
+              ))}
             </div>
             {totalPages > 1 && (
               <div className={`flex items-center justify-center gap-3 mt-6 pt-4 border-t ${darkMode ? 'border-accent' : 'border-line'}`}>
@@ -252,6 +196,23 @@ const AcratasView = ({
             )}
           </>
         )
+      })()}
+
+      {selectedSubject && (() => {
+        const person = persons.find((p) => p.subject === selectedSubject);
+        if (!person) return null;
+        return (
+          <CollectionModal
+            darkMode={darkMode}
+            title={person.subject}
+            subtitle={`${person.bookCount} ${person.bookCount === 1 ? 'texto' : 'textos'}`}
+            icon={BookOpen}
+            books={person.books}
+            onClose={() => setSelectedSubject(null)}
+            onRead={onRead}
+            onOpenLibrary={onOpenLibrary}
+          />
+        );
       })()}
     </div>
   );

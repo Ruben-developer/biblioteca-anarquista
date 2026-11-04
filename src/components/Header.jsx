@@ -79,8 +79,8 @@ const Header = ({
             >
               <span className="break-words">La Idea</span>
             </h1>
-            <p className={`hidden sm:block text-xs sm:text-sm ${darkMode ? 'text-gray-400' : 'text-amber-900'}`}>
-              Biblioteca digital anarquista
+            <p className={`hidden sm:block text-sm sm:text-base md:text-lg leading-tight ${darkMode ? 'text-gray-400' : 'text-amber-900'}`}>
+              Biblioteca Digital Anarquista
             </p>
           </div>
         </div>

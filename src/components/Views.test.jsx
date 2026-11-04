@@ -1,4 +1,5 @@
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect, vi, afterEach } from 'vitest';
+import { cleanup } from '@testing-library/react';
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import Navigation from './Navigation';
@@ -11,6 +12,8 @@ import ScrollTopButton from './ScrollTopButton';
 import AuthorsView from './AuthorsView';
 import FeaturedBook from './FeaturedBook';
 import { VIEWS } from '../constants';
+
+afterEach(cleanup);
 
 describe('Navigation', () => {
   it('renderiza las vistas con sus contadores en el drawer', () => {
@@ -54,7 +57,7 @@ describe('Header', () => {
       <Header darkMode={false} onDarkModeToggle={() => {}} onShowStats={() => {}} onShowContact={() => {}} stats={stats} />
     );
     expect(html).toContain('La Idea');
-    expect(html).toContain('Biblioteca digital anarquista');
+    expect(html).toContain('Biblioteca Digital Anarquista');
     expect(html).not.toContain('114 textos');
     expect(html).not.toContain('16 eventos');
     expect(html).not.toContain('16 regiones');
@@ -367,13 +370,12 @@ describe('AuthorsView edge cases (jsdom)', () => {
     expect(container.innerHTML).not.toContain('📍');
     fireEvent.click(screen.getByText('Autor Anónimo'));
     expect(screen.getByText('Obra sin año')).toBeTruthy();
-    container.remove();
   });
 });
 
 describe('AuthorsView interactivo (jsdom)', () => {
   // @vitest-environment jsdom
-  it('despliega las obras del autor al hacer clic y las colapsa al volver a hacer clic', async () => {
+  it('abre un modal con las obras del autor y lo cierra al pulsar Cerrar', async () => {
     const { render, screen, fireEvent } = await import('@testing-library/react');
     const authors = [
       {
@@ -387,15 +389,14 @@ describe('AuthorsView interactivo (jsdom)', () => {
         ]
       }
     ];
-    const { container } = render(<AuthorsView darkMode={false} authors={authors} />);
+    render(<AuthorsView darkMode={false} authors={authors} />);
     expect(screen.queryByText('Nueva Utopía')).toBeNull();
     fireEvent.click(screen.getByText('Ricardo Mella'));
     // La obra aparece dos veces: en la línea de tiempo del autor y en la lista.
     expect(screen.getAllByText('Nueva Utopía').length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText('La coacción moral').length).toBeGreaterThanOrEqual(1);
-    fireEvent.click(screen.getByText('Ricardo Mella'));
+    fireEvent.click(screen.getByLabelText('Cerrar'));
     expect(screen.queryByText('Nueva Utopía')).toBeNull();
-    container.remove();
   });
 
   it('muestra el enlace Leer solo en obras con filename', async () => {
@@ -412,12 +413,11 @@ describe('AuthorsView interactivo (jsdom)', () => {
         ]
       }
     ];
-    const { container } = render(<AuthorsView darkMode authors={authors} />);
+    render(<AuthorsView darkMode authors={authors} />);
     fireEvent.click(screen.getByText('Autor Mixto'));
     expect(screen.getAllByText('Obra con PDF').length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText('Obra sin archivo').length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText('Leer').length).toBe(1);
-    container.remove();
   });
 
   it('Autores muestra la lista de autores sin embeber Red de influencias', async () => {
@@ -433,13 +433,12 @@ describe('AuthorsView interactivo (jsdom)', () => {
         ]
       }
     ];
-    const { container } = render(<AuthorsView darkMode={false} authors={authors} />);
+    render(<AuthorsView darkMode={false} authors={authors} />);
     // Lista de autores presente
     expect(screen.getByText('Ricardo Mella')).toBeTruthy();
     // Red de influencias es una sección aparte, no un submodo embebido
     expect(screen.queryByRole('tab', { name: /Red de influencias/ })).toBeNull();
     expect(screen.queryByText('Red de influencias')).toBeNull();
-    container.remove();
   });
 });
 

@@ -66,12 +66,13 @@ const ESTILOS = {
       "'Source Sans 3', system-ui, sans-serif",
       "'IBM Plex Mono', ui-monospace, monospace"
     ],
-    // Noche: el papel se vuelve tinta y el acento se aclara a coral rojizo.
+    // Noche: el papel se vuelve tinta y el acento se aclara conservando el
+    // mismo rojo (no se va al rosa): un rojo vivo legible sobre la tinta.
     noche: {
-      amber: { 50: '#14100F', 100: '#241A18', 200: '#33221F', 300: '#4A2A26', 400: '#6B3A34', 500: '#96534A', 600: '#B96A5F', 700: '#D98A80', 800: '#E4C7C1', 900: '#F3EAE7' },
-      red: { 50: '#FCF3F1', 100: '#F7E7E3', 200: '#F0D6D0', 300: '#E7BEB6', 400: '#D99C92', 500: '#C97E72', 600: '#B05C50', 700: '#8E443A', 800: '#6E322A', 900: '#4A201B', 950: '#1A0E0B' },
-      sem: { 'c-line': '#3B2F2C', 'c-line-soft': '#2A2220', 'c-accent': '#D98A80', 'c-paper': '#14100F', 'c-paper-deep': '#0C0908' },
-      rojo: ['#B05C50', '#8E443A', '#E7BEB6']
+      amber: { 50: '#14100F', 100: '#241A18', 200: '#33221F', 300: '#4A2A26', 400: '#6B3A34', 500: '#A34A46', 600: '#C44848', 700: '#E05252', 800: '#F2C4C4', 900: '#F3EAE7' },
+      red: { 50: '#FCF1F1', 100: '#F8E1E1', 200: '#F2C4C4', 300: '#E8A0A0', 400: '#DC7676', 500: '#D05454', 600: '#C13A3A', 700: '#9E2C2C', 800: '#7A2222', 900: '#521616', 950: '#1E0808' },
+      sem: { 'c-line': '#3B2F2C', 'c-line-soft': '#2A2220', 'c-accent': '#E05252', 'c-paper': '#14100F', 'c-paper-deep': '#0C0908' },
+      rojo: ['#C13A3A', '#9E2C2C', '#F2C4C4']
     }
   }
 };

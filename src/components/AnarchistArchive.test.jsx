@@ -14,7 +14,7 @@ describe('AnarchistArchive', () => {
   it('renderiza la app completa con cabecera, hamburguesa y vista por defecto (biblioteca)', () => {
     const html = renderToStaticMarkup(<AnarchistArchive />);
     expect(html).toContain('La Idea');
-    expect(html).toContain('Biblioteca digital anarquista');
+    expect(html).toContain('Biblioteca Digital Anarquista');
     expect(html).toContain('Abrir menú de navegación');
     expect(html).toContain('Contacto');
     // El drawer está cerrado por defecto: no hay botones de navegación visibles.
@@ -112,7 +112,7 @@ describe('AnarchistArchive interactivo (jsdom)', () => {
     const { container } = render(<AnarchistArchive />);
     expect(screen.queryByText('Glosario libertario')).toBeNull();
     expect(screen.queryByText('Estadísticas')).toBeNull();
-    expect(container.innerHTML).toContain('Biblioteca digital anarquista');
+    expect(container.innerHTML).toContain('Biblioteca Digital Anarquista');
     container.remove();
   });
 });

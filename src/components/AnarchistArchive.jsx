@@ -248,6 +248,7 @@ const AnarchistArchive = () => {
               darkMode={darkMode}
               authors={dynamicAuthors}
               onRead={setReadingBook}
+              onOpenLibrary={openLibraryWithFilters}
             />
           )}
 
@@ -264,6 +265,7 @@ const AnarchistArchive = () => {
               darkMode={darkMode}
               regionData={regionData}
               onRead={setReadingBook}
+              onOpenLibrary={openLibraryWithFilters}
             />
           )}
 
@@ -330,7 +332,7 @@ const AnarchistArchive = () => {
       <footer className={`border-t-2 shadow-[0_-4px_12px_rgba(0,0,0,0.25)] ${darkMode ? 'border-accent/50 bg-black/30' : 'border-line bg-amber-100/60'}`}>
         <div className="container mx-auto px-4 py-8">
           <p className={`font-display uppercase tracking-widest text-sm text-center ${darkMode ? 'text-gray-300' : 'text-amber-900'}`}>
-            La Idea · Biblioteca digital anarquista
+            La Idea · Biblioteca Digital Anarquista
           </p>
         </div>
       </footer>
