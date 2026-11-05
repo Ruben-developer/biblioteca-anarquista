@@ -71,11 +71,11 @@ const Header = ({
 
           <div className="[grid-area:titu] md:justify-self-start min-w-0">
             <h1
-              className={`text-3xl md:text-4xl font-display uppercase tracking-wide ${darkMode ? 'text-red-400' : 'text-amber-900'}`}
+              className={`text-[34px] md:text-[40px] font-display uppercase tracking-wide ${darkMode ? 'text-red-400' : 'text-amber-900'}`}
             >
               La Idea
             </h1>
-            <p className={`text-xs sm:text-sm md:text-base leading-tight ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
+            <p className={`text-[13.3px] sm:text-[15.3px] md:text-[17.3px] leading-tight ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
               Biblioteca Digital Anarquista
             </p>
           </div>
