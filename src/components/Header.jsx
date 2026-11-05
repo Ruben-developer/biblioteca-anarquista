@@ -71,7 +71,7 @@ const Header = ({
 
           <div className="[grid-area:titu] md:justify-self-start min-w-0">
             <h1
-              className={`text-[34px] md:text-[40px] font-display uppercase tracking-wide ${darkMode ? 'text-red-400' : 'text-amber-900'}`}
+              className={`text-[35.3px] md:text-[44px] font-display uppercase tracking-wide ${darkMode ? 'text-red-400' : 'text-amber-900'}`}
             >
               La Idea
             </h1>
