@@ -73,11 +73,8 @@ html[data-estilo="collage-vino"] .card-appear:hover {
   translate: 0 -4px;
   box-shadow: var(--shadow-lg);
 }
-html[data-estilo="collage-vino"] h1 {
-  font-size: clamp(2.9rem, 7.5vw, 6rem);
-  line-height: 0.9;
-  letter-spacing: -0.02em;
-}
+/* El titular de cabecera comparte tamaño con los títulos de sección
+   (`text-3xl md:text-4xl`); no fijar aquí un tamaño mayor. */
 html[data-estilo="collage-vino"] h2 {
   font-variant: small-caps;
   letter-spacing: 0.06em;

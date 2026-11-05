@@ -70,13 +70,14 @@ const Header = ({
           </div>
 
           <div className="[grid-area:titu] md:justify-self-start min-w-0">
-            <h1 className="flex items-center">
-              <img
-                src={`${import.meta.env.BASE_URL}${darkMode ? 'logo-laidea-claro.png' : 'logo-laidea.png'}`}
-                alt="La Idea — Biblioteca Digital Anarquista"
-                className="h-16 sm:h-20 md:h-24 w-auto max-w-full"
-              />
+            <h1
+              className={`text-3xl md:text-4xl font-display uppercase tracking-wide ${darkMode ? 'text-red-400' : 'text-amber-900'}`}
+            >
+              La Idea
             </h1>
+            <p className={`text-xs sm:text-sm md:text-base leading-tight ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
+              Biblioteca Digital Anarquista
+            </p>
           </div>
         </div>
       </div>
