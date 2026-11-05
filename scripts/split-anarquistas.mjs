@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { readFileSync, writeFileSync, rmSync } from 'node:fs';
-const ROOT = '/home/fdr/biblioteca-anarquista';
+const ROOT = '/home/fdr/laidea';
 const SRC = `${ROOT}/data/registros/revision330/anarquistas.md`;
 
 const lines = readFileSync(SRC, 'utf8').split('\n');

@@ -2,7 +2,7 @@
 """Phase 3: Reorganize pdfs-local/ into flat pdfs/ structure."""
 import json, os, shutil, re, unicodedata
 
-PDFS_LOCAL = '/home/fdr/biblioteca-anarquista/pdfs-local'
+PDFS_LOCAL = '/home/fdr/laidea/pdfs-local'
 NEW_FLAT = os.path.join(PDFS_LOCAL, 'pdfs')
 CATALOG = '/tmp/all_books.json'
 ZIP_PDFS = '/home/fdr/Documentos/anarquismo_importado/biblioteca-inv/pdfs'

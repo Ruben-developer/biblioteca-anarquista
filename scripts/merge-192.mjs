@@ -3,7 +3,7 @@
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
-const ROOT = '/home/fdr/biblioteca-anarquista';
+const ROOT = '/home/fdr/laidea';
 const OUT = join(ROOT, 'data/registros/revision330');
 const RDIR = '/tmp/result192';
 const tit = JSON.parse(readFileSync('/tmp/titulos192.json', 'utf8'));

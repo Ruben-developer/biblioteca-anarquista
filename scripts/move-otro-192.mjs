@@ -3,7 +3,7 @@
 import { readFileSync, writeFileSync, renameSync, existsSync, appendFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-const ROOT = '/home/fdr/biblioteca-anarquista';
+const ROOT = '/home/fdr/laidea';
 const LOCAL = join(ROOT, 'pdfs-local');
 const DESC = join(ROOT, 'pdfs-descartes');
 const OUT = join(ROOT, 'data/registros/revision330');

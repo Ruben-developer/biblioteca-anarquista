@@ -6,8 +6,8 @@ import { join } from 'node:path';
 
 const CFG = '/tmp/all_books.json';
 const MAP = '/home/fdr/Documentos/anarquismo_importado/biblioteca-inv/filename_mapping.json';
-const PDFS = '/home/fdr/biblioteca-anarquista/pdfs-local';
-const DEST = '/home/fdr/biblioteca-anarquista/pdfs-no-configurados';
+const PDFS = '/home/fdr/laidea/pdfs-local';
+const DEST = '/home/fdr/laidea/pdfs-no-configurados';
 const norm = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
 
 const cfg = JSON.parse(readFileSync(CFG, 'utf8'));

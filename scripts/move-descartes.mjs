@@ -4,8 +4,8 @@
 import { readdirSync, renameSync, mkdirSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 
-const PDFS = '/home/fdr/biblioteca-anarquista/pdfs-local';
-const DEST = '/home/fdr/biblioteca-anarquista/pdfs-descartes';
+const PDFS = '/home/fdr/laidea/pdfs-local';
+const DEST = '/home/fdr/laidea/pdfs-descartes';
 const slugify = (n) => n.replace(/\.pdf$/i, '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 
 const reasons = {

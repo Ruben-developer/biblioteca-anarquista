@@ -4,8 +4,8 @@
 // de exclusion del usuario (marxistas/guerrilla, ensayo académico, ficción).
 import { readdirSync, writeFileSync } from 'node:fs';
 
-const DIR = '/home/fdr/biblioteca-anarquista/pdfs-no-configurados';
-const OUT = '/home/fdr/biblioteca-anarquista/data/registros/revision330/tabla-nuevos-200.md';
+const DIR = '/home/fdr/laidea/pdfs-no-configurados';
+const OUT = '/home/fdr/laidea/data/registros/revision330/tabla-nuevos-200.md';
 const esc = (s) => String(s ?? '').replace(/\|/g, '/').replace(/\n/g, ' ').trim();
 const norm = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
 

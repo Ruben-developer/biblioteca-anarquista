@@ -3,7 +3,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
 
-const ROOT = '/home/fdr/biblioteca-anarquista';
+const ROOT = '/home/fdr/laidea';
 const FILE = `${ROOT}/src/data/timelineEvents.js`;
 const PLAN = '/tmp/timelinePlan.json';
 

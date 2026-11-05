@@ -3,7 +3,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
 
-const ROOT = '/home/fdr/biblioteca-anarquista';
+const ROOT = '/home/fdr/laidea';
 const RD = `${ROOT}/src/data/regionData.js`;
 const CLAS = `${ROOT}/data/registros/revision330/clasificacion192.json`;
 

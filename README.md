@@ -8,7 +8,8 @@ estadísticas.
 - **Contacto**: antarquia@riseup.net (formulario en la propia web)
 - **Stack**: React 18 + Vite 4 + Tailwind CSS
 - **Deploy**: Cloudflare Workers → https://laidea.antarquia.cl (prod, `main`) y
-  beta desde `develop`; GitHub Pages queda como respaldo
+  beta en https://laidea-beta.antarquia.cl (desde `develop`). GitHub Pages quedó
+  retirado.
 - **Contenido**: `src/data/` (eventos, autores, textos por región) + `public/documents/`
 - **Descargas PDF**: contenedor nginx local vía Tailscale (`VITE_PDF_BASE`), TXT desde el repo
 - **Métricas**: `data/registros/registro.json`

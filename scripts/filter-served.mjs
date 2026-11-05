@@ -5,8 +5,8 @@ import { readdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join, basename } from 'node:path';
 
 const PDFS = '/home/fdr/Documentos/anarquismo_importado/PDFs';
-const LOCAL = '/home/fdr/biblioteca-anarquista/pdfs-local';
-const OUT = '/home/fdr/biblioteca-anarquista/data/registros/clasificacion';
+const LOCAL = '/home/fdr/laidea/pdfs-local';
+const OUT = '/home/fdr/laidea/data/registros/clasificacion';
 const SRC = ['sin_clasificar', 'otros', 'Revisar_otros_idiomas'];
 const norm = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9 ]/g, '').replace(/\s+/g, ' ').trim();
 function bigrams(s) { const n = norm(s); const b = new Set(); for (let i = 0; i < n.length - 1; i++) b.add(n.slice(i, i + 2)); return b; }

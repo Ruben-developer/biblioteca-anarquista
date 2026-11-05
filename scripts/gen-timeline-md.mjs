@@ -2,7 +2,7 @@
 import { writeFileSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
 
-const ROOT = '/home/fdr/biblioteca-anarquista';
+const ROOT = '/home/fdr/laidea';
 const { timelineEvents } = await import(pathToFileURL(`${ROOT}/src/data/timelineEvents.js`));
 const { regionData } = await import(pathToFileURL(`${ROOT}/src/data/regionData.js`));
 

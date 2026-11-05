@@ -6,7 +6,7 @@ Guía para agentes autónomos (y humanos) que iteran sobre este repo.
 **La Idea — Biblioteca Digital Anarquista** — app interactiva del movimiento anarquista:
 catálogo de más de 1.800 textos con PDF, línea temporal (1840-1968), mapa de regiones,
 biografías, favoritos, modo oscuro/claro, filtros y estadísticas. Deploy en Cloudflare Workers (prod `laidea.antarquia.cl` desde `main`; beta
-`laidea-beta.antarquia.cl` desde `develop`) + GitHub Pages como respaldo
+`laidea-beta.antarquia.cl` desde `develop`). GitHub Pages quedó retirado.
 (rollback = revertir el DNS a `ruben-developer.github.io`).
 
 ## Stack (IMPORTANTE)
@@ -20,7 +20,6 @@ biografías, favoritos, modo oscuro/claro, filtros y estadísticas. Deploy en Cl
   - `npm run check-downloads` — verifica que todos los `filename` del catálogo respondan HTTP 200 en el contenedor
   - `npm run test:coverage` — tests Vitest con cobertura v8 (genera `coverage/lcov.info`)
   - `npm run preview` — sirve el build local
-- CI de Pages (respaldo): `npm ci` → lint → test → audit (informativo) → build → deploy.
 - CI beta (Cloudflare Workers): `beta.yml` en cada push a `develop` → lint →
   test → build con `VITE_ROUTES_MODE=pathname` → `wrangler deploy`
   (secretos `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID`; ver `wrangler.jsonc`).
@@ -36,7 +35,7 @@ src/
 ├── services/     # documentService.js (solo getDocumentDownloadUrl: PDFs del contenedor, TXT del repo)
 ├── constants/    # Categorías, décadas, regiones (derivadas), vistas, temas de color
 ├── hooks/        # useScrollTop, useDarkMode, useFavorites
-└── utils/        # filters.js, countryNames.js (normalización nombres de país del mapa), routes.js (deep links: modo dual hash ↔ pathname — GitHub Pages usa #/, el beta Workers usa /mapa)
+└── utils/        # filters.js, countryNames.js (normalización nombres de país del mapa), routes.js (deep links: modo dual hash ↔ pathname — el respaldo github.io usaría #/, el sitio Workers usa /mapa)
 public/documents/ # documents.json (metadatos) + TXT de descarga
 data/registros/   # registro.json (métricas diarias del agente)
 .daily-runs/      # logs diarios del agente
@@ -77,7 +76,7 @@ data/registros/   # registro.json (métricas diarias del agente)
 - **Desarrollo**: el proxy de Vite (`vite.config.js`, `/pdfs → http://192.168.1.117:8081`)
   resuelve la ruta relativa. Nunca pongas la IP en `documentService.js` ni en componentes.
 - **Producción**: el CI inyecta `VITE_PDF_BASE` desde el secret de GitHub Actions.
-  Si el secret no existe, el fallback `/pdfs/` NO funcionará en GitHub Pages
+  Si el secret no existe, el fallback `/pdfs/` NO funcionará fuera de Workers
   (solo con el proxy de dev). Ver `.env.example` y `IDEAS.md`.
 
 ## Mapa interactivo mundial (FASE 4)
@@ -104,7 +103,7 @@ data/registros/   # registro.json (métricas diarias del agente)
   - `PDF_BASE = 'http://192.168.1.117:8081/pdfs/'` — usar la **IP**, no el hostname
     (`server` solo resuelve a IPv6). No cambiar sin coordinación.
 - `filename` reales disponibles: carpeta `anarquismo/` (~324 PDFs), `otros/` (~77),
-  `ref/` (~9). Verifica con `ls ~/biblioteca-anarquista/pdfs-local/` y prueba con
+  `ref/` (~9). Verifica con `ls ~/laidea/pdfs-local/` y prueba con
   `curl -s -o /dev/null -w "%{http_code}" http://192.168.1.117:8081/pdfs/<file>`.
 
 ## Notificaciones a Telegram
@@ -131,7 +130,7 @@ data/registros/   # registro.json (métricas diarias del agente)
   referencia histórica; sin `email.conf` no envían nada y no bloquean el cron.
 
 ## SonarQube (calidad)
-- SonarQube 26.6.0 en `http://192.168.1.117:9000` (dashboard: `?id=biblioteca-anarquista`).
+- SonarQube 26.6.0 en `http://192.168.1.117:9000` (dashboard: `?id=laidea`).
   Contenedores podman: `sonarqube` (server) + `sonarqube-db` (postgres).
 - **Quality gate «Biblioteca Anarquista»** (asociado al proyecto): `new_coverage ≥ 50%`,
   `new_duplicated_lines_density ≤ 3%`, `new_violations ≤ 20`. NO usar «Sonar way» (80%/0, inviable en este frontend).
@@ -139,10 +138,10 @@ data/registros/   # registro.json (métricas diarias del agente)
   Token (secreto, NO commitear): `~/.config/biblioteca/sonar.token`.
 - Análisis manual:
   ```
-  cd ~/biblioteca-anarquista && npm run test:coverage
+  cd ~/laidea && npm run test:coverage
   sonar-scanner -Dsonar.host.url=http://192.168.1.117:9000 \
     -Dsonar.login="$(cat ~/.config/biblioteca/sonar.token)" \
-    -Dsonar.projectBaseDir=/home/fdr/biblioteca-anarquista
+    -Dsonar.projectBaseDir=/home/fdr/laidea
   ```
   (el `sonar-project.properties` ya apunta a `sources=src` y `coverage/lcov.info`).
 - Estado objetivo: **0 bugs, 0 vulnerabilidades, ratings A/A/A, gate OK**. `caycStatus: non-compliant` es el estándar CAYC de SonarQube, no afecta al gate.
@@ -152,9 +151,9 @@ data/registros/   # registro.json (métricas diarias del agente)
 ## Reglas de los agentes (resumen)
 - Trabaja SOLO en este repo, nunca en `devops-lab` ni otros proyectos.
 - No toques `pdfs-local/` (los PDFs no se versionan) ni subas artefactos (`dist/`, `node_modules/`).
-- No cambies `PDF_BASE` a hostname ni rompas la ruta `base: /biblioteca-anarquista/` en `vite.config.js`.
+- No cambies `PDF_BASE` a hostname ni rompas la ruta `base: /laidea/` en `vite.config.js`.
 - Al añadir regiones al mapa, edita SOLO `regionData.js` (con su `iso`); `REGIONS` se deriva solo. No tocarlo manualmente.
-- Tras cada cambio: `npm run check` (lint + tests + build) debe pasar, y el CI de Pages quedar verde. Si tocaste el catálogo, corre también `npm run check-downloads`.
+- Tras cada cambio: `npm run check` (lint + tests + build) debe pasar, y el CI quedar verde. Si tocaste el catálogo, corre también `npm run check-downloads`.
 - Mantén actualizados `PLAN.md`, `data/registros/registro.json` y `.daily-runs/`.
 - Commits convencionales en español (`feat:`, `fix:`, `docs:`, `chore:`).
 

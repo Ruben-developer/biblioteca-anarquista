@@ -3,7 +3,7 @@
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 
-const OUT = '/home/fdr/biblioteca-anarquista/data/registros/revision330';
+const OUT = '/home/fdr/laidea/data/registros/revision330';
 const EXT = '/tmp/extract330';
 const BATCH = 15;
 const books = JSON.parse(readFileSync(join(OUT, 'titulos.json'), 'utf8'));

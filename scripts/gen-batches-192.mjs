@@ -3,7 +3,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 
-const ROOT = '/home/fdr/biblioteca-anarquista';
+const ROOT = '/home/fdr/laidea';
 const EXTRACT = '/tmp/extract192';
 const OUT = '/tmp/batches192';
 mkdirSync(OUT, { recursive: true });

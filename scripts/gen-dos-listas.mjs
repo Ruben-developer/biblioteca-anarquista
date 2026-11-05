@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { readFileSync, writeFileSync } from 'node:fs';
-const ROOT = '/home/fdr/biblioteca-anarquista';
+const ROOT = '/home/fdr/laidea';
 const MD = `${ROOT}/data/registros/revision330/clasificacion-fuentes.md`;
 
 const txt = readFileSync(MD, 'utf8');

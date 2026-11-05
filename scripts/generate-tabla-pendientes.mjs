@@ -4,7 +4,7 @@
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
-const DIR = '/home/fdr/biblioteca-anarquista/data/registros/clasificacion';
+const DIR = '/home/fdr/laidea/data/registros/clasificacion';
 const esc = (s) => String(s ?? '').replace(/\|/g, '/').replace(/\n/g, ' ').trim();
 
 const metas = [];
