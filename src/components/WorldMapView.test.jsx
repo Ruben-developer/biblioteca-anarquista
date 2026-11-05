@@ -1,19 +1,21 @@
 import { describe, it, expect } from 'vitest';
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import WorldMapView from './WorldMapView';
+import WorldMapView, { colorPorTextos } from './WorldMapView';
 import { regionData } from '../data/regionData';
 
-describe('WorldMapView (gradiente por nº de textos)', () => {
+describe('WorldMapView (escala por nº de textos)', () => {
   const noop = () => {};
 
-  it('renderiza la leyenda de gradiente de colores', () => {
+  it('renderiza la leyenda con bloques de color sólidos', () => {
     const html = renderToStaticMarkup(
       <WorldMapView darkMode={false} regionData={regionData} onSelectRegion={noop} />
     );
     expect(html).toContain('Pocos textos');
-    expect(html).toContain('Muchos textos');
-    expect(html).toContain('linear-gradient');
+    expect(html).toContain('50 o más textos');
+    expect(html).not.toContain('linear-gradient');
+    expect(html).toContain('rgb(232, 180, 170)');
+    expect(html).toContain('rgb(138, 28, 28)');
   });
 
   const getFill = (html, ariaLabel) => {
@@ -32,31 +34,39 @@ describe('WorldMapView (gradiente por nº de textos)', () => {
     return (r * 299 + g * 587 + b * 114) / 1000;
   };
 
-  it('el país con más textos históricos (España, 9) usa el color más oscuro', () => {
+  it('el país con más textos históricos (España, 449) usa el color más oscuro', () => {
     const html = renderToStaticMarkup(
       <WorldMapView darkMode={false} regionData={regionData} onSelectRegion={noop} />
     );
     const fill = getFill(html, 'España');
     expect(fill).not.toBeNull();
-    expect(brightness(fill)).toBeLessThan(180);
+    expect(brightness(fill)).toBeLessThan(100);
   });
 
-  it('el país con menos textos históricos (Alemania, 1) usa un color más claro', () => {
+  it('el país con menos textos históricos (Alemania, 5) usa un color más claro', () => {
     const html = renderToStaticMarkup(
       <WorldMapView darkMode={false} regionData={regionData} onSelectRegion={noop} />
     );
     const fill = getFill(html, 'Alemania');
     expect(fill).not.toBeNull();
-    expect(brightness(fill)).toBeGreaterThan(180);
+    expect(brightness(fill)).toBeGreaterThan(140);
   });
 
-  it('Alemania (1 texto histórico) es más claro que España (9 textos históricos)', () => {
+  it('Alemania (5 textos) es más claro que España (449)', () => {
     const html = renderToStaticMarkup(
       <WorldMapView darkMode={false} regionData={regionData} onSelectRegion={noop} />
     );
     const deBright = brightness(getFill(html, 'Alemania'));
     const esBright = brightness(getFill(html, 'España'));
     expect(deBright).toBeGreaterThan(esBright);
+  });
+
+  it('la escala se corta en 50: 50, 83 y 449 textos comparten el mismo tono', () => {
+    expect(colorPorTextos(50, false)).toBe(colorPorTextos(83, false));
+    expect(colorPorTextos(83, false)).toBe(colorPorTextos(449, false));
+    expect(colorPorTextos(50, true)).toBe(colorPorTextos(449, true));
+    // Y sigue habiendo diferencia por debajo del tope.
+    expect(colorPorTextos(1, false)).not.toBe(colorPorTextos(10, false));
   });
 });
 
@@ -67,9 +77,11 @@ describe('WorldMapView edge cases', () => {
     const html = renderToStaticMarkup(
       <WorldMapView darkMode regionData={regionData} onSelectRegion={noop} />
     );
-    expect(html).toContain('linear-gradient(to right, #fca5a5, #7f1d1d)');
+    expect(html).not.toContain('linear-gradient');
+    expect(html).toContain('rgb(69, 34, 34)');
+    expect(html).toContain('rgb(224, 82, 82)');
     expect(html).toContain('Pocos textos');
-    expect(html).toContain('Muchos textos');
+    expect(html).toContain('50 o más textos');
   });
 
   it('ignora regiones sin código ISO en el mapamundi y no las lista como botón', () => {

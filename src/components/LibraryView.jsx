@@ -15,24 +15,7 @@ const getLeerBtnClass = (darkMode) =>
   darkMode ? 'bg-red-600 text-white hover:bg-red-700' : 'bg-amber-700 text-amber-50 hover:bg-amber-800'
 
 const getSinArchivoClass = (darkMode) =>
-  darkMode ? 'border-[#872320]/50 text-gray-500' : 'border-[#B79F6E] text-amber-600'
-
-const BookEventLink = ({ book, timelineEvents, onOpenEvent, darkMode }) => {
-  const bookEvents = getBookEvents(timelineEvents, book)
-  if (!bookEvents.length) return null
-  return (
-    <button
-      onClick={() => onOpenEvent(bookEvents[0])}
-      className={`mt-2 flex items-center gap-1.5 text-xs font-medium transition-colors ${
-        darkMode ? 'text-red-400 hover:text-red-300' : 'text-amber-700 hover:text-amber-900'
-      } hover:underline`}
-      title={`Ir al evento de la línea temporal: ${bookEvents[0].title} (${bookEvents[0].year})`}
-    >
-      <CalendarClock size={14} />
-      Ver en la línea temporal: {bookEvents[0].title} ({bookEvents[0].year})
-    </button>
-  )
-}
+  darkMode ? 'border-accent/50 text-gray-500' : 'border-line text-amber-600'
 
 const LeerButton = ({ book, onRead, darkMode }) => {
   if (!book.filename) {
@@ -71,7 +54,7 @@ const GridCard = ({ book, idx, favorites, onToggleFavorite, onRead, onOpenEvent,
   const isFav = favorites.some((f) => f.title === book.title)
   const bookEvents = getBookEvents(timelineEvents, book)
   return (
-    <div key={`${book.region}-${book.title}`} className={`${cardClass} border-2 rounded-lg p-5 hover:shadow-lg transition-all flex flex-col card-appear`} style={{ animationDelay: `${Math.min(idx, 8) * 40}ms` }}>
+    <div key={`${book.region}-${book.title}`} className={`${cardClass} border-2 rounded-lg p-5 shadow-md hover:shadow-lg transition-all flex flex-col card-appear`} style={{ animationDelay: `${Math.min(idx, 8) * 40}ms` }}>
       <div className="flex items-center justify-between gap-2 mb-1">
         <h3 className={`font-bold leading-tight ${darkMode ? 'text-gray-100' : 'text-gray-800'} flex-1`}>
           {book.title}
@@ -138,7 +121,7 @@ const LibraryView = ({
   const paged = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
 
   return (
-    <div className={`${darkMode ? 'bg-gray-900/60 border-[#872320]/50' : 'bg-white/60 border-[#B79F6E]'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
+    <div className={`${darkMode ? 'bg-gray-900/60 border-accent/50' : 'bg-white/60 border-line'} rounded-lg shadow-lg border-2 p-6 md:p-8`}>
       <h2 className={`text-3xl md:text-4xl font-display uppercase tracking-wide mb-2 ${darkMode ? 'text-red-400' : 'text-amber-900'}`}>
         Biblioteca
       </h2>
@@ -153,12 +136,12 @@ const LibraryView = ({
           value={searchTerm}
           onChange={(e) => { setSearchTerm(e.target.value); setPage(1) }}
           placeholder="Buscar por palabras clave..."
-          className={`w-full px-4 py-2 rounded-lg border text-sm pl-10 ${darkMode ? 'bg-gray-800 border-[#872320] text-gray-200 placeholder-gray-500' : 'bg-white border-[#B79F6E] text-gray-800 placeholder-amber-700'}`}
+          className={`w-full px-4 py-2 rounded-lg border text-sm pl-10 ${darkMode ? 'bg-gray-800 border-accent text-gray-200 placeholder-gray-500' : 'bg-white border-line text-gray-800 placeholder-amber-700'}`}
           aria-label="Buscar por palabras clave"
         />
       </div>
 
-      <FeaturedBook darkMode={darkMode} book={featured} onRead={onRead} />
+      {!searchTerm.trim() && <FeaturedBook darkMode={darkMode} book={featured} onRead={onRead} />}
 
       {filtered.length === 0 ? (
         <p className={`text-center py-12 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>No hay obras que coincidan con la búsqueda.</p>
@@ -170,7 +153,7 @@ const LibraryView = ({
         </div>
       )}
       {totalPages > 1 && (
-        <div className={`flex items-center justify-center gap-3 mt-6 pt-4 border-t ${darkMode ? 'border-[#872320]' : 'border-[#B79F6E]'}`}>
+        <div className={`flex items-center justify-center gap-3 mt-6 pt-4 border-t ${darkMode ? 'border-accent' : 'border-line'}`}>
           <button
             onClick={() => setPage((p) => Math.max(1, p - 1))}
             disabled={page === 1}

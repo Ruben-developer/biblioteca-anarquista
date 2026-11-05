@@ -6,9 +6,9 @@ import { readdirSync, readFileSync, writeFileSync, existsSync, mkdirSync } from 
 import { spawnSync } from 'node:child_process';
 import { join, basename } from 'node:path';
 
-const PDFS = '/home/fdr/biblioteca-anarquista/pdfs-local';
+const PDFS = '/home/fdr/laidea/pdfs-local';
 const EXT = '/tmp/extract330';
-const OUT = '/home/fdr/biblioteca-anarquista/data/registros/revision330';
+const OUT = '/home/fdr/laidea/data/registros/revision330';
 mkdirSync(EXT, { recursive: true });
 mkdirSync(OUT, { recursive: true });
 

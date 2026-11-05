@@ -72,25 +72,12 @@ export const sortBooks = (books, sort = 'rating') => {
 export const HISTORICAL_CATEGORIES = ['historia'];
 const HISTORICAL_SET = new Set(HISTORICAL_CATEGORIES);
 export const isHistoricalBook = (book) => HISTORICAL_SET.has(book?.category);
-export const isHistoricalCategory = (category) => HISTORICAL_SET.has(category);
 
 // Textos históricos de una región (los de filosofía/ideas no van al mapa ni timeline).
 export const getHistoricalBooks = (regionData, region) =>
   (regionData?.[region]?.books || [])
     .filter((b) => isHistoricalBook(b) && b.visible !== false)
     .map((b) => ({ ...b, region }));
-
-// Categorías de "acratas" (narraciones de vida): biografías, autobiografías,
-// memorias y epistolarios colapsados en 'acratas'. NO son históricas (no van al
-// mapa ni a la línea temporal); viven en la sección Acratas y en Autores.
-export const LIFE_CATEGORIES = ['acratas'];
-
-// Vidas anarquistas del archivo (cualquiera de LIFE_CATEGORIES): lista plana con
-// su región, ordenada por año (asc) y título. FUENTE ÚNICA para la vista Vidas.
-export const getLifeBooks = (regionData) =>
-  getAllBooks(regionData)
-    .filter((b) => LIFE_CATEGORIES.includes(b.category))
-    .sort((a, b) => (a.pubYear || 0) - (b.pubYear || 0) || String(a.title).localeCompare(String(b.title), 'es'));
 
 // Personajes de "Acratas": agrupa los textos de categoría 'acratas' por su
 // sujeto (campo `subject` de cada libro; si falta, el título). Cada persona
@@ -114,15 +101,6 @@ export const getAcratasPersons = (regionData) => {
     }))
     .sort((a, b) => a.subject.localeCompare(b.subject, 'es'));
 };
-
-// Contador REAL de textos: todos los libros del catálogo (fuente única regionData).
-export const countAllTexts = (regionData) =>
-  Object.values(regionData || {}).reduce((sum, region) =>
-    sum + (region.books?.filter((b) => b.visible !== false).length || 0), 0);
-
-// Conteo de textos por región (todos los del catálogo, no solo históricos).
-export const countRegionTexts = (regionData, region) =>
-  regionData?.[region]?.books?.filter((b) => b.visible !== false).length || 0;
 
 // Textos relacionados con un evento CON TEXTO (type 'con_texto').
 // FUENTE ÚNICA de la relación: el propio evento declara `relatedTexts` con los

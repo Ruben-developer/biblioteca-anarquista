@@ -5,9 +5,9 @@
 import { readdirSync, renameSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 
-const SRC = '/home/fdr/biblioteca-anarquista/pdfs-no-configurados';
-const DST = '/home/fdr/biblioteca-anarquista/pdfs-local';
-const OUT = '/home/fdr/biblioteca-anarquista/data/registros/revision330';
+const SRC = '/home/fdr/laidea/pdfs-no-configurados';
+const DST = '/home/fdr/laidea/pdfs-local';
+const OUT = '/home/fdr/laidea/data/registros/revision330';
 mkdirSync(DST, { recursive: true });
 
 const norm = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();

@@ -5,11 +5,9 @@ import { THEME, VIEW_LABELS, VIEWS } from '../constants';
 const Header = ({
   darkMode,
   onDarkModeToggle,
-  onShowStats,
   onShowContact,
   onViewChange,
   favoriteCount,
-  stats,
   activeView,
   menuOpen,
   onMenuToggle
@@ -73,12 +71,12 @@ const Header = ({
 
           <div className="[grid-area:titu] md:justify-self-start min-w-0">
             <h1
-              className={`text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-display tracking-tight uppercase flex items-center gap-2 md:gap-3 ${darkMode ? 'text-red-500' : ''}`}
+              className={`text-[35.3px] md:text-[44px] font-display uppercase tracking-wide ${darkMode ? 'text-red-400' : 'text-amber-900'}`}
             >
-              <span className="break-words">La Idea</span>
+              La Idea
             </h1>
-            <p className={`hidden sm:block text-xs sm:text-sm ${darkMode ? 'text-gray-400' : 'text-amber-900'}`}>
-              Biblioteca digital anarquista
+            <p className={`text-[13.3px] sm:text-[15.3px] md:text-[17.3px] leading-tight ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
+              Biblioteca Digital Anarquista
             </p>
           </div>
         </div>

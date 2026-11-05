@@ -2,7 +2,7 @@
 import { readFileSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
 
-const ROOT = '/home/fdr/biblioteca-anarquista';
+const ROOT = '/home/fdr/laidea';
 const { regionData } = await import(pathToFileURL(`${ROOT}/src/data/regionData.js`));
 
 const norm = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '')

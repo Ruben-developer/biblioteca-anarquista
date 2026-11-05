@@ -1,0 +1,158 @@
+/* ============================================================================
+   ESTILOS · tokens de color, forma y tipografía
+   Generado por scripts/generar-estilos.mjs — no editar a mano.
+   El estilo activo se elige con `data-estilo` en <html>; el modo noche con
+   `data-modo="noche"`.
+   ============================================================================ */
+
+/* ── clasico ─────────────────────────────────────────────── */
+:root,
+html[data-estilo="clasico"] {
+  --amber-50: 255 251 235;
+  --amber-100: 254 243 199;
+  --amber-200: 253 230 138;
+  --amber-300: 252 211 77;
+  --amber-400: 251 191 36;
+  --amber-500: 245 158 11;
+  --amber-600: 217 119 6;
+  --amber-700: 180 83 9;
+  --amber-800: 146 64 14;
+  --amber-900: 120 53 15;
+  --gray-100: 243 244 246;
+  --gray-200: 229 231 235;
+  --gray-300: 209 213 219;
+  --gray-400: 156 163 175;
+  --gray-500: 107 114 128;
+  --gray-600: 75 85 99;
+  --gray-700: 55 65 81;
+  --gray-800: 31 41 55;
+  --gray-900: 17 24 39;
+  --gray-950: 3 7 18;
+  --red-50: 254 242 242;
+  --red-100: 254 226 226;
+  --red-200: 254 202 202;
+  --red-300: 248 113 113;
+  --red-400: 248 113 113;
+  --red-500: 248 113 113;
+  --red-600: 220 38 38;
+  --red-700: 185 28 28;
+  --red-800: 153 27 27;
+  --red-900: 127 29 29;
+  --red-950: 127 29 29;
+  --orange-50: 255 251 235;
+  --yellow-50: 255 251 235;
+  --c-line: 183 159 110;
+  --c-line-soft: 203 183 136;
+  --c-accent: 135 35 32;
+  --c-paper: 245 237 217;
+  --c-paper-deep: 237 225 200;
+  --c-red: #D02C26;
+  --c-red-deep: #B0241E;
+  --c-red-focus: #A0241A;
+  --c-red-rgb: 208, 44, 38;
+  --c-red-deep-rgb: 176, 36, 30;
+  --r-md: 0;
+  --r-lg: 0;
+  --r-xl: 0;
+  --r-full: 0;
+  --bw-2: 2px;
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Source Sans 3', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+/* ── collage-vino ─────────────────────────────────────────────── */
+html[data-estilo="collage-vino"] {
+  --amber-50: 246 240 236;
+  --amber-100: 251 247 244;
+  --amber-200: 237 228 222;
+  --amber-300: 221 208 200;
+  --amber-400: 185 169 161;
+  --amber-500: 138 122 114;
+  --amber-600: 168 62 50;
+  --amber-700: 138 28 28;
+  --amber-800: 110 20 20;
+  --amber-900: 26 20 22;
+  --gray-100: 251 247 244;
+  --gray-200: 237 228 222;
+  --gray-300: 221 208 200;
+  --gray-400: 156 140 132;
+  --gray-500: 122 106 98;
+  --gray-600: 84 72 66;
+  --gray-700: 56 47 43;
+  --gray-800: 36 30 27;
+  --gray-900: 26 20 22;
+  --gray-950: 13 10 9;
+  --red-50: 251 237 234;
+  --red-100: 245 216 210;
+  --red-200: 232 180 170;
+  --red-300: 217 141 128;
+  --red-400: 196 99 85;
+  --red-500: 168 62 50;
+  --red-600: 138 28 28;
+  --red-700: 110 20 20;
+  --red-800: 82 15 15;
+  --red-900: 57 10 10;
+  --red-950: 30 5 5;
+  --orange-50: 246 240 236;
+  --yellow-50: 246 240 236;
+  --c-line: 26 20 22;
+  --c-line-soft: 221 208 200;
+  --c-accent: 138 28 28;
+  --c-paper: 251 247 244;
+  --c-paper-deep: 246 240 236;
+  --c-red: #8A1C1C;
+  --c-red-deep: #6E1414;
+  --c-red-focus: #A83E32;
+  --c-red-rgb: 138, 28, 28;
+  --c-red-deep-rgb: 110, 20, 20;
+  --r-md: 0;
+  --r-lg: 0;
+  --r-xl: 0;
+  --r-full: 0;
+  --bw-2: 2px;
+  --shadow-md: 6px 6px 0 rgb(26 20 22 / 0.10);
+  --shadow-lg: 10px 10px 0 rgb(26 20 22 / 0.14);
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Source Sans 3', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+/* Noche de collage-vino: solo cambian los tonos, no la geometría. */
+html[data-estilo="collage-vino"][data-modo="noche"] {
+  --amber-50: 20 16 15;
+  --amber-100: 36 26 24;
+  --amber-200: 51 34 31;
+  --amber-300: 74 42 38;
+  --amber-400: 107 58 52;
+  --amber-500: 163 74 70;
+  --amber-600: 196 72 72;
+  --amber-700: 224 82 82;
+  --amber-800: 242 196 196;
+  --amber-900: 243 234 231;
+  --red-50: 252 241 241;
+  --red-100: 248 225 225;
+  --red-200: 242 196 196;
+  --red-300: 232 160 160;
+  --red-400: 220 118 118;
+  --red-500: 208 84 84;
+  --red-600: 193 58 58;
+  --red-700: 158 44 44;
+  --red-800: 122 34 34;
+  --red-900: 82 22 22;
+  --red-950: 30 8 8;
+  --c-line: 59 47 44;
+  --c-line-soft: 42 34 32;
+  --c-accent: 224 82 82;
+  --c-paper: 20 16 15;
+  --c-paper-deep: 12 9 8;
+  --c-red: #C13A3A;
+  --c-red-deep: #9E2C2C;
+  --c-red-focus: #F2C4C4;
+  --c-red-rgb: 193, 58, 58;
+  --c-red-deep-rgb: 158, 44, 44;
+}

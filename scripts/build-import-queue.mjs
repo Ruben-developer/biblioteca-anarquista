@@ -3,7 +3,7 @@ import { readFileSync, writeFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
-const ROOT = '/home/fdr/biblioteca-anarquista';
+const ROOT = '/home/fdr/laidea';
 const SRC = '/home/fdr/Documentos/anarquismo_importado';
 const CLA = `${ROOT}/data/registros/revision330/clasificacion-anarquista.md`;
 const { regionData } = await import(pathToFileURL(`${ROOT}/src/data/regionData.js`));

@@ -47,10 +47,10 @@ const RegionModal = ({
 
         <div className="space-y-3 max-h-96 overflow-y-auto">
           {historicalBooks.map((book, idx) => (
-            <div key={idx} className={`${darkMode ? 'bg-gray-800/50 border-[#872320]/50' : 'bg-white/80 border-[#B79F6E]'} border-2 rounded-lg p-4`}>
+            <div key={idx} className={`${darkMode ? 'bg-gray-800/50 border-accent/50' : 'bg-white/80 border-line'} border-2 rounded-lg p-4`}>
               <div className="flex justify-between items-start gap-3">
                 <div className="flex-1">
-                  <p className={`font-medium ${darkMode ? 'text-gray-200' : 'text-gray-800'} mb-2`}>
+                  <p className={`font-medium font-serif ${darkMode ? 'text-gray-200' : 'text-gray-800'} mb-2`}>
                     {book.title}
                   </p>
                   <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'} mb-2`}>

@@ -26,7 +26,7 @@ import InfluencesView from './InfluencesView';
 import AcratasView from './AcratasView';
 import FavoritesView from './FavoritesView';
 import LibraryView from './LibraryView';
-import TheoriesView from './TheoriesView';
+import PraxisView from './PraxisView';
 import ReadingPathsView from './ReadingPathsView';
 import GlossaryView from './GlossaryView';
 import ContactView from './ContactView';
@@ -47,7 +47,9 @@ const getInitialRoute = () =>
     : parseRoute(readRouteInput(), BOOK_INDEX);
 
 const AnarchistArchive = () => {
-  const { darkMode, toggleDarkMode } = useDarkMode();
+  const { darkMode: darkPreferido, toggleDarkMode } = useDarkMode();
+  // Un único estilo visual, con paleta de día y de noche (`data-modo`).
+  const darkMode = darkPreferido;
   const { favorites, toggleFavorite, updateFavoriteNote, addFavoriteNote, deleteFavoriteNote, exportFavorites, importFavorites } = useFavorites();
   const { showScrollTop, scrollToTop } = useScrollTop();
 
@@ -102,7 +104,7 @@ const AnarchistArchive = () => {
     setSelectedEvent(event);
   };
 
-  // Cross-links desde Teorías/Rutas/Glosario → Biblioteca con filtros
+  // Cross-links desde Praxis/Rutas/Glosario → Biblioteca con filtros
   // precargados (cambio 5 del reporte @ux-review de navegación, 2026-08-17).
   const openLibraryWithFilters = (filters) => {
     setLibraryInitialFilters(filters || null);
@@ -175,12 +177,18 @@ const AnarchistArchive = () => {
     };
   }, []);
 
+  // Modo noche en <html>: las paletas nocturnas se activan con
+  // `data-modo="noche"`, sin tocar las clases de cada componente.
+  useEffect(() => {
+    document.documentElement.dataset.modo = darkMode ? 'noche' : 'dia';
+  }, [darkMode]);
+
   const bgClass = darkMode
-    ? 'bg-gradient-to-br from-red-950 via-black to-gray-900 text-gray-100'
-    : 'bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 text-gray-800';
+    ? 'bg-paper-deep text-gray-100'
+    : 'bg-paper-deep text-gray-800';
 
   return (
-    <div className={`min-h-screen ${bgClass} transition-colors duration-500 theme-constructivista theme-pergamino`}>
+    <div className={`min-h-screen ${bgClass} transition-colors duration-500`}>
       <Header
         darkMode={darkMode}
         onDarkModeToggle={toggleDarkMode}
@@ -188,7 +196,6 @@ const AnarchistArchive = () => {
         onShowContact={() => setActiveView(VIEWS.CONTACT)}
         onViewChange={handleViewChange}
         favoriteCount={favorites.length}
-        stats={stats}
         activeView={activeView}
         menuOpen={menuOpen}
         onMenuToggle={() => setMenuOpen(!menuOpen)}
@@ -236,6 +243,7 @@ const AnarchistArchive = () => {
               darkMode={darkMode}
               authors={dynamicAuthors}
               onRead={setReadingBook}
+              onOpenLibrary={openLibraryWithFilters}
             />
           )}
 
@@ -252,6 +260,7 @@ const AnarchistArchive = () => {
               darkMode={darkMode}
               regionData={regionData}
               onRead={setReadingBook}
+              onOpenLibrary={openLibraryWithFilters}
             />
           )}
 
@@ -283,7 +292,7 @@ const AnarchistArchive = () => {
           )}
 
           {activeView === VIEWS.THEORIES && (
-            <TheoriesView
+            <PraxisView
               darkMode={darkMode}
               regionData={regionData}
               onRead={setReadingBook}
@@ -315,10 +324,10 @@ const AnarchistArchive = () => {
         </div>
       </main>
 
-      <footer className={`border-t-2 shadow-[0_-4px_12px_rgba(0,0,0,0.25)] ${darkMode ? 'border-[#872320]/50 bg-black/30' : 'border-[#B79F6E] bg-amber-100/60'}`}>
+      <footer className={`border-t-2 shadow-[0_-4px_12px_rgba(0,0,0,0.25)] ${darkMode ? 'border-accent/50 bg-black/30' : 'border-line bg-amber-100/60'}`}>
         <div className="container mx-auto px-4 py-8">
           <p className={`font-display uppercase tracking-widest text-sm text-center ${darkMode ? 'text-gray-300' : 'text-amber-900'}`}>
-            La Idea · Biblioteca digital anarquista
+            La Idea · Biblioteca Digital Anarquista
           </p>
         </div>
       </footer>

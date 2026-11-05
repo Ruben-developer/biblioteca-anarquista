@@ -1,3 +1,12 @@
+// Tokens: color, tipografía, radio, borde y sombra salen de variables CSS
+// definidas por estilo en src/estilos.css (generado por scripts/generar-estilos.mjs).
+// El estilo activo vive en <html data-estilo="…">; así un solo cambio de atributo
+// re-tiñe toda la app sin tocar componentes.
+const canal = (nombre) => `rgb(var(--${nombre}) / <alpha-value>)`;
+
+const rampa = (familia, tonos) =>
+  Object.fromEntries(tonos.map((t) => [t, canal(`${familia}-${t}`)]));
+
 export default {
   content: [
     "./index.html",
@@ -6,10 +15,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['"High Voltage Rough"', 'Anton', 'Oswald', 'Impact', 'sans-serif'],
-        serif: ['"Playfair Display"', 'Georgia', 'serif'],
-        sans: ['"Source Sans 3"', 'system-ui', 'sans-serif'],
-        mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace']
+        display: 'var(--font-display)',
+        serif: 'var(--font-serif)',
+        sans: 'var(--font-sans)',
+        mono: 'var(--font-mono)'
       },
       colors: {
         anarchist: {
@@ -25,18 +34,33 @@ export default {
         'brand-deep': 'var(--c-red-deep)',
         action: 'var(--c-red)',
         'action-hover': 'var(--c-red-deep)',
-        // Desduplicación de la escala (mismo color, un solo valor):
-        // rojos oscuros fragmentados -> un rojo de enlace y un rojo de scrim
-        red: {
-          300: '#f87171',
-          400: '#f87171',
-          500: '#f87171',
-          950: '#7f1d1d'
-        },
-        // Ámbar claro: paletas casi idénticas colapsadas a ámbar-50
-        amber: { 50: '#fffbeb' },
-        orange: { 50: '#fffbeb' },
-        yellow: { 50: '#fffbeb' }
+        // Tokens de estilo (cambian con data-estilo)
+        line: canal('c-line'),
+        'line-soft': canal('c-line-soft'),
+        accent: canal('c-accent'),
+        paper: canal('c-paper'),
+        'paper-deep': canal('c-paper-deep'),
+        // Rampas completas: cada tono apunta a su variable de estilo
+        amber: rampa('amber', [50, 100, 200, 300, 400, 500, 600, 700, 800, 900]),
+        gray: rampa('gray', [100, 200, 300, 400, 500, 600, 700, 800, 900, 950]),
+        red: rampa('red', [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950]),
+        orange: { 50: canal('orange-50') },
+        yellow: { 50: canal('yellow-50') }
+      },
+      borderRadius: {
+        DEFAULT: 'var(--r-md)',
+        sm: 'var(--r-md)',
+        md: 'var(--r-md)',
+        lg: 'var(--r-lg)',
+        xl: 'var(--r-xl)',
+        full: 'var(--r-full)'
+      },
+      borderWidth: {
+        2: 'var(--bw-2)'
+      },
+      boxShadow: {
+        md: 'var(--shadow-md)',
+        lg: 'var(--shadow-lg)'
       }
     },
   },

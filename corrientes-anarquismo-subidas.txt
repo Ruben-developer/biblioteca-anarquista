@@ -1,0 +1,664 @@
+CORRIENTES DEL ANARQUISMO — MODULO REAL DE LA APP (src/data/anarchistTheories.js)
+Resueltas contra regionData.js por titulo. La etiqueta [cat] indica en que modulo vive cada obra; negrita = fuga
+
+
+### Anarcomunismo (48 obras, 1 FUGA)
+- [teoria] La Conquista del Pan — Piotr Kropotkin
+- [teoria] La conquista del pan: volviendo a una obra de Kropotkin — Simón Royo Hernández
+- [teoria] A los jóvenes — Piotr Kropotkin
+- [teoria] El pensamiento de Kropotkin: ciencia, ética y anarquía — Ángel J. Cappelletti
+- [teoria] ¿Qué es la Anarquía? (basado en el ABC del comunismo libertario de Berkman) — Colectivo Revolución Libertaria
+- [teoria] La Anarquía y el Método del Anarquismo — Errico Malatesta
+- [teoria] En el café — Errico Malatesta
+- [teoria] Evolución, revolución y anarquismo — Élisée Reclus
+- [teoria] El ideal anarquista — Élisée Reclus
+- [teoria] ¡Abajo los jefes! — Joseph Déjacque
+- [teoria] Crítica revolucionaria — Luigi Fabbri
+- [teoria] Influencias burguesas sobre el anarquismo — Luigi Fabbri
+- [teoria] La Revolución Rusa y el anarquismo — Luigi Fabbri
+- [teoria] Comunismo autoritario y comunismo libertario — Max Nettlau
+- [teoria] La lucha contra el Estado — Max Nettlau
+- [teoria] La responsabilidad y la solidaridad en la lucha obrera — Max Nettlau
+- [teoria] El pensamiento político de Efraín Plaza Olmedo — Anónimo
+- [teoria] Errico Malatesta y la violencia revolucionaria — Anónimo
+- [FUGA-acratas] ¿Anarquía? — Bob Black
+- [teoria] La Anarquía — Errico Malatesta
+- [teoria] Socialismo y anarquía — Errico Malatesta
+- [teoria] Páginas de lucha cotidiana — Errico Malatesta
+- [teoria] El Apoyo Mutuo — Piotr Kropotkin
+- [teoria] Origen y evolución de la moral — Piotr Kropotkin
+- [teoria] Campos, fábricas y talleres — Piotr Kropotkin
+- [teoria] Etapas del pensamiento socialista — Ángel J. Cappelletti
+- [teoria] Sentido del positivismo latinoamericano — Ángel J. Cappelletti
+- [teoria] Socialismo utópico y anarquía — Ángel J. Cappelletti
+- [teoria] Lenin: sepulturero de la revolución rusa — Gastón Leval
+- [teoria] El Capital al alcance de todos — Carlo Cafiero
+- [teoria] Algunos pensamientos sobre el sistema de propiedad post-revolucionario — Errico Malatesta
+- [teoria] Anarquistas eleccionistas — Errico Malatesta
+- [teoria] Anarquistas progubernamentales — Errico Malatesta
+- [teoria] Gobierno y anarquía — Errico Malatesta
+- [teoria] Nuestro ideario — Errico Malatesta
+- [teoria] Manifiesto comunista libertario — Georges Fontenis
+- [teoria] El comunismo anarquista — Johann Most
+- [teoria] Anarcocomunismo, sus fundamentos y principios — Piotr Kropotkin
+- [teoria] El esporitu de rebelin y otros escritos — Piotr Kropotkin
+- [teoria] Folletos revolucionarios 2. Ley y autoridad — Piotr Kropotkin
+- [teoria] La Agricultura — Piotr Kropotkin
+- [teoria] La ayuda mutua — Piotr Kropotkin
+- [teoria] La ciencia moderna y la anarquía — Piotr Kropotkin
+- [teoria] La moral anarquista y otros escritos — Piotr Kropotkin
+- [teoria] Las carceles y su influencia moral sobre los presos — Piotr Kropotkin
+- [teoria] Palabras de un rebelde — Piotr Kropotkin
+- [teoria] Lo inevitable. Insurrecciones y Revolución. Rebelin y Revolución — Piotr Kropotkin
+- [teoria] El anarquismo expuesto por Kropotkin (1931) — Edmundo González-Blanco
+
+### Anarcosindicalismo (36 obras)
+- [teoria] Anarcosindicalismo en el siglo XXI — Varios (CNT)
+- [teoria] Sindicalismo en la empresa y el territorio — CNT (Secretaría de Formación)
+- [teoria] El sujeto de la acción revolucionaria — Eduardo Colombo
+- [teoria] Páginas selectas — Max Nettlau Rudolf Rocker y Diego Abad de Santillán
+- [teoria] Sindicalismo y huelga. Sindicalismo revolucionario francés e italiano. Su introducción en España — Pere Gabriel
+- [teoria] Autonomia obrera, anarcosindicalismo, anarquismo — Miquel Amorós
+- [teoria] Que fue la autonomia obrera — Miquel Amorós
+- [teoria] Agitacion Anarcosindicalista — Anónimo
+- [teoria] El anarquismo en el movimiento obrero — Diego Abad de Santillán
+- [teoria] El organismo economico de la revolucion (1978) — Diego Abad de Santillán
+- [teoria] El organismo economico de la revolucion — Diego Abad de Santillán
+- [teoria] Dos articulos de Lucha Social — Ramon Acin
+- [teoria] Tres articulos — Ramon Acin
+- [teoria] Economia libertaria (Alternativa para un mundo en crisis) — Abraham Guillen
+- [teoria] Socialismo libertario (Ni capitalismo de monopolio, ni comunismo de Estado) — Abraham Guillen
+- [teoria] Ascendencia y trascendencia del sindicalismo — Anselmo Lorenzo
+- [teoria] Capacidad revolucionaria del proletariado (II Certamen Socialista) — Anselmo Lorenzo
+- [teoria] El obrero moderno — Anselmo Lorenzo
+- [teoria] El proletariado emancipador — Anselmo Lorenzo
+- [teoria] El proletariado en marcha — Anselmo Lorenzo
+- [teoria] Evolucin proletaria — Anselmo Lorenzo
+- [teoria] Rimora societaria — Anselmo Lorenzo
+- [teoria] Voa libre. El trabajador. Su ideal emancipador — Anselmo Lorenzo
+- [teoria] Sin rodeos ni medias tintas. El patrimonio sindical pertenece exclusivamente a los trabajadores — Eduardo De Guzman
+- [teoria] Por los fueros de la verdad. No somos agentes provocadores — Jaume Balius Mir
+- [teoria] La alternativa libertaria — Joan Zambrana
+- [teoria] La maldicion del practicismo. Alaiz, Felipe - Nueva maldicion del practicismo — Rudolf Rocker
+- [teoria] Aspectos sociales de la humanidad. El sindicalismo. Origen, tacticas y propositos — Varios autores
+- [teoria] Determinismo y voluntarismo (Polemica) — Cano Ruiz, Benjamin Y Peirats, Jose
+- [teoria] Anarquoa y sindicalismo — Errico Malatesta
+- [teoria] Entre campesinos — Errico Malatesta
+- [teoria] Articulos en Frente libertario (1970-1977) — Jose Peirats
+- [teoria] Mecanismo organico de la Confederacion Nacional del Trabajo — Jose Peirats
+- [teoria] Las bases del sindicalismo revolucionario — Rudolf Rocker
+- [teoria] El sindicalismo revolucionario — Victor Griffuelhes
+- [teoria] La accin sindicalista — Victor Griffuelhes
+
+### Anarcocolectivismo (21 obras)
+- [teoria] Dios y el Estado — Mijaíl Bakunin
+- [teoria] Federalismo, socialismo y antiteologismo — Mijaíl Bakunin
+- [teoria] El principio de autoridad — Mijaíl Bakunin
+- [teoria] El patriotismo — Mijaíl Bakunin
+- [teoria] Kant y Bakunin — Elena Sánchez Gómez
+- [teoria] Bakunin y sus persistentes calumniadores — Frank Mintz
+- [teoria] El principio del Estado — Mijaíl Bakunin
+- [teoria] Comic Dios y El Estado — Anónimo
+- [teoria] Dircuso en el Congreso de la AIT (Basilea, 1869) — MijaiL Bakunin
+- [teoria] Escritos de filosofia politica (Tomo I) — MijaiL Bakunin
+- [teoria] Escritos de filosofia politica I ( Tomo I) — MijaiL Bakunin
+- [teoria] Escritos de filosofia politica II ( Tomo I) — MijaiL Bakunin
+- [teoria] Escritos de filosofia politica III ( Tomo II) — MijaiL Bakunin
+- [teoria] Escritos revolucionarios — MijaiL Bakunin
+- [teoria] Escritos varios — MijaiL Bakunin
+- [teoria] Incitar a la accion (Antologia) — MijaiL Bakunin
+- [teoria] Tacticas revolucionarias — MijaiL Bakunin
+- [teoria] Tres conferencias dadas a los obreros del valle de Saint-Imier — MijaiL Bakunin
+- [teoria] Unas palabras a mis jovenes hermanos de Rusia — MijaiL Bakunin
+- [teoria] El colectivismo. Sus fundamentos cientoficos — Ricardo Mella Cea
+- [teoria] Sinopsis Social. La anarquía, la federación y el colectivismo — Ricardo Mella Cea
+
+### Mutualismo (12 obras)
+- [teoria] ¿Qué es la Propiedad? — Pierre-Joseph Proudhon
+- [teoria] El principio federativo — Pierre-Joseph Proudhon
+- [teoria] Política unitaria — Pierre-Joseph Proudhon
+- [teoria] La capacidad política de la clase obrera — Pierre-Joseph Proudhon
+- [teoria] Amor y matrimonio — Pierre-Joseph Proudhon
+- [teoria] Propiedad intelectual: una crítica libertaria — Kevin Carson
+- [teoria] Las cargas tributarias — Diego Abad de Santillán
+- [teoria] Teoroa de la contribucin — Pierre-Joseph Proudhon
+- [teoria] Contradicciones poloticas. Teoroa del movimiento constitucional (en el siglo XIX) — Pierre-Joseph Proudhon
+- [teoria] De la capacidad polotica de las clases jornaleras — Pierre-Joseph Proudhon
+- [teoria] Sistema de las contradicciones econmicas o Filosofoa de la miseria — Pierre-Joseph Proudhon
+- [teoria] Psicología de la revolución — Pierre-Joseph Proudhon
+
+### Anarcoindividualismo (24 obras)
+- [teoria] El único y su propiedad — Max Stirner
+- [teoria] Socialismo de Estado y anarquismo — Benjamin Tucker
+- [teoria] El anarquismo individualista como vida y actividad — Émile Armand
+- [teoria] El anarquismo individualista. Lo que es, vale y puede — Émile Armand
+- [teoria] El individualismo anarquista — Émile Armand
+- [teoria] Individualismo anarquista y camaradería amorosa — Émile Armand
+- [teoria] Individualismo y Comunismo — Errico Malatesta
+- [teoria] La acción como propaganda — Johann Most
+- [teoria] Lombroso y los anarquistas — Ricardo Mella
+- [teoria] Del amor — Ricardo Mella
+- [teoria] La coacción moral — Ricardo Mella
+- [teoria] Nueva Utopía — Ricardo Mella
+- [teoria] Anarquismo (individualismo hispano) — Miguel Giménez Igualada
+- [teoria] Hacia la nada creadora. Individuo y revuelta — Renzo Novatore
+- [teoria] Artículos de combate — Práxedis G. Guerrero
+- [teoria] El Temperamento Anarquista en el Vrtice de la Historia — Renzo Novatore
+- [teoria] Yo tambiin soy un Nihilista — Renzo Novatore
+- [teoria] El trabajo antisocial y los movimientos inutiles — Albert Libertad
+- [teoria] Pequeno manual individualista — Han Ryner
+- [teoria] En el reino de los fantasmas — Renzo Novatore
+- [teoria] La amistad y los amigos — Renzo Novatore
+- [teoria] Perversidad espiritual — Renzo Novatore
+- [teoria] Retornando — Renzo Novatore
+- [teoria] Así habló el Único (Escritos) — Renzo Novatore
+
+### Anarcofeminismo (19 obras)
+- [teoria] Anarquismo: la conexión feminista — Peggy Kornegger
+- [teoria] Anarcofeminismo e identidad(es) — Alma Méijome Tejero
+- [teoria] Anarquismo y sexualidad — Helena Andrés Granel
+- [teoria] De la anarquia academicista a la realidad socioterritorial — Akira
+- [teoria] 8 de marzo — Anarcofeminismo en PDF
+- [teoria] Pequeña antología anarcofeminista — Anarquismo en PDF
+- [teoria] Nuestra Mision. Prosas de una mujer insurgente — Maria Álvarez
+- [teoria] Pornograma libertario — Anónimo
+- [teoria] La cerda punk. Ensayos desde un feminismo gordo, lesbiko, antikapitalista antiespecista — Constanzx Álvarez Castillo
+- [teoria] La hipocresoa del puritanismo y otros ensayos — Emma Goldman
+- [teoria] Feroces de lengua y pluma. Sobre algunas escrituras de mujeres anarquistas — Fernandez Cordero, Laura Y Bacci, Claudia
+- [teoria] Preocuparse demasiado por los demas. La maldicin de los pobres — David Graeber
+- [teoria] Anarquoa y la cuestión sexual — Emma Goldman
+- [teoria] La hipocresoa del puritanismo — Emma Goldman
+- [teoria] La mujer libre — Emma Goldman
+- [teoria] Situacin social de la mujer — Emma Goldman
+- [teoria] La mujer, problema del hombre — Federica Montseny
+- [teoria] La religion y la cuestion social — Juan Montseny
+- [teoria] Contra la hidra de la autoridad — Maria Lacerda De Moura
+
+### Anarquismo Verde (37 obras)
+- [teoria] ¿Anarquismo o barbarie? Historia, civilización y progreso — Murray Bookchin
+- [teoria] Anarquismo social o anarquismo personal — Murray Bookchin
+- [teoria] Una solución anarquista al calentamiento global — Peter Gelderloos
+- [teoria] ¡Escucha, marxista! — Murray Bookchin
+- [teoria] Tecnología y anarquismo — Murray Bookchin
+- [teoria] El anarquismo y el movimiento ambiental — Andrew Flood
+- [teoria] Contra la nocividad. Anarquismo, antidesarrollismo, revolución — Miquel Amorós
+- [teoria] Perspectivas antidesarrollistas — Miquel Amorós
+- [teoria] Fuck Green New Deal. Colapso y alternativas — Miquel Amorós
+- [teoria] El tren de los dirigentes. Conferencia sobre el TAV — Miquel Amorós
+- [teoria] Encendiendo la llama del ecologismo revolucionario — Anónimo
+- [teoria] La vida administrada. Sobre el naufragio social — Juanma Agulles
+- [teoria] La plaga de nuestro tiempo — Juanma Agulles
+- [teoria] Civilización, primitivismo y anarquismo — Andrew Flood
+- [teoria] Anarcoveganismo y naturismo libertario — Roberto X
+- [teoria] Los veganarquistas — Varios autores
+- [teoria] Bioterios y experimentación animal en Chile — Ediciones Especismo NO!
+- [teoria] El altruismo como factor de la evolución — López Ortiz Geovani
+- [teoria] Reivindicacin de una dieta vegana — Gerfried Ambrosch
+- [teoria] Liberacion animal mas alla del veganismo — Anónimo
+- [teoria] Geografias del combate — Miquel Amorós
+- [teoria] Traduccin de Eliseo Reclus El Hombre y La Tierra — Anselmo Lorenzo
+- [teoria] La ecologoa de la libertad. La emergencia y la disolucin de las jerarquoas — Murray Bookchin
+- [teoria] Libertad y necesidad en la Naturaleza. Problemas de itica ecolgica — Murray Bookchin
+- [teoria] Los lomites de la ciudad — Murray Bookchin
+- [teoria] Por una sociedad ecolgica — Murray Bookchin
+- [teoria] Guerra al patriarcado. Guerra a la tecnologia asesina — Varios autores
+- [teoria] Los pies en la tierra. Reflexiones y experiencias hacia un movimiento agroecologico — Varios autores
+- [teoria] Las poloticas de la ecologoa social. Municipalismo libertario — Biehl, Janet Y Bookchin, Murray
+- [teoria] Ecologoa libertaria — Murray Bookchin
+- [teoria] Ecologoa y pensamiento revolucionario — Murray Bookchin
+- [teoria] El significado de Confederalismo — Murray Bookchin
+- [teoria] Hacia una tecnologoa liberadora — Murray Bookchin
+- [teoria] Seis tesis sobre municipalismo libertario — Murray Bookchin
+- [teoria] Sociedad, polotica y Estado — Murray Bookchin
+- [teoria] La utopoa es posible. Experiencias contemporaneas — Murray Et Al. Bookchin
+- [teoria] Catastrofismo o abandono del sentido critico — Philippe Pelletier
+
+### Plataformismo y especifismo (9 obras, 1 FUGA)
+- [teoria] Plataforma organizacional de los comunistas libertarios — Dielo Truda
+- [teoria] El debate sobre La Plataforma — Dielo Trouda Néstor Makhno y Errico Malatesta
+- [teoria] Entre la plataforma y el partido — Patrick Rossineri
+- [FUGA-historia] El mensaje revolucionario de los amigos de Durruti — Georges Fontenis
+- [teoria] Organización Ácrata. Propuestas y debates — Varios autores (grupo La Peste)
+- [teoria] La importancia de la crítica en el desarrollo del movimiento revolucionario — José Antonio Gutiérrez
+- [teoria] Revolución no es dictadura — Luigi Fabbri
+- [teoria] Huerta grande. Material de difusion interna sobre tematica teorica de 1972 — Federacion Anarquista Uruguaya
+- [teoria] Contra el mercado. Hacia una economia de lo concreto — Patrick Rossineri
+
+### Insurreccionalismo (48 obras)
+- [teoria] Autogestión — Alfredo M. Bonanno
+- [teoria] Introducción a la guerra civil — Anónimo
+- [teoria] Archipiélago. Afinidad, organización informal y proyectos insurreccionales — Varios (Salto, subversión & anarquía)
+- [teoria] Cuando se señala la luna... A vueltas con el insurreccionalismo — Anónimo
+- [teoria] Anarquismo, insurrecciones e insurreccionalismo — Andrew Flood
+- [teoria] Grupos de afinidad. Una parte esencial de la organización anarquista — CrimethInc
+- [teoria] Anarquía profesional y desarme teórico — Miguel Amorós
+- [teoria] Golpes y contragolpes — Miquel Amorós
+- [teoria] Cómo la no violencia protege al Estado — Peter Gelderloos
+- [teoria] Apuntes sobre revuelta y guerra social — Anónimo
+- [teoria] Cuadernos de negación — Anónimo
+- [teoria] Antes del momento — Carlos Malato
+- [teoria] Ai ferri corti. Romper con esta realidad — Anónimo
+- [teoria] Anarquia profesional y desarme teorico. Sobre Insurreccionalismo — Miquel Amorós
+- [teoria] Anarquia insurreccionalista, organizarse para atacar — Anónimo
+- [teoria] La accion sometida a la critica — Anónimo
+- [teoria] Un plan de organización anarquista — Errico Malatesta
+- [teoria] La organización de la Internacional — Mijaíl Bakunin
+- [teoria] Cuestiones de organizacion — Anónimo
+- [teoria] CAOS NO MURIO: Consideraciones para Desmitificar el Concepto e Influencias del Caos — Varios autores
+- [teoria] La bala y la escuela — Los Discursos Peligrosos
+- [teoria] La tensin anarquista — Alfredo M. Bonanno
+- [teoria] Tesis de Cosenza. El problema del empleo. Por una critica libertaria de la perspectiva anarco-sindicalista — Alfredo M. Bonanno
+- [teoria] La psicologoa de la violencia polotica — Emma Goldman
+- [teoria] El Derecho al Ocio y a la Expropiacin Individual — Severino Di Giovanni
+- [teoria] Contra la amnistoa. Encerrados bajo llave — Alfredo M. Bonanno
+- [teoria] Analisis de un periodo de cambio — Alfredo M. Bonanno
+- [teoria] Compilacin de escritos — Alfredo M. Bonanno
+- [teoria] Después de Marx, autonomía — Alfredo M. Bonanno
+- [teoria] El abstencionismo anarquista — Alfredo M. Bonanno
+- [teoria] Enfermedad y capital — Alfredo M. Bonanno
+- [teoria] Nueva vuelta de tuerca del capitalismo — Alfredo M. Bonanno
+- [teoria] La Nueva Guerrilla Urbana Anarquista — Conspiracion De Celulas Del Fuego
+- [teoria] Una conversacion entre anarquistas — Conspiracion De Celulas Del Fuego
+- [teoria] A qui se refieren cuando hablan de paz — Crimethinc
+- [teoria] No habra muro que nos pare. Una guoa de las fronteras y la migracin a travis de Norteamirica — Crimethinc
+- [teoria] Domesticacin — Crimethinc.
+- [teoria] Luchando en el nuevo terreno. Qui ha cambiado desde el siglo XX — CrimethInc.
+- [teoria] Anarquoa defendida por anarquistas — Johann Most
+- [teoria] El ataque es la mejor forma de defensa — Johann Most
+- [teoria] Fuego a medianoche, destruccin al amanecer — Kasimere Bran
+- [teoria] Un atajo entre el turismo y el terrorismo — Peter Gelderloos
+- [teoria] Puntos rojos — Praxedis G. Guerrero
+- [teoria] Sopla — Praxedis G. Guerrero
+- [teoria] La patria burguesa y la patria universal — Ricardo Flores Magon
+- [teoria] Cuando se halla el pueblo preparado para la libertad — Johann Most
+- [teoria] La Única salida es la violencia — Osvaldo Bayer
+- [teoria] Hacia una nueva revolución — Amigos de Durruti
+
+### Lucha anticarcelaria y autodefensa (7 obras)
+- [teoria] La cárcel en Chile. Análisis penal y experiencia carcelaria — Varios autores
+- [teoria] Podrán detenernos pero no pararnos — Varios autores
+- [teoria] Manual de desobediencia economica — Anónimo
+- [teoria] Los papeles de Albert Mason, Volumen I. Accion Directa Economica — Anónimo
+- [teoria] Manual del manifestante — Anónimo
+- [teoria] Las prisiones — Piotr Kropotkin
+- [teoria] Contra la amnistoa. Encerrados bajo llave — Alfredo M. Bonanno
+
+### Pedagogía racionalista y antiautoritaria (20 obras)
+- [teoria] La Escuela Moderna — Francisco Ferrer Guardia
+- [teoria] Ricardo Mella y Francisco Ferrer i Guardia — Frank Mintz
+- [teoria] Anarquismo y educación: la propuesta sociopolítica de la pedagogía libertaria — Francisco José Cuevas Noa
+- [teoria] Una molesta piedra en el camino: educación anarquista — Ayelén Sardu
+- [teoria] Educación y pedagogía en la tradición libertaria — Hugues Lenoir
+- [teoria] La evolución del concepto de pedagogía libertaria — Valeria Giacomoni
+- [teoria] Paideia, la escuela de la anarquía. 34 años de educación libertaria — Adrián Soto Salmerón
+- [teoria] El educador mercenario (Escrituras ahuyentables I) — Pedro García Olivo
+- [teoria] El enigma de la docilidad — Pedro García Olivo
+- [teoria] Carta contra las corridas de toros y la explotacin humana — Francisco Ferrer Guardia
+- [teoria] Principios de moral cientofica — Francisco Ferrer Guardia
+- [teoria] Cuestiones de enseanza libertaria II — Ricardo Mella Cea
+- [teoria] Eduacion anarquista. Aprendizajes para una sociedad libre — Varios autores
+- [teoria] Prólogo de Francisco Ferrer Ferrer y La Huelga General — Anselmo Lorenzo
+- [teoria] Prólogo de Jean Grave Las aventuras de Nono — Anselmo Lorenzo
+- [teoria] Prólogo de Paul Robin Generacin voluntaria — Anselmo Lorenzo
+- [teoria] Cuestiones de enseanza libertaria I — Ricardo Mella Cea
+- [teoria] Divagaciones sobre la enseanza — Ricardo Mella Cea
+- [teoria] Esbozos de pedagogoa libertaria en el altiplano — Marcelo Maldonado Rocha
+- [teoria] La instruccion integral — MijaiL Bakunin
+
+### Anarquismo sin adjetivos, síntesis y filosofía general (196 obras, 1 FUGA)
+- [teoria] La síntesis del anarquismo — Sébastien Faure Fernando Tarrida Mármol y Volin
+- [teoria] El anarquismo sin adjetivos: de ayer a hoy — Floreal Castilla
+- [teoria] El lenguaje libertario. Antología del pensamiento anarquista contemporáneo — Christian Ferrer
+- [teoria] Cabezas de tormenta. Ensayos sobre lo ingobernable — Christian Ferrer
+- [teoria] Pensadores anarquistas — Ángel J. Cappelletti
+- [teoria] El pensamiento anarquista - Antologia — Varios autores
+- [teoria] Anarquismo: de la teoría a la práctica — Daniel Guérin
+- [teoria] Anarquismo básico — Anónimo
+- [teoria] El anarquismo como doctrina y movimiento — Aureliano Yanes Herreros
+- [teoria] Senderos de libertad — Félix García Moriyón
+- [teoria] Sobre el anarquismo — Nicolas Walter
+- [teoria] Anarquismo: argumentos a favor y en contra — Albert Meltzer
+- [teoria] Actualidad del anarquismo — Tomás Ibáñez
+- [teoria] ¿Qué significado tendrá mañana el anarquismo? — Colin Ward
+- [teoria] Hacia un nuevo anarquismo — Andrej Grubacic
+- [teoria] Bitácora de la Utopía: Anarquismo para el Siglo XXI — Nelson Méndez y Alfredo Vallota
+- [teoria] La Anarquía Funciona — Peter Gelderloos
+- [teoria] El principio moral de la Anarquia — Diego Abad de Santillán
+- [teoria] En torno a nuestros objetivos libertarios — Diego Abad de Santillán
+- [teoria] El problema de la libertad — Octavio Alberola
+- [teoria] Preguntas frecuentes sobre el anarquismo — Anónimo
+- [teoria] Reflexiones para un mundo libre — Anónimo
+- [teoria] Por una teoría propia — Anónimo
+- [teoria] El anarquismo en la sociedad actual. Entrevistas X Aniversario Portal Libertario OACA — Varios autores
+- [teoria] Mi anarquismo y otros escritos — Rafael Barrett
+- [teoria] Anarquismo hoy — Michael Albert
+- [teoria] Curso de teoría política — Michael Albert
+- [teoria] Antirracionalismo — Michael Albert
+- [FUGA-acratas] Anarquismo — Emma Goldman
+- [teoria] Reflexiones para la acción I (Una lectura libertaria de la Transición) — José Luis García Rúa
+- [teoria] Aproximaciones a un mundo mortalmente enfermo — Diego Abad de Santillán
+- [teoria] Ayer, hoy, manana — Diego Abad de Santillán
+- [teoria] Psicologia del pueblo espanol — Diego Abad de Santillán
+- [teoria] Una nueva era en la historia humana — Diego Abad de Santillán
+- [teoria] La ideologia politica del anarquismo espanol — José Álvarez Junco
+- [teoria] La teoria politica del anarquismo — José Álvarez Junco
+- [teoria] La sociedad y el anarquismo — Ponciano Alonso
+- [teoria] Parecon. Vida después del capitalismo — Michael Albert
+- [teoria] La anarquia nuestra de cada dia — Iván Darío Álvarez Escobar
+- [teoria] Curso de resolucion de conflictos — Anónimo
+- [teoria] M Agua — 15
+- [teoria] Surrealismo y anarquismo — Surrealistas en Le Libertaire
+- [teoria] En torno a nuestros objetivos libertarios (1938) (2013) — Diego Abad de Santillán
+- [teoria] Previsin de un juicio futuro (II Certamen Socialista) — Anselmo Lorenzo
+- [teoria] El anarqusimo ante la crisis de las ideologoas — Eduardo Colombo
+- [teoria] Dialogos anarquistas, un coloquio sobre teoria y practica — Gustavo Rodriguez
+- [teoria] El camino. Hacia un socialismo sin Estado — Luce Fabbri
+- [teoria] Antologoa anarquista II — Omar Ardila Murcia
+- [teoria] El trabajo, es una necesidad fisiolgica — Ricardo Mella Cea
+- [teoria] La coaccin moral (Fundamentos de una nueva sociedad) — Ricardo Mella Cea
+- [teoria] La cooperacin libre y los sistemas de comunidad — Ricardo Mella Cea
+- [teoria] Mirando hacia el futuro. Paginas anarquistas — Ricardo Mella Cea
+- [teoria] Temas subversivos. La conmocion revolucionaria — SeBastien Faure
+- [teoria] Economia anarquista. Una vision global — Varios autores
+- [teoria] Apuntes para la conferencia DEMOCRACIA — Agustin Garcia Calvo
+- [teoria] La vida sexual de la mujer — Amparo Poch Y Gascon
+- [teoria] Sanatorio de optimismo — Amparo Poch Y Gascon
+- [teoria] La ideologia anarquista — Angel J. Cappelletti
+- [teoria] Donde cree usted que va el mundo — Angel Pestana
+- [teoria] Feligreses, ciudadanos, compañeros — Anibal Dauria
+- [teoria] La filosofia de Max Stirner o la propiedad de si mismo — Anibal Dauria
+- [teoria] V de Veganismo — Anónimo
+- [teoria] Manifiesto de la anarquía — Anselme Bellegarrigue
+- [teoria] Artoculos para Ciencia Social — Anselmo Lorenzo
+- [teoria] Artoculos para La Idea Libre — Anselmo Lorenzo
+- [teoria] Contra la ignorancia — Anselmo Lorenzo
+- [teoria] El banquete de la vida — Anselmo Lorenzo
+- [teoria] El criterio libertario — Anselmo Lorenzo
+- [teoria] El derecho a la salud — Anselmo Lorenzo
+- [teoria] El hombre y la sociedad — Anselmo Lorenzo
+- [teoria] El patrimonio universal — Anselmo Lorenzo
+- [teoria] Fuera polotica — Anselmo Lorenzo
+- [teoria] Generalidades sociales — Anselmo Lorenzo
+- [teoria] Igualdad, libertad y fraternidad — Anselmo Lorenzo
+- [teoria] La anarquía triunfante — Anselmo Lorenzo
+- [teoria] La ganancia — Anselmo Lorenzo
+- [teoria] Las olimpiadas de la paz — Anselmo Lorenzo
+- [teoria] Tres Textos — Anselmo Lorenzo
+- [teoria] La IWW en la teoria y en la practica — Armando Trivino
+- [teoria] Los jovenes anarquistas — Arturo Parera
+- [teoria] Capitalismo, democracia y socialismo libertario — Augustin Souchy
+- [teoria] Concepcion anarquista del derecho natural — Benjamin Cano Ruiz
+- [teoria] En anarquía — Camille Pert
+- [teoria] Escritos I (Estudios Sociales) — Camillo Berneri
+- [teoria] Escritos III (Anticlericalismo) — Camillo Berneri
+- [teoria] Escritos VII (Antifascismo) — Camillo Berneri
+- [teoria] Por un programa de accin comunalista — Camillo Berneri
+- [teoria] Manifiesto libertario de la enseñanza — Carlos Diaz
+- [teoria] Colapso. Capitalismo terminal, transicion ecosocial, ecofascismo — Carlos Taibo
+- [teoria] Dos diagnosticos sobre la crisis — Carlos Taibo
+- [teoria] El decrecimiento explicado con sencillez — Carlos Taibo
+- [teoria] Tenemos que buscar una salida al capitalismo — Carlos Taibo
+- [teoria] Informe del Sindicato de Ensenanza de CNT en 1977 — CNT
+- [teoria] La libertad de circular. Despues de la era del motor — Colin Ward
+- [teoria] Reflexiones libertarias — Daniel Barret
+- [teoria] Lecturas anarquistas de Spinoza — Daniel Colson
+- [teoria] Dandole la vuelta a los modos de produccin o por qui el capitalismo es una transformacin de la esclavitud — David Graeber
+- [teoria] AnarQueer — Distribuidora Peligrosidad Social
+- [teoria] La herejia del materialismo historico — Edgar Emilio Rodriguez
+- [teoria] Arte y ciencia — EMile Armand
+- [teoria] El amor entre anarcoindividualistas — EMile Armand
+- [teoria] Formas de vida en comn sin Estado ni Autoridad (Las experiencias econmicas y sexulaes a travis de la historia) — EMile Armand
+- [teoria] La Confederacion General del Trabajo — Emile Pouget
+- [teoria] Las bases del sindicalismo — Emile Pouget
+- [teoria] Variaciones guesdistas — Emile Pouget
+- [teoria] La palabra como arma — Emma Goldman
+- [teoria] Recopilatorio de escritos — Emma Goldman
+- [teoria] Acerca de mi juicio Lucha de clases u odio de clases — Errico Malatesta
+- [teoria] Compilacin de escritos — Alfredo M. Bonanno
+- [teoria] Estrategia y tacticas en la practica anarquista — Errico Malatesta
+- [teoria] Companero campesino, escucha — Fai
+- [teoria] Las lecciones de una experiencia historica — Federica Montseny
+- [teoria] Escritos anarquistas sobre educacion — Felix (Ed.) Garcia Moriyon
+- [teoria] Alternativas pedagogicas libertarias en la escuela hoy — Felix Garcia Moriyon
+- [teoria] Organización corporativa y anarquía — Fernand Pelloutier
+- [teoria] Concepcion del Ideal Libertario — Fernando Tarrida Del Marmol
+- [teoria] Por qui somos anarquistas — Francesco Saverio Merlino
+- [teoria] Apuntes largos sobre la ciencia — Frank Mintz
+- [teoria] La idea anarquista — Gilimon, Eduardo G., Et Al.
+- [teoria] Gente sin gobierno. Una antropología de la anarquía — Harold B. Barclay
+- [teoria] Yin - Lo que las mujeres debiesen saber sobre el comunismo — He Zhen
+- [teoria] La sociedad del porvenir. El comunismo anarquico — Isaac Puente
+- [teoria] La utilidad del caos y del carisma, una perspectiva anarquista — James C. Scott
+- [teoria] Desmoralizando el moralismo. La futilidad de los valores fetichizados — Jason McQuinn
+- [teoria] Educacin burguesa y educacin libertaria — Jean Grave
+- [teoria] La sociedad moribunda y la Anarquía — Jean Grave
+- [teoria] Hola, compañeros (Manifiesto anarquista) — Jesus Lizano
+- [teoria] Identidad y socializacion anarquistas en las memorias de mujeres. Un despertar a la reivindicacion de genero — Joel Delhom
+- [teoria] El anarcocomunismo ante las elecciones — Jose Antonio Gutierrez
+- [teoria] El socialismo anarquista — Jose (Azorin) Martinez Ruiz
+- [teoria] Origen, esencia y fin de la sociedad de clases — Jose Garcia Pradas
+- [teoria] Revolucion proletaria — Jose Garcia Pradas
+- [teoria] Razones y sinrazones de la participacion libertaria en el gobierno — Jose Peirats
+- [teoria] Discordancias de bronce. Nuestra opinion sobre el sindicalismo — Jose Sanchez Rosa
+- [teoria] Manifiesto de los treinta — Juan Et Al. Peiro
+- [teoria] Problemas y cintarazos — Juan Peiro
+- [teoria] Elogio de la anarquía por dos excéntricos chinos del siglo III — Kang, Xi Y Xingjian, Bao
+- [teoria] La libertad entre la historia y la utopoa — Luce Fabbri
+- [teoria] Cartas a una mujer sobre la anarquía — Luigi Fabbri
+- [teoria] Lo nico y la pluralidad — Luigi Fabbri
+- [teoria] Qué es la Anarquía — Luigi Fabbri
+- [teoria] Ensayos Libertarios — Luisa Capetillo Peron
+- [teoria] El lugar de las ideas libertarias en la serie de las liberaciones humanas — Max Nettlau
+- [teoria] Panarquía. Una olvidada idea de 1860 — Max Nettlau
+- [teoria] El arte y la religion — Max Stirner
+- [teoria] El falso principio de nuestra educacion — Max Stirner
+- [teoria] Socialismo libertario. Una propuesta para el siglo XXI — Nelson MeNdez
+- [teoria] La huelga de los electores — Octave Mirbeau
+- [teoria] Antologoa anarquista I — Omar Ardila Murcia
+- [teoria] Los altruistas — Osvaldo Bayer
+- [teoria] Rebeldoa y esperanza — Osvaldo Bayer
+- [teoria] Para abolir la violacin, derrocad el deseo masculino — Patrick Dunn
+- [teoria] Renovacion y continuidad en la ideologia anarquista — Patrick Rossineri
+- [teoria] Por qui la educacin libertaria — Pauline McCormack
+- [teoria] Socialismo anarquista — Pedro Esteve
+- [teoria] La lectura publica y el modelo de las bibliotecas libertarias — Pedro Garcia Guirao
+- [teoria] La diferencia entre la anarquía y la academia — Peter Gelderloos
+- [teoria] La anarquía ante los tribunales — Pietro Gori
+- [teoria] Las bases sociológicas de la anarquía — Pietro Gori
+- [teoria] Anarquoa. Su pasado, presente y su porvenir — Ricardo Mella Cea
+- [teoria] Artoculos — Ricardo Mella Cea
+- [teoria] Breves apuntes sobre las pasiones humanas — Ricardo Mella Cea
+- [teoria] Cuestiones de enseanza — Ricardo Mella Cea
+- [teoria] Forjando un mundo libre — Ricardo Mella Cea
+- [teoria] La lucha de clases — Ricardo Mella Cea
+- [teoria] Tactica Socialista — Ricardo Mella Cea
+- [teoria] Sexualidad y movimiento libertario. Un debate abierto — Richard Cleminson
+- [teoria] Escritos seleccionados — Rudolf Rocker
+- [teoria] La influencia de las ideas absolutistas en el socialismo — Rudolf Rocker
+- [teoria] Las corrientes liberales en los Estados Unidos — Rudolf Rocker
+- [teoria] Nacionalismo y cultura — Rudolf Rocker
+- [teoria] Por que soy anarquista — Rudolf Rocker
+- [teoria] Autonomoa y federalismo — Sam Dolgoff
+- [teoria] El dolor universal — SeBastien Faure
+- [teoria] Hacia la dicha — SeBastien Faure
+- [teoria] La crisis economica y el paro forzoso — SeBastien Faure
+- [teoria] La sintesis anarquista — SeBastien Faure
+- [teoria] El paradigma anarquista de la educacin — Silvio Gallo
+- [teoria] Pedagogoa libertaria. Principios polotico-filosficos — Silvio Gallo
+- [teoria] Las raices anarquistas de la geografia. Hacia la emancipacion espacial — Simon Springer
+- [teoria] Anarquistas meditemos — Teresa Claramunt
+- [teoria] La acracia... hara justicia a la mujer — Teresa Claramunt
+- [teoria] La anarquía regenera la humanidad — Teresa Claramunt
+- [teoria] Posibilidad de la vida en la anarquía — Teresa Claramunt
+- [teoria] Negros presagios. Polotica anarquista en la era del colapso — Uri Gordon
+- [teoria] Primera punalada al nacionalismo — Varios autores
+- [teoria] Segunda punalada al nacionalismo — Varios autores
+- [teoria] Textos contra el trabajo — Varios autores
+- [teoria] Firmeza en los principios, flexibilidad en las tacticas — Wayne Price
+- [teoria] El derecho a la evolución — Anselmo Lorenzo
+- [teoria] La revolución es la paz (II Certamen Socialista) — Anselmo Lorenzo
+- [teoria] El concepto anarquista de la revolución — Luigi Fabbri
+- [teoria] La revolución. Entre el azar y la necesidad — Octavio Alberola
+- [teoria] Agitacin, organización y revolución — Ricardo Mella Cea
+- [teoria] Evolucin y revolución — Ricardo Mella Cea
+- [teoria] Revolucionarios so voceros de la revolución, no — Ricardo Mella Cea
+
+### Crítica al Estado, la democracia y el Derecho (33 obras)
+- [teoria] Contra la democracia — Miriam Qarmat
+- [teoria] La voluntad del pueblo. Democracia y anarquía — Eduardo Colombo
+- [teoria] Contra los jueces. El discurso anarquista en sede judicial — Aníbal D'Auria
+- [teoria] El ocaso de la ideología democrática — Le Brise-Glace
+- [teoria] Las 12 pruebas de la inexistencia de Dios — Anónimo
+- [teoria] La Semana Santa. Los atentados — Agrupacion Tiempos Nuevos
+- [teoria] Los males de la guerra — Agrupacion Tiempos Nuevos
+- [teoria] Elecciones y anarquismo — Errico Malatesta
+- [teoria] El Estado — Piotr Kropotkin
+- [teoria] La ley y la autoridad — Piotr Kropotkin
+- [teoria] Estatismo y anarquía — Mijaíl Bakunin
+- [teoria] Consideraciones filosóficas — Mijaíl Bakunin
+- [teoria] Catecismo revolucionario — Mijaíl Bakunin
+- [teoria] El programa de la Alianza para la Revolución Internacional — Mijaíl Bakunin
+- [teoria] La ciencia y la urgencia de la labor revolucionaria — Mijaíl Bakunin
+- [teoria] El sistema capitalista — Mijaíl Bakunin
+- [teoria] El poseedor romano (Conferencia sociolgica) — Anselmo Lorenzo
+- [teoria] Ni demcratas, ni dictadores. Anarquistas — Errico Malatesta
+- [teoria] Los adormecedores — MijaiL Bakunin
+- [teoria] Notas sobre Rousseau — MijaiL Bakunin
+- [teoria] Proposicion razonada al Comite Central de la Liga de la paz y de la libertad — MijaiL Bakunin
+- [teoria] Las dos patrias (Antologia contra las fronteras y el militarismo) — Manuel Gonzalez Prada
+- [teoria] Un siglo de espera. El gobierno revolucionario — Piotr Kropotkin
+- [teoria] Investigacin acerca de la justicia polotica y su influencia en la virtud y la dicha generales — William Godwin
+- [teoria] Bajo el oprobio — Manuel Gonzalez Prada
+- [teoria] El tonel de Diogenes — Manuel Gonzalez Prada
+- [teoria] Horas de lucha — Manuel Gonzalez Prada
+- [teoria] Nuestros indios — Manuel Gonzalez Prada
+- [teoria] Nuevas paginas libres — Manuel Gonzalez Prada
+- [teoria] Paginas libres — Manuel Gonzalez Prada
+- [teoria] Propaganda y ataque — Manuel Gonzalez Prada
+- [teoria] Selección de ensayos y obra poética — Manuel Gonzalez Prada
+- [teoria] Acracia o República — Anselmo Lorenzo
+
+### Anarquismo postizquierda, situacionismo y autonomía (14 obras)
+- [teoria] TAZ: Zona Temporalmente Autónoma — Hakim Bey
+- [teoria] Fragmentos de antropología anarquista — David Graeber
+- [teoria] Las interzonas anarquistas — Colectivo de Trabajadores Culturales La Felguera
+- [teoria] El manifiesto negro — Grup Anarquista X Llogar-hi Cadires
+- [teoria] Marx anarquista — Maximilien Rubel y Louis Janover
+- [teoria] Tomar y hacer en vez de pedir y esperar. Autonomia y movimientos sociales — Varios autores
+- [teoria] Compilacion de textos — Tiqqun
+- [teoria] De la economia considerada como magia negra — Tiqqun
+- [teoria] Esto no es un programa — Tiqqun
+- [teoria] La hipotesis cibernetica — Tiqqun
+- [teoria] Llamamiento y otros fogonazos — Tiqqun
+- [teoria] Primeros materiales para una teoria de la Jovencita — Tiqqun
+- [teoria] Teoria del Bloom — Tiqqun
+- [teoria] Ocho sencillos pasos hacia la revolución — CrimethInc.
+
+### Ciberactivismo, tecnocrítica y contravigilancia (7 obras)
+- [teoria] Internet, hackers y software libre — Carlos Gradin (comp.)
+- [teoria] Hacktivismo, Software Libre y Anarquismo — Varios autores
+- [teoria] La historia del cerebro anarquista de Anonymous — Anónimo
+- [teoria] Tecnología y vigilancia en la Operación Huracán — Vladimir Garay y Zak Rogoff
+- [teoria] Manual de guerrilla de la comunicacion — Anónimo
+- [teoria] Anarcogeografias de las redes sociales. Entre Blade Runner y Mickey Mouse — Anónimo
+- [teoria] La ciencia patriarcal de los medios corporativos de comunicacin — Peter Gelderloos
+
+### Confederalismo democrático y anarquismos no occidentales (5 obras)
+- [teoria] Anarquismos no occidentales. Reflexiones sobre el contexto global — Jason Adams
+- [teoria] Problemas del anarquismo y la revolución en China — Ba Jin
+- [teoria] América, hoy — Víctor García
+- [teoria] Dialogo(s) anarquista(s) en el Caribe hispanohablante. Entrevista a Kirwin R. Shaffer — Pedro Garcia Guirao
+- [teoria] La próxima revolución. Las asambleas populares y la promesa de la democracia directa — Murray Bookchin
+
+### Crítica libertaria al marxismo y al totalitarismo (24 obras)
+- [teoria] La revolución rusa. Una interpretación crítica y libertaria — Agustín Guillamón
+- [teoria] Mi mayor desilusión con Rusia — Emma Goldman
+- [teoria] La zarpa de Stalin sobre Europa — Felipe Alaiz
+- [teoria] Los anarquistas y la reaccion contemporanea — Diego Abad de Santillán
+- [teoria] Rompamos las cadenas — Erick Benítez Martínez
+- [teoria] Interpretacion anarquista de la revolucion — Octavio Alberola
+- [teoria] La emancipacin social — Octavio Alberola
+- [teoria] La transformacin social y el progreso — Octavio Alberola
+- [teoria] La critica libertaria a la izquierda del capitalismo — Miquel Amorós
+- [teoria] El poder sovietico, su presente y su futuro — Nestor Majno
+- [teoria] El comunismo totalitario — Juan Manuel Molina
+- [teoria] Critica al marxismo (compilacion) — MijaiL Bakunin
+- [teoria] Acerca de la defensa de la revolucion — Nestor Majno
+- [teoria] Antologia de escritos — Nestor Majno
+- [teoria] El abecedario del anarquista revolucionario — Nestor Majno
+- [teoria] La idea de igualdad y los bolcheviques — Nestor Majno
+- [teoria] Lenin y el leninismo, guias del proletariado mundial — Nestor Majno
+- [teoria] Nuestra organizacion — Nestor Majno
+- [teoria] Sobre la disciplina revolucionaria — Nestor Majno
+- [teoria] Marx y el anarquism — Rudolf Rocker
+- [teoria] Carta a Karl Marx (17 de mayo de 1846) — Pierre-Joseph Proudhon
+- [teoria] Cartas a Vladimir Lenin I — Piotr Kropotkin
+- [teoria] Cartas a Vladimir Lenin II — Piotr Kropotkin
+- [teoria] Cartas a Vladimir Lenin — Piotr Kropotkin
+
+### Cultura libertaria (14 obras)
+- [teoria] Arte, poesía, anarquismo — Herbert Read
+- [teoria] Anarquía y orden — Herbert Read
+- [teoria] Lirios y cañonazos: la prosa anarquista de Vicente Huidobro — Dan Connor
+- [teoria] Utopistas, anarquistas y rebeldes — Rafael Gumucio
+- [teoria] La procreacin humana (II Certamen Socialista) — Anselmo Lorenzo
+- [teoria] Prólogo de Josi Lpez Montenegro El botn de fuego — Anselmo Lorenzo
+- [teoria] Jardin de acracia — Fernando Y Astru Astur Solano Palacio
+- [teoria] La voz de la sangre (Una critica anarquista de los valores tradicionales) — Pedro Garcia Guirao
+- [teoria] A partir de ahora el combate sera libre (Antologoa) — Rafael Barrett
+- [teoria] Germinal (Antologoa) — Rafael Barrett
+- [teoria] Obras completas III — Rafael Barrett
+- [teoria] Obras completas II — Rafael Barrett
+- [teoria] Obras completas I — Rafael Barrett
+- [teoria] El arte en la revolución — Higinio Noja Ruiz
+
+### Anarquismos contemporáneos (19 obras)
+- [teoria] Anarquismo y política. El 'programa mínimo' de los libertarios del Tercer Milenio — Stefano d'Errico
+- [teoria] Algunas reflexiones sobre el extravío teórico ideológico en el pensamiento ácrata contemporáneo — Gustavo Rodríguez
+- [teoria] Anarquía en la ciudad — APOC
+- [teoria] Hacia una federación de autónomas ibéricas (F.A.I.) — Felipe Alaiz
+- [teoria] Hacia una federación de autónomas ibéricas (F.A.I.). Capítulo XVII. País Vasco y Cataluña — Felipe Alaiz
+- [teoria] Debate entre Agustín Guillamón y Octavio Alberola — Octavio Alberola
+- [teoria] El Manifiesto Antiadultista — Alexanthropos Alexgaias
+- [teoria] Eres anarquista aLa respuesta te podroa sorprender — David Graeber
+- [teoria] Sobre los autos voladores y la tasa decreciente de ganancia — David Graeber
+- [teoria] Somos El 99 - Una Historia, una crisis, un movimiento — David Graeber
+- [teoria] En defensa de las revoluciones sin loderes — Peter Gelderloos
+- [teoria] Ejercitos en las calles. Sudamerica — Varios autores
+- [teoria] Red de solidadridad de seattle. Una experiencia de apoyo mutuo y accion directa — Varios autores
+- [teoria] El fenmeno de los curros intiles — David Graeber
+- [teoria] Guoa practico-utpica del inminente colapso — David Graeber
+- [teoria] Los nuevos anarquistas — David Graeber
+- [teoria] Occupy, la deuda y los lomites histricos del capitalismo. Entrevista — David Graeber
+- [teoria] Hacia un analisis mas profundo del racismo — Peter Gelderloos
+- [teoria] El fracaso de la noviolencia. de la Primavera Árabe al movimiento 15M — Peter Gelderloos
+
+### Anarcocristianismo (5 obras)
+- [teoria] El Reino de Dios está dentro de vosotros — León Tolstói
+- [teoria] ¿Qué es el arte? — León Tolstói
+- [teoria] Reflexiones sobre las causas de la libertad y de la opresión social — Simone Weil
+- [teoria] Anarquía y cristianismo — Jacques Ellul
+- [teoria] La justicia en el evangelio (La revolución intelectual. El derecho a la vida) — Anselmo Lorenzo
+
+### Anarquismo Queer y Estudios de Género (9 obras)
+- [teoria] AnarQueer 2 — Distribuidora Peligrosidad Social
+- [teoria] AnarQueer 3 — Distribuidora Peligrosidad Social
+- [teoria] AnarQueer 4 — Distribuidora Peligrosidad Social
+- [teoria] AnarQueer 5 — Distribuidora Peligrosidad Social
+- [teoria] AnarQueer 6 — Distribuidora Peligrosidad Social
+- [teoria] AnarQueer 7 — Distribuidora Peligrosidad Social
+- [teoria] AnarQueer 8 — Distribuidora Peligrosidad Social
+- [teoria] Queer explicado para anarquistas — Distribuidora Peligrosidad Social
+- [teoria] Ética amatoria del deseo libertario y las afectaciones libres y alegres y las afectaciones libres y alegres — Distribuidora Peligrosidad Social
+
+### Estudios Académicos y Antropología Social (7 obras)
+- [teoria] Del 15M al giro electoralista. Proyectos espaciales y fetiches politicos en las estrategias de accion colectiva — Beltran Et Al. Roca Martinez
+- [teoria] Entre la competencia y la cooperacion. La construccion de redes entre las Organizaciones No Gubernamentales de Desarrollo en Andalucia — Beltran Roca Martinez
+- [teoria] La antropologia anarquista que se esta empezando a fraguar — Beltran Roca Martinez
+- [teoria] La financiacion de las ONGD desde la perspectiva de redes — Beltran Roca Martinez
+- [teoria] Parra, Iban - Un pie en la calle y otro en la institucion. Analisis socioespacial de una iniciativa municipalista — Beltran Y Diaz Roca Martinez
+- [teoria] Aproximacion a las fuentes de Prada sobre la cuestion religiosa — Joel Delhom
+- [teoria] Lo intimo en algunas memorias de anarquistas espanoles — Joel Delhom
+
+### Pensamiento Crítico No Anarquista (1 obras)
+- [teoria] El espiritu comercial de los tiempos modernos — Henry David Thoreau

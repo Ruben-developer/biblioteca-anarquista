@@ -1,4 +1,4 @@
-# La Idea — Biblioteca digital anarquista
+# La Idea — Biblioteca Digital Anarquista
 
 Biblioteca digital del movimiento anarquista mundial: **más de 1.800 textos en PDF**
 de descarga libre, línea temporal (1840-1968), mapa de regiones, biografías de
@@ -7,11 +7,14 @@ estadísticas.
 
 - **Contacto**: antarquia@riseup.net (formulario en la propia web)
 - **Stack**: React 18 + Vite 4 + Tailwind CSS
-- **Deploy**: GitHub Pages → https://ruben-developer.github.io/biblioteca-anarquista/ (dominio propio en camino: laidea.antarquia.cl)
+- **Deploy**: Cloudflare Workers → https://laidea.antarquia.cl (prod, `main`) y
+  beta en https://laidea-beta.antarquia.cl (desde `develop`). GitHub Pages quedó
+  retirado.
 - **Contenido**: `src/data/` (eventos, autores, textos por región) + `public/documents/`
-- **Descargas PDF**: contenedor nginx local (`http://192.168.1.117:8081/pdfs/...`), TXT desde el repo
+- **Descargas PDF**: contenedor nginx local vía Tailscale (`VITE_PDF_BASE`), TXT desde el repo
 - **Métricas**: `data/registros/registro.json`
 - **Plan y evolución**: `PLAN.md` + `.daily-runs/`
+- **Seguridad**: ver [`SECURITY.md`](SECURITY.md) · **Licencia**: MIT (ver [`LICENSE`](LICENSE))
 
 ## Desarrollo local
 

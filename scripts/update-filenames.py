@@ -2,7 +2,7 @@
 """Update regionData.js filenames from old paths to new flat structure."""
 import json, re
 
-REGION_DATA = '/home/fdr/biblioteca-anarquista/src/data/regionData.js'
+REGION_DATA = '/home/fdr/laidea/src/data/regionData.js'
 MAPPING = '/home/fdr/Documentos/anarquismo_importado/biblioteca-inv/filename_mapping.json'
 
 with open(MAPPING) as f:

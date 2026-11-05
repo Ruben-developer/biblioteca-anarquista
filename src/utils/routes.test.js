@@ -57,6 +57,10 @@ describe('rutas de vista', () => {
     expect(parseRoute('#/MAPA')).toEqual({ type: 'view', view: VIEWS.MAP });
     expect(parseRoute('#/linea-temporal/')).toEqual({ type: 'view', view: VIEWS.TIMELINE });
     expect(parseRoute('#/acratas')).toEqual({ type: 'view', view: VIEWS.ACRATAS });
+    // «Teorías» pasó a llamarse «Praxis»: los enlaces antiguos siguen vivos.
+    expect(parseRoute('#/teorias')).toEqual({ type: 'view', view: VIEWS.THEORIES });
+    expect(parseRoute('#/praxis')).toEqual({ type: 'view', view: VIEWS.THEORIES });
+    expect(buildViewHash(VIEWS.THEORIES)).toBe('#/praxis');
   });
 
   it('cae a la biblioteca ante hash vacío, desconocido o malformado', () => {

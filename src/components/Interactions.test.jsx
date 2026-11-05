@@ -512,10 +512,10 @@ it('abre un evento de la línea temporal y cierra el modal con Escape', () => {
     container.remove();
   });
 
-  it.skip('cross-link: desde Teorías "En el catálogo" abre la Biblioteca con la obra precargada', () => {
+  it.skip('cross-link: desde Praxis "En el catálogo" abre la Biblioteca con la obra precargada', () => {
     const { container } = render(<AnarchistArchive />);
     openDrawer();
-    fireEvent.click(screen.getByRole('button', { name: /Teorías/ }));
+    fireEvent.click(screen.getByRole('button', { name: /Praxis/ }));
     // Abre la primera corriente para ver sus obras.
     const theory = screen.getAllByText(/Anarco-comunismo|Anarcosindicalismo|Mutualismo|Anarco-colectivismo|Plataformismo/)[0];
     fireEvent.click(theory);
@@ -532,7 +532,7 @@ it('abre un evento de la línea temporal y cierra el modal con Escape', () => {
   it.skip('cross-link: desde el nav a Biblioteca se limpian los filtros precargados', () => {
     const { container } = render(<AnarchistArchive />);
     openDrawer();
-    fireEvent.click(screen.getByRole('button', { name: /Teorías/ }));
+    fireEvent.click(screen.getByRole('button', { name: /Praxis/ }));
     const theory = screen.getAllByText(/Anarco-comunismo|Anarcosindicalismo|Mutualismo|Anarco-colectivismo|Plataformismo/)[0];
     fireEvent.click(theory);
     const catalogButton = screen.getAllByTitle(/Ver ".*" en el catálogo/)[0];
@@ -599,7 +599,7 @@ describe('Navigation móvil (drawer/hamburguesa)', () => {
     expect(within(drawer).getByRole('button', { name: /Mapa/ })).toBeTruthy();
     expect(within(drawer).getByRole('button', { name: /Línea Temporal/ })).toBeTruthy();
     expect(within(drawer).getAllByRole('button', { name: /Autores/ }).length).toBeGreaterThanOrEqual(1);
-    expect(within(drawer).getByRole('button', { name: /Teorías/ })).toBeTruthy();
+    expect(within(drawer).getByRole('button', { name: /Praxis/ })).toBeTruthy();
     expect(within(drawer).getByRole('button', { name: /Rutas/ })).toBeTruthy();
     expect(within(drawer).getByRole('button', { name: /Mi Biblioteca \(3\)/ })).toBeTruthy();
     // La vista activa se marca con aria-current en el drawer.

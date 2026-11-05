@@ -3197,12 +3197,6 @@ export const regionData = {
         "filename": "George Orwell - Recuerdos de la guerra de Espaa.pdf"
       },
       {
-        "title": "El mensaje revolucionario de los amigos de Durruti",
-        "author": "Georges Fontenis",
-        "category": "historia",
-        "filename": "Georges Fontenis - El mensaje revolucionario de los amigos de Durruti.pdf"
-      },
-      {
         "title": "El laberinto espanol (Antecedentes sociales y políticos de la guerra civil) (1962)",
         "author": "Gerald Brenan",
         "category": "historia",

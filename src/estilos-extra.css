@@ -1,0 +1,109 @@
+/* ============================================================================
+   ESTILOS · retoques por estilo
+   Los tokens (color, tipografía, radio, borde, sombra) viven en estilos.css.
+   Aquí van los gestos que no caben en una variable: texturas, recortes,
+   proporciones de titular, marcas de imprenta y estados de los botones.
+   ============================================================================ */
+
+/* Las superficies blancas heredan el papel del estilo. Sin esto, el modo noche
+   deja el buscador en blanco con texto claro: ilegible. */
+html:not([data-estilo="clasico"]) .bg-white,
+html:not([data-estilo="clasico"]) .bg-white\/60,
+html:not([data-estilo="clasico"]) .bg-white\/80 {
+  background-color: rgb(var(--c-paper));
+}
+html:not([data-estilo="clasico"]) .bg-white\/60 {
+  background-color: rgb(var(--c-paper) / 0.6);
+}
+html:not([data-estilo="clasico"]) .bg-white\/80 {
+  background-color: rgb(var(--c-paper) / 0.8);
+}
+
+/* ── TIPOGRAFÍA ────────────────────────────────────────────────────────── */
+/* Todos los titulares van en serif, como el lomo de un libro. Los datos
+   (autores, cantidades, fechas, microcopy) siguen en sans. */
+html[data-estilo] h1,
+html[data-estilo] h2,
+html[data-estilo] h3,
+html[data-estilo] h4 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+}
+/* Los títulos de obra de las tarjetas heredan el serif aunque no lleven
+   clase de fuente. */
+html[data-estilo] .card-appear h3 {
+  font-family: var(--font-serif);
+}
+/* El aire bajo los titulares grandes, para que no pisen el subtítulo. */
+html[data-estilo] header h1 {
+  margin-bottom: 0.18em;
+}
+
+/* Clásico: el papel de las tarjetas no debe transparentarse sobre el
+   pergamino (el modo noche lo resuelve `theme-constructivista`). */
+html[data-estilo="clasico"] .theme-constructivista .bg-white\/60 {
+  background-color: rgba(248, 240, 220, 0.92);
+}
+
+/* ── CLÁSICO ───────────────────────────────────────────────────────────── */
+/* El original: pergamino, tinta roja y serif. Solo se ajusta el titular
+   para que respire con la nueva tipografía. */
+html[data-estilo="clasico"] h1 {
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+}
+html[data-estilo="clasico"] h2 {
+  letter-spacing: 0.005em;
+}
+
+/* ── COLLAGE VINO ──────────────────────────────────────────────────────── */
+/* Crema rosado y berenjena. Marco interior tipo passe-partout y titular en
+   cursiva: más de revista que de periódico. */
+html[data-estilo="collage-vino"] .card-appear {
+  position: relative;
+}
+html[data-estilo="collage-vino"] .card-appear::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgb(var(--c-accent) / 0.55);
+  pointer-events: none;
+}
+html[data-estilo="collage-vino"] .card-appear:hover {
+  translate: 0 -4px;
+  box-shadow: var(--shadow-lg);
+}
+/* El titular de cabecera comparte tamaño con los títulos de sección
+   (`text-3xl md:text-4xl`); no fijar aquí un tamaño mayor. */
+html[data-estilo="collage-vino"] h2 {
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid rgb(var(--c-line-soft));
+  padding-bottom: 0.2rem;
+}
+html[data-estilo="collage-vino"] header {
+  border-bottom-width: 2px;
+  border-bottom-color: rgb(var(--amber-900));
+}
+html[data-estilo="collage-vino"] button[class*="bg-amber-700"] {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.78rem;
+}
+/* En noche el passe-partout se aclara para no desaparecer sobre la tinta. */
+html[data-estilo="collage-vino"][data-modo="noche"] .card-appear::before {
+  border-color: rgb(var(--c-accent) / 0.4);
+}
+
+/* ── Transición al cambiar de estilo ───────────────────────────────────── */
+html[data-estilo] body {
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-estilo] body {
+    transition: none;
+  }
+}

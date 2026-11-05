@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync } from "node:fs";
 
 const SRC = "/home/fdr/.local/share/opencode/tool-output/tool_04efb10ee001FJ4CWP5zjMGAPN";
-const OUT = "/home/fdr/biblioteca-anarquista/data/registros/revision330";
+const OUT = "/home/fdr/laidea/data/registros/revision330";
 
 const text = readFileSync(SRC, "utf8");
 const lines = text.split("\n");

@@ -922,7 +922,6 @@ export const timelineEvents = [
       "Los Hechos de Mayo de 1937 y los presos antifascistas. Identificacion de un fenomeno represivo (2002)",
       "Cartas de la revolución. Reportes de un obrero chileno en la Guerra Civil española (1936-1939) (2016)",
       "Recuerdos de la guerra de Espaa",
-      "El mensaje revolucionario de los amigos de Durruti",
       "Eduardo de - Asi empezo nuestro dia mas largo",
       "No es hora de confusionismos",
       "Por los fueros de la verdad",

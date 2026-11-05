@@ -4,7 +4,7 @@ import { readFileSync, writeFileSync, readdirSync, mkdirSync } from 'node:fs';
 import { execSync } from 'node:child_process';
 import { join } from 'node:path';
 
-const ROOT = '/home/fdr/biblioteca-anarquista';
+const ROOT = '/home/fdr/laidea';
 const PDFS = join(ROOT, 'pdfs-local');
 const OUT = join(ROOT, 'data/registros/revision330');
 const EXTRACT = '/tmp/extract192';
