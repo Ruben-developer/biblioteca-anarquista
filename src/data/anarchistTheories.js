@@ -76,7 +76,7 @@ export const anarchistTheories = [
   },
   {
     "id": "anarcosindicalismo",
-    "name": "Anarcosindicalismo",
+    "name": "Anarcosindicalismo y organización obrera",
     "icon": "⚒️",
     "description": "El sindicato como escuela y vanguardia de la revolución: la organización obrera de masas, por federación y acción directa, como embrión de la sociedad futura.",
     "keyIdeas": [
@@ -191,17 +191,20 @@ export const anarchistTheories = [
   },
   {
     "id": "mutualismo",
-    "name": "Mutualismo",
+    "name": "Mutualismo y modelos económicos alternativos",
     "icon": "🔁",
-    "description": "La propuesta de Proudhon: intercambio de productos del trabajo a precio de coste, con crédito y cooperación libre, sin Estado ni explotación.",
+    "description": "La propuesta de Proudhon y otras alternativas económicas al capitalismo y al Estado: intercambio justo, crédito mutuo, cooperación libre y autogestión.",
     "keyIdeas": [
       "La propiedad es un robo",
       "Intercambio justo y reciprocidad",
       "Crédito mutualista / banca del pueblo",
-      "Federalismo político"
+      "Federalismo político",
+      "Modelos económicos alternativos"
     ],
     "keyAuthors": [
-      "Pierre-Joseph Proudhon"
+      "Pierre-Joseph Proudhon",
+      "Michael Albert",
+      "Ricardo Mella"
     ],
     "books": [
       "¿Qué es la Propiedad?",
@@ -222,15 +225,45 @@ export const anarchistTheories = [
     ]
   },
   {
+    "id": "economia-trabajo",
+    "name": "Economía, trabajo y conflicto laboral",
+    "icon": "🏭",
+    "description": "Crítica de la economía capitalista y del trabajo asalariado: explotación, crisis, paro y propuestas de organización económica libertaria.",
+    "keyIdeas": [
+      "Crítica del trabajo asalariado",
+      "Explotación y plusvalía",
+      "Crisis capitalista y paro",
+      "Autogestión y alternativas económicas"
+    ],
+    "keyAuthors": [
+      "Ricardo Mella",
+      "Anselmo Lorenzo",
+      "Sébastien Faure",
+      "Augustin Souchy",
+      "David Graeber"
+    ],
+    "books": [
+      "M Agua",
+      "El trabajo, es una necesidad fisiolgica",
+      "El patrimonio universal",
+      "La ganancia",
+      "Capitalismo, democracia y socialismo libertario",
+      "Dandole la vuelta a los modos de produccin o por qui el capitalismo es una transformacin de la esclavitud",
+      "La lucha de clases",
+      "La crisis economica y el paro forzoso",
+      "Textos contra el trabajo"
+    ]
+  },
+  {
     "id": "anarcoindividualismo",
-    "name": "Anarcoindividualismo",
+    "name": "Anarcoindividualismo y filosofía del yo",
     "icon": "⭐",
-    "description": "El individuo como fin supremo: autonomía personal frente a toda colectividad, asociación voluntaria y rechazo de la moral impuesta.",
+    "description": "El individuo como fin supremo: autonomía personal, asociación voluntaria, crítica de la moral impuesta y reflexión filosófica sobre el yo.",
     "keyIdeas": [
       "El único y su propiedad",
       "Soberanía del individuo",
-      "Asociación voluntaria y efímera",
-      "Egoísmo ético"
+      "Egoísmo ético y filosofía del yo",
+      "Asociación voluntaria y efímera"
     ],
     "keyAuthors": [
       "Max Stirner",
@@ -276,13 +309,14 @@ export const anarchistTheories = [
   },
   {
     "id": "anarcofeminismo",
-    "name": "Anarcofeminismo",
+    "name": "Anarcofeminismo y estudios de género",
     "icon": "✊",
-    "description": "La emancipación de la mujer como parte inseparable de la revolución: no hay libertad sin autonomía de género, sexual y reproductiva.",
+    "description": "La emancipación de la mujer y la crítica del género como parte inseparable de la revolución: autonomía sexual, reproductiva y política.",
     "keyIdeas": [
       "La liberación de la mujer es la liberación de todas",
       "Autonomía y educación de la mujer",
       "Mujeres Libres y organizaciones propias",
+      "Género, sexualidad y revolución",
       "Crítica a la familia y al matrimonio"
     ],
     "keyAuthors": [
@@ -419,14 +453,15 @@ export const anarchistTheories = [
   },
   {
     "id": "insurreccionalismo",
-    "name": "Insurreccionalismo",
+    "name": "Insurreccionalismo y teoría revolucionaria",
     "icon": "🔥",
-    "description": "La revolución como acto espontáneo de los de abajo: acción directa, expropiación y propaganda por el hecho, sin vanguardia que la conduzca.",
+    "description": "La revolución como acto espontáneo de los de abajo: acción directa, expropiación y propaganda por el hecho, junto al debate sobre la teoría y la estrategia revolucionaria.",
     "keyIdeas": [
       "Propaganda por el hecho",
       "Acción directa sin mediación",
       "Expropiación individual y colectiva",
-      "Crítica a la organización permanente"
+      "Crítica a la organización permanente",
+      "Teoría y estrategia revolucionaria"
     ],
     "keyAuthors": [
       "Miguel Amorós",
@@ -500,14 +535,42 @@ export const anarchistTheories = [
     ]
   },
   {
+    "id": "antimilitarismo",
+    "name": "Antimilitarismo, paz y cuestión nacional",
+    "icon": "🕊️",
+    "description": "Oposición a la guerra, al ejército y al nacionalismo: pacifismo libertario, antimilitarismo y crítica a la nación como forma de autoridad y disciplinamiento colectivo.",
+    "keyIdeas": [
+      "Antimilitarismo y objeción de conciencia",
+      "Pacifismo y acción directa",
+      "Crítica al nacionalismo y al Estado-nación",
+      "Internacionalismo y solidaridad entre pueblos"
+    ],
+    "keyAuthors": [
+      "Rudolf Rocker",
+      "Anselmo Lorenzo",
+      "Sébastien Faure",
+      "Ángel Pestaña"
+    ],
+    "books": [
+      "Donde cree usted que va el mundo",
+      "Las olimpiadas de la paz",
+      "Nacionalismo y cultura",
+      "El dolor universal",
+      "Primera punalada al nacionalismo",
+      "Segunda punalada al nacionalismo",
+      "La revolución es la paz (II Certamen Socialista)"
+    ]
+  },
+  {
     "id": "lucha-anticarcelaria",
-    "name": "Lucha anticarcelaria y autodefensa",
+    "name": "Lucha anticarcelaria y derechos",
     "icon": "⛓️",
-    "description": "La cárcel como institución represiva del sistema capitalista: abolicionismo penal, acción directa y autodefensa como herramientas de liberación.",
+    "description": "La cárcel como institución represiva del sistema: abolicionismo penal, acción directa, autodefensa y defensa de los derechos de las personas privadas de libertad.",
     "keyIdeas": [
       "Abolicionismo penal",
       "Autodefensa y resistencia",
       "Acción directa económica",
+      "Derechos y dignidad de los presos",
       "Crítica a la institución carcelaria"
     ],
     "keyAuthors": [
@@ -526,14 +589,15 @@ export const anarchistTheories = [
   },
   {
     "id": "pedagogia-racionalista",
-    "name": "Pedagogía racionalista y antiautoritaria",
+    "name": "Pedagogía y divulgación",
     "icon": "📖",
-    "description": "La escuela como laboratorio de libertad: educación integral, laica y científica, sin premios ni castigos, al servicio de la emancipación.",
+    "description": "La educación como práctica de libertad y la divulgación del ideario anarquista: escuela racionalista, educación integral y textos para un público amplio.",
     "keyIdeas": [
       "Educación integral (física, intelectual, moral)",
       "Laicismo y racionalismo",
       "Autogestión pedagógica",
-      "La Escuela Moderna como proyecto global"
+      "La Escuela Moderna como proyecto global",
+      "Divulgación y formación libertaria"
     ],
     "keyAuthors": [
       "Francisco Ferrer i Guardia",
@@ -624,28 +688,20 @@ export const anarchistTheories = [
       "Curso de teoría política",
       "Antirracionalismo",
       "¡¿Anarquismo?",
-      "M Agua",
       "Antologoa anarquista II",
-      "El trabajo, es una necesidad fisiolgica",
       "La coaccin moral (Fundamentos de una nueva sociedad)",
       "La ideologia anarquista",
-      "Donde cree usted que va el mundo",
       "Manifiesto de la anarquía",
       "El criterio libertario",
       "El hombre y la sociedad",
-      "El patrimonio universal",
       "Generalidades sociales",
       "Igualdad, libertad y fraternidad",
       "La anarquía triunfante",
-      "La ganancia",
-      "Las olimpiadas de la paz",
       "Tres Textos",
-      "Capitalismo, democracia y socialismo libertario",
       "Concepcion anarquista del derecho natural",
       "En anarquía",
       "Reflexiones libertarias",
       "Lecturas anarquistas de Spinoza",
-      "Dandole la vuelta a los modos de produccin o por qui el capitalismo es una transformacin de la esclavitud",
       "La palabra como arma",
       "Recopilatorio de escritos",
       "Concepcion del Ideal Libertario",
@@ -668,22 +724,14 @@ export const anarchistTheories = [
       "Artoculos",
       "Breves apuntes sobre las pasiones humanas",
       "Forjando un mundo libre",
-      "La lucha de clases",
       "Escritos seleccionados",
-      "Nacionalismo y cultura",
       "Por que soy anarquista",
-      "El dolor universal",
       "Hacia la dicha",
-      "La crisis economica y el paro forzoso",
       "La sintesis anarquista",
       "Anarquistas meditemos",
       "La anarquía regenera la humanidad",
       "Posibilidad de la vida en la anarquía",
-      "Primera punalada al nacionalismo",
-      "Segunda punalada al nacionalismo",
-      "Textos contra el trabajo",
-      "El derecho a la evolución",
-      "La revolución es la paz (II Certamen Socialista)"
+      "El derecho a la evolución"
     ]
   },
   {
@@ -885,20 +933,24 @@ export const anarchistTheories = [
   },
   {
     "id": "cultura-libertaria",
-    "name": "Cultura libertaria",
+    "name": "Cultura y literatura libertaria",
     "icon": "🎭",
-    "description": "Arte, literatura y cultura desde la anarquía: poesía, narrativa, ensayo y creación artística como herramientas de emancipación y transformación social.",
+    "description": "Arte, literatura y cultura desde la anarquía: poesía, narrativa, ensayo, anticlericalismo y creación artística como herramientas de emancipación.",
     "keyIdeas": [
       "Arte como propaganda",
       "Literatura y anarquismo",
       "Cultura popular y transformación",
-      "Poesía de combate"
+      "Poesía de combate",
+      "Memoria y crítica cultural"
     ],
     "keyAuthors": [
       "Herbert Read",
       "Dan Connor",
       "Rafael Gumucio",
-      "Varios Autores"
+      "Varios Autores",
+      "Osvaldo Bayer",
+      "Camillo Berneri",
+      "Anselmo Lorenzo"
     ],
     "books": [
       "Arte, poesía, anarquismo",
@@ -1033,17 +1085,19 @@ export const anarchistTheories = [
   },
   {
     "id": "estudios-academicos",
-    "name": "Estudios Académicos y Antropología Social",
+    "name": "Estudios académicos, antropología e historia del anarquismo",
     "icon": "📊",
-    "description": "Investigaciones sociológicas, análisis de ONGD, movimientos sociales contemporáneos y antropología institucional.",
+    "description": "Investigación académica sobre el anarquismo: historia de las ideas, sociología de los movimientos sociales, antropología y estudios de caso.",
     "keyIdeas": [
-      "Investigación sociológica",
-      "ONGD",
-      "Movimientos sociales",
-      "Antropología"
+      "Historia del anarquismo",
+      "Sociología de los movimientos sociales",
+      "Antropología política",
+      "Análisis académico y crítica"
     ],
     "keyAuthors": [
-      "Beltrán Roca Martínez"
+      "Beltrán Roca Martínez",
+      "José Álvarez Junco",
+      "Rudolf Rocker"
     ],
     "books": [
       "Del 15M al giro electoralista. Proyectos espaciales y fetiches politicos en las estrategias de accion colectiva",
