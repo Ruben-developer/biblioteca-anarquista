@@ -61,7 +61,6 @@ const AnarchistArchive = () => {
   );
   const [selectedRegion, setSelectedRegion] = useState(null);
   const [selectedEvent, setSelectedEvent] = useState(null);
-  const [showFilters, setShowFilters] = useState(false);
   const [readingBook, setReadingBook] = useState(initialRoute.type === 'book' ? initialRoute.book : null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [libraryInitialFilters, setLibraryInitialFilters] = useState(null);
@@ -87,15 +86,6 @@ const AnarchistArchive = () => {
   // Métricas del archivo (dashboard + header/footer) — fuente única
   // getArchiveStats(regionData, timelineEvents).
   const stats = getArchiveStats(regionData, timelineEvents);
-
-  const clearFilters = () => {
-    setFilters({
-      searchTerm: '',
-      decade: 'all',
-      category: 'all',
-      region: 'all'
-    });
-  };
 
   // Referencia cruzada Biblioteca → línea temporal: abre la vista de timeline
   // con el evento que agrupa la obra y muestra su modal.
@@ -221,11 +211,8 @@ const AnarchistArchive = () => {
               darkMode={darkMode}
               filteredEvents={filteredEvents}
               onSelectEvent={setSelectedEvent}
-              onClearFilters={clearFilters}
               filters={filters}
               onFilterChange={setFilters}
-              onShowFilters={() => setShowFilters(!showFilters)}
-              showFilters={showFilters}
               totalEventCount={timelineEvents.length}
             />
           )}

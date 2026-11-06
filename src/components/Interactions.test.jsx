@@ -28,9 +28,6 @@ describe('TimelineFilters interactivo', () => {
         darkMode={false}
         filters={baseFilters}
         onFilterChange={onFilterChange}
-        onShowFilters={() => {}}
-        showFilters
-        onClearFilters={() => {}}
         eventCount={5}
         totalEventCount={16}
       />
@@ -39,79 +36,18 @@ describe('TimelineFilters interactivo', () => {
     expect(onFilterChange).toHaveBeenCalledWith({ ...baseFilters, searchTerm: 'chicago' });
   });
 
-  it('llama onFilterChange con la década al pulsar un botón de década', () => {
-    const onFilterChange = vi.fn();
+  it('no muestra botón ni panel de filtros', () => {
     render(
       <TimelineFilters
         darkMode={false}
         filters={baseFilters}
-        onFilterChange={onFilterChange}
-        onShowFilters={() => {}}
-        showFilters
-        onClearFilters={() => {}}
-        eventCount={5}
-        totalEventCount={16}
-      />
-    );
-    fireEvent.click(screen.getByText('1930s'));
-    expect(onFilterChange).toHaveBeenCalledWith({ ...baseFilters, decade: '1930s' });
-  });
-
-  it('llama onFilterChange con la categoría al pulsar un botón de categoría', () => {
-    const onFilterChange = vi.fn();
-    render(
-      <TimelineFilters
-        darkMode={false}
-        filters={baseFilters}
-        onFilterChange={onFilterChange}
-        onShowFilters={() => {}}
-        showFilters
-        onClearFilters={() => {}}
-        eventCount={5}
-        totalEventCount={16}
-      />
-    );
-    fireEvent.click(screen.getByRole('button', { name: /Historia/ }));
-    expect(onFilterChange).toHaveBeenCalledWith({ ...baseFilters, category: 'historia' });
-  });
-
-  it('llama onFilterChange con la región al pulsar un botón de región', () => {
-    const onFilterChange = vi.fn();
-    render(
-      <TimelineFilters
-        darkMode={false}
-        filters={baseFilters}
-        onFilterChange={onFilterChange}
-        onShowFilters={() => {}}
-        showFilters
-        onClearFilters={() => {}}
-        eventCount={5}
-        totalEventCount={16}
-      />
-    );
-    fireEvent.click(screen.getByText('Francia'));
-    expect(onFilterChange).toHaveBeenCalledWith({ ...baseFilters, region: 'Francia' });
-  });
-
-  it('llama onShowFilters y onClearFilters con sus botones', () => {
-    const onShowFilters = vi.fn();
-    const onClearFilters = vi.fn();
-    render(
-      <TimelineFilters
-        darkMode={false}
-        filters={{ ...baseFilters, searchTerm: 'x' }}
         onFilterChange={() => {}}
-        onShowFilters={onShowFilters}
-        showFilters
-        onClearFilters={onClearFilters}
         eventCount={5}
         totalEventCount={16}
       />
     );
-    fireEvent.click(screen.getByText('Filtros'));
-    expect(onShowFilters).toHaveBeenCalled();
-    fireEvent.click(screen.getByText('Limpiar'));
-    expect(onClearFilters).toHaveBeenCalled();
+    expect(screen.queryByText('Filtros')).toBeNull();
+    expect(screen.queryByText('Filtrar eventos')).toBeNull();
   });
 });
 

@@ -263,11 +263,8 @@ const TimelineView = ({
   darkMode,
   filteredEvents,
   onSelectEvent,
-  onClearFilters,
   filters,
   onFilterChange,
-  onShowFilters,
-  showFilters,
   totalEventCount
 }) => {
   const cardClass = darkMode ? THEME.dark.card : THEME.light.card
@@ -284,29 +281,6 @@ const TimelineView = ({
     })
     return { groupedByDecade: grouped, sortedDecades: Object.keys(grouped).sort((a, b) => Number.parseInt(a) - Number.parseInt(b)) }
   }, [filteredEvents])
-
-  if (filteredEvents.length === 0) {
-    return (
-      <div className={`${darkMode ? 'bg-gray-900/60 border-accent/50' : 'bg-white/60 border-line'} rounded-lg shadow-lg border-2 p-12 text-center`}>
-        <p className={`text-xl font-semibold mb-3 ${darkMode ? 'text-gray-200' : 'text-amber-900'}`}>
-          No hay eventos que coincidan con los filtros
-        </p>
-        <p className={`text-sm mb-6 ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
-          Prueba con otra búsqueda o limita menos la década, categoría o región.
-        </p>
-        <button
-          onClick={onClearFilters}
-          className={`px-5 py-3 rounded-lg font-display uppercase tracking-wide text-sm transition-all ${
-            darkMode
-              ? 'bg-red-600 text-white hover:bg-red-700'
-              : 'bg-amber-800 text-amber-50 hover:bg-red-700'
-          }`}
-        >
-          Limpiar filtros
-        </button>
-      </div>
-    )
-  }
 
   const dashedColor = darkMode ? 'rgba(220,38,38,0.3)' : 'rgba(180,83,9,0.3)'
   const dotColor = darkMode ? 'bg-red-500' : 'bg-amber-600'
@@ -340,14 +314,20 @@ const TimelineView = ({
         darkMode={darkMode}
         filters={filters}
         onFilterChange={onFilterChange}
-        onShowFilters={onShowFilters}
-        showFilters={showFilters}
-        onClearFilters={onClearFilters}
         eventCount={filteredEvents.length}
         totalEventCount={totalEventCount}
       />
 
-      {layout === 'horizontal' ? (
+      {filteredEvents.length === 0 ? (
+        <div className={`${darkMode ? 'bg-gray-900/60 border-accent/50' : 'bg-white/60 border-line'} rounded-lg border-2 p-8 text-center`}>
+          <p className={`text-lg font-semibold mb-2 ${darkMode ? 'text-gray-200' : 'text-amber-900'}`}>
+            No hay eventos que coincidan con la búsqueda
+          </p>
+          <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-amber-700'}`}>
+            Prueba con otro término.
+          </p>
+        </div>
+      ) : layout === 'horizontal' ? (
         <HorizontalTimeline {...timelineProps} />
       ) : (
         <VerticalTimeline {...timelineProps} />

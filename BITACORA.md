@@ -206,7 +206,13 @@
 
 > Verificación: `npm run check` (lint 0 errores + **296 tests** + build) verde; capturas de mapa día/noche, Praxis y línea temporal en Clásico. Solo en `develop` → `laidea-beta.antarquia.cl`.
 
-> **Reorganización de Praxis (tandas 1 y 2):** verificado en beta con **25 corrientes**; «Anarquismo sin adjetivos» pasa de 152 a **64 obras**, las **152 originales siguen cubiertas** y las nuevas categorías muestran 7 y 9 obras. Producción sigue en `dda890c`.
+> **Reorganización de Praxis (tandas 1 y 2):** verificado en beta con **25 corrientes**; «Anarquismo sin adjetivos» pasa de 152 a **64 obras**, las **152 originales siguen cubiertas** y las nuevas categorías muestran 7 y 9 obras. Producción ya incluye esas tandas tras la promoción a `main` (`07a8c2e`).
+
+## 2026-11-06 — Línea temporal: fuera el botón de filtros (PRE)
+
+| Hora | Tipo | Commit | Detalle |
+|------|------|--------|---------|
+| — | 🧑 Manual | (pendiente) | **Línea temporal más simple (PRE).** Se elimina el botón **«Filtros»** y su panel de década/categoría/región; queda solo el buscador de eventos. Cuando la búsqueda no devuelve resultados, la vista ya no se sustituye por una tarjeta de bloqueo: el buscador sigue visible y editable, y el aviso «No hay eventos que coincidan con la búsqueda» aparece dentro del timeline. `npm run check` verde: **283 tests** (13 skipped), 0 errores de lint, build OK. |
 
 ## Estado actual
 

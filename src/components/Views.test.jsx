@@ -152,11 +152,8 @@ describe('TimelineView', () => {
         darkMode={false}
         filteredEvents={events}
         onSelectEvent={() => {}}
-        onClearFilters={() => {}}
         filters={{ searchTerm: '', decade: 'all', category: 'all', region: 'all' }}
         onFilterChange={() => {}}
-        onShowFilters={() => {}}
-        showFilters={false}
         totalEventCount={2}
       />
     );
@@ -165,47 +162,56 @@ describe('TimelineView', () => {
     expect(html).toContain('Revolución Española');
     expect(html).toContain('Descripción del evento');
   });
+
+  it('mantiene el buscador visible cuando no hay resultados', () => {
+    const html = renderToStaticMarkup(
+      <TimelineView
+        darkMode={false}
+        filteredEvents={[]}
+        onSelectEvent={() => {}}
+        filters={{ searchTerm: 'sin coincidencias', decade: 'all', category: 'all', region: 'all' }}
+        onFilterChange={() => {}}
+        totalEventCount={2}
+      />
+    );
+    expect(html).toContain('Buscar eventos');
+    expect(html).toContain('sin coincidencias');
+    expect(html).toContain('No hay eventos que coincidan con la búsqueda');
+  });
 });
 
 describe('TimelineFilters', () => {
   const baseFilters = { searchTerm: '', decade: 'all', category: 'all', region: 'all' };
 
-  it('renderiza buscador, botón filtros y contador de eventos', () => {
+  it('renderiza el buscador y el contador de eventos', () => {
     const html = renderToStaticMarkup(
       <TimelineFilters
         darkMode={false}
         filters={baseFilters}
         onFilterChange={() => {}}
-        onShowFilters={() => {}}
-        showFilters={false}
-        onClearFilters={() => {}}
         eventCount={5}
         totalEventCount={16}
       />
     );
     expect(html).toContain('Buscar eventos');
-    expect(html).toContain('Filtros');
     expect(html).toContain('Mostrando 5 de 16 eventos');
   });
 
-  it('muestra los controles de década, categoría y región cuando showFilters es true', () => {
+  it('ya no muestra el botón ni el panel de filtros', () => {
     const html = renderToStaticMarkup(
       <TimelineFilters
         darkMode
         filters={baseFilters}
         onFilterChange={() => {}}
-        onShowFilters={() => {}}
-        showFilters
-        onClearFilters={() => {}}
         eventCount={5}
         totalEventCount={16}
       />
     );
-    expect(html).toContain('Filtrar eventos');
-    expect(html).toContain('Década');
-    expect(html).toContain('Categoría');
-    expect(html).toContain('Región');
-    expect(html).toContain('Limpiar');
+    expect(html).not.toContain('Filtros');
+    expect(html).not.toContain('Filtrar eventos');
+    expect(html).not.toContain('Década');
+    expect(html).not.toContain('Categoría');
+    expect(html).not.toContain('Región');
   });
 
   it('llama onFilterChange al escribir en el buscador', () => {
@@ -215,9 +221,6 @@ describe('TimelineFilters', () => {
         darkMode={false}
         filters={{ ...baseFilters, searchTerm: 'chicago' }}
         onFilterChange={onFilterChange}
-        onShowFilters={() => {}}
-        showFilters
-        onClearFilters={() => {}}
         eventCount={1}
         totalEventCount={16}
       />
@@ -292,11 +295,8 @@ describe('TimelineView en modo oscuro', () => {
         darkMode
         filteredEvents={events}
         onSelectEvent={() => {}}
-        onClearFilters={() => {}}
         filters={{ searchTerm: '', decade: 'all', category: 'all', region: 'all' }}
         onFilterChange={() => {}}
-        onShowFilters={() => {}}
-        showFilters={false}
         totalEventCount={1}
       />
     );
